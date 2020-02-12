@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - rtwdemo_logicANDsl.c</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (rtwannotate) {rtwannotate('rtwdemo_logicANDsl_c_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../rtwdemo_logicANDsl.c" target="rtwreport_document_frame" id="linkToText_plain">rtwdemo_logicANDsl.c</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtwdemo_logicANDsl.h&quot;</font>
+</span><span><a class="LN" name="2">    2   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtwdemo_logicANDsl_private.h&quot;</font>
+</span><span><a class="LN" name="3">    3   </a>
+</span><span><a class="LN" name="4">    4   </a><a href="rtwtypes_h.html#type_uint8_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint8_T');" target="rtwreport_document_frame"><font color="#1122aa">uint8_T</font></a> <a name="var_u_1">u_1</a>;
+</span><span><a class="LN" name="5">    5   </a><a href="rtwtypes_h.html#type_uint8_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint8_T');" target="rtwreport_document_frame"><font color="#1122aa">uint8_T</font></a> <a name="var_y_1">y_1</a>;
+</span><span><a class="LN" name="6">    6   </a><a href="rtwdemo_logicANDsl_types_h.html#type_RT_MODEL_rtwdemo_logicANDsl" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_RT_MODEL_rtwdemo_logicANDsl');" target="rtwreport_document_frame"><font color="#1122aa">RT_MODEL_rtwdemo_logicANDsl</font></a> <a name="var_rtwdemo_logicANDsl_M_">rtwdemo_logicANDsl_M_</a>;
+</span><span><a class="LN" name="7">    7   </a><a href="rtwdemo_logicANDsl_types_h.html#type_RT_MODEL_rtwdemo_logicANDsl" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_RT_MODEL_rtwdemo_logicANDsl');" target="rtwreport_document_frame"><font color="#1122aa">RT_MODEL_rtwdemo_logicANDsl</font></a> *<span class="DT">const</span> <a name="var_rtwdemo_logicANDsl_M">rtwdemo_logicANDsl_M</a> = &amp;<a href="#var_rtwdemo_logicANDsl_M_" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtwdemo_logicANDsl_M_');" target="rtwreport_document_frame"><font color="#1122aa">rtwdemo_logicANDsl_M_</font></a>;
+</span><span><a class="LN" name="8">    8   </a><span class="DT">void</span> <a name="fcn_rtwdemo_logicANDsl_step">rtwdemo_logicANDsl_step</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="9">    9   </a><b>{</b>
+</span><span><a class="LN" name="10">   10   </a>  <a href="#var_y_1" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_y_1');" target="rtwreport_document_frame"><font color="#1122aa">y_1</font></a> = (<a href="rtwtypes_h.html#type_uint8_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint8_T');" target="rtwreport_document_frame"><font color="#1122aa">uint8_T</font></a>)(<a href="#var_u_1" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_u_1');" target="rtwreport_document_frame"><font color="#1122aa">u_1</font></a> &amp; 217);
+</span><span><a class="LN" name="11">   11   </a><b>}</b>
+</span><span><a class="LN" name="12">   12   </a>
+</span><span><a class="LN" name="13">   13   </a><span class="DT">void</span> <a name="fcn_rtwdemo_logicANDsl_initialize">rtwdemo_logicANDsl_initialize</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="14">   14   </a><b>{</b>
+</span><span><a class="LN" name="15">   15   </a>  rtmSetErrorStatus(<a href="#var_rtwdemo_logicANDsl_M" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtwdemo_logicANDsl_M');" target="rtwreport_document_frame"><font color="#1122aa">rtwdemo_logicANDsl_M</font></a>, (NULL));
+</span><span><a class="LN" name="16">   16   </a>  <a href="#var_y_1" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_y_1');" target="rtwreport_document_frame"><font color="#1122aa">y_1</font></a> = 0U;
+</span><span><a class="LN" name="17">   17   </a>  <a href="#var_u_1" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_u_1');" target="rtwreport_document_frame"><font color="#1122aa">u_1</font></a> = 0U;
+</span><span><a class="LN" name="18">   18   </a><b>}</b>
+</span><span><a class="LN" name="19">   19   </a>
+</span><span><a class="LN" name="20">   20   </a><span class="DT">void</span> <a name="fcn_rtwdemo_logicANDsl_terminate">rtwdemo_logicANDsl_terminate</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="21">   21   </a><b>{</b>
+</span><span><a class="LN" name="22">   22   </a><b>}</b>
+</span><span><a class="LN" name="23">   23   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

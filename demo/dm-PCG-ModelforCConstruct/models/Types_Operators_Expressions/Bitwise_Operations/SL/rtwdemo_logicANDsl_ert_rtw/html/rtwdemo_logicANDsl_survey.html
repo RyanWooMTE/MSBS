@@ -1,0 +1,69 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" type="text/css" href="rtwreport.css" /><script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+function rtwTableShrink(obj, id, isSymbol){
+  if (isSymbol) {
+    hide = "[-]";
+    hide_text = hide;
+    show = "[+]";
+    show_text = show;
+  } else {
+    hide = "[<u>hide</u>]";
+    hide_text = "[hide];"
+    show = "[<u>show</u>]";
+    show_text = "[show]";
+  }
+  if (window.document.getElementsByName) {
+    var o = window.document.getElementsByName(id);
+    for (var oid = 0; oid < o.length; ++oid) {
+      if (o[oid].style.display == "none") {
+        o[oid].style.display =  "";
+      } else {
+        o[oid].style.display = "none";
+      }
+    }
+  }
+  if (obj.textContent)
+     var objText = obj.textContent;
+  else
+     var objText = obj.innerText;
+  if (objText.toLowerCase() == show_text.toLowerCase())
+     obj.innerHTML = hide; 
+  else 
+     obj.innerHTML = show; 
+}
+/*]]>*/
+</script>
+<title>Code Generation Report for 'rtwdemo_logicANDsl'</title>
+</head>
+<body onload="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdSummaryPage'); else local_onload();}} catch(err) {};"><h1>Code Generation Report for 'rtwdemo_logicANDsl'</h1>
+<div></div>
+<h3 name="sec_Summary" id="sec_Summary">Summary</h3>
+<table width="100%" border="0"><tr><td align="left">Code generation for model "rtwdemo_logicANDsl"</td>
+</tr>
+<tr><td align="left"><p align="left"><br /><table class="AltRow" cellspacing="0"><tr class="even"><td align="left">Model version</td>
+<td align="left">1.34</td>
+</tr>
+<tr class="odd"><td align="left">Simulink Coder version</td>
+<td align="left">8.3 (R2012b) 20-Jul-2012</td>
+</tr>
+<tr class="even"><td align="left">C source code generated on</td>
+<td align="left">Sat Jun 08 14:43:05 2013</td>
+</tr>
+</table>
+<br /><table cellpadding="0" border="0"><tr><td align="left">Configuration settings at the time of code generation:<a href="../../slprj/ert/rtwdemo_logicANDsl/tmwinternal/binfo.mat?rtwdemo_logicANDsl" id="linkToCS">click to open</a>
+<span style="display:none" id="linkToCS_disabled" title="Link to configuration set is only available in MATLAB browser">click to open</span>
+</td>
+</tr>
+<tr><td align="left">Code generation objectives: <b><font Color="orange">Unspecified</font>
+</b>
+</td>
+</tr>
+<tr><td align="left">Validation result: Not run</td>
+</tr>
+</table>
+</p>
+</td>
+</tr>
+</table>
+</body>
+</html>
