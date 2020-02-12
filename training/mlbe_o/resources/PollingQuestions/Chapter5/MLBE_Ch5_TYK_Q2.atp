@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="If A is a 15-by-7 matrix, which of the following commands will result in five line plots on the same axes?">
+<ANSWER ISCORRECT="false">plot(A(:))</ANSWER>
+<ANSWER ISCORRECT="true">plot(A(:,3:end))</ANSWER>
+<ANSWER ISCORRECT="false">plot(A(11:end,:))</ANSWER>
+<ANSWER ISCORRECT="false">plot(A(2:6))</ANSWER>
+</QUESTION>
+
+</POLL>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="If x is a 20-by-5 table with variables &quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, and &quot;E&quot;, each of which are numeric vectors, the command &gt;&gt; y = x(:,'C') will return:">
+<ANSWER ISCORRECT="false">A 20-by-1 numeric vector</ANSWER>
+<ANSWER ISCORRECT="true">A 20-by-1 table</ANSWER>
+<ANSWER ISCORRECT="false">A 20-by-5 numeric array</ANSWER>
+<ANSWER ISCORRECT="false">A 1-by-1 table</ANSWER>
+<ANSWER ISCORRECT="false">An error message</ANSWER>
+</QUESTION>
+
+</POLL>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="If t1 and t2 are datetime variables representing March 13, 2000, and March 15, 2000, respectively, what is the result of the command &gt;&gt; dt = t1 - t2?">
+<ANSWER ISCORRECT="false">A datetime variable representing March 11, 2000.</ANSWER>
+<ANSWER ISCORRECT="true">A scalar duration variable representing -48 hours.</ANSWER>
+<ANSWER ISCORRECT="false">A 2-element duration array with both elements representing -24 hours.</ANSWER>
+<ANSWER ISCORRECT="false">An error because t2 is a later date than t1.</ANSWER>
+<ANSWER ISCORRECT="false">An error because datetime variables cannot be subtracted.</ANSWER>
+</QUESTION>
+
+</POLL>
+
+
+

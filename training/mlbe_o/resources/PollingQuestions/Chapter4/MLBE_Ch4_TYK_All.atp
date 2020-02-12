@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="Given a vector x, what is the command to add 3 to each element, double that value, then sum all the resulting values?">
+<ANSWER ISCORRECT="false">sum(2*x+3)</ANSWER>
+<ANSWER ISCORRECT="false">sum(2*[x(k)+3])</ANSWER>
+<ANSWER ISCORRECT="false">sum[2*x+3]</ANSWER>
+<ANSWER ISCORRECT="true">sum(2*(x+3))</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcmany" TITLE="(Select all that apply) Which commands are equivalent to the command &gt;&gt; x = 1.4:2:6.8;?">
+<ANSWER ISCORRECT="false">x = [1.4 2 6.8];</ANSWER>
+<ANSWER ISCORRECT="false">x = [1.4 6.8];</ANSWER>
+<ANSWER ISCORRECT="true">x = [1.4 3.4 5.4];</ANSWER>
+<ANSWER ISCORRECT="false">x = [1.4 3.4 5.4 6.8];</ANSWER>
+<ANSWER ISCORRECT="false">x = [3.4 5.4];</ANSWER>
+</QUESTION>
+
+</POLL>
+
+

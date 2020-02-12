@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcmany" TITLE="(Select all that apply) Given two matrices, A and B, where A is a 2-by-3 matrix and B is a 3-by-2 matrix, which of the following operations are valid?">
+<ANSWER ISCORRECT="false">A+B</ANSWER>
+<ANSWER ISCORRECT="false">A.+B</ANSWER>
+<ANSWER ISCORRECT="true">A*B</ANSWER>
+<ANSWER ISCORRECT="false">A.*B</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcone" TITLE="If A is a 15-by-7 matrix, which of the following commands will result in five line plots on the same axes?">
+<ANSWER ISCORRECT="false">plot(A(:))</ANSWER>
+<ANSWER ISCORRECT="true">plot(A(:,3:end))</ANSWER>
+<ANSWER ISCORRECT="false">plot(A(11:end,:))</ANSWER>
+<ANSWER ISCORRECT="false">plot(A(2:6))</ANSWER>
+</QUESTION>
+
+</POLL>
+

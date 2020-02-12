@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="The default MATLAB variable type is:">
+<ANSWER ISCORRECT="false">Single</ANSWER>
+<ANSWER ISCORRECT="true">Double</ANSWER>
+<ANSWER ISCORRECT="false">Cell</ANSWER>
+</QUESTION>
+
+</POLL>

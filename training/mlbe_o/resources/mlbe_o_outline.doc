@@ -1,0 +1,4085 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-application progid="Word.Document"?>
+<w:wordDocument xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:cd="http://www.mathworks.com/training/course_development" xmlns:st1="urn:schemas-microsoft-com:office:smarttags" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:v="urn:schemas-microsoft-com:vml" xml:space="preserve" w:ocxPresent="no" w:embeddedObjPresent="no" w:macrosPresent="no">
+			<o:SmartTagType o:name="PersonName" o:namespaceuri="urn:schemas-microsoft-com:office:smarttags"/>
+			<o:DocumentProperties>
+				<o:Title>Course Outline</o:Title>
+				<o:Author>Course Outline Builder</o:Author>
+				<o:Company>The MathWorks</o:Company>
+				<o:Version>11.6359</o:Version>
+			</o:DocumentProperties>
+			<w:fonts>
+				<w:defaultFonts w:cs="Times New Roman" w:h-ansi="Times New Roman" w:fareast="Times New Roman" w:ascii="Times New Roman"/>
+				<w:font w:name="Wingdings">
+					<w:panose-1 w:val="05000000000000000000"/>
+					<w:charset w:val="02"/>
+					<w:family w:val="Auto"/>
+					<w:pitch w:val="variable"/>
+					<w:sig w:csb-1="00000000" w:csb-0="80000000" w:usb-3="00000000" w:usb-2="00000000" w:usb-1="10000000" w:usb-0="00000000"/>
+				</w:font>
+				<w:font w:name="Verdana">
+					<w:panose-1 w:val="020B0802020204020204"/>
+					<w:charset w:val="00"/>
+					<w:family w:val="Swiss"/>
+					<w:pitch w:val="variable"/>
+					<w:sig w:csb-1="00000000" w:csb-0="0000001B" w:usb-3="00000000" w:usb-2="00000000" w:usb-1="00000000" w:usb-0="00000087"/>
+				</w:font>
+			</w:fonts>
+			<w:lists>
+				<w:listPicBullet w:listPicBulletId="0">
+					<w:pict>
+						<v:shapetype stroked="f" filled="f" path="m@4@5l@4@11@9@11@9@5xe" o:preferrelative="t" o:spt="75" coordsize="21600,21600" id="_x0000_t75">
+							<v:stroke joinstyle="miter"/>
+							<v:formulas>
+								<v:f eqn="if lineDrawn pixelLineWidth 0"/>
+								<v:f eqn="sum @0 1 0"/>
+								<v:f eqn="sum 0 0 @1"/>
+								<v:f eqn="prod @2 1 2"/>
+								<v:f eqn="prod @3 21600 pixelWidth"/>
+								<v:f eqn="prod @3 21600 pixelHeight"/>
+								<v:f eqn="sum @0 0 1"/>
+								<v:f eqn="prod @6 1 2"/>
+								<v:f eqn="prod @7 21600 pixelWidth"/>
+								<v:f eqn="sum @8 21600 0"/>
+								<v:f eqn="prod @7 21600 pixelHeight"/>
+								<v:f eqn="sum @10 21600 0"/>
+							</v:formulas>
+							<v:path o:connecttype="rect" gradientshapeok="t" o:extrusionok="f"/>
+							<o:lock aspectratio="t" v:ext="edit"/>
+						</v:shapetype>
+						<v:shape o:bullet="t" style="width:3in;height:3in" type="#_x0000_t75" id="_x0000_i1025"/>
+					</w:pict>
+				</w:listPicBullet>
+				<w:listPicBullet w:listPicBulletId="1">
+					<w:pict>
+						<v:shape o:bullet="t" style="width:3in;height:3in" type="#_x0000_t75" id="_x0000_i1026"/>
+					</w:pict>
+				</w:listPicBullet>
+				<w:listPicBullet w:listPicBulletId="2">
+					<w:pict>
+						<v:shape o:bullet="t" style="width:3in;height:3in" type="#_x0000_t75" id="_x0000_i1027"/>
+					</w:pict>
+				</w:listPicBullet>
+				<w:listPicBullet w:listPicBulletId="3">
+					<w:pict>
+						<v:shape o:bullet="t" style="width:3in;height:3in" type="#_x0000_t75" id="_x0000_i1028"/>
+					</w:pict>
+				</w:listPicBullet>
+				<w:listPicBullet w:listPicBulletId="4">
+					<w:pict>
+						<v:shape o:bullet="t" style="width:3in;height:3in" type="#_x0000_t75" id="_x0000_i1029"/>
+					</w:pict>
+				</w:listPicBullet>
+				<w:listPicBullet w:listPicBulletId="5">
+					<w:pict>
+						<v:shape o:bullet="t" style="width:3in;height:3in" type="#_x0000_t75" id="_x0000_i1030"/>
+					</w:pict>
+				</w:listPicBullet>
+				<w:listDef w:listDefId="0">
+					<w:lsid w:val="01B10D94"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="24FAF084"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="1">
+					<w:lsid w:val="0DED6C26"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="8FFAE6FC"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="2">
+					<w:lsid w:val="273F54B1"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="C28ADBB6"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="3">
+					<w:lsid w:val="29A72DFF"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="77708D4E"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="4">
+					<w:lsid w:val="29B41094"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="4D7E43F4"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="5">
+					<w:lsid w:val="41E8104D"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="F8B82D40"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="6">
+					<w:lsid w:val="463C1DBD"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="39EC6092"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="7">
+					<w:lsid w:val="478F743C"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="D256C968"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="8">
+					<w:lsid w:val="71D60066"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="F02415F6"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="9">
+					<w:lsid w:val="7B8C6DE0"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="0FB2A172"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="10">
+					<w:lsid w:val="7BE1326E"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="EA10E52E"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:listDef w:listDefId="11">
+					<w:lsid w:val="7E5314DD"/>
+					<w:plt w:val="HybridMultilevel"/>
+					<w:tmpl w:val="14428ED0"/>
+					<w:lvl w:tplc="040C0001" w:ilvl="0">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="720" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="720"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="1">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="1440" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="1440"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="2">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2160" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2160"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="3">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="2880" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="2880"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="4">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="3600" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="3600"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="5">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="4320" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="4320"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0001" w:ilvl="6">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5040" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5040"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Symbol" w:ascii="Symbol"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0003" w:ilvl="7">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val="o"/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="5760" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="5760"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:cs="Courier New" w:h-ansi="Courier New" w:ascii="Courier New"/>
+						</w:rPr>
+					</w:lvl>
+					<w:lvl w:tentative="on" w:tplc="040C0005" w:ilvl="8">
+						<w:start w:val="1"/>
+						<w:nfc w:val="23"/>
+						<w:lvlText w:val=""/>
+						<w:lvlJc w:val="left"/>
+						<w:pPr>
+							<w:tabs>
+								<w:tab w:pos="6480" w:val="list"/>
+							</w:tabs>
+							<w:ind w:hanging="360" w:left="6480"/>
+						</w:pPr>
+						<w:rPr>
+							<w:rFonts w:hint="default" w:h-ansi="Wingdings" w:ascii="Wingdings"/>
+						</w:rPr>
+					</w:lvl>
+				</w:listDef>
+				<w:list w:ilfo="1">
+					<w:ilst w:val="4"/>
+				</w:list>
+				<w:list w:ilfo="2">
+					<w:ilst w:val="8"/>
+				</w:list>
+				<w:list w:ilfo="3">
+					<w:ilst w:val="9"/>
+				</w:list>
+				<w:list w:ilfo="4">
+					<w:ilst w:val="1"/>
+				</w:list>
+				<w:list w:ilfo="5">
+					<w:ilst w:val="11"/>
+				</w:list>
+				<w:list w:ilfo="6">
+					<w:ilst w:val="2"/>
+				</w:list>
+				<w:list w:ilfo="7">
+					<w:ilst w:val="5"/>
+				</w:list>
+				<w:list w:ilfo="8">
+					<w:ilst w:val="0"/>
+				</w:list>
+				<w:list w:ilfo="9">
+					<w:ilst w:val="7"/>
+				</w:list>
+				<w:list w:ilfo="10">
+					<w:ilst w:val="10"/>
+				</w:list>
+				<w:list w:ilfo="11">
+					<w:ilst w:val="3"/>
+				</w:list>
+				<w:list w:ilfo="12">
+					<w:ilst w:val="6"/>
+				</w:list>
+				<w:ilfoMacAtCleanup w:val="12"/>
+			</w:lists>
+			<w:styles>
+				<w:versionOfBuiltInStylenames w:val="4"/>
+				<w:latentStyles w:latentStyleCount="156" w:defLockedState="off"/>
+				<w:style w:styleId="Normal" w:default="on" w:type="paragraph">
+					<w:name w:val="Normal"/>
+					<w:rsid w:val="002C5F2F"/>
+					<w:pPr>
+						<w:jc w:val="left"/>
+					</w:pPr>
+					<w:rPr>
+						<w:rFonts w:h-ansi="Times New Roman" w:ascii="Times New Roman"/>
+						<wx:font wx:val="Times New Roman"/>
+						<w:sz w:val="24"/>
+						<w:sz-cs w:val="24"/>
+						<w:lang w:bidi="AR-SA" w:fareast="EN" w:val="EN"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:styleId="Titre2" w:type="paragraph">
+					<w:name w:val="heading 2"/>
+					<wx:uiName wx:val="Titre 2"/>
+					<w:basedOn w:val="Normal"/>
+					<w:rsid w:val="00B85CE2"/>
+					<w:pPr>
+						<w:pStyle w:val="Titre2"/>
+						<w:outlineLvl w:val="1"/>
+					</w:pPr>
+					<w:rPr>
+						<wx:font wx:val="Times New Roman"/>
+						<w:b/>
+						<w:b-cs/>
+						<w:color w:val="800000"/>
+						<w:sz w:val="28"/>
+						<w:sz-cs w:val="28"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:styleId="Titre3" w:type="paragraph">
+					<w:name w:val="heading 3"/>
+					<wx:uiName wx:val="Titre 3"/>
+					<w:basedOn w:val="Normal"/>
+					<w:rsid w:val="00B85CE2"/>
+					<w:pPr>
+						<w:pStyle w:val="Titre3"/>
+						<w:outlineLvl w:val="2"/>
+					</w:pPr>
+					<w:rPr>
+						<wx:font wx:val="Times New Roman"/>
+						<w:b/>
+						<w:b-cs/>
+					</w:rPr>
+				</w:style>
+				<w:style w:styleId="Policepardfaut" w:default="on" w:type="character">
+					<w:name w:val="Default Paragraph Font"/>
+					<wx:uiName wx:val="Police par défaut"/>
+					<w:semiHidden/>
+				</w:style>
+				<w:style w:styleId="TableauNormal" w:default="on" w:type="table">
+					<w:name w:val="Normal Table"/>
+					<wx:uiName wx:val="Tableau Normal"/>
+					<w:semiHidden/>
+					<w:rPr>
+						<wx:font wx:val="Times New Roman"/>
+					</w:rPr>
+					<w:tblPr>
+						<w:tblInd w:type="dxa" w:w="0"/>
+						<w:tblCellMar>
+							<w:top w:type="dxa" w:w="0"/>
+							<w:left w:type="dxa" w:w="108"/>
+							<w:bottom w:type="dxa" w:w="0"/>
+							<w:right w:type="dxa" w:w="108"/>
+						</w:tblCellMar>
+					</w:tblPr>
+				</w:style>
+				<w:style w:styleId="Aucuneliste" w:default="on" w:type="list">
+					<w:name w:val="No List"/>
+					<wx:uiName wx:val="Aucune liste"/>
+					<w:semiHidden/>
+				</w:style>
+				<w:style w:styleId="lev" w:type="character">
+					<w:name w:val="Strong"/>
+					<wx:uiName wx:val="Élevé"/>
+					<w:basedOn w:val="Policepardfaut"/>
+					<w:rsid w:val="00B85CE2"/>
+					<w:rPr>
+						<w:b/>
+						<w:b-cs/>
+					</w:rPr>
+				</w:style>
+				<w:style w:styleId="En-tte" w:type="paragraph">
+					<w:name w:val="header"/>
+					<wx:uiName wx:val="En-tête"/>
+					<w:basedOn w:val="Normal"/>
+					<w:rsid w:val="0066279B"/>
+					<w:pPr>
+						<w:pStyle w:val="En-tte"/>
+						<w:tabs>
+							<w:tab w:pos="4153" w:val="center"/>
+							<w:tab w:pos="8306" w:val="right"/>
+						</w:tabs>
+					</w:pPr>
+					<w:rPr>
+						<wx:font wx:val="Times New Roman"/>
+					</w:rPr>
+				</w:style>
+				<w:style w:styleId="Pieddepage" w:type="paragraph">
+					<w:name w:val="footer"/>
+					<wx:uiName wx:val="Pied de page"/>
+					<w:basedOn w:val="Normal"/>
+					<w:rsid w:val="0066279B"/>
+					<w:pPr>
+						<w:pStyle w:val="Pieddepage"/>
+						<w:tabs>
+							<w:tab w:pos="4153" w:val="center"/>
+							<w:tab w:pos="8306" w:val="right"/>
+						</w:tabs>
+					</w:pPr>
+					<w:rPr>
+						<wx:font wx:val="Times New Roman"/>
+					</w:rPr>
+				</w:style>
+			</w:styles>
+			<w:divs>
+				<w:div w:id="7802087">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1354460554">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="369261360">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="469518730">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="489449098">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="523715910">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="553200145">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="934940679">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1460415461">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1548754998">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1750807540">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1833597474">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1945917774">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="2022779077">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="8796899">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1313944850">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="81340810">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="389154200">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="522982837">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="533733453">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="815801576">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="846335229">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1041781202">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1335189041">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1553955049">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1615484047">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="2018077782">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="38824699">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1059205417">
+							<w:marLeft w:val="203"/>
+							<w:marRight w:val="304"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="203"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="97062425">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="675306185">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="1681158533">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="130174743">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1026642089">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="2023314229">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="208805720">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1006633611">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="404187120">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="413014690">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="548347085">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="552273148">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="678626490">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="730467746">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="744105547">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="754590146">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="859926509">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1433553417">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1457214851">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1684627103">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1744913906">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1889031105">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="2009555849">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="329867169">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="163013035">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="96172105">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="424769904">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="828061819">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="863711981">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="923806987">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="925378846">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="964581973">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1184326098">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1388725357">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1585382849">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="2039163884">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="333534858">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="319774267">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="469321938">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="856819730">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="66149092">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="112990056">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="246425988">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="251664461">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="265769467">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="678043314">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="871117954">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="901216909">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1027875493">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1151874140">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1255212072">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1282034915">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1342316771">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1502698514">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1890189908">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="2093162103">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="2097432388">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="504365069">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1075320210">
+							<w:marLeft w:val="203"/>
+							<w:marRight w:val="304"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="203"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="547569670">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="326716892">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="178738306">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="594482957">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+				</w:div>
+				<w:div w:id="687565788">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="305429217">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="257098869">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="690031959">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1475759287">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="194006463">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="250358393">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="250547399">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="323944683">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="397286120">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="604313108">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="609242262">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="751244551">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="966163745">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="976181174">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1250313140">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1322732110">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1951936367">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="2105953658">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="1032651087">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="613444607">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="1214385357">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1219853222">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="759369150">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="1461339130">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="2028170460">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="154149368">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="206383780">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="412315443">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="496575610">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="762607079">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1065569250">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1095638662">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1610502299">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1702510116">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1819298718">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1957907668">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1984194387">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="2075348455">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="1493326326">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1072579754">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="44916627">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="402879059">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="611133855">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1091581750">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1157845927">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1370834226">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1477868154">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1863980679">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+								<w:div w:id="1975594556">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="1657030244">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="441341817">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="2132435639">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="1779907390">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1277517740">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="1796630847">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="771556945">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="315426971">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="1820220210">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="969241130">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+							<w:divsChild>
+								<w:div w:id="856967595">
+									<w:marLeft w:val="0"/>
+									<w:marRight w:val="0"/>
+									<w:marTop w:val="0"/>
+									<w:marBottom w:val="0"/>
+									<w:divBdr>
+										<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+										<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+									</w:divBdr>
+								</w:div>
+							</w:divsChild>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="1863398096">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="103624430">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+				<w:div w:id="1973244787">
+					<w:bodyDiv w:val="on"/>
+					<w:marLeft w:val="0"/>
+					<w:marRight w:val="0"/>
+					<w:marTop w:val="0"/>
+					<w:marBottom w:val="0"/>
+					<w:divBdr>
+						<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+						<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+					</w:divBdr>
+					<w:divsChild>
+						<w:div w:id="1853639965">
+							<w:marLeft w:val="0"/>
+							<w:marRight w:val="0"/>
+							<w:marTop w:val="0"/>
+							<w:marBottom w:val="0"/>
+							<w:divBdr>
+								<w:top w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:left w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:bottom w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+								<w:right w:color="auto" w:space="0" wx:bdrwidth="0" w:sz="0" w:val="none"/>
+							</w:divBdr>
+						</w:div>
+					</w:divsChild>
+				</w:div>
+			</w:divs>
+			<w:shapeDefaults>
+				<o:shapedefaults spidmax="3074" v:ext="edit"/>
+				<o:shapelayout v:ext="edit">
+					<o:idmap data="1" v:ext="edit"/>
+				</o:shapelayout>
+			</w:shapeDefaults>
+			<w:docPr>
+				<w:view w:val="print"/>
+				<w:zoom w:percent="144" w:val="best-fit"/>
+				<w:doNotEmbedSystemFonts/>
+				<w:activeWritingStyle w:optionSet="1" w:nlCheck="on" w:dllVersion="131078" w:vendorID="64" w:lang="EN"/>
+				<w:attachedTemplate w:val=""/>
+				<w:defaultTabStop w:val="708"/>
+				<w:hyphenationZone w:val="425"/>
+				<w:punctuationKerning/>
+				<w:characterSpacingControl w:val="DontCompress"/>
+				<w:optimizeForBrowser/>
+				<w:targetScreenSz w:val="1024x768"/>
+				<w:validateAgainstSchema/>
+				<w:saveInvalidXML w:val="off"/>
+				<w:ignoreMixedContent w:val="off"/>
+				<w:alwaysShowPlaceholderText w:val="off"/>
+				<w:hdrShapeDefaults>
+					<o:shapedefaults spidmax="3074" v:ext="edit"/>
+					<o:shapelayout v:ext="edit">
+						<o:idmap data="2" v:ext="edit"/>
+					</o:shapelayout>
+				</w:hdrShapeDefaults>
+				<w:footnotePr>
+					<w:footnote w:type="separator">
+						<w:p>
+							<w:r>
+								<w:separator/>
+							</w:r>
+						</w:p>
+					</w:footnote>
+					<w:footnote w:type="continuation-separator">
+						<w:p>
+							<w:r>
+								<w:continuationSeparator/>
+							</w:r>
+						</w:p>
+					</w:footnote>
+				</w:footnotePr>
+				<w:endnotePr>
+					<w:endnote w:type="separator">
+						<w:p>
+							<w:r>
+								<w:separator/>
+							</w:r>
+						</w:p>
+					</w:endnote>
+					<w:endnote w:type="continuation-separator">
+						<w:p>
+							<w:r>
+								<w:continuationSeparator/>
+							</w:r>
+						</w:p>
+					</w:endnote>
+				</w:endnotePr>
+				<w:compat>
+					<w:breakWrappedTables/>
+					<w:snapToGridInCell/>
+					<w:wrapTextWithPunct/>
+					<w:useAsianBreakRules/>
+					<w:dontGrowAutofit/>
+				</w:compat>
+			</w:docPr>
+			<w:body>
+				<wx:sect><w:tbl><w:tblPr><w:tblW w:type="auto" w:w="0"/><w:tblLook w:val="01E0"/></w:tblPr><w:tblGrid><w:gridCol w:w="1116"/><w:gridCol w:w="8770"/></w:tblGrid><w:tr><w:tc><w:tcPr><w:tcW w:type="dxa" w:w="1008"/><w:shd w:fill="F8971C" w:color="auto" w:val="clear"/><w:vAlign w:val="center"/></w:tcPr><w:p><w:pPr><w:jc w:val="center"/><w:rPr><w:b/><w:sz w:val="32"/><w:sz-cs w:val="32"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:cs="Arial" w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="FFFFFF"/><w:spacing w:val="10"/><w:sz w:val="32"/><w:sz-cs w:val="32"/></w:rPr><w:t/></w:r></w:p></w:tc><w:tc><w:tcPr><w:tcW w:type="dxa" w:w="8770"/><w:vAlign w:val="center"/></w:tcPr><w:p><w:pPr><w:spacing w:line-rule="at-least" w:line="336"/><w:jc w:val="left"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="005594"/><w:sz w:val="32"/><w:sz-cs w:val="32"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:cs="Arial" w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="005594"/><w:spacing w:val="10"/><w:sz w:val="32"/><w:sz-cs w:val="32"/></w:rPr><w:t>MATLAB Fundamentals for Aerospace Applications</w:t></w:r></w:p></w:tc></w:tr></w:tbl><w:p><w:pPr><w:spacing w:after="120" w:before="240"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="8A8D05"/><w:sz w:val="24"/><w:sz-cs w:val="24"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="8A8D05"/><w:sz w:val="24"/><w:sz-cs w:val="24"/></w:rPr><w:t>Training Objectives</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:t>This three-day course provides a comprehensive introduction to the MATLAB<w:rPr><w:vertAlign w:val="superscript"/></w:rPr>®<w:rPr><w:vertAlign w:val="baseline"/></w:rPr> technical computing environment for aerospace engineers. No prior programming experience or knowledge of MATLAB is assumed. Themes of data analysis, visualization, modeling, and programming are explored throughout the course, with an emphasis on practical application to aerospace engineering. Topics include:
+</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Working with the MATLAB user interface</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Entering commands and creating variables</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Analyzing vectors and matrices</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Visualizing vector and matrix data</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Working with data files</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Working with data types</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Automating commands with scripts</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Writing programs with branching and loops</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Writing functions</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="240"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="8A8D05"/><w:sz w:val="24"/><w:sz-cs w:val="24"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="8A8D05"/><w:sz w:val="24"/><w:sz-cs w:val="24"/></w:rPr><w:t>Prerequisites</w:t></w:r></w:p><w:p><w:r><w:t>Undergraduate-level mathematics and experience with basic computer operations</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="240"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="8A8D05"/><w:sz w:val="24"/><w:sz-cs w:val="24"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="8A8D05"/><w:sz w:val="24"/><w:sz-cs w:val="24"/></w:rPr><w:t>Products</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>MATLAB</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="240"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="8A8D05"/><w:sz w:val="24"/><w:sz-cs w:val="24"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="8A8D05"/><w:sz w:val="24"/><w:sz-cs w:val="24"/></w:rPr><w:t>Course Outline</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="160"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="005594"/><w:sz w:val="22"/><w:sz-cs w:val="22"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="005594"/><w:sz w:val="22"/><w:sz-cs w:val="22"/></w:rPr><w:t>Day 1 of 3</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="120"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr><w:t>Working with the MATLAB User Interface (2.0 hrs)</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Objective: </w:t></w:r><w:r><w:t>Become familiar with the main features of the MATLAB integrated design environment and its user interfaces. Get an overview of course themes.</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Reading data from files</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Saving and loading variables</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Plotting data</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Customizing plots</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Exporting graphics for use in other applications</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="120"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr><w:t>Variables and Commands (2.5 hrs)</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Objective: </w:t></w:r><w:r><w:t>Enter MATLAB commands, with an emphasis on creating variables, accessing and manipulating data in variables, and creating basic visualizations. Collect MATLAB commands into scripts for ease of reproduction and experimentation.</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Entering commands</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Creating numeric and character variables</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Making and annotating plots</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Getting help</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Creating and running live scripts</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="120"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr><w:t>Analysis and Visualization with Vectors (2.5 hrs)</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Objective: </w:t></w:r><w:r><w:t>Perform mathematical and statistical calculations with vectors. Use MATLAB syntax to perform calculations on whole data sets with a single command. Organize scripts into logical sections for development, maintenance, and publishing.</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Performing calculations with vectors</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Accessing and modifying values in vectors</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Formatting and sharing live scripts</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="160"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="005594"/><w:sz w:val="22"/><w:sz-cs w:val="22"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="005594"/><w:sz w:val="22"/><w:sz-cs w:val="22"/></w:rPr><w:t>Day 2 of 3</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="120"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr><w:t>Analysis and Visualization with Matrices (2.0 hrs)</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Objective: </w:t></w:r><w:r><w:t>Use matrices as mathematical objects or as collections of (vector) data. Understand the appropriate use of MATLAB syntax to distinguish between these applications.</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Creating and manipulating matrices</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Performing calculations with matrices</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Calculating statistics with matrix data</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Visualizing matrix data</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="120"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr><w:t>Tables of Data (1.5 hrs)</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Objective: </w:t></w:r><w:r><w:t>Import data as a MATLAB table. Work with data stored as a table.</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Storing data as a table</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Operating on tables</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Extracting data from tables</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Modifying tables</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="120"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr><w:t>Conditional Data Selection (2.0 hrs)</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Objective: </w:t></w:r><w:r><w:t>Extract and analyze subsets of data that satisfy given criteria.</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Logical operations and variables</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Finding and counting</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Logical indexing</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="120"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr><w:t>Organizing Data (1.5 hrs)</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Objective: </w:t></w:r><w:r><w:t>Organize table data for analysis. Represent data using appropriate native MATLAB data types.</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Combining tables of data</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Table metadata</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Dates and durations</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Discrete categories</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="160"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="005594"/><w:sz w:val="22"/><w:sz-cs w:val="22"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="005594"/><w:sz w:val="22"/><w:sz-cs w:val="22"/></w:rPr><w:t>Day 3 of 3</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="120"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr><w:t>Analyzing Data (3.0 hrs)</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Objective: </w:t></w:r><w:r><w:t>Perform typical data analysis tasks in MATLAB, including importing data from files, preprocessing data, fitting a model to data, and creating a customized visualization of the model.</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Importing from spreadsheets and delimited text files</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Dealing with missing data</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Plotting functions</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Customizing plots</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="120"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr><w:t>Increasing Automation with Programming Constructs (2.0 hrs)</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Objective: </w:t></w:r><w:r><w:t>Create flexible code that can interact with the user, make decisions, and adapt to different situations.</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Programming constructs</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>User interaction</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Decision branching</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Loops</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120" w:before="120"/><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:h-ansi="Verdana" w:ascii="Verdana"/><wx:font wx:val="Verdana"/><w:b/><w:color w:val="800000"/></w:rPr><w:t>Increasing Automation with Functions (2.0 hrs)</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Objective: </w:t></w:r><w:r><w:t>Increase automation by encapsulating modular tasks as user-defined functions. Understand how MATLAB resolves references to files and variables. Use MATLAB development tools to find and correct problems with code.</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Creating functions</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Calling functions</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Setting the MATLAB path</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Debugging with the MATLAB Editor</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Using breakpoints</w:t></w:r></w:p><w:p><w:pPr><w:listPr><w:ilvl w:val="0"/><w:ilfo w:val="4"/><wx:t wx:wTabAfter="195" wx:wTabBefore="60" wx:val="·"/><wx:font wx:val="Symbol"/></w:listPr><w:tabs><w:tab w:pos="720" w:val="clear"/><w:tab w:pos="360" w:val="list"/></w:tabs><w:ind w:hanging="304" w:left="360"/></w:pPr><w:r><w:t>Creating and using structures</w:t></w:r></w:p><w:sectPr><w:ftr w:type="odd"><w:p><w:pPr><w:pStyle w:val="Pieddepage"/></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:pict><v:shapetype stroked="f" filled="f" path="m@4@5l@4@11@9@11@9@5xe" o:preferrelative="t" o:spt="75" coordsize="21600,21600" id="_x0000_t75"><v:stroke joinstyle="miter"/><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0"/><v:f eqn="sum @0 1 0"/><v:f eqn="sum 0 0 @1"/><v:f eqn="prod @2 1 2"/><v:f eqn="prod @3 21600 pixelWidth"/><v:f eqn="prod @3 21600 pixelHeight"/><v:f eqn="sum @0 0 1"/><v:f eqn="prod @6 1 2"/><v:f eqn="prod @7 21600 pixelWidth"/><v:f eqn="sum @8 21600 0"/><v:f eqn="prod @7 21600 pixelHeight"/><v:f eqn="sum @10 21600 0"/></v:formulas><v:path o:connecttype="rect" gradientshapeok="t" o:extrusionok="f"/><o:lock aspectratio="t" v:ext="edit"/></v:shapetype><w:binData w:name="wordml://03000001.png">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
+cFIAAAAASUVORK5CYIJ=
+</w:binData><v:shape style="position:absolute;left:0;text-align:left;margin-left:-32.4pt;margin-top:-12.2pt;width:171pt;height:36.75pt;z-index:2" type="#_x0000_t75" id="_x0000_s2050"><v:imagedata o:title="logo_blue" src="wordml://03000001.png"/></v:shape></w:pict></w:r></w:p></w:ftr><w:pgSz w:code="9" w:h="16838" w:w="11906"/><w:pgMar w:gutter="0" w:footer="709" w:header="709" w:left="1134" w:bottom="1438" w:right="1134" w:top="1134"/><w:pgBorders w:offset-from="page"><w:top w:color="auto" w:space="24" wx:bdrwidth="10" w:sz="4" w:val="single"/><w:left w:color="auto" w:space="24" wx:bdrwidth="10" w:sz="4" w:val="single"/><w:bottom w:color="auto" w:space="24" wx:bdrwidth="10" w:sz="4" w:val="single"/><w:right w:color="auto" w:space="24" wx:bdrwidth="10" w:sz="4" w:val="single"/></w:pgBorders><w:cols w:space="708"/><w:docGrid w:line-pitch="360"/></w:sectPr></wx:sect>
+			</w:body>
+		</w:wordDocument>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="True/False: Script files can access and modify any variables already in the base MATLAB workspace.">
+<ANSWER ISCORRECT="true">True</ANSWER>
+<ANSWER ISCORRECT="false">False</ANSWER>
+</QUESTION>
+
+</POLL>

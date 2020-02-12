@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="Where does MATLAB display a listing of stored variables and associated attributes?">
+<ANSWER ISCORRECT="false">Command Window</ANSWER>
+<ANSWER ISCORRECT="true">Workspace browser</ANSWER>
+<ANSWER ISCORRECT="false">Current Folder browser</ANSWER>
+<ANSWER ISCORRECT="false">Command History</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcone" TITLE="The default MATLAB variable type is:">
+<ANSWER ISCORRECT="false">Single</ANSWER>
+<ANSWER ISCORRECT="true">Double</ANSWER>
+<ANSWER ISCORRECT="false">Cell</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcone" TITLE="True/False: The MATLAB desktop is customizable.">
+<ANSWER ISCORRECT="true">True</ANSWER>
+<ANSWER ISCORRECT="false">False</ANSWER>
+</QUESTION>
+
+</POLL>

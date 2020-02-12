@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcmany" TITLE="(Select all that apply) Given two matrices, A and B, where A is a 2-by-3 matrix and B is a 3-by-2 matrix, which of the following operations are valid?">
+<ANSWER ISCORRECT="false">A+B</ANSWER>
+<ANSWER ISCORRECT="false">A.+B</ANSWER>
+<ANSWER ISCORRECT="true">A*B</ANSWER>
+<ANSWER ISCORRECT="false">A.*B</ANSWER>
+</QUESTION>
+
+</POLL>

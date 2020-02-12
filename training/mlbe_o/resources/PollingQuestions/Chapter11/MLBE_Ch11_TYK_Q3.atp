@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcmany" TITLE="(Select all that apply) Which of the following are valid calls to a function with the declaration line function [x,y] = foo(a,b)?">
+<ANSWER ISCORRECT="true">[x,y] = foo(a)</ANSWER>
+<ANSWER ISCORRECT="true">x = foo(a,b)</ANSWER>
+<ANSWER ISCORRECT="false">[x,y] = foo[a,b]</ANSWER>
+<ANSWER ISCORRECT="false">(x,y) = foo(a)</ANSWER>
+<ANSWER ISCORRECT="true">[x,y] = foo(a,b)</ANSWER>
+</QUESTION>
+
+</POLL>
+

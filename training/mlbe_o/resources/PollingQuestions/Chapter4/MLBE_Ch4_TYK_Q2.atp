@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcmany" TITLE="(Select all that apply) Which commands are equivalent to the command &gt;&gt; x = 1.4:2:6.8;?">
+<ANSWER ISCORRECT="false">x = [1.4 2 6.8];</ANSWER>
+<ANSWER ISCORRECT="false">x = [1.4 6.8];</ANSWER>
+<ANSWER ISCORRECT="true">x = [1.4 3.4 5.4];</ANSWER>
+<ANSWER ISCORRECT="false">x = [1.4 3.4 5.4 6.8];</ANSWER>
+<ANSWER ISCORRECT="false">x = [3.4 5.4];</ANSWER>
+</QUESTION>
+
+</POLL>
+
+

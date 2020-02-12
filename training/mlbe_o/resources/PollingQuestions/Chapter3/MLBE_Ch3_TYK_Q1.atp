@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcmany" TITLE="(Select all that apply) Which of the following will create a scatter plot of frogs on the horizontal axis and GDP on the vertical axis, with red markers at the data points?">
+<ANSWER ISCORRECT="false">plot(GDP,frogs,'ro')</ANSWER>
+<ANSWER ISCORRECT="false">plot(GDP,frogs,'o','r')</ANSWER>
+<ANSWER ISCORRECT="true">plot(frogs,GDP,'ro')</ANSWER>
+<ANSWER ISCORRECT="false">plot(frogs,GDP,'red')</ANSWER>
+</QUESTION>
+
+</POLL>
+

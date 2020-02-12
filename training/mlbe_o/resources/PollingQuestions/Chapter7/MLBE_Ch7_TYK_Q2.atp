@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="If x and y are both 20-by-1 (numeric) vectors and half of the elements of y are greater than 0.5, the command &gt;&gt; x(y &gt; 0.5) will return:">
+<ANSWER ISCORRECT="true">A 10-by-1 numeric vector of x values</ANSWER>
+<ANSWER ISCORRECT="false">A 10-by-1 numeric vector of y values</ANSWER>
+<ANSWER ISCORRECT="false">A 20-by-1 logical vector</ANSWER>
+<ANSWER ISCORRECT="false">A 20-by-1 numeric vector of x values</ANSWER>
+<ANSWER ISCORRECT="false">An error message</ANSWER>
+</QUESTION>
+
+</POLL>
+
+

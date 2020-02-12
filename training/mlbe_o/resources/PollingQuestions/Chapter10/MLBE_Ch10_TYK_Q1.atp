@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="If x = -4 what will be the result of running the following code?&#x0D;&#x0A;if (x &lt; 0) || (sqrt(x) &gt; pi)&#x0D;&#x0A;   y = 7;&#x0D;&#x0A;else&#x0D;&#x0A;   y = 2;&#x0D;&#x0A;end">
+<ANSWER ISCORRECT="true">y = 7</ANSWER>
+<ANSWER ISCORRECT="false">y = 2</ANSWER>
+<ANSWER ISCORRECT="false">y will be left undefined</ANSWER>
+<ANSWER ISCORRECT="false">An error message due to taking the square root of a negative number</ANSWER>
+<ANSWER ISCORRECT="false">An error message due to comparing an imaginary number to a real number</ANSWER>
+</QUESTION>
+
+</POLL>
+

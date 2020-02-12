@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="Suppose the workspace contains a vector x and the function foo creates a scalar variable also called x.  What will happen to the vector x if you issue the command &gt;&gt; z = foo(7) ? ">
+<ANSWER ISCORRECT="false">It will change to the scalar value defined in foo</ANSWER>
+<ANSWER ISCORRECT="false">Nothing, because the two variables are of different dimensions (i.e., a vector cannot be changed to a scalar).</ANSWER>
+<ANSWER ISCORRECT="false">Nothing because the vector x is not passed as an argument to foo.</ANSWER>
+<ANSWER ISCORRECT="true">Nothing, because foo maintains its own workspace, so there is no name conflict</ANSWER>
+</QUESTION>
+
+</POLL>
+

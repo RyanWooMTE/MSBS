@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="Which of the following makes a plot with a thick line?">
+<ANSWER ISCORRECT="false">p = plot(x,y);  LineWidth(p,4);</ANSWER>
+<ANSWER ISCORRECT="false">plot(x,y,'LineWidth'=4)</ANSWER>
+<ANSWER ISCORRECT="false">p = plot(x,y);  p(LineWidth) = 4;</ANSWER>
+<ANSWER ISCORRECT="true">plot(x,y,'LineWidth',4);</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcone" TITLE="Given 1-by-50 vectors x and y, what is the result of the command &gt;&gt; z = polyfit (x,y,3) ?">
+<ANSWER ISCORRECT="false">A 1-by-3 vector of points interpolating y as a function of x</ANSWER>
+<ANSWER ISCORRECT="true">A 1-by-4 vector representing the coefficients of a cubic polynomial fitted to y as a function of x</ANSWER>
+<ANSWER ISCORRECT="false">A 1-by-50 vector of the values of a cubic polynomial fitted to y as a function of x</ANSWER>
+<ANSWER ISCORRECT="false">An error message</ANSWER>
+</QUESTION>
+
+</POLL>
+
+

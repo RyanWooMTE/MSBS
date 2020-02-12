@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="What construction should you used to loop over a block of code an indefinite number of times?">
+<ANSWER ISCORRECT="false">if</ANSWER>
+<ANSWER ISCORRECT="false">for</ANSWER>
+<ANSWER ISCORRECT="false">switch</ANSWER>
+<ANSWER ISCORRECT="true">while</ANSWER>
+<ANSWER ISCORRECT="false">Logical indexing</ANSWER>
+</QUESTION>
+
+</POLL>
+

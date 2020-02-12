@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="Which of the following makes a plot with a thick line?">
+<ANSWER ISCORRECT="false">p = plot(x,y);  LineWidth(p,4);</ANSWER>
+<ANSWER ISCORRECT="false">plot(x,y,'LineWidth'=4)</ANSWER>
+<ANSWER ISCORRECT="false">p = plot(x,y);  p(LineWidth) = 4;</ANSWER>
+<ANSWER ISCORRECT="true">plot(x,y,'LineWidth',4);</ANSWER>
+</QUESTION>
+
+</POLL>
+
+
+

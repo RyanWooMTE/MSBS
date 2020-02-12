@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="Which command renames the first variable in the table t from foo to bar?">
+<ANSWER ISCORRECT="false">t.bar = t.foo</ANSWER>
+<ANSWER ISCORRECT="false">t.VariableNames(1) = 'bar'</ANSWER>
+<ANSWER ISCORRECT="true">t.Properties.VariableNames{1} = 'bar'</ANSWER>
+<ANSWER ISCORRECT="false">VariableNames(t,1) = 'bar'</ANSWER>
+</QUESTION>
+
+</POLL>

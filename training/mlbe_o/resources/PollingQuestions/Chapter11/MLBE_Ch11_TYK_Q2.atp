@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="5:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcone" TITLE="Which of the following is a valid function declaration?">
+<ANSWER ISCORRECT="true">function [x,y] = foo(a,b)</ANSWER>
+<ANSWER ISCORRECT="false">function foo(a,b) = [x,y]</ANSWER>
+<ANSWER ISCORRECT="false">[x,y] = function foo(a,b)</ANSWER>
+<ANSWER ISCORRECT="false">[x,y] = foo(a,b)</ANSWER>
+</QUESTION>
+
+</POLL>
+
