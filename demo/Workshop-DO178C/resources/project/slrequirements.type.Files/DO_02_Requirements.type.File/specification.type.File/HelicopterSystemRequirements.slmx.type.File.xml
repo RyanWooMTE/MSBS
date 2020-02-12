@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Info>
+    <odlr type="linkset">
+        <artifact domain="linktype_rmi_pdf" name="HelicopterSoftwareRequirements" />
+        <artifact domain="linktype_rmi_pdf" name="Heli-tuning-report" />
+        <artifact domain="linktype_rmi_matlab" name="Heli_tuning_script" />
+        <artifact domain="linktype_rmi_slreq" name="HelicopterSoftwareRequirements" />
+    </odlr>
+</Info>
