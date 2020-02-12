@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-1000.html"?>
+<title>SignalConditioning</title>
+<figure>
+    <title>DisplayModel/Control_and_Display_Logic/SignalConditioning</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,76,41,90" id="1408438020000-0"
+                    linkends="7dcceb8f370586bf905ace661eb655d3" otherunits="rect"/>
+                <area coords="401,11,406,155" id="1408438020000-1"
+                    linkends="1a5ebd7b9c3f06c81a8c96f9fc0ba02e" otherunits="rect"/>
+                <area coords="86,12,91,154" id="1408438020000-2"
+                    linkends="f5391d631e07cd63b6277a0644145170" otherunits="rect"/>
+                <area coords="191,96,326,160" id="1408438020000-3"
+                    linkends="50d243c3e1ec19decfa3f0e22a18d003" otherunits="rect"/>
+                <area coords="451,76,481,90" id="1408438020000-4"
+                    linkends="2a1fc10402932206b400c97c2d466cbd" otherunits="rect"/>
+                <area coords="92,19,400,19,400,27,92,27"
+                    id="1408438020000-5"
+                    linkends="67b9487a539e989be5791b5ee4153633" otherunits="polygon"/>
+                <area coords="327,139,400,139,400,147,327,147"
+                    id="1408438020000-6"
+                    linkends="3192050a0febd2a50019d67ade5398d4" otherunits="polygon"/>
+                <area coords="327,109,400,109,400,117,327,117"
+                    id="1408438020000-7"
+                    linkends="07605304302985eab41f99ac34445acb" otherunits="polygon"/>
+                <area coords="92,79,400,79,400,87,92,87"
+                    id="1408438020000-8"
+                    linkends="2af7e29bd399a93e0e6f18000f769a73" otherunits="polygon"/>
+                <area coords="92,109,190,109,190,117,92,117"
+                    id="1408438020000-9"
+                    linkends="5fc1576c1d4e40a4b7e3698e9d40797d" otherunits="polygon"/>
+                <area coords="92,139,190,139,190,147,92,147"
+                    id="1408438020000-10"
+                    linkends="2c2faa8178295aa2ad5b981dd117c8fd" otherunits="polygon"/>
+                <area coords="92,49,400,49,400,57,92,57"
+                    id="1408438020000-11"
+                    linkends="d4d57ca07199ce4328285dfc17477de2" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-1101-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-1001;
+</sect1>

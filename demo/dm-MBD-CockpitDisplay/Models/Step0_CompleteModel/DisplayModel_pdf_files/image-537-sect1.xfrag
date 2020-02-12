@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-491.html"?>
+<title>GroundSpeed_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/GroundSpeed_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408438006484-0"
+                    linkends="7b0ff3b9ce98955738770fcbe084364d" otherunits="rect"/>
+                <area coords="261,11,291,25" id="1408438006484-1"
+                    linkends="531f8abe873e1e2c9fb5d71f5e81e73f" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-538-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-492;
+</sect1>

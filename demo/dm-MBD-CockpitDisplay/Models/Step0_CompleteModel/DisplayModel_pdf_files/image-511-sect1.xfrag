@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-467.html"?>
+<title>FuelQuantity_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/FuelQuantity_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="9,70,27,79" id="1408438005888-0"
+                    linkends="81f15e293b577b5e555f14074e531c97" otherunits="rect"/>
+                <area coords="78,123,96,141" id="1408438005888-1"
+                    linkends="fdd94eb03da90a67e0f2e3376d46b764" otherunits="rect"/>
+                <area coords="78,9,96,27" id="1408438005888-2"
+                    linkends="d852768283d1367d92a7bb42c7456daa" otherunits="rect"/>
+                <area coords="156,58,177,91" id="1408438005888-3"
+                    linkends="b0c704a9106cb6279b04e872f80ed154" otherunits="rect"/>
+                <area coords="330,52,450,98" id="1408438005888-4"
+                    linkends="a506f202fbf64c38e59d364318485822" otherunits="rect"/>
+                <area coords="585,70,603,79" id="1408438005888-5"
+                    linkends="32a94215a2bfce8450594c323f32b689" otherunits="rect"/>
+                <area coords="176,71,331,71,331,79,176,79"
+                    id="1408438005888-6"
+                    linkends="099d9aa84da0b1ec9658b9ac42771229" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-512-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-468;
+</sect1>

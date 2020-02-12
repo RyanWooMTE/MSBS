@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-763.html"?>
+<title>"Relational
+Operator" (RelationalOperator) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Relational
+Operator" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Relational operator</entry>
+                <entry>&lt;</entry>
+            </row>
+            <row>
+                <entry>Require all inputs to have the same data type</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Output data type</entry>
+                <entry>Inherit: Logical (see Configuration Parameters: Optimization)</entry>
+            </row>
+            <row>
+                <entry>Enable zero-crossing detection</entry>
+                <entry>on</entry>
+            </row>
+            <row>
+                <entry>Sample time (-1 for inherited)</entry>
+                <entry>-1</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

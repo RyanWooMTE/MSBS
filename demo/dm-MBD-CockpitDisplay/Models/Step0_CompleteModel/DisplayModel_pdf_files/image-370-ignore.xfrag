@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table colsep="1" frame="all" pgwide="1" rowsep="1"><title>Data - Engine_MasterSwitch</title><tgroup align="left" cols="2"><colspec colname="1" colnum="1" colwidth="9000*"/><colspec colname="2" colnum="2" colwidth="30000*"/><tbody><row><entry>Scope</entry><entry>Input</entry></row><row><entry>Data Type</entry><entry>Inherit: Same as Simulink</entry></row></tbody></tgroup></table>

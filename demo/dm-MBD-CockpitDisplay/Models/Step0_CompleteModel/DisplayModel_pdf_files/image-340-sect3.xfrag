@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect3>
+<?dbhtml filename="DisplayModel-318.html"?>
+<title>Chart</title>
+<mediaobject>
+    <imageobjectco>
+        <areaspec>
+            <area coords="11,261,21,279" id="1408438000631-0"
+                linkends="7ff7d44d97323a986092621cd44c7cd5" otherunits="rect"/>
+            <area coords="579,262,589,280" id="1408438000631-1"
+                linkends="b45d53f42437bdae7643cb9f9a858f03" otherunits="rect"/>
+            <area coords="52,52,268,487" id="1408438000631-2"
+                linkends="7ff7d44d97323a986092621cd44c7cd5" otherunits="rect"/>
+            <area coords="274,53,548,489" id="1408438000631-3"
+                linkends="b45d53f42437bdae7643cb9f9a858f03" otherunits="rect"/>
+        </areaspec>
+        <imageobject>
+            <imagedata
+                fileref="./DisplayModel_pdf_files/image-341-sf.svg"
+                format="SVG" scalefit="1"/>
+        </imageobject>
+        <calloutlist>
+            <callout arearefs="1408438000631-0">
+                <para>
+                    <link linkend="7ff7d44d97323a986092621cd44c7cd5">APU_LOGIC</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438000631-1">
+                <para>
+                    <link linkend="b45d53f42437bdae7643cb9f9a858f03">Engine_LOGIC</link>
+                </para>
+            </callout>
+        </calloutlist>
+    </imageobjectco>
+</mediaobject>
+</sect3>

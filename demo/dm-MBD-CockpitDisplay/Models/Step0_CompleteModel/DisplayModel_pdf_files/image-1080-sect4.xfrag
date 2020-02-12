@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-980.html"?>
+<title>"LogicalOperator2" (Logic) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"LogicalOperator2" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Operator</entry>
+                <entry>NOT</entry>
+            </row>
+            <row>
+                <entry>Number of input ports</entry>
+                <entry>2</entry>
+            </row>
+            <row>
+                <entry>Icon shape</entry>
+                <entry>rectangular</entry>
+            </row>
+            <row>
+                <entry>Require all inputs and output to have the same data type</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Output data type</entry>
+                <entry>boolean</entry>
+            </row>
+            <row>
+                <entry>Sample time (-1 for inherited)</entry>
+                <entry>-1</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

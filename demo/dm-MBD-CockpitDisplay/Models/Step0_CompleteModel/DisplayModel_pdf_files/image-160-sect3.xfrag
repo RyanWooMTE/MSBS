@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect3>
+<?dbhtml filename="DisplayModel-147.html"?>
+<title>Input Signals</title>
+<para>The following tables describe external signals used to compute the subsystem's inputs.The name of the input signal is the name of the input port that accepts the signal. The number in angle brackets is the number of the input port. A dimension of [1 1] indicates a scalar signal.</para>
+&sect-148;&sect-149;
+</sect3>

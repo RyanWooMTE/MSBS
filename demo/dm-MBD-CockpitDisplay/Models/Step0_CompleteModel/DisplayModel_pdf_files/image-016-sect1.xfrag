@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-017.html"?>
+<title>AirplaneDirection_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/AirplaneDirection_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408437988912-0"
+                    linkends="c7280fe0a6a5819c618c2026ccdaf5e5" otherunits="rect"/>
+                <area coords="261,11,291,25" id="1408437988912-1"
+                    linkends="796bba3c457a0ef450d5fe8e70511147" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-017-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-018;
+</sect1>

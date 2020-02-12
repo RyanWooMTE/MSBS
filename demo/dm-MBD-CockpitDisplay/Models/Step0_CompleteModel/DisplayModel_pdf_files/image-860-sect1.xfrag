@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-787.html"?>
+<title>RPM_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/RPM_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,42,41,56" id="1408438013852-0"
+                    linkends="46dc3d2af058abbb9dcc80dab0029e7a" otherunits="rect"/>
+                <area coords="161,11,361,87" id="1408438013852-1"
+                    linkends="d387d1014bcd70630dc5d9dbc6b9155f" otherunits="rect"/>
+                <area coords="471,42,501,56" id="1408438013852-2"
+                    linkends="0dc1665741d00c517e8ffad95b0cda50" otherunits="rect"/>
+                <area coords="362,45,470,45,470,53,362,53"
+                    id="1408438013852-3"
+                    linkends="385c9dff78f89c7d70e72fbcd68b0f2b" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-861-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-788;
+</sect1>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-133.html"?>
+<title>Compare To Constant</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/Compare To Constant</title>
+    <mediaobject>
+        <imageobject>
+            <imagedata
+                fileref="./DisplayModel_pdf_files/image-145-sl.svg"
+                format="SVG" scalefit="1"/>
+        </imageobject>
+    </mediaobject>
+</figure>
+&sect-134;
+</sect1>

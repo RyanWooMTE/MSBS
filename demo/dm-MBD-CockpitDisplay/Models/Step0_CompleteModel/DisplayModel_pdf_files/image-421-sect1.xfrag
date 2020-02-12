@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-385.html"?>
+<title>EPR2_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/EPR2_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,42,41,56" id="1408438003656-0"
+                    linkends="524ba11e9826e6e2d4d15b1739fd6473" otherunits="rect"/>
+                <area coords="121,84,151,114" id="1408438003656-1"
+                    linkends="78c763daa774ddde97ea28a1a79ccc8b" otherunits="rect"/>
+                <area coords="241,11,441,87" id="1408438003656-2"
+                    linkends="7c55ba608c305b5c1992332ef1d46184" otherunits="rect"/>
+                <area coords="176,39,196,59" id="1408438003656-3"
+                    linkends="ad4c2a09a0fc55c9e8a9f8f9a8841b1a" otherunits="rect"/>
+                <area coords="496,42,526,56" id="1408438003656-4"
+                    linkends="65549dcb486ca12a178a052d0d9b5903" otherunits="rect"/>
+                <area coords="442,45,495,45,495,53,442,53"
+                    id="1408438003656-5"
+                    linkends="ea6454f92744dd187f5a8c013d64a4cf" otherunits="polygon"/>
+                <area coords="197,45,240,45,240,53,197,53"
+                    id="1408438003656-6"
+                    linkends="f953ca22aff0255f7b2d21e739ed718c" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-422-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-386;
+</sect1>

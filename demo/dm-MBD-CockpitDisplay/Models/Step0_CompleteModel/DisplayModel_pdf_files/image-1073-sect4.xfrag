@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-973.html"?>
+<title>"Bus Creator1" (BusCreator) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Bus Creator1" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Number of inputs</entry>
+                <entry>5</entry>
+            </row>
+            <row>
+                <entry>Display option</entry>
+                <entry>bar</entry>
+            </row>
+            <row>
+                <entry>Data type</entry>
+                <entry>Inherit: auto</entry>
+            </row>
+            <row>
+                <entry>Output as nonvirtual bus</entry>
+                <entry>off</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

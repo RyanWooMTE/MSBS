@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-595.html"?>
+<title>Measured Speed1</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/LandingGearLeftLock_sensor/Sensor_DataConversion/Measured Speed1</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408438009149-0"
+                    linkends="e539123374ce269219cced6ae3713b00" otherunits="rect"/>
+                <area coords="196,11,226,25" id="1408438009149-1"
+                    linkends="59e07099ce8130eeb2d21bf317ed9e87" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-650-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-596;
+</sect1>

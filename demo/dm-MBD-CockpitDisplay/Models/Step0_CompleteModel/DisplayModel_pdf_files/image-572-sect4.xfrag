@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-523.html"?>
+<title>"Sensor_DataConversion" (Reference) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Sensor_DataConversion" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Source block</entry>
+                <entry>CockpitDisplayLib/Sensor_DataConversion</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

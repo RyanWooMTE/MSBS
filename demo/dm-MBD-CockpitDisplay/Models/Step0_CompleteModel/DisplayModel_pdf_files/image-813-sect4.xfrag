@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-743.html"?>
+<title>"pos_min" (Constant) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"pos_min" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Constant value</entry>
+                <entry>-0.5</entry>
+            </row>
+            <row>
+                <entry>Interpret vector parameters as 1-D</entry>
+                <entry>on</entry>
+            </row>
+            <row>
+                <entry>Sampling mode</entry>
+                <entry>Sample based</entry>
+            </row>
+            <row>
+                <entry>Output minimum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Output maximum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Output data type</entry>
+                <entry>Inherit: Inherit from 'Constant value'</entry>
+            </row>
+            <row>
+                <entry>Lock output data type setting against changes by the fixed-point tools</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Sample time</entry>
+                <entry>inf</entry>
+            </row>
+            <row>
+                <entry>Frame period</entry>
+                <entry>inf</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

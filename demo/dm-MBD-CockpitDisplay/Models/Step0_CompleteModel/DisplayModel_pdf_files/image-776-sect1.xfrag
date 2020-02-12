@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-709.html"?>
+<title>OilPressure_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/OilPressure_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,40,39,54" id="1408438011844-0"
+                    linkends="93769a1883dba707fea0c86800f7569f" otherunits="rect"/>
+                <area coords="206,11,396,83" id="1408438011844-1"
+                    linkends="e73a44803748dd03a7c4758a2677f237" otherunits="rect"/>
+                <area coords="573,40,601,54" id="1408438011844-2"
+                    linkends="7531e23d297c43f4a5ab65acc974f5bf" otherunits="rect"/>
+                <area coords="397,43,572,43,572,51,397,51"
+                    id="1408438011844-3"
+                    linkends="61697c7f0ae42c74be3426a2f2120a5c" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-777-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-710;
+</sect1>

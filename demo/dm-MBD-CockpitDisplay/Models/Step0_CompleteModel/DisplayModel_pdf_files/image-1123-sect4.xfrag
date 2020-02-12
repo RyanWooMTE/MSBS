@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-1021.html"?>
+<title>"Bus Selector1" (BusSelector) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Bus Selector1" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Output signals</entry>
+                <entry>FlapPosition,CabinPressure,HydraulicPressure,APUData,LGLeftLock,LGRightLock</entry>
+            </row>
+            <row>
+                <entry>Output as bus</entry>
+                <entry>off</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+<orderedlist continuation="restarts" inheritnum="ignore"
+    numeration="arabic" spacing="compact">
+    <title>Output Hierarchy:</title>
+    <listitem>
+        <emphasis>
+            <anchor id=""/>Bus Selector1</emphasis>
+        <orderedlist continuation="restarts" inheritnum="ignore"
+            numeration="arabic" spacing="compact">
+            <listitem>
+                <para>
+                    <anchor id="c3164cd9fad91ac9eec687fbdd7d1304"/>&lt;FlapPosition&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="a02088f247a9bae4ce77c22864bf807d"/>&lt;CabinPressure&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="6b6c0b57c928cdafb10a4bde16df4701"/>&lt;HydraulicPressure&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="9344f963896327b653fa05b1ec6bcb5c"/>&lt;APUData&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="a9353526a403c04a72b0831d7699a88c"/>&lt;LGLeftLock&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="2b0dce12a593f1a4a3fb62fd3367a0f9"/>&lt;LGRightLock&gt;</para>
+            </listitem>
+        </orderedlist>
+    </listitem>
+</orderedlist>
+</sect4>

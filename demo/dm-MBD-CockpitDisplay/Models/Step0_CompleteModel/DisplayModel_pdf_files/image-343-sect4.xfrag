@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4 id="7ff7d44d97323a986092621cd44c7cd5">
+<?dbhtml filename="DisplayModel-320.html"?>
+<title>AND State - APU_LOGIC</title>
+<mediaobject>
+    <imageobjectco>
+        <areaspec>
+            <area coords="229,7,238,25" id="1408438000821-0"
+                linkends="61f650c402daa1eb2377f9cd7751f4ec" otherunits="rect"/>
+            <area coords="430,282,440,300" id="1408438000821-1"
+                linkends="118bc7be055e0a24bc74bb84e16ca00c" otherunits="rect"/>
+            <area coords="430,468,440,486" id="1408438000821-2"
+                linkends="e55943f2bf41827006960c27718fac55" otherunits="rect"/>
+            <area coords="229,775,238,793" id="1408438000821-3"
+                linkends="00d2712d91eb17f5e5edc00766acd808" otherunits="rect"/>
+            <area coords="240,7,250,25" id="1408438000821-4"
+                linkends="2aa091a2cf5e12b128c98bc49a529df5" otherunits="rect"/>
+            <area coords="430,371,440,389" id="1408438000821-5"
+                linkends="34e8c7aeb8ccd8c714e240703d383906" otherunits="rect"/>
+            <area coords="430,552,440,570" id="1408438000821-6"
+                linkends="6a4ef5a789bd818f66c11941a12307bf" otherunits="rect"/>
+            <area coords="164,97,303,161" id="1408438000821-7"
+                linkends="61f650c402daa1eb2377f9cd7751f4ec" otherunits="rect"/>
+            <area coords="85,241,383,340" id="1408438000821-8"
+                linkends="118bc7be055e0a24bc74bb84e16ca00c" otherunits="rect"/>
+            <area coords="85,427,383,526" id="1408438000821-9"
+                linkends="e55943f2bf41827006960c27718fac55" otherunits="rect"/>
+            <area coords="152,606,315,701" id="1408438000821-10"
+                linkends="00d2712d91eb17f5e5edc00766acd808" otherunits="rect"/>
+            <area coords="238,80,240,82" id="1408438000821-11"
+                linkends="7900b073a183e3c452b353aa1edd0073" otherunits="rect"/>
+            <area coords="229,196,231,198" id="1408438000821-12"
+                linkends="2aa091a2cf5e12b128c98bc49a529df5" otherunits="rect"/>
+            <area coords="226,379,228,381" id="1408438000821-13"
+                linkends="34e8c7aeb8ccd8c714e240703d383906" otherunits="rect"/>
+            <area coords="226,560,228,562" id="1408438000821-14"
+                linkends="6a4ef5a789bd818f66c11941a12307bf" otherunits="rect"/>
+        </areaspec>
+        <imageobject>
+            <imagedata
+                fileref="./DisplayModel_pdf_files/image-344-sf.svg"
+                format="SVG" scalefit="1"/>
+        </imageobject>
+        <calloutlist>
+            <callout arearefs="1408438000821-0">
+                <para>
+                    <link linkend="61f650c402daa1eb2377f9cd7751f4ec">OFF</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438000821-1">
+                <para>
+                    <link linkend="118bc7be055e0a24bc74bb84e16ca00c">APU_PrepareForStart</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438000821-2">
+                <para>
+                    <link linkend="e55943f2bf41827006960c27718fac55">APU_Start</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438000821-3">
+                <para>
+                    <link linkend="00d2712d91eb17f5e5edc00766acd808">APU_Running</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438000821-4">
+                <para>
+                    <link linkend="2aa091a2cf5e12b128c98bc49a529df5">[APU_MasterSwitch]</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438000821-5">
+                <para>
+                    <link linkend="34e8c7aeb8ccd8c714e240703d383906">[APU_StartSwitch]</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438000821-6">
+                <para>
+                    <link linkend="6a4ef5a789bd818f66c11941a12307bf">after(5,sec)</link>
+                </para>
+            </callout>
+        </calloutlist>
+    </imageobjectco>
+</mediaobject>
+</sect4>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-975.html"?>
+<title>"Bus Selector" (BusSelector) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Bus Selector" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Output signals</entry>
+                <entry>Engine_Mode</entry>
+            </row>
+            <row>
+                <entry>Output as bus</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry/>
+                <entry>
+                    <simplelist columns="1" type="vert">
+                        <member>APU_Mode</member>
+                        <member>Engine_Mode</member>
+                    </simplelist>
+                </entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+<orderedlist continuation="restarts" inheritnum="ignore"
+    numeration="arabic" spacing="compact">
+    <title>Output Hierarchy:</title>
+    <listitem>
+        <emphasis>
+            <anchor id=""/>Bus Selector</emphasis>
+        <orderedlist continuation="restarts" inheritnum="ignore"
+            numeration="arabic" spacing="compact">
+            <listitem>
+                <para>
+                    <anchor id="f906ed7f3a7a82be7005d4d145492887"/>&lt;Engine_Mode&gt;</para>
+            </listitem>
+        </orderedlist>
+    </listitem>
+</orderedlist>
+</sect4>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-107.html"?>
+<title>CabinPressure_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/CabinPressure_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,42,41,56" id="1408437992049-0"
+                    linkends="5df15e3af7a8388dfc59803a174e9bc0" otherunits="rect"/>
+                <area coords="176,11,376,87" id="1408437992049-1"
+                    linkends="520be0df7d36143561600a3662347362" otherunits="rect"/>
+                <area coords="506,42,536,56" id="1408437992049-2"
+                    linkends="d7357f89d2ee73868411e821e306acac" otherunits="rect"/>
+                <area coords="42,45,175,45,175,53,42,53"
+                    id="1408437992049-3"
+                    linkends="9b702781a3a15a77cf18cdd59a417e3d" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-117-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-108;
+</sect1>

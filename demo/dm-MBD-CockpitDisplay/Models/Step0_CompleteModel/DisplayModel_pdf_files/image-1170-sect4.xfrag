@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-1065.html"?>
+<title>"1-D Lookup Table10" (Lookup_n-D) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"1-D Lookup Table10" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Number of table dimensions</entry>
+                <entry>1</entry>
+            </row>
+            <row>
+                <entry>Breakpoints for dimension 1</entry>
+                <entry>0:10:500</entry>
+            </row>
+            <row>
+                <entry>Breakpoints minimum for dimension 1</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Breakpoints maximum for dimension 1</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Breakpoints data type for dimension 1</entry>
+                <entry>Inherit: Same as corresponding input</entry>
+            </row>
+            <row>
+                <entry>Index search method</entry>
+                <entry>Binary search</entry>
+            </row>
+            <row>
+                <entry>Begin index search using previous index result</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Use one input port for all input data</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Table data</entry>
+                <entry>zeros(51,1)</entry>
+            </row>
+            <row>
+                <entry>Table minimum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Table maximum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Table data type</entry>
+                <entry>Inherit: Same as output</entry>
+            </row>
+            <row>
+                <entry>Intermediate results data type</entry>
+                <entry>Inherit: Same as output</entry>
+            </row>
+            <row>
+                <entry>Interpolation method</entry>
+                <entry>Linear</entry>
+            </row>
+            <row>
+                <entry>Extrapolation method</entry>
+                <entry>Linear</entry>
+            </row>
+            <row>
+                <entry>Diagnostic for out-of-range input</entry>
+                <entry>None</entry>
+            </row>
+            <row>
+                <entry>Remove protection against out-of-range input in generated code</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Use last table value for inputs at or above last breakpoint</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Sample time (-1 for inherited)</entry>
+                <entry>-1</entry>
+            </row>
+            <row>
+                <entry>Internal rule priority</entry>
+                <entry>Precision</entry>
+            </row>
+            <row>
+                <entry>Require all inputs to have the same data type</entry>
+                <entry>on</entry>
+            </row>
+            <row>
+                <entry>Output minimum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Output maximum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Output data type</entry>
+                <entry>Inherit: Same as first input</entry>
+            </row>
+            <row>
+                <entry>Lock data type settings against changes by the fixed-point tools</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Integer rounding mode</entry>
+                <entry>Simplest</entry>
+            </row>
+            <row>
+                <entry>Saturate on integer overflow</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Fraction data type</entry>
+                <entry>Inherit: Inherit via internal rule</entry>
+            </row>
+            <row>
+                <entry>Support tunable table size in code generation</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Maximum indices for each dimension</entry>
+                <entry>[]</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+<figure>
+    <title>1-D Lookup Table10</title>
+    <mediaobject>
+        <imageobject>
+            <imagedata
+                fileref="./DisplayModel_pdf_files/image-1171-hg.png" scalefit="1"/>
+        </imageobject>
+    </mediaobject>
+</figure>
+<table colsep="1" frame="all" pgwide="0" rowsep="1">
+    <title>1-D Lookup Table10 (:,:)</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="1*"/>
+        <colspec colname="2" colnum="2" colwidth="1*"/>
+        <tbody>
+            <row>
+                <entry>
+                    <emphasis>0</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>10</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>20</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>30</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>40</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>50</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>60</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>70</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>80</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>90</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>100</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>110</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>120</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>130</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>140</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>150</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>160</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>170</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>180</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>190</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>200</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>210</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>220</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>230</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>240</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>250</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>260</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>270</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>280</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>290</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>300</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>310</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>320</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>330</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>340</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>350</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>360</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>370</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>380</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>390</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>400</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>410</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>420</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>430</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>440</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>450</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>460</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>470</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>480</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>490</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+            <row>
+                <entry>
+                    <emphasis>500</emphasis>
+                </entry>
+                <entry>0</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-1127.html"?>
+<title>"Enable" (EnablePort) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Enable" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>States when enabling</entry>
+                <entry>held</entry>
+            </row>
+            <row>
+                <entry>Propagate sizes of variable-size signals</entry>
+                <entry>Only when enabling</entry>
+            </row>
+            <row>
+                <entry>Show output port</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Enable zero-crossing detection</entry>
+                <entry>on</entry>
+            </row>
+            <row>
+                <entry>Port dimensions</entry>
+                <entry>1</entry>
+            </row>
+            <row>
+                <entry>Sample time</entry>
+                <entry>-1</entry>
+            </row>
+            <row>
+                <entry>Minimum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Maximum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Data type</entry>
+                <entry>double</entry>
+            </row>
+            <row>
+                <entry>Interpolate data</entry>
+                <entry>on</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

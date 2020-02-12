@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4 id="7c5ab7f30af5be087ab3624a9f5f1557">
+<?dbhtml filename="DisplayModel-834.html"?>
+<title>OR State - one</title>
+<mediaobject>
+    <imageobjectco>
+        <areaspec>
+            <area coords="149,7,158,25" id="1408438015808-0"
+                linkends="de2f2ada3d9841daf1e28a5aaf9295ef" otherunits="rect"/>
+            <area coords="11,238,21,256" id="1408438015808-1"
+                linkends="efadd284c3979d62cea35ca17d9f7110" otherunits="rect"/>
+            <area coords="11,324,21,342" id="1408438015808-2"
+                linkends="314eead7bb02c70e786c1e0c5bad9fe3" otherunits="rect"/>
+            <area coords="224,80,405,104" id="1408438015808-3"
+                linkends="5fde183b5bbce23588dd1ad58c1fb367" otherunits="rect"/>
+            <area coords="153,146,155,148" id="1408438015808-4"
+                linkends="de2f2ada3d9841daf1e28a5aaf9295ef" otherunits="rect"/>
+            <area coords="153,246,155,248" id="1408438015808-5"
+                linkends="efadd284c3979d62cea35ca17d9f7110" otherunits="rect"/>
+            <area coords="153,332,155,334" id="1408438015808-6"
+                linkends="314eead7bb02c70e786c1e0c5bad9fe3" otherunits="rect"/>
+            <area coords="147,185,160,198" id="1408438015808-7"
+                linkends="a48c3a895c3602dfa502565a639ee145" otherunits="rect"/>
+            <area coords="147,304,161,318" id="1408438015808-8"
+                linkends="32d6e9622df5b6f436d6520cf978d1f0" otherunits="rect"/>
+            <area coords="147,356,161,369" id="1408438015808-9"
+                linkends="260cdda7a068ed8c76efb74b1aee4be8" otherunits="rect"/>
+        </areaspec>
+        <imageobject>
+            <imagedata
+                fileref="./DisplayModel_pdf_files/image-917-sf.svg"
+                format="SVG" scalefit="1"/>
+        </imageobject>
+        <calloutlist>
+            <callout arearefs="1408438015808-0">
+                <para>
+                    <link linkend="de2f2ada3d9841daf1e28a5aaf9295ef">{valid_signal=signals(select(1));}</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438015808-1">
+                <para>
+                    <link linkend="efadd284c3979d62cea35ca17d9f7110">{prev_signal=valid_signal;}</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438015808-2">
+                <para>
+                    <link linkend="314eead7bb02c70e786c1e0c5bad9fe3">{count=0;}</link>
+                </para>
+            </callout>
+        </calloutlist>
+    </imageobjectco>
+</mediaobject>
+</sect4>

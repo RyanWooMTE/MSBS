@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-509.html"?>
+<title>HydraulicPressure_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/HydraulicPressure_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="10,97,35,109" id="1408438006995-0"
+                    linkends="36a0a5d745d32cd7f8d6db91da94d99d" otherunits="rect"/>
+                <area coords="90,179,116,205" id="1408438006995-1"
+                    linkends="0eb19e81e38b2952eba78488b2c586a6" otherunits="rect"/>
+                <area coords="90,10,116,35" id="1408438006995-2"
+                    linkends="3fd23f593e925dae8f977ecc381dc6ac" otherunits="rect"/>
+                <area coords="183,80,213,126" id="1408438006995-3"
+                    linkends="5da353861c090ffea7930b26b6756929" otherunits="rect"/>
+                <area coords="314,71,484,135" id="1408438006995-4"
+                    linkends="996732cfd55fba2c3faf47e34cd14ace" otherunits="rect"/>
+                <area coords="577,97,602,109" id="1408438006995-5"
+                    linkends="2ea11107c14aefb1d95a6b051a223e03" otherunits="rect"/>
+                <area coords="213,99,314,99,314,107,213,107"
+                    id="1408438006995-6"
+                    linkends="b506a2e2e9b730ec03d80937333b3b0a" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-558-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-510;
+</sect1>

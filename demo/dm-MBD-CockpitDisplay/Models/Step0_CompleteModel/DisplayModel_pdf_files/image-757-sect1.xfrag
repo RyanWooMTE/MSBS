@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-691.html"?>
+<title>NDAdditionalInput</title>
+<figure>
+    <title>DisplayModel/Inputs/UserSelection/NDAdditionalInput</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,344,111,392" id="1408438011327-0"
+                    linkends="138367f867e0afaa98eb3e09a28e5b57" otherunits="rect"/>
+                <area coords="256,11,261,405" id="1408438011327-1"
+                    linkends="433f4cce30936de5c465093334e86669" otherunits="rect"/>
+                <area coords="11,24,111,72" id="1408438011327-2"
+                    linkends="ac5a1a4f2395a117493a475868cc8bff" otherunits="rect"/>
+                <area coords="11,264,111,312" id="1408438011327-3"
+                    linkends="c51dad9fc66f5ac3f4b8dce7470f995b" otherunits="rect"/>
+                <area coords="11,184,111,232" id="1408438011327-4"
+                    linkends="12aa148f67b636c07aa9fe381f1d63c1" otherunits="rect"/>
+                <area coords="11,104,111,152" id="1408438011327-5"
+                    linkends="84fb656ad3ba5eab72365edbf08c264a" otherunits="rect"/>
+                <area coords="431,196,461,210" id="1408438011327-6"
+                    linkends="743191fa5095035c535895952b5abdb7" otherunits="rect"/>
+                <area coords="112,364,255,364,255,372,112,372"
+                    id="1408438011327-7"
+                    linkends="5649694c568520eebde1e2e41eb3d837" otherunits="polygon"/>
+                <area coords="112,44,255,44,255,52,112,52"
+                    id="1408438011327-8"
+                    linkends="719252c84e33e567e8c8a72009b17e78" otherunits="polygon"/>
+                <area coords="112,284,255,284,255,292,112,292"
+                    id="1408438011327-9"
+                    linkends="c85dd49dbca49fd7b427d8b3ac1ba7e7" otherunits="polygon"/>
+                <area coords="112,124,255,124,255,132,112,132"
+                    id="1408438011327-10"
+                    linkends="8fd601e86db4c5602714fc07901c351a" otherunits="polygon"/>
+                <area coords="112,204,255,204,255,212,112,212"
+                    id="1408438011327-11"
+                    linkends="a199d4878fc8c03b19042d170be9e619" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-758-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-692;
+</sect1>

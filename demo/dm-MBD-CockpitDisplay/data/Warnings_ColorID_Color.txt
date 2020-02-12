@@ -1,0 +1,6 @@
+ColorID	Color
+1	red  
+2	amber
+3	green
+4	blue 
+5	white

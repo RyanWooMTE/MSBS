@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-461.html"?>
+<title>"In1" (Inport) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"In1" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Port number</entry>
+                <entry>1</entry>
+            </row>
+            <row>
+                <entry>Port dimensions (-1 for inherited)</entry>
+                <entry>-1</entry>
+            </row>
+            <row>
+                <entry>Sample time (-1 for inherited)</entry>
+                <entry>-1</entry>
+            </row>
+            <row>
+                <entry>Minimum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Maximum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Data type</entry>
+                <entry>Inherit: auto</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-735.html"?>
+<title>Range Threshold</title>
+<figure>
+    <title>DisplayModel/Control_and_Display_Logic/SignalConditioning/SignalSelection/DataValidityLandingGearLeftLock/Range Threshold</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="12,72,42,86" id="1408438012617-0"
+                    linkends="df46051ee87cff20c05cb823ec9af195" otherunits="rect"/>
+                <area coords="312,71,342,102" id="1408438012617-1"
+                    linkends="7e7b72ea3e2b470c02a98527ceb6def2" otherunits="rect"/>
+                <area coords="177,11,207,42" id="1408438012617-2"
+                    linkends="680df4376099302ab05c7ac0496865e2" otherunits="rect"/>
+                <area coords="177,126,207,157" id="1408438012617-3"
+                    linkends="423b639f2c9f52f5a1b0f9e3e0637a85" otherunits="rect"/>
+                <area coords="112,24,147,44" id="1408438012617-4"
+                    linkends="39c87b0a36b81482ea289565c01234c4" otherunits="rect"/>
+                <area coords="112,139,147,159" id="1408438012617-5"
+                    linkends="d13e626f8a2b50af05892f927d860a15" otherunits="rect"/>
+                <area coords="382,82,412,96" id="1408438012617-6"
+                    linkends="9f7433aba8cee18c4976e440bc445218" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-805-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-736;
+</sect1>

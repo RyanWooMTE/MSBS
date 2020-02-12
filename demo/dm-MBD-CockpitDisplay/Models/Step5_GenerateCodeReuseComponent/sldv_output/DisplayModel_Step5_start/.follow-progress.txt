@@ -1,0 +1,8 @@
+# UTC offset -25200
+# Post Verification
+DVO : 00:00:00.64
+Level > 4 : 00:00:07.6
+Level1 : 00:00:08.55
+Level2 : 00:00:00.93
+Level3 : 00:00:01.59
+Level4 : 00:00:00.84

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-237.html"?>
+<title>"Bus Selector4" (BusSelector) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Bus Selector4" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Output signals</entry>
+                <entry>EnergySystemModes.APU_Mode,EnergySystemModes.Engine_Mode,FlightInputs,NavigationalData,EngineFuelData,OtherInputs</entry>
+            </row>
+            <row>
+                <entry>Output as bus</entry>
+                <entry>off</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+<orderedlist continuation="restarts" inheritnum="ignore"
+    numeration="arabic" spacing="compact">
+    <title>Output Hierarchy:</title>
+    <listitem>
+        <emphasis>
+            <anchor id=""/>Bus Selector4</emphasis>
+        <orderedlist continuation="restarts" inheritnum="ignore"
+            numeration="arabic" spacing="compact">
+            <listitem>
+                <para>
+                    <anchor id="8bdfd8fd21a4c511448fb53c133d74c7"/>&lt;APU_Mode&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="aca875524dc36585be0fcba7e6b6ed5f"/>&lt;Engine_Mode&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="04139b5c87b0dec60a96bf7bb5572918"/>&lt;FlightInputs&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="d493df192859670dcd62a48378ad0b33"/>&lt;NavigationalData&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="34e3edb1d47474eff7b7ae3a46fe0400"/>&lt;EngineFuelData&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="de2aa48da2c1d8b9409ada44d7c7eec0"/>&lt;OtherInputs&gt;</para>
+            </listitem>
+        </orderedlist>
+    </listitem>
+</orderedlist>
+</sect4>

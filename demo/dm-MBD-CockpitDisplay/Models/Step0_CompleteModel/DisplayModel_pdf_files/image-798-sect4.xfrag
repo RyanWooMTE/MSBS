@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-729.html"?>
+<title>"Multiport Switch" (MultiPortSwitch) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Multiport Switch" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Data port order</entry>
+                <entry>Zero-based contiguous</entry>
+            </row>
+            <row>
+                <entry>Number of data ports</entry>
+                <entry>2</entry>
+            </row>
+            <row>
+                <entry>Data port indices (e.g. {1,[2,3]})</entry>
+                <entry>{1,2,3}</entry>
+            </row>
+            <row>
+                <entry>Data port for default case</entry>
+                <entry>Last data port</entry>
+            </row>
+            <row>
+                <entry>Diagnostic for default case</entry>
+                <entry>Error</entry>
+            </row>
+            <row>
+                <entry>Require all data port inputs to have the same data type</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Output minimum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Output maximum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Output data type</entry>
+                <entry>Inherit: Inherit via internal rule</entry>
+            </row>
+            <row>
+                <entry>Lock output data type setting against changes by the fixed-point tools</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Integer rounding mode</entry>
+                <entry>Floor</entry>
+            </row>
+            <row>
+                <entry>Saturate on integer overflow</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Sample time (-1 for inherited)</entry>
+                <entry>-1</entry>
+            </row>
+            <row>
+                <entry>Allow different data input sizes (Results in variable-size output signal)</entry>
+                <entry>off</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

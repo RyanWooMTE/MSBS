@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-049.html"?>
+<title>Altitude_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/Altitude_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408437990379-0"
+                    linkends="35aa0d425a650a463d0c016d4b04bc13" otherunits="rect"/>
+                <area coords="261,11,291,25" id="1408437990379-1"
+                    linkends="df2400f52f16c882cf0eb9b714ffa911" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-053-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-050;
+</sect1>

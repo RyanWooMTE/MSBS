@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-075.html"?>
+<title>APUData_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/APUData_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="10,84,34,95" id="1408437991092-0"
+                    linkends="d6a2e5b24f1b938d6fef1240604dd8d4" otherunits="rect"/>
+                <area coords="65,10,89,34" id="1408437991092-1"
+                    linkends="cde1df8643cc2c2637916e7dc6aea458" otherunits="rect"/>
+                <area coords="73,141,97,165" id="1408437991092-2"
+                    linkends="3b775f8f9ca88270dafbe22dd36b35b9" otherunits="rect"/>
+                <area coords="153,68,181,111" id="1408437991092-3"
+                    linkends="3880082da4e14b18edc7014fc9d01159" otherunits="rect"/>
+                <area coords="300,59,459,120" id="1408437991092-4"
+                    linkends="8eeeae7a0dcacf851bdf0b31f65cd3c9" otherunits="rect"/>
+                <area coords="578,84,602,95" id="1408437991092-5"
+                    linkends="168f646c0363ce78eb28ef442baf5c9e" otherunits="rect"/>
+                <area coords="181,85,300,85,300,93,181,93"
+                    id="1408437991092-6"
+                    linkends="af6365572e2a643e557910745e9382f2" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-082-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-076;
+</sect1>

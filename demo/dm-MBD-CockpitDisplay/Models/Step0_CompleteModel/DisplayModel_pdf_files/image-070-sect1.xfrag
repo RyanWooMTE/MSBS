@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-065.html"?>
+<title>APUData_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/APUData_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,42,41,56" id="1408437990769-0"
+                    linkends="e6c985419fd43f89661ac8fb3b183721" otherunits="rect"/>
+                <area coords="101,11,301,87" id="1408437990769-1"
+                    linkends="a70c069610960aed75d305c25f5066be" otherunits="rect"/>
+                <area coords="371,42,401,56" id="1408437990769-2"
+                    linkends="5663df35030fccb2bf0c89dc8c269b58" otherunits="rect"/>
+                <area coords="42,45,100,45,100,53,42,53"
+                    id="1408437990769-3"
+                    linkends="6375f665a229646126909591e0df7b19" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-071-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-066;
+</sect1>

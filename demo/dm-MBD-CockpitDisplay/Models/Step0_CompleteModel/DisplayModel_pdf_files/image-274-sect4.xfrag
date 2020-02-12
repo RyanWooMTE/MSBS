@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-257.html"?>
+<title>"Out6" (Outport) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Out6" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Port number</entry>
+                <entry>6</entry>
+            </row>
+            <row>
+                <entry>Icon display</entry>
+                <entry>Port number</entry>
+            </row>
+            <row>
+                <entry>Minimum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Maximum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Data type</entry>
+                <entry>Inherit: auto</entry>
+            </row>
+            <row>
+                <entry>Lock output data type setting against changes by the fixed-point tools</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Output as nonvirtual bus in parent model</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Port dimensions (-1 for inherited)</entry>
+                <entry>-1</entry>
+            </row>
+            <row>
+                <entry>Variable-size signal</entry>
+                <entry>Inherit</entry>
+            </row>
+            <row>
+                <entry>Sample time (-1 for inherited)</entry>
+                <entry>-1</entry>
+            </row>
+            <row>
+                <entry>Source of initial output value</entry>
+                <entry>Dialog</entry>
+            </row>
+            <row>
+                <entry>Output when disabled</entry>
+                <entry>held</entry>
+            </row>
+            <row>
+                <entry>Initial output</entry>
+                <entry>[]</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

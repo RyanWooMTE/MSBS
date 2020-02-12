@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-525.html"?>
+<title>Inputs</title>
+<figure>
+    <title>DisplayModel/Inputs</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="181,78,326,180" id="1408438007446-0"
+                    linkends="2cf636ca6e2507430faa586cd9b85dbe" otherunits="rect"/>
+                <area coords="11,11,131,167" id="1408438007446-1"
+                    linkends="328fed6c6f14375ed656cce9325d5c45" otherunits="rect"/>
+                <area coords="391,42,421,56" id="1408438007446-2"
+                    linkends="d23df0fba8473d576f18797f25c8bc30" otherunits="rect"/>
+                <area coords="391,122,421,136" id="1408438007446-3"
+                    linkends="0dc3dacd7cf3decb57bb15d21c033cfb" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-575-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-526;
+</sect1>

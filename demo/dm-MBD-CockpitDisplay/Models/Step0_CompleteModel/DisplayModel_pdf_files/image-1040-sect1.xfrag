@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-943.html"?>
+<title>Sensor_DataConversion</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/LandingGearLeftLock_sensor/Sensor_DataConversion</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="365,36,412,36,412,44,365,44"
+                    id="1408438018606-0"
+                    linkends="93de05cc01c1cf7df13b9ffabcc38fce" otherunits="polygon"/>
+                <area coords="412,36,412,102,404,102,404,36"
+                    id="1408438018606-1"
+                    linkends="93de05cc01c1cf7df13b9ffabcc38fce" otherunits="polygon"/>
+                <area coords="404,94,450,94,450,102,404,102"
+                    id="1408438018606-2"
+                    linkends="93de05cc01c1cf7df13b9ffabcc38fce" otherunits="polygon"/>
+                <area coords="457,113,571,113,571,121,457,121"
+                    id="1408438018606-3"
+                    linkends="5abb088c45110b02a3787dcbb250d88e" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-1041-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-944;
+</sect1>

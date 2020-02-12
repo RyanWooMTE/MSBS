@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4 id="f1b0bc412efcbbebd58d6c41354f3dac">
+<?dbhtml filename="DisplayModel-833.html"?>
+<title>OR State - zero</title>
+<mediaobject>
+    <imageobjectco>
+        <areaspec>
+            <area coords="215,7,225,25" id="1408438015731-0"
+                linkends="da420e0fe145f73a360e1b324588095f" otherunits="rect"/>
+            <area coords="219,130,221,132" id="1408438015731-1"
+                linkends="da420e0fe145f73a360e1b324588095f" otherunits="rect"/>
+            <area coords="214,150,228,164" id="1408438015731-2"
+                linkends="ba3ed52f2c8febfa1f33c020d3987c06" otherunits="rect"/>
+        </areaspec>
+        <imageobject>
+            <imagedata
+                fileref="./DisplayModel_pdf_files/image-915-sf.svg"
+                format="SVG" scalefit="1"/>
+        </imageobject>
+        <calloutlist>
+            <callout arearefs="1408438015731-0">
+                <para>
+                    <link linkend="da420e0fe145f73a360e1b324588095f">{none();}</link>
+                </para>
+            </callout>
+        </calloutlist>
+    </imageobjectco>
+</mediaobject>
+</sect4>

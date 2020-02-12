@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-499.html"?>
+<title>HydraulicPressure_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/HydraulicPressure_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="10,37,37,50" id="1408438006681-0"
+                    linkends="e65784fb330c9516104632cc1a6ea0fd" otherunits="rect"/>
+                <area coords="190,10,365,77" id="1408438006681-1"
+                    linkends="6bfffd4b1be6aee23dd00a8a0f6637fb" otherunits="rect"/>
+                <area coords="575,37,602,50" id="1408438006681-2"
+                    linkends="941905b725b6f55fb96cf1e4e09e66ab" otherunits="rect"/>
+                <area coords="37,40,190,40,190,48,37,48"
+                    id="1408438006681-3"
+                    linkends="8b92c373687b43177a3da71445023002" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-547-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-500;
+</sect1>

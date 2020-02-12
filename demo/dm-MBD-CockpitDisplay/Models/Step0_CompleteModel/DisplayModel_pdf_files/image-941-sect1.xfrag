@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-857.html"?>
+<title>Screen Signals</title>
+<figure>
+    <title>DisplayModel/Control_and_Display_Logic/SignalConditioning/SignalSelection/DataValidityLandingGearRightLock/Screen Signals</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="12,38,42,52" id="1408438016267-0"
+                    linkends="6530c1b248880ff0f86c9f118fa9b47e" otherunits="rect"/>
+                <area coords="12,108,42,122" id="1408438016267-1"
+                    linkends="4a195a5d8ba988637ddd0e3af5016054" otherunits="rect"/>
+                <area coords="237,11,387,149" id="1408438016267-2"
+                    linkends="b6113b5b4744e67fc1763ce15afdcc4d" otherunits="rect"/>
+                <area coords="102,98,177,132" id="1408438016267-3"
+                    linkends="078df9e6ee98bbe1b7b2f90e4a1b5fd2" otherunits="rect"/>
+                <area coords="532,73,562,87" id="1408438016267-4"
+                    linkends="9b1d902f246081614e8b455635b8987a" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-942-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-858;
+&sect-869;
+</sect1>

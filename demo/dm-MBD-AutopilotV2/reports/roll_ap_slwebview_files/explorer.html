@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel= "stylesheet" href="explorer_files/dtree.css" type="text/css" />
+    <script type="text/javascript" src="explorer_files/dtree.js"></script>
+    <script type="text/javascript" src="slwebview.js"></script>
+    <script type="text/javascript" src="id_mapping.js"></script>
+    <title>Simulink Web View</title>
+  </head>
+  <body leftmargin="3"  topmargin="0" marginwidth="3" marginheight="3">
+    <script type="text/javascript">
+<!--
+var explorer = new dTree('explorer');
+explorer.add(0,-1,"Simulink Root","javascript:toggleExpose();","Simulink Root","roll_ap_slwebview_model");
+explorer.add(1,0,"roll_ap","javascript:changeSysByName('roll_ap',1);","roll_ap","roll_ap_slwebview_model","explorer_files/SimulinkModelIcon.png","explorer_files/SimulinkModelIcon.png",1);
+explorer.add(2,1,"Roll Reference","javascript:changeSysByName('roll_ap/Roll Reference',1);","roll_ap/Roll Reference","roll_ap_slwebview_model","explorer_files/SubSystemIcon.gif","explorer_files/SubSystemIcon.gif",0);
+explorer.add(3,0,"AP_Lib","","AP_Lib","roll_ap_slwebview_model","explorer_files/SimulinkModelIcon.png","explorer_files/SimulinkModelIcon.png",1);
+explorer.add(4,0,"Heading_Mode","javascript:changeSysByName('Heading_Mode',1);","Heading_Mode","roll_ap_slwebview_model","explorer_files/SimulinkModelIcon.png","explorer_files/SimulinkModelIcon.png",1);
+explorer.add(5,0,"attitude_controller","javascript:changeSysByName('attitude_controller',1);","attitude_controller","roll_ap_slwebview_model","explorer_files/SimulinkModelIcon.png","explorer_files/SimulinkModelIcon.png",1);
+explorer.add(6,3,"Angle_Diff","javascript:changeSysByName('AP_Lib/Angle_Diff',1);","AP_Lib/Angle_Diff","roll_ap_slwebview_model","explorer_files/SubSystemIcon.gif","explorer_files/SubSystemIcon.gif",0);
+var svgState = getSvgState(gHomeSys);
+svgState.tree = explorer;
+document.write(svgState.tree);
+//-->
+    </script>
+  </body>
+</html>
+

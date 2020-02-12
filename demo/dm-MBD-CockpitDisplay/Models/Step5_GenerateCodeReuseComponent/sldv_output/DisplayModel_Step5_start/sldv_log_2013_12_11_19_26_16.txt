@@ -1,0 +1,29 @@
+
+11-Dec-2013 19:25:39
+Starting design error detection for model 'DisplayModel_Step5_start'
+Compiling model... done
+Translating model... done
+'DisplayModel_Step5_start' is compatible with Simulink Design Verifier.
+
+Detecting design errors...
+
+PROVEN VALID
+LandingGear
+Overflow
+Analysis Time = 00:00:10
+
+
+11-Dec-2013 19:26:16
+Completed normally.
+
+Generating output files:
+
+    Data file:
+    C:\Mathworks\Workspace\Demo\13b_DesigningCockpitDisplaySystemUsingModelBasedDesign\Models\Step5_GenerateCodeReuseComponent\sldv_output\DisplayModel_Step5_start\DisplayModel_Step5_start_sldvdata.mat
+
+The analysis did not produce a harness model. Data does not contain any test cases or counterexamples.
+
+
+11-Dec-2013 19:26:16
+Results generation completed.
+

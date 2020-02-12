@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-580.html"?>
+<title>LandingGearRightLock_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/LandingGearRightLock_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="9,81,29,90" id="1408438008823-0"
+                    linkends="cdefb2b82e2d16e939befc961b2a03cf" otherunits="rect"/>
+                <area coords="102,146,122,166" id="1408438008823-1"
+                    linkends="ee15f3e3c03c0a3e53980f2c8ba1d72d" otherunits="rect"/>
+                <area coords="102,9,122,29" id="1408438008823-2"
+                    linkends="d75378380aa7d0887ddb42ca8d538b5f" otherunits="rect"/>
+                <area coords="179,68,203,104" id="1408438008823-3"
+                    linkends="35eab47acdd8a3b1870971792093e215" otherunits="rect"/>
+                <area coords="309,60,443,111" id="1408438008823-4"
+                    linkends="57073fe0902071d7053bc01102afd5ce" otherunits="rect"/>
+                <area coords="583,81,603,90" id="1408438008823-5"
+                    linkends="605af36ff91e3f83510b57d8b12e3ba4" otherunits="rect"/>
+                <area coords="202,82,310,82,310,90,202,90"
+                    id="1408438008823-6"
+                    linkends="3820096c43604a551550dac58463205e" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-634-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-581;
+</sect1>

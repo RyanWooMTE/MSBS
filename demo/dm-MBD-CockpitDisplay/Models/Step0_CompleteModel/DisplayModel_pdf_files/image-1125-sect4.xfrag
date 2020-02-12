@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-1023.html"?>
+<title>"Bus Selector6" (BusSelector) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Bus Selector6" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Output signals</entry>
+                <entry>RPM,temperature,fuelpressure,oilpressure,EGT,EPR1,EPR2,FuelQuantity</entry>
+            </row>
+            <row>
+                <entry>Output as bus</entry>
+                <entry>off</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+<orderedlist continuation="restarts" inheritnum="ignore"
+    numeration="arabic" spacing="compact">
+    <title>Output Hierarchy:</title>
+    <listitem>
+        <emphasis>
+            <anchor id=""/>Bus Selector6</emphasis>
+        <orderedlist continuation="restarts" inheritnum="ignore"
+            numeration="arabic" spacing="compact">
+            <listitem>
+                <para>
+                    <anchor id="95f9292f3516da85254126c3542c4fcf"/>&lt;RPM&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="2d1eba251f1fa87292cadd175709c0b6"/>&lt;temperature&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="270232be7da518f09b1c964b3586afed"/>&lt;fuelpressure&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="15defa318e5700a7ac174b7bf849c565"/>&lt;oilpressure&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="48f782e480b86b77cc6047357708c3f2"/>&lt;EGT&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="16f969aef769f18615301ac694e454c1"/>&lt;EPR1&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="9a39a38677319ea013403f2026b2536c"/>&lt;EPR2&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="508bd09b882773ec3b37be40384e017c"/>&lt;FuelQuantity&gt;</para>
+            </listitem>
+        </orderedlist>
+    </listitem>
+</orderedlist>
+</sect4>

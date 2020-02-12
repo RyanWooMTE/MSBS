@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-431.html"?>
+<title>FuelPressure_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/FuelPressure_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,42,41,56" id="1408438004811-0"
+                    linkends="cdd31d97c2c1cd9068ee0736fcab8b7a" otherunits="rect"/>
+                <area coords="136,11,336,87" id="1408438004811-1"
+                    linkends="428f7e04f98f5af88675718d1f093d99" otherunits="rect"/>
+                <area coords="436,42,466,56" id="1408438004811-2"
+                    linkends="f8fb4c1b5b058758a4e526870d4b16f7" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-473-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-432;
+</sect1>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations XML_version="1.2" id="configurations_0">
+<configuration XML_version="1.2" id="WintechDigital TDS510USB PLUS V3 EMULATOR_0">
+        <instance XML_version="1.2" desc="WintechDigital TDS510USB PLUS V3 EMULATOR_0" href="connections\TDS510USBPLUSV3_Connection.xml" id="WintechDigital TDS510USB PLUS V3 EMULATOR_0" xml="TDS510USBPLUSV3_Connection.xml" xmlpath="connections"/>
+        <connection XML_version="1.2" id="WintechDigital TDS510USB PLUS V3 EMULATOR_0">
+            <instance XML_version="1.2" href="drivers\tixds28x.xml" id="drivers" xml="tixds28x.xml" xmlpath="drivers"/>
+            <platform XML_version="1.2" id="platform_0">
+                <instance XML_version="1.2" desc="TMS320F28232_0" href="Devices\f28232.xml" id="TMS320F28232_0" xml="f28232.xml" xmlpath="Devices"/>
+            </platform>
+        </connection>
+    </configuration>
+</configurations>

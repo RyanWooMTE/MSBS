@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-229.html"?>
+<title>DisplayControl</title>
+<figure>
+    <title>DisplayModel/Control_and_Display_Logic/DisplayControl</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="8,46,24,54" id="1408437997178-0"
+                    linkends="74d670d5e87121c2fca6a7bcd9b3e28f" otherunits="rect"/>
+                <area coords="8,187,24,194" id="1408437997178-1"
+                    linkends="a6ff6a35cdd2860623f15f5f4e66a229" otherunits="rect"/>
+                <area coords="8,348,24,356" id="1408437997178-2"
+                    linkends="99e9ff5575c696a28ff7a94870409895" otherunits="rect"/>
+                <area coords="46,90,49,291" id="1408437997178-3"
+                    linkends="2d4ff359d9d38eb75974669aed5116be" otherunits="rect"/>
+                <area coords="46,8,49,92" id="1408437997178-4"
+                    linkends="5d19f7cb3f060f1adb2a5d9014c70ea8" otherunits="rect"/>
+                <area coords="46,290,49,415" id="1408437997178-5"
+                    linkends="0bccb20228e287a8e9b3c831ac9899b5" otherunits="rect"/>
+                <area coords="103,9,275,415" id="1408437997178-6"
+                    linkends="f73aeb89a154c7560d3542530fba9748" otherunits="rect"/>
+                <area coords="315,30,332,38" id="1408437997178-7"
+                    linkends="e1da437484909539a35a13778f236afb" otherunits="rect"/>
+                <area coords="315,82,332,89" id="1408437997178-8"
+                    linkends="a6aa24ef217d8e7b94222a7e71edb994" otherunits="rect"/>
+                <area coords="315,133,332,140" id="1408437997178-9"
+                    linkends="cf129964993980307057ed9899fa29c1" otherunits="rect"/>
+                <area coords="315,184,332,191" id="1408437997178-10"
+                    linkends="18aef2b3c25191dc6b03bef364feb1ce" otherunits="rect"/>
+                <area coords="315,235,332,243" id="1408437997178-11"
+                    linkends="1f1f38373a10cd748edabc6b9c6c51e5" otherunits="rect"/>
+                <area coords="315,286,332,294" id="1408437997178-12"
+                    linkends="634b9d6cf3408cfe5a405381015b9809" otherunits="rect"/>
+                <area coords="315,338,332,345" id="1408437997178-13"
+                    linkends="deff2f179a6e38286d8ddda059d02947" otherunits="rect"/>
+                <area coords="315,389,332,396" id="1408437997178-14"
+                    linkends="87c54ed65f2a04b8b57dbb26561ee5ce" otherunits="rect"/>
+                <area coords="47,294,104,294,104,302,47,302"
+                    id="1408437997178-15"
+                    linkends="8bdfd8fd21a4c511448fb53c133d74c7" otherunits="polygon"/>
+                <area coords="47,316,104,316,104,324,47,324"
+                    id="1408437997178-16"
+                    linkends="aca875524dc36585be0fcba7e6b6ed5f" otherunits="polygon"/>
+                <area coords="47,337,104,337,104,345,47,345"
+                    id="1408437997178-17"
+                    linkends="04139b5c87b0dec60a96bf7bb5572918" otherunits="polygon"/>
+                <area coords="47,359,104,359,104,367,47,367"
+                    id="1408437997178-18"
+                    linkends="d493df192859670dcd62a48378ad0b33" otherunits="polygon"/>
+                <area coords="47,380,104,380,104,388,47,388"
+                    id="1408437997178-19"
+                    linkends="34e3edb1d47474eff7b7ae3a46fe0400" otherunits="polygon"/>
+                <area coords="47,402,104,402,104,410,47,410"
+                    id="1408437997178-20"
+                    linkends="de2aa48da2c1d8b9409ada44d7c7eec0" otherunits="polygon"/>
+                <area coords="47,100,104,100,104,108,47,108"
+                    id="1408437997178-21"
+                    linkends="32e7fed8d204f8317444df8358512d5d" otherunits="polygon"/>
+                <area coords="47,230,104,230,104,238,47,238"
+                    id="1408437997178-22"
+                    linkends="7acaa98e233e8e7104a78dfb79694b1c" otherunits="polygon"/>
+                <area coords="47,79,104,79,104,87,47,87"
+                    id="1408437997178-23"
+                    linkends="e1617cf58337d37a876afa240c36696e" otherunits="polygon"/>
+                <area coords="47,57,104,57,104,65,47,65"
+                    id="1408437997178-24"
+                    linkends="7fa79e1e740ea92de698f08bd94e583a" otherunits="polygon"/>
+                <area coords="47,122,104,122,104,130,47,130"
+                    id="1408437997178-25"
+                    linkends="3b53d3203911d91bb6c38d0089af505d" otherunits="polygon"/>
+                <area coords="47,35,104,35,104,43,47,43"
+                    id="1408437997178-26"
+                    linkends="aa19e5cc9bde9d6b518528bf620b305b" otherunits="polygon"/>
+                <area coords="47,273,104,273,104,281,47,281"
+                    id="1408437997178-27"
+                    linkends="a2a8fe325b7c2369acc35514f86291bb" otherunits="polygon"/>
+                <area coords="47,14,104,14,104,22,47,22"
+                    id="1408437997178-28"
+                    linkends="2fa4e96ad3a23a1c43f639e4c0f3eeee" otherunits="polygon"/>
+                <area coords="47,208,104,208,104,216,47,216"
+                    id="1408437997178-29"
+                    linkends="7b3d8ff12e5f60c81f4facca128fc9b4" otherunits="polygon"/>
+                <area coords="47,186,104,186,104,194,47,194"
+                    id="1408437997178-30"
+                    linkends="e4ec0b0461855e961913d0e4ca34133e" otherunits="polygon"/>
+                <area coords="47,251,104,251,104,259,47,259"
+                    id="1408437997178-31"
+                    linkends="5bfe2cbc69d934f96bffbdd6d9ed869b" otherunits="polygon"/>
+                <area coords="47,143,104,143,104,151,47,151"
+                    id="1408437997178-32"
+                    linkends="d2d789261fc2aced5f9aa9873451f66d" otherunits="polygon"/>
+                <area coords="47,165,104,165,104,173,47,173"
+                    id="1408437997178-33"
+                    linkends="e92fd7bd266a412a9ee7b44e20941bca" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-246-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-230;
+</sect1>

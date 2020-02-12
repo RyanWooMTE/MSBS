@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-091.html"?>
+<title>Bearing_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/Bearing_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408437991671-0"
+                    linkends="e4a461a7436f1d5510757f1592469da5" otherunits="rect"/>
+                <area coords="261,11,291,25" id="1408437991671-1"
+                    linkends="6549d586a3c63e9c3eb724d90cbbc72d" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-099-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-092;
+</sect1>

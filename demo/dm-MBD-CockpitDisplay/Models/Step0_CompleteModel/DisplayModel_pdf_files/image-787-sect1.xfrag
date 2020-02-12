@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-719.html"?>
+<title>OilPressure_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/OilPressure_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="9,91,27,99" id="1408438012169-0"
+                    linkends="09be135b7212a9ab9a50a88f2c90113f" otherunits="rect"/>
+                <area coords="67,9,86,27" id="1408438012169-1"
+                    linkends="d8fc9a0a4b276937d9d73748957784d1" otherunits="rect"/>
+                <area coords="67,160,86,178" id="1408438012169-2"
+                    linkends="83cde59f119d2e18867486fd7fa7f9d6" otherunits="rect"/>
+                <area coords="187,78,209,112" id="1408438012169-3"
+                    linkends="0d93e1752719eed594d24d6ff5b2ef8d" otherunits="rect"/>
+                <area coords="271,72,394,118" id="1408438012169-4"
+                    linkends="9ee638a6025887f04e9292cda5b4c6c4" otherunits="rect"/>
+                <area coords="585,91,603,99" id="1408438012169-5"
+                    linkends="09d3e2c882c2abfd420aac5494f88796" otherunits="rect"/>
+                <area coords="208,91,271,91,271,99,208,99"
+                    id="1408438012169-6"
+                    linkends="3feb241d9bfc51d2fd9f636a5a1b332b" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-788-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-720;
+</sect1>

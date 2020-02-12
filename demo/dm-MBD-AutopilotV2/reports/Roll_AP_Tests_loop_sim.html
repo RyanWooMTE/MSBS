@@ -1,0 +1,444 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Functional Roll Autopilot Simulation via Simulink Report Generator</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><meta name="description" content="This report captures results of high-level requirements-based testing of a Simulink model. User specified test cases with time-dependent input values were developed. Expected output values were established. The model was executed with specified inputs, and results were compared against expected outputs. Pass/fail criteria were established and evaluated for each test case."></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="ko" class="book" title="Functional Roll Autopilot Simulation via Simulink Report Generator"><div class="titlepage"><div><div><h1 class="title"><a name="d174e1"></a>Functional Roll Autopilot Simulation via Simulink Report Generator</h1></div><div><h2 class="subtitle"></h2></div><div><div class="author"><h3 class="author"><span class="firstname">MathWorks</span></h3></div></div><div><p class="pubdate">12-Apr-2013 17:34:11</p></div><div><div class="abstract" title="&#52488;&#47197;"><p class="title"><b>&#52488;&#47197;</b></p><p>This report captures results of high-level requirements-based testing of a Simulink model. User 
+specified test cases with time-dependent input values were developed. Expected output values were 
+established. The model was executed with specified inputs, and results were compared against expected 
+outputs. Pass/fail criteria were established and evaluated for each test case.</p></div></div></div><hr></div><div class="toc"><p><b>&#52264;&#47168;</b></p><dl><dt><span class="chapter"><a href="#d174e17">1. Model Description</a></span></dt><dt><span class="chapter"><a href="#d174e112">2. Design Requirements</a></span></dt><dt><span class="chapter"><a href="#d174e127">3. High-Level Requirements Testing</a></span></dt><dd><dl><dt><span class="sect1"><a href="#d174e131">Test Requirements</a></span></dt></dl></dd><dt><span class="chapter"><a href="#d174e212">4. Results</a></span></dt><dd><dl><dt><span class="sect1"><a href="#d174e216">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e267">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e318">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e369">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e420">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e471">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e522">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e573">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e624">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e675">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e726">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e777">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e828">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e879">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e930">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e981">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e1032">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e1083">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e1134">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e1185">Test Iteration</a></span></dt></dl></dd><dt><span class="chapter"><a href="#d174e1236">5. Model Coverage</a></span></dt><dt><span class="chapter"><a href="#d174e1251">6. Conclusions</a></span></dt></dl></div><div class="list-of-figures"><p><b>&#44536;&#47548; &#47785;&#47197;</b></p><dl><dt>1.1. <a href="#d174e29">do178b_dhc2</a></dt><dt>1.2. <a href="#d174e87">roll_ap</a></dt><dt>3.1. <a href="#d174e146">do178b_dhc2/Verification_Blocks</a></dt></dl></div><div class="chapter" title="1&#51109;. Model Description"><div class="titlepage"><div><div><h2 class="title"><a name="d174e17"></a>1&#51109;. Model Description</h2></div></div></div><p>
+    </p><pre class="programlisting">This is the closed loop test harness model.
+</pre><p>
+    <span> </span>
+
+</p><div class="figure"><a name="d174e29"></a><p class="title"><b>&#44536;&#47548; 1.1. do178b_dhc2</b></p><div class="figure-contents"><div class="mediaobject"><map name="d174e34"></map><img src="./Roll_AP_Tests_loop_sim_html_files/image-003-sl.png" alt="do178b_dhc2" usemap="%0A                #d174e34" ismap="" border="0"></div></div></div><p><br class="figure-break"></p><p>
+    </p><pre class="programlisting">This is the model being tested, representing the Detailed Design that
+satisfies the High-Level Requirements.
+</pre><p>
+    <span> </span>
+
+</p><div class="figure"><a name="d174e87"></a><p class="title"><b>&#44536;&#47548; 1.2. roll_ap</b></p><div class="figure-contents"><div class="mediaobject"><map name="d174e92"></map><img src="./Roll_AP_Tests_loop_sim_html_files/image-006-sl.png" alt="roll_ap" usemap="%0A                #d174e92" ismap="" border="0"></div></div></div><p><br class="figure-break"></p></div><div class="chapter" title="2&#51109;. Design Requirements"><div class="titlepage"><div><div><h2 class="title"><a name="d174e112"></a>2&#51109;. Design Requirements</h2></div></div></div><p>Requirements for the Logic Controller section are defined in the
+Word document 'do178b_autopilot_requirements.docx'.
+
+<span> </span>
+    <a class="ulink" href="matlab:winopen('..\requirements\do178b_autopilot_requirements.docx');" target="_top">
+        <span class="emphasis"><em>do178b_autopilot_requirements.docx</em></span>
+    </a>
+</p></div><div class="chapter" title="3&#51109;. High-Level Requirements Testing"><div class="titlepage"><div><div><h2 class="title"><a name="d174e127"></a>3&#51109;. High-Level Requirements Testing</h2></div></div></div><div class="toc"><p><b>&#52264;&#47168;</b></p><dl><dt><span class="sect1"><a href="#d174e131">Test Requirements</a></span></dt></dl></div><div class="sect1" title="Test Requirements"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e131"></a>Test Requirements</h2></div></div></div><p>
+    </p><pre class="programlisting">The roll autopilot has seven requirements, corresponding to 20 iterations over the model. For the test to pass:
+
+1) All limit check elements in an iteration must pass
+
+2) All iterations must pass
+
+
+</pre><p>
+    <span> </span>
+    </p><pre class="programlisting">Limit Checks
+
+The limit checks are contained in the Verification_Blocks subsystem in the test
+harness model do-178b_dhc2.
+
+For all tests the roll angle minimum is -33 degrees and the roll andgle maximum
+is 33 degrees.
+
+For all tests the roll rate minimum is -6.6 degrees and the roll rate maximum is
+6.6 degrees.
+
+For all tests the aileron minimum is -15 degrees and the aileron maximum is
+15 degrees.
+
+The dynamic roll response limits vary with each of the test iternations and this
+will be plotted in the test report along with the actual response.
+
+
+This is the subsytem with the Verification Blocks.</pre><p>
+
+</p><div class="figure"><a name="d174e146"></a><p class="title"><b>&#44536;&#47548; 3.1. do178b_dhc2/Verification_Blocks</b></p><div class="figure-contents"><div class="mediaobject"><map name="d174e151"></map><img src="./Roll_AP_Tests_loop_sim_html_files/image-012-sl.png" alt="do178b_dhc2/Verification_Blocks" usemap="%0A                #d174e151" ismap="" border="0"></div></div></div><p><br class="figure-break"></p></div></div><div class="chapter" title="4&#51109;. Results"><div class="titlepage"><div><div><h2 class="title"><a name="d174e212"></a>4&#51109;. Results</h2></div></div></div><div class="toc"><p><b>&#52264;&#47168;</b></p><dl><dt><span class="sect1"><a href="#d174e216">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e267">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e318">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e369">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e420">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e471">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e522">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e573">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e624">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e675">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e726">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e777">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e828">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e879">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e930">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e981">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e1032">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e1083">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e1134">Test Iteration</a></span></dt><dt><span class="sect1"><a href="#d174e1185">Test Iteration</a></span></dt></dl></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e216"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #1
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at 0 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to 0 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-015-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e267"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #2
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial +4 degree bank angle and turn knob at 0 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to 0 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 4
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-017-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e318"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #3
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial -4 degree bank angle and turn knob at 0 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to 0 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = -4
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-019-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e369"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #4
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial +8 degree bank angle and turn knob at 0 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to 8 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 8
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-021-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e420"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #5
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial -8 degree bank angle and turn knob at 0 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to -8 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = -8
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-023-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e471"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #6
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial +28 degree bank angle and turn knob at 0 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to 28 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 28
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-025-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e522"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #7
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial -28 degree bank angle and turn knob at 0 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to -28 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = -28
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-027-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e573"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #8
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial +32 degree bank angle and turn knob at 0 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to 30 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 32
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-029-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e624"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #9
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial -32 degree bank angle and turn knob at 0 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to -30 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = -32
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-031-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e675"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #10
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at 0 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to 0 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-033-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e726"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #11
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at +2 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to 0 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-035-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e777"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #12
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at -2 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to 0 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-037-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e828"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #13
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at +4 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to +4 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-039-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e879"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #14
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at -4 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to -4 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-041-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e930"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #15
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at +30 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to +30 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-043-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e981"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #16
+</pre><pre class="programlisting">Requirement being tested: 1.1. Roll Autopilot Engage Control, 1.2. Roll Hold Mode, 1.3. Roll Hold Reference
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at -30 degree.
+</pre><pre class="programlisting">The bank angle should be controlled to -30 degrees with a 1 degree tolerance.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-045-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e1032"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #17
+</pre><pre class="programlisting">Requirement being tested: 1.4. Roll Performance
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at 0 degree, then insert a +3 degree command.
+</pre><pre class="programlisting">The roll should have a maximum rise time of 2 seconds, maximum 1 degree overshoot and maximum 1 degree tracking error.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-047-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e1083"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #18
+</pre><pre class="programlisting">Requirement being tested: 1.4. Roll Performance
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at 0 degree, then insert a -3 degree command.
+</pre><pre class="programlisting">The roll should have a maximum rise time of 2 seconds, Maximum 1 degree overshoot and maximum 1 degree tracking error.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-049-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e1134"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #19
+</pre><pre class="programlisting">Requirement being tested: 1.5. Roll Rate Limit, 1.6. Roll Angle Limit, 1.7. Aileron Angle Limit
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at 0 degree, then insert a +35 degree command.
+</pre><pre class="programlisting">The roll should have a maximum rate of 6.6 deg/sec, a final bank angle of 30 degrees (+/- 1) with less than 3 degree overshoot.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-051-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div><div class="sect1" title="Test Iteration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e1185"></a>Test Iteration</h2></div></div></div><pre class="programlisting">Test Iteration #20
+</pre><pre class="programlisting">Requirement being tested: 1.5. Roll Rate Limit, 1.6. Roll Angle Limit, 1.7. Aileron Angle Limit
+</pre><pre class="programlisting">Engage roll hold with an initial 0 degree bank angle and turn knob at 0 degree, then insert a -35 degree command.
+</pre><pre class="programlisting">The roll should have a maximum rate of 6.6 deg/sec, a final bank angle of -30 degrees (+/- 1) with less than 3 degree overshoot.
+</pre><pre class="programlisting">Trimmed roll angle = 0
+</pre><p title="Plots and Results"><b>Plots and Results.&nbsp;</b>
+        </p><pre class="programlisting">
+</pre><p title="Plots and Results">
+        <span> </span>
+        <span class="inlinemediaobject"><img src="./Roll_AP_Tests_loop_sim_html_files/image-053-hg.png"></span>
+        <span class="emphasis"><em></em></span>
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Roll Response PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Roll Rate PASSED</strong></span></span></pre><p title="Plots and Results">
+        </p><pre class="programlisting"><span class="green" style="color:green"><span class="bold"><strong>
+Maximum Aileron Angle PASSED</strong></span></span></pre><p title="Plots and Results">
+    </p></div></div><div class="chapter" title="5&#51109;. Model Coverage"><div class="titlepage"><div><div><h2 class="title"><a name="d174e1236"></a>5&#51109;. Model Coverage</h2></div></div></div><p>The model coverage data is contained in the following report. The coverage
+for roll_ap and attitude_controller models is relavent to these tests.<span> </span>
+    <a class="ulink" href="file:///c:/Applications/Seminars/MBD_Autopilot/work/do178b_dhc2_summary_cov.html" target="_top">
+        <span class="emphasis"><em>Model Coverage Report</em></span>
+    </a>
+</p></div><div class="chapter" title="6&#51109;. Conclusions"><div class="titlepage"><div><div><h2 class="title"><a name="d174e1251"></a>6&#51109;. Conclusions</h2></div></div></div><p>
+    <span class="green" style="color:green">
+        <span class="bold"><strong>PASSED since all 20 iterations passed.</strong></span>
+    </span>
+    <span> </span>
+</p></div></div></body></html>

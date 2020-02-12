@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-300.html"?>
+<title>EnergyManagement</title>
+<figure>
+    <title>DisplayModel/Inputs/UserSelection/EnergyManagement</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="39,23,72,37" id="1408437999517-0"
+                    linkends="4e35366d8020b048e8ad3a20b5a745c1" otherunits="rect"/>
+                <area coords="118,60,150,74" id="1408437999517-1"
+                    linkends="51b94d2454d0241ecedcb34e8351376d" otherunits="rect"/>
+                <area coords="39,97,72,111" id="1408437999517-2"
+                    linkends="d86678449ea6391a924a0af5c0a7523d" otherunits="rect"/>
+                <area coords="118,134,150,148" id="1408437999517-3"
+                    linkends="c4f0ce0fa1506c3d9409126d632b12ff" otherunits="rect"/>
+                <area coords="492,12,497,159" id="1408437999517-4"
+                    linkends="d8bf01b1091bca115850c4f5cd1ab194" otherunits="rect"/>
+                <area coords="206,11,446,160" id="1408437999517-5"
+                    linkends="1cdd72895b8d6a0c182b462a6e7a8acb" otherunits="rect"/>
+                <area coords="543,79,571,92" id="1408437999517-6"
+                    linkends="9aed4c80c6f77b8a05f7d33a2da4a3ec" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-322-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-301;
+&sect-316;
+</sect1>

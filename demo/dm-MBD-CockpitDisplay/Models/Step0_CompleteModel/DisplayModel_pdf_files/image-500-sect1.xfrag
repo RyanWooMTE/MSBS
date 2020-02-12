@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-457.html"?>
+<title>FuelQuantity_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/FuelQuantity_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,42,41,56" id="1408438005568-0"
+                    linkends="e5450e64ccbe170ff8185ebef16effe9" otherunits="rect"/>
+                <area coords="181,11,381,87" id="1408438005568-1"
+                    linkends="ff9f60dd32f772c3d36e3476e3bafe32" otherunits="rect"/>
+                <area coords="426,42,456,56" id="1408438005568-2"
+                    linkends="1861ad19a99007a0079772c280d70efb" otherunits="rect"/>
+                <area coords="42,45,180,45,180,53,42,53"
+                    id="1408438005568-3"
+                    linkends="6c4805f18820a9a56e88accfc6f96715" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-501-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-458;
+</sect1>

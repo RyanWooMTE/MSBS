@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-343.html"?>
+<title>EPR1_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/EPR1_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,41,56,57" id="1408438002320-0"
+                    linkends="07d9622baebb05ac8884e731446bb6f0" otherunits="rect"/>
+                <area coords="101,94,131,124" id="1408438002320-1"
+                    linkends="08cea8847b9032a3062da6336fe90b4c" otherunits="rect"/>
+                <area coords="221,11,421,87" id="1408438002320-2"
+                    linkends="26ee5a75f3b1c55e54b58a780f8dd86a" otherunits="rect"/>
+                <area coords="161,39,181,59" id="1408438002320-3"
+                    linkends="786eadb7b389c3e0df519e71dba4d40d" otherunits="rect"/>
+                <area coords="466,42,496,56" id="1408438002320-4"
+                    linkends="3b491eda10b2b707a6e5936499327a21" otherunits="rect"/>
+                <area coords="182,45,220,45,220,53,182,53"
+                    id="1408438002320-5"
+                    linkends="0631358377c6060b634f09aaf83e0004" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-377-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-344;
+</sect1>

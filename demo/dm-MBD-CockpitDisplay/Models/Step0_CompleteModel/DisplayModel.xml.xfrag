@@ -1,0 +1,25 @@
+<book lang="en">
+<?dbhtml filename="DisplayModel.html"?>
+<!--Created by: Report Generator v3.15-->
+<!--Generates a document that describes the design of software modeled by a Simulink model.-->
+<bookinfo>
+    <title>DisplayModel</title>
+    <subtitle>Design Description</subtitle>
+    <author>
+        <firstname>hualongy</firstname>
+    </author>
+    <pubdate>19-Aug-2014 16:46:25</pubdate>
+    <copyright>
+        <year>2014</year>
+    </copyright>
+    <legalnotice>
+        <para>
+            <emphasis role="red">
+                <emphasis role="bold">For Internal Distribution Only</emphasis>
+            </emphasis>
+        </para>
+    </legalnotice>
+</bookinfo>
+&sect-002;
+&sect-004;
+</book>

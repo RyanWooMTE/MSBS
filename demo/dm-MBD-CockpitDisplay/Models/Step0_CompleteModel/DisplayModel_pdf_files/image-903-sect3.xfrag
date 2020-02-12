@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect3>
+<?dbhtml filename="DisplayModel-827.html"?>
+<title>Chart</title>
+<mediaobject>
+    <imageobjectco>
+        <areaspec>
+            <area coords="281,7,291,25" id="1408438015107-0"
+                linkends="c8f07e72364c46a2c2dce63bec9d56e9" otherunits="rect"/>
+            <area coords="134,457,143,475" id="1408438015107-1"
+                linkends="72003f9343525161c2ed3cd4382a0dc2" otherunits="rect"/>
+            <area coords="429,457,438,475" id="1408438015107-2"
+                linkends="1d2114a1f66cee791540244df467ed7b" otherunits="rect"/>
+            <area coords="295,7,305,25" id="1408438015107-3"
+                linkends="f0b55306b65fd8bded96d2ef73ed8075" otherunits="rect"/>
+            <area coords="54,91,518,334" id="1408438015107-4"
+                linkends="c8f07e72364c46a2c2dce63bec9d56e9" otherunits="rect"/>
+            <area coords="54,350,224,428" id="1408438015107-5"
+                linkends="72003f9343525161c2ed3cd4382a0dc2" otherunits="rect"/>
+            <area coords="349,351,518,428" id="1408438015107-6"
+                linkends="1d2114a1f66cee791540244df467ed7b" otherunits="rect"/>
+            <area coords="284,75,286,77" id="1408438015107-7"
+                linkends="f0b55306b65fd8bded96d2ef73ed8075" otherunits="rect"/>
+        </areaspec>
+        <imageobject>
+            <imagedata
+                fileref="./DisplayModel_pdf_files/image-904-sf.svg"
+                format="SVG" scalefit="1"/>
+        </imageobject>
+        <calloutlist>
+            <callout arearefs="1408438015107-0">
+                <para>
+                    <link linkend="c8f07e72364c46a2c2dce63bec9d56e9">Screen</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438015107-1">
+                <para>
+                    <link linkend="72003f9343525161c2ed3cd4382a0dc2">valid_sensors</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438015107-2">
+                <para>
+                    <link linkend="1d2114a1f66cee791540244df467ed7b">none</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438015107-3">
+                <para>
+                    <link linkend="f0b55306b65fd8bded96d2ef73ed8075">{bad = 0;count = 0;prev_signal = false;}</link>
+                </para>
+            </callout>
+        </calloutlist>
+    </imageobjectco>
+</mediaobject>
+</sect3>

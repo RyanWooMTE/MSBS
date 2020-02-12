@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-1006.html"?>
+<title>"Bus Selector6" (BusSelector) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Bus Selector6" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Output signals</entry>
+                <entry>EnergySystemModes,FlightInputs,NavigationalData,EngineFuelData,OtherInputs</entry>
+            </row>
+            <row>
+                <entry>Output as bus</entry>
+                <entry>off</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+<orderedlist continuation="restarts" inheritnum="ignore"
+    numeration="arabic" spacing="compact">
+    <title>Output Hierarchy:</title>
+    <listitem>
+        <emphasis>
+            <anchor id=""/>Bus Selector6</emphasis>
+        <orderedlist continuation="restarts" inheritnum="ignore"
+            numeration="arabic" spacing="compact">
+            <listitem>
+                <para>
+                    <anchor id="67b9487a539e989be5791b5ee4153633"/>&lt;EnergySystemModes&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="d4d57ca07199ce4328285dfc17477de2"/>&lt;FlightInputs&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="2af7e29bd399a93e0e6f18000f769a73"/>&lt;NavigationalData&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="5fc1576c1d4e40a4b7e3698e9d40797d"/>&lt;EngineFuelData&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="2c2faa8178295aa2ad5b981dd117c8fd"/>&lt;OtherInputs&gt;</para>
+            </listitem>
+        </orderedlist>
+    </listitem>
+</orderedlist>
+</sect4>

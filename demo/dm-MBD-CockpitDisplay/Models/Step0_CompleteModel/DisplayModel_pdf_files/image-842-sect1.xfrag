@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-771.html"?>
+<title>RateOfTurn_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/RateOfTurn_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408438013465-0"
+                    linkends="bca8bbf5d0ee75d15b2977d4f68e72a4" otherunits="rect"/>
+                <area coords="261,11,291,25" id="1408438013465-1"
+                    linkends="71cb49974a023dc96b6f1a950bba3886" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-843-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-772;
+</sect1>

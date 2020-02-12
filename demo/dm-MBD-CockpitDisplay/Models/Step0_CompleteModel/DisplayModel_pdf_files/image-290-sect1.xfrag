@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-272.html"?>
+<title>Distance_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/Distance_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408437998655-0"
+                    linkends="7a7204aaa2ed9bc6049518650c9992a0" otherunits="rect"/>
+                <area coords="261,11,291,25" id="1408437998655-1"
+                    linkends="368934f74f0a483a69ceb4cb3029d102" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-291-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-273;
+</sect1>

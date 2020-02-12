@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-415.html"?>
+<title>FlightAttitude_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/FlightAttitude_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408438004438-0"
+                    linkends="e237080b859678adc9efe7a89acc3503" otherunits="rect"/>
+                <area coords="261,11,291,25" id="1408438004438-1"
+                    linkends="4818e3aa1c2d74887ee475eef40a7961" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-455-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-416;
+</sect1>

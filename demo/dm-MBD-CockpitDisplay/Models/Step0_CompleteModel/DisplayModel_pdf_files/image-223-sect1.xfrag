@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-208.html"?>
+<title>Display</title>
+<figure>
+    <title>DisplayModel/Display</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="33,22,63,36" id="1408437996541-0"
+                    linkends="d6bc51e13df416dc3c89267f3a0f3d01" otherunits="rect"/>
+                <area coords="33,52,63,66" id="1408437996541-1"
+                    linkends="f22ef6159e8d07dfa8dd33020a1f5af6" otherunits="rect"/>
+                <area coords="33,82,63,96" id="1408437996541-2"
+                    linkends="5d7a669df8cbca6ef8f62521d7969ef4" otherunits="rect"/>
+                <area coords="33,112,63,126" id="1408437996541-3"
+                    linkends="f3e585c62777826f218e896efcfa2655" otherunits="rect"/>
+                <area coords="33,142,63,156" id="1408437996541-4"
+                    linkends="8fba3c1245acb52c509b304f51a87faf" otherunits="rect"/>
+                <area coords="33,172,63,186" id="1408437996541-5"
+                    linkends="cf539985b398e766da5e1328f5c3d8d2" otherunits="rect"/>
+                <area coords="33,202,63,216" id="1408437996541-6"
+                    linkends="93da3b86f1402558d87a502b0b1ce5bf" otherunits="rect"/>
+                <area coords="33,232,63,246" id="1408437996541-7"
+                    linkends="d2dc5c979a405b6ad5b6851c40da6bb5" otherunits="rect"/>
+                <area coords="123,11,258,257" id="1408437996541-8"
+                    linkends="e308cd9d886abaf818956ef37fa75d1d" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-224-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-209;
+</sect1>

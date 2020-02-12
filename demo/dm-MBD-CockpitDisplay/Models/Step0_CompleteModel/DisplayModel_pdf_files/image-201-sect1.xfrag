@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-188.html"?>
+<title>DataValidityLandingGearLeftLock</title>
+<figure>
+    <title>DisplayModel/Control_and_Display_Logic/SignalConditioning/SignalSelection/DataValidityLandingGearLeftLock</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="12,91,42,105" id="1408437996090-0"
+                    linkends="708254794a629e9bbfc54dae6e3caf63" otherunits="rect"/>
+                <area coords="157,116,237,160" id="1408437996090-1"
+                    linkends="498f09c48a9c1d465465aaf2284ea2f8" otherunits="rect"/>
+                <area coords="297,11,452,180" id="1408437996090-2"
+                    linkends="befc5dc52eb93a1a0dd59fba538a45d4" otherunits="rect"/>
+                <area coords="522,91,552,105" id="1408437996090-3"
+                    linkends="fde1fa9278618deccb5ae5a2ce4b1c25" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-202-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-189;
+</sect1>

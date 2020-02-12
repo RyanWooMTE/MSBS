@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-041.html"?>
+<title>AirSpeed_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/AirSpeed_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408437990200-0"
+                    linkends="4588fb7ae4d1033355fad8929e45ac95" otherunits="rect"/>
+                <area coords="261,11,291,25" id="1408437990200-1"
+                    linkends="94d7f12b1bd0c272f999f3bd5b057c8d" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-044-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-042;
+</sect1>

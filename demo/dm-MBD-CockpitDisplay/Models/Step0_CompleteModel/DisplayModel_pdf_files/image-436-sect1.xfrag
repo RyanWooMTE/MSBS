@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-399.html"?>
+<title>FlapPosition_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff/FlapPosition_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408438004080-0"
+                    linkends="d9f91bc976984156089c4120124ed05c" otherunits="rect"/>
+                <area coords="356,11,386,25" id="1408438004080-1"
+                    linkends="2a49201b176ff7d72f8cc452b7c6cda8" otherunits="rect"/>
+                <area coords="42,14,355,14,355,22,42,22"
+                    id="1408438004080-2"
+                    linkends="b7384861445f9e325f36d39733c14524" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-437-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-400;
+</sect1>

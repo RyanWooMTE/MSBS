@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-1057.html"?>
+<title>SwitchedOff</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOff</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="6,191,11,193" id="1408438022759-0"
+                    linkends="7a97649a66d6400983da23fd7bd6ed76" otherunits="rect"/>
+                <area coords="8,10,11,14" id="1408438022759-1"
+                    linkends="15ede815fea350240208cf7860d6b648" otherunits="rect"/>
+                <area coords="59,7,70,18" id="1408438022759-2"
+                    linkends="ae7db8edf0f3e23ea1582f6642f612a7" otherunits="rect"/>
+                <area coords="59,23,70,34" id="1408438022759-3"
+                    linkends="f35d583f4ba0eab3e25bdf5551b2a90f" otherunits="rect"/>
+                <area coords="58,204,69,215" id="1408438022759-4"
+                    linkends="7b530df019f71315ede83105aa9713ea" otherunits="rect"/>
+                <area coords="58,218,69,229" id="1408438022759-5"
+                    linkends="86b497c64f4d0db745a36a32c01ba5f8" otherunits="rect"/>
+                <area coords="58,233,69,244" id="1408438022759-6"
+                    linkends="0079fdf647a32c28650a909dda1e3990" otherunits="rect"/>
+                <area coords="58,247,69,258" id="1408438022759-7"
+                    linkends="b8ff68429cf53d0a4b5c7ca022a33a0b" otherunits="rect"/>
+                <area coords="58,350,69,361" id="1408438022759-8"
+                    linkends="d1edf4c7434a96060e627c0b227dbde2" otherunits="rect"/>
+                <area coords="58,366,69,377" id="1408438022759-9"
+                    linkends="cda1730d02aa0386b617b21fe5ed315e" otherunits="rect"/>
+                <area coords="58,381,69,392" id="1408438022759-10"
+                    linkends="e6b1434682290623e3c3e87a621cd5b8" otherunits="rect"/>
+                <area coords="58,306,69,317" id="1408438022759-11"
+                    linkends="0310a7452a3c1b19efa5f2045be1f8b9" otherunits="rect"/>
+                <area coords="58,397,69,408" id="1408438022759-12"
+                    linkends="3e02dfafa1619323227298fa5a933444" otherunits="rect"/>
+                <area coords="58,412,69,423" id="1408438022759-13"
+                    linkends="4448f1773e03e9324cf41dd8e909ffc4" otherunits="rect"/>
+                <area coords="59,38,70,49" id="1408438022759-14"
+                    linkends="67efde913dd58fd82ff909917d48f742" otherunits="rect"/>
+                <area coords="58,262,69,273" id="1408438022759-15"
+                    linkends="06e476885819291d896ff83e502295a7" otherunits="rect"/>
+                <area coords="58,283,69,294" id="1408438022759-16"
+                    linkends="db7f5077009e46339b5965f28d18efaa" otherunits="rect"/>
+                <area coords="58,335,69,346" id="1408438022759-17"
+                    linkends="e6f7402c7e9bd7d4f4692a2b2c0a3f10" otherunits="rect"/>
+                <area coords="59,54,70,65" id="1408438022759-18"
+                    linkends="1e3fc50a6fba502a0fea589e975421eb" otherunits="rect"/>
+                <area coords="59,69,70,80" id="1408438022759-19"
+                    linkends="76cbdfe7b0def192b908136e70f15493" otherunits="rect"/>
+                <area coords="59,85,70,96" id="1408438022759-20"
+                    linkends="f69ddfd50888bbee5129737fc8b05662" otherunits="rect"/>
+                <area coords="59,122,70,133" id="1408438022759-21"
+                    linkends="a0326bb42e649954303517e6d88bacfe" otherunits="rect"/>
+                <area coords="59,139,70,150" id="1408438022759-22"
+                    linkends="b9d4c885d7a7a61d96ba882411a9f192" otherunits="rect"/>
+                <area coords="59,155,70,166" id="1408438022759-23"
+                    linkends="ec5146283141acf49a8aa85826e0a1c5" otherunits="rect"/>
+                <area coords="59,171,70,182" id="1408438022759-24"
+                    linkends="3575664c29480e04fd9c270d05738eb9" otherunits="rect"/>
+                <area coords="96,383,113,390" id="1408438022759-25"
+                    linkends="3f4e8fff8c61bdd752cbb908c13183c4" otherunits="rect"/>
+                <area coords="94,40,111,47" id="1408438022759-26"
+                    linkends="ed1f491af4fe6acbf278f27a675c3bb0" otherunits="rect"/>
+                <area coords="94,9,111,16" id="1408438022759-27"
+                    linkends="1b980ee3b50471f20a2d76eeb31133ef" otherunits="rect"/>
+                <area coords="94,56,111,63" id="1408438022759-28"
+                    linkends="29c8721e0ae914eca39f6d69537937b2" otherunits="rect"/>
+                <area coords="94,124,111,131" id="1408438022759-29"
+                    linkends="b53c2b9f043becd6d93e66bcc48936f2" otherunits="rect"/>
+                <area coords="139,6,140,97" id="1408438022759-30"
+                    linkends="578daef39d48d6209df5e3da0f2b0ab4" otherunits="rect"/>
+                <area coords="139,119,140,185" id="1408438022759-31"
+                    linkends="7681896cbfc7edcfd01552d338db25c2" otherunits="rect"/>
+                <area coords="140,203,141,317" id="1408438022759-32"
+                    linkends="8093dc318bf518dba9ab93bbfbad7d51" otherunits="rect"/>
+                <area coords="140,333,141,425" id="1408438022759-33"
+                    linkends="f5d938d8ca0231e2a3cbd1e137f4b80d" otherunits="rect"/>
+                <area coords="96,352,113,359" id="1408438022759-34"
+                    linkends="5270e9282c42265520c90c9dc1dc3af5" otherunits="rect"/>
+                <area coords="83,399,87,405" id="1408438022759-35"
+                    linkends="d2b51e2e1c6c349961766111fbb7e972" otherunits="rect"/>
+                <area coords="83,415,87,420" id="1408438022759-36"
+                    linkends="bdd6161a20031eaf981585652c1c4572" otherunits="rect"/>
+                <area coords="94,140,111,148" id="1408438022759-37"
+                    linkends="cf727462cf2904f6b2833bcff547cbb3" otherunits="rect"/>
+                <area coords="96,264,113,271" id="1408438022759-38"
+                    linkends="0b3806ef4d046457d0b8331597d8e8ba" otherunits="rect"/>
+                <area coords="96,279,113,286" id="1408438022759-39"
+                    linkends="59fa6e8909dc3158056588521b1dfb84" otherunits="rect"/>
+                <area coords="96,293,113,300" id="1408438022759-40"
+                    linkends="1bea85c1d974e81d9a421817ee23c37b" otherunits="rect"/>
+                <area coords="96,337,113,344" id="1408438022759-41"
+                    linkends="137ad8c646521fab4eb0c274fcb90c07" otherunits="rect"/>
+                <area coords="94,86,111,94" id="1408438022759-42"
+                    linkends="b5ae59efe80f5fe7baef171ee7397bff" otherunits="rect"/>
+                <area coords="96,235,113,242" id="1408438022759-43"
+                    linkends="2686824cc575e0fac076aafd3ee4129b" otherunits="rect"/>
+                <area coords="96,308,113,315" id="1408438022759-44"
+                    linkends="61280a5c26243675540f1ad69dd5623d" otherunits="rect"/>
+                <area coords="94,157,111,164" id="1408438022759-45"
+                    linkends="a3020ad62255cb9f9295e971a7201d0d" otherunits="rect"/>
+                <area coords="96,368,113,375" id="1408438022759-46"
+                    linkends="9e87453f8603dcfb283f3cb9b9e7b1f0" otherunits="rect"/>
+                <area coords="96,399,113,406" id="1408438022759-47"
+                    linkends="8e413fe923ae260b66fa2f4c3baba36b" otherunits="rect"/>
+                <area coords="96,414,113,421" id="1408438022759-48"
+                    linkends="1c7bb0f9e7603512c3e99230eb6538d5" otherunits="rect"/>
+                <area coords="96,249,113,257" id="1408438022759-49"
+                    linkends="c18d73314ffb67b5d06496e2791a81c0" otherunits="rect"/>
+                <area coords="96,206,113,213" id="1408438022759-50"
+                    linkends="bec6e3dc25ef8746d402e01291924587" otherunits="rect"/>
+                <area coords="94,71,111,78" id="1408438022759-51"
+                    linkends="7a384d969963e97fa3827ae3ed191ec0" otherunits="rect"/>
+                <area coords="94,173,111,180" id="1408438022759-52"
+                    linkends="5ec1767d7f2e2401145789a23b5503e5" otherunits="rect"/>
+                <area coords="96,220,113,227" id="1408438022759-53"
+                    linkends="0d96187dd5a61fb42b8437db0e9aaa8c" otherunits="rect"/>
+                <area coords="94,25,111,32" id="1408438022759-54"
+                    linkends="bba85f9a14913709e0e7a41933416efc" otherunits="rect"/>
+                <area coords="157,50,162,53" id="1408438022759-55"
+                    linkends="fcddd80af0816fb7985385e7c4cd1e14" otherunits="rect"/>
+                <area coords="157,151,162,154" id="1408438022759-56"
+                    linkends="27999fe93ba53a0652c00bd18d069558" otherunits="rect"/>
+                <area coords="158,259,163,262" id="1408438022759-57"
+                    linkends="a6362cc07de3e361eea404ca3c064d41" otherunits="rect"/>
+                <area coords="158,378,163,380" id="1408438022759-58"
+                    linkends="fe66f2954f59ff7d57fbb5fdf6ceedf0" otherunits="rect"/>
+                <area coords="110,414,143,414,143,422,110,422"
+                    id="1408438022759-59"
+                    linkends="f138c72dbd47ff3b44982370cf750d09" otherunits="polygon"/>
+                <area coords="66,414,86,414,86,422,66,422"
+                    id="1408438022759-60"
+                    linkends="ae0cefa031d838fd406040af0a2d8718" otherunits="polygon"/>
+                <area coords="110,307,143,307,143,315,110,315"
+                    id="1408438022759-61"
+                    linkends="f401e8974ff1d379e5c560a070ed7759" otherunits="polygon"/>
+                <area coords="66,307,99,307,99,315,66,315"
+                    id="1408438022759-62"
+                    linkends="c2b703e45880a5361a54aa665e1e6de6" otherunits="polygon"/>
+                <area coords="110,293,143,293,143,301,110,301"
+                    id="1408438022759-63"
+                    linkends="df2f298030998489dd7e21ad7f4a5bec" otherunits="polygon"/>
+                <area coords="66,285,87,285,87,293,66,293"
+                    id="1408438022759-64"
+                    linkends="72e691a2888f4a115e2e85841d2865af" otherunits="polygon"/>
+                <area coords="87,285,87,301,79,301,79,285"
+                    id="1408438022759-65"
+                    linkends="72e691a2888f4a115e2e85841d2865af" otherunits="polygon"/>
+                <area coords="79,293,99,293,99,301,79,301"
+                    id="1408438022759-66"
+                    linkends="72e691a2888f4a115e2e85841d2865af" otherunits="polygon"/>
+                <area coords="79,293,79,278,87,278,87,293"
+                    id="1408438022759-67"
+                    linkends="72e691a2888f4a115e2e85841d2865af" otherunits="polygon"/>
+                <area coords="79,278,99,278,99,286,79,286"
+                    id="1408438022759-68"
+                    linkends="72e691a2888f4a115e2e85841d2865af" otherunits="polygon"/>
+                <area coords="110,336,143,336,143,344,110,344"
+                    id="1408438022759-69"
+                    linkends="cf0ce4c11155cd4b1f2e89e8bdc3f59c" otherunits="polygon"/>
+                <area coords="110,264,143,264,143,272,110,272"
+                    id="1408438022759-70"
+                    linkends="b0cce48892d9bcc5579321222a246d06" otherunits="polygon"/>
+                <area coords="110,220,143,220,143,228,110,228"
+                    id="1408438022759-71"
+                    linkends="eea8d384acb73e41a3d0fa20db420371" otherunits="polygon"/>
+                <area coords="110,205,143,205,143,213,110,213"
+                    id="1408438022759-72"
+                    linkends="6f42a72385622ef7de429d9e66569015" otherunits="polygon"/>
+                <area coords="66,205,99,205,99,213,66,213"
+                    id="1408438022759-73"
+                    linkends="68b0a08e4da88df9264c00646244353a" otherunits="polygon"/>
+                <area coords="110,234,143,234,143,242,110,242"
+                    id="1408438022759-74"
+                    linkends="5c946830d6e1a447a3fe83a504301642" otherunits="polygon"/>
+                <area coords="66,234,99,234,99,242,66,242"
+                    id="1408438022759-75"
+                    linkends="3fe663664eef69557ebf60b8d2a5d1a6" otherunits="polygon"/>
+                <area coords="110,249,143,249,143,257,110,257"
+                    id="1408438022759-76"
+                    linkends="50a1c40a03724b56e08afcb002451818" otherunits="polygon"/>
+                <area coords="66,249,99,249,99,257,66,257"
+                    id="1408438022759-77"
+                    linkends="1778cc3483c6058a7a1bdfe3307254cf" otherunits="polygon"/>
+                <area coords="110,278,143,278,143,286,110,286"
+                    id="1408438022759-78"
+                    linkends="0208fbc6d70fd9ddd1917cd6653225ba" otherunits="polygon"/>
+                <area coords="110,367,143,367,143,375,110,375"
+                    id="1408438022759-79"
+                    linkends="97dfc03b1a5a4014440b359c36110a21" otherunits="polygon"/>
+                <area coords="110,383,143,383,143,391,110,391"
+                    id="1408438022759-80"
+                    linkends="d3fb07c21d64e30e8612f62d0de8c149" otherunits="polygon"/>
+                <area coords="110,398,143,398,143,406,110,406"
+                    id="1408438022759-81"
+                    linkends="c643e58b7d8595751b0bdbc8228ff95e" otherunits="polygon"/>
+                <area coords="66,398,86,398,86,406,66,406"
+                    id="1408438022759-82"
+                    linkends="86360c1e18fb6f960c766edde54451f2" otherunits="polygon"/>
+                <area coords="110,352,143,352,143,360,110,360"
+                    id="1408438022759-83"
+                    linkends="d44a1cb951fefdc48b690209631c7df4" otherunits="polygon"/>
+                <area coords="66,264,99,264,99,272,66,272"
+                    id="1408438022759-84"
+                    linkends="94dac183208ae341bc243a484965ae59" otherunits="polygon"/>
+                <area coords="67,40,97,40,97,48,67,48"
+                    id="1408438022759-85"
+                    linkends="9be04d5c78e03fb54e27fc9e436e874b" otherunits="polygon"/>
+                <area coords="67,24,97,24,97,32,67,32"
+                    id="1408438022759-86"
+                    linkends="4ff293739e5f2701fe36661443e79b75" otherunits="polygon"/>
+                <area coords="67,55,97,55,97,63,67,63"
+                    id="1408438022759-87"
+                    linkends="4ae45cada9503cf4cc127b2ebceb7839" otherunits="polygon"/>
+                <area coords="67,9,97,9,97,17,67,17"
+                    id="1408438022759-88"
+                    linkends="eb7f40f0158860a53cef0f62e20b6e0f" otherunits="polygon"/>
+                <area coords="67,71,97,71,97,79,67,79"
+                    id="1408438022759-89"
+                    linkends="ebc199867de22f7990e49cc05bcfe68c" otherunits="polygon"/>
+                <area coords="67,86,97,86,97,94,67,94"
+                    id="1408438022759-90"
+                    linkends="3570a1f109bed9ff43814e30101278a3" otherunits="polygon"/>
+                <area coords="67,140,97,140,97,148,67,148"
+                    id="1408438022759-91"
+                    linkends="4d37138faefb5e65884c64ae3461b5c2" otherunits="polygon"/>
+                <area coords="67,124,97,124,97,132,67,132"
+                    id="1408438022759-92"
+                    linkends="a2acab51f8b7a28de3fdbec8ad7396e2" otherunits="polygon"/>
+                <area coords="67,156,97,156,97,164,67,164"
+                    id="1408438022759-93"
+                    linkends="1434cf2480d5b10149eec825479536c5" otherunits="polygon"/>
+                <area coords="67,173,97,173,97,181,67,181"
+                    id="1408438022759-94"
+                    linkends="f8ec40cb628b52fee1638ab37b7be282" otherunits="polygon"/>
+                <area coords="66,220,99,220,99,228,66,228"
+                    id="1408438022759-95"
+                    linkends="0c416f3b5edb0dcb9f569f6ee841054b" otherunits="polygon"/>
+                <area coords="66,336,99,336,99,344,66,344"
+                    id="1408438022759-96"
+                    linkends="1699daf2590c5ec124b214ef8eaa3191" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-1160-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-1058;
+</sect1>

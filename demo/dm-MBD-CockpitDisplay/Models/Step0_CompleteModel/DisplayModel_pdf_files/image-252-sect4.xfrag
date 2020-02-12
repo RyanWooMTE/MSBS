@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-235.html"?>
+<title>"Bus Selector3" (BusSelector) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Bus Selector3" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Output signals</entry>
+                <entry>ECAMInput,EFISInput,NDPageInput,NDAdditionalInput</entry>
+            </row>
+            <row>
+                <entry>Output as bus</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry/>
+                <entry>
+                    <simplelist columns="1" type="vert">
+                        <member>signal1</member>
+                        <member>signal2</member>
+                        <member>signal3</member>
+                        <member>signal4</member>
+                        <member>ECAMInput</member>
+                        <member>EFISInput</member>
+                        <member>NDPageInput</member>
+                        <member>{ NDAdditionalInput , CSTR WPT VORD NDB ARPT }</member>
+                    </simplelist>
+                </entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+<orderedlist continuation="restarts" inheritnum="ignore"
+    numeration="arabic" spacing="compact">
+    <title>Output Hierarchy:</title>
+    <listitem>
+        <emphasis>
+            <anchor id=""/>Bus Selector3</emphasis>
+        <orderedlist continuation="restarts" inheritnum="ignore"
+            numeration="arabic" spacing="compact">
+            <listitem>
+                <para>
+                    <anchor id="2fa4e96ad3a23a1c43f639e4c0f3eeee"/>&lt;ECAMInput&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="aa19e5cc9bde9d6b518528bf620b305b"/>&lt;EFISInput&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="7fa79e1e740ea92de698f08bd94e583a"/>&lt;NDPageInput&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="e1617cf58337d37a876afa240c36696e"/>&lt;NDAdditionalInput&gt;</para>
+            </listitem>
+        </orderedlist>
+    </listitem>
+</orderedlist>
+</sect4>

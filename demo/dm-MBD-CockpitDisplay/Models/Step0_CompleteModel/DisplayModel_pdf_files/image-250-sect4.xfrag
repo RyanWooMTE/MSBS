@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-233.html"?>
+<title>"Bus Selector2" (BusSelector) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Bus Selector2" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Output signals</entry>
+                <entry>output_msgID,RPMProblem,TempProblem,FuelPProblem,FuelQProblem,FlightMode,APUProblem,HydProblem,CabinPProblem</entry>
+            </row>
+            <row>
+                <entry>Output as bus</entry>
+                <entry>off</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+<orderedlist continuation="restarts" inheritnum="ignore"
+    numeration="arabic" spacing="compact">
+    <title>Output Hierarchy:</title>
+    <listitem>
+        <emphasis>
+            <anchor id=""/>Bus Selector2</emphasis>
+        <orderedlist continuation="restarts" inheritnum="ignore"
+            numeration="arabic" spacing="compact">
+            <listitem>
+                <para>
+                    <anchor id="32e7fed8d204f8317444df8358512d5d"/>&lt;output_msgID&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="3b53d3203911d91bb6c38d0089af505d"/>&lt;RPMProblem&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="d2d789261fc2aced5f9aa9873451f66d"/>&lt;TempProblem&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="e92fd7bd266a412a9ee7b44e20941bca"/>&lt;FuelPProblem&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="e4ec0b0461855e961913d0e4ca34133e"/>&lt;FuelQProblem&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="7b3d8ff12e5f60c81f4facca128fc9b4"/>&lt;FlightMode&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="7acaa98e233e8e7104a78dfb79694b1c"/>&lt;APUProblem&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="5bfe2cbc69d934f96bffbdd6d9ed869b"/>&lt;HydProblem&gt;</para>
+            </listitem>
+            <listitem>
+                <para>
+                    <anchor id="a2a8fe325b7c2369acc35514f86291bb"/>&lt;CabinPProblem&gt;</para>
+            </listitem>
+        </orderedlist>
+    </listitem>
+</orderedlist>
+</sect4>

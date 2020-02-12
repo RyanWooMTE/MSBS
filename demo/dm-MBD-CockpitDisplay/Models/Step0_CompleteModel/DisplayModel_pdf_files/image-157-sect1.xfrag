@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-145.html"?>
+<title>Control_and_Display_Logic</title>
+<para>
+    <emphasis role="bold">Checksum: </emphasis>
+    <phrase xml:space="preserve"> </phrase>Could not compute checksum for "DisplayModel/Control_and_Display_Logic" (possibly because model could not be compiled).</para>
+<figure>
+    <title>DisplayModel/Control_and_Display_Logic</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="17,33,36,42" id="1408437994503-0"
+                    linkends="84643439d296ca732c07a1dbc1f8392a" otherunits="rect"/>
+                <area coords="17,88,36,97" id="1408437994503-1"
+                    linkends="70dcb2f6166705aeb9f6bb71184e9d60" otherunits="rect"/>
+                <area coords="378,9,500,175" id="1408437994503-2"
+                    linkends="724a0ebdf09bf5ebee968c733663fd60" otherunits="rect"/>
+                <area coords="77,65,180,119" id="1408437994503-3"
+                    linkends="73dacc859186b71792305f778c3e43d8" otherunits="rect"/>
+                <area coords="272,196,311,225" id="1408437994503-4"
+                    linkends="ee32d3c870f5e02c0b1467a471727826" otherunits="rect"/>
+                <area coords="234,65,337,119" id="1408437994503-5"
+                    linkends="4f80118d5ddb20942a11074a268a44b9" otherunits="rect"/>
+                <area coords="570,20,589,29" id="1408437994503-6"
+                    linkends="400fde270a6662ca16202c5d6019e432" otherunits="rect"/>
+                <area coords="529,40,548,49" id="1408437994503-7"
+                    linkends="c0ba7c4b4df891a5d38ebf059045fdc0" otherunits="rect"/>
+                <area coords="570,59,589,68" id="1408437994503-8"
+                    linkends="34ff9ad09f9a0e71921f1a145a38f17c" otherunits="rect"/>
+                <area coords="529,78,548,87" id="1408437994503-9"
+                    linkends="2caa0d6c0d4498a0c1b1cd31eb84d46c" otherunits="rect"/>
+                <area coords="570,97,589,106" id="1408437994503-10"
+                    linkends="08787342318d5f075e0936129734df5d" otherunits="rect"/>
+                <area coords="529,116,548,125" id="1408437994503-11"
+                    linkends="6e25a46a6fe53591ff525aecd18d63ea" otherunits="rect"/>
+                <area coords="570,136,589,145" id="1408437994503-12"
+                    linkends="0fcc8d44ccabb89a7631b7176277f4d6" otherunits="rect"/>
+                <area coords="529,155,548,164" id="1408437994503-13"
+                    linkends="9b72805be988a36543ee9af67f6f6596" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-158-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-146;
+&sect-159;&sect-186;
+</sect1>

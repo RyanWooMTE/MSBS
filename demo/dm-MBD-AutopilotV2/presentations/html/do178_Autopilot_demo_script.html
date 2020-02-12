@@ -1,0 +1,216 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Model-Based Design for ARP-4754A, DO-178C and DO-331</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-01-03"><meta name="DC.source" content="do178_Autopilot_demo_script.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Model-Based Design for ARP-4754A, DO-178C and DO-331</h1><!--introduction--><p>This demo provides an example of how to apply Model-Based Design to an ARP-4754A/DO-178C/DO-331 project using The MathWorks tools.  The demo includes many of the development and verification lifecycle stages called out by ARP-4754A, DO-178C and DO-331.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">System Requirements</a></li><li><a href="#2">System Requirements Validation</a></li><li><a href="#3">System Design</a></li><li><a href="#4">Software Requirements</a></li><li><a href="#5">Software Design and Architecture</a></li><li><a href="#6">Software Design Review</a></li><li><a href="#7">Software Requirements Verification</a></li><li><a href="#8">System Design Verification</a></li><li><a href="#9">Source Code</a></li><li><a href="#10">Source Code Verification</a></li><li><a href="#11">Executable Object Code Verification</a></li></ul></div><h2>System Requirements<a name="1"></a></h2><p>The system requirements for the roll axis of the autopilot</p><p><a href="matlab:winopen('..\requirements\do178b_autopilot_requirements.docx');">Open <b>do178b_autopilot_requirements.docx</b></a></p><h2>System Requirements Validation<a name="2"></a></h2><p>Requirements validation is defined as showing that the <b>requirements are complete and correct</b>.</p><h2>System Design<a name="3"></a></h2><p><a href="matlab:configure_model_for_Normal;">Open system model <b>do178b_dhc2.slx</b></a></p><p><a href="matlab:configure_model_with_FlightGear;">Open system model <b>do178b_dhc2_FlightGear.slx</b></a></p><h2>Software Requirements<a name="4"></a></h2><p><b>1. Functional Requirement</b></p><p><a href="matlab:winopen('..\requirements\do178b_autopilot_requirements.docx');">Open <b>do178b_autopilot_requirements.docx</b></a></p><h2>Software Design and Architecture<a name="5"></a></h2><p><b>1. Model Dependency Viewer</b></p><p><a href="matlab:view_mdlrefs('..\models\Autopilot');">Open <b>Model Dependency Viewer</b> for <b>Autopilot</b></a></p><p><b>2. Control Model</b></p><p><a href="matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('..\models\Autopilot');">Open <b>Autopilot.slx</b></a></p><p><a href="matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('..\models\roll_ap.slx');">Open <b>roll_ap.slx</b></a></p><h2>Software Design Review<a name="6"></a></h2><p><b>1. System Design Description</b></p><p><a href="matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('..\models\roll_ap');rptcfg=StdRpt.SDD(bdroot);rptcfg.outputDir='..\reports';rptcfg.run();">Generate <b>System Design Description</b> report</a></p><p><a href="matlab:open('..\reports\roll_ap.pdf');">Open <b>System Design Description report</b> for <b>roll_ap</b> model</a></p><p><b>2. Web View</b></p><p><a href="matlab:winopen('..\reports\roll_ap_slwebview.html');">Open <b>Web View report</b> for <b>roll_ap</b> model</a></p><p><b>3. Modeling Guidelines</b></p><p><a href="matlab:web([docroot,'/simulink/high-integrity-systems.html']);">Open <b>Documetation about Modeling Guidelines</b></a></p><p><b>4. Model Advisor Checks</b></p><p><a href="matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('roll_ap');ma=Simulink.ModelAdvisor.getModelAdvisor('roll_ap');IDs=ma.getCheckForGroup('Simulink%20Verification%20and%20Validation|Modeling%20Standards|DO-178C/DO-331%20Checks');marpt=ModelAdvisor.run('roll_ap',IDs);marpt{1}.viewReport;">Generate <b>roll_ap</b> model advisor report</a></p><p><a href="matlab:winopen([pwd%20'\slprj\modeladvisor\roll__ap\report.html']);">Open <b>Model Advisor Report</b> for <b>roll_ap</b> model</a></p><h2>Software Requirements Verification<a name="7"></a></h2><p><b>1. Module Test</b></p><p><a href="matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('roll_ap_testharness');">Open <b>roll_ap_testharness</b></a></p><p><b>2. Test Generation for Missing Coverage</b></p><p><a href="matlab:open('..\utilities\Achieving_Missing_Coverage.m');">Open <b>Achieving_Missing_Coverage.m</b></a></p><h2>System Design Verification<a name="8"></a></h2><p>For DO-331 it is necessary to have requirements verification artifacts with respect to compliance to the system requirements, accuracy and consistency, verifiability and algorithm accuracy.</p><p>For ARP-4754A, DO-178C and DO-331, it is necessary to have an artifact that shows traceability between System Requirements and Software Requirements.</p><p><b>1. Verification Blocks</b></p><p><a href="matlab:bdclose('all');configure_model_for_Normal;open_system('do178b_dhc2/Verification_Blocks');">Open <b>Verification_Blocks</b> subsystem</a></p><p><b>2. Test Automation with Simulink Report Generator</b></p><p><a href="matlab:setedit('..\reports\rpt_files\Roll_AP_Tests_loop_sim');">Open <b>Report Generator</b> for this demo</a></p><p><a href="matlab:report('..\reports\rpt_files\Roll_AP_Tests_loop_sim.rpt');">Generate <b>Simulation Report</b></a></p><p><a href="matlab:winopen('..\reports\Roll_AP_Tests_loop_sim.html');">Open the <b>Simulation Report</b> for <b>roll_ap</b></a></p><h2>Source Code<a name="9"></a></h2><p><a href="matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('..\models\roll_ap');">Open <b>roll_ap</b> model</a></p><p><a href="matlab:slbuild('roll_ap');">Generate code and open <b>code generation report</b> for <b>roll_ap</b></a></p><h2>Source Code Verification<a name="10"></a></h2><p><b>1. Simulink Code Inspector</b></p><p>Simulink Code Inspector verifies that the source code structurally and functionally matches the model.</p><p><a href="matlab:config=slci.Configuration('roll_ap');config.setTopModel(true);config.setGenerateCode(false);config.setFollowModelLinks(true);config.inspect;open([pwd%20'\slprj\slci\roll_ap_summaryReport.html']);">Inspect <b>roll_ap</b> and reference model code and generate summary report</a></p><p><a href="matlab:winopen([pwd%20'\slprj\slci\roll_ap_summaryReport.html']);">Open <b>Code Inspection Report</b></a></p><p><b>2. Polyspace Code Verification</b></p><p>PolySpace Products perform verification activities on the source code. This includes a MISRA-AC-ACG checker that can verify the code conforms to standards. A static analysis tool performs checks on the code to look for potential run time errors, unreachable code, un-initialized variables or data coupling issues.</p><p><a href="matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('..\models\roll_ap');psopts=pslinkoptions('roll_ap');resultsFolder=pslinkrun('roll_ap',psopts);">Analyze <b>roll_ap</b> code and generate <b>Developer Report</b></a></p><p><a href="matlab:open([pwd%20'\results_roll_ap\roll_ap\Polyspace-Doc\roll_ap_Developer.pdf']);">Open <b>Developer Report</b></a></p><p><b>3. Code Coverage in SIL with LDRA</b></p><p>During requirements based testing it is also necessary to perform structural coverage analysis on the code to measure statement (Levels A, B and C), decision (Levels A and B) and modified condition/decision coverage (Level A).</p><p><a href="matlab:configure_model_for_SIL;">Open <b>do178b_dhc2.slx</b> with SIL configuration</a></p><h2>Executable Object Code Verification<a name="11"></a></h2><p><b>1. Processor-In-the-Loop</b></p><p>%&lt;matlab:configure_model_for_PIL; Open <b>do178b_dhc2.slx</b> with PIL configuration&gt;</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Model-Based Design for ARP-4754A, DO-178C and DO-331
+%
+% This demo provides an example of how to apply Model-Based Design to an
+% ARP-4754A/DO-178C/DO-331 project using The MathWorks tools.  The demo
+% includes many of the development and verification lifecycle stages called
+% out by ARP-4754A, DO-178C and DO-331.
+%
+
+%% System Requirements
+% The system requirements for the roll axis of the autopilot
+%
+% <matlab:winopen('..\requirements\do178b_autopilot_requirements.docx'); Open *do178b_autopilot_requirements.docx*>
+%
+
+%% System Requirements Validation
+% Requirements validation is defined as showing that the *requirements are complete and correct*. 
+%
+
+%% System Design
+%
+% <matlab:configure_model_for_Normal; Open system model *do178b_dhc2.slx*>
+%
+% <matlab:configure_model_with_FlightGear; Open system model *do178b_dhc2_FlightGear.slx*>
+%
+
+%% Software Requirements
+% *1. Functional Requirement*
+%
+% <matlab:winopen('..\requirements\do178b_autopilot_requirements.docx'); Open *do178b_autopilot_requirements.docx*>
+%
+
+%% Software Design and Architecture
+% *1. Model Dependency Viewer*
+%
+% <matlab:view_mdlrefs('..\models\Autopilot'); Open *Model Dependency Viewer* for *Autopilot*>
+%
+% *2. Control Model*
+% 
+% <matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('..\models\Autopilot'); Open *Autopilot.slx*> 
+%
+% <matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('..\models\roll_ap.slx'); Open *roll_ap.slx*>
+
+
+%% Software Design Review
+% *1. System Design Description*
+%
+% <matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('..\models\roll_ap');rptcfg=StdRpt.SDD(bdroot);rptcfg.outputDir='..\reports';rptcfg.run(); Generate *System Design Description* report>
+%
+% <matlab:open('..\reports\roll_ap.pdf'); Open *System Design Description report* for *roll_ap* model>
+%
+% *2. Web View*
+%
+% <matlab:winopen('..\reports\roll_ap_slwebview.html'); Open *Web View report* for *roll_ap* model>
+%
+% *3. Modeling Guidelines*
+%
+% <matlab:web([docroot,'/simulink/high-integrity-systems.html']); Open
+% *Documetation about Modeling Guidelines*>
+%
+% *4. Model Advisor Checks*
+%
+% <matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('roll_ap');ma=Simulink.ModelAdvisor.getModelAdvisor('roll_ap');IDs=ma.getCheckForGroup('Simulink%20Verification%20and%20Validation|Modeling%20Standards|DO-178C/DO-331%20Checks');marpt=ModelAdvisor.run('roll_ap',IDs);marpt{1}.viewReport;
+% Generate *roll_ap* model advisor report>
+%
+% <matlab:winopen([pwd%20'\slprj\modeladvisor\roll__ap\report.html']);
+% Open *Model Advisor Report* for *roll_ap* model>
+%
+
+%% Software Requirements Verification
+%
+% *1. Module Test*
+%
+% <matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('roll_ap_testharness'); Open *roll_ap_testharness*>
+%
+% *2. Test Generation for Missing Coverage*
+%
+% <matlab:open('..\utilities\Achieving_Missing_Coverage.m'); Open *Achieving_Missing_Coverage.m*>
+%
+
+%% System Design Verification
+% For DO-331 it is necessary to have requirements verification artifacts
+% with respect to compliance to the system requirements, accuracy and consistency, verifiability and algorithm accuracy.
+%
+% For ARP-4754A, DO-178C and DO-331, it is necessary to have an artifact
+% that shows traceability between System Requirements and Software Requirements.
+%
+% *1. Verification Blocks*
+%
+% <matlab:bdclose('all');configure_model_for_Normal;open_system('do178b_dhc2/Verification_Blocks'); Open *Verification_Blocks* subsystem>
+%
+% *2. Test Automation with Simulink Report Generator*
+%
+% <matlab:setedit('..\reports\rpt_files\Roll_AP_Tests_loop_sim'); Open *Report Generator* for this demo>
+%
+% <matlab:report('..\reports\rpt_files\Roll_AP_Tests_loop_sim.rpt'); Generate *Simulation Report*>
+%
+% <matlab:winopen('..\reports\Roll_AP_Tests_loop_sim.html'); Open the *Simulation Report* for *roll_ap*>
+
+%% Source Code
+%
+% <matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('..\models\roll_ap'); Open *roll_ap* model>
+%
+% <matlab:slbuild('roll_ap');
+% Generate code and open *code generation report* for *roll_ap*>
+%
+
+%% Source Code Verification
+%
+% *1. Simulink Code Inspector*
+%
+% Simulink Code Inspector verifies that the source code structurally and functionally matches the model.
+%
+% <matlab:config=slci.Configuration('roll_ap');config.setTopModel(true);config.setGenerateCode(false);config.setFollowModelLinks(true);config.inspect;open([pwd%20'\slprj\slci\roll_ap_summaryReport.html']);
+% Inspect *roll_ap* and reference model code and generate summary report>
+%
+% <matlab:winopen([pwd%20'\slprj\slci\roll_ap_summaryReport.html']);
+% Open *Code Inspection Report*>
+% 
+% *2. Polyspace Code Verification*
+%
+% PolySpace Products perform verification activities on the source code.
+% This includes a MISRA-AC-ACG checker that can verify the code conforms to standards. A static analysis tool performs checks on the code to look for potential run time errors, unreachable code, un-initialized variables or data coupling issues.
+%
+% <matlab:load('..\data\DO178ConfigSetNormal.mat');open_system('..\models\roll_ap');psopts=pslinkoptions('roll_ap');resultsFolder=pslinkrun('roll_ap',psopts);
+% Analyze *roll_ap* code and generate *Developer Report*>
+%
+% <matlab:open([pwd%20'\results_roll_ap\roll_ap\Polyspace-Doc\roll_ap_Developer.pdf']);
+% Open *Developer Report*>
+%
+% *3. Code Coverage in SIL with LDRA*
+%
+% During requirements based testing it is also necessary to perform
+% structural coverage analysis on the code to measure statement (Levels A,
+% B and C), decision (Levels A and B) and modified condition/decision coverage (Level A).
+%
+% <matlab:configure_model_for_SIL; Open *do178b_dhc2.slx* with SIL configuration>
+%
+
+%% Executable Object Code Verification
+% *1. Processor-In-the-Loop*
+%
+% %<matlab:configure_model_for_PIL; Open *do178b_dhc2.slx* with PIL configuration>
+%
+
+
+##### SOURCE END #####
+--></body></html>

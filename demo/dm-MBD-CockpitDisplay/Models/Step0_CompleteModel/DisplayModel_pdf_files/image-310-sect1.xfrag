@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-290.html"?>
+<title>EGT_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/EGT_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,42,41,56" id="1408437999169-0"
+                    linkends="b109d029c15d3a3cf96d5ac2549cf412" otherunits="rect"/>
+                <area coords="151,11,351,87" id="1408437999169-1"
+                    linkends="b0fcc4a040ab79dd1aaf6eb56c551098" otherunits="rect"/>
+                <area coords="536,42,566,56" id="1408437999169-2"
+                    linkends="cbee83ced2574eaf8406bce2a7ec31ce" otherunits="rect"/>
+                <area coords="42,45,150,45,150,53,42,53"
+                    id="1408437999169-3"
+                    linkends="d441c1749953e2f3dc01775403fb2f10" otherunits="polygon"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-311-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-291;
+</sect1>

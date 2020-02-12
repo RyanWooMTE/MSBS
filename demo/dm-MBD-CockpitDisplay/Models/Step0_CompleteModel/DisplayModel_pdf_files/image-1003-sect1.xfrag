@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect1>
+<?dbhtml filename="DisplayModel-909.html"?>
+<title>SelectedHeading_sensor</title>
+<figure>
+    <title>DisplayModel/Inputs/Sensors/SwitchedOn/SelectedHeading_sensor</title>
+    <mediaobject>
+        <imageobjectco>
+            <areaspec>
+                <area coords="11,11,41,25" id="1408438017881-0"
+                    linkends="58b29f0f67cb5d87761ba7276fb72661" otherunits="rect"/>
+                <area coords="261,11,291,25" id="1408438017881-1"
+                    linkends="ff09bac548d24584a4dc874a3fed152c" otherunits="rect"/>
+            </areaspec>
+            <imageobject>
+                <imagedata
+                    fileref="./DisplayModel_pdf_files/image-1004-sl.svg"
+                    format="SVG" scalefit="1"/>
+            </imageobject>
+        </imageobjectco>
+    </mediaobject>
+</figure>
+&sect-910;
+</sect1>

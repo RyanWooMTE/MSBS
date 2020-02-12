@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4>
+<?dbhtml filename="DisplayModel-355.html"?>
+<title>"Sum" (Sum) </title>
+<table colsep="1" frame="all" pgwide="1" rowsep="1">
+    <title>"Sum" Parameters</title>
+    <tgroup align="left" cols="2">
+        <colspec colname="1" colnum="1" colwidth="9000*"/>
+        <colspec colname="2" colnum="2" colwidth="30000*"/>
+        <thead>
+            <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>Icon shape</entry>
+                <entry>round</entry>
+            </row>
+            <row>
+                <entry>List of signs</entry>
+                <entry>|++</entry>
+            </row>
+            <row>
+                <entry>Sum over</entry>
+                <entry>All dimensions</entry>
+            </row>
+            <row>
+                <entry>Dimension</entry>
+                <entry>1</entry>
+            </row>
+            <row>
+                <entry>Require all inputs to have the same data type</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Accumulator data type</entry>
+                <entry>Inherit: Inherit via internal rule</entry>
+            </row>
+            <row>
+                <entry>Output minimum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Output maximum</entry>
+                <entry>[]</entry>
+            </row>
+            <row>
+                <entry>Output data type</entry>
+                <entry>Inherit: Inherit via internal rule</entry>
+            </row>
+            <row>
+                <entry>Lock data type settings against changes by the fixed-point tools</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Integer rounding mode</entry>
+                <entry>Floor</entry>
+            </row>
+            <row>
+                <entry>Saturate on integer overflow</entry>
+                <entry>off</entry>
+            </row>
+            <row>
+                <entry>Sample time (-1 for inherited)</entry>
+                <entry>-1</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>
+</sect4>

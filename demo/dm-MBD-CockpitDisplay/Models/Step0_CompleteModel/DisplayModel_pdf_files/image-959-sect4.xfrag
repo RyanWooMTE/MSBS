@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect4 id="744f8548fa10dacb960724ea065795b4">
+<?dbhtml filename="DisplayModel-873.html"?>
+<title>OR State - Screen</title>
+<mediaobject>
+    <imageobjectco>
+        <areaspec>
+            <area coords="421,7,431,25" id="1408438016801-0"
+                linkends="74150707d51147c4f531b6b2dea72cc3" otherunits="rect"/>
+            <area coords="140,7,149,25" id="1408438016801-1"
+                linkends="22521f6617ba37d5540e91ad0619be08" otherunits="rect"/>
+            <area coords="140,326,149,344" id="1408438016801-2"
+                linkends="f860ffdf9385f77c9d5600fe4263c60c" otherunits="rect"/>
+            <area coords="422,326,431,344" id="1408438016801-3"
+                linkends="6b4292f0905b063bda35fb09d26f65b1" otherunits="rect"/>
+            <area coords="280,7,290,25" id="1408438016801-4"
+                linkends="9d275ee36c5beee91bb26ccf76f34885" otherunits="rect"/>
+            <area coords="329,7,339,25" id="1408438016801-5"
+                linkends="4239b7065a31ea6468850ed1d9408999" otherunits="rect"/>
+            <area coords="313,326,323,344" id="1408438016801-6"
+                linkends="c91d8461bce6d042ea18b9f2f6445b18" otherunits="rect"/>
+            <area coords="246,326,256,344" id="1408438016801-7"
+                linkends="ab87024bab8b11726cb38db344efe0b0" otherunits="rect"/>
+            <area coords="197,99,260,113" id="1408438016801-8"
+                linkends="dfefb1a21dfb903ba33e25b4594fd042" otherunits="rect"/>
+            <area coords="381,101,471,161" id="1408438016801-9"
+                linkends="74150707d51147c4f531b6b2dea72cc3" otherunits="rect"/>
+            <area coords="100,103,190,161" id="1408438016801-10"
+                linkends="22521f6617ba37d5540e91ad0619be08" otherunits="rect"/>
+            <area coords="100,212,190,272" id="1408438016801-11"
+                linkends="f860ffdf9385f77c9d5600fe4263c60c" otherunits="rect"/>
+            <area coords="381,213,471,271" id="1408438016801-12"
+                linkends="6b4292f0905b063bda35fb09d26f65b1" otherunits="rect"/>
+            <area coords="278,125,292,139" id="1408438016801-13"
+                linkends="c47566b4120aba451c3056b156fd42db" otherunits="rect"/>
+            <area coords="284,93,286,95" id="1408438016801-14"
+                linkends="9d275ee36c5beee91bb26ccf76f34885" otherunits="rect"/>
+            <area coords="490,128,492,130" id="1408438016801-15"
+                linkends="c8ccba06fc3082a54ba8c7535df152a8" otherunits="rect"/>
+            <area coords="235,131,237,133" id="1408438016801-16"
+                linkends="e4f17ccc3b5b7824d2e2bbbcfab0f73b" otherunits="rect"/>
+            <area coords="333,131,335,133" id="1408438016801-17"
+                linkends="4239b7065a31ea6468850ed1d9408999" otherunits="rect"/>
+            <area coords="79,132,81,134" id="1408438016801-18"
+                linkends="0abfc710adbdd623af1f783bf086e0bf" otherunits="rect"/>
+            <area coords="317,197,319,199" id="1408438016801-19"
+                linkends="c91d8461bce6d042ea18b9f2f6445b18" otherunits="rect"/>
+            <area coords="250,198,252,200" id="1408438016801-20"
+                linkends="ab87024bab8b11726cb38db344efe0b0" otherunits="rect"/>
+            <area coords="79,239,81,241" id="1408438016801-21"
+                linkends="f27f1fef57de63533b6986a82bf6c4a4" otherunits="rect"/>
+            <area coords="490,240,492,242" id="1408438016801-22"
+                linkends="9d9ed5e9be4afa5329f14de9feb5bca9" otherunits="rect"/>
+        </areaspec>
+        <imageobject>
+            <imagedata
+                fileref="./DisplayModel_pdf_files/image-960-sf.svg"
+                format="SVG" scalefit="1"/>
+        </imageobject>
+        <calloutlist>
+            <callout arearefs="1408438016801-0">
+                <para>
+                    <link linkend="74150707d51147c4f531b6b2dea72cc3">three</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438016801-1">
+                <para>
+                    <link linkend="22521f6617ba37d5540e91ad0619be08">zero</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438016801-2">
+                <para>
+                    <link linkend="f860ffdf9385f77c9d5600fe4263c60c">one</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438016801-3">
+                <para>
+                    <link linkend="6b4292f0905b063bda35fb09d26f65b1">two</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438016801-4">
+                <para>
+                    <link linkend="9d275ee36c5beee91bb26ccf76f34885">{n=valid_sensors();bad = 0;}</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438016801-5">
+                <para>
+                    <link linkend="4239b7065a31ea6468850ed1d9408999">[n==3]</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438016801-6">
+                <para>
+                    <link linkend="c91d8461bce6d042ea18b9f2f6445b18">[n==2]</link>
+                </para>
+            </callout>
+            <callout arearefs="1408438016801-7">
+                <para>
+                    <link linkend="ab87024bab8b11726cb38db344efe0b0">[n==1]</link>
+                </para>
+            </callout>
+        </calloutlist>
+    </imageobjectco>
+</mediaobject>
+</sect4>

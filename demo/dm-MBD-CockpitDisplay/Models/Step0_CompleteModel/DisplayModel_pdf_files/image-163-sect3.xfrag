@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sect3>
+<?dbhtml filename="DisplayModel-150.html"?>
+<title>Output Signals</title>
+<para>The following tables describe the signals output by this system. The name of the output signal is the name of the signal's parent block, i.e., the block that computes the signal. The number in angle brackets is the number of the port that emits the signal.</para>
+&sect-151;&sect-152;&sect-153;&sect-154;&sect-155;&sect-156;&sect-157;&sect-158;
+</sect3>
