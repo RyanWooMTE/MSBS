@@ -1,0 +1,30 @@
+[
+ {
+  "hid":1,
+  "sid":"ActuatorControlLoop",
+  "esid":"",
+  "parent":0,
+  "children":[
+  ],
+  "name":"ActuatorControlLoop",
+  "fullname":"ActuatorControlLoop",
+  "label":"ActuatorControlLoop",
+  "icon":"ActuatorControlLoop0",
+  "svg":"support/slwebview_files/ActuatorControlLoop_d.svg",
+  "thumbnail":"support/slwebview_files/ActuatorControlLoop_d.png",
+  "backingUrl":"support/slwebview_files/ActuatorControlLoop_d.json",
+  "elements":[
+   ":1",
+   ":2",
+   ":5",
+   ":3",
+   ":4",
+   ":1#out:1",
+   ":2#out:1",
+   ":2#out:2",
+   ":4#out:1",
+   ":5#out:1"
+  ],
+  "sameAsElement":false
+ }
+]

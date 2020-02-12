@@ -1,0 +1,9 @@
+.ActuatorControlLoop0,
+.ActuatorControlLoop1,
+.ActuatorControlLoop2,
+.ActuatorControlLoop3 { background-image: url('ActuatorControlLoop_icons.png'); width: 16px; height: 16px; }
+
+.ActuatorControlLoop0 { background-position: -0px; }
+.ActuatorControlLoop1 { background-position: -16px; }
+.ActuatorControlLoop2 { background-position: -32px; }
+.ActuatorControlLoop3 { background-position: -48px; }

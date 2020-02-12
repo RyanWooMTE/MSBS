@@ -1,0 +1,30 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"hydraulic_actuator",
+   "name":"hydraulic_actuator",
+   "fullname":"hydraulic_actuator",
+   "label":"hydraulic_actuator",
+   "parent":0,
+   "descendants":[
+   ],
+   "hierarchyUrl":"support/slwebview_files/hydraulic_actuator_h_1.json",
+   "backingUrl":"support/slwebview_files/hydraulic_actuator_m.json"
+  }
+ ],
+ "optViews":[
+  {
+   "id":"requirements",
+   "name":"Requirements",
+   "icon":"hydraulic_actuator5"
+  }
+ ],
+ "display":{
+  "informer":true
+ },
+ "iconsUrl":"support/slwebview_files/hydraulic_actuator_icons.css"
+}

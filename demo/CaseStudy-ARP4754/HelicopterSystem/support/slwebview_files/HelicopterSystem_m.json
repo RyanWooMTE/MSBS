@@ -1,0 +1,38 @@
+[
+ {
+  "sid":"HelicopterSystem",
+  "className":"Simulink.BlockDiagram",
+  "icon":"HelicopterSystem0",
+  "name":"HelicopterSystem",
+  "label":"HelicopterSystem",
+  "parent":"",
+  "inspector":{
+   "params":[
+    "ModelVersion",
+    "LastModifiedDate",
+    "LibraryLinkDisplay",
+    "ModelBrowserVisibility",
+    "Dirty",
+    "Description"
+   ],
+   "values":[
+    "1.21",
+    "Wed May 08 22:15:05 2019",
+    "disabled",
+    "off",
+    "off",
+    ""
+   ],
+   "tabs":[
+   ],
+   "tabs_idx":[
+   ]
+  },
+  "informer":"<p> No Requirements </p>",
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ]
+ }
+]

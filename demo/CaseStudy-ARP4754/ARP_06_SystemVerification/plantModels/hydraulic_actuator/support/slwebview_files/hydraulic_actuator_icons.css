@@ -1,0 +1,13 @@
+.hydraulic_actuator0,
+.hydraulic_actuator1,
+.hydraulic_actuator2,
+.hydraulic_actuator3,
+.hydraulic_actuator4,
+.hydraulic_actuator5 { background-image: url('hydraulic_actuator_icons.png'); width: 16px; height: 16px; }
+
+.hydraulic_actuator0 { background-position: -0px; }
+.hydraulic_actuator1 { background-position: -16px; }
+.hydraulic_actuator2 { background-position: -32px; }
+.hydraulic_actuator3 { background-position: -48px; }
+.hydraulic_actuator4 { background-position: -64px; }
+.hydraulic_actuator5 { background-position: -80px; }

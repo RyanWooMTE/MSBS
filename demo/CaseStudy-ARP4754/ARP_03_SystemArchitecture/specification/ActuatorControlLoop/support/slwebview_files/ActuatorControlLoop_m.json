@@ -1,0 +1,39 @@
+[
+ {
+  "sid":"ActuatorControlLoop",
+  "className":"Simulink.BlockDiagram",
+  "icon":"ActuatorControlLoop0",
+  "name":"ActuatorControlLoop",
+  "label":"ActuatorControlLoop",
+  "parent":"",
+  "inspector":{
+   "params":[
+    "ModelVersion",
+    "LastModifiedDate",
+    "LibraryLinkDisplay",
+    "ModelBrowserVisibility",
+    "Dirty",
+    "Description"
+   ],
+   "values":[
+    "1.16",
+    "Mon May 20 14:14:22 2019",
+    "disabled",
+    "off",
+    "off",
+    ""
+   ],
+   "tabs":[
+   ],
+   "tabs_idx":[
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ }
+]
