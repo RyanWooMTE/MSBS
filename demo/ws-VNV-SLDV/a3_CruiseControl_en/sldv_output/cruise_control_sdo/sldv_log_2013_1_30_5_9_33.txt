@@ -1,0 +1,235 @@
+
+30-Jan-2013 05:09:16
+Starting test generation for model 'cruise_control_sdo'
+Compiling model... done
+Translating model... done
+'cruise_control_sdo' is compatible with Simulink Design Verifier.
+
+Generating tests...
+
+SATISFIED
+calcTarget/Switch1
+logical trigger input true (output is from 1st input port)
+
+SATISFIED
+calcTarget/Saturation
+input &gt;= upper limit F
+
+SATISFIED
+calcTarget/Saturation
+input &gt; lower limit F
+
+SATISFIED
+isControlActivate/Logical Operator1
+Logic: input port 1 T
+
+SATISFIED
+isControlActivate/Logical Operator2
+Logic: input port 1 T
+
+SATISFIED
+isControlActivate/Logical Operator3
+Logic: input port 1 T
+
+SATISFIED
+isControlActivate/Logical Operator3
+Logic: input port 2 F
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: input port 1 F
+
+SATISFIED
+PI_Controller
+enable logical value F
+
+SATISFIED
+Switch
+logical trigger input false (output is from 3rd input port)
+
+SATISFIED
+Saturation
+input &gt;= upper limit F
+
+SATISFIED
+Saturation
+input &gt; lower limit T
+
+SATISFIED
+isControlActivate/Logical Operator2
+Logic: MCDC expression for output with input port 1 T
+
+SATISFIED
+isControlActivate/Logical Operator3
+Logic: MCDC expression for output with input port 2 F
+
+SATISFIED
+calcTarget/Switch1
+logical trigger input false (output is from 3rd input port)
+
+SATISFIED
+calcTarget/Switch2
+logical trigger input false (output is from 3rd input port)
+
+SATISFIED
+calcTarget/Switch3
+logical trigger input false (output is from 3rd input port)
+
+SATISFIED
+isControlActivate/Logical Operator1
+Logic: input port 1 F
+
+SATISFIED
+isControlActivate/Logical Operator2
+Logic: input port 1 F
+
+SATISFIED
+isControlActivate/Logical Operator2
+Logic: input port 2 F
+
+SATISFIED
+isControlActivate/Logical Operator3
+Logic: input port 1 F
+
+SATISFIED
+Saturation
+input &gt; lower limit F
+
+SATISFIED
+isControlActivate/Logical Operator2
+Logic: MCDC expression for output with input port 1 F
+
+SATISFIED
+isControlActivate/Logical Operator2
+Logic: MCDC expression for output with input port 2 F
+
+SATISFIED
+isControlActivate/Logical Operator3
+Logic: MCDC expression for output with input port 1 F
+
+SATISFIED
+calcTarget/Switch2
+logical trigger input true (output is from 1st input port)
+
+SATISFIED
+calcTarget/Saturation
+input &gt; lower limit T
+
+SATISFIED
+isControlActivate/Logical Operator3
+Logic: input port 2 T
+
+SATISFIED
+isControlActivate/Logical Operator3
+Logic: MCDC expression for output with input port 1 T
+
+SATISFIED
+isControlActivate/Logical Operator3
+Logic: MCDC expression for output with input port 2 T
+
+SATISFIED
+calcTarget/Switch3
+logical trigger input true (output is from 1st input port)
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: input port 1 T
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: input port 2 T
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: input port 3 F
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: input port 2 F
+
+SATISFIED
+calcTarget/Saturation
+input &gt;= upper limit T
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: input port 3 T
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: input port 4 F
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: MCDC expression for output with input port 4 F
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: input port 4 T
+
+SATISFIED
+PI_Controller
+enable logical value T
+
+SATISFIED
+Switch
+logical trigger input true (output is from 1st input port)
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: MCDC expression for output with input port 1 T
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: MCDC expression for output with input port 2 T
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: MCDC expression for output with input port 3 T
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: MCDC expression for output with input port 4 T
+
+SATISFIED
+isControlActivate/Logical Operator2
+Logic: input port 2 T
+
+SATISFIED
+isControlActivate/Logical Operator2
+Logic: MCDC expression for output with input port 2 T
+
+SATISFIED
+Saturation
+input &gt;= upper limit T
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: MCDC expression for output with input port 1 F
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: MCDC expression for output with input port 2 F
+
+SATISFIED
+isControlActivate/Logical Operator
+Logic: MCDC expression for output with input port 3 F
+
+
+30-Jan-2013 05:09:22
+Completed normally.
+
+Generating output files:
+
+    Data file:
+    C:\Mathworks\Workspace\Demo\Workshop_SLDV\a3_CruiseControl_en\sldv_output\cruise_control_sdo\cruise_control_sdo_sldvdata.mat
+
+    Harness model:
+    C:\Mathworks\Workspace\Demo\Workshop_SLDV\a3_CruiseControl_en\sldv_output\cruise_control_sdo\cruise_control_sdo_harness.mdl
+
+    Report:
+    C:\Mathworks\Workspace\Demo\Workshop_SLDV\a3_CruiseControl_en\sldv_output\cruise_control_sdo\cruise_control_sdo_report.html
+
+30-Jan-2013 05:09:33
+Results generation completed.
+

@@ -1,0 +1,335 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Step 6: Code Verification</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-11-05"><meta name="DC.source" content="Step_06.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:2.0em; color:#000077; line-height:150%; font-weight:bold; text-align:center }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.6em; color:#444444; font-weight:bold; font-style:italic; text-align:left; vertical-align:bottom; line-height:200%; border-top:2px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#555555; font-style:italic; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px;} 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Step 6: Code Verification</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Introduction</a></li><li><a href="#2">Verification and Validation Tools Used</a></li><li><a href="#3">Equivalence Testing -- Model vs Code Outputs</a></li><li><a href="#4">Unintended Functionality -- Model vs Code Coverage</a></li><li><a href="#5">Source Level Debugging</a></li><li><a href="#6">Summary</a></li></ul></div><h2>Introduction<a name="1"></a></h2><p><img vspace="5" hspace="5" src="Step_06_CruiseControl_WhatNow.png" alt=""> </p><p>Some of this step will be <b>instructor led</b> since it requires <b>Embedded Coder</b>, <b>Visual Studio</b>, and the <b>Bullseye</b> code coverage tool.  If you have any of these tools then please execute the steps described below on your computer.</p><p>Now that we have gone through examples on how to perform various verification and validation activities on our model, let&#8217;s move to code generation and source code unit testing.</p><p>Equivalence testing is a method to compare the behavior of your model to the behavior of your generated code.  Software-in-the-Loop (SIL) testing is a method to ensure the behavior of the generated code, compiled for the host, matches that of the model. This verification technique is built into Simulink such that you easily can rerun all the test cases used for the model on the generated source code.  This adds additional confidence and reliability to our development process.</p><p>We could also extend the idea of SIL to Process-in-the-Loop (PIL), in which case we would compile the code and run it either in an IDE or on a target processor. This verification technique is also built into Simulink such that you can automatically call 3rd party IDEs and compilers to build, download and execute the generated source code on the target processor. PIL is often required for compliance with functional safety standards like IEC 61508, ISO 26262, EN 50128, etc.</p><p>Below is a summary of the equivalence testing for code verification:</p><p><img vspace="5" hspace="5" src="Step_06_EquivTestWorkflow.png" alt=""> </p><h2>Verification and Validation Tools Used<a name="2"></a></h2><div><ul><li>Model Verification Blocks (part of Simulink)</li><li>Embedded Coder (C code generation)</li></ul></div><h2>Equivalence Testing -- Model vs Code Outputs<a name="3"></a></h2><p>Before performing the Software-in-the-loop (SIL) verfication, we should verify that the model behaves as expected, i.e. the outputs from the Test Unit macthes the expected outputs. To verify this, do the following:</p><p>1. Clear any runs in the Simulation Data Inspector, run the following command - or <b><a href="matlab:Simulink.sdi.clear;">click here</a></b>.</p><pre>&gt;&gt; Simulink.sdi.clear;</pre><p>2.  Open the <b>CruiseControl_SIL_harness.slx</b> model &#8211; <b><a href="matlab:loadEquivTestHarness;">click here</a></b>.</p><p><img vspace="5" hspace="5" src="Step_06_SIL_Harness.png" alt=""> </p><p>3.  Open <b>Signal Builder</b> and click <b>Run All</b>.</p><p><img vspace="5" hspace="5" src="Step_06_SB_RunAll.png" alt=""> </p><p>All test cases inside the Signal Builder block are now executed in sequence. During simulation we are using assert blocks to verify that the outputs from the Test Unit block are equal to the expected outputs. Since no assertions were triggered, all test cases were passed. In addtion, we measured the model coverage for these test cases, which resulted 100% coverage (see picture below).</p><p><img vspace="5" hspace="5" src="Step_06_ModelCoverage.png" alt=""> </p><p>The Test Unit was now executed in <b>Normal mode</b>, i.e. normal simulation. However, the Model block, which references <b>CruiseControl_SIL</b>, can be executed in the following modes of operation:</p><div><ul><li>Normal</li><li>Accelerator</li><li>Software-in-the-loop (SIL)</li><li>Processor-in-the-loop (PIL)</li></ul></div><p>In order to verify that the generated code (compiled for the host) has the same behavior as the model, we can simply switch the simulation mode from <b>Normal</b> (default) to <b>Software-in-the-loop (SIL)</b>, rerun all the test cases and compare the results. This is what we are going to do now.</p><p>4.  Right-click the <b>Test Unit</b> block.  Select <b>Block Parameters (ModelReference)</b>.</p><p><img vspace="5" hspace="5" src="Step_06_MRefParams.png" alt=""> </p><p>5. Select <b>Software-in-the-looop (SIL)</b> as <b>Simulation mode</b> in the drop-down list in the dialog that appears (see picture below).</p><p><img vspace="5" hspace="5" src="Step_06_MRef_SimMode.png" alt=""> </p><p>6. Click <b>OK</b>.</p><p><img vspace="5" hspace="5" src="Step_06_MRefSIL.png" alt=""> </p><p>The <b>Model block (Test Unit)</b> is now configured to run <b>CruiseControl_SIL</b> model in <b>Software-in-the-looop (SIL)</b> simulation mode (see picture above). This means that before simulating the <b>CruiseControl_SIL_harness</b> model, Simulink will generate code and compile it for <b>CruiseControl_SIL</b> and execute the compiled code instead of the model.</p><p>To perform the Software-in-the-loop verification, do the following:</p><p>7. To disable model coverage for SIL, run the following command - or <b><a href="matlab:disableModelCoverage('CruiseControl_SIL_harness');">click here</a></b>.</p><pre>&gt;&gt; disableModelCoverage('CruiseControl_SIL_harness');</pre><p>8. Open the <b>Signal Builder</b> block. Click <b>Run All</b>.</p><p>Code is now generated and compiled for the <b>Test Unit</b> and then all test cases inside the Signal Builder block are executed in sequence. Again, we are using assert blocks to verify that the outputs from the Test Unit block in SIL mode (i.e. the compiled source code) are equal to the expected outputs. Since no assertions were triggered, all test cases were passed. This means that the generated source code (compiled for the host) has the same behavior as the Simulink model.</p><p>Manually compare model vs code in SDI, doing the <b>Equivalence Test</b> manually for a few runs:</p><p>9.  Open Simulation Data Inspector.</p><p>10.  Use the "Compare Runs" function to manually compare the model outputs to the SIL outputs.  (They are offset by the number of test cases, <b>22</b>).</p><p>11.  To automate the comparison, run the following command  - or <b><a href="matlab:createEquivTestReport('CruiseControl_SIL_harness','CruiseControl_SIL',22);">click here</a></b>.</p><pre class="language-matlab">&gt;&gt; createEquivTestReport(<span class="string">'CruiseControl_SIL_harness'</span>,<span class="string">'CruiseControl_SIL'</span>,22);
+</pre><h2>Unintended Functionality -- Model vs Code Coverage<a name="4"></a></h2><p>Next step is to check for unintended functionality that may have been introduced by the code generation process.  Before we compared model vs code outputs, now we will compare code vs model coverage with with a third party code coverage tool. Using the same 100% model coverage test vectors in the harness, re-run the test vectors to determine code coverage with the 3rd party Bullseye code coverage tool.  This will be instructor led since you most likely do not have Bullseye installed on your computer.  To perform the SIL test with code coverage:</p><p>1.  Open the <b>CruiseControl_SILcvg_harness.slx</b> model &#8211; <b><a href="matlab:loadSILcvgTestHarness;">click here</a></b>.</p><p>2.  Make sure <b>SIL mode</b> has been selected for the referenced model as before.</p><p>3.  Select <b>Code, C/C++ Code, Code Generation Options...</b></p><p>4.  Select <b>Code Generation, Verification</b></p><p>5.  Select <b>Code coverage tool</b> as <b>BulleyeCoverage</b></p><p>6.  Select <b>Configure Coverage</b></p><p>7.  Uncheck <b>"Code coverage for this model (CruiseControl_SILcvg_harness)</b></p><p>8.  Check <b>"Code coverage for referenced models"</b></p><p><img vspace="5" hspace="5" src="Step_06_SelectBullseye.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_06_ConfigCodeCoverage.png" alt=""> </p><p>To perform the Software-in-the-loop verification with <b>code coverage</b>, do the following:</p><p>9.  Open the <b>Signal Builder</b> block.</p><p>10. Select the first test, click <b>Run</b>.</p><p>11. In the <b>Code Generation Report</b> select <b>CruiseControl_SIL.c</b> under <b>Model Files</b> to view the code coverage results.</p><p>12. Select another test to run in <b>Signal Builder</b> to see the incremental contribution to the cumulative coverage for each test case.</p><p>13. Optionally, <b>Run All</b> in <b>Signal Builder</b> to see the cumulative coverage for the 100% model coverage test vectors</p><p><img vspace="5" hspace="5" src="Step_06_CodeGenBullseyeTop.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_06_CodeGenBullseyeDetail.png" alt=""> </p><h2>Source Level Debugging<a name="5"></a></h2><p>Some of the code vs model coverage differences are due to the addition of a "default" case to the switch statement and others are due to "internal" entry decisions which may not be considered with model coverage.  To further analyze differences, Embedded Coder has an integrated debugging capability to debug in Visual Studio while running a SIL mode simulation. To enable this functionality:</p><p>1.  Open the <b>CruiseControl_VS_harness.slx</b> model &#8211; <b><a href="matlab:loadVSTestHarness;">click here</a></b>.</p><p>2.  Select <b>Code, C/C++ Code, Code Generation Options...</b></p><p>3.  Select <b>Code Generation, Verification</b></p><p>4.  Select <b>Code coverage tool</b> as <b>None</b></p><p>5.  Select <b>Enable source-level debugging for SIL</b></p><p><img vspace="5" hspace="5" src="Step_06_SelectSourceDebug.png" alt=""> </p><p>To perform the source level debugging:</p><p>6.  Click <b>Run</b> to execute the selected test case</p><p>Once the code generation and build for the SIL block has been completed the simulation will begin with a breakpoint in the Init and then after a <b>continue</b> the simulation will encounter the Step breakpoint function.</p><p><img vspace="5" hspace="5" src="Step_06_SourceDebugInitBreak.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_06_SourceDebugStepBreak.png" alt=""> </p><p>Use the Visual Studio debugging options to continue the simulation, add more breakpoints and watch variables.  You can also click on a transition in the state chart and navigate to the code to know where to set a breakpoint in the code for a particular transition.</p><p>Let's add a few breakpoints in the code and test with our dashboard:</p><p>7.  Set a breakpoint at line #120 to test the <b>Brake</b> after the <b>Cruise Control</b> is engaged.</p><p><img vspace="5" hspace="5" src="Step_06_SourceDebugBrake.png" alt=""> </p><p>8. Set a breakpoint at line #224 to test the <b>tspeed</b> setting going from disengaged to engaged.</p><p><img vspace="5" hspace="5" src="Step_06_SourceSetSpeed.png" alt=""> </p><h2>Summary<a name="6"></a></h2><p>In this method we have shown a code verfication workflow:</p><div><ol><li>Re-used a test harness with 100% model coverage input test vectors</li><li>Configured our implementation to run in <b>Software-in-the-loop (SIL)</b> mode</li><li>Successfully compared SIL implementation outputs to the same model expected outputs</li><li>Found minimal model coverage to code coverage differences</li><li>Demonstrated how to debug source code in <b>Visual Studio</b> as another way to understand other differences</li></ol></div><p>The <b>Code Verification</b> step of the process is about having confidence in our generated code by showing the code behavior matches the model behavior. The design issues were found earlier in the model verification tests. The code verification was shown to be tightly integrated with the code generation tool enabling minimal setup, high re-use of model test assets and easy execution/evaluation.  We will answer the last question in the next step as we build upon our structured and formal testing framework for securing the quality, robustness and safety of our cruise controller.</p><p><img vspace="5" hspace="5" src="Step_06_CruiseControl_Summary.png" alt=""> </p><p>When you are finished, close all models and files - or <b><a href="matlab:bdclose('all');">click here</a></b>.</p><p>Please go to <b>Step 7: Property Proving</b> - <b><a href="Step_07.html">click here</a></b>.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Step 6: Code Verification
+%
+%% Introduction
+%
+% <<Step_06_CruiseControl_WhatNow.png>>
+%
+% Some of this step will be *instructor led* since it requires *Embedded Coder*,
+% *Visual Studio*, and the *Bullseye* code coverage tool.  If you have any
+% of these tools then please execute the steps described below on your computer.
+%
+% Now that we have gone through examples on how to perform various
+% verification and validation activities on our model, let’s move to code
+% generation and source code unit testing.
+%
+% Equivalence testing is a method to compare the behavior of your model to 
+% the behavior of your generated code.  Software-in-the-Loop (SIL) testing
+% is a method to ensure the behavior of the generated code, compiled for 
+% the host, matches that of the model. This verification technique is built
+% into Simulink such that you easily can rerun all the test cases used for 
+% the model on the generated source code.  This adds additional confidence
+% and reliability to our development process.
+%
+% We could also extend the idea of SIL to Process-in-the-Loop (PIL), in
+% which case we would compile the code and run it either in an IDE or on
+% a target processor. This verification technique is also built into
+% Simulink such that you can automatically call 3rd party IDEs and
+% compilers to build, download and execute the generated source code on the
+% target processor. PIL is often required for compliance with functional
+% safety standards like IEC 61508, ISO 26262, EN 50128, etc.
+%
+% Below is a summary of the equivalence testing for code verification:
+%
+% <<Step_06_EquivTestWorkflow.png>>
+%
+%% Verification and Validation Tools Used
+% * Model Verification Blocks (part of Simulink)
+% * Embedded Coder (C code generation)
+%
+%% Equivalence Testing REPLACE_WITH_DASH_DASH Model vs Code Outputs
+%
+% Before performing the Software-in-the-loop (SIL) verfication, we should
+% verify that the model behaves as expected, i.e. the outputs from the Test
+% Unit macthes the expected outputs. To verify this, do the following:  
+%
+% 1. Clear any runs in the Simulation Data Inspector, run the following command - or
+% *<matlab:Simulink.sdi.clear; click here>*.
+%
+%  >> Simulink.sdi.clear;
+%
+% 2.  Open the *CruiseControl_SIL_harness.slx* model – *<matlab:loadEquivTestHarness; click here>*.
+%
+% <<Step_06_SIL_Harness.png>>
+%
+% 3.  Open *Signal Builder* and click *Run All*.
+%
+% <<Step_06_SB_RunAll.png>>
+%
+% All test cases inside the Signal Builder block are now executed in
+% sequence. During simulation we are using assert blocks to verify that
+% the outputs from the Test Unit block are equal to the expected outputs.
+% Since no assertions were triggered, all test cases were passed. In
+% addtion, we measured the model coverage for these test cases, which
+% resulted 100% coverage (see picture below).
+%
+% <<Step_06_ModelCoverage.png>>
+%
+% The Test Unit was now executed in *Normal mode*, i.e. normal simulation.
+% However, the Model block, which references *CruiseControl_SIL*, can be
+% executed in the following modes of operation: 
+%
+% * Normal
+% * Accelerator
+% * Software-in-the-loop (SIL)
+% * Processor-in-the-loop (PIL)
+%
+% In order to verify that the generated code (compiled for the host) has
+% the same behavior as the model, we can simply switch the simulation mode
+% from *Normal* (default) to *Software-in-the-loop (SIL)*, rerun all 
+% the test cases and compare the results. This is what we are going to do
+% now.
+%
+% 4.  Right-click the *Test Unit* block.  Select *Block Parameters (ModelReference)*.
+%
+% <<Step_06_MRefParams.png>>
+%
+% 5. Select *Software-in-the-looop (SIL)* as *Simulation mode* in the drop-down
+% list in the dialog that appears (see picture below).
+%
+% <<Step_06_MRef_SimMode.png>>
+%
+% 6. Click *OK*.
+%
+% <<Step_06_MRefSIL.png>>
+%
+% The *Model block (Test Unit)* is now configured to run *CruiseControl_SIL*
+% model in *Software-in-the-looop (SIL)* simulation mode (see picture
+% above). This means that before simulating the *CruiseControl_SIL_harness* model,
+% Simulink will generate code and compile it for *CruiseControl_SIL* and
+% execute the compiled code instead of the model.
+%
+% To perform the Software-in-the-loop verification, do the following:
+%
+% 7. To disable model coverage for SIL, run the following command - or
+% *<matlab:disableModelCoverage('CruiseControl_SIL_harness'); click here>*.
+%
+%  >> disableModelCoverage('CruiseControl_SIL_harness');
+%
+% 8. Open the *Signal Builder* block. Click *Run All*.
+%
+% Code is now generated and compiled for the *Test Unit* and then all
+% test cases inside the Signal Builder block are executed in sequence.
+% Again, we are using assert blocks to verify that the outputs from the
+% Test Unit block in SIL mode (i.e. the compiled source code) are equal to
+% the expected outputs. Since no assertions were triggered, all test cases
+% were passed. This means that the generated source code (compiled for the
+% host) has the same behavior as the Simulink model.
+%
+% Manually compare model vs code in SDI, doing the *Equivalence Test* manually
+% for a few runs:
+%
+% 9.  Open Simulation Data Inspector.  
+%
+% 10.  Use the "Compare Runs" function to manually compare the model 
+% outputs to the SIL outputs.  (They are offset by the number of test cases, *22*).
+%
+% 11.  To automate the comparison, run the following command  - or
+% *<matlab:createEquivTestReport('CruiseControl_SIL_harness','CruiseControl_SIL',22); click
+% here>*.
+%
+%   >> createEquivTestReport('CruiseControl_SIL_harness','CruiseControl_SIL',22);
+%
+%% Unintended Functionality REPLACE_WITH_DASH_DASH Model vs Code Coverage
+%
+% Next step is to check for unintended functionality that may have been
+% introduced by the code generation process.  Before we compared model vs
+% code outputs, now we will compare code vs model coverage with with a 
+% third party code coverage tool. Using the same 100% model coverage test 
+% vectors in the harness, re-run the test vectors to determine code 
+% coverage with the 3rd party Bullseye code coverage tool.  This will be 
+% instructor led since you most likely do not have Bullseye installed on 
+% your computer.  To perform the SIL test with code coverage:
+%
+% 1.  Open the *CruiseControl_SILcvg_harness.slx* model – *<matlab:loadSILcvgTestHarness; click here>*.
+%
+% 2.  Make sure *SIL mode* has been selected for the referenced model as before.
+%
+% 3.  Select *Code, C/C++ Code, Code Generation Options...*  
+%
+% 4.  Select *Code Generation, Verification*
+%
+% 5.  Select *Code coverage tool* as *BulleyeCoverage*
+%
+% 6.  Select *Configure Coverage*
+%
+% 7.  Uncheck *"Code coverage for this model
+% (CruiseControl_SILcvg_harness)*
+%
+% 8.  Check *"Code coverage for referenced models"*
+%
+% <<Step_06_SelectBullseye.png>>
+%
+% <<Step_06_ConfigCodeCoverage.png>>
+%
+% To perform the Software-in-the-loop verification with *code coverage*, 
+% do the following:
+%
+% 9.  Open the *Signal Builder* block.
+%
+% 10. Select the first test, click *Run*.
+%
+% 11. In the *Code Generation Report* select *CruiseControl_SIL.c* under *Model 
+% Files* to view the code coverage results.
+%
+% 12. Select another test to run in *Signal Builder* to see the incremental
+% contribution to the cumulative coverage for each test case.
+%
+% 13. Optionally, *Run All* in *Signal Builder* to see the cumulative 
+% coverage for the 100% model coverage test vectors
+%
+% <<Step_06_CodeGenBullseyeTop.png>>
+%
+% <<Step_06_CodeGenBullseyeDetail.png>>
+%
+%% Source Level Debugging
+%
+% Some of the code vs model coverage differences are due to the addition of
+% a "default" case to the switch statement and others are due to "internal" 
+% entry decisions which may not be considered with model coverage.  To 
+% further analyze differences, Embedded Coder has an integrated debugging
+% capability to debug in Visual Studio while running a SIL mode simulation.
+% To enable this functionality:
+% 
+%
+% 1.  Open the *CruiseControl_VS_harness.slx* model – *<matlab:loadVSTestHarness; click here>*.
+%
+% 2.  Select *Code, C/C++ Code, Code Generation Options...* 
+%
+% 3.  Select *Code Generation, Verification*
+%
+% 4.  Select *Code coverage tool* as *None*
+%
+% 5.  Select *Enable source-level debugging for SIL*
+%
+% <<Step_06_SelectSourceDebug.png>>
+%
+% To perform the source level debugging:
+%
+% 6.  Click *Run* to execute the selected test case
+%
+% Once the code generation and build for the SIL block has been completed 
+% the simulation will begin with a breakpoint in the Init and then after a
+% *continue* the simulation will encounter the Step breakpoint
+% function.  
+%
+% <<Step_06_SourceDebugInitBreak.png>>
+%
+% <<Step_06_SourceDebugStepBreak.png>>
+%
+% Use the Visual Studio debugging options to continue the 
+% simulation, add more breakpoints and watch variables.  You can also click
+% on a transition in the state chart and navigate to the code to know where
+% to set a breakpoint in the code for a particular transition.
+%
+% Let's add a few breakpoints in the code and test with our dashboard:
+%
+% 7.  Set a breakpoint at line #120 to test the *Brake* after the *Cruise
+% Control* is engaged.
+%
+% <<Step_06_SourceDebugBrake.png>>
+%
+% 8. Set a breakpoint at line #224 to test the *tspeed* setting going from
+% disengaged to engaged.
+%
+% <<Step_06_SourceSetSpeed.png>>
+%
+%% Summary
+%
+% In this method we have shown a code verfication workflow:
+%
+% # Re-used a test harness with 100% model coverage input test vectors
+% # Configured our implementation to run in *Software-in-the-loop (SIL)* mode
+% # Successfully compared SIL implementation outputs to the same model expected outputs
+% # Found minimal model coverage to code coverage differences
+% # Demonstrated how to debug source code in *Visual Studio* as another way 
+% to understand other differences
+%
+% The *Code Verification* step of the process is about having confidence in
+% our generated code by showing the code behavior matches the model behavior.
+% The design issues were found earlier in the model verification tests.
+% The code verification was shown to be tightly integrated with the code
+% generation tool enabling minimal setup, high re-use of model test assets
+% and easy execution/evaluation.  We will answer the last 
+% question in the next step as we build upon our structured and formal testing 
+% framework for securing the quality, robustness and safety of our cruise controller.    
+%
+% <<Step_06_CruiseControl_Summary.png>>
+%
+% When you are finished, close all models and files - or
+% *<matlab:bdclose('all'); click here>*.
+%
+% Please go to *Step 7: Property Proving* - *<Step_07.html click here>*.
+%
+##### SOURCE END #####
+--></body></html>

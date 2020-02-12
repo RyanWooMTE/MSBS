@@ -1,0 +1,137 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Generate Truth Table block from Excel</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-04"><meta name="DC.source" content="cd020_xls2TruthTable.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Generate Truth Table block from Excel</h1><!--introduction--><div><ul><li>Supported by MATLAB R2007a or later</li><li>Requires Simulink&reg; and Stateflow&reg;.</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Overview</a></li><li><a href="#2">Excel writing format</a></li><li><a href="#3">TruthTable block details</a></li><li><a href="#4">Expected model structure</a></li><li><a href="#5">Rule for writing TruthTable</a></li><li><a href="#6">Open cmtdtool_sampledata_en.xls  in cmtdtool's install directory.</a></li></ul></div><h2>Overview<a name="1"></a></h2><p>(1) Write TruthTable in Excel and select a region to import.</p><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd020_xls2TruthTable_pic01.png" alt=""> </p><p>(2) Click [Generate TruthTable] button.</p><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd020_xls2TruthTable_pic02.png" alt=""> </p><p>(3) TruthTable block is generated. (Stateflow needed)</p><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd020_xls2TruthTable_pic03.png" alt=""> </p><p>(4) TruthTable written in Excel is represented in TruthTable block</p><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd020_xls2TruthTable_pic04.png" alt=""> </p><h2>Excel writing format<a name="2"></a></h2><div><ul><li>List up True / False combinations of Input and Output conditions in each columns.</li><li>Using this TruthTable, user can verify that the combinations of input and output patterns match with outputs from controller subsystem. If there is no Input-Output pattern listed in the TruthTable, you will find the pattern is unexpected.</li></ul></div><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd020_xls2TruthTable_pic05.png" alt=""> </p><h2>TruthTable block details<a name="3"></a></h2><div><ul><li>Variables in conditions become block's input. If it is defined in the WS. it will be Parameter.</li></ul></div><div><ul><li><b>Condition equations</b>: Evaluate each columns starting from D1. If there is a column that matches all conditions, then an action in the corresponding row is executed.</li></ul></div><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd020_xls2TruthTable_pic06.png" alt=""> </p><h2>Expected model structure<a name="4"></a></h2><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd020_xls2TruthTable_pic07.png" alt=""> </p><h2>Rule for writing TruthTable<a name="5"></a></h2><div><ul><li>1st column "Description": Used as comments in the model. Do not affect for simulation.</li><li>2nd column "Conditions": Specify conditions corresponding to the 1st column. You can write MATLAB equation including arithmetic operator, logical operator, relational operator, and so on.</li><li>3rd column and after: Specify T (Truth) / F (False) / - (don't care) in each columns and rows.</li><li>The last column (Else): The default case when there was no column that match to specified T/F/- combination. The TruthTable block returns 0 if the it corresponds to "Else" condition.</li></ul></div><p><b>Note</b></p><div><ul><li>Any strings that can be accepted as variable name of MATLAB are set as block's inputs automatically.</li><li>If the strings are defined as variables in MATLAB base workspace, they are set as Parameter rather than block's inputs.</li></ul></div><h2>Open cmtdtool_sampledata_en.xls  in cmtdtool's install directory.<a name="6"></a></h2><div><ol><li>Select "E3:M10" cell in "TruthTable" tab.</li><li>Click "Generate TruthTable" in cmtdtool GUI.</li><li>Check that there is Truth Table in a new model.</li><li>Run the following commands and you will see that the same operation can be done by API call .</li></ol></div><pre class="codeinput">xls2TruthTable(<span class="string">'cmtdtool_sampledata_en.xls'</span>,<span class="string">'TruthTable'</span>,<span class="string">'E3:M10'</span>);
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Generate Truth Table block from Excel
+%
+% * Supported by MATLAB R2007a or later
+% * Requires Simulink(R) and Stateflow(R).
+ 
+%% Overview
+% (1) Write TruthTable in Excel and select a region to import.
+% 
+% <<d02_Excel2TruthTable/cd020_xls2TruthTable_pic01.png>>
+%
+% (2) Click [Generate TruthTable] button.
+%
+% <<d02_Excel2TruthTable/cd020_xls2TruthTable_pic02.png>>
+%
+% (3) TruthTable block is generated. (Stateflow needed)
+%
+% <<d02_Excel2TruthTable/cd020_xls2TruthTable_pic03.png>>
+%
+% (4) TruthTable written in Excel is represented in TruthTable block
+%
+% <<d02_Excel2TruthTable/cd020_xls2TruthTable_pic04.png>>
+ 
+%% Excel writing format
+% * List up True / False combinations of Input and Output conditions in
+% each columns. 
+% * Using this TruthTable, user can verify that the combinations of input
+% and output patterns match with outputs from controller subsystem. If
+% there is no Input-Output pattern listed in the TruthTable, you will find
+% the pattern is unexpected.
+%
+% <<d02_Excel2TruthTable/cd020_xls2TruthTable_pic05.png>>
+%
+% 
+ 
+%% TruthTable block details
+% * Variables in conditions become block's input. If it is defined in the
+% WS. it will be Parameter. 
+% 
+% * *Condition equations*: Evaluate each columns starting from D1. If there is a column that matches all conditions, then an action in the corresponding row is executed.
+%
+% <<d02_Excel2TruthTable/cd020_xls2TruthTable_pic06.png>>
+%
+ 
+%% Expected model structure
+%
+% <<d02_Excel2TruthTable/cd020_xls2TruthTable_pic07.png>>
+%
+ 
+%% Rule for writing TruthTable
+% * 1st column "Description": Used as comments in the model. Do not affect for simulation.
+% * 2nd column "Conditions": Specify conditions corresponding to the 1st column. You can write MATLAB equation including arithmetic operator, logical operator, relational operator, and so on.
+% * 3rd column and after: Specify T (Truth) / F (False) / - (don't care) in each columns and rows.
+% * The last column (Else): The default case when there was no column that match to specified T/F/- combination. The TruthTable block returns 0 if the it corresponds to "Else" condition. 
+% 
+% *Note*
+%
+% * Any strings that can be accepted as variable name of MATLAB are set as block's inputs automatically.
+% * If the strings are defined as variables in MATLAB base workspace, they are set as Parameter rather than block's inputs.
+ 
+%% Open cmtdtool_sampledata_en.xls  in cmtdtool's install directory.
+% # Select "E3:M10" cell in "TruthTable" tab.
+% # Click "Generate TruthTable" in cmtdtool GUI.
+% # Check that there is Truth Table in a new model.
+% # Run the following commands and you will see that the same operation can be done by API call .
+ 
+xls2TruthTable('cmtdtool_sampledata_en.xls','TruthTable','E3:M10');
+
+##### SOURCE END #####
+--></body></html>

@@ -1,0 +1,164 @@
+function [ja,en] = setLocalizedMessages()
+
+% Objects that have 'String' properties
+ja.string.datatype_str_lb = '入力ポート名・データタイプ';
+en.string.datatype_str_lb = 'Name/DataType';
+ja.string.import_tx = 'インポート';
+en.string.import_tx = 'Import';
+ja.string.export_tx = 'エクスポート';
+en.string.export_tx = 'Export';
+ja.string.testcases_str_lb = 'テストケース';
+en.string.testcases_str_lb = 'Test Cases';
+ja.string.refresh_bt = 'リフレッシュ';
+en.string.refresh_bt = 'Refresh';
+ja.string.get_covdata_bt = 'カバレッジの計測';
+en.string.get_covdata_bt = 'Record coverage';
+ja.string.covrep_bt = 'レポートの表示';
+en.string.covrep_bt = 'Coverage Report';
+ja.string.blockcolor_cb = 'ブロックを色分け';
+en.string.blockcolor_cb = 'Model Coloring';
+ja.string.sldvgencov_bt = '未達カバレッジの解析';
+en.string.sldvgencov_bt = 'Analyze missing coverages';
+ja.string.covrep_all_bt = '統合レポート';
+en.string.covrep_all_bt = 'Combined Report';
+ja.string.getnewharness_bt = 'テストケースをマージ';
+en.string.getnewharness_bt = 'Merge test cases';
+ja.string.create_harness_cb = 'ハーネスモデルの生成';
+en.string.create_harness_cb = 'Create harness';
+ja.string.create_sldvreport_cb = 'レポートの表示';
+en.string.create_sldvreport_cb = 'Create report';
+ja.string.setdatatyep_pb = 'モデルの入力データタイプに適用';
+en.string.setdatatyep_pb = 'Adopt model''s data types';
+ja.string.load_current_model_bt = 'カレントのモデルを選択';
+en.string.load_current_model_bt = 'Load Current model';
+
+% Objects that have 'Title' properties
+ja.title.model_pn = '対象モデル';
+en.title.model_pn = 'Target Model';
+ja.title.datamanage_pn = 'データ管理';
+en.title.datamanage_pn = 'Data management';
+ja.title.coverage_pn = 'カバレッジ';
+en.title.coverage_pn = 'Coverage';
+ja.title.merging_pn = '結果のマージ';
+en.title.merging_pn = 'Merage';
+ja.title.information_pn = '情報';
+en.title.information_pn = 'Information';
+
+% Objects that have 'Label' properties
+ja.label.preferences_menu = '設定';
+en.label.preferences_menu = 'Preferences';
+ja.label.lang_setting_menu = '言語';
+en.label.lang_setting_menu = 'Language';
+ja.label.filemenu = 'ファイル';
+en.label.filemenu = 'File';
+ja.label.finish_menu = '終了';
+en.label.finish_menu = 'Quit';
+ja.label.show_model_menu = 'モデルの表示';
+en.label.show_model_menu = 'Show model';
+ja.label.decision_menu = 'デシジョン';
+en.label.decision_menu = 'Decision';
+ja.label.condition_menu = 'コンディション';
+en.label.condition_menu = 'Condition';
+ja.label.coverage_menu = 'カバレッジ対象';
+en.label.coverage_menu = 'Coverage metrics';
+ja.label.document_mn = 'ヘルプ';
+en.label.document_mn = 'Help';
+ja.label.check_update_mb = 'このツール公開ページの表示';
+en.label.check_update_mb = 'Goto to official page for this tool';
+ja.label.update_document_mb = 'ドキュメントを更新';
+en.label.update_document_mb = 'Update document';
+
+% Objects that have 'ToolTips' properties
+ja.tooltips.loadmodel_bt = '対象となるモデルを選択します';
+en.tooltips.loadmodel_bt = 'Select a target model';
+ja.tooltips.signalview_bt = '選択された既存テストケースをグラフに表示します';
+en.tooltips.signalview_bt = 'Plot selected test case(s) on Simulink Scope(s)';
+ja.tooltips.get_covdata_bt = '選択された既存テストケースを入力としてシミュレーションを行いカバレッジデータを生成します。カバレッジデータはワークスペース変数 covDataとして保存されます';
+en.tooltips.get_covdata_bt = 'Create a coverage data for the selected test cases. The cumulative coverage data will be stored as covData on the Base Workspace.';
+ja.tooltips.covrep_bt = '既存テストケースによるモデルカバレッジのレポートを生成します';
+en.tooltips.covrep_bt = 'Create a coverage report for the selected test case(s)';
+ja.tooltips.blockcolor_cb = 'カバレッジの計測結果をモデル上のブロックの色として反映します。';
+en.tooltips.blockcolor_cb = 'Display model coverage results for individual blocks directly in Simulink diagrams';
+ja.tooltips.covrep_all_bt = '既存テストケースとSLDVで求めたテストケースによる統合カバレッジレポートを生成します';
+en.tooltips.covrep_all_bt = 'Create a combined coverage report for both existing test case(s) and SLDV generated.';
+ja.tooltips.getnewharness_bt = '既存テストケースとSLDVで求めたテストケースをまとめ新たなハーネスモデルを作成します';
+en.tooltips.getnewharness_bt = 'Create a new harness model contains both test cases. The test cases will be merged into Signal Builder block';
+ja.tooltips.setdatatyep_pb = '読み込まれたデータのデータタイプをモデルの入力データタイプと一致するようキャストを行います';
+en.tooltips.setdatatyep_pb = 'Cast loaded data types to adopt model''s input data types';
+ja.tooltips.import_and_add_data_bt = '指定したデータを読み込みテストケースに追加します。(データはワークスペース上の変数simdataに定義されます)';
+en.tooltips.import_and_add_data_bt = 'Read specified data  and add them into TestCase listbox. Data also assigned as simdata on WorkSpace';
+ja.tooltips.delete_signal_bt = '選択された信号を消去します';
+en.tooltips.delete_signal_bt = 'Remove selected signals';
+
+ja.information_text{2} = sprintf('「%s」をクリックすることによりモデルのシミュレーションを行い、モデルカバレッジを計測します。',ja.string.get_covdata_bt);
+en.information_text{2} = sprintf('"%s" button creates a coverage data for a selected test case(s)',en.string.get_covdata_bt);
+ja.information_text{3} = '対象となるモデルを指定してください。';
+en.information_text{3} = 'Select a target model.';
+ja.information_text{4} = sprintf('「%s」をクリックすることによりSLDVを利用して既存データで到達していないカバレッジのテストケースを求めます。',ja.string.sldvgencov_bt);
+en.information_text{4} = sprintf('"%s" enables you to obtain missing coverage objectives that is not covered by the existing data.',en.string.sldvgencov_bt);
+ja.information_text{5} = sprintf('「%s」%s  「%s」%s'...
+    ,ja.string.covrep_all_bt,'SLDVで生成したテストケースを含めたカバレッジレポートを表示します。'...
+    ,ja.string.getnewharness_bt,'既存テストケースとSLDVで生成したテストケースをマージし、新たなハーネスモデルを生成します。');
+en.information_text{5} = sprintf('「%s」%s「%s」%s'...
+    ,en.string.covrep_all_bt,en.tooltips.covrep_all_bt...
+    ,en.string.getnewharness_bt,en.tooltips.getnewharness_bt);
+ja.information_text{6} = '与えられた信号は100%モデルカバレッジを達成しました。詳細はレポートでご確認下さい。';
+en.information_text{6} = 'Given signals satisfied 100% model coverage. See Coverage report for more information.';
+
+% messages on warning dialogs
+ja.warndlg{1} = '指定されたMATファイルはsimdataを含みません';
+en.warndlg{1} = 'Selected MAT file does not contain "simdata" variable';
+ja.warndlg{2} = '指定されたMATファイルはSLDVのデータ形式ではありません';
+en.warndlg{2} = 'Selected MAT file is not created by SLDV';
+ja.warndlg{3} = '入力データ %s が入力ポート数と一致していません。ファイルは無視されました。';
+en.warndlg{3} = 'Importing data %s does not much to the number of Inport blocks on the model. The file is ignored';
+ja.warndlg{4} = 'Inportブロックのデータ型が特定できません。継承以外のデータ型に設定してください。';
+en.warndlg{4} = 'Data type of Inport block are not supported by this tool. Please specify data type other than Inherit';
+ja.warndlg{5} = sprintf('ハーネスモデルが生成されていません。「%s」にチェックを入れて下さい。',ja.string.create_harness_cb);
+en.warndlg{5} = sprintf('Harness model is not created. You need to check "%s".',en.string.create_harness_cb);
+ja.warndlg{6} = 'はい';
+en.warndlg{6} = 'YES';
+ja.warndlg{7} = 'いいえ';
+en.warndlg{7} = 'NO';
+ja.warndlg{8} = '終了しますか？';
+en.warndlg{8} = 'Do you close this tool?';
+ja.warndlg{9} = '終了';
+en.warndlg{9} = 'Quit';
+ja.warndlg{10} = 'カバレッジデータが存在しないか現在モデルに適切では有りません。再度カバレッジデータを取得する必要があります。';
+en.warndlg{10} = 'It is impossible to validate that the coverage data is obtained from current model. Please measure coverage data again.';
+ja.warndlg{11} = '不明なエラーが発生しました。エラーメッセージはCommand Windowに表示されます。';
+en.warndlg{11} = 'Unknown error occured.';
+ja.warndlg{12} = 'モデルが閉じられました。最初から実行してください。';
+en.warndlg{12} = 'The model has been closed. Please re-run from the beginning.';
+ja.warndlg{13} = '読み込まれているデータはモデルの入力データタイプと一致しません。モデルに合わせて型変換しますか？';
+en.warndlg{13} = 'Imported data is not match with model''s datatype. Do you cast them?';
+ja.warndlg{14} = 'モデル上でSLDV解析時にパラメータハンドリングを行うよう設定されています。カバレッジに影響を与えるパラメータを変更した場合、このツールでは対応できない可能性があります。続行しますか？';
+en.warndlg{14} = 'Parameter handling setting is set on. Covergage mesurement function of this tool is not taking into account of the parameter handling setting. Do you continue?';
+ja.warndlg{15} = 'パラメータハンドリング設定の確認';
+en.warndlg{15} = 'Parameter Handling setting has been found';
+ja.warndlg{16} = 'モデルが変更されています';
+en.warndlg{16} = 'Model is unsaved';
+ja.warndlg{17} = 'ハーネスモデルをモデルリファレンスとして作成する場合には、モデルが保存されている必要があります。保存しますか？';
+en.warndlg{17} = 'To create harness model by referenced model, input model is needed to saved. Save the model?';
+ja.warndlg{18} = 'データタイプの不一致';
+en.warndlg{18} = 'Data-type mismatch';
+ja.warndlg{19} = 'sldvDataファイルが作成されるように設定されていません。作成しますか？';
+en.warndlg{19} = 'sldvData file is set as not to be created. Create?';
+ja.warndlg{20} = 'sldvDataファイルの作成';
+en.warndlg{20} = 'Creating sldvData file';
+ja.warndlg{21} = 'ワークスペース上の変数simdataとインポートされたデータの形式が一致しないため、信号を追加できません。';
+en.warndlg{21} = 'It is impossible to add imported signals to "simdata" defined as WorkSpace variable because there is miss match between the simdata and format of the imported data.';
+ja.warndlg{22} = 'ワークスペースに変数simdataがありません。';
+en.warndlg{22} = 'There is no "simdata" variable in the WorkSpace.';
+ja.warndlg{23} = 'すべての入力信号がモデル入力と一致しませんでした。信号もしくはモデルの入力ポートの設定を確認して下さい。';
+en.warndlg{23} = 'All signals didn''t match with model inputs. Check input signals or input ports settings on your model.';
+ja.warndlg{24} = 'モデルのコンパイルに失敗しました。';
+en.warndlg{24} = 'Failed to compile the model.';
+ja.warndlg{25} = 'ワークスペース上の変数simdataが書き換えられたためインポートできません。「リフレッシュ」ボタンにより既存のテストケースをクリアするとこのエラーを回避できます。';
+en.warndlg{25} = 'Cannot import variable because a change has been made on simdata in base Workspace. You can avoid this error by clicking refresh button to clear existing testcases.';
+ja.warndlg{26} = '新しいテストケース名を指定してください';
+en.warndlg{26} = 'Specify an new testcase name';
+ja.warndlg{27} = 'テストケース名の変更';
+en.warndlg{27} = 'Test case name change';
+ja.warndlg{28} = 'ベースワークスペースに変数 simdata がすでに作成されています。clear simdata を実行して変数をクリアするか、他の変数名に置き換えてワークスペースから再読み込みしてください。';
+en.warndlg{28} = 'simdata variable is already defined in base workspace. Run "clear simdata" command to clear the variable or reread the variable to this tool by reassigning to the different variable name.';

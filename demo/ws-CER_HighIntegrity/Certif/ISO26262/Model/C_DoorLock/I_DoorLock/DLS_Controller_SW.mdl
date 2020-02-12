@@ -1,0 +1,3842 @@
+Model {
+  Name			  "DLS_Controller_SW"
+  Version		  7.9
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    4
+    Inport {
+      BusObject		      ""
+      SignalName	      "VehicleSpeed"
+      Name		      "VehicleSpeed"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "Engine_ON"
+      Name		      "Engine_ON"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "LockPos"
+      Name		      "LockPos"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "Airbag_Fired"
+      Name		      "Airbag_Fired"
+    }
+    NumRootOutports	    3
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      SignalName	      "LockLED"
+      Name		      "LockLED"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      SignalName	      "LockAppMode_Out"
+      Name		      "LockAppMode"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      SignalName	      "LockDoorMotorCmd"
+      Name		      "LockDoorMotorCmd"
+    }
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.52"
+    NumModelReferences	    6
+    ModelReference {
+      ModelRefBlockPath	      "DLS_Controller_SW/DoorLockingSystem/Actuators_Ctrl/Blink_Fcn|LED_Cmd_varZ"
+    }
+    ModelReference {
+      ModelRefBlockPath	      "DLS_Controller_SW/DoorLockingSystem/Actuators_Ctrl/UpdateMotorCmd/CtrlActuator_FrontLef"
+      "t|Motor_Cmd_varY"
+    }
+    ModelReference {
+      ModelRefBlockPath	      "DLS_Controller_SW/DoorLockingSystem/Actuators_Ctrl/UpdateMotorCmd/CtrlActuator_FrontRig"
+      "ht|Motor_Cmd_varY"
+    }
+    ModelReference {
+      ModelRefBlockPath	      "DLS_Controller_SW/DoorLockingSystem/Input_Conditioning/ConditionInputs|Inputs_Cond"
+    }
+    ModelReference {
+      ModelRefBlockPath	      "DLS_Controller_SW/DoorLockingSystem/Lock_Mode_Manager/Lock_Mode_Management|Lock_Mode_Ma"
+      "nagement"
+    }
+    ModelReference {
+      ModelRefBlockPath	      "DLS_Controller_SW/DoorLockingSystem/Locking_Strategy/ControlLock|Lock_Control_Vx"
+    }
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  PreLoadFcn		  "DLS_Controller_SW_selfinit"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Created		  "Tue Jun 15 13:27:56 2010"
+  Creator		  "fguerin"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "klindqvi"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Mar 09 13:45:53 2012"
+  RTWModifiedTimeStamp	  253201522
+  ModelVersionFormat	  "1.%<AutoIncrement:52>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  on
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  on
+  ShowPortDataTypes	  on
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks on
+  BrowserLookUnderMasks	  on
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  on
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    3
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.12.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.12.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.12.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Structure"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  off
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.12.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  on
+	  StrengthReduction	  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode on
+	  LifeSpan		  "1"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.12.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.12.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.12.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.12.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.12.0"
+	  SystemTargetFile	  "ert.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "ert_default_tmf"
+	  Description		  "Real-Time Workshop Embedded Coder"
+	  GenerateReport	  on
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "ert_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport on
+	  LaunchReport		  on
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  on
+	  GenerateTraceReport	  on
+	  GenerateTraceReportSl	  on
+	  GenerateTraceReportSf	  on
+	  GenerateTraceReportEml  on
+	  GenerateCodeInfo	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.12.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses off
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.ERTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.12.0"
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      CodeReplacementLibrary  "ANSI_C"
+	      UtilityFuncGeneration   "Shared location"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   on
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  off
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     on
+	      ERTFirstTimeCompliant   on
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    on
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      off
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   off
+	      SupportNonInlinedSFcns  off
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant on
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GRTInterface	      off
+	      GenerateErtSFunction    off
+	      CreateSILPILBlock	      "None"
+	      CodeExecutionProfileVariable "executionProfile"
+	      CodeProfilingSaveOptions "SummaryOnly"
+	      GenerateASAP2	      off
+	      ExtMode		      off
+	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"Hierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RateGroupingCode	      on
+	      RootIOFormat	      "Individual arguments"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "example_file_process.tlc"
+	      CoverageDialogOpen      "off"
+	      EnableDataOwnership     off
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "Auto"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "Auto"
+	      ERTFilePackagingFormat  "Modular"
+	      DataReferenceFile	      "global.h"
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      off
+	      PreserveExternInFcnDecls on
+	      SuppressUnreachableDefaultCases off
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	      CodeProfilingInstrumentation off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.12.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 520, 285, 1400, 915 ] 
+    }
+    Simulink.ConfigSet {
+      $ObjectID		      13
+      Version		      "1.12.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  14
+	  Version		  "1.12.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  15
+	  Version		  "1.12.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  off
+	  DSMLogging		  off
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsOut"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  16
+	  Version		  "1.12.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  on
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup off
+	  ZeroInternalMemoryAtStartup off
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  on
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode on
+	  LifeSpan		  "1"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  17
+	  Version		  "1.12.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "error"
+	  SignalRangeChecking	  "error"
+	  ReadBeforeWriteMsg	  "EnableAllAsError"
+	  WriteAfterWriteMsg	  "EnableAllAsError"
+	  WriteAfterReadMsg	  "EnableAllAsError"
+	  AlgebraicLoopMsg	  "error"
+	  ArtificialAlgebraicLoopMsg "error"
+	  SaveWithDisabledLinksMsg "error"
+	  SaveWithParameterizedLinksMsg	"error"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg on
+	  CheckExecutionContextRuntimeOutputMsg	on
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "error"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "error"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "warning"
+	  MultiTaskRateTransMsg	  "warning"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "error"
+	  IntegerOverflowMsg	  "error"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "error"
+	  ParameterPrecisionLossMsg "error"
+	  ParameterTunabilityLossMsg "error"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "warning"
+	  UnnecessaryDatatypeConvMsg "warning"
+	  VectorMatrixConversionMsg "error"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "warning"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "error"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "error"
+	  RootOutportRequireBusObject "error"
+	  AssertControl		  "DisableAll"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "error"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "warning"
+	  ModelReferenceCSMismatchMessage "warning"
+	  UnknownTsInhSupMsg	  "error"
+	  ModelReferenceDataLoggingMessage "error"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorOnBusTreatedAsVector"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  18
+	  Version		  "1.12.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Long"
+	  ProdLargestAtomicFloat  "Double"
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "BigEndian"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "Freescale->MPC5500"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  19
+	  Version		  "1.12.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Single"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  20
+	  Version		  "1.12.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  21
+	  Version		  "1.12.0"
+	  SystemTargetFile	  "ert.tlc"
+	  GenCodeOnly		  on
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "ert_default_tmf"
+	  Description		  "Embedded Coder"
+	  GenerateReport	  on
+	  SaveLog		  off
+	  RTWVerbose		  off
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "ert_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport on
+	  LaunchReport		  on
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  on
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      22
+	      Version		      "1.12.0"
+	      ForceParamTrailComments on
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses off
+	      IgnoreTestpoints	      on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement on
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      4
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Macros"
+	      ReqsInCode	      on
+	      UseSimReservedNames     off
+	    }
+	    Simulink.ERTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      23
+	      Version		      "1.12.0"
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      CodeReplacementLibrary  "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   on
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   on
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    on
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      off
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   off
+	      SupportNonInlinedSFcns  off
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant on
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GRTInterface	      off
+	      GenerateErtSFunction    off
+	      CreateSILPILBlock	      "None"
+	      CodeExecutionProfileVariable "executionProfile"
+	      CodeProfilingSaveOptions "SummaryOnly"
+	      GenerateASAP2	      off
+	      ExtMode		      off
+	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"NonHierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RateGroupingCode	      on
+	      RootIOFormat	      "Individual arguments"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "example_file_process.tlc"
+	      CoverageDialogOpen      "off"
+	      EnableDataOwnership     off
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "Auto"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "Auto"
+	      ERTFilePackagingFormat  "Modular"
+	      DataReferenceFile	      "global.h"
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      off
+	      PreserveExternInFcnDecls on
+	      SuppressUnreachableDefaultCases off
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	      CodeProfilingInstrumentation off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	Sldv.ConfigComp {
+	  $ObjectID		  24
+	  Version		  "1.12.0"
+	  Description		  "Design Verifier Custom Configuration Component"
+	  Name			  "Design Verifier"
+	  DVMode		  "TestGeneration"
+	  DVMaxProcessTime	  600
+	  DVDisplayUnsatisfiableObjectives on
+	  DVAutomaticStubbing	  off
+	  DVDesignMinMaxConstraints on
+	  DVOutputDir		  "C:\\Work\\Data\\Pilots\\P_PSA_ECoder_BenchMark_LaGarenne\\source9b\\deliverable\\trunk\\demos\\VnV_"
+	  "example\\Projects\\ADL_Project/Simulink_Test_Generation/ADL_Sim"
+	  DVMakeOutputFilesUnique on
+	  DVBlockReplacement	  off
+	  DVBlockReplacementRulesList "<FactoryDefaultRules>"
+	  DVBlockReplacementModelFileName "$ModelName$_replacement"
+	  DVParameters		  off
+	  DVParametersConfigFileName "sldv_params_template.m"
+	  DVModelCoverageObjectives "MCDC"
+	  DVTestConditions	  "UseLocalSettings"
+	  DVTestObjectives	  "UseLocalSettings"
+	  DVMaxTestCaseSteps	  10000
+	  DVTestSuiteOptimization "CombinedObjectives"
+	  DVAssertions		  "UseLocalSettings"
+	  DVProofAssumptions	  "UseLocalSettings"
+	  DVExtendExistingTests	  off
+	  DVIgnoreExistTestSatisfied on
+	  DVIgnoreCovSatisfied	  off
+	  DVCovFilter		  off
+	  DVDetectIntegerOverflow on
+	  DVDetectDivisionByZero  on
+	  DVDesignMinMaxCheck	  off
+	  DVDetectDeadLogic	  off
+	  DVDetectSFTransConflict on
+	  DVDetectSFStateInconsistency on
+	  DVDetectSFArrayOutOfBounds on
+	  DVDetectEMLArrayOutOfBounds on
+	  DVDetectSLSelectorOutOfBounds	on
+	  DVDetectSLMPSwitchOutOfBounds	on
+	  DVDetectSLInvalidCast	  on
+	  DVDetectSLMergeConflict on
+	  DVDetectSLUninitializedDSR on
+	  DVProvingStrategy	  "Prove"
+	  DVMaxViolationSteps	  20
+	  DVSaveDataFile	  on
+	  DVDataFileName	  "$ModelName$_sldvdata"
+	  DVSaveExpectedOutput	  off
+	  DVRandomizeNoEffectData off
+	  DVSaveHarnessModel	  on
+	  DVHarnessModelFileName  "ADL_Sim_SLDV"
+	  DVModelReferenceHarness off
+	  DVSaveSystemTestHarness off
+	  DVSystemTestFileName	  "$ModelName$_harness"
+	  DVSaveReport		  on
+	  DVReportFileName	  "ADL_Sim_SLDV.html"
+	  DVReportIncludeGraphics off
+	  DVDisplayReport	  on
+	  DVDisplayResultsOnModel off
+	  DVActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Production_Configuration"
+      ExtraOptions	      "-aGenerateTraceInfo=1 -aIgnoreTestpoints=1 "
+      CurrentDlgPage	      "Diagnostics/Model Referencing"
+      ConfigPrmDlgPosition     [ 24, -98, 1000, 760 ] 
+    }
+    Simulink.ConfigSet {
+      $ObjectID		      25
+      Version		      "1.12.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  26
+	  Version		  "1.12.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  27
+	  Version		  "1.12.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t,u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  off
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsOut"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  28
+	  Version		  "1.12.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  on
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup off
+	  ZeroInternalMemoryAtStartup off
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  on
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode on
+	  LifeSpan		  "1"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  29
+	  Version		  "1.12.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "error"
+	  SignalRangeChecking	  "error"
+	  ReadBeforeWriteMsg	  "EnableAllAsError"
+	  WriteAfterWriteMsg	  "EnableAllAsError"
+	  WriteAfterReadMsg	  "EnableAllAsError"
+	  AlgebraicLoopMsg	  "error"
+	  ArtificialAlgebraicLoopMsg "error"
+	  SaveWithDisabledLinksMsg "error"
+	  SaveWithParameterizedLinksMsg	"error"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg on
+	  CheckExecutionContextRuntimeOutputMsg	on
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "error"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "error"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "warning"
+	  MultiTaskRateTransMsg	  "warning"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "error"
+	  IntegerOverflowMsg	  "error"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "error"
+	  ParameterPrecisionLossMsg "error"
+	  ParameterTunabilityLossMsg "error"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "warning"
+	  UnnecessaryDatatypeConvMsg "warning"
+	  VectorMatrixConversionMsg "error"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "error"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "error"
+	  RootOutportRequireBusObject "error"
+	  AssertControl		  "DisableAll"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "error"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "error"
+	  ModelReferenceCSMismatchMessage "warning"
+	  UnknownTsInhSupMsg	  "error"
+	  ModelReferenceDataLoggingMessage "error"
+	  ModelReferenceSymbolNameMessage "none"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorOnBusTreatedAsVector"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  30
+	  Version		  "1.12.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Long"
+	  ProdLargestAtomicFloat  "Double"
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "BigEndian"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "Freescale->MPC5500"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  31
+	  Version		  "1.12.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Single"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  32
+	  Version		  "1.12.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  33
+	  Version		  "1.12.0"
+	  SystemTargetFile	  "ert.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "ert_default_tmf"
+	  Description		  "Embedded Coder"
+	  GenerateReport	  on
+	  SaveLog		  off
+	  RTWVerbose		  off
+	  RetainRTWFile		  off
+	  Array {
+	    Type		    "Struct"
+	    Dimension		    1
+	    MATStruct {
+	      className		      "rtw.pil.Bullseye"
+	      argsAllComponents	      []
+	      Array {
+		Type			"Cell"
+		Dimension		2
+		Cell			"CoverageForTopModel"
+		Cell			"on"
+		PropName		"argsTopModelOnly"
+	      }
+	      excludedModels	      []
+	      includeReferencedModels "off"
+	      includeTopModel	      "on"
+	      enabled		      "off"
+	    }
+	    PropName		    "RTWBuildHooks"
+	  }
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "ert_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport on
+	  LaunchReport		  on
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  on
+	  GenerateTraceReport	  on
+	  GenerateTraceReportSl	  on
+	  GenerateTraceReportSf	  on
+	  GenerateTraceReportEml  on
+	  GenerateCodeInfo	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport on
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      34
+	      Version		      "1.12.0"
+	      ForceParamTrailComments on
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses off
+	      IgnoreTestpoints	      on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement on
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      4
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Macros"
+	      ReqsInCode	      on
+	      UseSimReservedNames     off
+	    }
+	    Simulink.ERTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      35
+	      Version		      "1.12.0"
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      CodeReplacementLibrary  "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   on
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   on
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    on
+	      SupportAbsoluteTime     off
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      off
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      off
+	      SupportComplex	      off
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   off
+	      SupportNonInlinedSFcns  off
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      on
+	      ModelStepFunctionPrototypeControlCompliant on
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GRTInterface	      off
+	      GenerateErtSFunction    off
+	      CreateSILPILBlock	      "None"
+	      CodeExecutionProfileVariable "executionProfile"
+	      CodeProfilingSaveOptions "SummaryOnly"
+	      GenerateASAP2	      off
+	      ExtMode		      off
+	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"NonHierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RateGroupingCode	      on
+	      RootIOFormat	      "Individual arguments"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "example_file_process.tlc"
+	      CoverageDialogOpen      "off"
+	      EnableDataOwnership     off
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "Auto"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "Auto"
+	      ERTFilePackagingFormat  "Modular"
+	      DataReferenceFile	      "global.h"
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      off
+	      PreserveExternInFcnDecls on
+	      SuppressUnreachableDefaultCases off
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	      CodeProfilingInstrumentation off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	Sldv.ConfigComp {
+	  $ObjectID		  36
+	  Version		  "1.12.0"
+	  Description		  "Design Verifier Custom Configuration Component"
+	  Name			  "Design Verifier"
+	  DVMode		  "TestGeneration"
+	  DVMaxProcessTime	  600
+	  DVDisplayUnsatisfiableObjectives on
+	  DVAutomaticStubbing	  off
+	  DVDesignMinMaxConstraints on
+	  DVOutputDir		  "C:\\Work\\Data\\Pilots\\P_PSA_ECoder_BenchMark_LaGarenne\\source9b\\deliverable\\trunk\\demos\\VnV_"
+	  "example\\Projects\\ADL_Project/Simulink_Test_Generation/ADL_Sim"
+	  DVMakeOutputFilesUnique on
+	  DVBlockReplacement	  off
+	  DVBlockReplacementRulesList "<FactoryDefaultRules>"
+	  DVBlockReplacementModelFileName "$ModelName$_replacement"
+	  DVParameters		  off
+	  DVParametersConfigFileName "sldv_params_template.m"
+	  DVModelCoverageObjectives "MCDC"
+	  DVTestConditions	  "UseLocalSettings"
+	  DVTestObjectives	  "UseLocalSettings"
+	  DVMaxTestCaseSteps	  10000
+	  DVTestSuiteOptimization "CombinedObjectives"
+	  DVAssertions		  "UseLocalSettings"
+	  DVProofAssumptions	  "UseLocalSettings"
+	  DVExtendExistingTests	  off
+	  DVIgnoreExistTestSatisfied on
+	  DVIgnoreCovSatisfied	  off
+	  DVCovFilter		  off
+	  DVDetectIntegerOverflow on
+	  DVDetectDivisionByZero  on
+	  DVDesignMinMaxCheck	  off
+	  DVDetectDeadLogic	  off
+	  DVDetectSFTransConflict on
+	  DVDetectSFStateInconsistency on
+	  DVDetectSFArrayOutOfBounds on
+	  DVDetectEMLArrayOutOfBounds on
+	  DVDetectSLSelectorOutOfBounds	on
+	  DVDetectSLMPSwitchOutOfBounds	on
+	  DVDetectSLInvalidCast	  on
+	  DVDetectSLMergeConflict on
+	  DVDetectSLUninitializedDSR on
+	  DVProvingStrategy	  "Prove"
+	  DVMaxViolationSteps	  20
+	  DVSaveDataFile	  on
+	  DVDataFileName	  "./Tests/$ModelName$_sldvdata"
+	  DVSaveExpectedOutput	  off
+	  DVRandomizeNoEffectData off
+	  DVSaveHarnessModel	  on
+	  DVHarnessModelFileName  "./Tests/$ModelName$_testHarness"
+	  DVModelReferenceHarness on
+	  DVSaveSystemTestHarness off
+	  DVSystemTestFileName	  "$ModelName$_harness"
+	  DVSaveReport		  on
+	  DVReportFileName	  "ADL_Sim_SLDV.html"
+	  DVReportIncludeGraphics off
+	  DVDisplayReport	  on
+	  DVDisplayResultsOnModel off
+	  DVActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "ModelReferencing1"
+      ExtraOptions	      "-aGenerateTraceInfo=1 -aIgnoreTestpoints=1 "
+      CurrentDlgPage	      "Diagnostics/Connectivity"
+      ConfigPrmDlgPosition     [ 219, -32, 1512, 1030 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    25
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Concatenate
+      NumInputs		      "2"
+      Mode		      "Vector"
+      ConcatenateDimension    "1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      ModelReference
+      SimulationMode	      "Accelerator"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+      CopyOfModelProtected    off
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RateTransition
+      Integrity		      on
+      Deterministic	      on
+      X0		      "0"
+      OutPortSampleTimeOpt    "Specify"
+      OutPortSampleTimeMultiple	"1"
+      OutPortSampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      InputProcessing	      "Inherited"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+      HasFrameUpgradeWarning  on
+    }
+  }
+  System {
+    Name		    "DLS_Controller_SW"
+    Location		    [201, 202, 951, 753]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    282
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "140"
+    Block {
+      BlockType		      Inport
+      Name		      "VehicleSpeed"
+      SID		      "2"
+      Position		      [60, 78, 90, 92]
+      IconDisplay	      "Port number"
+      PortDimensions	      "1"
+      SampleTime	      "0.25"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Port {
+	PortNumber		1
+	Name			"VehicleSpeed"
+	MustResolveToSignalObject on
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "Engine_ON"
+      SID		      "3"
+      Position		      [60, 158, 90, 172]
+      Port		      "2"
+      IconDisplay	      "Port number"
+      PortDimensions	      "1"
+      SampleTime	      "0.25"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Port {
+	PortNumber		1
+	Name			"Engine_ON"
+	MustResolveToSignalObject on
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "LockPos"
+      SID		      "4"
+      Position		      [60, 238, 90, 252]
+      Port		      "3"
+      IconDisplay	      "Port number"
+      SampleTime	      "0.25"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Port {
+	PortNumber		1
+	Name			"LockPos"
+	MustResolveToSignalObject on
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "Airbag_Fired"
+      SID		      "5"
+      Position		      [60, 318, 90, 332]
+      Port		      "4"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      PortDimensions	      "1"
+      SampleTime	      "0.25"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Port {
+	PortNumber		1
+	Name			"Airbag_Fired"
+	MustResolveToSignalObject on
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "DoorLockingSystem"
+      SID		      "6"
+      Ports		      [4, 3]
+      Position		      [255, 44, 465, 366]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      RTW.AutosarInterface {
+	$PropName		"SSRTWFcnClass"
+	$ObjectID		37
+	Version			"1"
+	Name			"AutosarInterface"
+	Array {
+	  Type			  "Handle"
+	  Dimension		  7
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    38
+	    SLObjectName	    "Vehicle_Speed"
+	    SLObjectType	    "Inport"
+	    DataAccessMode	    "ExplicitReceive"
+	    AutosarPort		    "Vehicle_Speed"
+	    InterfaceName	    "Vehicle_Speed"
+	    InterfaceType	    "Application software"
+	    DataElement		    "Vehicle_Speed"
+	    ServiceName		    "Vehicle_Speed"
+	    ServiceOperation	    "Vehicle_Speed"
+	    ServiceInterface	    "/AUTOSAR/Services/ServiceName"
+	    PortNum		    1
+	    ErrorReceiverInPortNum  1
+	    QueueLength		    1
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    39
+	    SLObjectName	    "Engine_ON"
+	    SLObjectType	    "Inport"
+	    DataAccessMode	    "ImplicitReceive"
+	    AutosarPort		    "Engine_ON"
+	    InterfaceName	    "Engine_ON"
+	    InterfaceType	    "Application software"
+	    DataElement		    "Engine_ON"
+	    ServiceName		    "Engine_ON"
+	    ServiceOperation	    "Engine_ON"
+	    ServiceInterface	    "/AUTOSAR/Services/ServiceName"
+	    ErrorStatusReceiver	    "Select ..."
+	    PortNum		    2
+	    ErrorReceiverInPortNum  1
+	    QueueLength		    1
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    40
+	    SLObjectName	    "LockPos"
+	    SLObjectType	    "Inport"
+	    DataAccessMode	    "ImplicitReceive"
+	    AutosarPort		    "LockPos"
+	    InterfaceName	    "LockPos"
+	    InterfaceType	    "Application software"
+	    DataElement		    "LockPos"
+	    ServiceName		    "LockPos"
+	    ServiceOperation	    "LockPos"
+	    ServiceInterface	    "/AUTOSAR/Services/ServiceName"
+	    ErrorStatusReceiver	    "Select ..."
+	    PortNum		    3
+	    ErrorReceiverInPortNum  1
+	    QueueLength		    1
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    41
+	    SLObjectName	    "Airbag_Fired"
+	    SLObjectType	    "Inport"
+	    DataAccessMode	    "ImplicitReceive"
+	    AutosarPort		    "Airbag_Fired"
+	    InterfaceName	    "Airbag_Fired"
+	    InterfaceType	    "Application software"
+	    DataElement		    "Airbag_Fired"
+	    ServiceName		    "Airbag_Fired"
+	    ServiceOperation	    "Airbag_Fired"
+	    ServiceInterface	    "/AUTOSAR/Services/ServiceName"
+	    ErrorStatusReceiver	    "Select ..."
+	    PortNum		    4
+	    ErrorReceiverInPortNum  1
+	    QueueLength		    1
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    42
+	    SLObjectName	    "LockDoorMotorCmd"
+	    SLObjectType	    "Outport"
+	    DataAccessMode	    "ImplicitSend"
+	    AutosarPort		    "LockDoorMotorCmd"
+	    InterfaceName	    "LockDoorMotorCmd"
+	    InterfaceType	    "Application software"
+	    DataElement		    "LockDoorMotorCmd"
+	    ServiceName		    "LockDoorMotorCmd"
+	    ServiceOperation	    "LockDoorMotorCmd"
+	    ServiceInterface	    "/AUTOSAR/Services/ServiceName"
+	    PortNum		    1
+	    ErrorReceiverInPortNum  1
+	    QueueLength		    1
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    43
+	    SLObjectName	    "LockLED"
+	    SLObjectType	    "Outport"
+	    DataAccessMode	    "ImplicitSend"
+	    AutosarPort		    "LockLED"
+	    InterfaceName	    "LockLED"
+	    InterfaceType	    "Application software"
+	    DataElement		    "LockLED"
+	    ServiceName		    "LockLED"
+	    ServiceOperation	    "LockLED"
+	    ServiceInterface	    "/AUTOSAR/Services/ServiceName"
+	    PortNum		    2
+	    ErrorReceiverInPortNum  1
+	    QueueLength		    1
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    44
+	    SLObjectName	    "LockAppMode_Out"
+	    SLObjectType	    "Outport"
+	    DataAccessMode	    "ImplicitSend"
+	    AutosarPort		    "LockAppMode_Out"
+	    InterfaceName	    "LockAppMode_Out"
+	    InterfaceType	    "Application software"
+	    DataElement		    "LockAppMode_Out"
+	    ServiceName		    "LockAppMode_Out"
+	    ServiceOperation	    "LockAppMode_Out"
+	    ServiceInterface	    "/AUTOSAR/Services/ServiceName"
+	    PortNum		    3
+	    ErrorReceiverInPortNum  1
+	    QueueLength		    1
+	  }
+	  PropName		  "ArgSpecData"
+	}
+	Array {
+	  Type			  "Handle"
+	  Dimension		  7
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    38
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    39
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    40
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    41
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    42
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    43
+	  }
+	  RTW.AutosarIOSpec {
+	    $ObjectID		    44
+	  }
+	  PropName		  "Data"
+	}
+	Array {
+	  Type			  "Handle"
+	  Dimension		  7
+	  RTW.AutosarIrvSpec {
+	    $ObjectID		    45
+	    SLObjectName	    "LockCmd"
+	    DataAccessMode	    "Implicit"
+	    IrvName		    "LockCmd"
+	  }
+	  RTW.AutosarIrvSpec {
+	    $ObjectID		    46
+	    SLObjectName	    "Vehicle_Speed_Cond"
+	    DataAccessMode	    "Implicit"
+	    IrvName		    "Vehicle_Speed_Cond"
+	  }
+	  RTW.AutosarIrvSpec {
+	    $ObjectID		    47
+	    SLObjectName	    "LockAppMode"
+	    DataAccessMode	    "Explicit"
+	    IrvName		    "LockAppMode"
+	  }
+	  RTW.AutosarIrvSpec {
+	    $ObjectID		    48
+	    SLObjectName	    "LockDoorActFailure_FrontRight"
+	    DataAccessMode	    "Implicit"
+	    IrvName		    "LockDoorActFailure_FrontRight"
+	  }
+	  RTW.AutosarIrvSpec {
+	    $ObjectID		    49
+	    SLObjectName	    "LockDoorActFailure_FrontLeft"
+	    DataAccessMode	    "Implicit"
+	    IrvName		    "LockDoorActFailure_FrontLeft"
+	  }
+	  RTW.AutosarIrvSpec {
+	    $ObjectID		    50
+	    SLObjectName	    "LockStatus_FrontRight"
+	    DataAccessMode	    "Implicit"
+	    IrvName		    "LockStatus_FrontRight"
+	  }
+	  RTW.AutosarIrvSpec {
+	    $ObjectID		    51
+	    SLObjectName	    "LockStatus_FrontLeft"
+	    DataAccessMode	    "Implicit"
+	    IrvName		    "LockStatus_FrontLeft"
+	  }
+	  PropName		  "Irvs"
+	}
+	Array {
+	  Type			  "Handle"
+	  Dimension		  1
+	  RTW.AutosarEventSpec {
+	    $ObjectID		    52
+	    EventType		    "TimingEvent"
+	    EventName		    "Event_DoorLockingSystem_Step"
+	    ExecutionPeriod	    0.25
+	  }
+	  PropName		  "Event"
+	}
+	InitRunnableName	"Runnable_DoorLockingSystem_Init"
+	PeriodicRunnableName	"Runnable_DoorLockingSystem_Step"
+	InitEventName		"Event_DoorLockingSystem_Init"
+	PeriodicEventName	"Event_DoorLockingSystem_Step"
+	InterfacePackageName	"/DoorLockingSystem_pkg/DoorLockingSystem_if"
+	ComponentName		"/DoorLockingSystem_pkg/DoorLockingSystem_swc/DoorLockingSystem"
+	InternalBehaviorName	"/DoorLockingSystem_pkg/DoorLockingSystem_ib/DoorLockingSystem"
+	ImplementationName	"/DoorLockingSystem_pkg/DoorLockingSystem_imp/DoorLockingSystem"
+	DataTypePackageName	"/DoorLockingSystem_pkg/DoorLockingSystem_dt"
+	ArxmlPackaging		"Modular"
+	SampleTime		1
+	AutosarPreConfigFlag	0
+	IsServerOperation	0
+	ServerPortName		"port"
+	ServerOperationPrototype "op(IN single Vehicle_Speed, IN boolean Engine_ON, IN sfix16_Sp01 LockPos[2], IN boolean Air"
+	"bag_Fired, OUT uint8 LockDoorMotorCmd[2], OUT boolean LockLED, OUT LockingMode LockAppMode_Out)"
+	ServerInterfaceName	"interface"
+	ServerType		"Application software"
+	ComponentType		"Application"
+	SampleTimeInheritedStr	"Inherited"
+      }
+      Port {
+	PortNumber		1
+	Name			"LockDoorMotorCmd"
+	MustResolveToSignalObject on
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"LockLED"
+	PropagatedSignals	"LockLED"
+	MustResolveToSignalObject on
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"LockAppMode_Out"
+	PropagatedSignals	"LockAppMode"
+	MustResolveToSignalObject on
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"DoorLockingSystem"
+	Location		[103, 139, 1509, 929]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	282
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "VehicleSpeed"
+	  SID			  "13"
+	  Position		  [40, 333, 70, 347]
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "VehicleSpeed"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Engine_ON"
+	  SID			  "14"
+	  Position		  [720, 503, 750, 517]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "1"
+	  SignalType		  "real"
+	  SamplingMode		  "Sample based"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "Engine_ON"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "LockPos"
+	  SID			  "15"
+	  Position		  [40, 218, 70, 232]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  SignalType		  "real"
+	  SamplingMode		  "Sample based"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Airbag_Fired"
+	  SID			  "16"
+	  Position		  [720, 578, 750, 592]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataTypeStr	  "boolean"
+	  PortDimensions	  "1"
+	  SignalType		  "real"
+	  SamplingMode		  "Sample based"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Actuators_Ctrl"
+	  SID			  "17"
+	  Ports			  [3, 4]
+	  Position		  [1025, 135, 1225, 535]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Actuators_Ctrl"
+	    Location		    [233, 195, 1064, 720]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LockStatus_FrontLeft"
+	      SID		      "20"
+	      Position		      [45, 108, 75, 122]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LockStatus_FrontRight"
+	      SID		      "21"
+	      Position		      [45, 148, 75, 162]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LockDoorRequest"
+	      SID		      "22"
+	      Position		      [45, 188, 75, 202]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      Port {
+		PortNumber		1
+		Name			"LockDoorRequest"
+		PropagatedSignals	"LockDoorRequest"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      ModelReference
+	      Name		      "Blink_Fcn"
+	      SID		      "133"
+	      Ports		      [1, 1]
+	      Position		      [290, 328, 460, 412]
+	      ModelNameDialog	      "LED_Cmd_varZ"
+	      SimulationMode	      "Normal"
+	      ModelReferenceVersion   "1.341"
+	      List {
+		ListType		InputPortNames
+		port0			"LockDoorRequest"
+	      }
+	      List {
+		ListType		OutputPortNames
+		port0			"LockLED"
+	      }
+	      List {
+		ListType		OutputPortOutputBusAsStructs
+		port0			"off"
+	      }
+	      List {
+		ListType		OutputPortSignalNames
+		port0			"LockLED"
+	      }
+	      List {
+		ListType		InputPortSignalNames
+		port0			"LockDoorRequest"
+	      }
+	      CopyOfModelName	      "LED_Cmd_varZ"
+	      DefaultDataLogging      off
+	    }
+	    Block {
+	      BlockType		      RateTransition
+	      Name		      "Rate Transition"
+	      SID		      "136"
+	      Position		      [170, 349, 210, 391]
+	      ZOrder		      -10
+	      Integrity		      off
+	      OutPortSampleTime	      "1"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "UpdateMotorCmd"
+	      SID		      "28"
+	      Ports		      [3, 3]
+	      Position		      [190, 93, 430, 217]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Use subsystem name"
+	      RTWFileNameOpts	      "User specified"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      RTW.AutosarInterface {
+		$PropName		"SSRTWFcnClass"
+		$ObjectID		53
+		Version			"1"
+		Name			"DLS_Controller_SW_temp/DoorLockingSystem/Actuators_Ctrl/UpdateMotorCmd"
+		Array {
+		  Type			  "Handle"
+		  Dimension		  1
+		  RTW.AutosarEventSpec {
+		    $ObjectID		    54
+		    EventType		    "TimingEvent"
+		    EventName		    "Event_UpdateMotorCmd"
+		    ExecutionPeriod	    0.25
+		    SLObjectName	    "Select ..."
+		  }
+		  PropName		  "Event"
+		}
+		PeriodicRunnableName	"Runnable_UpdateMotorCmd"
+		ArxmlPackaging		"Modular"
+		SampleTime		1
+		AutosarPreConfigFlag	0
+		IsServerOperation	0
+		ServerPortName		"port"
+		ServerOperationPrototype "op()"
+		ServerInterfaceName	"interface"
+		ServerType		"Application software"
+		ComponentType		"Application"
+		SampleTimeInheritedStr	"Inherited"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"LockDoorActFailure_FrontLeft"
+		PropagatedSignals	"LockDoorActFailure"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"LockDoorActFailure_FrontRight"
+		PropagatedSignals	"LockDoorActFailure"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"UpdateMotorCmd"
+		Location		[985, 142, 1848, 746]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "LockStatus_FrontLeft"
+		  SID			  "29"
+		  Position		  [55, 193, 85, 207]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "LockStatus_FrontRight"
+		  SID			  "30"
+		  Position		  [55, 383, 85, 397]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "LockDoorRequest"
+		  SID			  "31"
+		  Position		  [65, 123, 95, 137]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		  Port {
+		    PortNumber		    1
+		    PropagatedSignals	    "LockDoorRequest"
+		    ShowPropagatedSignals   "on"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  ModelReference
+		  Name			  "CtrlActuator_FrontLeft"
+		  SID			  "33"
+		  Ports			  [2, 2]
+		  Position		  [255, 94, 500, 236]
+		  ModelNameDialog	  "Motor_Cmd_varY"
+		  SimulationMode	  "Normal"
+		  Array {
+		    Type		    "Struct"
+		    Dimension		    2
+		    MATStruct {
+		    Name		    "dls_var_ctrActuator_A"
+		    ModelName		    "Motor_Cmd_varY"
+		    ParameterArgumentNames  ""
+		    ParameterArgumentValues ""
+		    SimulationMode	    "Normal"
+		    }
+		    MATStruct {
+		    Name		    "dls_var_ctrActuator_B"
+		    ModelName		    "CtrlActuator_B"
+		    ParameterArgumentNames  ""
+		    ParameterArgumentValues ""
+		    SimulationMode	    "Normal"
+		    }
+		    PropName		    "Variants"
+		  }
+		  ModelReferenceVersion	  "1.46"
+		  List {
+		    ListType		    InputPortNames
+		    port0		    "LockDoorRequest"
+		    port1		    "LockStatus"
+		  }
+		  List {
+		    ListType		    OutputPortNames
+		    port0		    "LockDoorMotorCmd"
+		    port1		    "LockDoorActFailure"
+		  }
+		  List {
+		    ListType		    OutputPortOutputBusAsStructs
+		    port0		    "off"
+		    port1		    "off"
+		  }
+		  List {
+		    ListType		    OutputPortSignalNames
+		    port0		    "LockDoorMotorCmd"
+		    port1		    "LockDoorActFailure"
+		  }
+		  List {
+		    ListType		    InputPortSignalNames
+		    port0		    "LockDoorRequest"
+		    port1		    "LockStatus"
+		  }
+		  CopyOfModelName	  "Motor_Cmd_varY"
+		  DefaultDataLogging	  off
+		}
+		Block {
+		  BlockType		  ModelReference
+		  Name			  "CtrlActuator_FrontRight"
+		  SID			  "34"
+		  Ports			  [2, 2]
+		  Position		  [260, 284, 505, 426]
+		  ModelNameDialog	  "Motor_Cmd_varY"
+		  Array {
+		    Type		    "Struct"
+		    Dimension		    2
+		    MATStruct {
+		    Name		    "dls_var_ctrActuator_A"
+		    ModelName		    "Motor_Cmd_varY"
+		    ParameterArgumentNames  ""
+		    ParameterArgumentValues ""
+		    SimulationMode	    "Normal"
+		    }
+		    MATStruct {
+		    Name		    "dls_var_ctrActuator_B"
+		    ModelName		    "CtrlActuator_B"
+		    ParameterArgumentNames  ""
+		    ParameterArgumentValues ""
+		    SimulationMode	    "Normal"
+		    }
+		    PropName		    "Variants"
+		  }
+		  ModelReferenceVersion	  "1.46"
+		  List {
+		    ListType		    InputPortNames
+		    port0		    "LockDoorRequest"
+		    port1		    "LockStatus"
+		  }
+		  List {
+		    ListType		    OutputPortNames
+		    port0		    "LockDoorMotorCmd"
+		    port1		    "LockDoorActFailure"
+		  }
+		  List {
+		    ListType		    OutputPortOutputBusAsStructs
+		    port0		    "off"
+		    port1		    "off"
+		  }
+		  List {
+		    ListType		    OutputPortSignalNames
+		    port0		    "LockDoorMotorCmd"
+		    port1		    "LockDoorActFailure"
+		  }
+		  List {
+		    ListType		    InputPortSignalNames
+		    port0		    "LockDoorRequest"
+		    port1		    "LockStatus"
+		  }
+		  CopyOfModelName	  "Motor_Cmd_varY"
+		  DefaultDataLogging	  off
+		}
+		Block {
+		  BlockType		  Concatenate
+		  Name			  "Vector\nConcatenate"
+		  SID			  "137"
+		  Ports			  [2, 1]
+		  Position		  [585, 121, 590, 159]
+		  ZOrder		  -36
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "LockDoorMotorCmd"
+		  SID			  "36"
+		  Position		  [720, 133, 750, 147]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "LockDoorActFailure_FrontLeft"
+		  SID			  "37"
+		  Position		  [665, 193, 695, 207]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "LockDoorActFailure_FrontRight"
+		  SID			  "38"
+		  Position		  [670, 383, 700, 397]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  Labels		  [0, 0]
+		  SrcBlock		  "LockDoorRequest"
+		  SrcPort		  1
+		  Points		  [105, 0]
+		  Branch {
+		    DstBlock		    "CtrlActuator_FrontLeft"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 190]
+		    DstBlock		    "CtrlActuator_FrontRight"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "CtrlActuator_FrontLeft"
+		  SrcPort		  1
+		  DstBlock		  "Vector\nConcatenate"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "CtrlActuator_FrontLeft"
+		  SrcPort		  2
+		  DstBlock		  "LockDoorActFailure_FrontLeft"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "LockStatus_FrontRight"
+		  SrcPort		  1
+		  DstBlock		  "CtrlActuator_FrontRight"
+		  DstPort		  2
+		}
+		Line {
+		  Labels		  [0, 0]
+		  SrcBlock		  "CtrlActuator_FrontRight"
+		  SrcPort		  2
+		  DstBlock		  "LockDoorActFailure_FrontRight"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "CtrlActuator_FrontRight"
+		  SrcPort		  1
+		  Points		  [50, 0; 0, -170]
+		  DstBlock		  "Vector\nConcatenate"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Vector\nConcatenate"
+		  SrcPort		  1
+		  DstBlock		  "LockDoorMotorCmd"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "LockStatus_FrontLeft"
+		  SrcPort		  1
+		  DstBlock		  "CtrlActuator_FrontLeft"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "LockDoorMotorCmd"
+	      SID		      "41"
+	      Position		      [650, 108, 680, 122]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "LockLED"
+	      SID		      "42"
+	      Position		      [650, 363, 680, 377]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "LockDoorActFailure_FrontLeft"
+	      SID		      "39"
+	      Position		      [650, 148, 680, 162]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "LockDoorActFailure_FrontRight"
+	      SID		      "40"
+	      Position		      [650, 188, 680, 202]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      Name		      "LockDoorRequest"
+	      SrcBlock		      "LockDoorRequest"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      Branch {
+		DstBlock		"UpdateMotorCmd"
+		DstPort			3
+	      }
+	      Branch {
+		Labels			[1, 0]
+		Points			[0, 175]
+		DstBlock		"Rate Transition"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "UpdateMotorCmd"
+	      SrcPort		      1
+	      DstBlock		      "LockDoorMotorCmd"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "LockDoorActFailure_FrontLeft"
+	      Labels		      [0, 0]
+	      SrcBlock		      "UpdateMotorCmd"
+	      SrcPort		      2
+	      DstBlock		      "LockDoorActFailure_FrontLeft"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LockStatus_FrontLeft"
+	      SrcPort		      1
+	      DstBlock		      "UpdateMotorCmd"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LockStatus_FrontRight"
+	      SrcPort		      1
+	      DstBlock		      "UpdateMotorCmd"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "LockDoorActFailure_FrontRight"
+	      Labels		      [0, 0]
+	      SrcBlock		      "UpdateMotorCmd"
+	      SrcPort		      3
+	      DstBlock		      "LockDoorActFailure_FrontRight"
+	      DstPort		      1
+	    }
+	    Line {
+	      Labels		      [0, 0]
+	      SrcBlock		      "Blink_Fcn"
+	      SrcPort		      1
+	      DstBlock		      "LockLED"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Rate Transition"
+	      SrcPort		      1
+	      DstBlock		      "Blink_Fcn"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Input_Conditioning"
+	  SID			  "49"
+	  Ports			  [2, 3]
+	  Position		  [145, 163, 300, 397]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Input_Conditioning"
+	    Location		    [510, 133, 1627, 957]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    282
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "165"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LockPos"
+	      SID		      "51"
+	      Position		      [35, 203, 65, 217]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "VehicleSpeed"
+	      SID		      "52"
+	      Position		      [35, 273, 65, 287]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      Port {
+		PortNumber		1
+		PropagatedSignals	"VehicleSpeed"
+		ShowPropagatedSignals	"on"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      ModelReference
+	      Name		      "ConditionInputs"
+	      SID		      "130"
+	      Ports		      [2, 2]
+	      Position		      [195, 176, 400, 314]
+	      ModelNameDialog	      "Inputs_Cond"
+	      SimulationMode	      "Normal"
+	      ModelReferenceVersion   "1.360"
+	      List {
+		ListType		InputPortNames
+		port0			"LockPos"
+		port1			"VehicleSpeed"
+	      }
+	      List {
+		ListType		OutputPortNames
+		port0			"LockStatus"
+		port1			"VehicleSpeed_Cond"
+	      }
+	      List {
+		ListType		OutputPortOutputBusAsStructs
+		port0			"off"
+		port1			"off"
+	      }
+	      List {
+		ListType		OutputPortSignalNames
+		port0			"LockStatus"
+		port1			"VehicleSpeed_Cond"
+	      }
+	      List {
+		ListType		InputPortSignalNames
+		port0			"LockPos"
+		port1			"VehicleSpeed"
+	      }
+	      CopyOfModelName	      "Inputs_Cond"
+	      DefaultDataLogging      off
+	      Port {
+		PortNumber		2
+		Name			"VehicleSpeed_Cond"
+		PropagatedSignals	"VehicleSpeed_Cond"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      SID		      "131"
+	      Ports		      [1, 2]
+	      Position		      [430, 172, 435, 243]
+	      ShowName		      off
+	      Outputs		      "2"
+	      DisplayOption	      "bar"
+	      Port {
+		PortNumber		1
+		Name			"LockStatus_FrontLeft"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"LockStatus_FrontRight"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "LockStatus_FrontLeft"
+	      SID		      "62"
+	      Position		      [610, 183, 640, 197]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "LockStatus_FrontRight"
+	      SID		      "63"
+	      Position		      [610, 218, 640, 232]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "VehicleSpeed_Filt"
+	      SID		      "64"
+	      Position		      [610, 273, 640, 287]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "LockPos"
+	      SrcPort		      1
+	      DstBlock		      "ConditionInputs"
+	      DstPort		      1
+	    }
+	    Line {
+	      Labels		      [0, 0]
+	      SrcBlock		      "VehicleSpeed"
+	      SrcPort		      1
+	      DstBlock		      "ConditionInputs"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "VehicleSpeed_Cond"
+	      Labels		      [1, 1]
+	      SrcBlock		      "ConditionInputs"
+	      SrcPort		      2
+	      DstBlock		      "VehicleSpeed_Filt"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "LockStatus_FrontRight"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "LockStatus_FrontRight"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ConditionInputs"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "LockStatus_FrontLeft"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "LockStatus_FrontLeft"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Lock_Mode_Manager"
+	  SID			  "65"
+	  Ports			  [4, 2]
+	  Position		  [395, 397, 600, 553]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  RTW.AutosarInterface {
+	    $PropName		    "SSRTWFcnClass"
+	    $ObjectID		    55
+	    Version		    "1"
+	    Name		    "AutosarInterface"
+	    Array {
+	      Type		      "Handle"
+	      Dimension		      6
+	      RTW.AutosarIOSpec {
+		$ObjectID		56
+		SLObjectName		"LockDoorActFailure_FrontLeft"
+		SLObjectType		"Inport"
+		DataAccessMode		"ImplicitReceive"
+		AutosarPort		"LockDoorActFailure_FrontLeft"
+		InterfaceName		"LockDoorActFailure_FrontLeft"
+		InterfaceType		"Application software"
+		DataElement		"LockDoorActFailure_FrontLeft"
+		ServiceName		"LockDoorActFailure_FrontLeft"
+		ServiceOperation	"LockDoorActFailure_FrontLeft"
+		ServiceInterface	"/AUTOSAR/Services/ServiceName"
+		PortNum			1
+		ErrorReceiverInPortNum	1
+		QueueLength		1
+	      }
+	      RTW.AutosarIOSpec {
+		$ObjectID		57
+		SLObjectName		"LockDoorActFailure_FrontRight"
+		SLObjectType		"Inport"
+		DataAccessMode		"ImplicitReceive"
+		AutosarPort		"LockDoorActFailure_FrontRight"
+		InterfaceName		"LockDoorActFailure_FrontRight"
+		InterfaceType		"Application software"
+		DataElement		"LockDoorActFailure_FrontRight"
+		ServiceName		"LockDoorActFailure_FrontRight"
+		ServiceOperation	"LockDoorActFailure_FrontRight"
+		ServiceInterface	"/AUTOSAR/Services/ServiceName"
+		PortNum			2
+		ErrorReceiverInPortNum	1
+		QueueLength		1
+	      }
+	      RTW.AutosarIOSpec {
+		$ObjectID		58
+		SLObjectName		"LockStatus_FrontLeft"
+		SLObjectType		"Inport"
+		DataAccessMode		"ImplicitReceive"
+		AutosarPort		"LockStatus_FrontLeft"
+		InterfaceName		"LockStatus_FrontLeft"
+		InterfaceType		"Application software"
+		DataElement		"LockStatus_FrontLeft"
+		ServiceName		"LockStatus_FrontLeft"
+		ServiceOperation	"LockStatus_FrontLeft"
+		ServiceInterface	"/AUTOSAR/Services/ServiceName"
+		PortNum			3
+		ErrorReceiverInPortNum	1
+		QueueLength		1
+	      }
+	      RTW.AutosarIOSpec {
+		$ObjectID		59
+		SLObjectName		"LockStatus_FrontRight"
+		SLObjectType		"Inport"
+		DataAccessMode		"ImplicitReceive"
+		AutosarPort		"LockStatus_FrontRight"
+		InterfaceName		"LockStatus_FrontRight"
+		InterfaceType		"Application software"
+		DataElement		"LockStatus_FrontRight"
+		ServiceName		"LockStatus_FrontRight"
+		ServiceOperation	"LockStatus_FrontRight"
+		ServiceInterface	"/AUTOSAR/Services/ServiceName"
+		PortNum			4
+		ErrorReceiverInPortNum	1
+		QueueLength		1
+	      }
+	      RTW.AutosarIOSpec {
+		$ObjectID		60
+		SLObjectName		"LockAppMode"
+		SLObjectType		"Outport"
+		DataAccessMode		"ImplicitSend"
+		AutosarPort		"LockAppMode"
+		InterfaceName		"LockAppMode"
+		InterfaceType		"Application software"
+		DataElement		"LockAppMode"
+		ServiceName		"LockAppMode"
+		ServiceOperation	"LockAppMode"
+		ServiceInterface	"/AUTOSAR/Services/ServiceName"
+		PortNum			1
+		ErrorReceiverInPortNum	1
+		QueueLength		1
+	      }
+	      RTW.AutosarIOSpec {
+		$ObjectID		61
+		SLObjectName		"LockAppMode_Out"
+		SLObjectType		"Outport"
+		DataAccessMode		"ImplicitSend"
+		AutosarPort		"LockAppMode_Out"
+		InterfaceName		"LockAppMode_Out"
+		InterfaceType		"Application software"
+		DataElement		"LockAppMode_Out"
+		ServiceName		"LockAppMode_Out"
+		ServiceOperation	"LockAppMode_Out"
+		ServiceInterface	"/AUTOSAR/Services/ServiceName"
+		PortNum			2
+		ErrorReceiverInPortNum	1
+		QueueLength		1
+	      }
+	      PropName		      "ArgSpecData"
+	    }
+	    Array {
+	      Type		      "Handle"
+	      Dimension		      6
+	      RTW.AutosarIOSpec {
+		$ObjectID		56
+	      }
+	      RTW.AutosarIOSpec {
+		$ObjectID		57
+	      }
+	      RTW.AutosarIOSpec {
+		$ObjectID		58
+	      }
+	      RTW.AutosarIOSpec {
+		$ObjectID		59
+	      }
+	      RTW.AutosarIOSpec {
+		$ObjectID		60
+	      }
+	      RTW.AutosarIOSpec {
+		$ObjectID		61
+	      }
+	      PropName		      "Data"
+	    }
+	    Array {
+	      Type		      "Handle"
+	      Dimension		      1
+	      RTW.AutosarEventSpec {
+		$ObjectID		62
+		EventType		"TimingEvent"
+		EventName		"Event_Lock_Mode_Manager_Step"
+		ExecutionPeriod		0.25
+	      }
+	      PropName		      "Event"
+	    }
+	    InitRunnableName	    "Runnable_Lock_Mode_Manager_Init"
+	    PeriodicRunnableName    "Runnable_Lock_Mode_Manager_Step"
+	    InitEventName	    "Event_Lock_Mode_Manager_Init"
+	    PeriodicEventName	    "Event_Lock_Mode_Manager_Step"
+	    InterfacePackageName    "/Lock_Mode_Manager_pkg/Lock_Mode_Manager_if"
+	    ComponentName	    "/Lock_Mode_Manager_pkg/Lock_Mode_Manager_swc/Lock_Mode_Manager"
+	    InternalBehaviorName    "/Lock_Mode_Manager_pkg/Lock_Mode_Manager_ib/Lock_Mode_Manager"
+	    ImplementationName	    "/Lock_Mode_Manager_pkg/Lock_Mode_Manager_imp/Lock_Mode_Manager"
+	    DataTypePackageName	    "/Lock_Mode_Manager_pkg/Lock_Mode_Manager_dt"
+	    ArxmlPackaging	    "Modular"
+	    SampleTime		    1
+	    AutosarPreConfigFlag    1
+	    IsServerOperation	    0
+	    ServerPortName	    "port"
+	    ServerOperationPrototype "op(IN boolean LockDoorActFailure_FrontLeft, IN boolean LockDoorActFailure_FrontRight, I"
+	    "N ActuatorStatus LockStatus_FrontLeft, IN ActuatorStatus LockStatus_FrontRight, OUT LockingMode LockAppMode, OUT "
+	    "LockingMode LockAppMode_Out)"
+	    ServerInterfaceName	    "interface"
+	    ServerType		    "Application software"
+	    ComponentType	    "Application"
+	    SampleTimeInheritedStr  "Inherited"
+	  }
+	  System {
+	    Name		    "Lock_Mode_Manager"
+	    Location		    [799, 270, 1806, 1030]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    282
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LockStatus_FrontLeft"
+	      SID		      "123"
+	      Position		      [80, 243, 110, 257]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LockStatus_FrontRight"
+	      SID		      "124"
+	      Position		      [80, 278, 110, 292]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LockDoorActFailure_FrontLeft"
+	      SID		      "121"
+	      Position		      [80, 143, 110, 157]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LockDoorActFailure_FrontRight"
+	      SID		      "122"
+	      Position		      [80, 173, 110, 187]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      ModelReference
+	      Name		      "Lock_Mode_Management"
+	      SID		      "125"
+	      Ports		      [2, 1]
+	      Position		      [255, 113, 420, 322]
+	      ModelNameDialog	      "Lock_Mode_Management"
+	      SimulationMode	      "Normal"
+	      ModelReferenceVersion   "1.378"
+	      List {
+		ListType		InputPortNames
+		port0			"LockDoorActFailure"
+		port1			"LockStatus"
+	      }
+	      List {
+		ListType		OutputPortNames
+		port0			"LockAppMode"
+	      }
+	      List {
+		ListType		OutputPortOutputBusAsStructs
+		port0			"off"
+	      }
+	      List {
+		ListType		OutputPortSignalNames
+		port0			"LockAppMode"
+	      }
+	      List {
+		ListType		InputPortSignalNames
+		port0			"LockDoorActFailure"
+		port1			"LockStatus"
+	      }
+	      CopyOfModelName	      "Lock_Mode_Management"
+	      DefaultDataLogging      off
+	      Port {
+		PortNumber		1
+		Name			"LockAppMode"
+		PropagatedSignals	"LockAppMode"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      SID		      "126"
+	      Ports		      [2, 1]
+	      Position		      [210, 233, 215, 302]
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux1"
+	      SID		      "127"
+	      Ports		      [2, 1]
+	      Position		      [205, 133, 210, 197]
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "LockAppMode"
+	      SID		      "128"
+	      Position		      [550, 213, 580, 227]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "LockAppMode_Out"
+	      SID		      "129"
+	      Position		      [550, 268, 580, 282]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      Name		      "LockAppMode"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Lock_Mode_Management"
+	      SrcPort		      1
+	      Points		      [75, 0]
+	      Branch {
+		DstBlock		"LockAppMode"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 55]
+		DstBlock		"LockAppMode_Out"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "LockStatus_FrontLeft"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LockStatus_FrontRight"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "Lock_Mode_Management"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "LockDoorActFailure_FrontRight"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      DstBlock		      "Lock_Mode_Management"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LockDoorActFailure_FrontLeft"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Locking_Strategy"
+	  SID			  "84"
+	  Ports			  [4, 1]
+	  Position		  [795, 323, 930, 622]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "LockDoorRequest"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Locking_Strategy"
+	    Location		    [816, 362, 1412, 901]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "VehicleSpeed"
+	      SID		      "87"
+	      Position		      [40, 243, 70, 257]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LockAppMode"
+	      SID		      "88"
+	      Position		      [40, 203, 70, 217]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "1"
+	      SignalType	      "real"
+	      SamplingMode	      "Sample based"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Engine_ON"
+	      SID		      "89"
+	      Position		      [40, 283, 70, 297]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Airbag_Fired"
+	      SID		      "90"
+	      Position		      [40, 323, 70, 337]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataTypeStr	      "boolean"
+	      PortDimensions	      "1"
+	      SignalType	      "real"
+	      SamplingMode	      "Sample based"
+	    }
+	    Block {
+	      BlockType		      ModelReference
+	      Name		      "ControlLock"
+	      SID		      "132"
+	      Ports		      [4, 1]
+	      Position		      [165, 192, 350, 348]
+	      AttributesFormatString  "%<ActiveVariant>"
+	      ModelNameDialog	      "Lock_Control_Vx"
+	      SimulationMode	      "Normal"
+	      Variant		      on
+	      Array {
+		Type			"Struct"
+		Dimension		2
+		MATStruct {
+		  Name			  "config_var_Airbag"
+		  ModelName		  "Lock_Control_Vy"
+		  ParameterArgumentNames  ""
+		  ParameterArgumentValues ""
+		  SimulationMode	  "Normal"
+		}
+		MATStruct {
+		  Name			  "config_var_noAirbag"
+		  ModelName		  "Lock_Control_Vx"
+		  ParameterArgumentNames  ""
+		  ParameterArgumentValues ""
+		  SimulationMode	  "Normal"
+		}
+		PropName		"Variants"
+	      }
+	      ModelReferenceVersion   "1.333"
+	      List {
+		ListType		InputPortNames
+		port0			"LockAppMode"
+		port1			"Vehicle_Speed_Cond"
+		port2			"Engine_ON"
+		port3			"Airbag_Fired"
+	      }
+	      List {
+		ListType		OutputPortNames
+		port0			"LockDoorRequest"
+	      }
+	      List {
+		ListType		OutputPortOutputBusAsStructs
+		port0			"off"
+	      }
+	      List {
+		ListType		OutputPortSignalNames
+		port0			"LockDoorRequest"
+	      }
+	      List {
+		ListType		InputPortSignalNames
+		port0			"LockAppMode"
+		port1			"Vehicle_Speed_Cond"
+		port2			"Engine_ON"
+		port3			"Airbag_Fired"
+	      }
+	      CopyOfModelName	      "Lock_Control_Vx"
+	      DefaultDataLogging      off
+	      Port {
+		PortNumber		1
+		Name			"LockDoorRequest"
+		PropagatedSignals	"LockDoorRequest"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "LockDoorRequest"
+	      SID		      "104"
+	      Position		      [475, 263, 505, 277]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      Name		      "LockDoorRequest"
+	      Labels		      [0, 0]
+	      SrcBlock		      "ControlLock"
+	      SrcPort		      1
+	      DstBlock		      "LockDoorRequest"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "VehicleSpeed"
+	      SrcPort		      1
+	      DstBlock		      "ControlLock"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Engine_ON"
+	      SrcPort		      1
+	      DstBlock		      "ControlLock"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Airbag_Fired"
+	      SrcPort		      1
+	      DstBlock		      "ControlLock"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "LockAppMode"
+	      SrcPort		      1
+	      DstBlock		      "ControlLock"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "Unit Delay"
+	  SID			  "134"
+	  Position		  [780, 713, 815, 747]
+	  ZOrder		  -18
+	  BlockMirror		  on
+	  ShowName		  off
+	  InputProcessing	  "Elements as channels (sample based)"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "Unit Delay1"
+	  SID			  "135"
+	  Position		  [780, 763, 815, 797]
+	  ZOrder		  -18
+	  BlockMirror		  on
+	  ShowName		  off
+	  InputProcessing	  "Elements as channels (sample based)"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "LockDoorMotorCmd"
+	  SID			  "105"
+	  Position		  [1345, 178, 1375, 192]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "LockLED"
+	  SID			  "106"
+	  Position		  [1350, 278, 1380, 292]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "LockAppMode_Out"
+	  SID			  "107"
+	  Position		  [645, 508, 675, 522]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "VehicleSpeed"
+	  SrcPort		  1
+	  DstBlock		  "Input_Conditioning"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "Engine_ON"
+	  SrcPort		  1
+	  DstBlock		  "Locking_Strategy"
+	  DstPort		  3
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "Actuators_Ctrl"
+	  SrcPort		  2
+	  DstBlock		  "LockLED"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "LockPos"
+	  SrcPort		  1
+	  DstBlock		  "Input_Conditioning"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "Locking_Strategy"
+	  SrcPort		  1
+	  DstBlock		  "Actuators_Ctrl"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Actuators_Ctrl"
+	  SrcPort		  1
+	  DstBlock		  "LockDoorMotorCmd"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Lock_Mode_Manager"
+	  SrcPort		  1
+	  DstBlock		  "Locking_Strategy"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Airbag_Fired"
+	  SrcPort		  1
+	  DstBlock		  "Locking_Strategy"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Input_Conditioning"
+	  SrcPort		  3
+	  DstBlock		  "Locking_Strategy"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Input_Conditioning"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  Branch {
+	    DstBlock		    "Actuators_Ctrl"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 215]
+	    DstBlock		    "Lock_Mode_Manager"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Input_Conditioning"
+	  SrcPort		  2
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [670, 0]
+	    DstBlock		    "Actuators_Ctrl"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 175]
+	    DstBlock		    "Lock_Mode_Manager"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Lock_Mode_Manager"
+	  SrcPort		  2
+	  DstBlock		  "LockAppMode_Out"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Actuators_Ctrl"
+	  SrcPort		  3
+	  Points		  [140, 0; 0, 395]
+	  DstBlock		  "Unit Delay1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Actuators_Ctrl"
+	  SrcPort		  4
+	  Points		  [100, 0; 0, 245]
+	  DstBlock		  "Unit Delay"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Unit Delay"
+	  SrcPort		  1
+	  Points		  [-505, 0; 0, -195]
+	  DstBlock		  "Lock_Mode_Manager"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Unit Delay1"
+	  SrcPort		  1
+	  Points		  [-550, 0; 0, -285]
+	  DstBlock		  "Lock_Mode_Manager"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "LockLED"
+      SID		      "109"
+      Position		      [655, 198, 685, 212]
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "LockAppMode"
+      SID		      "110"
+      Position		      [655, 303, 685, 317]
+      Port		      "2"
+      IconDisplay	      "Port number"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "LockDoorMotorCmd"
+      SID		      "111"
+      Position		      [655, 93, 685, 107]
+      Port		      "3"
+      IconDisplay	      "Port number"
+    }
+    Line {
+      Name		      "VehicleSpeed"
+      Labels		      [0, 0]
+      SrcBlock		      "VehicleSpeed"
+      SrcPort		      1
+      DstBlock		      "DoorLockingSystem"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Engine_ON"
+      Labels		      [0, 0]
+      SrcBlock		      "Engine_ON"
+      SrcPort		      1
+      DstBlock		      "DoorLockingSystem"
+      DstPort		      2
+    }
+    Line {
+      Name		      "LockLED"
+      Labels		      [0, 0]
+      SrcBlock		      "DoorLockingSystem"
+      SrcPort		      2
+      DstBlock		      "LockLED"
+      DstPort		      1
+    }
+    Line {
+      Name		      "LockDoorMotorCmd"
+      Labels		      [0, 0]
+      SrcBlock		      "DoorLockingSystem"
+      SrcPort		      1
+      DstBlock		      "LockDoorMotorCmd"
+      DstPort		      1
+    }
+    Line {
+      Name		      "LockPos"
+      Labels		      [0, 0]
+      SrcBlock		      "LockPos"
+      SrcPort		      1
+      DstBlock		      "DoorLockingSystem"
+      DstPort		      3
+    }
+    Line {
+      Name		      "Airbag_Fired"
+      Labels		      [0, 0]
+      SrcBlock		      "Airbag_Fired"
+      SrcPort		      1
+      DstBlock		      "DoorLockingSystem"
+      DstPort		      4
+    }
+    Line {
+      Name		      "LockAppMode_Out"
+      Labels		      [0, 0]
+      SrcBlock		      "DoorLockingSystem"
+      SrcPort		      3
+      DstBlock		      "LockAppMode"
+      DstPort		      1
+    }
+    Annotation {
+      SID		      "138"
+      Name		      "Select Variant Configuration:"
+      Position		      [259, 461]
+    }
+    Annotation {
+      SID		      "139"
+      Name		      "Config with Airbag"
+      Position		      [248, 484]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+      ClickFcn		      "Airbag = 1;"
+    }
+    Annotation {
+      SID		      "140"
+      Name		      "Config without Airbag"
+      Position		      [253, 514]
+      ForegroundColor	      "blue"
+      DropShadow	      on
+      ClickFcn		      "Airbag = 0;"
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.6 (R2011b) dated Jan 26 2012, 02:07:42
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "DLS_Controller_SW"
+    created		    "15-Jun-2010 13:28:23"
+    isLibrary		    0
+    firstTarget		    2
+    sfVersion		    76014001.00040001
+  }
+  target {
+    id			    2
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 3]
+  }
+  target {
+    id			    3
+    name		    "rtw"
+    machine		    1
+    linkNode		    [1 2 0]
+  }
+}

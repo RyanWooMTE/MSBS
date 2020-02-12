@@ -1,0 +1,104 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML is auto-generated from an M-file.
+To make changes, update the M-file and republish this document.
+      --><title>Generate harness to compare with expected output</title><meta name="generator" content="MATLAB 7.10"><meta name="date" content="2010-11-01"><meta name="m-file" content="cmtdtooldoc_05makeharness_compareresults"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Generate harness to compare with expected output</h1><!--introduction--><div><ul><li>MATLAB R2009b&#20197;&#38477;&#23550;&#24540;</li><li>Simulink Veirification and Validation&#12362;&#12424;&#12403;Simulink Design Verifier&#12364;&#24517;&#35201;(R2009b, R2010a)</li><li>Simulink Veirification and Validation&#12364;&#24517;&#35201; (R2010b&#20197;&#38477;)</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Overview</a></li><li><a href="#2">How to run</a></li></ul></div><h2>Overview<a name="1"></a></h2><p>(1) Select a model to be tested.</p><p><img vspace="5" hspace="5" src="cmtdtooldoc_05makeharness_compareresults_pic01.PNG" alt=""> </p><p>(2) Click <b>Harness with expected output</b> button</p><p><img vspace="5" hspace="5" src="cmtdtooldoc_05makeharness_compareresults_pic02.PNG" alt=""> </p><p>(3) A harness model will be created and expected outputs and model's outputs are comapred using Assertion block</p><p><img vspace="5" hspace="5" src="cmtdtooldoc_05makeharness_compareresults_pic03.PNG" alt=""> </p><p>(4) A signal builder block inside the harness model has a dummy inputs.</p><p><img vspace="5" hspace="5" src="cmtdtooldoc_05makeharness_compareresults_pic04.PNG" alt=""> </p><h2>How to run<a name="2"></a></h2><div><ol><li>Open cmtdtool_samplemode.mdl  in cmtdtool's install directory.</li><li>Click " Harness with expected output " button in cmtdtool GUI.</li><li>Check that a new harness model is created.</li><li>Run the following commands and you will see that the same operation can be done by API call .</li></ol></div><pre class="codeinput">open_system(<span class="string">'cmtdtool_samplemode'</span>)
+makeharness_compareresults(<span class="string">'cmtdtool_samplemode'</span>);
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.10<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Generate harness to compare with expected output
+%
+% 
+% * MATLAB R2009b以降対応
+% * Simulink Veirification and ValidationおよびSimulink Design Verifierが必要(R2009b, R2010a) 
+% * Simulink Veirification and Validationが必要 (R2010b以降)
+
+%% Overview
+% (1) Select a model to be tested.
+%
+% <<cmtdtooldoc_05makeharness_compareresults_pic01.PNG>>
+%
+% (2) Click *Harness with expected output* button
+%
+% <<cmtdtooldoc_05makeharness_compareresults_pic02.PNG>>
+%
+% (3) A harness model will be created and expected outputs and model's outputs are comapred using Assertion block
+%
+% <<cmtdtooldoc_05makeharness_compareresults_pic03.PNG>>
+%
+% (4) A signal builder block inside the harness model has a dummy inputs.
+%
+% <<cmtdtooldoc_05makeharness_compareresults_pic04.PNG>>
+%
+
+%% How to run
+% # Open cmtdtool_samplemode.mdl  in cmtdtool's install directory.
+% # Click " Harness with expected output " button in cmtdtool GUI.
+% # Check that a new harness model is created.
+% # Run the following commands and you will see that the same operation can be done by API call .
+open_system('cmtdtool_samplemode')
+makeharness_compareresults('cmtdtool_samplemode');
+
+##### SOURCE END #####
+--></body></html>

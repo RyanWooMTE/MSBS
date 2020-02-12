@@ -1,0 +1,2165 @@
+Model {
+  Name			  "cruise_control"
+  Version		  7.6
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    7
+    Inport {
+      BusObject		      ""
+      SignalName	      "enable"
+      Name		      "enable"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "brake_pressure"
+      Name		      "brake_pressure"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "speed"
+      Name		      "speed"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "set"
+      Name		      "set"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "inc"
+      Name		      "inc"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "dec"
+      Name		      "dec"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "driver_throt"
+      Name		      "driver_throt"
+    }
+    NumRootOutports	    2
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      SignalName	      "throt"
+      Name		      "throt"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      SignalName	      "target"
+      Name		      "target"
+    }
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.231"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "Shift_JIS"
+  PreLoadFcn		  "cruise_control_data"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  UserBdParams		  "DVExtractedSubsystem"
+  DVExtractedSubsystem	  "cruise_control"
+  Created		  "Tue Jun 02 16:12:01 1998"
+  Creator		  "The MathWorks Inc."
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "itoy"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Sep 19 18:26:38 2012"
+  RTWModifiedTimeStamp	  269979793
+  ModelVersionFormat	  "1.%<AutoIncrement:231>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  on
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dcmtr"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10"
+	  AbsTol		  "1e-6"
+	  FixedStep		  "0.01"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  ConcurrentTasks	  off
+	  Solver		  "ode5"
+	  SolverName		  "ode5"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "sigsOut"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "error"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg on
+	  CheckExecutionContextRuntimeOutputMsg	on
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "error"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "error"
+	  BusObjectLabelMismatch  "error"
+	  RootOutportRequireBusObject "error"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorOnBusTreatedAsVector"
+	  BusNameAdapt		  "ErrorWithoutRepair"
+	  NonBusSignalsTreatedAsBus "error"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  on
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  off
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  " -aAlwaysIncludeCustomSrc=1"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement on
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	Sldv.ConfigComp {
+	  $ObjectID		  12
+	  Version		  "1.10.0"
+	  Description		  "Design Verifier Custom Configuration Component"
+	  Name			  "Design Verifier"
+	  DVMode		  "TestGeneration"
+	  DVMaxProcessTime	  300
+	  DVDisplayUnsatisfiableObjectives off
+	  DVAutomaticStubbing	  on
+	  DVDesignMinMaxConstraints on
+	  DVOutputDir		  "sldv_output/$ModelName$"
+	  DVMakeOutputFilesUnique on
+	  DVBlockReplacement	  off
+	  DVBlockReplacementRulesList "<FactoryDefaultRules>"
+	  DVBlockReplacementModelFileName "$ModelName$_replacement"
+	  DVParameters		  off
+	  DVParametersConfigFileName "sldv_params_template.m"
+	  DVModelCoverageObjectives "MCDC"
+	  DVTestConditions	  "UseLocalSettings"
+	  DVTestObjectives	  "UseLocalSettings"
+	  DVMaxTestCaseSteps	  500
+	  DVTestSuiteOptimization "CombinedObjectives"
+	  DVAssertions		  "UseLocalSettings"
+	  DVProofAssumptions	  "UseLocalSettings"
+	  DVExtendExistingTests	  off
+	  DVIgnoreExistTestSatisfied on
+	  DVIgnoreCovSatisfied	  off
+	  DVProvingStrategy	  "ProveWithViolationDetection"
+	  DVMaxViolationSteps	  20
+	  DVSaveDataFile	  on
+	  DVDataFileName	  "$ModelName$_sldvdata"
+	  DVSaveExpectedOutput	  on
+	  DVRandomizeNoEffectData off
+	  DVSaveHarnessModel	  off
+	  DVHarnessModelFileName  "$ModelName$_harness"
+	  DVModelReferenceHarness off
+	  DVSaveSystemTestHarness off
+	  DVSystemTestFileName	  "$ModelName$_harness"
+	  DVSaveReport		  off
+	  DVReportFileName	  "$ModelName$_report"
+	  DVReportIncludeGraphics off
+	  DVDisplayReport	  on
+	  DVActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Design Verifier/Results"
+      ConfigPrmDlgPosition    " [ 256, 72, 1111, 613 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  WSMdlFileData		  "DataTag0"
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "MS UI Gothic"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "MS UI Gothic"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DiscreteIntegrator
+      IntegratorMethod	      "Integration: Forward Euler"
+      gainval		      "1.0"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      InitialConditionMode    "State and output"
+      SampleTime	      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      IgnoreLimit	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      PropagateVarSize	      "Only when enabling"
+      ShowOutputPort	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      IconShape		      "rectangular"
+      AllPortsSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      InputProcessing	      "Inherited"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+  }
+  System {
+    Name		    "cruise_control"
+    Location		    [215, 367, 1369, 1032]
+    Open		    on
+    ModelBrowserVisibility  on
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "portrait"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "421"
+    Block {
+      BlockType		      Inport
+      Name		      "enable"
+      SID		      "207"
+      Position		      [50, 58, 80, 72]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      IconDisplay	      "Port number"
+      Port {
+	PortNumber		1
+	Name			"enable"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "brake_pressure"
+      SID		      "298"
+      Position		      [50, 93, 80, 107]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "2"
+      IconDisplay	      "Port number"
+      Port {
+	PortNumber		1
+	Name			"brake_pressure"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "speed"
+      SID		      "213"
+      Position		      [50, 263, 80, 277]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "3"
+      IconDisplay	      "Port number"
+      Port {
+	PortNumber		1
+	Name			"speed"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "set"
+      SID		      "209"
+      Position		      [50, 323, 80, 337]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "4"
+      IconDisplay	      "Port number"
+      Port {
+	PortNumber		1
+	Name			"set"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "inc"
+      SID		      "210"
+      Position		      [50, 383, 80, 397]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "5"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      Port {
+	PortNumber		1
+	Name			"inc"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dec"
+      SID		      "211"
+      Position		      [50, 443, 80, 457]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "6"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      Port {
+	PortNumber		1
+	Name			"dec"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "driver_throt"
+      SID		      "212"
+      Position		      [50, 553, 80, 567]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "7"
+      IconDisplay	      "Port number"
+      Port {
+	PortNumber		1
+	Name			"driver_throt"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PI_Controller"
+      SID		      "214"
+      Ports		      [1, 1, 1]
+      Position		      [530, 258, 695, 342]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"PI_Controller"
+	Location		[293, 226, 1538, 939]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "diff_target"
+	  SID			  "215"
+	  Position		  [55, 78, 85, 92]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "diff_target"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  EnablePort
+	  Name			  "Enable"
+	  SID			  "216"
+	  Ports			  []
+	  Position		  [300, 20, 320, 40]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	}
+	Block {
+	  BlockType		  DiscreteIntegrator
+	  Name			  "Integrator"
+	  SID			  "217"
+	  Ports			  [1, 1]
+	  Position		  [195, 177, 290, 213]
+	  AttributesFormatString  "<Gain = %<gainval>>"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IntegratorMethod	  "Integration: Forward Euler"
+	  gainval		  "1"
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  SampleTime		  "-1"
+	  UpperSaturationLimit	  "5"
+	  LowerSaturationLimit	  "-5"
+	  ICPrevOutput		  "DiscIntNeverNeededParam"
+	  ICPrevScaledInput	  "DiscIntNeverNeededParam"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Kp"
+	  SID			  "218"
+	  Position		  [255, 65, 370, 105]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Gain			  "cruise_kp"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Kp1"
+	  SID			  "270"
+	  Position		  [310, 175, 425, 215]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Gain			  "cruise_ki"
+	  ParamDataTypeStr	  "Inherit: Inherit from 'Gain'"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  SID			  "261"
+	  Ports			  [1, 1]
+	  Position		  [580, 90, 610, 120]
+	  ShowName		  off
+	  AttributesFormatString  "<UpperLimit = %<UpperLimit>>\\n<LowerLimit = %<LowerLimit>>"
+	  InputPortMap		  "u0"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  UpperLimit		  "throt_max"
+	  LowerLimit		  "throt_min"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "220"
+	  Ports			  [2, 1]
+	  Position		  [485, 66, 510, 144]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  InputSameDT		  off
+	  AccumDataTypeStr	  "Inherit: Same as first input"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "throt"
+	  SID			  "221"
+	  Position		  [700, 98, 730, 112]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "diff_target"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  Branch {
+	    Points		    [0, 110]
+	    DstBlock		    "Integrator"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Kp"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  DstBlock		  "Kp1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Kp"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  DstBlock		  "throt"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Kp1"
+	  SrcPort		  1
+	  Points		  [0, -70]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      Switch
+      Name		      "Switch"
+      SID		      "223"
+      Position		      [830, 283, 870, 397]
+      ShowName		      off
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Criteria		      "u2 ~= 0"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      SaturateOnIntegerOverflow	off
+      Port {
+	PortNumber		1
+	Name			"throt"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "calcTarget"
+      SID		      "224"
+      Ports		      [4, 2]
+      Position		      [245, 237, 410, 483]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	Name			"diff_target"
+	PropagatedSignals	"diff_target"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"target"
+	PropagatedSignals	"target"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"calcTarget"
+	Location		[687, 132, 1841, 797]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "speed"
+	  SID			  "228"
+	  Position		  [70, 68, 100, 82]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "speed"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "set"
+	  SID			  "225"
+	  Position		  [70, 108, 100, 122]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "set"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "inc"
+	  SID			  "226"
+	  Position		  [70, 203, 100, 217]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "inc"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dec"
+	  SID			  "227"
+	  Position		  [70, 288, 100, 302]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "dec"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "229"
+	  Position		  [120, 158, 180, 182]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Value			  "vel_inc"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  SID			  "230"
+	  Position		  [120, 243, 185, 267]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Value			  "vel_dec"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  SID			  "231"
+	  Ports			  [1, 1]
+	  Position		  [485, 100, 515, 130]
+	  ShowName		  off
+	  AttributesFormatString  "<UpperLimit = %<UpperLimit>>\\n<LowerLimit = %<LowerLimit>>"
+	  InputPortMap		  "u0"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  UpperLimit		  "target_max"
+	  LowerLimit		  "target_min"
+	  Port {
+	    PortNumber		    1
+	    Name		    "target"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "232"
+	  Ports			  [2, 1]
+	  Position		  [265, 159, 285, 206]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "233"
+	  Ports			  [2, 1]
+	  Position		  [635, 55, 660, 135]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Inputs		  "-+"
+	  InputSameDT		  off
+	  AccumDataTypeStr	  "Inherit: Same as first input"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "diff_target"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  SID			  "234"
+	  Ports			  [2, 1]
+	  Position		  [215, 244, 235, 291]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch1"
+	  SID			  "235"
+	  Position		  [390, 86, 420, 144]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch2"
+	  SID			  "236"
+	  Position		  [325, 173, 355, 247]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch3"
+	  SID			  "237"
+	  Position		  [260, 258, 290, 332]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "Unit Delay"
+	  SID			  "238"
+	  Position		  [380, 357, 410, 403]
+	  BlockMirror		  on
+	  ShowName		  off
+	  AttributesFormatString  "<init = %<X0>>"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  X0			  "target_min"
+	  SampleTime		  "-1"
+	  Port {
+	    PortNumber		    1
+	    Name		    "target_prev"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "diff_target"
+	  SID			  "239"
+	  Position		  [785, 88, 815, 102]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "target"
+	  SID			  "240"
+	  Position		  [690, 373, 720, 387]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Name			  "diff_target"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "diff_target"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch1"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "target_prev"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Labels		  [1, 0]
+	  SrcBlock		  "Unit Delay"
+	  SrcPort		  1
+	  Points		  [-340, 0; 0, -60]
+	  Branch {
+	    Points		    [0, 0; 0, -40]
+	    Branch {
+	      Points		      [0, -85]
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "Sum2"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Switch3"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch3"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -60]
+	  DstBlock		  "Switch2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Switch2"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -75]
+	  DstBlock		  "Switch1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Switch3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "dec"
+	  SrcPort		  1
+	  DstBlock		  "Switch3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Switch2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "inc"
+	  SrcPort		  1
+	  DstBlock		  "Switch2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "speed"
+	  SrcPort		  1
+	  Points		  [185, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "Sum1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "Switch1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "set"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "target"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, 265]
+	    Branch {
+	      DstBlock		      "Unit Delay"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Labels		      [1, 0]
+	      DstBlock		      "target"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Sum1"
+	    DstPort		    2
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "isControlActivate"
+      SID		      "282"
+      Ports		      [4, 1]
+      Position		      [255, 46, 400, 189]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	Name			"is_ctrl"
+	PropagatedSignals	"is_ctrl"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"isControlActivate"
+	Location		[401, 198, 1564, 1016]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "enable"
+	  SID			  "283"
+	  Position		  [60, 38, 90, 52]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "enable"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "brake_pressure"
+	  SID			  "284"
+	  Position		  [60, 63, 90, 77]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "brake_pressure"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "set"
+	  SID			  "285"
+	  Position		  [60, 98, 90, 112]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "set"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "speed"
+	  SID			  "286"
+	  Position		  [25, 348, 55, 362]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "speed"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Constant"
+	  SID			  "287"
+	  Ports			  [1, 1]
+	  Position		  [165, 55, 195, 85]
+	  ShowName		  off
+	  LibraryVersion	  "1.225"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  relop			  ">"
+	  const			  "0"
+	  LogicOutDataTypeMode	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "288"
+	  Position		  [330, 294, 415, 326]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Value			  "target_max"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "289"
+	  Position		  [330, 369, 415, 401]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Value			  "target_min"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator"
+	  SID			  "290"
+	  Ports			  [4, 1]
+	  Position		  [620, 27, 665, 138]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Inputs		  "4"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	  Port {
+	    PortNumber		    1
+	    Name		    "is_ctrl"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator1"
+	  SID			  "291"
+	  Ports			  [1, 1]
+	  Position		  [340, 57, 375, 83]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Operator		  "NOT"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator2"
+	  SID			  "292"
+	  Ports			  [2, 1]
+	  Position		  [380, 89, 415, 156]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator3"
+	  SID			  "293"
+	  Ports			  [2, 1]
+	  Position		  [535, 287, 565, 318]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Relational\nOperator"
+	  SID			  "294"
+	  Ports			  [2, 1]
+	  Position		  [445, 277, 475, 308]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Operator		  "<="
+	  InputSameDT		  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Relational\nOperator1"
+	  SID			  "295"
+	  Ports			  [2, 1]
+	  Position		  [445, 347, 475, 378]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  InputSameDT		  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "Unit Delay1"
+	  SID			  "296"
+	  Position		  [455, 183, 485, 227]
+	  BlockMirror		  on
+	  ShowName		  off
+	  AttributesFormatString  "Init = %<X0>"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  X0			  "1"
+	  SampleTime		  "-1"
+	  Port {
+	    PortNumber		    1
+	    Name		    "prev_ctrl"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "is_ctrl"
+	  SID			  "297"
+	  Position		  [815, 78, 845, 92]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "Compare\nTo Constant"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [0, -10]
+	  DstBlock		  "Relational\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator3"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -185]
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Relational\nOperator1"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -55]
+	  DstBlock		  "Logical\nOperator3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Relational\nOperator"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator3"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "speed"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Relational\nOperator"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Relational\nOperator1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Relational\nOperator1"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "brake_pressure"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Constant"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "enable"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "set"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator1"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator2"
+	  SrcPort		  1
+	  Points		  [55, 0; 0, -30]
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "prev_ctrl"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Labels		  [0, 1]
+	  SrcBlock		  "Unit Delay1"
+	  SrcPort		  1
+	  Points		  [-135, 0; 0, -65]
+	  DstBlock		  "Logical\nOperator2"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "is_ctrl"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  SrcBlock		  "Logical\nOperator"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "is_ctrl"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [35, 0; 0, 120]
+	    DstBlock		    "Unit Delay1"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "throt"
+      SID		      "250"
+      Position		      [980, 333, 1010, 347]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      IconDisplay	      "Port number"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "target"
+      SID		      "251"
+      Position		      [975, 418, 1005, 432]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "2"
+      IconDisplay	      "Port number"
+    }
+    Line {
+      Name		      "is_ctrl"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "isControlActivate"
+      SrcPort		      1
+      Points		      [205, 0]
+      Branch {
+	DstBlock		"PI_Controller"
+	DstPort			enable
+      }
+      Branch {
+	Points			[155, 0; 0, 220]
+	DstBlock		"Switch"
+	DstPort			2
+      }
+    }
+    Line {
+      Name		      "target"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "calcTarget"
+      SrcPort		      2
+      DstBlock		      "target"
+      DstPort		      1
+    }
+    Line {
+      Name		      "diff_target"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "calcTarget"
+      SrcPort		      1
+      DstBlock		      "PI_Controller"
+      DstPort		      1
+    }
+    Line {
+      Name		      "dec"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "dec"
+      SrcPort		      1
+      DstBlock		      "calcTarget"
+      DstPort		      4
+    }
+    Line {
+      Name		      "speed"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      SrcBlock		      "speed"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	DstBlock		"calcTarget"
+	DstPort			1
+      }
+      Branch {
+	Labels			[1, 0]
+	Points			[90, 0; 0, -100]
+	DstBlock		"isControlActivate"
+	DstPort			4
+      }
+    }
+    Line {
+      Name		      "inc"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "inc"
+      SrcPort		      1
+      DstBlock		      "calcTarget"
+      DstPort		      3
+    }
+    Line {
+      Name		      "set"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "set"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"calcTarget"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -195]
+	DstBlock		"isControlActivate"
+	DstPort			3
+      }
+    }
+    Line {
+      Name		      "throt"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "Switch"
+      SrcPort		      1
+      DstBlock		      "throt"
+      DstPort		      1
+    }
+    Line {
+      Name		      "driver_throt"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "driver_throt"
+      SrcPort		      1
+      Points		      [680, 0; 0, -180]
+      DstBlock		      "Switch"
+      DstPort		      3
+    }
+    Line {
+      Name		      "brake_pressure"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "brake_pressure"
+      SrcPort		      1
+      DstBlock		      "isControlActivate"
+      DstPort		      2
+    }
+    Line {
+      Name		      "enable"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "enable"
+      SrcPort		      1
+      DstBlock		      "isControlActivate"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "PI_Controller"
+      SrcPort		      1
+      DstBlock		      "Switch"
+      DstPort		      1
+    }
+  }
+}
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    B X   8    (     @         %    \"     $    -     0         %  0 !@    $    ,    3F%M90"
+    "  5F%L=64       X   !     !@    @    $          4    (     0    X    !         !     .    8V]N=F5R=&5R7V1A=&$   X "
+    "   H @  !@    @    &          4    (    %0    ,    !          D   #X 0            \":F9F9F9FY/YJ9F9F9F<D_-#,S,S,ST"
+    "S^:F9F9F9G9/P       . _-#,S,S,SXS]G9F9F9F;F/YJ9F9F9F>D_[%&X'H7KZ3\\^\"M>C<#WJ/Y#\"]2A<C^H_X7H4KD?AZC\\S,S,S,S/K/X7"
+    "K4;@>A>L_UZ-P/0K7ZS\\I7(_\"]2CL/WL4KD?A>NP_S<S,S,S,[#]Q/0K7HW#M/Q2N1^%Z%.X_@,;X_>(N84!>\"0ZC%\")A0/K139*I^V! :7/89"
+    "$+U8$#(=;.4%C)A0+2A'A&[BV% CB[:ZIHH8D ,.$:JZQMC0)M?[2%&7V1 1D9HR>2(9$\"G2$/YN,5D0+Z;8Y)9_V1 K?RS[Y1\"94!0>635!9EE0"
+    "*I&6B1#[&5 B0C[WKER9D#::R9LR?)F0*F.%X1[O&= MO;X<#.V:$ NE+&9X/QJ0 MG0?Z\"D&Y 06#ET\"+; 4\":F9F9F9D 0)J9F9F9F?\\_[Z?"
+    "&2S>)_3^%ZU&X'H7[/Z :+]TD!OD_)0:!E4.+]C^J\\=)-8A#T/^^GQDLWB?$_2.%Z%*Y'\\3]@Y= BV_GP/^.EF\\0@L/ _IIO$(+!R\\#_^U'CI)"
+    "C'P/]5XZ28Q\"/ _U7CI)C$(\\#]JO'23& 3P/U8.+;*=[^\\_+(<6V<[W[S]JO'23& 3P/]5XZ28Q\"/ _#@   #@    &    \"     0       "
+    "  !0    @    !    !P    $         $     <   !D;W=N=&%B  X   #P    !@    @    &          4    (    !@    0    !    "
+    "      D   #                                                                             %$         40        !1   "
+    "      %$         ^0        #Y         -$         T0        #E         /D        !)0        $E       \" 04       (!"
+    "!0        $1         24        !40        %1 #@   #@    &    \"     0         !0    @    !    !@    $         $   "
+    "  8   !D;W=N=&@   X   !@    !@    @    &          4    (    !@    $    !          D    P                       40 "
+    "       $1         24       (!60        %E #@   #     &    \"     0         !0    @    !    !     $         $  $ &5"
+    "M87 .    H ,   8    (    !@         %    \"     H    +     0         )    < ,          $3       #@:D       *!N0   "
+    "    @'!       \" <$       +!P0       L'!       \"P<$       +!P0       L'!         1L       $!=0        &I       ! "
+    "<$       '!Q0       (')       \"0<D       -!R0       T')       #0<D       (!(P       0%5       ! 9D       \"!N0   "
+    "    H'%       !0<D       !!S0       0'-       \" <T       (!S0       @$K       \" 4$       (!B0       8&M        P"
+    "<4       )!R0       $'-       \" <T       /!S0       \\'-       \" 3,        !&0       @%Y        @:$       $!P0  "
+    "     (')        0<T       /!S0       <'1       !P=$       (!.P        #U         6D       .!D0       P&U        P<"
+    "4       -!R0       ,'1       !P=$       .!T0       0%#         )$       $!50        &-       #@:T       $!P0      "
+    " 4')       #P<T       '!T0       X'1       \" 4<          P       @%!       \"@8$        !J0        '!       \"@<4"
+    "       ,!S0       <'1       #@=$       (!2P        \"K         2$       ,!=0       H&=       ! ;4       +!P0      "
+    " D')       \" <T       /!S0       @%/         -L       (! 0        %A       !@94       (!J0       (&]       !P<4  "
+    "     %!R0       $'-       \" 5,        ! P        #)       ! 54        !C0       (&A       ! ;$       *!O0       L"
+    "'!        P<4 .    ,     8    (    !          %    \"     $    #     0         0  , 265I  X    X    !@    @    &  "
+    "        4    (     0    $    !          D    (    0'K?R^^$EC\\.    .     8    (    !          %    \"     $    %  "
+    "   0         0    !0   &YE=F5C    #@   (@    &    \"     8         !0    @    !    \"P    $         \"0   %@   #__"
+    "_____^(0       P)) ________F$#______S^?0       P*)  0    #@I4#_______^H0/______'ZQ ______\\_KT       #\"Q0       P"
+    "+) #@   #     &    \"     0         !0    @    !     @    $         $  \" ' P   .    .     8    (    !@         % "
+    "   \"     $    !     0         )    \"    '*_0U&@3[0_#@   #     &    \"     0         !0    @    !     @    $     "
+    "    $  \" ' Q   .    .     8    (    !@         %    \"     $    !     0         )    \"    '*_0U&@3[0_#@   #@    "
+    "&    \"     0         !0    @    !    !0    $         $     4   !T:'9E8P    X   \"     !@    @    &          4    "
+    "(    \"@    $    !          D   !0                       T0        #Y         1$        !)0        $Y       \" 44 "
+    "       !40       @%9         64 .    .     8    (    !          %    \"     $    %     0         0    !0   %1704E4"
+    "    #@   #@    &    \"     8         !0    @    !     0    $         \"0    @             0 X    X    !@    @    $"
+    "          4    (     0    4    !         !     %    =7!T86(    .    \\     8    (    !@         %    \"     8    $"
+    "     0         )    P            \"1         )$         N0        #=         1$        !$0        #Y         /D   "
+    "      ^0       @$1       \" 44       (!10        $E         24        !)0        $Y         64        !90     \" A"
+    "\"Y!     (\"$+D$     @(0N00    \" A\"Y!     (\"$+D$     @(0N00X    P    !@    @    $          4    (     0    0   "
+    " !         !  ! !U<'1H#@   &     &    \"     8         !0    @    &     0    $         \"0   #                    "
+    "   #E       \" 04        !)0       @%9         64 .    0     8    (    !          %    \"     $    +     0        "
+    " 0    \"P   '9E:&EC;&5D871A       .    8     8    (    !@         %    \"     8    !     0         )    ,    ->C<#"
+    "T*UPE         1$ S,S,S,S/3/P       / _        24            "
+  }
+}

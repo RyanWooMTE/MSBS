@@ -1,0 +1,6648 @@
+Model {
+  Name			  "cruise_control_prop_error1"
+  Version		  7.8
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    7
+    Inport {
+      BusObject		      ""
+      SignalName	      "enable"
+      Name		      "enable"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "brake_pressure"
+      Name		      "brake_pressure"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "set"
+      Name		      "set"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "inc"
+      Name		      "inc"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "dec"
+      Name		      "dec"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "driver_throt"
+      Name		      "driver_throt"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "speed"
+      Name		      "speed"
+    }
+    NumRootOutports	    2
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      SignalName	      "throt"
+      Name		      "throt"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      SignalName	      "target"
+      Name		      "target"
+    }
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.242"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "Shift_JIS"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "MinMaxAndOverflow"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "ÉIÅ[ÉoÅ[ÉâÉCÉhÇ»Çµ"
+  MaxMDLFileLineLength	  120
+  Created		  "Tue Jun 02 16:12:01 1998"
+  Creator		  "The MathWorks Inc."
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "itoy"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sun Jul 01 22:28:03 2012"
+  RTWModifiedTimeStamp	  263082415
+  ModelVersionFormat	  "1.%<AutoIncrement:242>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  on
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dcmtr"
+  CovHTMLOptions	  " -aTS=1 -bRG=1 -bTC=1 -hTR=0 -nFC=0 -scm=1 -bcm=1 -xEv=0"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.11.1"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.11.1"
+	  StartTime		  "0.0"
+	  StopTime		  "50"
+	  AbsTol		  "1e-6"
+	  FixedStep		  "0.01"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.11.1"
+	  Decimation		  "1"
+	  ExternalInput		  ""
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "mysig"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  on
+	  UseFloatMulNetSlope	  on
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  on
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  on
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "1"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.11.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "error"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg on
+	  CheckExecutionContextRuntimeOutputMsg	on
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "error"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "error"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "error"
+	  BusObjectLabelMismatch  "error"
+	  RootOutportRequireBusObject "error"
+	  AssertControl		  "DisableAll"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorOnBusTreatedAsVector"
+	  BusNameAdapt		  "ErrorWithoutRepair"
+	  NonBusSignalsTreatedAsBus "error"
+	  LoggingUnavailableSignals "none"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.11.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "LittleEndian"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "NEC->V850"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Zero"
+	  TargetEndianess	  "LittleEndian"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "MATLAB Host"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.11.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Single"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.11.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  off
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  Description		  "Generic Real-Time Target"
+	  GenerateReport	  on
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "grt_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  on
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "On"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement on
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	Sldv.ConfigComp {
+	  $ObjectID		  12
+	  Version		  "1.11.1"
+	  Description		  "Design Verifier Custom Configuration Component"
+	  Name			  "Design Verifier"
+	  DVMode		  "TestGeneration"
+	  DVMaxProcessTime	  3000
+	  DVDisplayUnsatisfiableObjectives on
+	  DVAutomaticStubbing	  on
+	  DVDesignMinMaxConstraints on
+	  DVOutputDir		  "sldv_output/$ModelName$"
+	  DVMakeOutputFilesUnique on
+	  DVBlockReplacement	  off
+	  DVBlockReplacementRulesList "<FactoryDefaultRules>"
+	  DVBlockReplacementModelFileName "$ModelName$_replacement"
+	  DVParameters		  off
+	  DVParametersConfigFileName "sldv_params_template.m"
+	  DVModelCoverageObjectives "MCDC"
+	  DVTestConditions	  "UseLocalSettings"
+	  DVTestObjectives	  "UseLocalSettings"
+	  DVMaxTestCaseSteps	  500
+	  DVTestSuiteOptimization "LargeModel (Nonlinear Extended)"
+	  DVAssertions		  "UseLocalSettings"
+	  DVProofAssumptions	  "UseLocalSettings"
+	  DVExtendExistingTests	  off
+	  DVIgnoreExistTestSatisfied on
+	  DVIgnoreCovSatisfied	  off
+	  DVDetectIntegerOverflow on
+	  DVDetectDivisionByZero  on
+	  DVDesignMinMaxCheck	  off
+	  DVDetectSFTransConflict on
+	  DVDetectSFStateInconsistency on
+	  DVDetectSFArrayOutOfBounds on
+	  DVDetectEMLArrayOutOfBounds on
+	  DVDetectSLSelectorOutOfBounds	on
+	  DVDetectSLMPSwitchOutOfBounds	on
+	  DVDetectSLInvalidCast	  on
+	  DVDetectSLMergeConflict on
+	  DVDetectSLUninitializedDSR on
+	  DVProvingStrategy	  "Prove"
+	  DVMaxViolationSteps	  20
+	  DVSaveDataFile	  on
+	  DVDataFileName	  "$ModelName$_sldvdata"
+	  DVSaveExpectedOutput	  off
+	  DVRandomizeNoEffectData off
+	  DVSaveHarnessModel	  off
+	  DVHarnessModelFileName  "$ModelName$_harness"
+	  DVModelReferenceHarness off
+	  DVSaveSystemTestHarness off
+	  DVSystemTestFileName	  "$ModelName$_harness"
+	  DVSaveReport		  off
+	  DVReportFileName	  "$ModelName$_report"
+	  DVReportIncludeGraphics off
+	  DVDisplayReport	  on
+	  DVDisplayResultsOnModel off
+	  DVActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Code Generation"
+      ConfigPrmDlgPosition     [ 970, 48, 1910, 505 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  WSMdlFileData		  "DataTag0"
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "MS UI Gothic"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "MS UI Gothic"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "MS UI Gothic"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Delay
+      DelayLengthSource	      "Dialog"
+      DelayLength	      "2"
+      DelayLengthUpperLimit   "100"
+      InitialConditionSource  "Dialog"
+      InitialCondition	      "0.0"
+      ExternalReset	      "None"
+      PreventDirectFeedthrough off
+      DiagnosticForOutOfRangeDelayLength "None"
+      RemoveProtectionDelayLength off
+      InputProcessing	      "Elements as channels (sample based)"
+      UseCircularBuffer	      off
+      SampleTime	      "-1"
+      StateMustResolveToSignalObject off
+      CodeGenStateStorageClass "Auto"
+    }
+    Block {
+      BlockType		      DiscreteIntegrator
+      IntegratorMethod	      "Integration: Forward Euler"
+      gainval		      "1.0"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      InitialConditionMode    "State and output"
+      SampleTime	      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      IgnoreLimit	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      PropagateVarSize	      "Only when enabling"
+      ShowOutputPort	      off
+      ZeroCross		      on
+      PortDimensions	      "1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "double"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      IconShape		      "rectangular"
+      AllPortsSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      SignalViewerScope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+      Disabled		      off
+      ScrollMode	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      InputProcessing	      "Inherited"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+      HasFrameUpgradeWarning  on
+    }
+  }
+  System {
+    Name		    "cruise_control_prop_error1"
+    Location		    [250, 140, 1394, 843]
+    Open		    on
+    ModelBrowserVisibility  on
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "portrait"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "59"
+    Block {
+      BlockType		      Inport
+      Name		      "enable"
+      SID		      "1"
+      Position		      [45, 73, 75, 87]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      IconDisplay	      "Port number"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"enable"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "brake_pressure"
+      SID		      "2"
+      Position		      [45, 108, 75, 122]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "2"
+      IconDisplay	      "Port number"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"brake_pressure"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "set"
+      SID		      "3"
+      Position		      [45, 338, 75, 352]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "3"
+      IconDisplay	      "Port number"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"set"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "inc"
+      SID		      "4"
+      Position		      [45, 398, 75, 412]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "4"
+      IconDisplay	      "Port number"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"inc"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dec"
+      SID		      "5"
+      Position		      [45, 458, 75, 472]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "5"
+      IconDisplay	      "Port number"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"dec"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "driver_throt"
+      SID		      "6"
+      Position		      [45, 568, 75, 582]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "6"
+      IconDisplay	      "Port number"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"driver_throt"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "speed"
+      SID		      "7"
+      Position		      [40, 638, 70, 652]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "7"
+      IconDisplay	      "Port number"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"speed"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PI_Controller"
+      SID		      "8"
+      Ports		      [1, 1, 1]
+      Position		      [525, 273, 690, 357]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	Name			"throt_cc"
+	PropagatedSignals	"throt_cc"
+	ShowPropagatedSignals	"on"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"PI_Controller"
+	Location		[741, 567, 1836, 1133]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	212
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "diff_target"
+	  SID			  "9"
+	  Position		  [55, 108, 85, 122]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "diff_target"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  EnablePort
+	  Name			  "is_ctrl"
+	  SID			  "10"
+	  Ports			  []
+	  Position		  [300, 20, 320, 40]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  StatesWhenEnabling	  "reset"
+	}
+	Block {
+	  BlockType		  DiscreteIntegrator
+	  Name			  "Integrator"
+	  SID			  "11"
+	  Ports			  [1, 1]
+	  Position		  [190, 207, 285, 243]
+	  AttributesFormatString  "<Gain = %<gainval>>\\n<%<InitialConditionMode>>\\n<SampleTime = %<SampleTime>>"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IntegratorMethod	  "Integration: Forward Euler"
+	  gainval		  "1"
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialConditionMode	  "State only (most efficient)"
+	  SampleTime		  "-1"
+	  UpperSaturationLimit	  "5"
+	  LowerSaturationLimit	  "-5"
+	  ICPrevOutput		  "DiscIntNeverNeededParam"
+	  ICPrevScaledInput	  "DiscIntNeverNeededParam"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Kp"
+	  SID			  "12"
+	  Position		  [255, 95, 370, 135]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Gain			  "cruise_kp"
+	  ParamDataTypeStr	  "Inherit: Inherit from 'Gain'"
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Kp1"
+	  SID			  "13"
+	  Position		  [310, 205, 425, 245]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Gain			  "cruise_ki"
+	  ParamDataTypeStr	  "Inherit: Inherit from 'Gain'"
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "15"
+	  Ports			  [2, 1]
+	  Position		  [485, 96, 510, 174]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "throt_cc"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "throt"
+	  SID			  "16"
+	  Position		  [700, 128, 730, 142]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Kp1"
+	  SrcPort		  1
+	  Points		  [0, -70]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Kp"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  DstBlock		  "Kp1"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "diff_target"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  Branch {
+	    DstBlock		    "Kp"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 110]
+	    DstBlock		    "Integrator"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "throt_cc"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "throt"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [258, 222]
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PropertySpecification"
+      SID		      "59"
+      Tag		      "VerificationSubsystem"
+      Ports		      [11]
+      Position		      [885, 42, 1085, 198]
+      UserDataPersistent      on
+      UserData		      "DataTag1"
+      DisableCoverage	      on
+      CopyFcn		      "sldvsubsys('copy');                \n set_param(gcb,'LinkStatus','none')"
+      LoadFcn		      "sldvsubsys('check')"
+      PreSaveFcn	      "set_param(gcb,'SimViewingDevice','on');\nsldvsubsys('check');                   "
+      OpenFcn		      "PropertySpecificationUI('Block',gcb)"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      SimViewingDevice	      on
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskType		      "VerificationSubsystem"
+      MaskDescription	      "aa"
+      MaskHelp		      "helpview(fullfile(docroot,'toolbox','sldv','sldv.map'),'verificationsubsystem')"
+      MaskInitialization      "sldvsubsys('maskInit');"
+      MaskSelfModifiable      on
+      MaskDisplay	      "image(imread('sldvicon_versubsys.png','BackGroundColor',[1 1 1]),'center');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"PropertySpecification"
+	Location		[618, 149, 1749, 852]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"470"
+	Block {
+	  BlockType		  Inport
+	  Name			  "brake_pressure"
+	  SID			  "59:381"
+	  Position		  [20, 28, 50, 42]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dec"
+	  SID			  "59:383"
+	  Position		  [20, 68, 50, 82]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "diff_target"
+	  SID			  "59:385"
+	  Position		  [20, 108, 50, 122]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "driver_throt"
+	  SID			  "59:387"
+	  Position		  [20, 148, 50, 162]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "enable"
+	  SID			  "59:389"
+	  Position		  [20, 188, 50, 202]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "inc"
+	  SID			  "59:391"
+	  Position		  [20, 228, 50, 242]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "is_ctrl"
+	  SID			  "59:393"
+	  Position		  [20, 268, 50, 282]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "set"
+	  SID			  "59:395"
+	  Position		  [20, 308, 50, 322]
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "speed"
+	  SID			  "59:397"
+	  Position		  [20, 348, 50, 362]
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "target"
+	  SID			  "59:399"
+	  Position		  [20, 388, 50, 402]
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "throt"
+	  SID			  "59:401"
+	  Position		  [20, 428, 50, 442]
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Assumption001"
+	  SID			  "59:405"
+	  Ports			  [1]
+	  Position		  [1000, 87, 1025, 113]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Assumption"
+	  SourceType		  "Design Verifier Assumption"
+	  enabled		  on
+	  customAVTBlockType	  "Assumption"
+	  intervals		  "true"
+	  initial		  off
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Assumption002"
+	  SID			  "59:409"
+	  Ports			  [1]
+	  Position		  [1000, 162, 1025, 188]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Assumption"
+	  SourceType		  "Design Verifier Assumption"
+	  enabled		  on
+	  customAVTBlockType	  "Assumption"
+	  intervals		  "true"
+	  initial		  off
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Assumption003"
+	  SID			  "59:413"
+	  Ports			  [1]
+	  Position		  [1000, 242, 1025, 268]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Assumption"
+	  SourceType		  "Design Verifier Assumption"
+	  enabled		  on
+	  customAVTBlockType	  "Assumption"
+	  intervals		  "true"
+	  initial		  off
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Assumption004"
+	  SID			  "59:417"
+	  Ports			  [1]
+	  Position		  [1000, 322, 1025, 348]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Assumption"
+	  SourceType		  "Design Verifier Assumption"
+	  enabled		  on
+	  customAVTBlockType	  "Assumption"
+	  intervals		  "true"
+	  initial		  off
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Assumption005"
+	  SID			  "59:421"
+	  Ports			  [1]
+	  Position		  [1000, 407, 1025, 433]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Assumption"
+	  SourceType		  "Design Verifier Assumption"
+	  enabled		  on
+	  customAVTBlockType	  "Assumption"
+	  intervals		  "true"
+	  initial		  off
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Condition001"
+	  SID			  "59:404"
+	  Ports			  [1]
+	  Position		  [1000, 47, 1025, 73]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Condition"
+	  SourceType		  "Design Verifier Test Condition"
+	  enabled		  on
+	  customAVTBlockType	  "Test Condition"
+	  intervals		  "true"
+	  initial		  off
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Condition002"
+	  SID			  "59:408"
+	  Ports			  [1]
+	  Position		  [1000, 122, 1025, 148]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Condition"
+	  SourceType		  "Design Verifier Test Condition"
+	  enabled		  on
+	  customAVTBlockType	  "Test Condition"
+	  intervals		  "true"
+	  initial		  off
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Condition003"
+	  SID			  "59:412"
+	  Ports			  [1]
+	  Position		  [1000, 202, 1025, 228]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Condition"
+	  SourceType		  "Design Verifier Test Condition"
+	  enabled		  on
+	  customAVTBlockType	  "Test Condition"
+	  intervals		  "true"
+	  initial		  off
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Condition004"
+	  SID			  "59:416"
+	  Ports			  [1]
+	  Position		  [1000, 282, 1025, 308]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Condition"
+	  SourceType		  "Design Verifier Test Condition"
+	  enabled		  on
+	  customAVTBlockType	  "Test Condition"
+	  intervals		  "true"
+	  initial		  off
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Condition005"
+	  SID			  "59:420"
+	  Ports			  [1]
+	  Position		  [1000, 367, 1025, 393]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Condition"
+	  SourceType		  "Design Verifier Test Condition"
+	  enabled		  on
+	  customAVTBlockType	  "Test Condition"
+	  intervals		  "true"
+	  initial		  off
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ001"
+	  SID			  "59:403"
+	  Tag			  "CustomScope"
+	  Ports			  [1, 1]
+	  Position		  [320, 31, 965, 89]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag2"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "speed|speed_max,speed_min|speed_min <= speed && speed <= speed_max"
+	  System {
+	    Name		    "EQ001"
+	    Location		    [779, 124, 1319, 449]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "168"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "speed"
+	      SID		      "59:403:167"
+	      Position		      [120, 203, 150, 217]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp"
+	      SID		      "59:403:163"
+	      Ports		      [2, 1]
+	      Position		      [360, 192, 390, 223]
+	      ZOrder		      -17
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp"
+	      SID		      "59:403:164"
+	      Ports		      [2, 1]
+	      Position		      [240, 187, 270, 218]
+	      ZOrder		      -18
+	      Operator		      "<="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp1"
+	      SID		      "59:403:165"
+	      Ports		      [2, 1]
+	      Position		      [240, 122, 270, 153]
+	      ZOrder		      -18
+	      Operator		      "<="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "speed_max"
+	      SID		      "59:403:168"
+	      Position		      [120, 265, 170, 295]
+	      ZOrder		      -5
+	      Value		      "speed_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "speed_min"
+	      SID		      "59:403:166"
+	      Position		      [120, 55, 170, 85]
+	      ZOrder		      -5
+	      Value		      "speed_min"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:403:162"
+	      Position		      [480, 198, 510, 212]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "RelOp"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "speed"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		DstBlock		"RelOp"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[35, 0; 0, -80]
+		DstBlock		"RelOp1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp1"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, 80]
+	      DstBlock		      "LogicOp"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "speed_min"
+	      SrcPort		      1
+	      Points		      [41, 0; 0, 125]
+	      DstBlock		      "RelOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "speed_max"
+	      SrcPort		      1
+	      Points		      [45, 0; 0, -135]
+	      DstBlock		      "RelOp1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ002"
+	  SID			  "59:407"
+	  Tag			  "CustomScope"
+	  Ports			  [1, 1]
+	  Position		  [320, 106, 965, 164]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag3"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "driver_throt|throt_max,throt_min|throt_min <= driver_throt && driver_throt <= throt_max"
+	  System {
+	    Name		    "EQ002"
+	    Location		    [779, 124, 1319, 449]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "168"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "driver_throt"
+	      SID		      "59:407:167"
+	      Position		      [120, 203, 150, 217]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp"
+	      SID		      "59:407:163"
+	      Ports		      [2, 1]
+	      Position		      [360, 192, 390, 223]
+	      ZOrder		      -17
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp"
+	      SID		      "59:407:164"
+	      Ports		      [2, 1]
+	      Position		      [240, 187, 270, 218]
+	      ZOrder		      -18
+	      Operator		      "<="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp1"
+	      SID		      "59:407:165"
+	      Ports		      [2, 1]
+	      Position		      [240, 122, 270, 153]
+	      ZOrder		      -18
+	      Operator		      "<="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "throt_max"
+	      SID		      "59:407:168"
+	      Position		      [120, 265, 170, 295]
+	      ZOrder		      -5
+	      Value		      "throt_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "throt_min"
+	      SID		      "59:407:166"
+	      Position		      [120, 55, 170, 85]
+	      ZOrder		      -5
+	      Value		      "throt_min"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:407:162"
+	      Position		      [480, 198, 510, 212]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "RelOp"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "driver_throt"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		DstBlock		"RelOp"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[35, 0; 0, -80]
+		DstBlock		"RelOp1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp1"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, 80]
+	      DstBlock		      "LogicOp"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "throt_min"
+	      SrcPort		      1
+	      Points		      [41, 0; 0, 125]
+	      DstBlock		      "RelOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "throt_max"
+	      SrcPort		      1
+	      Points		      [45, 0; 0, -135]
+	      DstBlock		      "RelOp1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ003"
+	  SID			  "59:411"
+	  Tag			  "CustomScope"
+	  Ports			  [1, 1]
+	  Position		  [320, 186, 965, 244]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag4"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "speed||init(speed==0,1)"
+	  System {
+	    Name		    "EQ003"
+	    Location		    [779, 124, 1319, 309]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "166"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "speed"
+	      SID		      "59:411:165"
+	      Position		      [120, 63, 150, 77]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "59:411:166"
+	      Position		      [120, 125, 150, 155]
+	      ZOrder		      -5
+	      ShowName		      off
+	      Value		      "0"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp"
+	      SID		      "59:411:164"
+	      Ports		      [2, 1]
+	      Position		      [240, 62, 270, 93]
+	      ZOrder		      -18
+	      Operator		      "=="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "initialCondition"
+	      SID		      "59:411:163"
+	      Ports		      [1, 1]
+	      Position		      [360, 47, 450, 103]
+	      LibraryVersion	      "1.18"
+	      SourceBlock	      "propertySpecificationOperatorLib/initialCondition"
+	      SourceType	      "ignoreInitSteps"
+	      DelayCount	      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:411:162"
+	      Position		      [480, 68, 510, 82]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "initialCondition"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "speed"
+	      SrcPort		      1
+	      DstBlock		      "RelOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp"
+	      SrcPort		      1
+	      DstBlock		      "initialCondition"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -55]
+	      DstBlock		      "RelOp"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ004"
+	  SID			  "59:415"
+	  Tag			  "CustomScope"
+	  Ports			  [1, 1]
+	  Position		  [320, 266, 965, 324]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag5"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "target|target_min|init(target==target_min,1)"
+	  System {
+	    Name		    "EQ004"
+	    Location		    [779, 124, 1319, 309]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "166"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "target"
+	      SID		      "59:415:165"
+	      Position		      [120, 63, 150, 77]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp"
+	      SID		      "59:415:164"
+	      Ports		      [2, 1]
+	      Position		      [240, 62, 270, 93]
+	      ZOrder		      -18
+	      Operator		      "=="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "initialCondition"
+	      SID		      "59:415:163"
+	      Ports		      [1, 1]
+	      Position		      [360, 47, 450, 103]
+	      LibraryVersion	      "1.18"
+	      SourceBlock	      "propertySpecificationOperatorLib/initialCondition"
+	      SourceType	      "ignoreInitSteps"
+	      DelayCount	      "1"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "target_min"
+	      SID		      "59:415:166"
+	      Position		      [120, 125, 175, 155]
+	      ZOrder		      -5
+	      Value		      "target_min"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:415:162"
+	      Position		      [480, 68, 510, 82]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "initialCondition"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "target"
+	      SrcPort		      1
+	      DstBlock		      "RelOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp"
+	      SrcPort		      1
+	      DstBlock		      "initialCondition"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "target_min"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -55]
+	      DstBlock		      "RelOp"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ005"
+	  SID			  "59:419"
+	  Tag			  "CustomScope"
+	  Ports			  [2, 1]
+	  Position		  [320, 344, 965, 411]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag6"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "dec,inc||~(inc && dec)"
+	  System {
+	    Name		    "EQ005"
+	    Location		    [779, 124, 1319, 301]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "166"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "dec"
+	      SID		      "59:419:166"
+	      Position		      [120, 133, 150, 147]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "inc"
+	      SID		      "59:419:165"
+	      Position		      [120, 63, 150, 77]
+	      ZOrder		      -1
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp"
+	      SID		      "59:419:163"
+	      Ports		      [1, 1]
+	      Position		      [360, 59, 390, 91]
+	      ZOrder		      -17
+	      Operator		      "NOT"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp1"
+	      SID		      "59:419:164"
+	      Ports		      [2, 1]
+	      Position		      [240, 62, 270, 93]
+	      ZOrder		      -17
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:419:162"
+	      Position		      [480, 68, 510, 82]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp1"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "LogicOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "inc"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "dec"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -55]
+	      DstBlock		      "LogicOp1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ006"
+	  SID			  "59:424"
+	  Tag			  "CustomScope"
+	  Ports			  [5, 1]
+	  Position		  [320, 430, 965, 520]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag7"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "brake_pressure,enable,is_ctrl,set,speed|target_max,target_min|enable && brake_pressure == 0 && ("
+	  " set \\|\\| prev(is_ctrl,1) ) && (target_min <= speed && speed <= target_max) ==> is_ctrl"
+	  System {
+	    Name		    "EQ006"
+	    Location		    [779, 124, 1559, 869]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "178"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "brake_pressure"
+	      SID		      "59:424:170"
+	      Position		      [240, 133, 270, 147]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "enable"
+	      SID		      "59:424:166"
+	      Position		      [360, 63, 390, 77]
+	      ZOrder		      -1
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "is_ctrl"
+	      SID		      "59:424:165"
+	      Position		      [480, 133, 510, 147]
+	      ZOrder		      -1
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "set"
+	      SID		      "59:424:172"
+	      Position		      [240, 273, 270, 287]
+	      ZOrder		      -1
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "speed"
+	      SID		      "59:424:177"
+	      Position		      [120, 623, 150, 637]
+	      ZOrder		      -1
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "59:424:171"
+	      Position		      [240, 195, 270, 225]
+	      ZOrder		      -5
+	      ShowName		      off
+	      Value		      "0"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	    }
+	    Block {
+	      BlockType		      Delay
+	      Name		      "Delay"
+	      SID		      "59:424:173"
+	      Ports		      [1, 1]
+	      Position		      [240, 333, 275, 367]
+	      InputPortMap	      "u0"
+	      DelayLength	      "1"
+	      ExternalReset	      "None"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Implies"
+	      SID		      "59:424:163"
+	      Ports		      [2, 1]
+	      Position		      [600, 63, 675, 107]
+	      LibraryVersion	      "1.142"
+	      SourceBlock	      "sldvlib/Verification Utilities/Implies"
+	      SourceType	      "Design Verifier Implies"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp"
+	      SID		      "59:424:164"
+	      Ports		      [4, 1]
+	      Position		      [480, 62, 510, 93]
+	      ZOrder		      -17
+	      Inputs		      "4"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp1"
+	      SID		      "59:424:168"
+	      Ports		      [2, 1]
+	      Position		      [360, 272, 390, 303]
+	      ZOrder		      -17
+	      Operator		      "OR"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp2"
+	      SID		      "59:424:169"
+	      Ports		      [2, 1]
+	      Position		      [360, 612, 390, 643]
+	      ZOrder		      -17
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp"
+	      SID		      "59:424:167"
+	      Ports		      [2, 1]
+	      Position		      [360, 132, 390, 163]
+	      ZOrder		      -18
+	      Operator		      "=="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp1"
+	      SID		      "59:424:174"
+	      Ports		      [2, 1]
+	      Position		      [240, 607, 270, 638]
+	      ZOrder		      -18
+	      Operator		      "<="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp2"
+	      SID		      "59:424:175"
+	      Ports		      [2, 1]
+	      Position		      [240, 472, 270, 503]
+	      ZOrder		      -18
+	      Operator		      "<="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "target_max"
+	      SID		      "59:424:178"
+	      Position		      [120, 685, 175, 715]
+	      ZOrder		      -5
+	      Value		      "target_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "target_min"
+	      SID		      "59:424:176"
+	      Position		      [120, 475, 175, 505]
+	      ZOrder		      -5
+	      Value		      "target_min"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:424:162"
+	      Position		      [720, 78, 750, 92]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Implies"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "Implies"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "enable"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "set"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp1"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "brake_pressure"
+	      SrcPort		      1
+	      DstBlock		      "RelOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "speed"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		DstBlock		"RelOp1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[35, 0; 0, -150]
+		DstBlock		"RelOp2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "is_ctrl"
+	      SrcPort		      1
+	      Points		      [-4, 0]
+	      Branch {
+		Points			[39, 0; 0, -45]
+		DstBlock		"Implies"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[4, 190; -290, 0]
+		DstBlock		"Delay"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Delay"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, -55]
+	      DstBlock		      "LogicOp1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -55]
+	      DstBlock		      "RelOp"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "RelOp"
+	      SrcPort		      1
+	      Points		      [62, 0; 0, -70]
+	      DstBlock		      "LogicOp"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "target_min"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, 125]
+	      DstBlock		      "RelOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp2"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, 150]
+	      DstBlock		      "LogicOp2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "target_max"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, -205]
+	      DstBlock		      "RelOp2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp1"
+	      SrcPort		      1
+	      Points		      [66, 0; 0, -210]
+	      DstBlock		      "LogicOp"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp2"
+	      SrcPort		      1
+	      Points		      [70, 0]
+	      DstBlock		      "LogicOp"
+	      DstPort		      4
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ007"
+	  SID			  "59:433"
+	  Tag			  "CustomScope"
+	  Ports			  [2, 1]
+	  Position		  [320, 539, 965, 606]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag8"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "is_ctrl,set||init(~set,1) ==> init(~is_ctrl,1)"
+	  System {
+	    Name		    "EQ007"
+	    Location		    [779, 124, 1439, 380]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "169"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "is_ctrl"
+	      SID		      "59:433:169"
+	      Position		      [120, 203, 150, 217]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "set"
+	      SID		      "59:433:168"
+	      Position		      [120, 63, 150, 77]
+	      ZOrder		      -1
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Implies"
+	      SID		      "59:433:163"
+	      Ports		      [2, 1]
+	      Position		      [480, 58, 555, 102]
+	      LibraryVersion	      "1.142"
+	      SourceBlock	      "sldvlib/Verification Utilities/Implies"
+	      SourceType	      "Design Verifier Implies"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp"
+	      SID		      "59:433:166"
+	      Ports		      [1, 1]
+	      Position		      [240, 54, 270, 86]
+	      ZOrder		      -17
+	      Operator		      "NOT"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp1"
+	      SID		      "59:433:167"
+	      Ports		      [1, 1]
+	      Position		      [240, 194, 270, 226]
+	      ZOrder		      -17
+	      Operator		      "NOT"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "initialCondition"
+	      SID		      "59:433:164"
+	      Ports		      [1, 1]
+	      Position		      [360, 42, 450, 98]
+	      LibraryVersion	      "1.18"
+	      SourceBlock	      "propertySpecificationOperatorLib/initialCondition"
+	      SourceType	      "ignoreInitSteps"
+	      DelayCount	      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "initialCondition1"
+	      SID		      "59:433:165"
+	      Ports		      [1, 1]
+	      Position		      [360, 182, 450, 238]
+	      LibraryVersion	      "1.18"
+	      SourceBlock	      "propertySpecificationOperatorLib/initialCondition"
+	      SourceType	      "ignoreInitSteps"
+	      DelayCount	      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:433:162"
+	      Position		      [600, 73, 630, 87]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "initialCondition"
+	      SrcPort		      1
+	      DstBlock		      "Implies"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Implies"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "set"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "is_ctrl"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp"
+	      SrcPort		      1
+	      DstBlock		      "initialCondition"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp1"
+	      SrcPort		      1
+	      DstBlock		      "initialCondition1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "initialCondition1"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, -120]
+	      DstBlock		      "Implies"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ008"
+	  SID			  "59:438"
+	  Tag			  "CustomScope"
+	  Ports			  [5, 1]
+	  Position		  [320, 625, 965, 715]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag9"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "dec,inc,set,speed,target|target_max,target_min|set && (inc \\|\\| dec) && (target_min <= speed &"
+	  "& speed <= target_max) ==> target == speed"
+	  System {
+	    Name		    "EQ008"
+	    Location		    [779, 124, 1559, 659]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "176"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "dec"
+	      SID		      "59:438:172"
+	      Position		      [240, 203, 270, 217]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "inc"
+	      SID		      "59:438:171"
+	      Position		      [240, 133, 270, 147]
+	      ZOrder		      -1
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "set"
+	      SID		      "59:438:166"
+	      Position		      [360, 63, 390, 77]
+	      ZOrder		      -1
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "speed"
+	      SID		      "59:438:170"
+	      Position		      [360, 343, 390, 357]
+	      ZOrder		      -1
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "target"
+	      SID		      "59:438:169"
+	      Position		      [360, 273, 390, 287]
+	      ZOrder		      -1
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Implies"
+	      SID		      "59:438:163"
+	      Ports		      [2, 1]
+	      Position		      [600, 68, 675, 112]
+	      LibraryVersion	      "1.142"
+	      SourceBlock	      "sldvlib/Verification Utilities/Implies"
+	      SourceType	      "Design Verifier Implies"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp"
+	      SID		      "59:438:164"
+	      Ports		      [3, 1]
+	      Position		      [480, 64, 510, 96]
+	      ZOrder		      -17
+	      Inputs		      "3"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp1"
+	      SID		      "59:438:167"
+	      Ports		      [2, 1]
+	      Position		      [360, 132, 390, 163]
+	      ZOrder		      -17
+	      Operator		      "OR"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp2"
+	      SID		      "59:438:168"
+	      Ports		      [2, 1]
+	      Position		      [360, 277, 390, 308]
+	      ZOrder		      -17
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp"
+	      SID		      "59:438:165"
+	      Ports		      [2, 1]
+	      Position		      [480, 272, 510, 303]
+	      ZOrder		      -18
+	      Operator		      "=="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp1"
+	      SID		      "59:438:173"
+	      Ports		      [2, 1]
+	      Position		      [240, 272, 270, 303]
+	      ZOrder		      -18
+	      Operator		      "<="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp2"
+	      SID		      "59:438:174"
+	      Ports		      [2, 1]
+	      Position		      [240, 332, 270, 363]
+	      ZOrder		      -18
+	      Operator		      "<="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "target_max"
+	      SID		      "59:438:176"
+	      Position		      [120, 475, 175, 505]
+	      ZOrder		      -5
+	      Value		      "target_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "target_min"
+	      SID		      "59:438:175"
+	      Position		      [120, 265, 175, 295]
+	      ZOrder		      -5
+	      Value		      "target_min"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:438:162"
+	      Position		      [720, 83, 750, 97]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Implies"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "target_min"
+	      SrcPort		      1
+	      DstBlock		      "RelOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp"
+	      SrcPort		      1
+	      DstBlock		      "Implies"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "set"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "inc"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp1"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "target"
+	      SrcPort		      1
+	      DstBlock		      "RelOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp2"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -45]
+	      DstBlock		      "LogicOp2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "dec"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -55]
+	      DstBlock		      "LogicOp1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "speed"
+	      SrcPort		      1
+	      Points		      [-4, 0]
+	      Branch {
+		Points			[39, 0; 0, -55]
+		DstBlock		"RelOp"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -25; -166, 0]
+		DstBlock		"RelOp2"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[4, -35; -170, 0]
+		DstBlock		"RelOp1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp1"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -70]
+	      DstBlock		      "LogicOp"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "target_max"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -135]
+	      DstBlock		      "RelOp2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "RelOp"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -185]
+	      DstBlock		      "Implies"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp2"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -205]
+	      DstBlock		      "LogicOp"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ009"
+	  SID			  "59:447"
+	  Tag			  "CustomScope"
+	  Ports			  [3, 1]
+	  Position		  [320, 733, 965, 807]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag10"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "inc,set,target|target_max,target_min,vel_inc|inc && (target_min < target && target < target_max)"
+	  " && ~set ==> (target - prev(target,1)) == vel_inc"
+	  System {
+	    Name		    "EQ009"
+	    Location		    [779, 124, 1559, 591]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "177"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "inc"
+	      SID		      "59:447:166"
+	      Position		      [360, 63, 390, 77]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "set"
+	      SID		      "59:447:173"
+	      Position		      [240, 273, 270, 287]
+	      ZOrder		      -1
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "target"
+	      SID		      "59:447:174"
+	      Position		      [120, 413, 150, 427]
+	      ZOrder		      -1
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      SID		      "59:447:169"
+	      Ports		      [2, 1]
+	      Position		      [360, 412, 390, 443]
+	      ZOrder		      -2
+	      Inputs		      "+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Delay
+	      Name		      "Delay"
+	      SID		      "59:447:175"
+	      Ports		      [1, 1]
+	      Position		      [240, 403, 275, 437]
+	      InputPortMap	      "u0"
+	      DelayLength	      "1"
+	      ExternalReset	      "None"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Implies"
+	      SID		      "59:447:163"
+	      Ports		      [2, 1]
+	      Position		      [600, 68, 675, 112]
+	      LibraryVersion	      "1.142"
+	      SourceBlock	      "sldvlib/Verification Utilities/Implies"
+	      SourceType	      "Design Verifier Implies"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp"
+	      SID		      "59:447:164"
+	      Ports		      [3, 1]
+	      Position		      [480, 64, 510, 96]
+	      ZOrder		      -17
+	      Inputs		      "3"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp1"
+	      SID		      "59:447:167"
+	      Ports		      [2, 1]
+	      Position		      [360, 137, 390, 168]
+	      ZOrder		      -17
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp2"
+	      SID		      "59:447:168"
+	      Ports		      [1, 1]
+	      Position		      [360, 264, 390, 296]
+	      ZOrder		      -17
+	      Operator		      "NOT"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp"
+	      SID		      "59:447:165"
+	      Ports		      [2, 1]
+	      Position		      [480, 417, 510, 448]
+	      ZOrder		      -18
+	      Operator		      "=="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp1"
+	      SID		      "59:447:171"
+	      Ports		      [2, 1]
+	      Position		      [240, 132, 270, 163]
+	      ZOrder		      -18
+	      Operator		      "<"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp2"
+	      SID		      "59:447:172"
+	      Ports		      [2, 1]
+	      Position		      [240, 192, 270, 223]
+	      ZOrder		      -18
+	      Operator		      "<"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "target_max"
+	      SID		      "59:447:177"
+	      Position		      [120, 335, 175, 365]
+	      ZOrder		      -5
+	      Value		      "target_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "target_min"
+	      SID		      "59:447:176"
+	      Position		      [120, 125, 175, 155]
+	      ZOrder		      -5
+	      Value		      "target_min"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "vel_inc"
+	      SID		      "59:447:170"
+	      Position		      [360, 335, 400, 365]
+	      ZOrder		      -5
+	      Value		      "vel_inc"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:447:162"
+	      Position		      [720, 83, 750, 97]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Implies"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "target_min"
+	      SrcPort		      1
+	      DstBlock		      "RelOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Delay"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 15]
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "target"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		DstBlock		"Delay"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[65, 0; 0, -20; 125, 0]
+		DstBlock		"Add"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[31, 0; 0, -220]
+		DstBlock		"RelOp2"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[35, 0; 0, -265]
+		DstBlock		"RelOp1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp"
+	      SrcPort		      1
+	      DstBlock		      "Implies"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "inc"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp1"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "set"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "RelOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp2"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -45]
+	      DstBlock		      "LogicOp1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp1"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -75]
+	      DstBlock		      "LogicOp"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "vel_inc"
+	      SrcPort		      1
+	      Points		      [55, 0; 0, 90]
+	      DstBlock		      "RelOp"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "target_max"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -135]
+	      DstBlock		      "RelOp2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp2"
+	      SrcPort		      1
+	      Points		      [70, 0]
+	      DstBlock		      "LogicOp"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "RelOp"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -330]
+	      DstBlock		      "Implies"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ010"
+	  SID			  "59:454"
+	  Tag			  "CustomScope"
+	  Ports			  [3, 1]
+	  Position		  [320, 828, 965, 902]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag11"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "dec,set,target|target_max,target_min,vel_dec|dec && (target_min < target && target < target_max)"
+	  " && ~set ==> (target - prev(target,1)) == -vel_dec"
+	  System {
+	    Name		    "EQ010"
+	    Location		    [779, 124, 1559, 591]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "177"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "dec"
+	      SID		      "59:454:166"
+	      Position		      [360, 63, 390, 77]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "set"
+	      SID		      "59:454:173"
+	      Position		      [240, 273, 270, 287]
+	      ZOrder		      -1
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "target"
+	      SID		      "59:454:174"
+	      Position		      [120, 413, 150, 427]
+	      ZOrder		      -1
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      SID		      "59:454:169"
+	      Ports		      [2, 1]
+	      Position		      [360, 412, 390, 443]
+	      ZOrder		      -2
+	      Inputs		      "+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Delay
+	      Name		      "Delay"
+	      SID		      "59:454:175"
+	      Ports		      [1, 1]
+	      Position		      [240, 403, 275, 437]
+	      InputPortMap	      "u0"
+	      DelayLength	      "1"
+	      ExternalReset	      "None"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Implies"
+	      SID		      "59:454:163"
+	      Ports		      [2, 1]
+	      Position		      [600, 68, 675, 112]
+	      LibraryVersion	      "1.142"
+	      SourceBlock	      "sldvlib/Verification Utilities/Implies"
+	      SourceType	      "Design Verifier Implies"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp"
+	      SID		      "59:454:164"
+	      Ports		      [3, 1]
+	      Position		      [480, 64, 510, 96]
+	      ZOrder		      -17
+	      Inputs		      "3"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp1"
+	      SID		      "59:454:167"
+	      Ports		      [2, 1]
+	      Position		      [360, 137, 390, 168]
+	      ZOrder		      -17
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp2"
+	      SID		      "59:454:168"
+	      Ports		      [1, 1]
+	      Position		      [360, 264, 390, 296]
+	      ZOrder		      -17
+	      Operator		      "NOT"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp"
+	      SID		      "59:454:165"
+	      Ports		      [2, 1]
+	      Position		      [480, 417, 510, 448]
+	      ZOrder		      -18
+	      Operator		      "=="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp1"
+	      SID		      "59:454:171"
+	      Ports		      [2, 1]
+	      Position		      [240, 132, 270, 163]
+	      ZOrder		      -18
+	      Operator		      "<"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp2"
+	      SID		      "59:454:172"
+	      Ports		      [2, 1]
+	      Position		      [240, 192, 270, 223]
+	      ZOrder		      -18
+	      Operator		      "<"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "target_max"
+	      SID		      "59:454:177"
+	      Position		      [120, 335, 175, 365]
+	      ZOrder		      -5
+	      Value		      "target_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "target_min"
+	      SID		      "59:454:176"
+	      Position		      [120, 125, 175, 155]
+	      ZOrder		      -5
+	      Value		      "target_min"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "vel_dec"
+	      SID		      "59:454:170"
+	      Position		      [360, 335, 405, 365]
+	      ZOrder		      -5
+	      Value		      "-vel_dec"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:454:162"
+	      Position		      [720, 83, 750, 97]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Implies"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "target_min"
+	      SrcPort		      1
+	      DstBlock		      "RelOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Delay"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 15]
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "target"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		DstBlock		"Delay"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[65, 0; 0, -20; 125, 0]
+		DstBlock		"Add"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[31, 0; 0, -220]
+		DstBlock		"RelOp2"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[35, 0; 0, -265]
+		DstBlock		"RelOp1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp"
+	      SrcPort		      1
+	      DstBlock		      "Implies"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "dec"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp1"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "set"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "RelOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp2"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -45]
+	      DstBlock		      "LogicOp1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp1"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -75]
+	      DstBlock		      "LogicOp"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "vel_dec"
+	      SrcPort		      1
+	      Points		      [50, 0; 0, 90]
+	      DstBlock		      "RelOp"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "target_max"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -135]
+	      DstBlock		      "RelOp2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp2"
+	      SrcPort		      1
+	      Points		      [70, 0]
+	      DstBlock		      "LogicOp"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "RelOp"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -330]
+	      DstBlock		      "Implies"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ011"
+	  SID			  "59:461"
+	  Tag			  "CustomScope"
+	  Ports			  [3, 1]
+	  Position		  [320, 923, 965, 997]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag12"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "diff_target,speed,target||diff_target == target - speed"
+	  System {
+	    Name		    "EQ011"
+	    Location		    [779, 124, 1319, 371]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "167"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "diff_target"
+	      SID		      "59:461:164"
+	      Position		      [240, 63, 270, 77]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "speed"
+	      SID		      "59:461:167"
+	      Position		      [120, 203, 150, 217]
+	      ZOrder		      -1
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "target"
+	      SID		      "59:461:166"
+	      Position		      [120, 133, 150, 147]
+	      ZOrder		      -1
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      SID		      "59:461:165"
+	      Ports		      [2, 1]
+	      Position		      [240, 132, 270, 163]
+	      ZOrder		      -2
+	      Inputs		      "+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp"
+	      SID		      "59:461:163"
+	      Ports		      [2, 1]
+	      Position		      [360, 62, 390, 93]
+	      ZOrder		      -18
+	      Operator		      "=="
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:461:162"
+	      Position		      [480, 68, 510, 82]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "target"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "diff_target"
+	      SrcPort		      1
+	      DstBlock		      "RelOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "speed"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -55]
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -65]
+	      DstBlock		      "RelOp"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EQ012"
+	  SID			  "59:467"
+	  Tag			  "CustomScope"
+	  Ports			  [1, 1]
+	  Position		  [320, 1016, 965, 1074]
+	  UserDataPersistent	  on
+	  UserData		  "DataTag13"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "sldvLiteralTemporalLogicLib"
+	  MaskDescription	  "sldvLiteralTemporalLogiclib\n"
+	  MaskPromptString	  "ì¸óÕïœêî|ÉpÉâÉÅÅ[É^ïœêî|åüç∏éÆ"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskVariables		  "InputVar=&1;ParamVar=&2;VerifEq=&3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "literalEq2SimulinkCallback(gcb,InputVar,ParamVar,VerifEq)\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp(VerifEq)"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "throt|throt_max,throt_min|~(throt_min > throt \\|\\| throt > throt_max)"
+	  System {
+	    Name		    "EQ012"
+	    Location		    [779, 124, 1439, 449]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "169"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "throt"
+	      SID		      "59:467:168"
+	      Position		      [120, 203, 150, 217]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp"
+	      SID		      "59:467:163"
+	      Ports		      [1, 1]
+	      Position		      [480, 189, 510, 221]
+	      ZOrder		      -17
+	      Operator		      "NOT"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "LogicOp1"
+	      SID		      "59:467:164"
+	      Ports		      [2, 1]
+	      Position		      [360, 192, 390, 223]
+	      ZOrder		      -17
+	      Operator		      "OR"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp"
+	      SID		      "59:467:165"
+	      Ports		      [2, 1]
+	      Position		      [240, 187, 270, 218]
+	      ZOrder		      -18
+	      Operator		      ">"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "RelOp1"
+	      SID		      "59:467:166"
+	      Ports		      [2, 1]
+	      Position		      [240, 122, 270, 153]
+	      ZOrder		      -18
+	      Operator		      ">"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "throt_max"
+	      SID		      "59:467:169"
+	      Position		      [120, 265, 170, 295]
+	      ZOrder		      -5
+	      Value		      "throt_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "throt_min"
+	      SID		      "59:467:167"
+	      Position		      [120, 55, 170, 85]
+	      ZOrder		      -5
+	      Value		      "throt_min"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      SID		      "59:467:162"
+	      Position		      [600, 198, 630, 212]
+	      ZOrder		      -9
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp1"
+	      SrcPort		      1
+	      Points		      [0, -5]
+	      DstBlock		      "LogicOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp"
+	      SrcPort		      1
+	      DstBlock		      "LogicOp1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "throt"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		DstBlock		"RelOp"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[35, 0; 0, -80]
+		DstBlock		"RelOp1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "LogicOp"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RelOp1"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, 80]
+	      DstBlock		      "LogicOp1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "throt_min"
+	      SrcPort		      1
+	      Points		      [41, 0; 0, 125]
+	      DstBlock		      "RelOp"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "throt_max"
+	      SrcPort		      1
+	      Points		      [45, 0; 0, -135]
+	      DstBlock		      "RelOp1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Proof006"
+	  SID			  "59:426"
+	  Ports			  [1]
+	  Position		  [1100, 462, 1125, 488]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Proof Objective"
+	  SourceType		  "Design Verifier Proof Objective"
+	  enabled		  on
+	  customAVTBlockType	  "Proof Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	  enableStopSim		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Proof007"
+	  SID			  "59:434"
+	  Ports			  [1]
+	  Position		  [1000, 562, 1025, 588]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Proof Objective"
+	  SourceType		  "Design Verifier Proof Objective"
+	  enabled		  on
+	  customAVTBlockType	  "Proof Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	  enableStopSim		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Proof008"
+	  SID			  "59:440"
+	  Ports			  [1]
+	  Position		  [1100, 657, 1125, 683]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Proof Objective"
+	  SourceType		  "Design Verifier Proof Objective"
+	  enabled		  on
+	  customAVTBlockType	  "Proof Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	  enableStopSim		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Proof009"
+	  SID			  "59:449"
+	  Ports			  [1]
+	  Position		  [1100, 757, 1125, 783]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Proof Objective"
+	  SourceType		  "Design Verifier Proof Objective"
+	  enabled		  on
+	  customAVTBlockType	  "Proof Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	  enableStopSim		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Proof010"
+	  SID			  "59:456"
+	  Ports			  [1]
+	  Position		  [1100, 852, 1125, 878]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Proof Objective"
+	  SourceType		  "Design Verifier Proof Objective"
+	  enabled		  on
+	  customAVTBlockType	  "Proof Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	  enableStopSim		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Proof011"
+	  SID			  "59:462"
+	  Ports			  [1]
+	  Position		  [1000, 947, 1025, 973]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Proof Objective"
+	  SourceType		  "Design Verifier Proof Objective"
+	  enabled		  on
+	  customAVTBlockType	  "Proof Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	  enableStopSim		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Proof012"
+	  SID			  "59:468"
+	  Ports			  [1]
+	  Position		  [1000, 1032, 1025, 1058]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Proof Objective"
+	  SourceType		  "Design Verifier Proof Objective"
+	  enabled		  on
+	  customAVTBlockType	  "Proof Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	  enableStopSim		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "TestObj006"
+	  SID			  "59:427"
+	  Ports			  [1]
+	  Position		  [1100, 502, 1125, 528]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Objective"
+	  SourceType		  "Design Verifier Test Objective"
+	  enabled		  off
+	  customAVTBlockType	  "Test Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "TestObj007"
+	  SID			  "59:435"
+	  Ports			  [1]
+	  Position		  [1000, 602, 1025, 628]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Objective"
+	  SourceType		  "Design Verifier Test Objective"
+	  enabled		  off
+	  customAVTBlockType	  "Test Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "TestObj008"
+	  SID			  "59:441"
+	  Ports			  [1]
+	  Position		  [1100, 697, 1125, 723]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Objective"
+	  SourceType		  "Design Verifier Test Objective"
+	  enabled		  off
+	  customAVTBlockType	  "Test Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "TestObj009"
+	  SID			  "59:450"
+	  Ports			  [1]
+	  Position		  [1100, 797, 1125, 823]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Objective"
+	  SourceType		  "Design Verifier Test Objective"
+	  enabled		  off
+	  customAVTBlockType	  "Test Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "TestObj010"
+	  SID			  "59:457"
+	  Ports			  [1]
+	  Position		  [1100, 892, 1125, 918]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Objective"
+	  SourceType		  "Design Verifier Test Objective"
+	  enabled		  off
+	  customAVTBlockType	  "Test Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "TestObj011"
+	  SID			  "59:463"
+	  Ports			  [1]
+	  Position		  [1000, 987, 1025, 1013]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Objective"
+	  SourceType		  "Design Verifier Test Objective"
+	  enabled		  off
+	  customAVTBlockType	  "Test Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "TestObj012"
+	  SID			  "59:469"
+	  Ports			  [1]
+	  Position		  [1000, 1072, 1025, 1098]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.142"
+	  SourceBlock		  "sldvlib/Objectives and Constraints/Test Objective"
+	  SourceType		  "Design Verifier Test Objective"
+	  enabled		  off
+	  customAVTBlockType	  "Test Objective"
+	  intervals		  "true"
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "brake_pressure_from"
+	  SID			  "59:428"
+	  Position		  [195, 428, 295, 442]
+	  ShowName		  off
+	  GotoTag		  "brake_pressure"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "brake_pressure_goto"
+	  SID			  "59:382"
+	  Position		  [70, 28, 170, 42]
+	  ShowName		  off
+	  GotoTag		  "brake_pressure"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "dec_from"
+	  SID			  "59:422"
+	  Position		  [195, 353, 295, 367]
+	  ShowName		  off
+	  GotoTag		  "dec"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "dec_from1"
+	  SID			  "59:442"
+	  Position		  [195, 623, 295, 637]
+	  ShowName		  off
+	  GotoTag		  "dec"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "dec_from2"
+	  SID			  "59:458"
+	  Position		  [195, 833, 295, 847]
+	  ShowName		  off
+	  GotoTag		  "dec"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "dec_goto"
+	  SID			  "59:384"
+	  Position		  [70, 68, 170, 82]
+	  ShowName		  off
+	  GotoTag		  "dec"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "diff_target_from"
+	  SID			  "59:464"
+	  Position		  [195, 928, 295, 942]
+	  ShowName		  off
+	  GotoTag		  "diff_target"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "diff_target_goto"
+	  SID			  "59:386"
+	  Position		  [70, 108, 170, 122]
+	  ShowName		  off
+	  GotoTag		  "diff_target"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "driver_throt_from"
+	  SID			  "59:410"
+	  Position		  [195, 128, 295, 142]
+	  ShowName		  off
+	  GotoTag		  "driver_throt"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "driver_throt_goto"
+	  SID			  "59:388"
+	  Position		  [70, 148, 170, 162]
+	  ShowName		  off
+	  GotoTag		  "driver_throt"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "enable_from"
+	  SID			  "59:429"
+	  Position		  [195, 448, 295, 462]
+	  ShowName		  off
+	  GotoTag		  "enable"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "enable_goto"
+	  SID			  "59:390"
+	  Position		  [70, 188, 170, 202]
+	  ShowName		  off
+	  GotoTag		  "enable"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "inc_from"
+	  SID			  "59:423"
+	  Position		  [195, 388, 295, 402]
+	  ShowName		  off
+	  GotoTag		  "inc"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "inc_from1"
+	  SID			  "59:443"
+	  Position		  [195, 643, 295, 657]
+	  ShowName		  off
+	  GotoTag		  "inc"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "inc_from2"
+	  SID			  "59:451"
+	  Position		  [195, 738, 295, 752]
+	  ShowName		  off
+	  GotoTag		  "inc"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "inc_goto"
+	  SID			  "59:392"
+	  Position		  [70, 228, 170, 242]
+	  ShowName		  off
+	  GotoTag		  "inc"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "initialTrue006"
+	  SID			  "59:425"
+	  Ports			  [1, 1]
+	  Position		  [1005, 460, 1065, 490]
+	  ShowName		  off
+	  LibraryVersion	  "1.18"
+	  SourceBlock		  "propertySpecificationOperatorLib/initialTrue"
+	  SourceType		  "ignoreInitSteps"
+	  DelayCount		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "initialTrue008"
+	  SID			  "59:439"
+	  Ports			  [1, 1]
+	  Position		  [1005, 655, 1065, 685]
+	  ShowName		  off
+	  LibraryVersion	  "1.18"
+	  SourceBlock		  "propertySpecificationOperatorLib/initialTrue"
+	  SourceType		  "ignoreInitSteps"
+	  DelayCount		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "initialTrue009"
+	  SID			  "59:448"
+	  Ports			  [1, 1]
+	  Position		  [1005, 755, 1065, 785]
+	  ShowName		  off
+	  LibraryVersion	  "1.18"
+	  SourceBlock		  "propertySpecificationOperatorLib/initialTrue"
+	  SourceType		  "ignoreInitSteps"
+	  DelayCount		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "initialTrue010"
+	  SID			  "59:455"
+	  Ports			  [1, 1]
+	  Position		  [1005, 850, 1065, 880]
+	  ShowName		  off
+	  LibraryVersion	  "1.18"
+	  SourceBlock		  "propertySpecificationOperatorLib/initialTrue"
+	  SourceType		  "ignoreInitSteps"
+	  DelayCount		  "1"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "is_ctrl_from"
+	  SID			  "59:430"
+	  Position		  [195, 468, 295, 482]
+	  ShowName		  off
+	  GotoTag		  "is_ctrl"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "is_ctrl_from1"
+	  SID			  "59:436"
+	  Position		  [195, 548, 295, 562]
+	  ShowName		  off
+	  GotoTag		  "is_ctrl"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "is_ctrl_goto"
+	  SID			  "59:394"
+	  Position		  [70, 268, 170, 282]
+	  ShowName		  off
+	  GotoTag		  "is_ctrl"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "set_from"
+	  SID			  "59:431"
+	  Position		  [195, 488, 295, 502]
+	  ShowName		  off
+	  GotoTag		  "set"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "set_from1"
+	  SID			  "59:437"
+	  Position		  [195, 583, 295, 597]
+	  ShowName		  off
+	  GotoTag		  "set"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "set_from2"
+	  SID			  "59:444"
+	  Position		  [195, 663, 295, 677]
+	  ShowName		  off
+	  GotoTag		  "set"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "set_from3"
+	  SID			  "59:452"
+	  Position		  [195, 763, 295, 777]
+	  ShowName		  off
+	  GotoTag		  "set"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "set_from4"
+	  SID			  "59:459"
+	  Position		  [195, 858, 295, 872]
+	  ShowName		  off
+	  GotoTag		  "set"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "set_goto"
+	  SID			  "59:396"
+	  Position		  [70, 308, 170, 322]
+	  ShowName		  off
+	  GotoTag		  "set"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "speed_from"
+	  SID			  "59:406"
+	  Position		  [195, 53, 295, 67]
+	  ShowName		  off
+	  GotoTag		  "speed"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "speed_from1"
+	  SID			  "59:414"
+	  Position		  [195, 208, 295, 222]
+	  ShowName		  off
+	  GotoTag		  "speed"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "speed_from2"
+	  SID			  "59:432"
+	  Position		  [195, 508, 295, 522]
+	  ShowName		  off
+	  GotoTag		  "speed"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "speed_from3"
+	  SID			  "59:445"
+	  Position		  [195, 683, 295, 697]
+	  ShowName		  off
+	  GotoTag		  "speed"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "speed_from4"
+	  SID			  "59:465"
+	  Position		  [195, 953, 295, 967]
+	  ShowName		  off
+	  GotoTag		  "speed"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "speed_goto"
+	  SID			  "59:398"
+	  Position		  [70, 348, 170, 362]
+	  ShowName		  off
+	  GotoTag		  "speed"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "target_from"
+	  SID			  "59:418"
+	  Position		  [195, 288, 295, 302]
+	  ShowName		  off
+	  GotoTag		  "target"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "target_from1"
+	  SID			  "59:446"
+	  Position		  [195, 703, 295, 717]
+	  ShowName		  off
+	  GotoTag		  "target"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "target_from2"
+	  SID			  "59:453"
+	  Position		  [195, 788, 295, 802]
+	  ShowName		  off
+	  GotoTag		  "target"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "target_from3"
+	  SID			  "59:460"
+	  Position		  [195, 883, 295, 897]
+	  ShowName		  off
+	  GotoTag		  "target"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "target_from4"
+	  SID			  "59:466"
+	  Position		  [195, 978, 295, 992]
+	  ShowName		  off
+	  GotoTag		  "target"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "target_goto"
+	  SID			  "59:400"
+	  Position		  [70, 388, 170, 402]
+	  ShowName		  off
+	  GotoTag		  "target"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "throt_from"
+	  SID			  "59:470"
+	  Position		  [195, 1038, 295, 1052]
+	  ShowName		  off
+	  GotoTag		  "throt"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "throt_goto"
+	  SID			  "59:402"
+	  Position		  [70, 428, 170, 442]
+	  ShowName		  off
+	  GotoTag		  "throt"
+	  TagVisibility		  "local"
+	}
+	Line {
+	  SrcBlock		  "brake_pressure"
+	  SrcPort		  1
+	  DstBlock		  "brake_pressure_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "dec"
+	  SrcPort		  1
+	  DstBlock		  "dec_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "diff_target"
+	  SrcPort		  1
+	  DstBlock		  "diff_target_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "driver_throt"
+	  SrcPort		  1
+	  DstBlock		  "driver_throt_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "enable"
+	  SrcPort		  1
+	  DstBlock		  "enable_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "inc"
+	  SrcPort		  1
+	  DstBlock		  "inc_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "is_ctrl"
+	  SrcPort		  1
+	  DstBlock		  "is_ctrl_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "set"
+	  SrcPort		  1
+	  DstBlock		  "set_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "speed"
+	  SrcPort		  1
+	  DstBlock		  "speed_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "target"
+	  SrcPort		  1
+	  DstBlock		  "target_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "throt"
+	  SrcPort		  1
+	  DstBlock		  "throt_goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "speed_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ001"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "driver_throt_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ002"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "speed_from1"
+	  SrcPort		  1
+	  DstBlock		  "EQ003"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "target_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ004"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "dec_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ005"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "inc_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ005"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "brake_pressure_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ006"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "enable_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ006"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "is_ctrl_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ006"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "set_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ006"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "speed_from2"
+	  SrcPort		  1
+	  DstBlock		  "EQ006"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "is_ctrl_from1"
+	  SrcPort		  1
+	  DstBlock		  "EQ007"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "set_from1"
+	  SrcPort		  1
+	  DstBlock		  "EQ007"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "dec_from1"
+	  SrcPort		  1
+	  DstBlock		  "EQ008"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "inc_from1"
+	  SrcPort		  1
+	  DstBlock		  "EQ008"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "set_from2"
+	  SrcPort		  1
+	  DstBlock		  "EQ008"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "speed_from3"
+	  SrcPort		  1
+	  DstBlock		  "EQ008"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "target_from1"
+	  SrcPort		  1
+	  DstBlock		  "EQ008"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "inc_from2"
+	  SrcPort		  1
+	  DstBlock		  "EQ009"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "set_from3"
+	  SrcPort		  1
+	  DstBlock		  "EQ009"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "target_from2"
+	  SrcPort		  1
+	  DstBlock		  "EQ009"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "dec_from2"
+	  SrcPort		  1
+	  DstBlock		  "EQ010"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "set_from4"
+	  SrcPort		  1
+	  DstBlock		  "EQ010"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "target_from3"
+	  SrcPort		  1
+	  DstBlock		  "EQ010"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "diff_target_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ011"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "speed_from4"
+	  SrcPort		  1
+	  DstBlock		  "EQ011"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "target_from4"
+	  SrcPort		  1
+	  DstBlock		  "EQ011"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "throt_from"
+	  SrcPort		  1
+	  DstBlock		  "EQ012"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EQ001"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Condition001"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "Assumption001"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "EQ002"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Condition002"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "Assumption002"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "EQ003"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Condition003"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "Assumption003"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "EQ004"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Condition004"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "Assumption004"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "EQ005"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Condition005"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "Assumption005"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "initialTrue006"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Proof006"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "TestObj006"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "EQ007"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Proof007"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "TestObj007"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "initialTrue008"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Proof008"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "TestObj008"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "initialTrue009"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Proof009"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "TestObj009"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "initialTrue010"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Proof010"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "TestObj010"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "EQ011"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Proof011"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "TestObj011"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "EQ012"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Proof012"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [5, 0; 0, 40]
+	    DstBlock		    "TestObj012"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "EQ006"
+	  SrcPort		  1
+	  DstBlock		  "initialTrue006"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EQ008"
+	  SrcPort		  1
+	  DstBlock		  "initialTrue008"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EQ009"
+	  SrcPort		  1
+	  DstBlock		  "initialTrue009"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EQ010"
+	  SrcPort		  1
+	  DstBlock		  "initialTrue010"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Saturate
+      Name		      "Saturation"
+      SID		      "54"
+      Ports		      [1, 1]
+      Position		      [910, 340, 940, 370]
+      ZOrder		      -10
+      ShowName		      off
+      AttributesFormatString  "<UpperLimit = %<UpperLimit>>\\n<LowerLimit = %<LowerLimit>>"
+      InputPortMap	      "u0"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      UpperLimit	      "throt_max"
+      LowerLimit	      "throt_min"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      Port {
+	PortNumber		1
+	Name			"throt"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Switch
+      Name		      "Switch"
+      SID		      "17"
+      Position		      [825, 298, 865, 412]
+      ZOrder		      -18
+      ShowName		      off
+      AttributesFormatString  "<Criteria=%<Criteria>>"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Criteria		      "u2 ~= 0"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "calcTarget"
+      SID		      "18"
+      Ports		      [4, 2]
+      Position		      [240, 252, 405, 498]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	Name			"diff_target"
+	PropagatedSignals	"diff_target"
+	ShowPropagatedSignals	"on"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"target"
+	PropagatedSignals	"target"
+	ShowPropagatedSignals	"on"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"calcTarget"
+	Location		[638, 114, 1733, 661]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "speed"
+	  SID			  "19"
+	  Position		  [70, 68, 100, 82]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "speed"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "set"
+	  SID			  "20"
+	  Position		  [70, 108, 100, 122]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "set"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "inc"
+	  SID			  "21"
+	  Position		  [70, 203, 100, 217]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "inc"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dec"
+	  SID			  "22"
+	  Position		  [70, 288, 100, 302]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "dec"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "23"
+	  Position		  [120, 158, 180, 182]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Value			  "vel_inc"
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  SID			  "24"
+	  Position		  [120, 243, 185, 267]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Value			  "vel_dec"
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  SID			  "25"
+	  Ports			  [1, 1]
+	  Position		  [485, 100, 515, 130]
+	  ZOrder		  -10
+	  ShowName		  off
+	  AttributesFormatString  "<UpperLimit = %<UpperLimit>>\\n<LowerLimit = %<LowerLimit>>"
+	  InputPortMap		  "u0"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  UpperLimit		  "target_max"
+	  LowerLimit		  "target_min"
+	  Port {
+	    PortNumber		    1
+	    Name		    "target"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "26"
+	  Ports			  [2, 1]
+	  Position		  [265, 159, 285, 206]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "27"
+	  Ports			  [2, 1]
+	  Position		  [635, 55, 660, 135]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Inputs		  "-+"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "diff_target"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  SID			  "28"
+	  Ports			  [2, 1]
+	  Position		  [215, 244, 235, 291]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch1"
+	  SID			  "29"
+	  Position		  [390, 86, 420, 144]
+	  ShowName		  off
+	  AttributesFormatString  "<Criteria=%<Criteria>>"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch2"
+	  SID			  "30"
+	  Position		  [325, 173, 355, 247]
+	  ShowName		  off
+	  AttributesFormatString  "<Criteria=%<Criteria>>"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch3"
+	  SID			  "31"
+	  Position		  [260, 258, 290, 332]
+	  ShowName		  off
+	  AttributesFormatString  "<Criteria=%<Criteria>>"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "Unit Delay"
+	  SID			  "32"
+	  Position		  [380, 357, 410, 403]
+	  BlockMirror		  on
+	  ShowName		  off
+	  AttributesFormatString  "<InitValue = %<X0>>"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  SampleTime		  "-1"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "target"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "diff_target"
+	  SID			  "33"
+	  Position		  [785, 88, 815, 102]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "target"
+	  SID			  "34"
+	  Position		  [690, 373, 720, 387]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Name			  "target"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    DstBlock		    "Sum1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 265]
+	    Branch {
+	      Labels		      [1, 0]
+	      DstBlock		      "target"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Unit Delay"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "set"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "speed"
+	  SrcPort		  1
+	  Points		  [185, 0]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "Switch1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "Sum1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "inc"
+	  SrcPort		  1
+	  DstBlock		  "Switch2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Switch2"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "dec"
+	  SrcPort		  1
+	  DstBlock		  "Switch3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Switch3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch2"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -75]
+	  DstBlock		  "Switch1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Switch3"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -60]
+	  DstBlock		  "Switch2"
+	  DstPort		  3
+	}
+	Line {
+	  Labels		  [1, 0]
+	  SrcBlock		  "Unit Delay"
+	  SrcPort		  1
+	  Points		  [-340, 0; 0, -60]
+	  Branch {
+	    DstBlock		    "Switch3"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 0; 0, -40]
+	    Branch {
+	      DstBlock		      "Sum2"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [0, -85]
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch1"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "diff_target"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "diff_target"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "isControlActivate"
+      SID		      "35"
+      Ports		      [4, 1]
+      Position		      [250, 61, 395, 204]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	PropagatedSignals	"is_ctrl"
+	ShowPropagatedSignals	"on"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"isControlActivate"
+	Location		[543, 205, 1638, 766]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	212
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "enable"
+	  SID			  "36"
+	  Position		  [25, 38, 55, 52]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "enable"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "break_pressure"
+	  SID			  "37"
+	  Position		  [25, 63, 55, 77]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "brake_pressure"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "set"
+	  SID			  "38"
+	  Position		  [25, 98, 55, 112]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "set"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "speed"
+	  SID			  "39"
+	  Position		  [25, 348, 55, 362]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "speed"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Constant"
+	  SID			  "40"
+	  Ports			  [1, 1]
+	  Position		  [105, 55, 135, 85]
+	  ZOrder		  -5
+	  ShowName		  off
+	  LibraryVersion	  "1.256"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	  SourceType		  "Compare To Constant"
+	  relop			  ">"
+	  const			  "0"
+	  OutDataTypeStr	  "boolean"
+	  ZeroCross		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "is_brake"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "41"
+	  Position		  [125, 294, 210, 326]
+	  ZOrder		  -4
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Value			  "target_max"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "42"
+	  Position		  [125, 369, 210, 401]
+	  ZOrder		  -4
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Value			  "target_min"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator"
+	  SID			  "43"
+	  Ports			  [4, 1]
+	  Position		  [415, 27, 460, 138]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Inputs		  "4"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	  Port {
+	    PortNumber		    1
+	    Name		    "is_ctrl"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator1"
+	  SID			  "44"
+	  Ports			  [1, 1]
+	  Position		  [210, 57, 245, 83]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Operator		  "NOT"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator2"
+	  SID			  "45"
+	  Ports			  [2, 1]
+	  Position		  [210, 89, 245, 156]
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Operator		  "OR"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator3"
+	  SID			  "46"
+	  Ports			  [2, 1]
+	  Position		  [330, 287, 360, 318]
+	  ZOrder		  -17
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Relational\nOperator"
+	  SID			  "47"
+	  Ports			  [2, 1]
+	  Position		  [240, 277, 270, 308]
+	  ZOrder		  -18
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Operator		  "<="
+	  InputSameDT		  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Relational\nOperator1"
+	  SID			  "48"
+	  Ports			  [2, 1]
+	  Position		  [240, 347, 270, 378]
+	  ZOrder		  -18
+	  ShowName		  off
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  InputSameDT		  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "Unit Delay1"
+	  SID			  "49"
+	  Position		  [250, 183, 280, 227]
+	  BlockMirror		  on
+	  ShowName		  off
+	  AttributesFormatString  "<InitValue = %<X0>>"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  X0			  "1"
+	  SampleTime		  "-1"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "is_ctrl"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "is_ctrl"
+	  SID			  "50"
+	  Position		  [610, 78, 640, 92]
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Name			  "is_brake"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "Compare\nTo Constant"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [0, -10]
+	  DstBlock		  "Relational\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator3"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -185]
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Relational\nOperator1"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -55]
+	  DstBlock		  "Logical\nOperator3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Relational\nOperator"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator3"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "speed"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Relational\nOperator"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Relational\nOperator1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Relational\nOperator1"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "break_pressure"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Constant"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "enable"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "set"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator1"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator2"
+	  SrcPort		  1
+	  Points		  [55, 0; 0, -30]
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  3
+	}
+	Line {
+	  Labels		  [0, 1]
+	  SrcBlock		  "Unit Delay1"
+	  SrcPort		  1
+	  Points		  [-135, 0; 0, -65]
+	  DstBlock		  "Logical\nOperator2"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "is_ctrl"
+	  FontName		  "ÇlÇr ÉSÉVÉbÉN"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "Logical\nOperator"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "is_ctrl"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [35, 0; 0, 120]
+	    DstBlock		    "Unit Delay1"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "throt"
+      SID		      "51"
+      Position		      [1020, 348, 1050, 362]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      IconDisplay	      "Port number"
+      PortDimensions	      "[1 1]"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "target"
+      SID		      "52"
+      Position		      [970, 433, 1000, 447]
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      Port		      "2"
+      IconDisplay	      "Port number"
+      PortDimensions	      "[1 1]"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+    }
+    Block {
+      BlockType		      SignalViewerScope
+      Name		      "Scope"
+      SID		      "56"
+      Ports		      []
+      Position		      [20, 15, 60, 55]
+      IOType		      "viewer"
+      List {
+	ListType		IOSignalStrings
+	set0ParseKeys		"9"
+	set0Sigs		"enable:o1"
+	set1ParseKeys		"17"
+	set1Sigs		"brake_pressure:o1"
+	set2ParseKeys		"6"
+	set2Sigs		"set:o1"
+	set3ParseKeys		"6"
+	set3Sigs		"inc:o1"
+	set4ParseKeys		"6"
+	set4Sigs		"dec:o1"
+	set5ParseKeys		"15"
+	set5Sigs		"driver_throt:o1"
+	set6ParseKeys		"8"
+	set6Sigs		"speed:o1"
+      }
+      Location		      [1337, 105, 1597, 896]
+      Open		      on
+      NumInputPorts	      "7"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+	axes5			"%<SignalLabel>"
+	axes6			"%<SignalLabel>"
+	axes7			"%<SignalLabel>"
+      }
+      ShowDataMarkers	      off
+      ShowLegends	      off
+      YMin		      "-5~-5~-5~-5~-5~-5~-5"
+      YMax		      "5~5~5~5~5~5~5"
+      DataFormat	      "Array"
+      MaxDataPoints	      "7500"
+      RefreshTime	      0.035000
+    }
+    Block {
+      BlockType		      SignalViewerScope
+      Name		      "Scope1"
+      SID		      "57"
+      Ports		      []
+      Position		      [20, 15, 60, 55]
+      IOType		      "viewer"
+      List {
+	ListType		IOSignalStrings
+	set0ParseKeys		"20"
+	set0Sigs		"isControlActivate:o1"
+	set1ParseKeys		"13"
+	set1Sigs		"calcTarget:o1"
+	set2ParseKeys		"16"
+	set2Sigs		"PI_Controller:o1"
+      }
+      Location		      [1594, 103, 1860, 438]
+      Open		      on
+      NumInputPorts	      "3"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+      }
+      ShowDataMarkers	      off
+      ShowLegends	      off
+      YMin		      "-5~-5~-5"
+      YMax		      "5~5~5"
+      SaveName		      "ScopeData1"
+      DataFormat	      "Array"
+      MaxDataPoints	      "7500"
+      RefreshTime	      0.035000
+    }
+    Block {
+      BlockType		      SignalViewerScope
+      Name		      "Scope2"
+      SID		      "58"
+      Ports		      []
+      Position		      [20, 15, 60, 55]
+      IOType		      "viewer"
+      List {
+	ListType		IOSignalStrings
+	set0ParseKeys		"13"
+	set0Sigs		"Saturation:o1"
+	set1ParseKeys		"13"
+	set1Sigs		"calcTarget:o2"
+      }
+      Location		      [1594, 495, 1855, 903]
+      Open		      on
+      NumInputPorts	      "2"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      ShowDataMarkers	      off
+      ShowLegends	      off
+      YMin		      "-5~-5"
+      YMax		      "5~5"
+      SaveName		      "ScopeData2"
+      DataFormat	      "Array"
+      LimitDataPoints	      off
+      MaxDataPoints	      "7500"
+      RefreshTime	      0.035000
+    }
+    Line {
+      Labels		      [0, 0]
+      SrcBlock		      "isControlActivate"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Points			[205, 0]
+	Branch {
+	  Points		  [155, 0; 0, 220]
+	  DstBlock		  "Switch"
+	  DstPort		  2
+	}
+	Branch {
+	  DstBlock		  "PI_Controller"
+	  DstPort		  enable
+	}
+      }
+      Branch {
+	Labels			[0, 0]
+	DstBlock		"PropertySpecification"
+	DstPort			7
+      }
+    }
+    Line {
+      Name		      "target"
+      SrcBlock		      "calcTarget"
+      SrcPort		      2
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	DstBlock		"target"
+	DstPort			1
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[460, 0]
+	DstBlock		"PropertySpecification"
+	DstPort			10
+      }
+    }
+    Line {
+      Name		      "diff_target"
+      SrcBlock		      "calcTarget"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	DstBlock		"PI_Controller"
+	DstPort			1
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[95, 0; 0, -240]
+	DstBlock		"PropertySpecification"
+	DstPort			3
+      }
+    }
+    Line {
+      Name		      "dec"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      SrcBlock		      "dec"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	DstBlock		"calcTarget"
+	DstPort			4
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[140, 0; 0, -240; 650, 0]
+	DstBlock		"PropertySpecification"
+	DstPort			2
+      }
+    }
+    Line {
+      Name		      "speed"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      SrcBlock		      "speed"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	Points			[95, 0; 0, -360]
+	Branch {
+	  Labels		  [1, 0]
+	  Points		  [0, -100]
+	  DstBlock		  "isControlActivate"
+	  DstPort		  4
+	}
+	Branch {
+	  Labels		  [1, 0]
+	  DstBlock		  "calcTarget"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[365, 0; 0, -480]
+	DstBlock		"PropertySpecification"
+	DstPort			9
+      }
+    }
+    Line {
+      Name		      "inc"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      SrcBlock		      "inc"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	DstBlock		"calcTarget"
+	DstPort			3
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[140, 0; 0, -180; 650, 0]
+	DstBlock		"PropertySpecification"
+	DstPort			6
+      }
+    }
+    Line {
+      Name		      "set"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      SrcBlock		      "set"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	Points			[15, 0]
+	Branch {
+	  Points		  [0, -195]
+	  DstBlock		  "isControlActivate"
+	  DstPort		  3
+	}
+	Branch {
+	  DstBlock		  "calcTarget"
+	  DstPort		  2
+	}
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[140, 0; 0, -120; 650, 0]
+	DstBlock		"PropertySpecification"
+	DstPort			8
+      }
+    }
+    Line {
+      SrcBlock		      "Switch"
+      SrcPort		      1
+      DstBlock		      "Saturation"
+      DstPort		      1
+    }
+    Line {
+      Name		      "driver_throt"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      SrcBlock		      "driver_throt"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	Points			[680, 0; 0, -180]
+	DstBlock		"Switch"
+	DstPort			3
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[360, 0; 0, -485]
+	DstBlock		"PropertySpecification"
+	DstPort			4
+      }
+    }
+    Line {
+      Name		      "brake_pressure"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      SrcBlock		      "brake_pressure"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	DstBlock		"isControlActivate"
+	DstPort			2
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[150, 0; 0, -60; 640, 0]
+	DstBlock		"PropertySpecification"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "enable"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      SrcBlock		      "enable"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	DstBlock		"isControlActivate"
+	DstPort			1
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[150, 0; 0, -25; 570, 0; 0, 50]
+	DstBlock		"PropertySpecification"
+	DstPort			5
+      }
+    }
+    Line {
+      Name		      "throt_cc"
+      Labels		      [0, 0]
+      SrcBlock		      "PI_Controller"
+      SrcPort		      1
+      DstBlock		      "Switch"
+      DstPort		      1
+    }
+    Line {
+      Name		      "throt"
+      FontName		      "ÇlÇr ÉSÉVÉbÉN"
+      FontSize		      12
+      SrcBlock		      "Saturation"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	Labels			[1, 0]
+	DstBlock		"throt"
+	DstPort			1
+      }
+      Branch {
+	Labels			[0, 0]
+	Points			[0, -90; -75, 0]
+	DstBlock		"PropertySpecification"
+	DstPort			11
+      }
+    }
+  }
+}
+MatData {
+  NumRecords		  14
+  DataRecord {
+    Tag			    DataTag13
+    Data		    "  %)30     .    6 $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X    X    !@    @    $          4    (     0    4    !         !  "
+    "   %    =&AR;W0    .    2     8    (    !          %    \"     $    3     0         0    $P   '1H<F]T7VUA>\"QT:')O"
+    "=%]M:6X       X   !@    !@    @    $          4    (     0   \"D    !         !     I    ?BAT:')O=%]M:6X@/B!T:')O="
+    "\"!\\?\"!T:')O=\" ^('1H<F]T7VUA>\"D         "
+  }
+  DataRecord {
+    Tag			    DataTag12
+    Data		    "  %)30     .    0 $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X   !(    !@    @    $          4    (     0   !@    !         !  "
+    "   8    9&EF9E]T87)G970L<W!E960L=&%R9V5T#@   #     &    \"     0         !0    @               $         $        "
+    "  .    4     8    (    !          %    \"     $    =     0         0    '0   &1I9F9?=&%R9V5T(#T]('1A<F=E=\" M('-P9"
+    "65D    "
+  }
+  DataRecord {
+    Tag			    DataTag11
+    Data		    "  %)30     .    H $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X   !     !@    @    $          4    (     0    X    !         !  "
+    "   .    9&5C+'-E=\"QT87)G970   X   !0    !@    @    $          4    (     0   !T    !         !     =    =&%R9V5T7"
+    "VUA>\"QT87)G971?;6EN+'9E;%]D96,    .    F     8    (    !          %    \"     $   !E     0         0    90   &1E8"
+    "R F)B H=&%R9V5T7VUI;B \\('1A<F=E=\" F)B!T87)G970@/\"!T87)G971?;6%X*2 F)B!^<V5T(#T]/B H=&%R9V5T(\"T@<')E=BAT87)G970"
+    "L,2DI(#T](\"UV96Q?9&5C    "
+  }
+  DataRecord {
+    Tag			    DataTag10
+    Data		    "  %)30     .    H $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X   !     !@    @    $          4    (     0    X    !         !  "
+    "   .    :6YC+'-E=\"QT87)G970   X   !0    !@    @    $          4    (     0   !T    !         !     =    =&%R9V5T7"
+    "VUA>\"QT87)G971?;6EN+'9E;%]I;F,    .    F     8    (    !          %    \"     $   !D     0         0    9    &EN8"
+    "R F)B H=&%R9V5T7VUI;B \\('1A<F=E=\" F)B!T87)G970@/\"!T87)G971?;6%X*2 F)B!^<V5T(#T]/B H=&%R9V5T(\"T@<')E=BAT87)G970"
+    "L,2DI(#T]('9E;%]I;F,     "
+  }
+  DataRecord {
+    Tag			    DataTag9
+    Data		    "  %)30     .    D $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X   !(    !@    @    $          4    (     0   !@    !         !  "
+    "   8    9&5C+&EN8RQS970L<W!E960L=&%R9V5T#@   $@    &    \"     0         !0    @    !    %0    $         $    !4  "
+    " !T87)G971?;6%X+'1A<F=E=%]M:6X    .    B     8    (    !          %    \"     $   !7     0         0    5P   '-E=\""
+    " F)B H:6YC('Q\\(&1E8RD@)B8@*'1A<F=E=%]M:6X@/#T@<W!E960@)B8@<W!E960@/#T@=&%R9V5T7VUA>\"D@/3T^('1A<F=E=\" ]/2!S<&5E9"
+    "  "
+  }
+  DataRecord {
+    Tag			    DataTag8
+    Data		    "  %)30     .    0 $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X   !     !@    @    $          4    (     0    L    !         !  "
+    "   +    :7-?8W1R;\"QS970       X    P    !@    @    $          4    (               !         !          #@   %@  "
+    "  &    \"     0         !0    @    !    (0    $         $    \"$   !I;FET*'YS970L,2D@/3T^(&EN:70H?FES7V-T<FPL,2D  "
+    "       "
+  }
+  DataRecord {
+    Tag			    DataTag7
+    Data		    "  %)30     .    P $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X   !8    !@    @    $          4    (     0   \"<    !         ! "
+    "    G    8G)A:V5?<')E<W-U<F4L96YA8FQE+&ES7V-T<FPL<V5T+'-P965D  X   !(    !@    @    $          4    (     0   !4  "
+    "  !         !     5    =&%R9V5T7VUA>\"QT87)G971?;6EN    #@   *@    &    \"     0         !0    @    !    =P    $  "
+    "       $    '<   !E;F%B;&4@)B8@8G)A:V5?<')E<W-U<F4@/3T@,\" F)B H('-E=\"!\\?\"!P<F5V*&ES7V-T<FPL,2D@*2 F)B H=&%R9V5"
+    "T7VUI;B \\/2!S<&5E9\" F)B!S<&5E9\" \\/2!T87)G971?;6%X*2 ]/3X@:7-?8W1R;  "
+  }
+  DataRecord {
+    Tag			    DataTag6
+    Data		    "  %)30     .    ( $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X    X    !@    @    $          4    (     0    <    !         !  "
+    "   '    9&5C+&EN8P .    ,     8    (    !          %    \"                0         0          X   !     !@    @  "
+    "  $          4    (     0    T    !         !     -    ?BAI;F,@)B8@9&5C*0    "
+  }
+  DataRecord {
+    Tag			    DataTag5
+    Data		    "  %)30     .    0 $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X    X    !@    @    $          4    (     0    8    !         !  "
+    "   &    =&%R9V5T   .    0     8    (    !          %    \"     $    *     0         0    \"@   '1A<F=E=%]M:6X     "
+    "   .    4     8    (    !          %    \"     $    :     0         0    &@   &EN:70H=&%R9V5T/3UT87)G971?;6EN+#$I "
+    "       "
+  }
+  DataRecord {
+    Tag			    DataTag4
+    Data		    "  %)30     .    ( $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X    X    !@    @    $          4    (     0    4    !         !  "
+    "   %    <W!E960    .    ,     8    (    !          %    \"                0         0          X   !     !@    @  "
+    "  $          4    (     0   !     !         !     0    :6YI=\"AS<&5E9#T],\"PQ*0"
+  }
+  DataRecord {
+    Tag			    DataTag3
+    Data		    "  %)30     .    : $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X   !     !@    @    $          4    (     0    P    !         !  "
+    "   ,    9')I=F5R7W1H<F]T      X   !(    !@    @    $          4    (     0   !,    !         !     3    =&AR;W1?;6"
+    "%X+'1H<F]T7VUI;@      #@   &@    &    \"     0         !0    @    !    -@    $         $    #8   !T:')O=%]M:6X@/#T"
+    "@9')I=F5R7W1H<F]T(\"8F(&1R:79E<E]T:')O=\" \\/2!T:')O=%]M87@   "
+  }
+  DataRecord {
+    Tag			    DataTag2
+    Data		    "  %)30     .    4 $   8    (     @         %    \"     $    !     0         %  0 #     $    D    26YP=7"
+    "1687)3='( 4&%R86U687)3='( 5F5R:69%<5-T<@        X    X    !@    @    $          4    (     0    4    !         !  "
+    "   %    <W!E960    .    2     8    (    !          %    \"     $    3     0         0    $P   '-P965D7VUA>\"QS<&5E"
+    "9%]M:6X       X   !8    !@    @    $          4    (     0   \"@    !         !     H    <W!E961?;6EN(#P]('-P965D("
+    "\"8F('-P965D(#P]('-P965D7VUA> "
+  }
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    *!P   8    (     @         %    \"     $    !     0         %  0 !@    $    ,    ;W!T  "
+    "  <')O<',       X   #0    !@    @    \"          4    (     0    $    !          4 !  -     0   !H   !I<U)-20     "
+    "     17AC96Q+97EW;W)D          X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@  "
+    "  &    \"     0         !0    @    !    !P    $         $     <   !>/%!23U ^  X     &P  !@    @    \"          4  "
+    "  (     0    P    !          4 !  .     0   '    !$97-C<FEP=&EO;@   $5Q=6%T:6]N        4')O;V9O<D%S<W5M90!I<T5N86)"
+    "L90       &EG;F]R95-T97!S    4DU)              !\";&]C:U!A=&AS     $%R96$             #@   %@    &    \"     0    "
+    "     !0    @    !    $@    $         $0   \"0   #*CA^0;S  9P]<'Y\"F7N5.\"DX 9R=9'Y\"F7N5.\"TYG,$(PBS      #@   %@ "
+    "   &    \"     0         !0    @    !    *     $         $    \"@   !S<&5E9%]M:6X@/#T@<W!E960@)B8@<W!E960@/#T@<W!E"
+    "961?;6%X#@   #     &    \"     0         !0    @    !     @    $         $  \" $%#   .    ,     8    (    \"0(    "
+    "    %    \"     $    !     0         \"  $  0    X    X    !@    @    &          4    (     0    $    !          D"
+    "    (               .    ,     8    (    !@         %    \"                0         )          X    P    !@    @ "
+    "   !          4    (     0    $    !          X         #@   #     &    \"     8         !0    @               $  "
+    "       \"0         .    >     8    (    !          %    \"     $    D     0         1    2    ,DPZ3\"D,- P_#\"Y,.T"
+    "PPS#(,.LP)%!O, !G)UFY,.TPPS#(,.LP)%#E3@M. 3  9P]<N3#M,,,PR##K,\"10Y4X*3F<P0C\"+, X   !H    !@    @    $          4"
+    "    (     0   #8    !         !     V    =&AR;W1?;6EN(#P](&1R:79E<E]T:')O=\" F)B!D<FEV97)?=&AR;W0@/#T@=&AR;W1?;6%X"
+    "   .    ,     8    (    !          %    \"     $    \"     0         0  ( 04,   X    P    !@    @    ) @        4 "
+    "   (     0    $    !          (  0 !    #@   #@    &    \"     8         !0    @    !     0    $         \"0    @ "
+    "              X         #@   #     &    \"     $         !0    @    !     0    $         #@         .    ,     8  "
+    "  (    !@         %    \"                0         )          X   !(    !@    @    $          4    (     0    L   "
+    " !         !$    6    RHX?D&XP'5(?9R10;S P &<P0C\"+,   #@   $     &    \"     0         !0    @    !    $     $   "
+    "      $    !    !I;FET*'-P965D/3TP+#$I#@   #     &    \"     0         !0    @    !     @    $         $  \" $%#  "
+    " .    ,     8    (    \"0(        %    \"     $    !     0         \"  $  0    X    X    !@    @    &          4  "
+    "  (     0    $    !          D    (               .          X    P    !@    @    !          4    (     0    $    "
+    "!          X         #@   #     &    \"     8         !0    @               $         \"0         .    6     8    "
+    "(    !          %    \"     $    2     0         1    )    .YV&6K*CA^0;C =4A]G)%!O, !G#USN=AEJRHX?D&<P0C\"+,      "
+    ".    4     8    (    !          %    \"     $    :     0         0    &@   &EN:70H=&%R9V5T/3UT87)G971?;6EN+#$I    "
+    "    #@   #     &    \"     0         !0    @    !     @    $         $  \" $%#   .    ,     8    (    \"0(        "
+    "%    \"     $    !     0         \"  $  0    X    X    !@    @    &          4    (     0    $    !          D    "
+    "(               .          X    P    !@    @    !          4    (     0    $    !          X         #@   #     & "
+    "   \"     8         !0    @               $         \"0         .    8     8    (    !          %    \"     $    8"
+    "     0         1    ,    *!2'Y\"Y,*0PPS#!,&@P&VX?D+DPI###,,$P;S ,5$)F:S!/ $X :S!J,(DP:C!$, X   !     !@    @    $ "
+    "         4    (     0    T    !         !     -    ?BAI;F,@)B8@9&5C*0    X    P    !@    @    $          4    (   "
+    "  0    (    !         !   @!!0P  #@   #     &    \"     D\"        !0    @    !     0    $          @ !  $    .   "
+    " .     8    (    !@         %    \"     $    !     0         )    \"               #@         .    ,     8    (   "
+    "  0         %    \"     $    !     0         .          X    P    !@    @    &          4    (               !    "
+    "      D         #@   /     &    \"     0         !0    @    !    70    $         $0   +H    V4J%?,8KO4V\\P(6MN,&%G"
+    "]DY,,&A19C\" ;E\\P53\",,(LP-%@(5&LP3P!. &@P:C\"+, (P6P!A9_9.70#[, EGN5*Y,*0PPS#!,$PP3P!. /LPUC#L,/PPK3!,,$\\ 1@!& "
+    "/LPNS##,,@PN3\"D,,,PP3!,,$\\ 3@\"\",%<P3S!O,#92H5\\QBN]3;C!-4MY6)%!,,$\\ 3@#[,,J.'Y!,,.YV&6H 9R=9Y4X+3DLP9#  9P]<'"
+    "Y\"F7N5.\"DX        .    J     8    (    !          %    \"     $   !W     0         0    =P   &5N86)L92 F)B!B<F%K"
+    "95]P<F5S<W5R92 ]/2 P(\"8F(\"@@<V5T('Q\\('!R978H:7-?8W1R;\"PQ*2 I(\"8F(\"AT87)G971?;6EN(#P]('-P965D(\"8F('-P965D(#P"
+    "]('1A<F=E=%]M87@I(#T]/B!I<U]C=')L  X    P    !@    @    $          4    (     0    (    !         !   @!03P  #@   "
+    "#     &    \"     D\"        !0    @    !     0    $          @ !  $    .    .     8    (    !@         %    \"   "
+    "  $    !     0         )    \"            / _#@         .    ,     8    (     0         %    \"     $    !     0  "
+    "       .          X    P    !@    @    &          4    (               !          D         #@   '@    &    \"    "
+    " 0         !0    @    !    (P    $         $0   $8   !WC=52]':,7[LPPS#(,+DPI###,,$P3#!/ $8 1@!N,#18\"%1K,#92H5\\QB"
+    "N]33# )9[E2%E-5,(PPBS!3,&@P;S!J,$0P   .    6     8    (    !          %    \"     $    A     0         0    (0   &"
+    "EN:70H?G-E=\"PQ*2 ]/3X@:6YI=\"A^:7-?8W1R;\"PQ*0         .    ,     8    (    !          %    \"     $    \"     0 "
+    "        0  ( 4$\\   X    P    !@    @    ) @        4    (     0    $    !          (  0 !    #@   #@    &    \"  "
+    "   8         !0    @    !     0    $         \"0    @               X         #@   #     &    \"     $         !0 "
+    "   @    !     0    $         #@         .    ,     8    (    !@         %    \"                0         )        "
+    "  X   #8    !@    @    $          4    (     0   %$    !         !$   \"B    NS##,,@PN3\"D,,,PP3!*,(@P<S\"@4A^0N3\""
+    "D,,,PP3#[,!MN'Y\"Y,*0PPS#!,&XP:3!A,(DP2S!,,$\\ 3@!N,#18\"%0!, M.;C!A9_9.3#\" ;E\\P53\",,%\\PMG)+86<P[G89:LJ.'Y!O,/"
+    "YS*%=N,,J.'Y!G,$(PBS!; &%G]DY= /LPRHX?D&\\P &<G6210Y4X+3DLP9#  9P]<)%#E3@I.        #@   (@    &    \"     0       "
+    "  !0    @    !    5P    $         $    %<   !S970@)B8@*&EN8R!\\?\"!D96,I(\"8F(\"AT87)G971?;6EN(#P]('-P965D(\"8F('-"
+    "P965D(#P]('1A<F=E=%]M87@I(#T]/B!T87)G970@/3T@<W!E960 #@   #     &    \"     0         !0    @    !     @    $     "
+    "    $  \" %!/   .    ,     8    (    \"0(        %    \"     $    !     0         \"  $  0    X    X    !@    @   "
+    " &          4    (     0    $    !          D    (            \\#\\.          X    P    !@    @    !          4   "
+    " (     0    $    !          X         #@   #     &    \"     8         !0    @               $         \"0        "
+    " .    R     8    (    !          %    \"     $   !*     0         1    E    *!2'Y\"Y,*0PPS#!,$PP3P!. &XP-%@(5&LP;S"
+    "#N=AEJRHX?D&\\P35+>5B10:S#^6U<P9C ,,*!2'Y D4 TP8#!1,)=8H%)9,(LP C!; &%G]DY= /LP[G89:LJ.'Y!O, !G)UDD4(@PBC /7$LP9# "
+    " 9P]<)%\"(,(HP)UG[,+LPPS#(,+DPI###,,$P;S!/ $8 1@      #@   )@    &    \"     0         !0    @    !    9     $    "
+    "     $    &0   !I;F,@)B8@*'1A<F=E=%]M:6X@/\"!T87)G970@)B8@=&%R9V5T(#P@=&%R9V5T7VUA>\"D@)B8@?G-E=\" ]/3X@*'1A<F=E=\""
+    " M('!R978H=&%R9V5T+#$I*2 ]/2!V96Q?:6YC      X    P    !@    @    $          4    (     0    (    !         !   @!0"
+    "3P  #@   #     &    \"     D\"        !0    @    !     0    $          @ !  $    .    .     8    (    !@         %"
+    "    \"     $    !     0         )    \"            / _#@         .    ,     8    (     0         %    \"     $    "
+    "!     0         .          X    P    !@    @    &          4    (               !          D         #@   ,@    & "
+    "   \"     0         !0    @    !    2@    $         $0   )0    ;;A^0N3\"D,,,PP3!,,$\\ 3@!N,#18\"%1K,&\\P[G89:LJ.'Y"
+    "!O,$U2WE8D4&LP_EM7,&8P## ;;A^0)% -,& P43 ;;A%<63\"+, (P6P!A9_9.70#[,.YV&6K*CA^0;S  9R=9)%\"(,(HP#UQ+,&0P &</7\"10B"
+    "#\"*,\"=9^S\"[,,,PR#\"Y,*0PPS#!,&\\P3P!& $8       X   \"8    !@    @    $          4    (     0   &4    !         "
+    "!    !E    9&5C(\"8F(\"AT87)G971?;6EN(#P@=&%R9V5T(\"8F('1A<F=E=\" \\('1A<F=E=%]M87@I(\"8F('YS970@/3T^(\"AT87)G970@"
+    "+2!P<F5V*'1A<F=E=\"PQ*2D@/3T@+79E;%]D96,    .    ,     8    (    !          %    \"     $    \"     0         0  ("
+    " 4$\\   X    P    !@    @    ) @        4    (     0    $    !          (  0 !    #@   #@    &    \"     8        "
+    " !0    @    !     0    $         \"0    @           #P/PX         #@   #     &    \"     $         !0    @    !   "
+    "  0    $         #@         .    ,     8    (    !@         %    \"                0         )          X   \"(   "
+    " !@    @    $          4    (     0   \"H    !         !$   !4    [G89:LJ.'Y#N76\\P 3#N=AEJRHX?D\"  +0 @ ,J.'Y!G,$"
+    "(PBS \",%L 86?V3ET ^S#N=AEJRHX?D&\\P &<G68@PBC /7$LP9#  9P]<B#\"*,\"=9      X   !0    !@    @    $          4    ("
+    "     0   !T    !         !     =    9&EF9E]T87)G970@/3T@=&%R9V5T(\"T@<W!E960    .    ,     8    (    !          % "
+    "   \"     $    \"     0         0  ( 4$\\   X    P    !@    @    ) @        4    (     0    $    !          (  0 !"
+    "    #@   #@    &    \"     8         !0    @    !     0    $         \"0    @               X         #@   #     &"
+    "    \"     $         !0    @    !     0    $         #@         .    ,     8    (    !@         %    \"           "
+    "     0         )          X   !H    !@    @    $          4    (     0   !H    !         !$    T    ^E&;4KDP[3##,,"
+    "@PZS D4$PP &<G6?LP &</7&XPQ'OR5A99DC#64XLP4S!H,&\\P:C!$,      .    8     8    (    !          %    \"     $    I  "
+    "   0         0    *0   'XH=&AR;W1?;6EN(#X@=&AR;W0@?'P@=&AR;W0@/B!T:')O=%]M87@I          X    P    !@    @    $    "
+    "      4    (     0    (    !         !   @!03P  #@   #     &    \"     D\"        !0    @    !     0    $         "
+    " @ !  $    .    .     8    (    !@         %    \"     $    !     0         )    \"               #@         .    "
+    ",     8    (     0         %    \"     $    !     0         .          X    P    !@    @    &          4    (     "
+    "          !          D         "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    4 H   8    (     @         %    \"     $    (     0         %  0 !@    $    ,    3F%M90"
+    "  5F%L=64       X   !     !@    @    $          4    (     0    X    !         !     .    8V]N=F5R=&5R7V1A=&$   X "
+    "   H @  !@    @    &          4    (    %0    ,    !          D   #X 0            \":F9F9F9FY/YJ9F9F9F<D_-#,S,S,ST"
+    "S^:F9F9F9G9/P       . _-#,S,S,SXS]G9F9F9F;F/YJ9F9F9F>D_[%&X'H7KZ3\\^\"M>C<#WJ/Y#\"]2A<C^H_X7H4KD?AZC\\S,S,S,S/K/X7"
+    "K4;@>A>L_UZ-P/0K7ZS\\I7(_\"]2CL/WL4KD?A>NP_S<S,S,S,[#]Q/0K7HW#M/Q2N1^%Z%.X_@,;X_>(N84!>\"0ZC%\")A0/K139*I^V! :7/89"
+    "$+U8$#(=;.4%C)A0+2A'A&[BV% CB[:ZIHH8D ,.$:JZQMC0)M?[2%&7V1 1D9HR>2(9$\"G2$/YN,5D0+Z;8Y)9_V1 K?RS[Y1\"94!0>635!9EE0"
+    "*I&6B1#[&5 B0C[WKER9D#::R9LR?)F0*F.%X1[O&= MO;X<#.V:$ NE+&9X/QJ0 MG0?Z\"D&Y 06#ET\"+; 4\":F9F9F9D 0)J9F9F9F?\\_[Z?"
+    "&2S>)_3^%ZU&X'H7[/Z :+]TD!OD_)0:!E4.+]C^J\\=)-8A#T/^^GQDLWB?$_2.%Z%*Y'\\3]@Y= BV_GP/^.EF\\0@L/ _IIO$(+!R\\#_^U'CI)"
+    "C'P/]5XZ28Q\"/ _U7CI)C$(\\#]JO'23& 3P/U8.+;*=[^\\_+(<6V<[W[S]JO'23& 3P/]5XZ28Q\"/ _#@   #     &    \"     0       "
+    "  !0    @    !    !     $         $  $ &5M87 .    H ,   8    (    !@         %    \"     H    +     0         )   "
+    " < ,          $3       #@:D       *!N0       @'!       \" <$       +!P0       L'!       \"P<$       +!P0       L'!"
+    "         1L       $!=0        &I       ! <$       '!Q0       (')       \"0<D       -!R0       T')       #0<D      "
+    " (!(P       0%5       ! 9D       \"!N0       H'%       !0<D       !!S0       0'-       \" <T       (!S0       @$K "
+    "      \" 4$       (!B0       8&M        P<4       )!R0       $'-       \" <T       /!S0       \\'-       \" 3,    "
+    "    !&0       @%Y        @:$       $!P0       (')        0<T       /!S0       <'1       !P=$       (!.P        #U "
+    "        6D       .!D0       P&U        P<4       -!R0       ,'1       !P=$       .!T0       0%#         )$       $"
+    "!50        &-       #@:T       $!P0       4')       #P<T       '!T0       X'1       \" 4<          P       @%!    "
+    "   \"@8$        !J0        '!       \"@<4       ,!S0       <'1       #@=$       (!2P        \"K         2$       ,"
+    "!=0       H&=       ! ;4       +!P0       D')       \" <T       /!S0       @%/         -L       (! 0        %A    "
+    "   !@94       (!J0       (&]       !P<4       %!R0       $'-       \" 5,        ! P        #)       ! 54        !C"
+    "0       (&A       ! ;$       *!O0       L'!        P<4 .    ,     8    (    !          %    \"     $    #     0   "
+    "      0  , 265I  X    X    !@    @    &          4    (     0    $    !          D    (    0'K?R^^$EC\\.    .     "
+    "8    (    !          %    \"     $    %     0         0    !0   &YE=F5C    #@   (@    &    \"     8         !0    "
+    "@    !    \"P    $         \"0   %@   #_______^(0       P)) ________F$#______S^?0       P*)  0    #@I4#_______^H0/"
+    "______'ZQ ______\\_KT       #\"Q0       P+) #@   #     &    \"     0         !0    @    !     @    $         $  \""
+    " ' P   .    .     8    (    !@         %    \"     $    !     0         )    \"    '*_0U&@3[0_#@   #     &    \"  "
+    "   0         !0    @    !     @    $         $  \" ' Q   .    .     8    (    !@         %    \"     $    !     0 "
+    "        )    \"    '*_0U&@3[0_#@   #@    &    \"     0         !0    @    !    !0    $         $     4   !T:'9E8P "
+    "   X   \"     !@    @    &          4    (    \"@    $    !          D   !0                       T0        #Y    "
+    "     1$        !)0        $Y       \" 44        !40       @%9         64 .    0     8    (    !          %    \"  "
+    "   $    +     0         0    \"P   '9E:&EC;&5D871A       .    8     8    (    !@         %    \"     8    !     0 "
+    "        )    ,    ->C<#T*UPE         1$ S,S,S,S/3/P       / _        24            "
+  }
+}

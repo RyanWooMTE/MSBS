@@ -1,0 +1,320 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>sldvmisscovtool Details</title><meta name="generator" content="MATLAB 7.11"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2011-12-28"><meta name="DC.source" content="sldvmisscovtool_doc_details.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>sldvmisscovtool Details</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">(1) GUI overview</a></li><li><a href="#2">(2) Data management pane</a></li><li><a href="#3">(2-1) Import</a></li><li><a href="#4">(2-2) Export</a></li><li><a href="#5">(2-3) Details of plug-in function</a></li><li><a href="#6">(2-4) Signal Viewer Button</a></li><li><a href="#7">(2-5) Signal Viewer GUI (sldvmisscovtool_signalviewer)</a></li><li><a href="#8">(3)  Target Model pane</a></li><li><a href="#10">(4) Coverage pane</a></li><li><a href="#11">(5) SLDV pane</a></li><li><a href="#12">(6) Merge pane</a></li></ul></div><h2>(1) GUI overview<a name="1"></a></h2><p>This tool consists of six panes.</p><div><ul><li><b>Data management pane</b> Import data from file(s), WorkSpace, or etc. format to MATLAB WorkSpace and assign them to a workspace data that can be imported by Simulink's input. The imported data can be exported to a arbitrary format.</li></ul></div><div><ul><li><b>Target Model pane</b>     Select a model you want to test. Inport data-types will be solved by compiling the model after the model selected.</li></ul></div><div><ul><li><b>Coverage pane</b>     Measure model coverage for selected TestCases imported in Data management pane.</li></ul></div><div><ul><li><b>SLDV pane</b>     If there are some coverage objectives that are not covered by the selected Test cases, you can generate Test Cases that reach for the missing coverage objectives by auto test generation functionality of Simulink Design Verifier.</li></ul></div><div><ul><li><b>Merging pane</b>     You can create a new test harness that include both given test cases in TestCase listbox and automatically generated test cases by Simulink Design Verifier.</li></ul></div><div><ul><li><b>Information</b>     Hints for usage of this tool will be shown in this pane.</li></ul></div><p><img vspace="5" hspace="5" src="SLDVMISSCOVTOOL_01e.PNG" alt=""> </p><h2>(2) Data management pane<a name="2"></a></h2><h2>(2-1) Import<a name="3"></a></h2><p>Importing arbitrary data into WorkSpace. The data will be assigned as simdata variable in MATLAB WorkSpace with structure with Time format.  You can create your own importing function (so called plug-in function) by writing MATLAB-code with given format. To create your own plug-in function, refer to <b>Details of plug-in function</b> . This tool provides following plug-in functions:</p><p><img vspace="5" hspace="5" src="SLDVMISSCOVTOOL_12E.PNG" alt=""> </p><p><b>CSV-file</b></p><p>Signals are provided by a Comma-Separated Values. The first column is corresponding to time and the other columns are corresponding to data of signals.</p><p>Example&#65306;</p><pre>       Test Case 01
+       time, SigA, SigB
+       0.00,    0,    0
+       0.10,   10,    0
+       0.15,    5,    0
+       0.25,    5,    1
+       0.30,    7,    0
+       0.40,    7,    0</pre><p><b>CSV-file with individual time steps</b></p><p>Signals are provided by a Comma-Separated Values. All signals have their own time data.</p><p>Example&#65306;</p><pre>       Test Case 02
+       time, SigA, time, SigB
+          0,    0,    0,    0
+        0.1,   10, 0.25,    1
+       0.15,    5,  0.3,    0
+        0.3,    7,  0.4,    0
+        0.4,    7,</pre><p><b>MAT-file</b></p><p>Importing data from WorkSpace. A variable simdata must be assigned with  structure with time format. Details of structure with time format is documented on</p><p>Help &gt; Simulink &gt; Importing and Exporting Data &gt; Exporting Data to the MATLAB Workspace &gt; Format Options  &gt; Structure with time</p><div><ul><li><a href="matlab:web(['jar:file:///',docroot,'/toolbox/simulink/help.jar!/ug/f11-46877.html'],'-helpbrowser')">Help-Simulink-Importing and Exporting Data-Exporting Data to the MATLAB Workspace - Format Options - Structure with time</a></li></ul></div><p><b>Signal Builder</b></p><p>Import data from currently selected Signal Builder block. This function works only when gcb command points out Signal Builder block.</p><p><b>sldvData</b></p><p>Import data from MAT-file created by test generation functionality of Simulink Design Verifier.</p><h2>(2-2) Export<a name="4"></a></h2><p>Exporting simdata variable defined in the Workspace to an arbitrary data format. You can create your own export function (so called plug-in function) by writing M-code with given format. To create your own plug-in function, refer to <b>Details of plug-in function</b>. This tool provides following plug-in functions:</p><p><img vspace="5" hspace="5" src="SLDVMISSCOVTOOL_14E.PNG" alt=""> </p><div><ul><li><b>CSV-file</b> Selected signals will be exported by a Comma-Separated Values. The first column is corresponding to time and the other columns are corresponding to data of signals.</li></ul></div><div><ul><li><b>CSV-file with individual time steps</b> Selected signals will be exported by a Comma-Separated Values. All signals have their own time data.</li></ul></div><div><ul><li><b>MAT-file</b> Exporting selected signals to MAT-file containing simdata variable with structure with time format.</li></ul></div><div><ul><li><b>Signal Builder</b> New model will be created and put a Signal builder block in which selected signals are put.</li></ul></div><h2>(2-3) Details of plug-in function<a name="5"></a></h2><p>This tool provides a scheme to create user-defined importing and exporting functions so called plug-in function. By this scheme, you can create your own importing or exporting function without changing any code of sldvmisscovtool.</p><p><b>(2-3-1) Conditions to be recognized as a plug-in function</b></p><pre>   User created function will be recognized as a plug-in function when following conditions are satisfied:</pre><div><ul><li>The function is stored with the same directory where sldvmisscovtool.m is stored.</li></ul></div><div><ul><li>The file name of the M-code is beginning with import* in case of importing function and with export* in case of exporting function.         ex.) Import function</li></ul></div><pre>           importCSVfile.m        importMATfile.m        importWorkSpace.m
+           importCSVfile2.m       importSignalBuilder.m  importsldvDatafile.m</pre><pre>       ex.) Export function</pre><pre>           exportCSVfile.m        exportMATfile.m
+           exportCSVfile2.m       exportSignalBuilder.m</pre><p><b>(2-3-2) Format of importing plug-in function</b></p><p>Detail of the format is written in _importTemplate.m  in the directory where sldvmisscovtool.m is stored.</p><p><b>(2-3-3) Format of exporting plug-in function</b></p><pre>Detail of the format is written in _exportTemplate.m  in the directory where sldvmisscovtool.m is stored.</pre><h2>(2-4) Signal Viewer Button<a name="6"></a></h2><pre> If you  click *Signal Viewer* button,  Signal Viewer GUI (sldvmisscovtool_signalviewer) will be displayed. This window enables you to view each signals of the test cases in detail.</pre><h2>(2-5) Signal Viewer GUI (sldvmisscovtool_signalviewer)<a name="7"></a></h2><p><img vspace="5" hspace="5" src="sldvmisscovtool_23e.png" alt=""> </p><pre>*Buttons and listboxes*</pre><div><ul><li><b>simdata</b> listbox: This listbox shows test cases in simdata variable loaded into this tool. 4 test cases are loaded in case of above figure.</li></ul></div><div><ul><li><b>signals</b> listbox: This listbox shows all signals in simdata selected in simdata listbox. x-y digits in each lines shows y-th signal in x-th test case and this corresponds to simdata(x).signals(y). If you select one or more lines in the listbox, the selected signals are drawn in axes. If <b>Separate axes</b> check in Preferences menu in toolbar is enabled, the signals are separately drawn. If it is disabled, the signals are drawn in the same axis.</li></ul></div><div><ul><li><b>Close</b> button: Close this GUI.</li></ul></div><div><ul><li><b>"Load simdata" button</b> Load simdata from WorkSpace into this tool.</li></ul></div><div><ul><li><b>Create figure</b> button: Create new figure window and copy all axes in this tool to the new window. This button is used for modifying using Plot Tool or command line API.</li></ul></div><div><ul><li><b>Preference</b> toolbar menu:</li></ul></div><div><ul><li><b>Display legends</b></li></ul></div><div><ul><li><b>Checked</b>: Display legends on the axes. This option is valid in case <b>Separate axes</b> option is disabled.</li><li><b>Unchecked</b>: Do not display legends on the axes.</li></ul></div><div><ul><li><b>Separate axes</b></li></ul></div><div><ul><li><b>Checked</b>: All signals are plotted in the different axes. This option is disabled in case more then 10 signals are selected.</li><li><b>Unchecked</b>: All signals are ploted in the same axes.</li></ul></div><p><b>Language</b></p><div><ul><li><b>&#26085;&#26412;&#35486;</b>: Japanese mode.</li><li><b>English</b> : English mode.</li></ul></div><h2>(3)  Target Model pane<a name="8"></a></h2><p>The target model is selected at this stage. Data selected in the <b>Test Cases</b> listbox will be fed into the model.</p><p>By clicking</p><p><img vspace="5" hspace="5" src="SLDVMISSCOVTOOL_04.PNG" alt=""> </p><p>, you can select a model file to be set as the target model. If you click</p><p><img vspace="5" hspace="5" src="SLDVMISSCOVTOOL_05E.PNG" alt=""> </p><p>in this case, the target model will be the result of bdroot command. After selected, the model will be opened and the following compile command will be executed internally:</p><pre class="codeinput">modelname([],[],[],<span class="string">'compile'</span>)
+</pre><p>The tool can obtain data types of the Inport blocks by compiling, then the data types of the Inport blocks will be listed in <b>Name/Data Type</b> listbox. The obtained data type will be used when <b>Adopt model's data types</b> will be clicked or coverage measurement will be executed in the <b>Coverage</b> pane.</p><p><img vspace="5" hspace="5" src="SLDVMISSCOVTOOL_16E.PNG" alt=""> </p><p>clicking *Adopt model's data types,  signals in the structure with time variable simdata stored in the WorkSpace will be cast to have the same data type with model's Inport blocks.</p><h2>(4) Coverage pane<a name="10"></a></h2><p>By clicking <b>Recode coverage</b> button, at first, all the data selected in the <b>Test Cases</b> listbox is checked to have the same data types with model's Inport blocks. If  some of data types of the test cases have different data type from the Inport block's data type, then the following dialog will be shown:</p><p><img vspace="5" hspace="5" src="SLDVMISSCOVTOOL_17E.PNG" alt=""> </p><p>Nothing will be done when you click <b>NO</b> in the dialog. If you click <b>YES</b>, simulation for all signals selected in the <b>Test Cases</b> listbox will be done and cumulative coverage for the target model will be measured. If there are some errors such as data type mismatching or number of input signals is not enough for the model, the test case will be un-selected in the <b>Test Cases</b> listbox.</p><p>If you click <b>Coverage Report</b> button, a model coverage report for the cumulative coverage will be shown.</p><h2>(5) SLDV pane<a name="11"></a></h2><p><img vspace="5" hspace="5" src="SLDVMISSCOVTOOL_19E.PNG" alt=""> </p><p>clicking <b>Analyze missing coverages</b>, test cases for the un-covered coverage objectives will be generated using automated test vector generation function of Simulink Design Verifier.</p><p>If you don't have a license of Simulink Design Verifier, this pane will not be shown.</p><h2>(6) Merge pane<a name="12"></a></h2><p><img vspace="5" hspace="5" src="SLDVMISSCOVTOOL_20E.PNG" alt=""> </p><p>By clicking <b>Combined Report</b>,  coverage report for following two coverage data will be shown. Coverage data obtained by clicking <b>Record coverage</b> button. Coverage data for the test cases generated by missing coverage analysis.</p><p><img vspace="5" hspace="5" src="SLDVMISSCOVTOOL_21E.PNG" alt=""> </p><p>By clicking <b>Merge test cases</b>, a new harness model will be created. The harness model includes a signal builder block with following signals:</p><div><ul><li>Signals selected in <b>Test cases</b> listbox.</li><li>Signals generated by missing coverage analysis.</li></ul></div><p>You can reuse these signals again by using <b>From Signal builder block</b> import function in the <b>Data management</b> pane.</p><p class="footer"><br>
+      Published with MATLAB&reg; 7.11<br></p></div><!--
+##### SOURCE BEGIN #####
+%% sldvmisscovtool Details
+%
+%% (1) GUI overview
+% 
+% This tool consists of six panes.
+%
+% * *Data management pane*
+% Import data from file(s), WorkSpace, or etc. format to MATLAB WorkSpace
+% and assign them to a workspace data that can be imported by Simulink's input. The imported data can be exported to a arbitrary format. 
+%
+% * *Target Model pane*
+%     Select a model you want to test. Inport data-types will be solved by compiling the model after the model selected.
+% 
+% * *Coverage pane*
+%     Measure model coverage for selected TestCases imported in Data management pane.
+% 
+% * *SLDV pane*
+%     If there are some coverage objectives that are not covered by the selected Test cases, you can generate Test Cases that reach for the missing coverage objectives by auto test generation functionality of Simulink Design Verifier.
+% 
+% * *Merging pane*
+%     You can create a new test harness that include both given test cases in TestCase listbox and automatically generated test cases by Simulink Design Verifier.
+% 
+% * *Information*
+%     Hints for usage of this tool will be shown in this pane.
+% 
+% <<SLDVMISSCOVTOOL_01e.PNG>>
+
+%% (2) Data management pane
+%
+%% (2-1) Import
+% 
+% Importing arbitrary data into WorkSpace. The data will be assigned as simdata variable in MATLAB WorkSpace with structure with Time format.  You can create your own importing function (so called plug-in function) by writing MATLAB-code with given format. To create your own plug-in function, refer to *Details of plug-in function* . This tool provides following plug-in functions:
+%
+% <<SLDVMISSCOVTOOL_12E.PNG>>
+%
+%
+% *CSV-file*
+% 
+% Signals are provided by a Comma-Separated Values. The first column is corresponding to time and the other columns are corresponding to data of signals.
+%
+% Example：
+% 
+%         Test Case 01
+%         time, SigA, SigB
+%         0.00,    0,    0
+%         0.10,   10,    0
+%         0.15,    5,    0
+%         0.25,    5,    1
+%         0.30,    7,    0
+%         0.40,    7,    0
+%
+% *CSV-file with individual time steps*
+% 
+% Signals are provided by a Comma-Separated Values. All signals have their own time data.
+%
+% Example：
+% 
+%         Test Case 02
+%         time, SigA, time, SigB
+%            0,    0,    0,    0
+%          0.1,   10, 0.25,    1
+%         0.15,    5,  0.3,    0
+%          0.3,    7,  0.4,    0
+%          0.4,    7,
+%
+% *MAT-file*
+% 
+% Importing data from WorkSpace. A variable simdata must be assigned with  structure with time format. Details of structure with time format is documented on
+% 
+% Help > Simulink > Importing and Exporting Data > Exporting Data to the MATLAB Workspace > Format Options  > Structure with time
+%
+% * <matlab:web(['jar:file:///',docroot,'/toolbox/simulink/help.jar!/ug/f11-46877.html'],'-helpbrowser') Help-Simulink-Importing and Exporting Data-Exporting Data to the MATLAB Workspace - Format Options - Structure with time>
+% 
+% *Signal Builder*
+% 
+% Import data from currently selected Signal Builder block. This function works only when gcb command points out Signal Builder block. 
+% 
+% *sldvData*
+% 
+% Import data from MAT-file created by test generation functionality of Simulink Design Verifier.
+
+%% (2-2) Export
+% 
+% Exporting simdata variable defined in the Workspace to an arbitrary data format. You can create your own export function (so called plug-in function) by writing M-code with given format. To create your own plug-in function, refer to *Details of plug-in function*. This tool provides following plug-in functions:
+% 
+% <<SLDVMISSCOVTOOL_14E.PNG>>
+% 
+% * *CSV-file*
+% Selected signals will be exported by a Comma-Separated Values. The first column is corresponding to time and the other columns are corresponding to data of signals.
+%
+% * *CSV-file with individual time steps*
+% Selected signals will be exported by a Comma-Separated Values. All signals have their own time data.
+%
+% * *MAT-file*
+% Exporting selected signals to MAT-file containing simdata variable with structure with time format.
+% 
+% * *Signal Builder*
+% New model will be created and put a Signal builder block in which selected signals are put.
+
+%% (2-3) Details of plug-in function
+% 
+% This tool provides a scheme to create user-defined importing and exporting functions so called plug-in function. By this scheme, you can create your own importing or exporting function without changing any code of sldvmisscovtool.
+% 
+% *(2-3-1) Conditions to be recognized as a plug-in function*
+% 
+%     User created function will be recognized as a plug-in function when following conditions are satisfied:
+% 
+% * The function is stored with the same directory where sldvmisscovtool.m is stored.
+%
+% * The file name of the M-code is beginning with import* in case of importing function and with export* in case of exporting function.
+%         ex.) Import function
+% 
+%             importCSVfile.m        importMATfile.m        importWorkSpace.m     
+%             importCSVfile2.m       importSignalBuilder.m  importsldvDatafile.m
+% 
+%         ex.) Export function
+% 
+%             exportCSVfile.m        exportMATfile.m       
+%             exportCSVfile2.m       exportSignalBuilder.m 
+% 
+% *(2-3-2) Format of importing plug-in function*
+% 
+% Detail of the format is written in _importTemplate.m  in the directory where sldvmisscovtool.m is stored.
+% 
+% *(2-3-3) Format of exporting plug-in function*
+% 
+%  Detail of the format is written in _exportTemplate.m  in the directory where sldvmisscovtool.m is stored.
+% 
+%          
+% 
+
+%% (2-4) Signal Viewer Button
+%   If you  click *Signal Viewer* button,  Signal Viewer GUI (sldvmisscovtool_signalviewer) will be displayed. This window enables you to view each signals of the test cases in detail.
+
+%% (2-5) Signal Viewer GUI (sldvmisscovtool_signalviewer)
+% 
+% <<sldvmisscovtool_23e.png>>
+%
+%  *Buttons and listboxes*
+% 
+% * *simdata* listbox:
+% This listbox shows test cases in simdata variable loaded into this tool. 4 test cases are loaded in case of above figure.
+% 
+% * *signals* listbox:
+% This listbox shows all signals in simdata selected in simdata listbox. x-y digits in each lines shows y-th signal in x-th test case and this corresponds to simdata(x).signals(y).
+% If you select one or more lines in the listbox, the selected signals are drawn in axes. If *Separate axes* check in Preferences menu in toolbar is enabled, the signals are separately drawn. If it is disabled, the signals are drawn in the same axis.
+% 
+% * *Close* button:
+% Close this GUI.
+% 
+% * *"Load simdata" button*
+% Load simdata from WorkSpace into this tool.
+% 
+% * *Create figure* button:
+% Create new figure window and copy all axes in this tool to the new window. This button is used for modifying using Plot Tool or command line API.
+% 
+% * *Preference* toolbar menu:
+%
+% * *Display legends*
+% 
+% * *Checked*: Display legends on the axes. This option is valid in case *Separate axes* option is disabled.
+% * *Unchecked*: Do not display legends on the axes.
+% 
+% * *Separate axes*
+% 
+% * *Checked*: All signals are plotted in the different axes. This option is disabled in case more then 10 signals are selected.
+% * *Unchecked*: All signals are ploted in the same axes.
+% 
+% *Language*
+% 
+% * *日本語*: Japanese mode.
+% * *English* : English mode.
+% 
+
+%% (3)  Target Model pane
+% 
+% The target model is selected at this stage. Data selected in the *Test Cases* listbox will be fed into the model.
+% 
+% By clicking
+%
+% <<SLDVMISSCOVTOOL_04.PNG>>
+%
+% , you can select a model file to be set as the target model. If you click 
+%
+% <<SLDVMISSCOVTOOL_05E.PNG>>
+%
+% in this case, the target model will be the result of bdroot command. After selected, the model will be opened and the following compile command will be executed internally:
+% 
+modelname([],[],[],'compile')
+
+%% 
+% The tool can obtain data types of the Inport blocks by compiling, then the data types of the Inport blocks will be listed in *Name/Data Type* listbox. The obtained data type will be used when *Adopt model's data types* will be clicked or coverage measurement will be executed in the *Coverage* pane.
+% 
+% <<SLDVMISSCOVTOOL_16E.PNG>>
+%
+% clicking *Adopt model's data types,  signals in the structure with time variable simdata stored in the WorkSpace will be cast to have the same data type with model's Inport blocks.
+
+%% (4) Coverage pane
+% 
+% By clicking *Recode coverage* button, at first, all the data selected in the *Test Cases* listbox is checked to have the same data types with model's Inport blocks. If  some of data types of the test cases have different data type from the Inport block's data type, then the following dialog will be shown:
+% 
+% <<SLDVMISSCOVTOOL_17E.PNG>>
+% 
+% Nothing will be done when you click *NO* in the dialog. If you click *YES*, simulation for all signals selected in the *Test Cases* listbox will be done and cumulative coverage for the target model will be measured. If there are some errors such as data type mismatching or number of input signals is not enough for the model, the test case will be un-selected in the *Test Cases* listbox.
+% 
+% If you click *Coverage Report* button, a model coverage report for the cumulative coverage will be shown.
+
+%% (5) SLDV pane
+% 
+% <<SLDVMISSCOVTOOL_19E.PNG>>
+%
+% clicking *Analyze missing coverages*, test cases for the un-covered coverage objectives will be generated using automated test vector generation function of Simulink Design Verifier.
+% 
+% If you don't have a license of Simulink Design Verifier, this pane will not be shown.
+
+%% (6) Merge pane
+% 
+%  
+% 
+% <<SLDVMISSCOVTOOL_20E.PNG>>
+%
+% By clicking *Combined Report*,  coverage report for following two coverage data will be shown.
+% Coverage data obtained by clicking *Record coverage* button.
+% Coverage data for the test cases generated by missing coverage analysis.
+% 
+% <<SLDVMISSCOVTOOL_21E.PNG>>
+%
+% By clicking *Merge test cases*, a new harness model will be created. The harness model includes a signal builder block with following signals:
+% 
+% * Signals selected in *Test cases* listbox.
+% * Signals generated by missing coverage analysis.
+% 
+% You can reuse these signals again by using *From Signal builder block* import function in the *Data management* pane.
+
+
+##### SOURCE END #####
+--></body></html>

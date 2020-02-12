@@ -1,0 +1,417 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Step 1: Requirements Traceability</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-10-26"><meta name="DC.source" content="Step_01.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:2.0em; color:#000077; line-height:150%; font-weight:bold; text-align:center }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.6em; color:#444444; font-weight:bold; font-style:italic; text-align:left; vertical-align:bottom; line-height:200%; border-top:2px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#555555; font-style:italic; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px;} 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Step 1: Requirements Traceability</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Introduction</a></li><li><a href="#2">Verification and Validation Tools Used</a></li><li><a href="#3">What requirements are implemented in the model?</a></li><li><a href="#4">Configuring for Two-Way Linking</a></li><li><a href="#5">Linking Requirements to Simulink Blocks</a></li><li><a href="#6">Linking Requirements to Stateflow Objects</a></li><li><a href="#7">Generating a Requirements Traceability Report</a></li><li><a href="#8">Demonstrating Complete Requirements Traceability</a></li><li><a href="#9">Summary</a></li></ul></div><h2>Introduction<a name="1"></a></h2><p><img vspace="5" hspace="5" src="Step_01_CruiseControl_WhatNow.png" alt=""> </p><p>Building executable specifications is an effective and proven way to communicate design ideas and documentation of low level requirements. Simulink and Stateflow are ideal platforms for defining executable specifications in embedded software development.  In the model-based development process these executable specifications are then elaborated to create production code ready models.</p><p>Executable specifications provide an opportunity for early validation of requirements. You can enhance this by providing a link between parts of your model and the corresponding requirements. And you can answer the question:  Are all my requirements implemented?</p><p>The Requirements Management Interface (RMI) allows you to associate requirements with Simulink&reg; models and Stateflow&reg; charts. You can use the Requirements Management Interface to:</p><div><ul><li>Associate requirements with Simulink models, subsystems and blocks</li><li>Associate requirements Stateflow charts, states, transitions, boxes and functions</li><li>Associate requirements with MATLAB code lines and MATLAB Function Block code lines</li><li>Navigate from a Simulink block or Stateflow object in a diagram or in the Model Explorer to a requirement</li><li>Navigate from an embedded link in a requirements document to the corresponding Simulink or Stateflow object</li><li>View objects in Simulink or Stateflow diagrams that have requirements associated with them.</li></ul></div><h2>Verification and Validation Tools Used<a name="2"></a></h2><div><ul><li>Simulink Verification and Validation</li></ul></div><h2>What requirements are implemented in the model?<a name="3"></a></h2><p>Let's first take a look at the requirements document.  In this example the requirements are in a MS Word document. The Requirements Management Interface (RMI) provides a way to navigate from the requirement to the linked block in the system.  To navigate use a <b>Ctrl+Click</b> on the MATLAB icon in the Word document to highlight the linked in Simulink.  At this time we are looking at a model with many links to the requirements document. Later in this step, we will show how to create these links.</p><p>Open the requirements document: <b>cruise_control_reqs_mdl_linked.docx</b> &#8211; <b><a href="matlab:winopen('cruise_control_reqs_mdl_linked.docx');">click here</a></b>.</p><p><img vspace="5" hspace="5" src="Step_01_CruiseControl_ReqNav.png" alt=""> </p><p>Do the following:</p><p><b>Ctrl+Click</b> on the above highlighted icon associated with the "Enable/Disable Switch" to navigate to the linked "CruiseOnOff" inport in the Cruise Control model.</p><p><img vspace="5" hspace="5" src="Step_01_CruiseControl_ToModel.png" alt=""> </p><p>Do the following:</p><p><b>Right-Click</b> on "CruiseOnOff" inport to navigate to the associated requirement as shown in the following figure. Select <b>Requirements Traceability</b>, and then select <b>1.  "Enable/Disable Switch"</b> to navigagte to the requirements.</p><p><img vspace="5" hspace="5" src="Step_01_CruiseControl_MdlNav.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_01_CruiseControl_ToReq.png" alt=""> </p><p>From the previous exercise, by right clicking on a block, you can tell if there is a requirement associated with that block, but what if you just want to get a "bird's eye view?&#8221;  For this section, we have a model that has multiple links to the requirement document. The Requirements Management Interface (RMI) provides a way to get a "bird's eye view&#8221; of the blocks that are linked to requirements.  The "model highlighting" feature will provide this view.</p><p>Do the following:</p><p>Under <b>Analysis</b>, select <b>Requirements Traceability</b>, and <b>Highlight model</b> option. You should see all the blocks that have requirements linked to them highlighted.</p><p><img vspace="5" hspace="5" src="Step_01_HightlightModelMenu.png" alt=""> </p><p>Do the following:</p><p>Click on hyperlink <b>Click to load Requirement Details</b>.</p><p><img vspace="5" hspace="5" src="Step_01_ReqDetails.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_01_HighlightedModel.png" alt=""> </p><p>There are two types of highlighting shown above. The orange boundary means that at least one block within that subsystem has a requirement associated with it. The solid fill highlighting means there is requirement associated with that particular block.  There are links inside the "Compute target speed" as shown by the orange boundary.</p><p>To view the links in the state chart, do the following:</p><p>Open the "Compute target speed" subsystem to see the links associated with states and transitions in the Stateflow chart.  Notice model objects can have one or more linked requirements.  And a requirement may be linked to one or more model objects.</p><p><img vspace="5" hspace="5" src="Step_01_HighlightedSF.png" alt=""> </p><p>To remove the highlighting, we can follow similar steps as to highlight the model.  Do the following:</p><p>Under <b>Analysis</b>, select <b>Requirements Traceability</b> and <b>Unhighlight model</b> option. With that, all of the highlighting in the model is removed.</p><p><img vspace="5" hspace="5" src="Step_01_UnhighlightModelMenu.png" alt=""> </p><h2>Configuring for Two-Way Linking<a name="4"></a></h2><p>RMI allows you to create either One-Way (one direction, from model to requirement) or Two-Way (from model to requirement, and from requirement to model) links. The typical use case for One-Way linking is if the user (modeler) doesn't have write privileges to the requirements document. Two-Way linking will modify/update the requirements document with model link information.  This includes creating the hyperlink MATLAB icon to navigate to the model from the requiremetn. In the example, Two-Way linking has been enabled.</p><p>To verify that bidirectional linked has been enabled, do the following:</p><div><ol><li>Select <b>Analysis</b>, select <b>Requirements Traceability</b> and <b>Settings</b>.</li><li>Check the <b>Modify destination for bi-directional linking</b> option under the <b>Selection Linking</b> tab.</li></ol></div><p><img vspace="5" hspace="5" src="Step_01_ReqSettingsMenu.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_01_ReqSettingsUI.png" alt=""> </p><p>The Simulink environment is now configured for bi-directional linking. Please note that this setting stays with your MATLAB/Simulink configuration, and is not attached to a particular model.</p><h2>Linking Requirements to Simulink Blocks<a name="5"></a></h2><p>When we highlighted model to show the model objects with links to requirements there were some inconsistencies with regard to the blocks that had links and other blocks that did not have links. One inconsistency to note is that not all of the inports are linked to requirements, specifically the "Brake" and "Speed" inports.</p><p><img vspace="5" hspace="5" src="Step_01_InportsNotLinked.png" alt=""> </p><p>After reviewing the requirements, it was determined that there were not any requirements for these inputs.  These have been added to the requirements document to capture these input sensors.  But now we need to link these new requirements (shown in green below) to the inports.  We will be creating bi-directional links to our model.</p><p>To link the new "Brake" input requirement to the model, do the following:</p><div><ol><li>If necessary, open the requirements document: <b>cruise_control_reqs_mdl_linked.docx</b> &#8211; <b><a href="matlab:winopen('cruise_control_reqs_mdl_linked.docx')">click here</a></b>.</li><li>Select the "Vehicle Brake Input" requirement.</li></ol></div><p><img vspace="5" hspace="5" src="Step_01_BrakeReqSelect.png" alt=""> </p><div><ol><li>Right-click on the <b>Brake" inport block and select *Requirements Traceability</b> and <b>Link to Selection in Word</b>.</li></ol></div><p><img vspace="5" hspace="5" src="Step_01_BrakeLinkMenu.png" alt=""> </p><p>You should now see the MATLAB icon next to the requirement text. The icon is a URL hyperlink which navigates you to the linked block in the Simulink model with a <b>Ctrl+Click</b>.  Also, a new menu item has been added to the <b>Requirements Traceability</b> menu for the "Brake" inport block.</p><p><img vspace="5" hspace="5" src="Step_01_ReqButton.png" alt=""> </p><div><ol><li><b>Ctrl+Click</b> on the URL hyperlink button in the requirement document. The corresponding model should open up, with the <b>Brake</b> inport block highlighted as below:</li></ol></div><p><img vspace="5" hspace="5" src="Step_01_ReqBlockHighlighted.png" alt=""> </p><div><ol><li><b>Right-click</b> on the <b>Brake</b> inport block, and select the requirement text <b>"1. Vehicle Brake Input"</b>. You should jump to the requirements document with the requirement text being highlighted.</li></ol></div><p><img vspace="5" hspace="5" src="Step_01_ReqTextMenu.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_01_ReqHighlighted.png" alt=""> </p><p>This completes the exercise of linking requirements to Simulink objects. We will now repeat this for Stateflow and MATLAB Functions in the next two exercises.</p><h2>Linking Requirements to Stateflow Objects<a name="6"></a></h2><p>When we highlighted model to show the Stateflow objects with links to requirements there were some inconsistencies with regard to the transitions that had links and other tranisitions that did not have links. One inconsistency to note is that both "hold" function transitions are are not linked to requirements.  <b>We are pulling ahead an issue that we will find in a later step to illustrate linking to Stateflow objects.</b></p><p><img vspace="5" hspace="5" src="Step_01_SF_NotLinked.png" alt=""> </p><p>After reviewing the requirements, it was determined that there were not any requirements for the "hold" function.  These have been added to the requirements document to capture the "hold" function.  But now we need to link these new requirements (shown in green below) to the transitions.</p><p>The same linking mechanism can be applied to Stateflow objects as well. Let's see how this could be done.</p><p>To link the new "hold" function requirement to the Stateflow transition, do the following:</p><p>1. If necessary, open the requirements document: <b>cruise_control_reqs_mdl_linked.docx</b> &#8211; <b><a href="matlab:open('cruise_control_reqs_mdl_linked.docx')">click here</a></b>. 2. Select the requirement: <b>"2.10 Continuous "Accelerate" input increases...</b></p><p><img vspace="5" hspace="5" src="Step_01_AccelHoldReqSelect.png" alt=""> </p><p>3. Open the <b>Compute target speed chart</b>. 4. Right-click on the transition <b>[after(10/holdrate*incdec,tick)]</b>. 5. Select <b>Requirements Traceability</b> and <b>Link to Selection in Word</b>.</p><p><img vspace="5" hspace="5" src="Step_01_ReqLinkMenu_AccelHold.png" alt=""> </p><p>6. Navigate between the <b>[after(10/holdrate*incdec,tick)]</b> transition and the requirement in the same way you did for the Simulink blocks.</p><p><img vspace="5" hspace="5" src="Step_01_SFLinking.png" alt=""> </p><h2>Generating a Requirements Traceability Report<a name="7"></a></h2><p>With any type of structured verification and validation activity, it is important to track what has been done.  This is especially true when it comes to requirements traceability.  As part of the RMI functionality, you can generate a report that contains a snapshot of the model along with a list of the model items that have a requirement or requirements linked to them.</p><p>Let's first configure how we want the report to look:</p><div><ol><li>Select <b>Analysis</b>, <b>Requirements Traceability</b>, and <b>Settings</b>. You should see the following window below popup.</li></ol></div><p><img vspace="5" hspace="5" src="Step_01_ReqTraceReport.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_01_ReqReportSettings.png" alt=""> </p><p>3. Select the <b>Report</b> tab, and configure your settings to be the same as the screenshot shown above. With these options, RMI will automatically highlight the model before generating the report, and we will also get a list of blocks that don't have requirement associated with it.</p><p>4. Under <b>Analysis</b>, select <b>Requirements and Generate Report</b> option. An html report similar to the following screenshot should appear.</p><p><img vspace="5" hspace="5" src="Step_01_GenerateReport.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_01_ReqReport.png" alt=""> </p><p>5. Try to navigate between the report, the model and the requirements.</p><p>Please note that the report generated is based of off Simulink Report Generator. The user can use the existing report template as a starting for additional customization.</p><h2>Demonstrating Complete Requirements Traceability<a name="8"></a></h2><p>Now that we have good traceability from the requirement to the model object.  Let&#8217;s work through a method that will demonstrate the complete traceability from requirement to model to source code.</p><p>Do the following:</p><div><ol><li>Under <b>Code</b>, select <b>C/C++ Code</b>, and <b>Build Model</b>. Note: the options for embedding the requirement comments in the C source code have already been set.</li></ol></div><p><img vspace="5" hspace="5" src="Step_01_BuildModelMenu.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_01_BuildReqConfig.png" alt=""> </p><p>After the code has been generated (should be ~5-10 sec), the following code generation report should open:</p><p><img vspace="5" hspace="5" src="Step_01_CodegenRptMdlLinks.png" alt=""> </p><p>Notice the links to the model blocks embedded in the code comments.</p><p>2. Click on one of the <b>'&lt;Root&gt;/Brake'</b> links to highlight the <b>Brake inport block</b> in the model.</p><p>Next, we are going to use the <b>Navigate to Code</b> function to return from the model to the code.</p><p>3. Right click on the highlighted <b>Brake inport block</b>, and select <b>C/C++ Code</b> and <b>Navigate to C/C++ Code</b>.</p><p><img vspace="5" hspace="5" src="Step_01_NavigateToCodeMenu.png" alt=""> </p><p>This should take you back to the code generation report and the code the code comment associated with that block is now highlighted.</p><p>Now we will navigate to a requirement using hyperlinks in the code generation report.</p><p><img vspace="5" hspace="5" src="Step_01_CodegenRptReqLinks.png" alt=""> </p><p>4. Click on <b>"1.  Vehicle Brake Input"</b> to navigate to the associated requirement.</p><p><img vspace="5" hspace="5" src="Step_01_LinkedReqFromCode.png" alt=""> </p><p>With these functions shown above, you can go from Requirement to Model to Source Code, or directly from Source Code to Requirement.</p><h2>Summary<a name="9"></a></h2><p>The requirements linking feature has been shown to provide a method to know where in your model a requirement has been implemented.  Additionally with the <b>model highlighting</b> feature it was easy to see what parts of the model were not associated with a requirement.  From this view we were able to determine we had missing requirements for some of the inputs and the functions.  With the <b>bidirectional links</b> in the requirements we were also able to see that all requirements were associated with at least one model object.  So going forward we have confidence that our model has implemented all of the requirements.  We will continue to answer more of the questions in the next steps with our structured and formal testing framework for securing the quality, robustness and safety of our cruise controller.</p><p><img vspace="5" hspace="5" src="Step_01_CruiseControl_Summary.png" alt=""> </p><div><ol><li>Close all models - <b><a href="matlab:bdclose('all');">click here</a></b>.</li><li>Go to <b>Step 2: Modeling Standards</b> - <b><a href="Step_02.html">click here</a></b>.</li></ol></div><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Step 1: Requirements Traceability
+%
+%% Introduction
+%
+% <<Step_01_CruiseControl_WhatNow.png>>
+%
+% Building executable specifications is an effective and proven way to
+% communicate design ideas and documentation of low level requirements.
+% Simulink and Stateflow are ideal platforms for defining executable
+% specifications in embedded software development.  In the model-based 
+% development process these executable specifications are then elaborated
+% to create production code ready models. 
+%
+% Executable specifications provide an opportunity for early validation of
+% requirements. You can enhance this by providing a link between parts of
+% your model and the corresponding requirements. And you can answer the 
+% question:  Are all my requirements implemented?  
+%
+% The Requirements Management Interface (RMI) allows you to associate
+% requirements with Simulink® models and Stateflow® charts. You can use the
+% Requirements Management Interface to:  
+%
+% * Associate requirements with Simulink models, subsystems and blocks
+% * Associate requirements Stateflow charts, states, transitions, boxes and
+% functions 
+% * Associate requirements with MATLAB code lines and MATLAB Function Block
+% code lines 
+% * Navigate from a Simulink block or Stateflow object in a diagram or in
+% the Model Explorer to a requirement 
+% * Navigate from an embedded link in a requirements document to the
+% corresponding Simulink or Stateflow object 
+% * View objects in Simulink or Stateflow diagrams that have requirements
+% associated with them. 
+% 
+%% Verification and Validation Tools Used
+% 
+% * Simulink Verification and Validation
+%
+%% What requirements are implemented in the model? 
+%
+% Let's first take a look at the requirements document.  In this example
+% the requirements are in a MS Word document. The Requirements Management 
+% Interface (RMI) provides a way to navigate from the requirement to the
+% linked block in the system.  To navigate use a *Ctrl+Click* on the MATLAB
+% icon in the Word document to highlight the linked in Simulink.  At this
+% time we are looking at a model with many links to the requirements 
+% document. Later in this step, we will show how to create these links.
+%
+% Open the requirements document: *cruise_control_reqs_mdl_linked.docx* –
+% *<matlab:winopen('cruise_control_reqs_mdl_linked.docx'); click here>*.
+%
+% <<Step_01_CruiseControl_ReqNav.png>>
+%
+% Do the following:
+%
+% *Ctrl+Click* on the above highlighted icon associated with the 
+% "Enable/Disable Switch" to navigate to the linked "CruiseOnOff" inport 
+% in the Cruise Control model.
+%
+% <<Step_01_CruiseControl_ToModel.png>>
+%
+% Do the following:
+%
+% *Right-Click* on "CruiseOnOff" inport to navigate to the associated
+% requirement as shown in the following figure. Select *Requirements Traceability*, 
+% and then select *1.  "Enable/Disable Switch"* to navigagte to the 
+% requirements. 
+%
+% <<Step_01_CruiseControl_MdlNav.png>>
+%
+% <<Step_01_CruiseControl_ToReq.png>>
+%
+% From the previous exercise, by right clicking on a block,
+% you can tell if there is a requirement associated with that block, but
+% what if you just want to get a "bird's eye view?”  For this section, we
+% have a model that has multiple links to the requirement document.      
+% The Requirements Management Interface (RMI) provides a way to get a 
+% "bird's eye view” of the blocks that are linked to requirements.  The 
+% "model highlighting" feature will provide this view.
+%
+% Do the following:
+%
+% Under *Analysis*, select *Requirements Traceability*, and *Highlight
+% model* option. You should see all the blocks that have requirements
+% linked to them highlighted. 
+%
+% <<Step_01_HightlightModelMenu.png>>
+%
+% Do the following:
+%
+% Click on hyperlink *Click to load Requirement Details*.
+%
+% <<Step_01_ReqDetails.png>>
+%
+% <<Step_01_HighlightedModel.png>>
+%
+% There are two types of highlighting shown above. The orange boundary
+% means that at least one block within that subsystem has a requirement
+% associated with it. The solid fill highlighting means there is
+% requirement associated with that particular block.  There are links inside 
+% the "Compute target speed" as shown by the orange boundary.
+%
+% To view the links in the state chart, do the following:
+%
+% Open the "Compute target speed" subsystem to see the links associated
+% with states and transitions in the Stateflow chart.  Notice model objects
+% can have one or more linked requirements.  And a requirement may be
+% linked to one or more model objects.
+%
+% <<Step_01_HighlightedSF.png>>
+% 
+% To remove the highlighting, we can follow similar steps as to highlight the
+% model.  Do the following:
+%
+% Under *Analysis*, select *Requirements Traceability* and *Unhighlight
+% model* option. With that, all of the highlighting in the model is
+% removed.
+%
+% <<Step_01_UnhighlightModelMenu.png>>
+%
+%% Configuring for Two-Way Linking
+%
+% RMI allows you to create either One-Way (one direction, from model to
+% requirement) or Two-Way (from model to requirement, and from requirement
+% to model) links. The typical use case for One-Way linking is if the user
+% (modeler) doesn't have write privileges to the requirements document.
+% Two-Way linking will modify/update the requirements document with model
+% link information.  This includes creating the hyperlink MATLAB icon to 
+% navigate to the model from the requiremetn. In the example, Two-Way 
+% linking has been enabled.  
+%
+% To verify that bidirectional linked has been enabled, do the following:
+%
+% # Select *Analysis*, select *Requirements Traceability* and *Settings*.
+% # Check the *Modify destination for bi-directional linking* option under
+% the *Selection Linking* tab.
+%
+% <<Step_01_ReqSettingsMenu.png>>
+%
+% <<Step_01_ReqSettingsUI.png>>
+% 
+% The Simulink environment is now configured for bi-directional linking.
+% Please note that this setting stays with your MATLAB/Simulink
+% configuration, and is not attached to a particular model.  
+%
+%% Linking Requirements to Simulink Blocks
+%
+% When we highlighted model to show the model objects with links to 
+% requirements there were some inconsistencies with regard to the blocks
+% that had links and other blocks that did not have links. One inconsistency
+% to note is that not all of the inports are linked to requirements,
+% specifically the "Brake" and "Speed" inports.
+%
+% <<Step_01_InportsNotLinked.png>>
+%
+% After reviewing the requirements, it was determined that there were not 
+% any requirements for these inputs.  These have been added to the 
+% requirements document to capture these input sensors.  But now we need to 
+% link these new requirements (shown in green below) to the inports.  We will
+% be creating bi-directional links to our model. 
+%
+% To link the new "Brake" input requirement to the model, do the following:
+%
+% # If necessary, open the requirements document: *cruise_control_reqs_mdl_linked.docx* –
+% *<matlab:winopen('cruise_control_reqs_mdl_linked.docx') click here>*.
+% # Select the "Vehicle Brake Input" requirement.
+%
+% <<Step_01_BrakeReqSelect.png>>
+%
+% # Right-click on the *Brake" inport block and select *Requirements
+% Traceability* and *Link to Selection in Word*.
+%
+% <<Step_01_BrakeLinkMenu.png>>
+%
+% You should now see the MATLAB icon next to the requirement text. 
+% The icon is a URL hyperlink which navigates you to the linked block in the
+% Simulink model with a *Ctrl+Click*.  Also, a new menu item has been added 
+% to the *Requirements Traceability* menu for the "Brake" inport block.
+%
+% <<Step_01_ReqButton.png>>
+%
+% # *Ctrl+Click* on the URL hyperlink button in the requirement document.
+% The corresponding model should open up, with the *Brake* inport block
+% highlighted as below:
+%
+% <<Step_01_ReqBlockHighlighted.png>>
+%
+% # *Right-click* on the *Brake* inport block, and select the
+% requirement text *"1. Vehicle Brake Input"*.
+% You should jump to the requirements document with the requirement text
+% being highlighted.
+%
+% <<Step_01_ReqTextMenu.png>>
+%
+% <<Step_01_ReqHighlighted.png>>
+%
+% This completes the exercise of linking requirements to Simulink objects.
+% We will now repeat this for Stateflow and MATLAB Functions in the next
+% two exercises.
+%
+%% Linking Requirements to Stateflow Objects
+%
+% When we highlighted model to show the Stateflow objects with links to 
+% requirements there were some inconsistencies with regard to the
+% transitions that had links and other tranisitions that did not have links. 
+% One inconsistency to note is that both "hold" function transitions are 
+% are not linked to requirements.  *We are pulling ahead an issue that we 
+% will find in a later step to illustrate linking to Stateflow objects.*
+%
+% <<Step_01_SF_NotLinked.png>>
+%
+% After reviewing the requirements, it was determined that there were not 
+% any requirements for the "hold" function.  These have been added to the 
+% requirements document to capture the "hold" function.  But now we need to 
+% link these new requirements (shown in green below) to the transitions.
+%
+% The same linking mechanism can be applied to Stateflow objects as
+% well. Let's see how this could be done.
+%
+% To link the new "hold" function requirement to the Stateflow transition,
+% do the following:
+%
+% 1. If necessary, open the requirements document: *cruise_control_reqs_mdl_linked.docx* –
+% *<matlab:open('cruise_control_reqs_mdl_linked.docx') click here>*.
+% 2. Select the requirement: *"2.10 Continuous "Accelerate" input increases...*
+%
+% <<Step_01_AccelHoldReqSelect.png>>
+%
+% 3. Open the *Compute target speed chart*. 
+% 4. Right-click on the transition *[after(10/holdrate*incdec,tick)]*.
+% 5. Select *Requirements Traceability* and *Link to Selection in Word*.
+%
+% <<Step_01_ReqLinkMenu_AccelHold.png>>
+%
+% 6. Navigate between the *[after(10/holdrate*incdec,tick)]* transition and 
+% the requirement in the same way you did for the Simulink blocks.
+%
+% <<Step_01_SFLinking.png>>
+%
+%% Generating a Requirements Traceability Report
+%
+% With any type of structured verification and validation activity, it is
+% important to track what has been done.  This is especially true when it
+% comes to requirements traceability.  As part of the RMI functionality,
+% you can generate a report that contains a snapshot of the model along
+% with a list of the model items that have a requirement or requirements
+% linked to them.     
+% 
+% Let's first configure how we want the report to look:
+%
+% # Select *Analysis*, *Requirements Traceability*, and *Settings*. You
+% should see the following window below popup.
+%
+% <<Step_01_ReqTraceReport.png>>
+%
+% <<Step_01_ReqReportSettings.png>>
+%
+% 3. Select the *Report* tab, and configure your settings to be the same as
+% the screenshot shown above. With these options, RMI will automatically
+% highlight the model before generating the report, and we will also get a
+% list of blocks that don't have requirement associated with it.  
+% 
+% 4. Under *Analysis*, select *Requirements and Generate Report* option. An
+% html report similar to the following screenshot should appear.
+% 
+% <<Step_01_GenerateReport.png>>
+%
+% <<Step_01_ReqReport.png>>
+%
+% 5. Try to navigate between the report, the model and the requirements.
+%
+% Please note that the report generated is based of off Simulink Report
+% Generator. The user can use the existing report template as a starting
+% for additional customization.  
+%
+%% Demonstrating Complete Requirements Traceability
+%
+% Now that we have good traceability from the requirement to the model 
+% object.  Let’s work through a method that will demonstrate the complete 
+% traceability from requirement to model to source code.   
+%
+% Do the following:
+%
+% # Under *Code*, select *C/C++ Code*, and *Build Model*. Note: the
+% options for embedding the requirement comments in the C source code have
+% already been set.
+%
+% <<Step_01_BuildModelMenu.png>>
+%
+% <<Step_01_BuildReqConfig.png>>
+%
+% After the code has been generated (should be ~5-10 sec), the following
+% code generation report should open: 
+% 
+% <<Step_01_CodegenRptMdlLinks.png>>
+%
+% Notice the links to the model blocks embedded in the code comments.
+% 
+% 2. Click on one of the *'<Root>/Brake'* links to highlight the 
+% *Brake inport block* in the model.
+%
+% Next, we are going to use the *Navigate to Code* function to return from
+% the model to the code.  
+%
+% 3. Right click on the highlighted *Brake inport block*, and select 
+% *C/C++ Code* and *Navigate to C/C++ Code*.
+% 
+% <<Step_01_NavigateToCodeMenu.png>>
+%
+% This should take you back to the code generation report and the code the 
+% code comment associated with that block is now highlighted.  
+% 
+% Now we will navigate to a requirement using hyperlinks in the code generation
+% report. 
+%
+% <<Step_01_CodegenRptReqLinks.png>>
+% 
+% 4. Click on *"1.  Vehicle Brake Input"* to navigate to the associated 
+% requirement.  
+%
+% <<Step_01_LinkedReqFromCode.png>>
+% 
+% With these functions shown above, you can go from Requirement to Model to
+% Source Code, or directly from Source Code to Requirement.
+%
+%% Summary
+%
+% The requirements linking feature has been shown to provide a method to 
+% know where in your model a requirement has been implemented.  Additionally
+% with the *model highlighting* feature it was easy to see what parts of 
+% the model were not associated with a requirement.  From this view we were
+% able to determine we had missing requirements for some of the inputs and
+% the functions.  With the *bidirectional links* in the requirements we were
+% also able to see that all requirements were associated with at least one
+% model object.  So going forward we have confidence that our model has 
+% implemented all of the requirements.  We will continue to answer more of the
+% questions in the next steps with our structured and formal testing 
+% framework for securing the quality, robustness and safety of our cruise 
+% controller.    
+% 
+% <<Step_01_CruiseControl_Summary.png>>
+%
+%
+% # Close all models - *<matlab:bdclose('all'); click here>*.
+% # Go to *Step 2: Modeling Standards* - *<Step_02.html click here>*.
+##### SOURCE END #####
+--></body></html>

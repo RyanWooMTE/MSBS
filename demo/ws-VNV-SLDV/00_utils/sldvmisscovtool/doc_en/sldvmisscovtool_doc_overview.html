@@ -1,0 +1,113 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>A GUI tool to obtain test cases for missing coverage objectives</title><meta name="generator" content="MATLAB 7.11"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2011-12-28"><meta name="DC.source" content="sldvmisscovtool_doc_overview.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>A GUI tool to obtain test cases for missing coverage objectives</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Supported MATLAB version</a></li><li><a href="#2">Related products</a></li><li><a href="#3">How to install</a></li><li><a href="#4">How to Run</a></li><li><a href="#5">Miscellaneous</a></li><li><a href="#6">Histroy</a></li></ul></div><h2>Supported MATLAB version<a name="1"></a></h2><div><ul><li>MATLAB R2007a+ or later</li></ul></div><h2>Related products<a name="2"></a></h2><div><ul><li>MATLAB</li><li>Simulink</li><li>Stateflow (required in case of Stateflow is used in a target model)</li><li>Simulink Verification and Validation</li><li>Simulink Design Verifier (required in case of generating test cases for missing coverage objectives)</li></ul></div><h2>How to install<a name="3"></a></h2><div><ol><li>Uncompress sldvmisscovtool.zip in a folder to install.</li><li>From MATLAB desktop, Choose File - Set Path, then add the folder uncompressed by (1) to MATLAB search path.</li></ol></div><h2>How to Run<a name="4"></a></h2><p>Run following command from MATLAB Command Window</p><pre class="codeinput">sldvmisscovtool
+</pre><h2>Miscellaneous<a name="5"></a></h2><div><ul><li>Fixed-point support This tool supports fixed-point data simulation and analysis if MATLAB R2009a or later is used.</li></ul></div><h2>Histroy<a name="6"></a></h2><div><ul><li>2008/02/13 : The first release.</li><li>2008/06/23 : Inherited data type as inport block is supported.</li><li>2008/10/31 : Submitted for MATLAB Central</li><li>2009/01/07 : Added error avoidance. Model closed after recording coverage.</li><li>2009/06/28 : The second version has been released to MATLAB Central.</li><li>2010/05/06 : The third version has been released to MATLAB Central. Added Signal Viewer and fixed-point support for R2009a or lator.</li><li>2011/12/28 : The forth version has been released to MATLAB Central. Help documents can be referred via MATLAB Help Browser. Supported Japanese environment detection on R2010b or later.</li></ul></div><p class="footer"><br>
+      Published with MATLAB&reg; 7.11<br></p></div><!--
+##### SOURCE BEGIN #####
+%% A GUI tool to obtain test cases for missing coverage objectives
+%
+%% Supported MATLAB version
+% 
+% * MATLAB R2007a+ or later
+
+%% Related products
+% 
+% * MATLAB
+% * Simulink
+% * Stateflow (required in case of Stateflow is used in a target model)
+% * Simulink Verification and Validation
+% * Simulink Design Verifier (required in case of generating test cases for
+% missing coverage objectives)
+ 
+%% How to install
+% 
+% 
+% # Uncompress sldvmisscovtool.zip in a folder to install.
+% # From MATLAB desktop, Choose File - Set Path, then add the folder
+% uncompressed by (1) to MATLAB search path.
+% 
+%% How to Run
+% 
+% Run following command from MATLAB Command Window
+% 
+sldvmisscovtool
+ 
+%% Miscellaneous
+% 
+% * Fixed-point support
+% This tool supports fixed-point data simulation and analysis if MATLAB R2009a or later is used. 
+
+%% Histroy
+% * 2008/02/13 : The first release.
+% * 2008/06/23 : Inherited data type as inport block is supported.
+% * 2008/10/31 : Submitted for MATLAB Central
+% * 2009/01/07 : Added error avoidance. Model closed after recording coverage.
+% * 2009/06/28 : The second version has been released to MATLAB Central.
+% * 2010/05/06 : The third version has been released to MATLAB Central. Added Signal Viewer and fixed-point support for R2009a or lator.
+% * 2011/12/28 : The forth version has been released to MATLAB Central. Help documents can be referred via MATLAB Help Browser. Supported Japanese environment detection on R2010b or later. 
+
+
+##### SOURCE END #####
+--></body></html>

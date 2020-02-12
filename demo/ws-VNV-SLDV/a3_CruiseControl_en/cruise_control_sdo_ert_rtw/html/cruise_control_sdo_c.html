@@ -1,0 +1,308 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - cruise_control_sdo.c</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (rtwannotate) {rtwannotate('cruise_control_sdo_c_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../cruise_control_sdo.c" target="rtwreport_document_frame" id="linkToText_plain">cruise_control_sdo.c</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="2">    2   </a><span class="CT"> * File: cruise_control_sdo.c</span>
+</span><span><a class="LN" name="3">    3   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="4">    4   </a><span class="CT"> * Code generated for Simulink model 'cruise_control_sdo'.</span>
+</span><span><a class="LN" name="5">    5   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="6">    6   </a><span class="CT"> * Model version                  : 1.304</span>
+</span><span><a class="LN" name="7">    7   </a><span class="CT"> * Simulink Coder version         : 8.3 (R2012b) 20-Jul-2012</span>
+</span><span><a class="LN" name="8">    8   </a><span class="CT"> * TLC version                    : 8.3 (Jul 21 2012)</span>
+</span><span><a class="LN" name="9">    9   </a><span class="CT"> * C/C++ source code generated on : Wed Jan 30 05:09:50 2013</span>
+</span><span><a class="LN" name="10">   10   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="11">   11   </a><span class="CT"> * Target selection: ert.tlc</span>
+</span><span><a class="LN" name="12">   12   </a><span class="CT"> * Embedded hardware selection: NEC-&gt;V850</span>
+</span><span><a class="LN" name="13">   13   </a><span class="CT"> * Code generation objectives:</span>
+</span><span><a class="LN" name="14">   14   </a><span class="CT"> *    1. Execution efficiency</span>
+</span><span><a class="LN" name="15">   15   </a><span class="CT"> *    2. ROM efficiency</span>
+</span><span><a class="LN" name="16">   16   </a><span class="CT"> *    3. RAM efficiency</span>
+</span><span><a class="LN" name="17">   17   </a><span class="CT"> * Validation result: Not run</span>
+</span><span><a class="LN" name="18">   18   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="19">   19   </a>
+</span><span><a class="LN" name="20">   20   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;cruise_control_sdo.h&quot;</font>
+</span><span><a class="LN" name="21">   21   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;cruise_control_sdo_private.h&quot;</font>
+</span><span><a class="LN" name="22">   22   </a>
+</span><span><a class="LN" name="23">   23   </a><span class="CT">/* Exported data definition */</span>
+</span><span><a class="LN" name="24">   24   </a>
+</span><span><a class="LN" name="25">   25   </a><span class="CT">/* Definition for custom storage class: Default */</span>
+</span><span><a class="LN" name="26">   26   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_brake_pressure">brake_pressure</a>;
+</span><span><a class="LN" name="27">   27   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> <a name="var_dec">dec</a>;
+</span><span><a class="LN" name="28">   28   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_diff_target">diff_target</a>;
+</span><span><a class="LN" name="29">   29   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_driver_throt">driver_throt</a>;
+</span><span><a class="LN" name="30">   30   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> <a name="var_enable">enable</a>;
+</span><span><a class="LN" name="31">   31   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> <a name="var_inc">inc</a>;
+</span><span><a class="LN" name="32">   32   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> <a name="var_is_ctrl">is_ctrl</a>;
+</span><span><a class="LN" name="33">   33   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> <a name="var_set">set</a>;
+</span><span><a class="LN" name="34">   34   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_speed">speed</a>;
+</span><span><a class="LN" name="35">   35   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_target">target</a>;
+</span><span><a class="LN" name="36">   36   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_throt">throt</a>;
+</span><span><a class="LN" name="37">   37   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_throt_max">throt_max</a> = 100;
+</span><span><a class="LN" name="38">   38   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_throt_min">throt_min</a> = 0;
+</span><span><a class="LN" name="39">   39   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_vel_dec">vel_dec</a> = 1;
+</span><span><a class="LN" name="40">   40   </a><a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_vel_inc">vel_inc</a> = 1;
+</span><span><a class="LN" name="41">   41   </a>
+</span><span><a class="LN" name="42">   42   </a><span class="CT">/* Const memory section */</span>
+</span><span><a class="LN" name="43">   43   </a><span class="CT">/* Definition for custom storage class: Const */</span>
+</span><span><a class="LN" name="44">   44   </a><span class="DT">const</span> <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_target_max">target_max</a> = 100;
+</span><span><a class="LN" name="45">   45   </a><span class="DT">const</span> <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> <a name="var_target_min">target_min</a> = 40;
+</span><span><a class="LN" name="46">   46   </a>
+</span><span><a class="LN" name="47">   47   </a><span class="CT">/* Block signals and states (auto storage) */</span>
+</span><span><a class="LN" name="48">   48   </a><a href="cruise_control_sdo_h.html#type_D_Work_cruise_control_sdo" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_D_Work_cruise_control_sdo');" target="rtwreport_document_frame"><font color="#1122aa">D_Work_cruise_control_sdo</font></a> <a name="var_cruise_control_sdo_DWork">cruise_control_sdo_DWork</a>;
+</span><span><a class="LN" name="49">   49   </a>
+</span><span><a class="LN" name="50">   50   </a><span class="CT">/* Model step function */</span>
+</span><span><a class="LN" name="51">   51   </a><span class="DT">void</span> <a name="fcn_cruise_control_sdo_step">cruise_control_sdo_step</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="52">   52   </a><b>{</b>
+</span><span><a class="LN" name="53">   53   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> tmp;
+</span><span><a class="LN" name="54">   54   </a>
+</span><span><a class="LN" name="55">   55   </a>  <span class="CT">/* Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:29')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch1</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="56">   56   </a><span class="CT">   *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:5')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/dec</i></font></a>'</span>
+</span><span><a class="LN" name="57">   57   </a><span class="CT">   *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:4')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/inc</i></font></a>'</span>
+</span><span><a class="LN" name="58">   58   </a><span class="CT">   *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:3')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/set</i></font></a>'</span>
+</span><span><a class="LN" name="59">   59   </a><span class="CT">   *  Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:30')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch2</i></font></a>'</span>
+</span><span><a class="LN" name="60">   60   </a><span class="CT">   *  Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:31')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch3</i></font></a>'</span>
+</span><span><a class="LN" name="61">   61   </a><span class="CT">   */</span>
+</span><span><a class="LN" name="62">   62   </a>  <span class="KW">if</span> (<a href="#var_set" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_set');" target="rtwreport_document_frame"><font color="#1122aa">set</font></a>) <b>{</b>
+</span><span><a class="LN" name="63">   63   </a>    <span class="CT">/* Saturate: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:54')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Saturation</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="64">   64   </a><span class="CT">     *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:7')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/speed</i></font></a>'</span>
+</span><span><a class="LN" name="65">   65   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="66">   66   </a>    <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = <a href="#var_speed" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_speed');" target="rtwreport_document_frame"><font color="#1122aa">speed</font></a>;
+</span><span><a class="LN" name="67">   67   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="68">   68   </a>    <span class="KW">if</span> (<a href="#var_inc" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_inc');" target="rtwreport_document_frame"><font color="#1122aa">inc</font></a>) <b>{</b>
+</span><span><a class="LN" name="69">   69   </a>      <span class="CT">/* Sum: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:26')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Sum</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="70">   70   </a><span class="CT">       *  Constant: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:23')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Constant1</i></font></a>'</span>
+</span><span><a class="LN" name="71">   71   </a><span class="CT">       *  Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:30')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch2</i></font></a>'</span>
+</span><span><a class="LN" name="72">   72   </a><span class="CT">       */</span>
+</span><span><a class="LN" name="73">   73   </a>      <span class="KW">if</span> (<a href="#var_vel_inc" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_vel_inc');" target="rtwreport_document_frame"><font color="#1122aa">vel_inc</font></a> &gt; 2047) <b>{</b>
+</span><span><a class="LN" name="74">   74   </a>        tmp = MAX_int16_T;
+</span><span><a class="LN" name="75">   75   </a>      <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_vel_inc" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_vel_inc');" target="rtwreport_document_frame"><font color="#1122aa">vel_inc</font></a> &lt;= -2048) <b>{</b>
+</span><span><a class="LN" name="76">   76   </a>        tmp = MIN_int16_T;
+</span><span><a class="LN" name="77">   77   </a>      <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="78">   78   </a>        tmp = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_vel_inc" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_vel_inc');" target="rtwreport_document_frame"><font color="#1122aa">vel_inc</font></a> &lt;&lt; 4);
+</span><span><a class="LN" name="79">   79   </a>      <b>}</b>
+</span><span><a class="LN" name="80">   80   </a>
+</span><span><a class="LN" name="81">   81   </a>      <span class="CT">/* Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:30')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch2</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="82">   82   </a><span class="CT">       *  Sum: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:26')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Sum</i></font></a>'</span>
+</span><span><a class="LN" name="83">   83   </a><span class="CT">       *  UnitDelay: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:32')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Unit Delay</i></font></a>'</span>
+</span><span><a class="LN" name="84">   84   </a><span class="CT">       */</span>
+</span><span><a class="LN" name="85">   85   </a>      <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(tmp + <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a>);
+</span><span><a class="LN" name="86">   86   </a>    <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="87">   87   </a>      <span class="KW">if</span> (<a href="#var_dec" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_dec');" target="rtwreport_document_frame"><font color="#1122aa">dec</font></a>) <b>{</b>
+</span><span><a class="LN" name="88">   88   </a>        <span class="CT">/* Sum: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:28')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Sum2</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="89">   89   </a><span class="CT">         *  Constant: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:24')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Constant3</i></font></a>'</span>
+</span><span><a class="LN" name="90">   90   </a><span class="CT">         *  Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:30')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch2</i></font></a>'</span>
+</span><span><a class="LN" name="91">   91   </a><span class="CT">         *  Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:31')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch3</i></font></a>'</span>
+</span><span><a class="LN" name="92">   92   </a><span class="CT">         */</span>
+</span><span><a class="LN" name="93">   93   </a>        <span class="KW">if</span> (<a href="#var_vel_dec" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_vel_dec');" target="rtwreport_document_frame"><font color="#1122aa">vel_dec</font></a> &gt; 2047) <b>{</b>
+</span><span><a class="LN" name="94">   94   </a>          tmp = MAX_int16_T;
+</span><span><a class="LN" name="95">   95   </a>        <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_vel_dec" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_vel_dec');" target="rtwreport_document_frame"><font color="#1122aa">vel_dec</font></a> &lt;= -2048) <b>{</b>
+</span><span><a class="LN" name="96">   96   </a>          tmp = MIN_int16_T;
+</span><span><a class="LN" name="97">   97   </a>        <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="98">   98   </a>          tmp = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_vel_dec" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_vel_dec');" target="rtwreport_document_frame"><font color="#1122aa">vel_dec</font></a> &lt;&lt; 4);
+</span><span><a class="LN" name="99">   99   </a>        <b>}</b>
+</span><span><a class="LN" name="100">  100   </a>
+</span><span><a class="LN" name="101">  101   </a>        <span class="CT">/* Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:31')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch3</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="102">  102   </a><span class="CT">         *  Sum: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:28')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Sum2</i></font></a>'</span>
+</span><span><a class="LN" name="103">  103   </a><span class="CT">         *  Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:30')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch2</i></font></a>'</span>
+</span><span><a class="LN" name="104">  104   </a><span class="CT">         *  UnitDelay: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:32')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Unit Delay</i></font></a>'</span>
+</span><span><a class="LN" name="105">  105   </a><span class="CT">         */</span>
+</span><span><a class="LN" name="106">  106   </a>        <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> - tmp);
+</span><span><a class="LN" name="107">  107   </a>      <b>}</b>
+</span><span><a class="LN" name="108">  108   </a>    <b>}</b>
+</span><span><a class="LN" name="109">  109   </a>
+</span><span><a class="LN" name="110">  110   </a>    <span class="CT">/* Saturate: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:54')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Saturation</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="111">  111   </a><span class="CT">     *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:5')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/dec</i></font></a>'</span>
+</span><span><a class="LN" name="112">  112   </a><span class="CT">     *  Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:30')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch2</i></font></a>'</span>
+</span><span><a class="LN" name="113">  113   </a><span class="CT">     *  Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:31')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch3</i></font></a>'</span>
+</span><span><a class="LN" name="114">  114   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="115">  115   </a>    <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a>;
+</span><span><a class="LN" name="116">  116   </a>  <b>}</b>
+</span><span><a class="LN" name="117">  117   </a>
+</span><span><a class="LN" name="118">  118   </a>  <span class="CT">/* End of Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:29')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Switch1</i></font></a>' */</span>
+</span><span><a class="LN" name="119">  119   </a>
+</span><span><a class="LN" name="120">  120   </a>  <span class="CT">/* Saturate: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:25')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Saturation</i></font></a>' */</span>
+</span><span><a class="LN" name="121">  121   </a>  <span class="KW">if</span> (<a href="#var_target_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_max');" target="rtwreport_document_frame"><font color="#1122aa">target_max</font></a> &gt; 2047) <b>{</b>
+</span><span><a class="LN" name="122">  122   </a>    tmp = MAX_int16_T;
+</span><span><a class="LN" name="123">  123   </a>  <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_target_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_max');" target="rtwreport_document_frame"><font color="#1122aa">target_max</font></a> &lt;= -2048) <b>{</b>
+</span><span><a class="LN" name="124">  124   </a>    tmp = MIN_int16_T;
+</span><span><a class="LN" name="125">  125   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="126">  126   </a>    tmp = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_target_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_max');" target="rtwreport_document_frame"><font color="#1122aa">target_max</font></a> &lt;&lt; 4);
+</span><span><a class="LN" name="127">  127   </a>  <b>}</b>
+</span><span><a class="LN" name="128">  128   </a>
+</span><span><a class="LN" name="129">  129   </a>  <span class="KW">if</span> (<a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> &gt;= tmp) <b>{</b>
+</span><span><a class="LN" name="130">  130   </a>    <span class="KW">if</span> (<a href="#var_target_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_max');" target="rtwreport_document_frame"><font color="#1122aa">target_max</font></a> &gt; 2047) <b>{</b>
+</span><span><a class="LN" name="131">  131   </a>      <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> = MAX_int16_T;
+</span><span><a class="LN" name="132">  132   </a>    <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_target_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_max');" target="rtwreport_document_frame"><font color="#1122aa">target_max</font></a> &lt;= -2048) <b>{</b>
+</span><span><a class="LN" name="133">  133   </a>      <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> = MIN_int16_T;
+</span><span><a class="LN" name="134">  134   </a>    <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="135">  135   </a>      <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_target_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_max');" target="rtwreport_document_frame"><font color="#1122aa">target_max</font></a> &lt;&lt; 4);
+</span><span><a class="LN" name="136">  136   </a>    <b>}</b>
+</span><span><a class="LN" name="137">  137   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="138">  138   </a>    <span class="KW">if</span> (<a href="#var_target_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_min');" target="rtwreport_document_frame"><font color="#1122aa">target_min</font></a> &gt; 2047) <b>{</b>
+</span><span><a class="LN" name="139">  139   </a>      tmp = MAX_int16_T;
+</span><span><a class="LN" name="140">  140   </a>    <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_target_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_min');" target="rtwreport_document_frame"><font color="#1122aa">target_min</font></a> &lt;= -2048) <b>{</b>
+</span><span><a class="LN" name="141">  141   </a>      tmp = MIN_int16_T;
+</span><span><a class="LN" name="142">  142   </a>    <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="143">  143   </a>      tmp = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_target_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_min');" target="rtwreport_document_frame"><font color="#1122aa">target_min</font></a> &lt;&lt; 4);
+</span><span><a class="LN" name="144">  144   </a>    <b>}</b>
+</span><span><a class="LN" name="145">  145   </a>
+</span><span><a class="LN" name="146">  146   </a>    <span class="KW">if</span> (<a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> &lt;= tmp) <b>{</b>
+</span><span><a class="LN" name="147">  147   </a>      <span class="KW">if</span> (<a href="#var_target_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_min');" target="rtwreport_document_frame"><font color="#1122aa">target_min</font></a> &gt; 2047) <b>{</b>
+</span><span><a class="LN" name="148">  148   </a>        <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> = MAX_int16_T;
+</span><span><a class="LN" name="149">  149   </a>      <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_target_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_min');" target="rtwreport_document_frame"><font color="#1122aa">target_min</font></a> &lt;= -2048) <b>{</b>
+</span><span><a class="LN" name="150">  150   </a>        <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> = MIN_int16_T;
+</span><span><a class="LN" name="151">  151   </a>      <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="152">  152   </a>        <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_target_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_min');" target="rtwreport_document_frame"><font color="#1122aa">target_min</font></a> &lt;&lt; 4);
+</span><span><a class="LN" name="153">  153   </a>      <b>}</b>
+</span><span><a class="LN" name="154">  154   </a>    <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="155">  155   </a>      <a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> = <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a>;
+</span><span><a class="LN" name="156">  156   </a>    <b>}</b>
+</span><span><a class="LN" name="157">  157   </a>  <b>}</b>
+</span><span><a class="LN" name="158">  158   </a>
+</span><span><a class="LN" name="159">  159   </a>  <span class="CT">/* End of Saturate: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:25')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Saturation</i></font></a>' */</span>
+</span><span><a class="LN" name="160">  160   </a>
+</span><span><a class="LN" name="161">  161   </a>  <span class="CT">/* Sum: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:27')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/Sum1</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="162">  162   </a><span class="CT">   *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:7')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/speed</i></font></a>'</span>
+</span><span><a class="LN" name="163">  163   </a><span class="CT">   */</span>
+</span><span><a class="LN" name="164">  164   </a>  <a href="#var_diff_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_diff_target');" target="rtwreport_document_frame"><font color="#1122aa">diff_target</font></a> = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> - <a href="#var_speed" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_speed');" target="rtwreport_document_frame"><font color="#1122aa">speed</font></a>);
+</span><span><a class="LN" name="165">  165   </a>
+</span><span><a class="LN" name="166">  166   </a>  <span class="CT">/* Logic: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:43')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/Logical Operator</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="167">  167   </a><span class="CT">   *  Constant: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:41')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/Constant</i></font></a>'</span>
+</span><span><a class="LN" name="168">  168   </a><span class="CT">   *  Constant: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:42')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/Constant1</i></font></a>'</span>
+</span><span><a class="LN" name="169">  169   </a><span class="CT">   *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:2')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/brake_pressure</i></font></a>'</span>
+</span><span><a class="LN" name="170">  170   </a><span class="CT">   *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:1')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/enable</i></font></a>'</span>
+</span><span><a class="LN" name="171">  171   </a><span class="CT">   *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:3')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/set</i></font></a>'</span>
+</span><span><a class="LN" name="172">  172   </a><span class="CT">   *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:7')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/speed</i></font></a>'</span>
+</span><span><a class="LN" name="173">  173   </a><span class="CT">   *  Logic: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:44')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/Logical Operator1</i></font></a>'</span>
+</span><span><a class="LN" name="174">  174   </a><span class="CT">   *  Logic: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:45')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/Logical Operator2</i></font></a>'</span>
+</span><span><a class="LN" name="175">  175   </a><span class="CT">   *  Logic: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:46')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/Logical Operator3</i></font></a>'</span>
+</span><span><a class="LN" name="176">  176   </a><span class="CT">   *  RelationalOperator: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:47')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/Relational Operator</i></font></a>'</span>
+</span><span><a class="LN" name="177">  177   </a><span class="CT">   *  RelationalOperator: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:48')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/Relational Operator1</i></font></a>'</span>
+</span><span><a class="LN" name="178">  178   </a><span class="CT">   *  RelationalOperator: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:40:2')" name="code2model"><font color="#117755"><i>&lt;S4&gt;/Compare</i></font></a>'</span>
+</span><span><a class="LN" name="179">  179   </a><span class="CT">   *  UnitDelay: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:49')" name="code2model"><font color="#117755"><i>&lt;S3&gt;/Unit Delay1</i></font></a>'</span>
+</span><span><a class="LN" name="180">  180   </a><span class="CT">   */</span>
+</span><span><a class="LN" name="181">  181   </a>  <a href="#var_is_ctrl" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_is_ctrl');" target="rtwreport_document_frame"><font color="#1122aa">is_ctrl</font></a> = ((((<a href="#var_enable" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_enable');" target="rtwreport_document_frame"><font color="#1122aa">enable</font></a>) &amp;&amp; (!(<a href="#var_brake_pressure" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_brake_pressure');" target="rtwreport_document_frame"><font color="#1122aa">brake_pressure</font></a> &gt; 0))) &amp;&amp; ((<a href="#var_set" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_set');" target="rtwreport_document_frame"><font color="#1122aa">set</font></a>) || (<a href="#var_is_ctrl" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_is_ctrl');" target="rtwreport_document_frame"><font color="#1122aa">is_ctrl</font></a>))) &amp;&amp;
+</span><span><a class="LN" name="182">  182   </a>             ((<a href="#var_speed" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_speed');" target="rtwreport_document_frame"><font color="#1122aa">speed</font></a> &lt;= (<a href="#var_target_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_max');" target="rtwreport_document_frame"><font color="#1122aa">target_max</font></a> &lt;&lt; 4)) &amp;&amp; (<a href="#var_speed" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_speed');" target="rtwreport_document_frame"><font color="#1122aa">speed</font></a> &gt;= (<a href="#var_target_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target_min');" target="rtwreport_document_frame"><font color="#1122aa">target_min</font></a> &lt;&lt; 4))));
+</span><span><a class="LN" name="183">  183   </a>
+</span><span><a class="LN" name="184">  184   </a>  <span class="CT">/* Outputs for Enabled SubSystem: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:58')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/PI_Controller</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="185">  185   </a><span class="CT">   *  EnablePort: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:66')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/is_ctrl</i></font></a>'</span>
+</span><span><a class="LN" name="186">  186   </a><span class="CT">   */</span>
+</span><span><a class="LN" name="187">  187   </a>  <span class="KW">if</span> (<a href="#var_is_ctrl" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_is_ctrl');" target="rtwreport_document_frame"><font color="#1122aa">is_ctrl</font></a>) <b>{</b>
+</span><span><a class="LN" name="188">  188   </a>    <span class="KW">if</span> (!<a href="#var_cruise_control_sdo_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_DWork');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_DWork</font></a>.PI_Controller_MODE) <b>{</b>
+</span><span><a class="LN" name="189">  189   </a>      <span class="CT">/* InitializeConditions for UnitDelay: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:64')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Unit Delay2</i></font></a>' */</span>
+</span><span><a class="LN" name="190">  190   </a>      <a href="#var_cruise_control_sdo_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_DWork');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_DWork</font></a>.UnitDelay2_DSTATE = 0;
+</span><span><a class="LN" name="191">  191   </a>      <a href="#var_cruise_control_sdo_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_DWork');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_DWork</font></a>.PI_Controller_MODE = TRUE;
+</span><span><a class="LN" name="192">  192   </a>    <b>}</b>
+</span><span><a class="LN" name="193">  193   </a>
+</span><span><a class="LN" name="194">  194   </a>    <span class="CT">/* Sum: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:62')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Sum1</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="195">  195   </a><span class="CT">     *  Gain: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:61')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Kp</i></font></a>'</span>
+</span><span><a class="LN" name="196">  196   </a><span class="CT">     *  UnitDelay: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:64')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Unit Delay2</i></font></a>'</span>
+</span><span><a class="LN" name="197">  197   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="198">  198   </a>    <a href="#var_cruise_control_sdo_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_DWork');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_DWork</font></a>.Sum1 = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(((<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)((cruise_kp *
+</span><span><a class="LN" name="199">  199   </a>      <a href="#var_diff_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_diff_target');" target="rtwreport_document_frame"><font color="#1122aa">diff_target</font></a>) &gt;&gt; 8)) + <a href="#var_cruise_control_sdo_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_DWork');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_DWork</font></a>.UnitDelay2_DSTATE);
+</span><span><a class="LN" name="200">  200   </a>
+</span><span><a class="LN" name="201">  201   </a>    <span class="CT">/* Gain: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:60')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Gain1</i></font></a>' */</span>
+</span><span><a class="LN" name="202">  202   </a>    <span class="KW">if</span> (cruise_ki &gt; 1) <b>{</b>
+</span><span><a class="LN" name="203">  203   </a>      tmp = MAX_int16_T;
+</span><span><a class="LN" name="204">  204   </a>    <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (cruise_ki &lt;= -2) <b>{</b>
+</span><span><a class="LN" name="205">  205   </a>      tmp = MIN_int16_T;
+</span><span><a class="LN" name="206">  206   </a>    <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="207">  207   </a>      tmp = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(cruise_ki &lt;&lt; 14);
+</span><span><a class="LN" name="208">  208   </a>    <b>}</b>
+</span><span><a class="LN" name="209">  209   </a>
+</span><span><a class="LN" name="210">  210   </a>    <span class="CT">/* Update for UnitDelay: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:64')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Unit Delay2</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="211">  211   </a><span class="CT">     *  Gain: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:60')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Gain1</i></font></a>'</span>
+</span><span><a class="LN" name="212">  212   </a><span class="CT">     *  Sum: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:63')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Sum2</i></font></a>'</span>
+</span><span><a class="LN" name="213">  213   </a><span class="CT">     *  UnitDelay: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:64')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Unit Delay2</i></font></a>'</span>
+</span><span><a class="LN" name="214">  214   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="215">  215   </a>    <a href="#var_cruise_control_sdo_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_DWork');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_DWork</font></a>.UnitDelay2_DSTATE += ((tmp * <a href="#var_diff_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_diff_target');" target="rtwreport_document_frame"><font color="#1122aa">diff_target</font></a>) &gt;&gt; 22);
+</span><span><a class="LN" name="216">  216   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="217">  217   </a>    <span class="KW">if</span> (<a href="#var_cruise_control_sdo_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_DWork');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_DWork</font></a>.PI_Controller_MODE) <b>{</b>
+</span><span><a class="LN" name="218">  218   </a>      <a href="#var_cruise_control_sdo_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_DWork');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_DWork</font></a>.PI_Controller_MODE = FALSE;
+</span><span><a class="LN" name="219">  219   </a>    <b>}</b>
+</span><span><a class="LN" name="220">  220   </a>  <b>}</b>
+</span><span><a class="LN" name="221">  221   </a>
+</span><span><a class="LN" name="222">  222   </a>  <span class="CT">/* End of Outputs for SubSystem: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:58')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/PI_Controller</i></font></a>' */</span>
+</span><span><a class="LN" name="223">  223   </a>
+</span><span><a class="LN" name="224">  224   </a>  <span class="CT">/* Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:17')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Switch</i></font></a>' */</span>
+</span><span><a class="LN" name="225">  225   </a>  <span class="KW">if</span> (<a href="#var_is_ctrl" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_is_ctrl');" target="rtwreport_document_frame"><font color="#1122aa">is_ctrl</font></a>) <b>{</b>
+</span><span><a class="LN" name="226">  226   </a>    <span class="CT">/* Saturate: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:54')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Saturation</i></font></a>' */</span>
+</span><span><a class="LN" name="227">  227   </a>    <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = <a href="#var_cruise_control_sdo_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_DWork');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_DWork</font></a>.Sum1;
+</span><span><a class="LN" name="228">  228   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="229">  229   </a>    <span class="CT">/* Saturate: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:54')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Saturation</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="230">  230   </a><span class="CT">     *  Inport: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:6')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/driver_throt</i></font></a>'</span>
+</span><span><a class="LN" name="231">  231   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="232">  232   </a>    <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = <a href="#var_driver_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_driver_throt');" target="rtwreport_document_frame"><font color="#1122aa">driver_throt</font></a>;
+</span><span><a class="LN" name="233">  233   </a>  <b>}</b>
+</span><span><a class="LN" name="234">  234   </a>
+</span><span><a class="LN" name="235">  235   </a>  <span class="CT">/* End of Switch: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:17')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Switch</i></font></a>' */</span>
+</span><span><a class="LN" name="236">  236   </a>
+</span><span><a class="LN" name="237">  237   </a>  <span class="CT">/* Saturate: '<a href="matlab:rtwprivate('code2model','cruise_control_sdo:54')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Saturation</i></font></a>' */</span>
+</span><span><a class="LN" name="238">  238   </a>  <span class="KW">if</span> (<a href="#var_throt_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_max');" target="rtwreport_document_frame"><font color="#1122aa">throt_max</font></a> &gt; 2047) <b>{</b>
+</span><span><a class="LN" name="239">  239   </a>    tmp = MAX_int16_T;
+</span><span><a class="LN" name="240">  240   </a>  <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_throt_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_max');" target="rtwreport_document_frame"><font color="#1122aa">throt_max</font></a> &lt;= -2048) <b>{</b>
+</span><span><a class="LN" name="241">  241   </a>    tmp = MIN_int16_T;
+</span><span><a class="LN" name="242">  242   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="243">  243   </a>    tmp = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_throt_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_max');" target="rtwreport_document_frame"><font color="#1122aa">throt_max</font></a> &lt;&lt; 4);
+</span><span><a class="LN" name="244">  244   </a>  <b>}</b>
+</span><span><a class="LN" name="245">  245   </a>
+</span><span><a class="LN" name="246">  246   </a>  <span class="KW">if</span> (<a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> &gt;= tmp) <b>{</b>
+</span><span><a class="LN" name="247">  247   </a>    <span class="KW">if</span> (<a href="#var_throt_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_max');" target="rtwreport_document_frame"><font color="#1122aa">throt_max</font></a> &gt; 2047) <b>{</b>
+</span><span><a class="LN" name="248">  248   </a>      <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = MAX_int16_T;
+</span><span><a class="LN" name="249">  249   </a>    <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_throt_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_max');" target="rtwreport_document_frame"><font color="#1122aa">throt_max</font></a> &lt;= -2048) <b>{</b>
+</span><span><a class="LN" name="250">  250   </a>      <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = MIN_int16_T;
+</span><span><a class="LN" name="251">  251   </a>    <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="252">  252   </a>      <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_throt_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_max');" target="rtwreport_document_frame"><font color="#1122aa">throt_max</font></a> &lt;&lt; 4);
+</span><span><a class="LN" name="253">  253   </a>    <b>}</b>
+</span><span><a class="LN" name="254">  254   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="255">  255   </a>    <span class="KW">if</span> (<a href="#var_throt_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_min');" target="rtwreport_document_frame"><font color="#1122aa">throt_min</font></a> &gt; 2047) <b>{</b>
+</span><span><a class="LN" name="256">  256   </a>      tmp = MAX_int16_T;
+</span><span><a class="LN" name="257">  257   </a>    <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_throt_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_min');" target="rtwreport_document_frame"><font color="#1122aa">throt_min</font></a> &lt;= -2048) <b>{</b>
+</span><span><a class="LN" name="258">  258   </a>      tmp = MIN_int16_T;
+</span><span><a class="LN" name="259">  259   </a>    <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="260">  260   </a>      tmp = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_throt_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_min');" target="rtwreport_document_frame"><font color="#1122aa">throt_min</font></a> &lt;&lt; 4);
+</span><span><a class="LN" name="261">  261   </a>    <b>}</b>
+</span><span><a class="LN" name="262">  262   </a>
+</span><span><a class="LN" name="263">  263   </a>    <span class="KW">if</span> (<a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> &lt;= tmp) <b>{</b>
+</span><span><a class="LN" name="264">  264   </a>      <span class="KW">if</span> (<a href="#var_throt_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_min');" target="rtwreport_document_frame"><font color="#1122aa">throt_min</font></a> &gt; 2047) <b>{</b>
+</span><span><a class="LN" name="265">  265   </a>        <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = MAX_int16_T;
+</span><span><a class="LN" name="266">  266   </a>      <b>}</b> <span class="KW">else</span> <span class="KW">if</span> (<a href="#var_throt_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_min');" target="rtwreport_document_frame"><font color="#1122aa">throt_min</font></a> &lt;= -2048) <b>{</b>
+</span><span><a class="LN" name="267">  267   </a>        <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = MIN_int16_T;
+</span><span><a class="LN" name="268">  268   </a>      <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="269">  269   </a>        <a href="#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a>)(<a href="#var_throt_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_min');" target="rtwreport_document_frame"><font color="#1122aa">throt_min</font></a> &lt;&lt; 4);
+</span><span><a class="LN" name="270">  270   </a>      <b>}</b>
+</span><span><a class="LN" name="271">  271   </a>    <b>}</b>
+</span><span><a class="LN" name="272">  272   </a>  <b>}</b>
+</span><span><a class="LN" name="273">  273   </a><b>}</b>
+</span><span><a class="LN" name="274">  274   </a>
+</span><span><a class="LN" name="275">  275   </a><span class="CT">/* Model initialize function */</span>
+</span><span><a class="LN" name="276">  276   </a><span class="DT">void</span> <a name="fcn_cruise_control_sdo_initialize">cruise_control_sdo_initialize</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="277">  277   </a><b>{</b>
+</span><span><a class="LN" name="278">  278   </a>  <span class="CT">/* (no initialization code required) */</span>
+</span><span><a class="LN" name="279">  279   </a><b>}</b>
+</span><span><a class="LN" name="280">  280   </a>
+</span><span><a class="LN" name="281">  281   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="282">  282   </a><span class="CT"> * File trailer for generated code.</span>
+</span><span><a class="LN" name="283">  283   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="284">  284   </a><span class="CT"> * [EOF]</span>
+</span><span><a class="LN" name="285">  285   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="286">  286   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

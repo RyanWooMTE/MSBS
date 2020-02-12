@@ -1,0 +1,1594 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Simulink Design Verifier Report</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="Simulink Design Verifier Report"><div class="titlepage"><div><div><h1 class="title"><a name="d174e1"></a>Simulink Design Verifier Report</h1></div><div><h2 class="subtitle">cruise_control_sdo</h2></div><div><div class="author"><h3 class="author"><span class="firstname">hualongy
+ </span></h3></div></div><div><p class="pubdate">30-Jan-2013 05:09:31</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#d174e15">1. Summary</a></span></dt><dt><span class="chapter"><a href="#d174e88">2. Analysis Information</a></span></dt><dt><span class="chapter"><a href="#d174e328">3. Test Objectives Status</a></span></dt><dt><span class="chapter"><a href="#d174e1562">4. Model Items</a></span></dt><dt><span class="chapter"><a href="#d174e3051">5. Test Cases</a></span></dt></dl></div><div class="chapter" title="Chapter&nbsp;1.&nbsp;Summary"><div class="titlepage"><div><div><h2 class="title"><a name="d174e15"></a>Chapter&nbsp;1.&nbsp;Summary</h2></div></div></div><p title="Analysis Information"><b>Analysis Information&nbsp;</b>
+        <a name="d174e24"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="240*"><col width="300*"><tbody><tr>
+                    <td align="left">Model:</td>
+                    <td align="left">cruise_control_sdo</td>
+                </tr><tr>
+                    <td align="left">Mode:</td>
+                    <td align="left">TestGeneration</td>
+                </tr><tr>
+                    <td align="left">Status:</td>
+                    <td align="left">Completed normally</td>
+                </tr><tr>
+                    <td align="left">Analysis Time:</td>
+                    <td align="left">1s</td>
+                </tr></tbody></table></div></div><p title="Analysis Information">
+    </p><p title="Objectives Status"><b>Objectives Status&nbsp;</b>
+        <a name="d174e66"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="360*"><col width="60*"><thead><tr>
+                    <th align="left">Number of Objectives: </th>
+                    <th align="left">52</th>
+                </tr></thead><tbody><tr>
+                    <td align="left">Objectives Satisfied: </td>
+                    <td align="left">52</td>
+                </tr></tbody></table></div></div><p title="Objectives Status">
+    </p></div><div class="chapter" title="Chapter&nbsp;2.&nbsp;Analysis Information"><div class="titlepage"><div><div><h2 class="title"><a name="d174e88"></a>Chapter&nbsp;2.&nbsp;Analysis Information</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#d174e92">Model Information</a></span></dt><dt><span class="sect1"><a href="#d174e132">Analysis Options</a></span></dt><dt><span class="sect1"><a href="#d174e236">Constraints</a></span></dt><dt><span class="sect1"><a href="#d174e290">Approximations</a></span></dt></dl></div><div class="sect1" title="Model Information"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e92"></a>Model Information</h2></div></div></div><a name="d174e96"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="240*"><col width="300*"><tbody><tr>
+            <td align="left">File:</td>
+            <td align="left">cruise_control_sdo</td>
+        </tr><tr>
+            <td align="left">Version:</td>
+            <td align="left">1.304</td>
+        </tr><tr>
+            <td align="left">Time Stamp:</td>
+            <td align="left">Wed Jan 30 05:09:15 2013</td>
+        </tr><tr>
+            <td align="left">Author:</td>
+            <td align="left">The MathWorks Inc.</td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="Analysis Options"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e132"></a>Analysis Options</h2></div></div></div><a name="d174e136"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="240*"><col width="300*"><tbody><tr>
+            <td align="left">Mode:</td>
+            <td align="left">TestGeneration</td>
+        </tr><tr>
+            <td align="left">Test Suite Optimization:</td>
+            <td align="left">CombinedObjectives (Nonlinear Extended)</td>
+        </tr><tr>
+            <td align="left">Maximum Testcase Steps:</td>
+            <td align="left">500 time steps</td>
+        </tr><tr>
+            <td align="left">Test Conditions:</td>
+            <td align="left">UseLocalSettings</td>
+        </tr><tr>
+            <td align="left">Test Objectives:</td>
+            <td align="left">UseLocalSettings</td>
+        </tr><tr>
+            <td align="left">Model Coverage Objectives:</td>
+            <td align="left">MCDC</td>
+        </tr><tr>
+            <td align="left">Maximum Processing Time:</td>
+            <td align="left">3000s</td>
+        </tr><tr>
+            <td align="left">Block Replacement:</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">Parameters Analysis:</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">Save Data:</td>
+            <td align="left">on</td>
+        </tr><tr>
+            <td align="left">Save Harness:</td>
+            <td align="left">on</td>
+        </tr><tr>
+            <td align="left">Save Report:</td>
+            <td align="left">on</td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="Constraints"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e236"></a>Constraints</h2></div></div></div><div class="sect2" title="Design Min Max Constraints"><div class="titlepage"><div><div><h3 class="title"><a name="d174e240"></a>Design Min Max Constraints</h3></div></div></div><a name="d174e244"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="360*"><col width="360*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Design Min Max Constraint</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A2'), urldecode('cruise_control_sdo'));" target="_top">brake_pressure</a>
+            </td>
+            <td align="left">[0..2000]</td>
+        </tr><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A7'), urldecode('cruise_control_sdo'));" target="_top">speed</a>
+            </td>
+            <td align="left">[-50..300]</td>
+        </tr><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A6'), urldecode('cruise_control_sdo'));" target="_top">driver_throt</a>
+            </td>
+            <td align="left">[0..100]</td>
+        </tr></tbody></table></div></div></div></div><div class="sect1" title="Approximations"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e290"></a>Approximations</h2></div></div></div><p>Simulink Design Verifier performed the following approximations during analysis. 
+These can impact the precision of the results generated by Simulink Design Verifier. 
+Please see the product documentation for further details.<span> </span>
+    <a name="d174e299"></a></p><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="240*"><col width="720*"><thead><tr>
+                <th align="left">#</th>
+                <th align="left">Type</th>
+                <th align="left">Description</th>
+            </tr></thead><tbody><tr>
+                <td align="left">1</td>
+                <td align="left">Rational approximation</td>
+                <td align="left">The model includes floating-point arithmetic. Simulink Design Verifier approximates floating-point arithmetic with rational number arithmetic.</td>
+            </tr></tbody></table></div></div><p>
+</p></div></div><div class="chapter" title="Chapter&nbsp;3.&nbsp;Test Objectives Status"><div class="titlepage"><div><div><h2 class="title"><a name="d174e328"></a>Chapter&nbsp;3.&nbsp;Test Objectives Status</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#d174e332">Objectives Satisfied</a></span></dt></dl></div><div class="sect1" title="Objectives Satisfied"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e332"></a>Objectives Satisfied</h2></div></div></div><p>Simulink Design Verifier found test cases that exercise these test objectives.<span> </span>
+</p><a name="d174e341"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="120*"><col width="360*"><col width="360*"><col width="120*"><thead><tr>
+            <th align="left">#</th>
+            <th align="left">Type</th>
+            <th align="left">Model Item</th>
+            <th align="left">Description</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">1</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A29'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch1</a>
+            </td>
+            <td align="left">logical trigger input false (output is from 3rd input port)</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">2</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A29'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch1</a>
+            </td>
+            <td align="left">logical trigger input true (output is from 1st input port)</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">3</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A25'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Saturation</a>
+            </td>
+            <td align="left">input &gt; lower limit F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">4</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A25'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Saturation</a>
+            </td>
+            <td align="left">input &gt; lower limit T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">5</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A25'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Saturation</a>
+            </td>
+            <td align="left">input &gt;= upper limit F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">6</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A25'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Saturation</a>
+            </td>
+            <td align="left">input &gt;= upper limit T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">7</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A44'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator1</a>
+            </td>
+            <td align="left">Logic: input port 1 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">8</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A44'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator1</a>
+            </td>
+            <td align="left">Logic: input port 1 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">9</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+            </td>
+            <td align="left">Logic: input port 1 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">10</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+            </td>
+            <td align="left">Logic: input port 1 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">11</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+            </td>
+            <td align="left">Logic: input port 2 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">12</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+            </td>
+            <td align="left">Logic: input port 2 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">13</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 1 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">14</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 2 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">15</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 1 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">16</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 2 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">17</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+            </td>
+            <td align="left">Logic: input port 1 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">18</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+            </td>
+            <td align="left">Logic: input port 1 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">19</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+            </td>
+            <td align="left">Logic: input port 2 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">20</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+            </td>
+            <td align="left">Logic: input port 2 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">21</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 1 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">22</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 2 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">23</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 1 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">24</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 2 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">25</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: input port 1 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">26</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: input port 1 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">27</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: input port 2 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">28</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: input port 2 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">29</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: input port 3 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">30</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: input port 3 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">31</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: input port 4 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">32</td>
+            <td align="left">Condition</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: input port 4 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">33</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 1 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">34</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 2 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">35</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 3 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">36</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 4 T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">37</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 1 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">38</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 2 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">39</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 3 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">40</td>
+            <td align="left">Mcdc</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+            </td>
+            <td align="left">Logic: MCDC expression for output with input port 4 F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">41</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A58'), urldecode('cruise_control_sdo'));" target="_top">PI_Controller</a>
+            </td>
+            <td align="left">enable logical value F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">42</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A58'), urldecode('cruise_control_sdo'));" target="_top">PI_Controller</a>
+            </td>
+            <td align="left">enable logical value T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">43</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A17'), urldecode('cruise_control_sdo'));" target="_top">Switch</a>
+            </td>
+            <td align="left">logical trigger input false (output is from 3rd input port)</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">44</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A17'), urldecode('cruise_control_sdo'));" target="_top">Switch</a>
+            </td>
+            <td align="left">logical trigger input true (output is from 1st input port)</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">45</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A54'), urldecode('cruise_control_sdo'));" target="_top">Saturation</a>
+            </td>
+            <td align="left">input &gt; lower limit F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">46</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A54'), urldecode('cruise_control_sdo'));" target="_top">Saturation</a>
+            </td>
+            <td align="left">input &gt; lower limit T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">47</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A54'), urldecode('cruise_control_sdo'));" target="_top">Saturation</a>
+            </td>
+            <td align="left">input &gt;= upper limit F</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">48</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A54'), urldecode('cruise_control_sdo'));" target="_top">Saturation</a>
+            </td>
+            <td align="left">input &gt;= upper limit T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">49</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A30'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch2</a>
+            </td>
+            <td align="left">logical trigger input false (output is from 3rd input port)</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">50</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A30'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch2</a>
+            </td>
+            <td align="left">logical trigger input true (output is from 1st input port)</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">51</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A31'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch3</a>
+            </td>
+            <td align="left">logical trigger input false (output is from 3rd input port)</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">52</td>
+            <td align="left">Decision</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A31'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch3</a>
+            </td>
+            <td align="left">logical trigger input true (output is from 1st input port)</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div></div><div class="chapter" title="Chapter&nbsp;4.&nbsp;Model Items"><div class="titlepage"><div><div><h2 class="title"><a name="d174e1562"></a>Chapter&nbsp;4.&nbsp;Model Items</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#d174e1571">calcTarget/Switch1</a></span></dt><dt><span class="sect1"><a href="#d174e1651">calcTarget/Saturation</a></span></dt><dt><span class="sect1"><a href="#d174e1771">isControlActivate/Logical Operator1</a></span></dt><dt><span class="sect1"><a href="#d174e1851">isControlActivate/Logical Operator2</a></span></dt><dt><span class="sect1"><a href="#d174e2051">isControlActivate/Logical Operator3</a></span></dt><dt><span class="sect1"><a href="#d174e2251">isControlActivate/Logical Operator</a></span></dt><dt><span class="sect1"><a href="#d174e2611">PI_Controller</a></span></dt><dt><span class="sect1"><a href="#d174e2691">Switch</a></span></dt><dt><span class="sect1"><a href="#d174e2771">Saturation</a></span></dt><dt><span class="sect1"><a href="#d174e2891">calcTarget/Switch2</a></span></dt><dt><span class="sect1"><a href="#d174e2971">calcTarget/Switch3</a></span></dt></dl></div><p>This section presents, for each object in the model defining coverage objectives, the list of objectives and 
+their individual status at the end of the analysis. It should match the coverage report obtained from running
+the generated test suite on the model, either from the harness model or by using the sldvruntests command.<span> </span>
+</p><div class="sect1" title="calcTarget/Switch1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e1571"></a>calcTarget/Switch1</h2></div></div></div><a name="d174e1575"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A29'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e1586"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">1</td>
+            <td align="left">Decision</td>
+            <td align="left">logical trigger input false (output is from 3rd input port)</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">2</td>
+            <td align="left">Decision</td>
+            <td align="left">logical trigger input true (output is from 1st input port)</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="calcTarget/Saturation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e1651"></a>calcTarget/Saturation</h2></div></div></div><a name="d174e1655"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A25'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e1666"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">3</td>
+            <td align="left">Decision</td>
+            <td align="left">input &gt; lower limit F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">4</td>
+            <td align="left">Decision</td>
+            <td align="left">input &gt; lower limit T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">5</td>
+            <td align="left">Decision</td>
+            <td align="left">input &gt;= upper limit F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">6</td>
+            <td align="left">Decision</td>
+            <td align="left">input &gt;= upper limit T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="isControlActivate/Logical Operator1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e1771"></a>isControlActivate/Logical Operator1</h2></div></div></div><a name="d174e1775"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A44'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e1786"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">7</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 1 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">8</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 1 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="isControlActivate/Logical Operator2"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e1851"></a>isControlActivate/Logical Operator2</h2></div></div></div><a name="d174e1855"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e1866"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">9</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 1 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">10</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 1 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">11</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 2 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">12</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 2 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">13</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 1 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">14</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 2 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">15</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 1 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">16</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 2 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="isControlActivate/Logical Operator3"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e2051"></a>isControlActivate/Logical Operator3</h2></div></div></div><a name="d174e2055"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e2066"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">17</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 1 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">18</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 1 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">19</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 2 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">20</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 2 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">21</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 1 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">22</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 2 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">23</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 1 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">24</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 2 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="isControlActivate/Logical Operator"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e2251"></a>isControlActivate/Logical Operator</h2></div></div></div><a name="d174e2255"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e2266"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">25</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 1 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">26</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 1 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">27</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 2 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">28</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 2 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">29</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 3 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">30</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 3 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">31</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 4 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">32</td>
+            <td align="left">Condition</td>
+            <td align="left">Logic: input port 4 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">33</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 1 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">34</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 2 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">35</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 3 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">36</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 4 T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">37</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 1 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">38</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 2 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">39</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 3 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">40</td>
+            <td align="left">Mcdc</td>
+            <td align="left">Logic: MCDC expression for output with input port 4 F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="PI_Controller"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e2611"></a>PI_Controller</h2></div></div></div><a name="d174e2615"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A58'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e2626"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">41</td>
+            <td align="left">Decision</td>
+            <td align="left">enable logical value F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">42</td>
+            <td align="left">Decision</td>
+            <td align="left">enable logical value T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="Switch"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e2691"></a>Switch</h2></div></div></div><a name="d174e2695"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A17'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e2706"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">43</td>
+            <td align="left">Decision</td>
+            <td align="left">logical trigger input false (output is from 3rd input port)</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">44</td>
+            <td align="left">Decision</td>
+            <td align="left">logical trigger input true (output is from 1st input port)</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="Saturation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e2771"></a>Saturation</h2></div></div></div><a name="d174e2775"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A54'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e2786"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">45</td>
+            <td align="left">Decision</td>
+            <td align="left">input &gt; lower limit F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">46</td>
+            <td align="left">Decision</td>
+            <td align="left">input &gt; lower limit T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">47</td>
+            <td align="left">Decision</td>
+            <td align="left">input &gt;= upper limit F</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">48</td>
+            <td align="left">Decision</td>
+            <td align="left">input &gt;= upper limit T</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="calcTarget/Switch2"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e2891"></a>calcTarget/Switch2</h2></div></div></div><a name="d174e2895"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A30'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e2906"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">49</td>
+            <td align="left">Decision</td>
+            <td align="left">logical trigger input false (output is from 3rd input port)</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">50</td>
+            <td align="left">Decision</td>
+            <td align="left">logical trigger input true (output is from 1st input port)</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="calcTarget/Switch3"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e2971"></a>calcTarget/Switch3</h2></div></div></div><a name="d174e2975"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1" width="100%"><col width="1*"><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A31'), urldecode('cruise_control_sdo'));" target="_top">View</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d174e2986"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="300*"><col width="180*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">#:</th>
+            <th align="left">Type</th>
+            <th align="left">Description</th>
+            <th align="left">Status</th>
+            <th align="left">Test Case</th>
+        </tr></thead><tbody><tr>
+            <td align="left">51</td>
+            <td align="left">Decision</td>
+            <td align="left">logical trigger input false (output is from 3rd input port)</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr><tr>
+            <td align="left">52</td>
+            <td align="left">Decision</td>
+            <td align="left">logical trigger input true (output is from 1st input port)</td>
+            <td align="left">Satisfied</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div></div><div class="chapter" title="Chapter&nbsp;5.&nbsp;Test Cases"><div class="titlepage"><div><div><h2 class="title"><a name="d174e3051"></a>Chapter&nbsp;5.&nbsp;Test Cases</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#d174e3061">Test Case 1</a></span></dt></dl></div><p>This section contains detailed information about each generated test case. <span> </span>
+</p><a name="TestCase#1"></a><div class="sect1" title="Test Case 1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d174e3061"></a>Test Case 1</h2></div></div></div><p title="Summary"><b>Summary&nbsp;</b>
+        <a name="d174e3070"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="120*"><col width="300*"><tbody><tr>
+                    <td align="left">Length:</td>
+                    <td align="left">0.13 Seconds (14 sample periods)</td>
+                </tr><tr>
+                    <td align="left">Objective Count:</td>
+                    <td align="left">52</td>
+                </tr></tbody></table></div></div><p title="Summary">
+    </p><p title="Objectives"><b>Objectives&nbsp;</b>
+        <a name="d174e3096"></a></p><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="60*"><col width="600*"><col width="600*"><thead><tr>
+                    <th align="left">Step</th>
+                    <th align="left">Time</th>
+                    <th align="left">Model Item</th>
+                    <th align="left">Objectives</th>
+                </tr></thead><tbody><tr>
+                    <td align="left">1</td>
+                    <td align="left">0</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A29'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch1</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A25'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Saturation</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A25'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Saturation</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A44'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator1</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A58'), urldecode('cruise_control_sdo'));" target="_top">PI_Controller</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A17'), urldecode('cruise_control_sdo'));" target="_top">Switch</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A54'), urldecode('cruise_control_sdo'));" target="_top">Saturation</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A54'), urldecode('cruise_control_sdo'));" target="_top">Saturation</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>logical trigger input true (output is from 1st input port)</td></tr><tr><td>input &gt;= upper limit F</td></tr><tr><td>input &gt; lower limit F</td></tr><tr><td>Logic: input port 1 T</td></tr><tr><td>Logic: input port 1 T</td></tr><tr><td>Logic: input port 1 T</td></tr><tr><td>Logic: input port 2 F</td></tr><tr><td>Logic: input port 1 F</td></tr><tr><td>enable logical value F</td></tr><tr><td>logical trigger input false (output is from 3rd input port)</td></tr><tr><td>input &gt;= upper limit F</td></tr><tr><td>input &gt; lower limit T</td></tr><tr><td>Logic: MCDC expression for output with input port 1 T</td></tr><tr><td>Logic: MCDC expression for output with input port 2 F</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">2</td>
+                    <td align="left">0.01</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A29'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch1</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A30'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch2</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A31'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch3</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A44'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator1</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A54'), urldecode('cruise_control_sdo'));" target="_top">Saturation</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>logical trigger input false (output is from 3rd input port)</td></tr><tr><td>logical trigger input false (output is from 3rd input port)</td></tr><tr><td>logical trigger input false (output is from 3rd input port)</td></tr><tr><td>Logic: input port 1 F</td></tr><tr><td>Logic: input port 1 F</td></tr><tr><td>Logic: input port 2 F</td></tr><tr><td>Logic: input port 1 F</td></tr><tr><td>input &gt; lower limit F</td></tr><tr><td>Logic: MCDC expression for output with input port 1 F</td></tr><tr><td>Logic: MCDC expression for output with input port 2 F</td></tr><tr><td>Logic: MCDC expression for output with input port 1 F</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">3</td>
+                    <td align="left">0.02</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A30'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch2</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A25'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Saturation</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>logical trigger input true (output is from 1st input port)</td></tr><tr><td>input &gt; lower limit T</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">4</td>
+                    <td align="left">0.03</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A46'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator3</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>Logic: input port 2 T</td></tr><tr><td>Logic: MCDC expression for output with input port 1 T</td></tr><tr><td>Logic: MCDC expression for output with input port 2 T</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">5</td>
+                    <td align="left">0.04</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A31'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Switch3</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>logical trigger input true (output is from 1st input port)</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">6</td>
+                    <td align="left">0.05</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>Logic: input port 1 T</td></tr><tr><td>Logic: input port 2 T</td></tr><tr><td>Logic: input port 3 F</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">7</td>
+                    <td align="left">0.06</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>Logic: input port 2 F</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">8</td>
+                    <td align="left">0.07</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A25'), urldecode('cruise_control_sdo'));" target="_top">calcTarget/Saturation</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>input &gt;= upper limit T</td></tr><tr><td>Logic: input port 3 T</td></tr><tr><td>Logic: input port 4 F</td></tr><tr><td>Logic: MCDC expression for output with input port 4 F</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">9</td>
+                    <td align="left">0.08</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A58'), urldecode('cruise_control_sdo'));" target="_top">PI_Controller</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A17'), urldecode('cruise_control_sdo'));" target="_top">Switch</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>Logic: input port 4 T</td></tr><tr><td>enable logical value T</td></tr><tr><td>logical trigger input true (output is from 1st input port)</td></tr><tr><td>Logic: MCDC expression for output with input port 1 T</td></tr><tr><td>Logic: MCDC expression for output with input port 2 T</td></tr><tr><td>Logic: MCDC expression for output with input port 3 T</td></tr><tr><td>Logic: MCDC expression for output with input port 4 T</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">10</td>
+                    <td align="left">0.09</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+                            </td></tr><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A45'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator2</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>Logic: input port 2 T</td></tr><tr><td>Logic: MCDC expression for output with input port 2 T</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">11</td>
+                    <td align="left">0.1</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A54'), urldecode('cruise_control_sdo'));" target="_top">Saturation</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>input &gt;= upper limit T</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">12</td>
+                    <td align="left">0.11</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>Logic: MCDC expression for output with input port 1 F</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">13</td>
+                    <td align="left">0.12</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>Logic: MCDC expression for output with input port 2 F</td></tr></table>
+                    </td>
+                </tr><tr>
+                    <td align="left">14</td>
+                    <td align="left">0.13</td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control_sdo%3A43'), urldecode('cruise_control_sdo'));" target="_top">isControlActivate/Logical Operator</a>
+                            </td></tr></table>
+                    </td>
+                    <td align="left">
+                        <table border="0" summary="Simple list" class="simplelist"><tr><td>Logic: MCDC expression for output with input port 3 F</td></tr></table>
+                    </td>
+                </tr></tbody></table></div></div><p title="Objectives">
+    </p><p title="Generated Input Data"><b>Generated Input Data&nbsp;</b>
+        <a name="d174e3739"></a></p><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+                    <th align="left">Time</th>
+                    <th align="left">0</th>
+                    <th align="left">0.01</th>
+                    <th align="left">0.02</th>
+                    <th align="left">0.03</th>
+                    <th align="left">0.04</th>
+                    <th align="left">0.05</th>
+                    <th align="left">0.06</th>
+                    <th align="left">0.07</th>
+                    <th align="left">0.08</th>
+                    <th align="left">0.09</th>
+                    <th align="left">0.1</th>
+                    <th align="left">0.11</th>
+                    <th align="left">0.12</th>
+                    <th align="left">0.13</th>
+                </tr><tr>
+                    <th align="left">Step</th>
+                    <th align="left">1</th>
+                    <th align="left">2</th>
+                    <th align="left">3</th>
+                    <th align="left">4</th>
+                    <th align="left">5</th>
+                    <th align="left">6</th>
+                    <th align="left">7</th>
+                    <th align="left">8</th>
+                    <th align="left">9</th>
+                    <th align="left">10</th>
+                    <th align="left">11</th>
+                    <th align="left">12</th>
+                    <th align="left">13</th>
+                    <th align="left">14</th>
+                </tr></thead><tbody><tr>
+                    <td align="left">enable</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">1</td>
+                    <td align="left">1</td>
+                    <td align="left">1</td>
+                    <td align="left">1</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">1</td>
+                    <td align="left">1</td>
+                </tr><tr>
+                    <td align="left">brake_pressure</td>
+                    <td align="left">2.875</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0.0625</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">8</td>
+                    <td align="left">0</td>
+                </tr><tr>
+                    <td align="left">set</td>
+                    <td align="left">1</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">1</td>
+                    <td align="left">1</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">1</td>
+                    <td align="left">1</td>
+                    <td align="left">0</td>
+                </tr><tr>
+                    <td align="left">inc</td>
+                    <td align="left">1</td>
+                    <td align="left">0</td>
+                    <td align="left">1</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                </tr><tr>
+                    <td align="left">dec</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">1</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                </tr><tr>
+                    <td align="left">driver_throt</td>
+                    <td align="left">4.9375</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">100</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                </tr><tr>
+                    <td align="left">speed</td>
+                    <td align="left">6.125</td>
+                    <td align="left">256</td>
+                    <td align="left">256</td>
+                    <td align="left">46</td>
+                    <td align="left">256</td>
+                    <td align="left">256</td>
+                    <td align="left">256</td>
+                    <td align="left">256</td>
+                    <td align="left">46</td>
+                    <td align="left">256</td>
+                    <td align="left">256</td>
+                    <td align="left">46</td>
+                    <td align="left">46</td>
+                    <td align="left">46</td>
+                </tr></tbody></table></div></div><p title="Generated Input Data">
+    </p><p title="Expected Output"><b>Expected Output&nbsp;</b>These output values are expected assuming that inputs that do not affect the test objectives (- in the table above) are given a default value - 0 for numeric types, and default value for enumerated types.
+<a name="d174e4186"></a></p><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="1*"><col width="1*"><col width="1*"><col width="1*"><col width="1*"><col width="1*"><col width="1*"><col width="1*"><col width="1*"><thead><tr>
+                    <th align="left">Time</th>
+                    <th align="left">0</th>
+                    <th align="left">0.01</th>
+                    <th align="left">0.02-0.03</th>
+                    <th align="left">0.04-0.06</th>
+                    <th align="left">0.07</th>
+                    <th align="left">0.08-0.09</th>
+                    <th align="left">0.1</th>
+                    <th align="left">0.11-0.13</th>
+                </tr><tr>
+                    <th align="left">Step</th>
+                    <th align="left">1</th>
+                    <th align="left">2</th>
+                    <th align="left">3-4</th>
+                    <th align="left">5-7</th>
+                    <th align="left">8</th>
+                    <th align="left">9-10</th>
+                    <th align="left">11</th>
+                    <th align="left">12-14</th>
+                </tr></thead><tbody><tr>
+                    <td align="left">throt</td>
+                    <td align="left">4.9375</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                    <td align="left">100</td>
+                    <td align="left">0</td>
+                </tr><tr>
+                    <td align="left">target</td>
+                    <td align="left">40</td>
+                    <td align="left">40</td>
+                    <td align="left">41</td>
+                    <td align="left">40</td>
+                    <td align="left">100</td>
+                    <td align="left">46</td>
+                    <td align="left">46</td>
+                    <td align="left">46</td>
+                </tr></tbody></table></div></div><p title="Expected Output">
+    </p></div></div></div></body></html>

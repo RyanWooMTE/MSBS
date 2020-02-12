@@ -1,0 +1,49 @@
+
+30-Jan-2013 05:42:14
+Starting property proving for model 'cruise_control'
+Compiling model... done
+Translating model... done
+'cruise_control' is compatible with Simulink Design Verifier.
+
+Proving properties...
+
+PROVEN VALID
+PropertySpecification/Proof011
+Objective: T
+
+FALSIFIED
+PropertySpecification/Proof010
+Objective: T
+
+PROVEN VALID
+PropertySpecification/Proof007
+Objective: T
+
+PROVEN VALID
+PropertySpecification/Proof006
+Objective: T
+
+PROVEN VALID
+PropertySpecification/Proof008
+Objective: T
+
+PROVEN VALID
+PropertySpecification/Proof009
+Objective: T
+
+PROVEN VALID
+PropertySpecification/Proof012
+Objective: T
+
+
+30-Jan-2013 05:42:18
+Completed normally.
+
+Generating output files:
+
+    Data file:
+    C:\Mathworks\Workspace\Demo\Workshop_SLDV\00_utils\PropertySpecificationUI\demo\sldv_output\cruise_control\cruise_control_sldvdata.mat
+
+30-Jan-2013 05:42:20
+Results generation completed.
+

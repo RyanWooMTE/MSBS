@@ -1,0 +1,340 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Simulink Design Verifier Report</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="Simulink Design Verifier Report"><div class="titlepage"><div><div><h1 class="title"><a name="d234e1"></a>Simulink Design Verifier Report</h1></div><div><h2 class="subtitle">cruise_control</h2></div><div><div class="author"><h3 class="author"><span class="firstname">hualongy
+ </span></h3></div></div><div><p class="pubdate">30-Jan-2013 05:42:36</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#d234e15">1. Summary</a></span></dt><dt><span class="chapter"><a href="#d234e96">2. Analysis Information</a></span></dt><dt><span class="chapter"><a href="#d234e358">3. Proof Objectives Status</a></span></dt><dt><span class="chapter"><a href="#d234e573">4. Properties </a></span></dt></dl></div><div class="chapter" title="Chapter&nbsp;1.&nbsp;Summary"><div class="titlepage"><div><div><h2 class="title"><a name="d234e15"></a>Chapter&nbsp;1.&nbsp;Summary</h2></div></div></div><p title="Analysis Information"><b>Analysis Information&nbsp;</b>
+        <a name="d234e24"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="240*"><col width="300*"><tbody><tr>
+                    <td align="left">Model:</td>
+                    <td align="left">cruise_control</td>
+                </tr><tr>
+                    <td align="left">Mode:</td>
+                    <td align="left">PropertyProving</td>
+                </tr><tr>
+                    <td align="left">Status:</td>
+                    <td align="left">Completed normally</td>
+                </tr><tr>
+                    <td align="left">Analysis Time:</td>
+                    <td align="left">0s</td>
+                </tr></tbody></table></div></div><p title="Analysis Information">
+    </p><p title="Objectives Status"><b>Objectives Status&nbsp;</b>
+        <a name="d234e66"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="360*"><col width="60*"><thead><tr>
+                    <th align="left">Number of Objectives: </th>
+                    <th align="left">7</th>
+                </tr></thead><tbody><tr>
+                    <td align="left">Objectives Proven Valid: </td>
+                    <td align="left">6</td>
+                </tr><tr>
+                    <td align="left">Objectives Falsified with Counterexamples: </td>
+                    <td align="left">1</td>
+                </tr></tbody></table></div></div><p title="Objectives Status">
+    </p></div><div class="chapter" title="Chapter&nbsp;2.&nbsp;Analysis Information"><div class="titlepage"><div><div><h2 class="title"><a name="d234e96"></a>Chapter&nbsp;2.&nbsp;Analysis Information</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#d234e100">Model Information</a></span></dt><dt><span class="sect1"><a href="#d234e140">Analysis Options</a></span></dt><dt><span class="sect1"><a href="#d234e244">Constraints</a></span></dt><dt><span class="sect1"><a href="#d234e320">Approximations</a></span></dt></dl></div><div class="sect1" title="Model Information"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e100"></a>Model Information</h2></div></div></div><a name="d234e104"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="240*"><col width="300*"><tbody><tr>
+            <td align="left">File:</td>
+            <td align="left">cruise_control</td>
+        </tr><tr>
+            <td align="left">Version:</td>
+            <td align="left">1.231</td>
+        </tr><tr>
+            <td align="left">Time Stamp:</td>
+            <td align="left">Wed Sep 19 18:26:38 2012</td>
+        </tr><tr>
+            <td align="left">Author:</td>
+            <td align="left">The MathWorks Inc.</td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="Analysis Options"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e140"></a>Analysis Options</h2></div></div></div><a name="d234e144"></a><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="240*"><col width="300*"><tbody><tr>
+            <td align="left">Mode:</td>
+            <td align="left">PropertyProving</td>
+        </tr><tr>
+            <td align="left">Proving Strategy:</td>
+            <td align="left">ProveWithViolationDetection</td>
+        </tr><tr>
+            <td align="left">Maximum Violation Steps:</td>
+            <td align="left">20 time steps</td>
+        </tr><tr>
+            <td align="left">Proof Assumptions:</td>
+            <td align="left">UseLocalSettings</td>
+        </tr><tr>
+            <td align="left">Test Objectives:</td>
+            <td align="left">UseLocalSettings</td>
+        </tr><tr>
+            <td align="left">Assertions:</td>
+            <td align="left">UseLocalSettings</td>
+        </tr><tr>
+            <td align="left">Maximum Processing Time:</td>
+            <td align="left">300s</td>
+        </tr><tr>
+            <td align="left">Block Replacement:</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">Parameters Analysis:</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">Save Data:</td>
+            <td align="left">on</td>
+        </tr><tr>
+            <td align="left">Save Harness:</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">Save Report:</td>
+            <td align="left">off</td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="Constraints"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e244"></a>Constraints</h2></div></div></div><div class="sect2" title="Analysis Constraints"><div class="titlepage"><div><div><h3 class="title"><a name="d234e248"></a>Analysis Constraints</h3></div></div></div><a name="d234e252"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="360*"><col width="360*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Analysis Constraint</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A431'), urldecode('cruise_control'));" target="_top">PropertySpecification/Assumtion001</a>
+            </td>
+            <td align="left">T</td>
+        </tr><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A443'), urldecode('cruise_control'));" target="_top">PropertySpecification/Assumtion003</a>
+            </td>
+            <td align="left">T</td>
+        </tr><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A449'), urldecode('cruise_control'));" target="_top">PropertySpecification/Assumtion004</a>
+            </td>
+            <td align="left">T</td>
+        </tr><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A455'), urldecode('cruise_control'));" target="_top">PropertySpecification/Assumtion005</a>
+            </td>
+            <td align="left">T</td>
+        </tr><tr>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A437'), urldecode('cruise_control'));" target="_top">PropertySpecification/Assumtion002</a>
+            </td>
+            <td align="left">T</td>
+        </tr></tbody></table></div></div></div></div><div class="sect1" title="Approximations"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e320"></a>Approximations</h2></div></div></div><p>Simulink Design Verifier performed the following approximations during analysis. 
+These can impact the precision of the results generated by Simulink Design Verifier. 
+Please see the product documentation for further details.<span> </span>
+    <a name="d234e329"></a></p><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="240*"><col width="720*"><thead><tr>
+                <th align="left">#</th>
+                <th align="left">Type</th>
+                <th align="left">Description</th>
+            </tr></thead><tbody><tr>
+                <td align="left">1</td>
+                <td align="left">Rational approximation</td>
+                <td align="left">The model includes floating-point arithmetic. Simulink Design Verifier approximates floating-point arithmetic with rational number arithmetic.</td>
+            </tr></tbody></table></div></div><p>
+</p></div></div><div class="chapter" title="Chapter&nbsp;3.&nbsp;Proof Objectives Status"><div class="titlepage"><div><div><h2 class="title"><a name="d234e358"></a>Chapter&nbsp;3.&nbsp;Proof Objectives Status</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#d234e362">Objectives Proven Valid</a></span></dt><dt><span class="sect1"><a href="#d234e516">Objectives Falsified with Counterexamples</a></span></dt></dl></div><div class="sect1" title="Objectives Proven Valid"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e362"></a>Objectives Proven Valid</h2></div></div></div><p>
+    <span> </span>
+</p><a name="d234e371"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="120*"><col width="360*"><col width="360*"><col width="120*"><thead><tr>
+            <th align="left">#</th>
+            <th align="left">Type</th>
+            <th align="left">Model Item</th>
+            <th align="left">Description</th>
+            <th align="left">Counterexample</th>
+        </tr></thead><tbody><tr>
+            <td align="left">1</td>
+            <td align="left">Proof objective</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A464'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof006</a>
+            </td>
+            <td align="left">Objective: T</td>
+            <td align="left">n/a</td>
+        </tr><tr>
+            <td align="left">2</td>
+            <td align="left">Proof objective</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A475'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof007</a>
+            </td>
+            <td align="left">Objective: T</td>
+            <td align="left">n/a</td>
+        </tr><tr>
+            <td align="left">3</td>
+            <td align="left">Proof objective</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A482'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof008</a>
+            </td>
+            <td align="left">Objective: T</td>
+            <td align="left">n/a</td>
+        </tr><tr>
+            <td align="left">4</td>
+            <td align="left">Proof objective</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A493'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof009</a>
+            </td>
+            <td align="left">Objective: T</td>
+            <td align="left">n/a</td>
+        </tr><tr>
+            <td align="left">6</td>
+            <td align="left">Proof objective</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A511'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof011</a>
+            </td>
+            <td align="left">Objective: T</td>
+            <td align="left">n/a</td>
+        </tr><tr>
+            <td align="left">7</td>
+            <td align="left">Proof objective</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A519'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof012</a>
+            </td>
+            <td align="left">Objective: T</td>
+            <td align="left">n/a</td>
+        </tr></tbody></table></div></div></div><div class="sect1" title="Objectives Falsified with Counterexamples"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e516"></a>Objectives Falsified with Counterexamples</h2></div></div></div><p>
+    <span> </span>
+</p><a name="d234e525"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="60*"><col width="120*"><col width="360*"><col width="360*"><col width="120*"><thead><tr>
+            <th align="left">#</th>
+            <th align="left">Type</th>
+            <th align="left">Model Item</th>
+            <th align="left">Description</th>
+            <th align="left">Counterexample</th>
+        </tr></thead><tbody><tr>
+            <td align="left">5</td>
+            <td align="left">Proof objective</td>
+            <td align="left">
+                <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A502'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof010</a>
+            </td>
+            <td align="left">Objective: T</td>
+            <td align="left">
+                <a class="link" href="#TestCase#1">1</a>
+            </td>
+        </tr></tbody></table></div></div></div></div><div class="chapter" title="Chapter&nbsp;4.&nbsp;Properties"><div class="titlepage"><div><div><h2 class="title"><a name="d234e573"></a>Chapter&nbsp;4.&nbsp;Properties </h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#d234e577">PropertySpecification/Proof006</a></span></dt><dt><span class="sect1"><a href="#d234e618">PropertySpecification/Proof007</a></span></dt><dt><span class="sect1"><a href="#d234e659">PropertySpecification/Proof008</a></span></dt><dt><span class="sect1"><a href="#d234e700">PropertySpecification/Proof009</a></span></dt><dt><span class="sect1"><a href="#d234e741">PropertySpecification/Proof010</a></span></dt><dt><span class="sect1"><a href="#d234e954">PropertySpecification/Proof011</a></span></dt><dt><span class="sect1"><a href="#d234e995">PropertySpecification/Proof012</a></span></dt></dl></div><div class="sect1" title="PropertySpecification/Proof006"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e577"></a>PropertySpecification/Proof006</h2></div></div></div><p title="Summary"><b>Summary&nbsp;</b>
+        <a name="d234e586"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="120*"><col width="600*"><tbody><tr>
+                    <td align="left">Model Item:</td>
+                    <td align="left">
+                        <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A464'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof006</a>
+                    </td>
+                </tr><tr>
+                    <td align="left">Property:</td>
+                    <td align="left">Objective: T</td>
+                </tr><tr>
+                    <td align="left">Status:</td>
+                    <td align="left">Proven valid</td>
+                </tr></tbody></table></div></div><p title="Summary">
+    </p></div><div class="sect1" title="PropertySpecification/Proof007"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e618"></a>PropertySpecification/Proof007</h2></div></div></div><p title="Summary"><b>Summary&nbsp;</b>
+        <a name="d234e627"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="120*"><col width="600*"><tbody><tr>
+                    <td align="left">Model Item:</td>
+                    <td align="left">
+                        <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A475'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof007</a>
+                    </td>
+                </tr><tr>
+                    <td align="left">Property:</td>
+                    <td align="left">Objective: T</td>
+                </tr><tr>
+                    <td align="left">Status:</td>
+                    <td align="left">Proven valid</td>
+                </tr></tbody></table></div></div><p title="Summary">
+    </p></div><div class="sect1" title="PropertySpecification/Proof008"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e659"></a>PropertySpecification/Proof008</h2></div></div></div><p title="Summary"><b>Summary&nbsp;</b>
+        <a name="d234e668"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="120*"><col width="600*"><tbody><tr>
+                    <td align="left">Model Item:</td>
+                    <td align="left">
+                        <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A482'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof008</a>
+                    </td>
+                </tr><tr>
+                    <td align="left">Property:</td>
+                    <td align="left">Objective: T</td>
+                </tr><tr>
+                    <td align="left">Status:</td>
+                    <td align="left">Proven valid</td>
+                </tr></tbody></table></div></div><p title="Summary">
+    </p></div><div class="sect1" title="PropertySpecification/Proof009"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e700"></a>PropertySpecification/Proof009</h2></div></div></div><p title="Summary"><b>Summary&nbsp;</b>
+        <a name="d234e709"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="120*"><col width="600*"><tbody><tr>
+                    <td align="left">Model Item:</td>
+                    <td align="left">
+                        <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A493'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof009</a>
+                    </td>
+                </tr><tr>
+                    <td align="left">Property:</td>
+                    <td align="left">Objective: T</td>
+                </tr><tr>
+                    <td align="left">Status:</td>
+                    <td align="left">Proven valid</td>
+                </tr></tbody></table></div></div><p title="Summary">
+    </p></div><div class="sect1" title="PropertySpecification/Proof010"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e741"></a>PropertySpecification/Proof010</h2></div></div></div><p title="Summary"><b>Summary&nbsp;</b>
+        <a name="d234e750"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="120*"><col width="600*"><tbody><tr>
+                    <td align="left">Model Item:</td>
+                    <td align="left">
+                        <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A502'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof010</a>
+                    </td>
+                </tr><tr>
+                    <td align="left">Property:</td>
+                    <td align="left">Objective: T</td>
+                </tr><tr>
+                    <td align="left">Status:</td>
+                    <td align="left">Falsified</td>
+                </tr></tbody></table></div></div><p title="Summary">
+    </p><a name="TestCase#1"></a><p title="Counterexample"><b>Counterexample&nbsp;</b>
+        
+        
+        <a name="d234e792"></a></p><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="1*"><col width="1*"><col width="1*"><thead><tr>
+                    <th align="left">Time</th>
+                    <th align="left">0</th>
+                    <th align="left">0.01</th>
+                </tr><tr>
+                    <th align="left">Step</th>
+                    <th align="left">1</th>
+                    <th align="left">2</th>
+                </tr></thead><tbody><tr>
+                    <td align="left">enable</td>
+                    <td align="left">0</td>
+                    <td align="left">1</td>
+                </tr><tr>
+                    <td align="left">brake_pressure</td>
+                    <td align="left">0</td>
+                    <td align="left">-1</td>
+                </tr><tr>
+                    <td align="left">speed</td>
+                    <td align="left">0</td>
+                    <td align="left">100.8</td>
+                </tr><tr>
+                    <td align="left">set</td>
+                    <td align="left">1</td>
+                    <td align="left">0</td>
+                </tr><tr>
+                    <td align="left">inc</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                </tr><tr>
+                    <td align="left">dec</td>
+                    <td align="left">0</td>
+                    <td align="left">1</td>
+                </tr><tr>
+                    <td align="left">driver_throt</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                </tr></tbody></table></div></div><p title="Counterexample">
+    </p><p title="Expected Output"><b>Expected Output&nbsp;</b>These output values are expected assuming that inputs that do not affect the properties (- in the table above) are given a default value - 0 for numeric types, and default value for enumerated types.
+<a name="d234e903"></a></p><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1"><col width="1*"><col width="1*"><col width="1*"><thead><tr>
+                    <th align="left">Time</th>
+                    <th align="left">0</th>
+                    <th align="left">0.01</th>
+                </tr><tr>
+                    <th align="left">Step</th>
+                    <th align="left">1</th>
+                    <th align="left">2</th>
+                </tr></thead><tbody><tr>
+                    <td align="left">throt</td>
+                    <td align="left">0</td>
+                    <td align="left">0</td>
+                </tr><tr>
+                    <td align="left">target</td>
+                    <td align="left">40</td>
+                    <td align="left">41</td>
+                </tr></tbody></table></div></div><p title="Expected Output">
+    </p></div><div class="sect1" title="PropertySpecification/Proof011"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e954"></a>PropertySpecification/Proof011</h2></div></div></div><p title="Summary"><b>Summary&nbsp;</b>
+        <a name="d234e963"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="120*"><col width="600*"><tbody><tr>
+                    <td align="left">Model Item:</td>
+                    <td align="left">
+                        <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A511'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof011</a>
+                    </td>
+                </tr><tr>
+                    <td align="left">Property:</td>
+                    <td align="left">Objective: T</td>
+                </tr><tr>
+                    <td align="left">Status:</td>
+                    <td align="left">Proven valid</td>
+                </tr></tbody></table></div></div><p title="Summary">
+    </p></div><div class="sect1" title="PropertySpecification/Proof012"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d234e995"></a>PropertySpecification/Proof012</h2></div></div></div><p title="Summary"><b>Summary&nbsp;</b>
+        <a name="d234e1004"></a></p><div class="table"><div class="table-contents"><table summary="" border="0" cellspacing="0" fastRender="1"><col width="120*"><col width="600*"><tbody><tr>
+                    <td align="left">Model Item:</td>
+                    <td align="left">
+                        <a class="ulink" href="matlab:sldv_hilite('hilite_sid', urldecode('cruise_control%3A519'), urldecode('cruise_control'));" target="_top">PropertySpecification/Proof012</a>
+                    </td>
+                </tr><tr>
+                    <td align="left">Property:</td>
+                    <td align="left">Objective: T</td>
+                </tr><tr>
+                    <td align="left">Status:</td>
+                    <td align="left">Proven valid</td>
+                </tr></tbody></table></div></div><p title="Summary">
+    </p></div></div></div></body></html>

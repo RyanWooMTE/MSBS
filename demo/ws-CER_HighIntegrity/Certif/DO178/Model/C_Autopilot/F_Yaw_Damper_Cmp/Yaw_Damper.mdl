@@ -1,0 +1,852 @@
+Model {
+  Name			  "Yaw_Damper"
+  Version		  8.0
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    4
+    Inport {
+      BusObject		      ""
+      Name		      "Phi"
+    }
+    Inport {
+      BusObject		      ""
+      Name		      "R"
+    }
+    Inport {
+      BusObject		      ""
+      Name		      "TAS"
+    }
+    Inport {
+      BusObject		      ""
+      Name		      "AP Eng"
+    }
+    NumRootOutports	    1
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Rud Cmd"
+    }
+    ParameterArgumentNames  "rateGain"
+    ComputedModelVersion    "1.71"
+    NumModelReferences	    0
+    NumTestPointedSignals   1
+    TestPointedSignal {
+      SignalName	      "yawRate"
+      FullBlockPath	      "Yaw_Damper/Basic Yaw Damper/Sum1"
+    }
+  }
+  SavedCharacterEncoding  "windows-1252"
+  PreLoadFcn		  "\n"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [565.0, 51.0, 841.0, 436.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[787.0, 234.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
+      }
+    }
+  }
+  Created		  "Thu Apr 06 16:59:31 2006"
+  Creator		  "bpotter"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "ssauvage"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Jul 12 11:40:12 2013"
+  RTWModifiedTimeStamp	  280419706
+  ModelVersionFormat	  "1.%<AutoIncrement:71>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    6
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "Yaw_Damper"
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "Yaw_Damper"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      ""
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata_YawDamper"
+  CovMetricSettings	  "dcmtre"
+  CovHTMLOptions	  " -aTS=1 -bRG=1 -bTC=1 -hTR=1 -nFC=0 -scm=1 -bcm=1"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData_YawDamper"
+  CovCumulativeReport	  on
+  CovReportOnPause	  off
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSetRef {
+      $ObjectID		      7
+      Version		      "1.12.1"
+      Name		      "Autopilot_Configuration"
+      WSVarName		      "configSetObj_autopilot"
+      SourceName	      ""
+      SourceLocation	      "Base Workspace"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSetRef {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    7
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    8
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+    AutoInsertRateTranBlk   [0]
+  }
+  ExplicitPartitioning	  off
+  WSMdlFileData		  "DataTag0"
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "on"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Trigonometry
+      Operator		      "sin"
+      ApproximationMethod     "None"
+      NumberOfIterations      "11"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+    }
+  }
+  System {
+    Name		    "Yaw_Damper"
+    Location		    [565, 51, 1406, 487]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "22"
+    Block {
+      BlockType		      Inport
+      Name		      "Phi"
+      SID		      "1"
+      Position		      [35, 43, 65, 57]
+      ZOrder		      -1
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "double"
+      PortDimensions	      "1"
+      SampleTime	      "1/40"
+      Interpolate	      off
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "R"
+      SID		      "2"
+      Position		      [35, 93, 65, 107]
+      ZOrder		      -2
+      Port		      "2"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "double"
+      PortDimensions	      "1"
+      SampleTime	      "1/40"
+      SignalType	      "real"
+      Interpolate	      off
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "TAS"
+      SID		      "3"
+      Position		      [35, 143, 65, 157]
+      ZOrder		      -3
+      Port		      "3"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "double"
+      PortDimensions	      "1"
+      SampleTime	      "1/40"
+      SignalType	      "real"
+      Interpolate	      off
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "AP Eng"
+      SID		      "4"
+      Position		      [230, 123, 260, 137]
+      ZOrder		      -4
+      Port		      "4"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      PortDimensions	      "1"
+      SampleTime	      "1/40"
+      Interpolate	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Basic Yaw Damper"
+      SID		      "5"
+      Ports		      [3, 1]
+      Position		      [105, 28, 205, 172]
+      ZOrder		      -5
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Inline"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Basic Yaw Damper"
+	Location		[92, 52, 886, 500]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Phi "
+	  SID			  "6"
+	  Position		  [25, 88, 55, 102]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "R"
+	  SID			  "7"
+	  Position		  [25, 193, 55, 207]
+	  ZOrder		  -2
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "TAS"
+	  SID			  "8"
+	  Position		  [25, 143, 55, 157]
+	  ZOrder		  -3
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "9"
+	  Ports			  [2, 1]
+	  Position		  [345, 87, 375, 118]
+	  ZOrder		  -4
+	  Inputs		  "*/"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Rate Gain"
+	  SID			  "10"
+	  Position		  [500, 83, 575, 127]
+	  ZOrder		  -5
+	  Gain			  "rateGain"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Rud Limit"
+	  SID			  "11"
+	  Ports			  [1, 1]
+	  Position		  [605, 90, 635, 120]
+	  ZOrder		  -6
+	  AttributesFormatString  "%<LowerLimit> to %<UpperLimit> (deg)"
+	  InputPortMap		  "u0"
+	  UpperLimit		  "25"
+	  LowerLimit		  "-25"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "12"
+	  Ports			  [2, 1]
+	  Position		  [405, 95, 425, 115]
+	  ZOrder		  -7
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "yawRate"
+	    TestPoint		    on
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "gravity"
+	  SID			  "13"
+	  Position		  [220, 77, 270, 113]
+	  ZOrder		  -8
+	  Gain			  "32.2"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Trigonometry
+	  Name			  "sin"
+	  SID			  "14"
+	  Ports			  [1, 1]
+	  Position		  [125, 80, 155, 110]
+	  ZOrder		  -9
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Rud Cmd"
+	  SID			  "15"
+	  Position		  [670, 98, 700, 112]
+	  ZOrder		  -10
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "R"
+	  SrcPort		  1
+	  Points		  [355, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "yawRate"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "Rate Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rud Limit"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Rud Cmd"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Gain"
+	  SrcPort		  1
+	  DstBlock		  "Rud Limit"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Phi "
+	  SrcPort		  1
+	  DstBlock		  "sin"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "sin"
+	  SrcPort		  1
+	  DstBlock		  "gravity"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "gravity"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "TAS"
+	  SrcPort		  1
+	  Points		  [250, 0; 0, -40]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Annotation {
+	  SID			  "20"
+	  Name			  "Basic Yaw Damper"
+	  Position		  [559, 190]
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      SID		      "16"
+      Position		      [280, 149, 305, 171]
+      ZOrder		      -6
+      Value		      "0"
+      OutDataTypeStr	      "double"
+    }
+    Block {
+      BlockType		      Switch
+      Name		      "Eng switch"
+      SID		      "17"
+      Position		      [345, 83, 375, 177]
+      ZOrder		      -7
+      Criteria		      "u2 ~= 0"
+      InputSameDT	      off
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info"
+      SID		      "18"
+      Ports		      []
+      Position		      [480, 15, 764, 194]
+      ZOrder		      -8
+      ShowName		      off
+      LibraryVersion	      "1.281"
+      SourceBlock	      "simulink/Model-Wide\nUtilities/Model Info"
+      SourceType	      "CMBlock"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   "Yaw Damper\nAuthor: %<LastModifiedBy>\nVersion: %<ModelVersion>\nDate: %<LastModificati"
+      "onDate>\nDO-178B Software Lifecycle Data:\n  11.9 Software Requirements Data\n  11.10 Design Description\nDO-178"
+      "B Objectives:\n  5.1.1a High Level Requirements are Developed\n  5.1.1b Derived High Level Requirements are Deve"
+      "loped\n  5.2.1a Low Level Requirements are Developed\n  5.2.1a Software Architecture is Developed\n  5.2.1b  Der"
+      "ived Low Level Requirements are Developed"
+      MaskDisplayString	      "Yaw Damper\\nAuthor: ssauvage\\nVersion: 1.71\\nDate: 12-Jul-2013 09:21:32\\nDO-178B So"
+      "ftware Lifecycle Data:\\n  11.9 Software Requirements Data\\n  11.10 Design Description\\nDO-178B Objectives:\\n"
+      "  5.1.1a High Level Requirements are Developed\\n  5.1.1b Derived High Level Requirements are Developed\\n  5.2."
+      "1a Low Level Requirements are Developed\\n  5.2.1a Software Architecture is Developed\\n  5.2.1b  Derived Low Le"
+      "vel Requirements are Developed"
+      HorizontalTextAlignment "Left"
+      LeftAlignmentValue      "0.02"
+      SourceBlockDiagram      "Yaw_Damper"
+      TagMaxNumber	      "20"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Rud Cmd"
+      SID		      "19"
+      Position		      [420, 123, 450, 137]
+      ZOrder		      -9
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "double"
+      PortDimensions	      "1"
+      SampleTime	      "1/40"
+      SignalType	      "real"
+    }
+    Line {
+      SrcBlock		      "Phi"
+      SrcPort		      1
+      DstBlock		      "Basic Yaw Damper"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "R"
+      SrcPort		      1
+      DstBlock		      "Basic Yaw Damper"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      DstBlock		      "Eng switch"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "TAS"
+      SrcPort		      1
+      DstBlock		      "Basic Yaw Damper"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Basic Yaw Damper"
+      SrcPort		      1
+      DstBlock		      "Eng switch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "AP Eng"
+      SrcPort		      1
+      DstBlock		      "Eng switch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Eng switch"
+      SrcPort		      1
+      DstBlock		      "Rud Cmd"
+      DstPort		      1
+    }
+    Annotation {
+      SID		      "21"
+      Name		      "Copyright 1990-2006 The MathWorks Inc."
+      Position		      [617, 222]
+    }
+    Annotation {
+      SID		      "22"
+      Name		      "ARP-4754/DO-178B Demonstration"
+      Position		      [620, 205]
+      FontSize		      14
+      FontWeight	      "bold"
+    }
+  }
+}
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    ( $   8    (     @         %    \"     $    !     0         %  0 !@    $    ,    3F%M90"
+    "  5F%L=64       X    X    !@    @    $          4    (     0    @    !         !     (    <F%T94=A:6X.    D     8 "
+    "   (    $0         !          $ ! !-0T]3 0   !(   !3:6UU;&EN:RY087)A;65T97(        .    2     8    (    #0        "
+    " %    \"     8    !     0         &    &        -T\"     0    $    !     0    X   # \"   !@    @    )          4  "
+    "  (     0   ) (   !          (   \"0\"     %)30     .    X <   8    (     @         %    \"     $    !     0      "
+    "   %  0 !0    $    %    34-/4P     .    F <   8    (    $0         !          $ ! !-0T]3 0    T   !&:6QE5W)A<'!E<E"
+    "]?    #@   %@'   &    \"     $         !0    @    *     0    $         #@   &@!   &    \"     D         !0    @   "
+    " X 0   0    $          @   #@!   \"    \"0   '@   \"8    F    ,@    H 0  . $             5F%L=64 0V]D97));F9O $1E<"
+    "V-R:7!T:6]N $1A=&%4>7!E $UI;@!-87@ 1&]C56YI=', 4&%R86UE=&5R %-I;75L:6YK                                \"0    @   "
+    "                                            $                    !     0              !P    $    !          (    !"
+    "     0    ,    !     @    0    !     P    4    !    !     8    !    !0    <    !    !@                         .  "
+    "        X    X    !@    @    &          4    (     0    $    !          D    (            \\#\\.    J ,   8    (  "
+    "  $0         !          $    &    :&%N9&QE   !    $@   %-I;75L:6YK+D-O9&5R26YF;P        X   !8 P  !@    @    !    "
+    "      4    (    !     $    !          X    8 @  !@    @    )          4    (    Z $   $    !          (   #H 0   0"
+    "   !    #P    ( $  \"@!  !P 0  X $  .@!             %-I;75L:6YK $-O9&5R26YF;P!3=&]R86=E0VQA<W, 075T;P!4>7!E475A;&E"
+    "F:65R  !!;&EA<P!!;&EG;FUE;G0 0U-#4&%C:V%G94YA;64 4&%R86UE=&5R3W)3:6=N86P 4&%R86UE=&5R $-U<W1O;5-T;W)A9V5#;&%S<P!$9"
+    "69A=6QT $-U<W1O;4%T=')I8G5T97, 4VEM=6QI;FM#4T, 071T<FEB0VQA<W-?4VEM=6QI;FM?1&5F875L=                             $"
+    "    \"               /    $                                                          !                     0      "
+    "   \"                                          @    #          0    %          8    '          8    (     0       "
+    "  )          $    *          L    ,          T    .     0    $                    .    >     8    (     0         "
+    "%    \"     $    !     0         .    2     8    (    #0         %    \"     4    !     0         &    %        -T"
+    "\"     0    $    !          X    X    !@    @    &          4    (     0    $    !          D    (            \\+\\"
+    ".    2     8    (    #0         %    \"     4    !     0         &    %        -T\"     0    $    \"          X   "
+    " P    !@    @    $          4    (               !         !          #@   #     &    \"     0         !0    @    "
+    "!    !     $         $  $ &%U=&\\.    ,     8    (    !@         %    \"                0         )          X    "
+    "P    !@    @    &          4    (               !          D         #@   #     &    \"     0         !0    @     "
+    "          $         $          .    J     8    (     0         %    \"     (    !     0         .    .     8    ( "
+    "    @         %    \"     $          0         %  0  0    $         #@   #@    &    \"     (         !0    @    ! "
+    "         $         !0 $  $    !          X   \"8    !@    @    )          4    (     0   &@    !          (   !H  "
+    "    %)30     .    6     8    (     @         %    \"     $    !     0         %  0 !P    $    .    34-/4P   &AA;F1"
+    "L90    X         #@         "
+  }
+}

@@ -1,0 +1,574 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - cruise_control_sdo_sf.c</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (rtwannotate) {rtwannotate('cruise_control_sdo_sf_c_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../cruise_control_sdo_sf.c" target="rtwreport_document_frame" id="linkToText_plain">cruise_control_sdo_sf.c</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="2">    2   </a><span class="CT"> * cruise_control_sdo_sf.c</span>
+</span><span><a class="LN" name="3">    3   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="4">    4   </a><span class="CT"> * This file contains a "wrapper style S-Function" for testing the generated</span>
+</span><span><a class="LN" name="5">    5   </a><span class="CT"> * code from Simulink.  Simulink invokes the generated code through its</span>
+</span><span><a class="LN" name="6">    6   </a><span class="CT"> * S-Function API.  Note that this file is not required for deployment</span>
+</span><span><a class="LN" name="7">    7   </a><span class="CT"> * of the generated code outside of Simulink.</span>
+</span><span><a class="LN" name="8">    8   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="9">    9   </a><span class="CT"> * Code generation for model "cruise_control_sdo".</span>
+</span><span><a class="LN" name="10">   10   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="11">   11   </a><span class="CT"> * Model version              : 1.304</span>
+</span><span><a class="LN" name="12">   12   </a><span class="CT"> * Simulink Coder version : 8.3 (R2012b) 20-Jul-2012</span>
+</span><span><a class="LN" name="13">   13   </a><span class="CT"> * C source code generated on : Wed Jan 30 05:09:50 2013</span>
+</span><span><a class="LN" name="14">   14   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="15">   15   </a><span class="CT"> * Target selection: ert.tlc</span>
+</span><span><a class="LN" name="16">   16   </a><span class="CT"> * Embedded hardware selection: NEC-&gt;V850</span>
+</span><span><a class="LN" name="17">   17   </a><span class="CT"> * Code generation objectives:</span>
+</span><span><a class="LN" name="18">   18   </a><span class="CT"> *    1. Execution efficiency</span>
+</span><span><a class="LN" name="19">   19   </a><span class="CT"> *    2. ROM efficiency</span>
+</span><span><a class="LN" name="20">   20   </a><span class="CT"> *    3. RAM efficiency</span>
+</span><span><a class="LN" name="21">   21   </a><span class="CT"> * Validation result: Not run</span>
+</span><span><a class="LN" name="22">   22   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="23">   23   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="24">   24   </a>
+</span><span><a class="LN" name="25">   25   </a><font color="#992211">#</font><span class="PP">if</span> !<span class="PP">defined</span>(S_FUNCTION_NAME)
+</span><span><a class="LN" name="26">   26   </a><font color="#992211">#</font><span class="PP">define</span> S_FUNCTION_NAME                cruise_control_sdo_sf
+</span><span><a class="LN" name="27">   27   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="28">   28   </a>
+</span><span><a class="LN" name="29">   29   </a><font color="#992211">#</font><span class="PP">define</span> S_FUNCTION_LEVEL               2
+</span><span><a class="LN" name="30">   30   </a>
+</span><span><a class="LN" name="31">   31   </a><span class="CT">/* So mdlEnable and mdlDisable will be defined in the simstruc.h */</span>
+</span><span><a class="LN" name="32">   32   </a><font color="#992211">#</font><span class="PP">if</span> !<span class="PP">defined</span>(RTW_GENERATED_S_FUNCTION)
+</span><span><a class="LN" name="33">   33   </a><font color="#992211">#</font><span class="PP">define</span> RTW_GENERATED_S_FUNCTION
+</span><span><a class="LN" name="34">   34   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="35">   35   </a>
+</span><span><a class="LN" name="36">   36   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&lt;stdio.h&gt;</font>
+</span><span><a class="LN" name="37">   37   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&lt;math.h&gt;</font>
+</span><span><a class="LN" name="38">   38   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;simstruc.h&quot;</font>
+</span><span><a class="LN" name="39">   39   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;fixedpoint.h&quot;</font>
+</span><span><a class="LN" name="40">   40   </a><font color="#992211">#</font><span class="PP">define</span> rt_logging_h
+</span><span><a class="LN" name="41">   41   </a><font color="#992211">#</font><span class="PP">define</span> RTWSfcnInfo                    void *
+</span><span><a class="LN" name="42">   42   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;cruise_control_sdo.h&quot;</font>
+</span><span><a class="LN" name="43">   43   </a>
+</span><span><a class="LN" name="44">   44   </a><span class="DT">static</span> <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int8_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T');" target="rtwreport_document_frame"><font color="#1122aa">int8_T</font></a> <a name="var_cruise_control_sdo_sf_counter">cruise_control_sdo_sf_counter</a> = 0;
+</span><span><a class="LN" name="45">   45   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_cruise_control_sdo_ertSfcnZeroMemory">cruise_control_sdo_ertSfcnZeroMemory</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="46">   46   </a><b>{</b>
+</span><span><a class="LN" name="47">   47   </a>  <span class="CT">/* block I/O */</span>
+</span><span><a class="LN" name="48">   48   </a>
+</span><span><a class="LN" name="49">   49   </a>  <span class="CT">/* custom signals */</span>
+</span><span><a class="LN" name="50">   50   </a>  <a href="cruise_control_sdo_c.html#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a> = 0;
+</span><span><a class="LN" name="51">   51   </a>  <a href="cruise_control_sdo_c.html#var_diff_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_diff_target');" target="rtwreport_document_frame"><font color="#1122aa">diff_target</font></a> = 0;
+</span><span><a class="LN" name="52">   52   </a>  <a href="cruise_control_sdo_c.html#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a> = 0;
+</span><span><a class="LN" name="53">   53   </a>  <a href="cruise_control_sdo_c.html#var_is_ctrl" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_is_ctrl');" target="rtwreport_document_frame"><font color="#1122aa">is_ctrl</font></a> = FALSE;
+</span><span><a class="LN" name="54">   54   </a>
+</span><span><a class="LN" name="55">   55   </a>  <span class="CT">/* states (dwork) */</span>
+</span><span><a class="LN" name="56">   56   </a>  (<span class="DT">void</span>) memset((<span class="DT">void</span> *)&amp;<a href="cruise_control_sdo_c.html#var_cruise_control_sdo_DWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_DWork');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_DWork</font></a>, 0,
+</span><span><a class="LN" name="57">   57   </a>                <span class="KW">sizeof</span>(<a href="cruise_control_sdo_h.html#type_D_Work_cruise_control_sdo" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_D_Work_cruise_control_sdo');" target="rtwreport_document_frame"><font color="#1122aa">D_Work_cruise_control_sdo</font></a>));
+</span><span><a class="LN" name="58">   58   </a>
+</span><span><a class="LN" name="59">   59   </a>  <span class="CT">/* external inputs */</span>
+</span><span><a class="LN" name="60">   60   </a>  <a href="cruise_control_sdo_c.html#var_enable" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_enable');" target="rtwreport_document_frame"><font color="#1122aa">enable</font></a> = FALSE;
+</span><span><a class="LN" name="61">   61   </a>  <a href="cruise_control_sdo_c.html#var_brake_pressure" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_brake_pressure');" target="rtwreport_document_frame"><font color="#1122aa">brake_pressure</font></a> = 0;
+</span><span><a class="LN" name="62">   62   </a>  <a href="cruise_control_sdo_c.html#var_set" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_set');" target="rtwreport_document_frame"><font color="#1122aa">set</font></a> = FALSE;
+</span><span><a class="LN" name="63">   63   </a>  <a href="cruise_control_sdo_c.html#var_inc" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_inc');" target="rtwreport_document_frame"><font color="#1122aa">inc</font></a> = FALSE;
+</span><span><a class="LN" name="64">   64   </a>  <a href="cruise_control_sdo_c.html#var_dec" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_dec');" target="rtwreport_document_frame"><font color="#1122aa">dec</font></a> = FALSE;
+</span><span><a class="LN" name="65">   65   </a>  <a href="cruise_control_sdo_c.html#var_driver_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_driver_throt');" target="rtwreport_document_frame"><font color="#1122aa">driver_throt</font></a> = 0;
+</span><span><a class="LN" name="66">   66   </a>  <a href="cruise_control_sdo_c.html#var_speed" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_speed');" target="rtwreport_document_frame"><font color="#1122aa">speed</font></a> = 0;
+</span><span><a class="LN" name="67">   67   </a><b>}</b>
+</span><span><a class="LN" name="68">   68   </a>
+</span><span><a class="LN" name="69">   69   </a><span class="CT">/* This function checks the attributes of tunable parameters. */</span>
+</span><span><a class="LN" name="70">   70   </a><font color="#992211">#</font><span class="PP">define</span> MDL_CHECK_PARAMETERS
+</span><span><a class="LN" name="71">   71   </a><font color="#992211">#</font><span class="PP">if</span> <span class="PP">defined</span>(MDL_CHECK_PARAMETERS) &amp;&amp; <span class="PP">defined</span>(MATLAB_MEX_FILE)
+</span><span><a class="LN" name="72">   72   </a>
+</span><span><a class="LN" name="73">   73   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlCheckParameters">mdlCheckParameters</a>(SimStruct *S)
+</span><span><a class="LN" name="74">   74   </a><b>{</b>
+</span><span><a class="LN" name="75">   75   </a>  <span class="CT">/* Check attributes of parameter 'throt_max' */</span>
+</span><span><a class="LN" name="76">   76   </a>  <b>{</b>
+</span><span><a class="LN" name="77">   77   </a>    <span class="DT">int</span> dimsArray[2] = <b>{</b> 1, 1 <b>}</b>;
+</span><span><a class="LN" name="78">   78   </a>
+</span><span><a class="LN" name="79">   79   </a>    ssCheckSFcnParamValueAttribs(S, 0, <font color="#1122ff">&quot;throt_max&quot;</font>, DYNAMICALLY_TYPED,
+</span><span><a class="LN" name="80">   80   </a>      2, dimsArray, FALSE);
+</span><span><a class="LN" name="81">   81   </a>  <b>}</b>
+</span><span><a class="LN" name="82">   82   </a>
+</span><span><a class="LN" name="83">   83   </a>  <span class="CT">/* Check attributes of parameter 'throt_min' */</span>
+</span><span><a class="LN" name="84">   84   </a>  <b>{</b>
+</span><span><a class="LN" name="85">   85   </a>    <span class="DT">int</span> dimsArray[2] = <b>{</b> 1, 1 <b>}</b>;
+</span><span><a class="LN" name="86">   86   </a>
+</span><span><a class="LN" name="87">   87   </a>    ssCheckSFcnParamValueAttribs(S, 1, <font color="#1122ff">&quot;throt_min&quot;</font>, DYNAMICALLY_TYPED,
+</span><span><a class="LN" name="88">   88   </a>      2, dimsArray, FALSE);
+</span><span><a class="LN" name="89">   89   </a>  <b>}</b>
+</span><span><a class="LN" name="90">   90   </a>
+</span><span><a class="LN" name="91">   91   </a>  <span class="CT">/* Check attributes of parameter 'vel_dec' */</span>
+</span><span><a class="LN" name="92">   92   </a>  <b>{</b>
+</span><span><a class="LN" name="93">   93   </a>    <span class="DT">int</span> dimsArray[2] = <b>{</b> 1, 1 <b>}</b>;
+</span><span><a class="LN" name="94">   94   </a>
+</span><span><a class="LN" name="95">   95   </a>    ssCheckSFcnParamValueAttribs(S, 2, <font color="#1122ff">&quot;vel_dec&quot;</font>, DYNAMICALLY_TYPED,
+</span><span><a class="LN" name="96">   96   </a>      2, dimsArray, FALSE);
+</span><span><a class="LN" name="97">   97   </a>  <b>}</b>
+</span><span><a class="LN" name="98">   98   </a>
+</span><span><a class="LN" name="99">   99   </a>  <span class="CT">/* Check attributes of parameter 'vel_inc' */</span>
+</span><span><a class="LN" name="100">  100   </a>  <b>{</b>
+</span><span><a class="LN" name="101">  101   </a>    <span class="DT">int</span> dimsArray[2] = <b>{</b> 1, 1 <b>}</b>;
+</span><span><a class="LN" name="102">  102   </a>
+</span><span><a class="LN" name="103">  103   </a>    ssCheckSFcnParamValueAttribs(S, 3, <font color="#1122ff">&quot;vel_inc&quot;</font>, DYNAMICALLY_TYPED,
+</span><span><a class="LN" name="104">  104   </a>      2, dimsArray, FALSE);
+</span><span><a class="LN" name="105">  105   </a>  <b>}</b>
+</span><span><a class="LN" name="106">  106   </a><b>}</b>
+</span><span><a class="LN" name="107">  107   </a>
+</span><span><a class="LN" name="108">  108   </a><font color="#992211">#</font><span class="PP">endif</span>                                 <span class="CT">/* MDL_CHECK_PARAMETERS */</span>
+</span><span><a class="LN" name="109">  109   </a>
+</span><span><a class="LN" name="110">  110   </a><span class="CT">/* Copy parameter values from run-time parameters to global variables. */</span>
+</span><span><a class="LN" name="111">  111   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_updateGlobalVarsFromRunTimeParams">updateGlobalVarsFromRunTimeParams</a>(SimStruct *S)
+</span><span><a class="LN" name="112">  112   </a><b>{</b>
+</span><span><a class="LN" name="113">  113   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int_T');" target="rtwreport_document_frame"><font color="#1122aa">int_T</font></a> i;
+</span><span><a class="LN" name="114">  114   </a>
+</span><span><a class="LN" name="115">  115   </a>  <span class="CT">/* Update parameter 'throt_max' */</span>
+</span><span><a class="LN" name="116">  116   </a>  <a href="cruise_control_sdo_c.html#var_throt_max" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_max');" target="rtwreport_document_frame"><font color="#1122aa">throt_max</font></a> = (((<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *) ssGetRunTimeParamInfo(S,0)-&gt;data)[0]);
+</span><span><a class="LN" name="117">  117   </a>
+</span><span><a class="LN" name="118">  118   </a>  <span class="CT">/* Update parameter 'throt_min' */</span>
+</span><span><a class="LN" name="119">  119   </a>  <a href="cruise_control_sdo_c.html#var_throt_min" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt_min');" target="rtwreport_document_frame"><font color="#1122aa">throt_min</font></a> = (((<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *) ssGetRunTimeParamInfo(S,1)-&gt;data)[0]);
+</span><span><a class="LN" name="120">  120   </a>
+</span><span><a class="LN" name="121">  121   </a>  <span class="CT">/* Update parameter 'vel_dec' */</span>
+</span><span><a class="LN" name="122">  122   </a>  <a href="cruise_control_sdo_c.html#var_vel_dec" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_vel_dec');" target="rtwreport_document_frame"><font color="#1122aa">vel_dec</font></a> = (((<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *) ssGetRunTimeParamInfo(S,2)-&gt;data)[0]);
+</span><span><a class="LN" name="123">  123   </a>
+</span><span><a class="LN" name="124">  124   </a>  <span class="CT">/* Update parameter 'vel_inc' */</span>
+</span><span><a class="LN" name="125">  125   </a>  <a href="cruise_control_sdo_c.html#var_vel_inc" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_vel_inc');" target="rtwreport_document_frame"><font color="#1122aa">vel_inc</font></a> = (((<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *) ssGetRunTimeParamInfo(S,3)-&gt;data)[0]);
+</span><span><a class="LN" name="126">  126   </a><b>}</b>
+</span><span><a class="LN" name="127">  127   </a>
+</span><span><a class="LN" name="128">  128   </a><span class="CT">/* This function updates tunable parameter values during simulation. */</span>
+</span><span><a class="LN" name="129">  129   </a><font color="#992211">#</font><span class="PP">define</span> MDL_PROCESS_PARAMETERS
+</span><span><a class="LN" name="130">  130   </a><font color="#992211">#</font><span class="PP">if</span> <span class="PP">defined</span>(MDL_PROCESS_PARAMETERS) &amp;&amp; <span class="PP">defined</span>(MATLAB_MEX_FILE)
+</span><span><a class="LN" name="131">  131   </a>
+</span><span><a class="LN" name="132">  132   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlProcessParameters">mdlProcessParameters</a>(SimStruct *S)
+</span><span><a class="LN" name="133">  133   </a><b>{</b>
+</span><span><a class="LN" name="134">  134   </a>  ssUpdateAllTunableParamsAsRunTimeParams(S);
+</span><span><a class="LN" name="135">  135   </a>  <a href="#fcn_updateGlobalVarsFromRunTimeParams" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_updateGlobalVarsFromRunTimeParams');" target="rtwreport_document_frame"><font color="#1122aa">updateGlobalVarsFromRunTimeParams</font></a>(S);
+</span><span><a class="LN" name="136">  136   </a><b>}</b>
+</span><span><a class="LN" name="137">  137   </a>
+</span><span><a class="LN" name="138">  138   </a><font color="#992211">#</font><span class="PP">endif</span>                                 <span class="CT">/* MDL_PROCESS_PARAMETERS */</span>
+</span><span><a class="LN" name="139">  139   </a>
+</span><span><a class="LN" name="140">  140   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="141">  141   </a><span class="CT"> * This function registers the input and output signal properties of the</span>
+</span><span><a class="LN" name="142">  142   </a><span class="CT"> * generated ERT code.</span>
+</span><span><a class="LN" name="143">  143   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="144">  144   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlInitializeSizes">mdlInitializeSizes</a>(SimStruct *S)
+</span><span><a class="LN" name="145">  145   </a><b>{</b>
+</span><span><a class="LN" name="146">  146   </a>  <span class="CT">/* Tunable Parameters */</span>
+</span><span><a class="LN" name="147">  147   </a>  ssSetNumSFcnParams(S, 4);
+</span><span><a class="LN" name="148">  148   </a>  ssFxpSetU32BitRegionCompliant(S, 1);
+</span><span><a class="LN" name="149">  149   </a>
+</span><span><a class="LN" name="150">  150   </a>  <span class="CT">/* Number of expected parameters */</span>
+</span><span><a class="LN" name="151">  151   </a>  <span class="KW">if</span> (ssGetNumSFcnParams(S) == ssGetSFcnParamsCount(S)) <b>{</b>
+</span><span><a class="LN" name="152">  152   </a>
+</span><span><a class="LN" name="153">  153   </a><font color="#992211">#</font><span class="PP">if</span> <span class="PP">defined</span>(MDL_CHECK_PARAMETERS)
+</span><span><a class="LN" name="154">  154   </a>
+</span><span><a class="LN" name="155">  155   </a>    <a href="#fcn_mdlCheckParameters" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_mdlCheckParameters');" target="rtwreport_document_frame"><font color="#1122aa">mdlCheckParameters</font></a>(S);
+</span><span><a class="LN" name="156">  156   </a>
+</span><span><a class="LN" name="157">  157   </a><font color="#992211">#</font><span class="PP">endif</span>                                 <span class="CT">/* MDL_CHECK_PARAMETERS */</span>
+</span><span><a class="LN" name="158">  158   </a>
+</span><span><a class="LN" name="159">  159   </a>    <span class="KW">if</span> (ssGetErrorStatus(S) != (NULL)) <b>{</b>
+</span><span><a class="LN" name="160">  160   </a>      <span class="KW">return</span>;
+</span><span><a class="LN" name="161">  161   </a>    <b>}</b>
+</span><span><a class="LN" name="162">  162   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="163">  163   </a>    <span class="KW">return</span>;                            <span class="CT">/* Parameter mismatch will be reported by Simulink */</span>
+</span><span><a class="LN" name="164">  164   </a>  <b>}</b>
+</span><span><a class="LN" name="165">  165   </a>
+</span><span><a class="LN" name="166">  166   </a>  ssSetNumContStates(S, 0);
+</span><span><a class="LN" name="167">  167   </a>  ssSetNumDiscStates(S, 0);
+</span><span><a class="LN" name="168">  168   </a>  ssSetRTWGeneratedSFcn(S, 3);
+</span><span><a class="LN" name="169">  169   </a>
+</span><span><a class="LN" name="170">  170   </a>  <span class="CT">/* Number of input ports */</span>
+</span><span><a class="LN" name="171">  171   </a>  <span class="KW">if</span> (!ssSetNumInputPorts(S, 7))
+</span><span><a class="LN" name="172">  172   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="173">  173   </a>  <span class="KW">if</span> (!ssSetInputPortVectorDimension(S, 0, 1))
+</span><span><a class="LN" name="174">  174   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="175">  175   </a>  <span class="KW">if</span> (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) <b>{</b>
+</span><span><a class="LN" name="176">  176   </a>    ssSetInputPortDataType(S, 0, SS_BOOLEAN);
+</span><span><a class="LN" name="177">  177   </a>  <b>}</b>
+</span><span><a class="LN" name="178">  178   </a>
+</span><span><a class="LN" name="179">  179   </a>  ssSetBusInputAsStruct(S, 0, 1);
+</span><span><a class="LN" name="180">  180   </a>  ssSetInputPortDirectFeedThrough(S, 0, 1);
+</span><span><a class="LN" name="181">  181   </a>  ssSetInputPortSampleTime(S, 0, 0.01);
+</span><span><a class="LN" name="182">  182   </a>  ssSetInputPortOffsetTime(S, 0, 0.0);
+</span><span><a class="LN" name="183">  183   </a>  <span class="KW">if</span> (!ssSetInputPortVectorDimension(S, 1, 1))
+</span><span><a class="LN" name="184">  184   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="185">  185   </a>  <span class="KW">if</span> (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) <b>{</b>
+</span><span><a class="LN" name="186">  186   </a>
+</span><span><a class="LN" name="187">  187   </a><font color="#992211">#</font><span class="PP">if</span> <span class="PP">defined</span> (MATLAB_MEX_FILE)
+</span><span><a class="LN" name="188">  188   </a>
+</span><span><a class="LN" name="189">  189   </a>    <b>{</b>
+</span><span><a class="LN" name="190">  190   </a>      DTypeId dataTypeIdReg =
+</span><span><a class="LN" name="191">  191   </a>        ssRegisterDataTypeFxpFSlopeFixExpBias(
+</span><span><a class="LN" name="192">  192   </a>        S,
+</span><span><a class="LN" name="193">  193   </a>        1,
+</span><span><a class="LN" name="194">  194   </a>        16,
+</span><span><a class="LN" name="195">  195   </a>        1.0,
+</span><span><a class="LN" name="196">  196   </a>        -4,
+</span><span><a class="LN" name="197">  197   </a>        0.0,
+</span><span><a class="LN" name="198">  198   </a>        0                              <span class="CT">/* false means do NOT obey data type override setting for this subsystem */</span>
+</span><span><a class="LN" name="199">  199   </a>        );
+</span><span><a class="LN" name="200">  200   </a>      ssSetInputPortDataType(S, 1, dataTypeIdReg );
+</span><span><a class="LN" name="201">  201   </a>    <b>}</b>
+</span><span><a class="LN" name="202">  202   </a>
+</span><span><a class="LN" name="203">  203   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="204">  204   </a>
+</span><span><a class="LN" name="205">  205   </a>  <b>}</b>
+</span><span><a class="LN" name="206">  206   </a>
+</span><span><a class="LN" name="207">  207   </a>  ssSetBusInputAsStruct(S, 1, 1);
+</span><span><a class="LN" name="208">  208   </a>  ssSetInputPortDirectFeedThrough(S, 1, 1);
+</span><span><a class="LN" name="209">  209   </a>  ssSetInputPortSampleTime(S, 1, 0.01);
+</span><span><a class="LN" name="210">  210   </a>  ssSetInputPortOffsetTime(S, 1, 0.0);
+</span><span><a class="LN" name="211">  211   </a>  <span class="KW">if</span> (!ssSetInputPortVectorDimension(S, 2, 1))
+</span><span><a class="LN" name="212">  212   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="213">  213   </a>  <span class="KW">if</span> (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) <b>{</b>
+</span><span><a class="LN" name="214">  214   </a>    ssSetInputPortDataType(S, 2, SS_BOOLEAN);
+</span><span><a class="LN" name="215">  215   </a>  <b>}</b>
+</span><span><a class="LN" name="216">  216   </a>
+</span><span><a class="LN" name="217">  217   </a>  ssSetBusInputAsStruct(S, 2, 1);
+</span><span><a class="LN" name="218">  218   </a>  ssSetInputPortDirectFeedThrough(S, 2, 1);
+</span><span><a class="LN" name="219">  219   </a>  ssSetInputPortSampleTime(S, 2, 0.01);
+</span><span><a class="LN" name="220">  220   </a>  ssSetInputPortOffsetTime(S, 2, 0.0);
+</span><span><a class="LN" name="221">  221   </a>  <span class="KW">if</span> (!ssSetInputPortVectorDimension(S, 3, 1))
+</span><span><a class="LN" name="222">  222   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="223">  223   </a>  <span class="KW">if</span> (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) <b>{</b>
+</span><span><a class="LN" name="224">  224   </a>    ssSetInputPortDataType(S, 3, SS_BOOLEAN);
+</span><span><a class="LN" name="225">  225   </a>  <b>}</b>
+</span><span><a class="LN" name="226">  226   </a>
+</span><span><a class="LN" name="227">  227   </a>  ssSetBusInputAsStruct(S, 3, 1);
+</span><span><a class="LN" name="228">  228   </a>  ssSetInputPortDirectFeedThrough(S, 3, 1);
+</span><span><a class="LN" name="229">  229   </a>  ssSetInputPortSampleTime(S, 3, 0.01);
+</span><span><a class="LN" name="230">  230   </a>  ssSetInputPortOffsetTime(S, 3, 0.0);
+</span><span><a class="LN" name="231">  231   </a>  <span class="KW">if</span> (!ssSetInputPortVectorDimension(S, 4, 1))
+</span><span><a class="LN" name="232">  232   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="233">  233   </a>  <span class="KW">if</span> (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) <b>{</b>
+</span><span><a class="LN" name="234">  234   </a>    ssSetInputPortDataType(S, 4, SS_BOOLEAN);
+</span><span><a class="LN" name="235">  235   </a>  <b>}</b>
+</span><span><a class="LN" name="236">  236   </a>
+</span><span><a class="LN" name="237">  237   </a>  ssSetBusInputAsStruct(S, 4, 1);
+</span><span><a class="LN" name="238">  238   </a>  ssSetInputPortDirectFeedThrough(S, 4, 1);
+</span><span><a class="LN" name="239">  239   </a>  ssSetInputPortSampleTime(S, 4, 0.01);
+</span><span><a class="LN" name="240">  240   </a>  ssSetInputPortOffsetTime(S, 4, 0.0);
+</span><span><a class="LN" name="241">  241   </a>  <span class="KW">if</span> (!ssSetInputPortVectorDimension(S, 5, 1))
+</span><span><a class="LN" name="242">  242   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="243">  243   </a>  <span class="KW">if</span> (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) <b>{</b>
+</span><span><a class="LN" name="244">  244   </a>
+</span><span><a class="LN" name="245">  245   </a><font color="#992211">#</font><span class="PP">if</span> <span class="PP">defined</span> (MATLAB_MEX_FILE)
+</span><span><a class="LN" name="246">  246   </a>
+</span><span><a class="LN" name="247">  247   </a>    <b>{</b>
+</span><span><a class="LN" name="248">  248   </a>      DTypeId dataTypeIdReg =
+</span><span><a class="LN" name="249">  249   </a>        ssRegisterDataTypeFxpFSlopeFixExpBias(
+</span><span><a class="LN" name="250">  250   </a>        S,
+</span><span><a class="LN" name="251">  251   </a>        1,
+</span><span><a class="LN" name="252">  252   </a>        16,
+</span><span><a class="LN" name="253">  253   </a>        1.0,
+</span><span><a class="LN" name="254">  254   </a>        -4,
+</span><span><a class="LN" name="255">  255   </a>        0.0,
+</span><span><a class="LN" name="256">  256   </a>        0                              <span class="CT">/* false means do NOT obey data type override setting for this subsystem */</span>
+</span><span><a class="LN" name="257">  257   </a>        );
+</span><span><a class="LN" name="258">  258   </a>      ssSetInputPortDataType(S, 5, dataTypeIdReg );
+</span><span><a class="LN" name="259">  259   </a>    <b>}</b>
+</span><span><a class="LN" name="260">  260   </a>
+</span><span><a class="LN" name="261">  261   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="262">  262   </a>
+</span><span><a class="LN" name="263">  263   </a>  <b>}</b>
+</span><span><a class="LN" name="264">  264   </a>
+</span><span><a class="LN" name="265">  265   </a>  ssSetBusInputAsStruct(S, 5, 1);
+</span><span><a class="LN" name="266">  266   </a>  ssSetInputPortDirectFeedThrough(S, 5, 1);
+</span><span><a class="LN" name="267">  267   </a>  ssSetInputPortSampleTime(S, 5, 0.01);
+</span><span><a class="LN" name="268">  268   </a>  ssSetInputPortOffsetTime(S, 5, 0.0);
+</span><span><a class="LN" name="269">  269   </a>  <span class="KW">if</span> (!ssSetInputPortVectorDimension(S, 6, 1))
+</span><span><a class="LN" name="270">  270   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="271">  271   </a>  <span class="KW">if</span> (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) <b>{</b>
+</span><span><a class="LN" name="272">  272   </a>
+</span><span><a class="LN" name="273">  273   </a><font color="#992211">#</font><span class="PP">if</span> <span class="PP">defined</span> (MATLAB_MEX_FILE)
+</span><span><a class="LN" name="274">  274   </a>
+</span><span><a class="LN" name="275">  275   </a>    <b>{</b>
+</span><span><a class="LN" name="276">  276   </a>      DTypeId dataTypeIdReg =
+</span><span><a class="LN" name="277">  277   </a>        ssRegisterDataTypeFxpFSlopeFixExpBias(
+</span><span><a class="LN" name="278">  278   </a>        S,
+</span><span><a class="LN" name="279">  279   </a>        1,
+</span><span><a class="LN" name="280">  280   </a>        16,
+</span><span><a class="LN" name="281">  281   </a>        1.0,
+</span><span><a class="LN" name="282">  282   </a>        -4,
+</span><span><a class="LN" name="283">  283   </a>        0.0,
+</span><span><a class="LN" name="284">  284   </a>        0                              <span class="CT">/* false means do NOT obey data type override setting for this subsystem */</span>
+</span><span><a class="LN" name="285">  285   </a>        );
+</span><span><a class="LN" name="286">  286   </a>      ssSetInputPortDataType(S, 6, dataTypeIdReg );
+</span><span><a class="LN" name="287">  287   </a>    <b>}</b>
+</span><span><a class="LN" name="288">  288   </a>
+</span><span><a class="LN" name="289">  289   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="290">  290   </a>
+</span><span><a class="LN" name="291">  291   </a>  <b>}</b>
+</span><span><a class="LN" name="292">  292   </a>
+</span><span><a class="LN" name="293">  293   </a>  ssSetBusInputAsStruct(S, 6, 1);
+</span><span><a class="LN" name="294">  294   </a>  ssSetInputPortDirectFeedThrough(S, 6, 1);
+</span><span><a class="LN" name="295">  295   </a>  ssSetInputPortSampleTime(S, 6, 0.01);
+</span><span><a class="LN" name="296">  296   </a>  ssSetInputPortOffsetTime(S, 6, 0.0);
+</span><span><a class="LN" name="297">  297   </a>
+</span><span><a class="LN" name="298">  298   </a>  <span class="CT">/* Number of output ports */</span>
+</span><span><a class="LN" name="299">  299   </a>  <span class="KW">if</span> (!ssSetNumOutputPorts(S, 2))
+</span><span><a class="LN" name="300">  300   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="301">  301   </a>  <span class="KW">if</span> (!ssSetOutputPortMatrixDimensions(S, 0, 1, 1))
+</span><span><a class="LN" name="302">  302   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="303">  303   </a>  <span class="KW">if</span> (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) <b>{</b>
+</span><span><a class="LN" name="304">  304   </a>
+</span><span><a class="LN" name="305">  305   </a><font color="#992211">#</font><span class="PP">if</span> <span class="PP">defined</span> (MATLAB_MEX_FILE)
+</span><span><a class="LN" name="306">  306   </a>
+</span><span><a class="LN" name="307">  307   </a>    <b>{</b>
+</span><span><a class="LN" name="308">  308   </a>      DTypeId dataTypeIdReg =
+</span><span><a class="LN" name="309">  309   </a>        ssRegisterDataTypeFxpFSlopeFixExpBias(
+</span><span><a class="LN" name="310">  310   </a>        S,
+</span><span><a class="LN" name="311">  311   </a>        1,
+</span><span><a class="LN" name="312">  312   </a>        16,
+</span><span><a class="LN" name="313">  313   </a>        1.0,
+</span><span><a class="LN" name="314">  314   </a>        -4,
+</span><span><a class="LN" name="315">  315   </a>        0.0,
+</span><span><a class="LN" name="316">  316   </a>        0                              <span class="CT">/* false means do NOT obey data type override setting for this subsystem */</span>
+</span><span><a class="LN" name="317">  317   </a>        );
+</span><span><a class="LN" name="318">  318   </a>      ssSetOutputPortDataType(S, 0, dataTypeIdReg );
+</span><span><a class="LN" name="319">  319   </a>    <b>}</b>
+</span><span><a class="LN" name="320">  320   </a>
+</span><span><a class="LN" name="321">  321   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="322">  322   </a>
+</span><span><a class="LN" name="323">  323   </a>  <b>}</b>
+</span><span><a class="LN" name="324">  324   </a>
+</span><span><a class="LN" name="325">  325   </a>  ssSetOutputPortSampleTime(S, 0, 0.01);
+</span><span><a class="LN" name="326">  326   </a>  ssSetOutputPortOffsetTime(S, 0, 0.0);
+</span><span><a class="LN" name="327">  327   </a>  <span class="KW">if</span> (!ssSetOutputPortMatrixDimensions(S, 1, 1, 1))
+</span><span><a class="LN" name="328">  328   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="329">  329   </a>  <span class="KW">if</span> (ssGetSimMode(S) != SS_SIMMODE_SIZES_CALL_ONLY) <b>{</b>
+</span><span><a class="LN" name="330">  330   </a>
+</span><span><a class="LN" name="331">  331   </a><font color="#992211">#</font><span class="PP">if</span> <span class="PP">defined</span> (MATLAB_MEX_FILE)
+</span><span><a class="LN" name="332">  332   </a>
+</span><span><a class="LN" name="333">  333   </a>    <b>{</b>
+</span><span><a class="LN" name="334">  334   </a>      DTypeId dataTypeIdReg =
+</span><span><a class="LN" name="335">  335   </a>        ssRegisterDataTypeFxpFSlopeFixExpBias(
+</span><span><a class="LN" name="336">  336   </a>        S,
+</span><span><a class="LN" name="337">  337   </a>        1,
+</span><span><a class="LN" name="338">  338   </a>        16,
+</span><span><a class="LN" name="339">  339   </a>        1.0,
+</span><span><a class="LN" name="340">  340   </a>        -4,
+</span><span><a class="LN" name="341">  341   </a>        0.0,
+</span><span><a class="LN" name="342">  342   </a>        0                              <span class="CT">/* false means do NOT obey data type override setting for this subsystem */</span>
+</span><span><a class="LN" name="343">  343   </a>        );
+</span><span><a class="LN" name="344">  344   </a>      ssSetOutputPortDataType(S, 1, dataTypeIdReg );
+</span><span><a class="LN" name="345">  345   </a>    <b>}</b>
+</span><span><a class="LN" name="346">  346   </a>
+</span><span><a class="LN" name="347">  347   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="348">  348   </a>
+</span><span><a class="LN" name="349">  349   </a>  <b>}</b>
+</span><span><a class="LN" name="350">  350   </a>
+</span><span><a class="LN" name="351">  351   </a>  ssSetOutputPortSampleTime(S, 1, 0.01);
+</span><span><a class="LN" name="352">  352   </a>  ssSetOutputPortOffsetTime(S, 1, 0.0);
+</span><span><a class="LN" name="353">  353   </a>
+</span><span><a class="LN" name="354">  354   </a>  <span class="CT">/* Number of sample-times */</span>
+</span><span><a class="LN" name="355">  355   </a>  ssSetNumSampleTimes(S, 1);
+</span><span><a class="LN" name="356">  356   </a>  ssSetNumRWork(S, 0);
+</span><span><a class="LN" name="357">  357   </a>  ssSetNumIWork(S, 0);
+</span><span><a class="LN" name="358">  358   </a>  ssSetNumPWork(S, 0);
+</span><span><a class="LN" name="359">  359   </a>  ssSetNumModes(S, 0);
+</span><span><a class="LN" name="360">  360   </a>  ssSetNumNonsampledZCs(S, 0);
+</span><span><a class="LN" name="361">  361   </a>
+</span><span><a class="LN" name="362">  362   </a>  <span class="CT">/* ERT S-Function works with model reference normal mode */</span>
+</span><span><a class="LN" name="363">  363   </a>  ssSetModelReferenceNormalModeSupport(S, MDL_START_AND_MDL_PROCESS_PARAMS_OK);
+</span><span><a class="LN" name="364">  364   </a><b>}</b>
+</span><span><a class="LN" name="365">  365   </a>
+</span><span><a class="LN" name="366">  366   </a><span class="CT">/* This function registers the sample times of the generated ERT code. */</span>
+</span><span><a class="LN" name="367">  367   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlInitializeSampleTimes">mdlInitializeSampleTimes</a>(SimStruct *S)
+</span><span><a class="LN" name="368">  368   </a><b>{</b>
+</span><span><a class="LN" name="369">  369   </a>  ssSetSampleTime(S, 0, 0.01);
+</span><span><a class="LN" name="370">  370   </a>  ssSetOffsetTime(S, 0, 0.0);
+</span><span><a class="LN" name="371">  371   </a><b>}</b>
+</span><span><a class="LN" name="372">  372   </a>
+</span><span><a class="LN" name="373">  373   </a><span class="CT">/* This function registers run-time parameters for tunable parameters. */</span>
+</span><span><a class="LN" name="374">  374   </a><font color="#992211">#</font><span class="PP">define</span> MDL_SET_WORK_WIDTHS
+</span><span><a class="LN" name="375">  375   </a><font color="#992211">#</font><span class="PP">if</span> <span class="PP">defined</span>(MDL_SET_WORK_WIDTHS) &amp;&amp; <span class="PP">defined</span>(MATLAB_MEX_FILE)
+</span><span><a class="LN" name="376">  376   </a>
+</span><span><a class="LN" name="377">  377   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlSetWorkWidths">mdlSetWorkWidths</a>(SimStruct *S)
+</span><span><a class="LN" name="378">  378   </a><b>{</b>
+</span><span><a class="LN" name="379">  379   </a>  <span class="CT">/* Set number of run-time parameters */</span>
+</span><span><a class="LN" name="380">  380   </a>  <span class="KW">if</span> (!ssSetNumRunTimeParams(S, 4))
+</span><span><a class="LN" name="381">  381   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="382">  382   </a>
+</span><span><a class="LN" name="383">  383   </a>  <b>{</b>
+</span><span><a class="LN" name="384">  384   </a>    ssRegDlgParamAsRunTimeParam(S, 0, 0, <font color="#1122ff">&quot;P0_throt_max&quot;</font>, SS_INT16);
+</span><span><a class="LN" name="385">  385   </a>    <span class="KW">if</span> (ssGetErrorStatus(S) != (NULL)) <b>{</b>
+</span><span><a class="LN" name="386">  386   </a>      <span class="KW">return</span>;
+</span><span><a class="LN" name="387">  387   </a>    <b>}</b>
+</span><span><a class="LN" name="388">  388   </a>  <b>}</b>
+</span><span><a class="LN" name="389">  389   </a>
+</span><span><a class="LN" name="390">  390   </a>  <b>{</b>
+</span><span><a class="LN" name="391">  391   </a>    ssRegDlgParamAsRunTimeParam(S, 1, 1, <font color="#1122ff">&quot;P1_throt_min&quot;</font>, SS_INT16);
+</span><span><a class="LN" name="392">  392   </a>    <span class="KW">if</span> (ssGetErrorStatus(S) != (NULL)) <b>{</b>
+</span><span><a class="LN" name="393">  393   </a>      <span class="KW">return</span>;
+</span><span><a class="LN" name="394">  394   </a>    <b>}</b>
+</span><span><a class="LN" name="395">  395   </a>  <b>}</b>
+</span><span><a class="LN" name="396">  396   </a>
+</span><span><a class="LN" name="397">  397   </a>  <b>{</b>
+</span><span><a class="LN" name="398">  398   </a>    ssRegDlgParamAsRunTimeParam(S, 2, 2, <font color="#1122ff">&quot;P2_vel_dec&quot;</font>, SS_INT16);
+</span><span><a class="LN" name="399">  399   </a>    <span class="KW">if</span> (ssGetErrorStatus(S) != (NULL)) <b>{</b>
+</span><span><a class="LN" name="400">  400   </a>      <span class="KW">return</span>;
+</span><span><a class="LN" name="401">  401   </a>    <b>}</b>
+</span><span><a class="LN" name="402">  402   </a>  <b>}</b>
+</span><span><a class="LN" name="403">  403   </a>
+</span><span><a class="LN" name="404">  404   </a>  <b>{</b>
+</span><span><a class="LN" name="405">  405   </a>    ssRegDlgParamAsRunTimeParam(S, 3, 3, <font color="#1122ff">&quot;P3_vel_inc&quot;</font>, SS_INT16);
+</span><span><a class="LN" name="406">  406   </a>    <span class="KW">if</span> (ssGetErrorStatus(S) != (NULL)) <b>{</b>
+</span><span><a class="LN" name="407">  407   </a>      <span class="KW">return</span>;
+</span><span><a class="LN" name="408">  408   </a>    <b>}</b>
+</span><span><a class="LN" name="409">  409   </a>  <b>}</b>
+</span><span><a class="LN" name="410">  410   </a>
+</span><span><a class="LN" name="411">  411   </a>  <a href="#fcn_updateGlobalVarsFromRunTimeParams" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_updateGlobalVarsFromRunTimeParams');" target="rtwreport_document_frame"><font color="#1122aa">updateGlobalVarsFromRunTimeParams</font></a>(S);
+</span><span><a class="LN" name="412">  412   </a><b>}</b>
+</span><span><a class="LN" name="413">  413   </a>
+</span><span><a class="LN" name="414">  414   </a><font color="#992211">#</font><span class="PP">endif</span>                                 <span class="CT">/* MDL_SET_WORK_WIDTHS */</span>
+</span><span><a class="LN" name="415">  415   </a>
+</span><span><a class="LN" name="416">  416   </a><span class="DT">static</span> <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> <a name="var_enable_first_entry">enable_first_entry</a>;
+</span><span><a class="LN" name="417">  417   </a>
+</span><span><a class="LN" name="418">  418   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="419">  419   </a><span class="CT"> *   This function does sfunction consistent check, initializes internal memory if neccessary, and</span>
+</span><span><a class="LN" name="420">  420   </a><span class="CT"> *   calls the initialization function of the generated ERT code.</span>
+</span><span><a class="LN" name="421">  421   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="422">  422   </a><font color="#992211">#</font><span class="PP">define</span> MDL_START                                                <span class="CT">/* Change to #undef to remove function */</span>
+</span><span><a class="LN" name="423">  423   </a><font color="#992211">#</font><span class="PP">if</span> <span class="PP">defined</span>(MDL_START)
+</span><span><a class="LN" name="424">  424   </a>
+</span><span><a class="LN" name="425">  425   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlStart">mdlStart</a>(SimStruct *S)
+</span><span><a class="LN" name="426">  426   </a><b>{</b>
+</span><span><a class="LN" name="427">  427   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *OutPort_0 = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *)ssGetOutputPortSignal(S, 0);
+</span><span><a class="LN" name="428">  428   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *OutPort_1 = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *)ssGetOutputPortSignal(S, 1);
+</span><span><a class="LN" name="429">  429   </a>
+</span><span><a class="LN" name="430">  430   </a>  <span class="CT">/* check if more than one instance of this S-Function has been used */</span>
+</span><span><a class="LN" name="431">  431   </a>  <span class="KW">if</span> (++<a href="#var_cruise_control_sdo_sf_counter" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_sf_counter');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_sf_counter</font></a> &gt; 1) <b>{</b>
+</span><span><a class="LN" name="432">  432   </a>    ssSetErrorStatus(S,<font color="#1122ff">&quot;This S-Function is limited to one copy per model.&quot;</font>);
+</span><span><a class="LN" name="433">  433   </a>    <a href="#var_cruise_control_sdo_sf_counter" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_sf_counter');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_sf_counter</font></a> = 0;
+</span><span><a class="LN" name="434">  434   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="435">  435   </a>  <b>}</b>
+</span><span><a class="LN" name="436">  436   </a>
+</span><span><a class="LN" name="437">  437   </a>  <span class="CT">/* check if parent model's start time is the same as that used to generate code */</span>
+</span><span><a class="LN" name="438">  438   </a>  <span class="KW">if</span> (ssGetTStart(S) != 0.0) <b>{</b>
+</span><span><a class="LN" name="439">  439   </a>    ssSetErrorStatus(S,
+</span><span><a class="LN" name="440">  440   </a>                     <font color="#1122ff">&quot;The parent model of this S-Function must set the value of the 'Start time' on the Solver page of its Configuration Parameters Dialog to 0.0 since that was the value used when generating code for the S-Function's original model.&quot;</font>);
+</span><span><a class="LN" name="441">  441   </a>    <span class="KW">return</span>;
+</span><span><a class="LN" name="442">  442   </a>  <b>}</b>
+</span><span><a class="LN" name="443">  443   </a>
+</span><span><a class="LN" name="444">  444   </a>  <a href="#var_enable_first_entry" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_enable_first_entry');" target="rtwreport_document_frame"><font color="#1122aa">enable_first_entry</font></a> = TRUE;
+</span><span><a class="LN" name="445">  445   </a>
+</span><span><a class="LN" name="446">  446   </a><font color="#992211">#</font><span class="PP">ifdef</span> PIL_S_FUNCTION
+</span><span><a class="LN" name="447">  447   </a>
+</span><span><a class="LN" name="448">  448   </a>  pilMarshallInitSFcnSimStruct(S);
+</span><span><a class="LN" name="449">  449   </a>  pilMarshallInitRootSimStruct(ssGetRootSS(S));
+</span><span><a class="LN" name="450">  450   </a>
+</span><span><a class="LN" name="451">  451   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="452">  452   </a>
+</span><span><a class="LN" name="453">  453   </a>  <a href="#fcn_cruise_control_sdo_ertSfcnZeroMemory" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_cruise_control_sdo_ertSfcnZeroMemory');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_ertSfcnZeroMemory</font></a>();
+</span><span><a class="LN" name="454">  454   </a>  <a href="cruise_control_sdo_c.html#fcn_cruise_control_sdo_initialize" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_cruise_control_sdo_initialize');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_initialize</font></a>();
+</span><span><a class="LN" name="455">  455   </a>  OutPort_0[0] = <a href="cruise_control_sdo_c.html#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a>;
+</span><span><a class="LN" name="456">  456   </a>  OutPort_1[0] = <a href="cruise_control_sdo_c.html#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a>;
+</span><span><a class="LN" name="457">  457   </a><b>}</b>
+</span><span><a class="LN" name="458">  458   </a>
+</span><span><a class="LN" name="459">  459   </a><font color="#992211">#</font><span class="PP">endif</span>                                 <span class="CT">/*  MDL_START */</span>
+</span><span><a class="LN" name="460">  460   </a>
+</span><span><a class="LN" name="461">  461   </a><font color="#992211">#</font><span class="PP">define</span> MDL_INITIALIZE_CONDITIONS
+</span><span><a class="LN" name="462">  462   </a>
+</span><span><a class="LN" name="463">  463   </a><span class="CT">/*   Nothing runs in this function */</span>
+</span><span><a class="LN" name="464">  464   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlInitializeConditions">mdlInitializeConditions</a>(SimStruct *S)
+</span><span><a class="LN" name="465">  465   </a><b>{</b>
+</span><span><a class="LN" name="466">  466   </a><b>}</b>
+</span><span><a class="LN" name="467">  467   </a>
+</span><span><a class="LN" name="468">  468   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="469">  469   </a><span class="CT"> * This function calls the step function of the generated ERT code</span>
+</span><span><a class="LN" name="470">  470   </a><span class="CT"> * and provides an interface with the simulation data.</span>
+</span><span><a class="LN" name="471">  471   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="472">  472   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlOutputs">mdlOutputs</a>(SimStruct *S, <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int_T');" target="rtwreport_document_frame"><font color="#1122aa">int_T</font></a> tid)
+</span><span><a class="LN" name="473">  473   </a><b>{</b>
+</span><span><a class="LN" name="474">  474   </a>  InputBooleanPtrsType InPort_0 = (InputBooleanPtrsType)
+</span><span><a class="LN" name="475">  475   </a>    ssGetInputPortSignalPtrs(S, 0);
+</span><span><a class="LN" name="476">  476   </a>  InputInt16PtrsType InPort_1 = (InputInt16PtrsType) ssGetInputPortSignalPtrs(S,
+</span><span><a class="LN" name="477">  477   </a>    1);
+</span><span><a class="LN" name="478">  478   </a>  InputBooleanPtrsType InPort_2 = (InputBooleanPtrsType)
+</span><span><a class="LN" name="479">  479   </a>    ssGetInputPortSignalPtrs(S, 2);
+</span><span><a class="LN" name="480">  480   </a>  InputBooleanPtrsType InPort_3 = (InputBooleanPtrsType)
+</span><span><a class="LN" name="481">  481   </a>    ssGetInputPortSignalPtrs(S, 3);
+</span><span><a class="LN" name="482">  482   </a>  InputBooleanPtrsType InPort_4 = (InputBooleanPtrsType)
+</span><span><a class="LN" name="483">  483   </a>    ssGetInputPortSignalPtrs(S, 4);
+</span><span><a class="LN" name="484">  484   </a>  InputInt16PtrsType InPort_5 = (InputInt16PtrsType) ssGetInputPortSignalPtrs(S,
+</span><span><a class="LN" name="485">  485   </a>    5);
+</span><span><a class="LN" name="486">  486   </a>  InputInt16PtrsType InPort_6 = (InputInt16PtrsType) ssGetInputPortSignalPtrs(S,
+</span><span><a class="LN" name="487">  487   </a>    6);
+</span><span><a class="LN" name="488">  488   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *OutPort_0 = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *)ssGetOutputPortSignal(S, 0);
+</span><span><a class="LN" name="489">  489   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *OutPort_1 = (<a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_int16_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T');" target="rtwreport_document_frame"><font color="#1122aa">int16_T</font></a> *)ssGetOutputPortSignal(S, 1);
+</span><span><a class="LN" name="490">  490   </a>  <a href="cruise_control_sdo_c.html#var_enable" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_enable');" target="rtwreport_document_frame"><font color="#1122aa">enable</font></a> = InPort_0[0][0];
+</span><span><a class="LN" name="491">  491   </a>  <a href="cruise_control_sdo_c.html#var_brake_pressure" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_brake_pressure');" target="rtwreport_document_frame"><font color="#1122aa">brake_pressure</font></a> = InPort_1[0][0];
+</span><span><a class="LN" name="492">  492   </a>  <a href="cruise_control_sdo_c.html#var_set" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_set');" target="rtwreport_document_frame"><font color="#1122aa">set</font></a> = InPort_2[0][0];
+</span><span><a class="LN" name="493">  493   </a>  <a href="cruise_control_sdo_c.html#var_inc" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_inc');" target="rtwreport_document_frame"><font color="#1122aa">inc</font></a> = InPort_3[0][0];
+</span><span><a class="LN" name="494">  494   </a>  <a href="cruise_control_sdo_c.html#var_dec" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_dec');" target="rtwreport_document_frame"><font color="#1122aa">dec</font></a> = InPort_4[0][0];
+</span><span><a class="LN" name="495">  495   </a>  <a href="cruise_control_sdo_c.html#var_driver_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_driver_throt');" target="rtwreport_document_frame"><font color="#1122aa">driver_throt</font></a> = InPort_5[0][0];
+</span><span><a class="LN" name="496">  496   </a>  <a href="cruise_control_sdo_c.html#var_speed" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_speed');" target="rtwreport_document_frame"><font color="#1122aa">speed</font></a> = InPort_6[0][0];
+</span><span><a class="LN" name="497">  497   </a>  <a href="cruise_control_sdo_c.html#fcn_cruise_control_sdo_step" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_cruise_control_sdo_step');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_step</font></a>();
+</span><span><a class="LN" name="498">  498   </a>  OutPort_0[0] = <a href="cruise_control_sdo_c.html#var_throt" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_throt');" target="rtwreport_document_frame"><font color="#1122aa">throt</font></a>;
+</span><span><a class="LN" name="499">  499   </a>  OutPort_1[0] = <a href="cruise_control_sdo_c.html#var_target" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_target');" target="rtwreport_document_frame"><font color="#1122aa">target</font></a>;
+</span><span><a class="LN" name="500">  500   </a><b>}</b>
+</span><span><a class="LN" name="501">  501   </a>
+</span><span><a class="LN" name="502">  502   </a><span class="CT">/* This function calls the termination function of the generated ERT code. */</span>
+</span><span><a class="LN" name="503">  503   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlTerminate">mdlTerminate</a>(SimStruct *S)
+</span><span><a class="LN" name="504">  504   </a><b>{</b>
+</span><span><a class="LN" name="505">  505   </a>  <a href="#var_cruise_control_sdo_sf_counter" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_cruise_control_sdo_sf_counter');" target="rtwreport_document_frame"><font color="#1122aa">cruise_control_sdo_sf_counter</font></a> = 0;
+</span><span><a class="LN" name="506">  506   </a><b>}</b>
+</span><span><a class="LN" name="507">  507   </a>
+</span><span><a class="LN" name="508">  508   </a><font color="#992211">#</font><span class="PP">define</span> MDL_ENABLE
+</span><span><a class="LN" name="509">  509   </a>
+</span><span><a class="LN" name="510">  510   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlEnable">mdlEnable</a>(SimStruct *S)
+</span><span><a class="LN" name="511">  511   </a><b>{</b>
+</span><span><a class="LN" name="512">  512   </a>  <span class="KW">if</span> (!<a href="#var_enable_first_entry" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_enable_first_entry');" target="rtwreport_document_frame"><font color="#1122aa">enable_first_entry</font></a>) <b>{</b>
+</span><span><a class="LN" name="513">  513   </a>    <span class="DT">static</span> <span class="DT">char</span> msg[256];
+</span><span><a class="LN" name="514">  514   </a>    <span class="KW">if</span> (strlen(ssGetPath(S)) &lt; 128) <b>{</b>
+</span><span><a class="LN" name="515">  515   </a>      sprintf(msg,
+</span><span><a class="LN" name="516">  516   </a>              <font color="#1122ff">&quot;The model is attempting to invoke the enable method of the S-Function block %s for model 'cruise_control_sdo', yet the code generated for the model does not include the enable method\n&quot;</font>,
+</span><span><a class="LN" name="517">  517   </a>              ssGetPath(S));
+</span><span><a class="LN" name="518">  518   </a>    <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="519">  519   </a>      sprintf(msg,
+</span><span><a class="LN" name="520">  520   </a>              <font color="#1122ff">&quot;The model is attempting to invoke the enable method of the S-Function block for model 'cruise_control_sdo', yet the code generated for the model does not include the enable method\n&quot;</font>);
+</span><span><a class="LN" name="521">  521   </a>    <b>}</b>
+</span><span><a class="LN" name="522">  522   </a>
+</span><span><a class="LN" name="523">  523   </a>    ssSetErrorStatus(S, msg);
+</span><span><a class="LN" name="524">  524   </a>  <b>}</b>
+</span><span><a class="LN" name="525">  525   </a>
+</span><span><a class="LN" name="526">  526   </a>  <a href="#var_enable_first_entry" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_enable_first_entry');" target="rtwreport_document_frame"><font color="#1122aa">enable_first_entry</font></a> = FALSE;
+</span><span><a class="LN" name="527">  527   </a><b>}</b>
+</span><span><a class="LN" name="528">  528   </a>
+</span><span><a class="LN" name="529">  529   </a><font color="#992211">#</font><span class="PP">define</span> MDL_DISABLE
+</span><span><a class="LN" name="530">  530   </a>
+</span><span><a class="LN" name="531">  531   </a><span class="DT">static</span> <span class="DT">void</span> <a name="fcn_mdlDisable">mdlDisable</a>(SimStruct *S)
+</span><span><a class="LN" name="532">  532   </a><b>{</b>
+</span><span><a class="LN" name="533">  533   </a>  <span class="DT">static</span> <span class="DT">char</span> msg[256];
+</span><span><a class="LN" name="534">  534   </a>  <span class="KW">if</span> (strlen(ssGetPath(S)) &lt; 128) <b>{</b>
+</span><span><a class="LN" name="535">  535   </a>    sprintf(msg,
+</span><span><a class="LN" name="536">  536   </a>            <font color="#1122ff">&quot;The model is attempting to invoke the disable mothod of the S-Function block %s for model 'cruise_control_sdo', yet the code generated for the model does not include the disable method\n&quot;</font>,
+</span><span><a class="LN" name="537">  537   </a>            ssGetPath(S));
+</span><span><a class="LN" name="538">  538   </a>  <b>}</b> <span class="KW">else</span> <b>{</b>
+</span><span><a class="LN" name="539">  539   </a>    sprintf(msg,
+</span><span><a class="LN" name="540">  540   </a>            <font color="#1122ff">&quot;The model is attempting to invoke the disable mothod of the S-Function block for model 'cruise_control_sdo', yet the code generated for the model does not include the disable method\n&quot;</font>);
+</span><span><a class="LN" name="541">  541   </a>  <b>}</b>
+</span><span><a class="LN" name="542">  542   </a>
+</span><span><a class="LN" name="543">  543   </a>  ssSetErrorStatus(S, msg);
+</span><span><a class="LN" name="544">  544   </a><b>}</b>
+</span><span><a class="LN" name="545">  545   </a>
+</span><span><a class="LN" name="546">  546   </a><font color="#992211">#</font><span class="PP">ifdef</span> MATLAB_MEX_FILE                 <span class="CT">/* Is this file being compiled as a MEX-file? */</span>
+</span><span><a class="LN" name="547">  547   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;simulink.c&quot;</font>                  <span class="CT">/* MEX-file interface mechanism */</span>
+</span><span><a class="LN" name="548">  548   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;fixedpoint.c&quot;</font>
+</span><span><a class="LN" name="549">  549   </a><font color="#992211">#</font><span class="PP">else</span>
+</span><span><a class="LN" name="550">  550   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;cg_sfun.h&quot;</font>                   <span class="CT">/* Code generation registration function */</span>
+</span><span><a class="LN" name="551">  551   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="552">  552   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

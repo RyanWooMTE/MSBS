@@ -1,0 +1,29 @@
+
+30-Jan-2013 05:34:36
+Starting property proving for model 'untitled'
+Compiling model... done
+Translating model... done
+'untitled' is compatible with Simulink Design Verifier.
+
+Proving properties...
+
+FALSIFIED
+PropertySpecification/Proof001
+Objective: T
+
+FALSIFIED
+PropertySpecification/Proof002
+Objective: T
+
+
+30-Jan-2013 05:34:39
+Completed normally.
+
+Generating output files:
+
+    Data file:
+    C:\Mathworks\Workspace\Demo\Workshop_SLDV\00_utils\PropertySpecificationUI\sldv_output\untitled\untitled_sldvdata.mat
+
+30-Jan-2013 05:34:39
+Results generation completed.
+

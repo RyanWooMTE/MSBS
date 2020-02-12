@@ -1,0 +1,5906 @@
+Model {
+  Name			  "pwctrl"
+  Version		  7.8
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    7
+    Inport {
+      BusObject		      ""
+      SignalName	      "armature_current"
+      Name		      "armature_current"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "driver_neutral"
+      Name		      "driver_neutral"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "driver_up"
+      Name		      "driver_up"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "driver_down"
+      Name		      "driver_down"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "passenger_neutral"
+      Name		      "passenger_neutral"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "passenger_up"
+      Name		      "passenger_up"
+    }
+    Inport {
+      BusObject		      ""
+      SignalName	      "passenger_down"
+      Name		      "passenger_down"
+    }
+    NumRootOutports	    2
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      SignalName	      "move_up"
+      Name		      "move_up"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      SignalName	      "move_down"
+      Name		      "move_down"
+    }
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.255"
+    NumModelReferences	    0
+    NumTestPointedSignals   2
+    TestPointedSignal {
+      SignalName	      "armature_current"
+      FullBlockPath	      "pwctrl/armature_current"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "move_down"
+      FullBlockPath	      "pwctrl/act_control"
+      PortIndex		      2
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+  }
+  RequirementInfo	  "{'doors' '0000006a' '1' 'false' 'DOORS Surrogate Item' '' } %GIDa_dde32420_d5f5_4b5c_860d_5475e0f"
+  "f803b"
+  SavedCharacterEncoding  "Shift_JIS"
+  PreLoadFcn		  "\n"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  UserBdParams		  "PhysicalModelingChecksum;PhysicalModelingParameterChecksum;PhysicalModelingProducts;reqMgrSettings"
+  PhysicalModelingChecksum "4155469451"
+  PhysicalModelingParameterChecksum "1481913466"
+  PhysicalModelingProducts "SimMechanics"
+  reqMgrSettings	  "100 S'doors','misc'{{S'surrogatepath','savemodel','savesurrogate','updateLinks','doorsLinks2sl','s"
+  "lLinks2Doors','purgeDoors','purgeSimulink','detaillevel','surrogateId','synctime'{{T\"/PowerWindow/pwctrl\",M[1],M[1"
+  "],M[1],M[0],M[1],M[0],M[0],M[1],T\"0000006a\",T\"\"}},S'mode','pathStorage'{{T\"generic\",T\"modelRelative\"}}}}"
+  Created		  "Mon Nov 26 16:45:25 2001"
+  Creator		  "The MathWorks Inc."
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "itoy"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sun Jul 01 16:42:11 2012"
+  RTWModifiedTimeStamp	  263061714
+  ModelVersionFormat	  "1.%<AutoIncrement:255>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  on
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  on
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdatac"
+  CovMetricSettings	  "dcmw"
+  CovHTMLOptions	  " -aTS=1 -bRG=1 -bTC=1 -hTR=0 -nFC=0 -scm=1 -bcm=1 -xEv=0"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeDataPwctrl"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    3
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.11.1"
+      Array {
+	Type			"Handle"
+	Dimension		10
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.11.1"
+	  StartTime		  "0.0"
+	  StopTime		  "10"
+	  AbsTol		  "auto"
+	  FixedStep		  "Ts"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-2"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.11.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "sigsOut"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.11.1"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode on
+	  LifeSpan		  "1"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.11.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "error"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg on
+	  CheckExecutionContextRuntimeOutputMsg	on
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "error"
+	  ParameterPrecisionLossMsg "error"
+	  ParameterTunabilityLossMsg "error"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "warning"
+	  BusObjectLabelMismatch  "error"
+	  RootOutportRequireBusObject "error"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "ErrorWithoutRepair"
+	  NonBusSignalsTreatedAsBus "error"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.11.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "Generic->Unspecified (assume 32-bit Generic)"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Zero"
+	  TargetEndianess	  "LittleEndian"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Generic->MATLAB Host Computer"
+	  TargetUnknown		  off
+	  ProdEqTarget		  off
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.11.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.11.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.11.1"
+	  SystemTargetFile	  "ert.tlc"
+	  GenCodeOnly		  on
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "ert_default_tmf"
+	  Description		  "Real-Time Workshop Embedded Coder"
+	  GenerateReport	  on
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  Array {
+	    Type		    "Struct"
+	    Dimension		    1
+	    MATStruct {
+	      className		      "rtw.pil.Bullseye"
+	      argsAllComponents	      []
+	      Array {
+		Type			"Cell"
+		Dimension		2
+		Cell			"CoverageForTopModel"
+		Cell			"on"
+		PropName		"argsTopModelOnly"
+	      }
+	      excludedModels	      []
+	      includeReferencedModels "off"
+	      includeTopModel	      "on"
+	      enabled		      "off"
+	    }
+	    PropName		    "RTWBuildHooks"
+	  }
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "ert_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport on
+	  LaunchReport		  on
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  GenerateTraceInfo	  on
+	  GenerateTraceReport	  on
+	  GenerateTraceReportSl	  on
+	  GenerateTraceReportSf	  on
+	  GenerateTraceReportEml  on
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport on
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.11.1"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses off
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$F$N$M"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      on
+	      UseSimReservedNames     off
+	    }
+	    Simulink.ERTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.11.1"
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   on
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   on
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    on
+	      SupportAbsoluteTime     off
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      off
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      off
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   off
+	      SupportNonInlinedSFcns  off
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant on
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GenerateErtSFunction    off
+	      CreateSILPILBlock	      "None"
+	      CodeExecutionProfileVariable "executionProfile"
+	      CodeProfilingSaveOptions "SummaryOnly"
+	      GenerateASAP2	      off
+	      ExtMode		      off
+	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"NonHierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RateGroupingCode	      on
+	      RootIOFormat	      "Individual arguments"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "example_file_process.tlc"
+	      CoverageDialogOpen      "off"
+	      EnableDataOwnership     off
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "Auto"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "Auto"
+	      ERTFilePackagingFormat  "Modular"
+	      DataReferenceFile	      "global.h"
+	      GRTInterface	      off
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      off
+	      PreserveExternInFcnDecls on
+	      SuppressUnreachableDefaultCases off
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	      CodeProfilingInstrumentation off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	SSC.SimscapeCC {
+	  $ObjectID		  12
+	  Version		  "1.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "Name"
+	    PropName		    "DisabledProps"
+	  }
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    1
+	    MECH.SimMechanicsCC {
+	      $ObjectID		      13
+	      Version		      "1.11.1"
+	      Name		      "SimMechanics"
+	      WarnOnRedundantConstraints off
+	      WarnOnSingularInitialAssembly off
+	      ShowCutJoints	      off
+	      VisOnUpdateDiagram      on
+	      VisDuringSimulation     off
+	      EnableVisSimulationTime on
+	      VisSampleTime	      "0"
+	      DisableBodyVisControl   off
+	      ShowCG		      on
+	      ShowCS		      on
+	      ShowOnlyPortCS	      off
+	      HighlightModel	      on
+	      FramesToBeSkipped	      "0"
+	      AnimationDelay	      "3"
+	      RecordAVI		      off
+	      CompressAVI	      on
+	      AutoFitVis	      "off"
+	      EnableSelection	      on
+	      LastVizWinPosition      "[-1 -1 -1 -1]"
+	      CamPosition	      "[0 0 0]"
+	      CamTarget		      "[0 0 -1]"
+	      CamUpVector	      "[0 1 0]"
+	      CamHeight		      "-1"
+	      CamViewAngle	      "0"
+	      VisBackgroundColor      "[0.9 0.9 0.95]"
+	      DefaultBodyColor	      "[1 0 0]"
+	      MDLBodyVisualizationType "Convex hull from body CS locations"
+	      OVRRIDBodyVisualizationType "NONE"
+	    }
+	    PropName		    "Components"
+	  }
+	  Name			  "Simscape"
+	  EditingMode		  "Full"
+	  ExplicitSolverDiagnosticOptions "warning"
+	  InputDerivativeDiagnosticOptions "warning"
+	  GlobalZcOffDiagnosticOptions "warning"
+	  SimscapeLogType	  "none"
+	  SimscapeLogName	  "simlog"
+	  SimscapeLogDecimation	  1
+	  SimscapeLogLimitData	  on
+	  SimscapeLogDataHistory  5000
+	}
+	Sldv.ConfigComp {
+	  $ObjectID		  14
+	  Version		  "1.11.1"
+	  Description		  "Design Verifier Custom Configuration Component"
+	  Name			  "Design Verifier"
+	  DVMode		  "TestGeneration"
+	  DVMaxProcessTime	  600
+	  DVDisplayUnsatisfiableObjectives on
+	  DVAutomaticStubbing	  off
+	  DVDesignMinMaxConstraints on
+	  DVOutputDir		  "sldv_output/$ModelName$"
+	  DVMakeOutputFilesUnique on
+	  DVBlockReplacement	  off
+	  DVBlockReplacementRulesList "<FactoryDefaultRules>"
+	  DVBlockReplacementModelFileName "$ModelName$_replacement"
+	  DVParameters		  off
+	  DVParametersConfigFileName "pwctrl_sldvparam.m"
+	  DVModelCoverageObjectives "MCDC"
+	  DVTestConditions	  "UseLocalSettings"
+	  DVTestObjectives	  "UseLocalSettings"
+	  DVMaxTestCaseSteps	  500
+	  DVTestSuiteOptimization "CombinedObjectives (Nonlinear Extended)"
+	  DVAssertions		  "UseLocalSettings"
+	  DVProofAssumptions	  "UseLocalSettings"
+	  DVExtendExistingTests	  off
+	  DVIgnoreExistTestSatisfied off
+	  DVIgnoreCovSatisfied	  off
+	  DVCoverageDataFile	  "C:\\work\\EXPO2010\\demo\\topmodelCov.cvt"
+	  DVDetectIntegerOverflow on
+	  DVDetectDivisionByZero  on
+	  DVDesignMinMaxCheck	  off
+	  DVDetectSFTransConflict on
+	  DVDetectSFStateInconsistency on
+	  DVDetectSFArrayOutOfBounds on
+	  DVDetectEMLArrayOutOfBounds on
+	  DVDetectSLSelectorOutOfBounds	on
+	  DVDetectSLMPSwitchOutOfBounds	on
+	  DVDetectSLInvalidCast	  on
+	  DVDetectSLMergeConflict on
+	  DVDetectSLUninitializedDSR on
+	  DVProvingStrategy	  "Prove"
+	  DVMaxViolationSteps	  20
+	  DVSaveDataFile	  on
+	  DVDataFileName	  "$ModelName$_sldvdata"
+	  DVSaveExpectedOutput	  off
+	  DVRandomizeNoEffectData off
+	  DVSaveHarnessModel	  on
+	  DVHarnessModelFileName  "$ModelName$_harness"
+	  DVModelReferenceHarness off
+	  DVSaveSystemTestHarness off
+	  DVSystemTestFileName	  "$ModelName$_harness"
+	  DVSaveReport		  on
+	  DVReportFileName	  "$ModelName$_report"
+	  DVReportIncludeGraphics off
+	  DVDisplayReport	  on
+	  DVDisplayResultsOnModel on
+	  DVActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Simulation"
+      ExtraOptions	      "-aGenerateTraceInfo=1 -aIgnoreTestpoints=0 "
+      CurrentDlgPage	      "Design Verifier/Parameters"
+      ConfigPrmDlgPosition     [ 403, 44, 1277, 860 ] 
+    }
+    Simulink.ConfigSet {
+      $ObjectID		      15
+      Version		      "1.11.1"
+      Array {
+	Type			"Handle"
+	Dimension		10
+	Simulink.SolverCC {
+	  $ObjectID		  16
+	  Version		  "1.11.1"
+	  StartTime		  "0.0"
+	  StopTime		  "10"
+	  AbsTol		  "auto"
+	  FixedStep		  "Ts"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-2"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  17
+	  Version		  "1.11.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "sigsOut"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  18
+	  Version		  "1.11.1"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  on
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode on
+	  LifeSpan		  "1"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  19
+	  Version		  "1.11.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "error"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg on
+	  CheckExecutionContextRuntimeOutputMsg	on
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "error"
+	  ParameterPrecisionLossMsg "error"
+	  ParameterTunabilityLossMsg "error"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "warning"
+	  BusObjectLabelMismatch  "error"
+	  RootOutportRequireBusObject "error"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "ErrorWithoutRepair"
+	  NonBusSignalsTreatedAsBus "error"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  20
+	  Version		  "1.11.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "LittleEndian"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "Generic->32-bit Real-Time Simulator"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Zero"
+	  TargetEndianess	  "LittleEndian"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Generic->MATLAB Host Computer"
+	  TargetUnknown		  off
+	  ProdEqTarget		  off
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  21
+	  Version		  "1.11.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  22
+	  Version		  "1.11.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  23
+	  Version		  "1.11.1"
+	  SystemTargetFile	  "ert.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "ert_default_tmf"
+	  Description		  "Real-Time Workshop Embedded Coder"
+	  GenerateReport	  on
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  Array {
+	    Type		    "Struct"
+	    Dimension		    1
+	    MATStruct {
+	      className		      "rtw.pil.Bullseye"
+	      argsAllComponents	      []
+	      Array {
+		Type			"Cell"
+		Dimension		2
+		Cell			"CoverageForTopModel"
+		Cell			"on"
+		PropName		"argsTopModelOnly"
+	      }
+	      excludedModels	      []
+	      includeReferencedModels "off"
+	      includeTopModel	      "on"
+	      enabled		      "on"
+	    }
+	    PropName		    "RTWBuildHooks"
+	  }
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "ert_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport on
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  GenerateTraceInfo	  on
+	  GenerateTraceReport	  on
+	  GenerateTraceReportSl	  on
+	  GenerateTraceReportSf	  on
+	  GenerateTraceReportEml  on
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      24
+	      Version		      "1.11.1"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses off
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$F$N$M"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.ERTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      25
+	      Version		      "1.11.1"
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   on
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Use local settings"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   on
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    on
+	      SupportAbsoluteTime     off
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      off
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      off
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   off
+	      SupportNonInlinedSFcns  off
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant on
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GenerateErtSFunction    off
+	      CreateSILPILBlock	      "None"
+	      CodeExecutionProfileVariable "executionProfile"
+	      CodeProfilingSaveOptions "SummaryOnly"
+	      GenerateASAP2	      off
+	      ExtMode		      off
+	      ExtModeTransport	      0
+	      ExtModeStaticAlloc      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTesting	      off
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      InlinedParameterPlacement	"NonHierarchical"
+	      TargetOS		      "BareBoardExample"
+	      MultiInstanceErrorCode  "Error"
+	      RateGroupingCode	      on
+	      RootIOFormat	      "Individual arguments"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      ERTSrcFileBannerTemplate "ert_code_template.cgt"
+	      ERTHdrFileBannerTemplate "ert_code_template.cgt"
+	      ERTDataSrcFileTemplate  "ert_code_template.cgt"
+	      ERTDataHdrFileTemplate  "ert_code_template.cgt"
+	      ERTCustomFileTemplate   "example_file_process.tlc"
+	      CoverageDialogOpen      "on"
+	      EnableDataOwnership     off
+	      SignalDisplayLevel      10
+	      ParamTuneLevel	      10
+	      GlobalDataDefinition    "Auto"
+	      DataDefinitionFile      "global.c"
+	      GlobalDataReference     "Auto"
+	      ERTFilePackagingFormat  "Modular"
+	      DataReferenceFile	      "global.h"
+	      GRTInterface	      off
+	      PreserveExpressionOrder off
+	      PreserveIfCondition     off
+	      ConvertIfToSwitch	      off
+	      PreserveExternInFcnDecls on
+	      SuppressUnreachableDefaultCases off
+	      EnableUserReplacementTypes off
+	      Array {
+		Type			"Struct"
+		Dimension		1
+		MATStruct {
+		  double		  ""
+		  single		  ""
+		  int32			  ""
+		  int16			  ""
+		  int8			  ""
+		  uint32		  ""
+		  uint16		  ""
+		  uint8			  ""
+		  boolean		  ""
+		  int			  ""
+		  uint			  ""
+		  char			  ""
+		}
+		PropName		"ReplacementTypes"
+	      }
+	      MemSecPackage	      "--- None ---"
+	      MemSecDataConstants     "Default"
+	      MemSecDataIO	      "Default"
+	      MemSecDataInternal      "Default"
+	      MemSecDataParameters    "Default"
+	      MemSecFuncInitTerm      "Default"
+	      MemSecFuncExecute	      "Default"
+	      MemSecFuncSharedUtil    "Default"
+	      CodeProfilingInstrumentation off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	SSC.SimscapeCC {
+	  $ObjectID		  26
+	  Version		  "1.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "Name"
+	    PropName		    "DisabledProps"
+	  }
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    1
+	    MECH.SimMechanicsCC {
+	      $ObjectID		      27
+	      Version		      "1.11.1"
+	      Name		      "SimMechanics"
+	      WarnOnRedundantConstraints off
+	      WarnOnSingularInitialAssembly off
+	      ShowCutJoints	      off
+	      VisOnUpdateDiagram      on
+	      VisDuringSimulation     off
+	      EnableVisSimulationTime on
+	      VisSampleTime	      "0"
+	      DisableBodyVisControl   off
+	      ShowCG		      on
+	      ShowCS		      on
+	      ShowOnlyPortCS	      off
+	      HighlightModel	      on
+	      FramesToBeSkipped	      "0"
+	      AnimationDelay	      "3"
+	      RecordAVI		      off
+	      CompressAVI	      on
+	      AutoFitVis	      "off"
+	      EnableSelection	      on
+	      LastVizWinPosition      "[-1 -1 -1 -1]"
+	      CamPosition	      "[0 0 0]"
+	      CamTarget		      "[0 0 -1]"
+	      CamUpVector	      "[0 1 0]"
+	      CamHeight		      "-1"
+	      CamViewAngle	      "0"
+	      VisBackgroundColor      "[0.9 0.9 0.95]"
+	      DefaultBodyColor	      "[1 0 0]"
+	      MDLBodyVisualizationType "Convex hull from body CS locations"
+	      OVRRIDBodyVisualizationType "NONE"
+	    }
+	    PropName		    "Components"
+	  }
+	  Name			  "Simscape"
+	  EditingMode		  "Full"
+	  ExplicitSolverDiagnosticOptions "warning"
+	  InputDerivativeDiagnosticOptions "warning"
+	  GlobalZcOffDiagnosticOptions "warning"
+	  SimscapeLogType	  "none"
+	  SimscapeLogName	  "simlog"
+	  SimscapeLogDecimation	  1
+	  SimscapeLogLimitData	  on
+	  SimscapeLogDataHistory  5000
+	}
+	Sldv.ConfigComp {
+	  $ObjectID		  28
+	  Version		  "1.11.1"
+	  Description		  "Design Verifier Custom Configuration Component"
+	  Name			  "Design Verifier"
+	  DVMode		  "TestGeneration"
+	  DVMaxProcessTime	  600
+	  DVDisplayUnsatisfiableObjectives on
+	  DVAutomaticStubbing	  off
+	  DVDesignMinMaxConstraints on
+	  DVOutputDir		  "sldv_output/$ModelName$"
+	  DVMakeOutputFilesUnique on
+	  DVBlockReplacement	  off
+	  DVBlockReplacementRulesList "<FactoryDefaultRules>"
+	  DVBlockReplacementModelFileName "$ModelName$_replacement"
+	  DVParameters		  off
+	  DVParametersConfigFileName "power_window_sldvparams.m"
+	  DVModelCoverageObjectives "MCDC"
+	  DVTestConditions	  "UseLocalSettings"
+	  DVTestObjectives	  "UseLocalSettings"
+	  DVMaxTestCaseSteps	  500
+	  DVTestSuiteOptimization "LargeModel"
+	  DVAssertions		  "UseLocalSettings"
+	  DVProofAssumptions	  "UseLocalSettings"
+	  DVExtendExistingTests	  off
+	  DVIgnoreExistTestSatisfied on
+	  DVIgnoreCovSatisfied	  off
+	  DVDetectIntegerOverflow on
+	  DVDetectDivisionByZero  on
+	  DVDesignMinMaxCheck	  off
+	  DVDetectSFTransConflict on
+	  DVDetectSFStateInconsistency on
+	  DVDetectSFArrayOutOfBounds on
+	  DVDetectEMLArrayOutOfBounds on
+	  DVDetectSLSelectorOutOfBounds	on
+	  DVDetectSLMPSwitchOutOfBounds	on
+	  DVDetectSLInvalidCast	  on
+	  DVDetectSLMergeConflict on
+	  DVDetectSLUninitializedDSR on
+	  DVProvingStrategy	  "Prove"
+	  DVMaxViolationSteps	  20
+	  DVSaveDataFile	  on
+	  DVDataFileName	  "$ModelName$_sldvdata"
+	  DVSaveExpectedOutput	  off
+	  DVRandomizeNoEffectData off
+	  DVSaveHarnessModel	  on
+	  DVHarnessModelFileName  "$ModelName$_harness"
+	  DVModelReferenceHarness on
+	  DVSaveSystemTestHarness off
+	  DVSystemTestFileName	  "$ModelName$_harness"
+	  DVSaveReport		  on
+	  DVReportFileName	  "$ModelName$_report"
+	  DVReportIncludeGraphics off
+	  DVDisplayReport	  on
+	  DVDisplayResultsOnModel off
+	  DVActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "CodeTraceability"
+      ExtraOptions	      "-aGenerateTraceInfo=1 -aIgnoreTestpoints=0 "
+      CurrentDlgPage	      "Real-Time Workshop/SIL and PIL Verification"
+      ConfigPrmDlgPosition     [ 167, 66, 1142, 707 ] 
+    }
+    Simulink.ConfigSetRef {
+      $ObjectID		      29
+      Version		      "1.11.1"
+      Name		      "ReferenceConfigSet"
+      WSVarName		      "pwctrl_Sim"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "MS UI Gothic"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "MS UI Gothic"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "MS UI Gothic"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Abs
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      IconShape		      "rectangular"
+      AllPortsSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      InputProcessing	      "Inherited"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+      HasFrameUpgradeWarning  on
+    }
+  }
+  System {
+    Name		    "pwctrl"
+    Location		    [162, 78, 1174, 690]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "331"
+    Block {
+      BlockType		      Inport
+      Name		      "armature_current"
+      SID		      "1"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_1' 'true' '電機子電流"
+      "' '' } %GIDa_e1c18c69_aba9_407e_934a_76d29523162c"
+      Position		      [30, 278, 60, 292]
+      FontSize		      12
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "double"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"armature_current"
+	RTWStorageClass		"Auto"
+	DataLogging		on
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "driver_neutral"
+      SID		      "2"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_2' 'true' '運転席ニュ"
+      "ートラル命令' '' ; 'other' 'テスト01.docx' '@Simulink_requirement_item_1' 'true' 'テスト01' '' } %GIDa_63218ceb_"
+      "c29f_4eb9_95a6_9012dd0a3532"
+      Position		      [325, 283, 355, 297]
+      FontSize		      12
+      Port		      "2"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"driver_neutral"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "driver_up"
+      SID		      "3"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_3' 'true' '運転席アッ"
+      "プ命令' '' } %GIDa_0b230fa1_5c49_495f_8d06_8dd23c30b7f9"
+      Position		      [325, 313, 355, 327]
+      FontSize		      12
+      Port		      "3"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"driver_up"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "driver_down"
+      SID		      "4"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_4' 'true' '運転席ダウ"
+      "ン命令' '' } %GIDa_6ce8d57e_d33e_47fb_aa6f_8cf7e75a9f12"
+      Position		      [325, 343, 355, 357]
+      FontSize		      12
+      Port		      "4"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"driver_down"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "passenger_neutral"
+      SID		      "5"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_5' 'true' '助手席ニュ"
+      "ートラル命令' '' } %GIDa_26eb5b41_6f4f_4623_9fef_cd17cf2cf6e8"
+      Position		      [320, 438, 350, 452]
+      FontSize		      12
+      Port		      "5"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"passenger_neutral"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "passenger_up"
+      SID		      "6"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_6' 'true' '助手席アッ"
+      "プ命令' '' } %GIDa_f768338e_5d08_4c2e_8a73_e293dd283a19"
+      Position		      [320, 468, 350, 482]
+      FontSize		      12
+      Port		      "6"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"passenger_up"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "passenger_down"
+      SID		      "7"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_7' 'true' '助手席ダウ"
+      "ン命令' '' } %GIDa_640f9234_8c00_498e_835c_04d6c270f85b"
+      Position		      [320, 498, 350, 512]
+      FontSize		      12
+      Port		      "7"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      PortDimensions	      "1"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+      Interpolate	      off
+      Port {
+	PortNumber		1
+	Name			"passenger_down"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "act_control"
+      SID		      "8"
+      RequirementInfo	      "{}  %GIDa_ef77f4d8_d6ef_4c80_8fd6_c4e6f18a1482"
+      Ports		      [4, 2]
+      Position		      [665, 76, 790, 444]
+      FontSize		      12
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "Chart"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Stateflow diagram"
+      MaskSelfModifiable      on
+      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 's"
+      "fblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+      MaskIconFrame	      off
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		1
+	Name			"move_up"
+	PropagatedSignals	"move_up"
+	ShowPropagatedSignals	"on"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"move_down"
+	PropagatedSignals	"move_down"
+	ShowPropagatedSignals	"on"
+	RTWStorageClass		"Auto"
+	DataLogging		on
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"act_control"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"21"
+	Block {
+	  BlockType		  Inport
+	  Name			  "endstop"
+	  SID			  "8::1"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "obstacle"
+	  SID			  "8::2"
+	  Position		  [20, 136, 40, 154]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "driver"
+	  SID			  "8::3"
+	  Position		  [20, 171, 40, 189]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "passenger"
+	  SID			  "8::4"
+	  Position		  [20, 206, 40, 224]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "8::19"
+	  Ports			  [1, 1]
+	  Position		  [270, 205, 320, 245]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "8::18"
+	  Tag			  "Stateflow S-Function pwctrl 2"
+	  Ports			  [4, 3]
+	  Position		  [180, 102, 230, 203]
+	  FunctionName		  "sf_sfun"
+	  Parameters		  "CountStep"
+	  PortCounts		  "[4 3]"
+	  EnableBusSupport	  on
+	  Port {
+	    PortNumber		    2
+	    Name		    "move_up"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "move_down"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "8::21"
+	  Position		  [460, 216, 480, 234]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "move_up"
+	  SID			  "8::8"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "move_down"
+	  SID			  "8::9"
+	  Position		  [460, 136, 480, 154]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "endstop"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "obstacle"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "driver"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "passenger"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "move_up"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "move_up"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "move_down"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  3
+	  DstBlock		  "move_down"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "detect_obstacle_endstop"
+      SID		      "9"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_75' 'true' 'PW02 障害"
+      "物検知' '' ; 'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_76' 'true' 'PW01-6' '' } %GIDa_"
+      "a872e992_2f76_4f1e_be0d_48f835553ea8"
+      Ports		      [2, 3]
+      Position		      [155, 78, 280, 352]
+      FontSize		      12
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	Name			"endstop"
+	PropagatedSignals	"endstop"
+	ShowPropagatedSignals	"on"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"obstacle"
+	PropagatedSignals	"obstacle"
+	ShowPropagatedSignals	"on"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	PropagatedSignals	"reset"
+	ShowPropagatedSignals	"on"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"detect_obstacle_endstop"
+	Location		[206, 82, 1018, 743]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "move_up"
+	  SID			  "11"
+	  Position		  [40, 33, 70, 47]
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "move_up"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "armature_current"
+	  SID			  "10"
+	  Position		  [40, 113, 70, 127]
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "armature_current"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "detect_endstop"
+	  SID			  "12"
+	  RequirementInfo	  "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_41' 'true' 'PW03-1' '' } %G"
+	  "IDa_aaa80572_f933_4bbe_b37f_c57c83952132"
+	  Ports			  [1, 1]
+	  Position		  [300, 137, 440, 203]
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "detect_endstop"
+	    Location		    [97, 82, 516, 476]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "armature_current"
+	      SID		      "13"
+	      Position		      [90, 43, 120, 57]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant6"
+	      SID		      "14"
+	      Position		      [30, 97, 125, 123]
+	      ShowName		      off
+	      Value		      "EndStopThreshold"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      SampleTime	      "Inf"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "current_limit"
+	      SID		      "15"
+	      Ports		      [2, 1]
+	      Position		      [195, 87, 225, 118]
+	      ShowName		      off
+	      Operator		      ">"
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "passenger_control"
+	      SID		      "16"
+	      Position		      [245, 97, 300, 113]
+	      OutDataTypeStr	      "boolean"
+	      RndMeth		      "Floor"
+	      Port {
+		PortNumber		1
+		Name			"endstop"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "endstop"
+	      SID		      "17"
+	      Position		      [370, 98, 400, 112]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Constant6"
+	      SrcPort		      1
+	      DstBlock		      "current_limit"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "armature_current"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, 45]
+	      DstBlock		      "current_limit"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "current_limit"
+	      SrcPort		      1
+	      DstBlock		      "passenger_control"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "endstop"
+	      Labels		      [0, 0]
+	      SrcBlock		      "passenger_control"
+	      SrcPort		      1
+	      DstBlock		      "endstop"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "detect_obstacle"
+	  SID			  "18"
+	  RequirementInfo	  "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_33' 'true' 'PW02-1' '' } %G"
+	  "IDa_e14b3a63_7ae7_416e_9be9_c6135a02f311"
+	  Ports			  [2, 1]
+	  Position		  [305, 24, 440, 86]
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "obstacle"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "detect_obstacle"
+	    Location		    [250, 220, 1031, 520]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "move_up"
+	      SID		      "19"
+	      Position		      [50, 238, 80, 252]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "armature_current"
+	      SID		      "20"
+	      Position		      [45, 88, 75, 102]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      SID		      "21"
+	      Position		      [15, 142, 125, 168]
+	      ShowName		      off
+	      Value		      "ObstacleThreshold"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "Logical\nOperator"
+	      SID		      "118"
+	      Ports		      [2, 1]
+	      Position		      [365, 142, 395, 173]
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      UnitDelay
+	      Name		      "break\ndependency"
+	      SID		      "23"
+	      Position		      [150, 225, 175, 265]
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "delay_detection"
+	      SID		      "24"
+	      Ports		      [1, 1]
+	      Position		      [210, 216, 300, 274]
+	      ErrorFcn		      "Stateflow.Translate.translate"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      SFBlockType	      "Chart"
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Stateflow diagram"
+	      MaskSelfModifiable      on
+	      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', '"
+	      "sfblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"delay_detection"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	"18"
+		Block {
+		  BlockType		  Inport
+		  Name			  "move_up"
+		  SID			  "24::1"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  "24::16"
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  S-Function
+		  Name			  " SFunction "
+		  SID			  "24::15"
+		  Tag			  "Stateflow S-Function pwctrl 3"
+		  Ports			  [1, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  Parameters		  "CountStep"
+		  PortCounts		  "[1 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "detected"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  "24::18"
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "detected"
+		  SID			  "24::6"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "move_up"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "detected"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "detected"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "object"
+	      SID		      "25"
+	      Ports		      [2, 1]
+	      Position		      [190, 132, 220, 163]
+	      ShowName		      off
+	      Operator		      ">"
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "passenger\ncontrol"
+	      SID		      "26"
+	      Position		      [445, 142, 500, 178]
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      OutDataTypeStr	      "boolean"
+	      RndMeth		      "Floor"
+	      Port {
+		PortNumber		1
+		Name			"obstacle"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "obstacle"
+	      SID		      "27"
+	      Position		      [550, 150, 600, 170]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "object"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "object"
+	      SrcPort		      1
+	      DstBlock		      "Logical\nOperator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "delay_detection"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      DstBlock		      "Logical\nOperator"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "armature_current"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, 45]
+	      DstBlock		      "object"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "move_up"
+	      SrcPort		      1
+	      DstBlock		      "break\ndependency"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Logical\nOperator"
+	      SrcPort		      1
+	      DstBlock		      "passenger\ncontrol"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "break\ndependency"
+	      SrcPort		      1
+	      DstBlock		      "delay_detection"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "obstacle"
+	      Labels		      [0, 0]
+	      SrcBlock		      "passenger\ncontrol"
+	      SrcPort		      1
+	      DstBlock		      "obstacle"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "eather"
+	  SID			  "114"
+	  Ports			  [2, 1]
+	  Position		  [475, 80, 530, 140]
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "reset"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "eather"
+	    Location		    [330, 93, 1452, 803]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "obstacle"
+	      SID		      "115"
+	      Position		      [30, 68, 60, 82]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "endstop"
+	      SID		      "117"
+	      Position		      [40, 128, 70, 142]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "either"
+	      SID		      "28"
+	      Ports		      [2, 1]
+	      Position		      [120, 66, 150, 99]
+	      Operator		      "OR"
+	      Port {
+		PortNumber		1
+		Name			"reset"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "reset"
+	      SID		      "116"
+	      Position		      [240, 78, 270, 92]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "obstacle"
+	      SrcPort		      1
+	      DstBlock		      "either"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "endstop"
+	      SrcPort		      1
+	      Points		      [0, -45]
+	      DstBlock		      "either"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "reset"
+	      Labels		      [0, 0]
+	      SrcBlock		      "either"
+	      SrcPort		      1
+	      DstBlock		      "reset"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "process_current"
+	  SID			  "29"
+	  RequirementInfo	  "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_32' 'true' 'PW02-1' '' ; 'o"
+	  "ther' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_40' 'true' 'PW03-1' '' } %GIDa_54e86e3e_ccc8_4b41"
+	  "_a5c1_edc4e8429aa2"
+	  Ports			  [1, 1]
+	  Position		  [110, 94, 260, 146]
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "processed_current"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "process_current"
+	    Location		    [520, 89, 1040, 227]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "raw_current"
+	      SID		      "30"
+	      Position		      [25, 48, 55, 62]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Abs
+	      Name		      "Abs"
+	      SID		      "31"
+	      Position		      [230, 40, 260, 70]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "processed_current"
+	      SID		      "32"
+	      Position		      [440, 48, 470, 62]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Abs"
+	      SrcPort		      1
+	      DstBlock		      "processed_current"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "raw_current"
+	      SrcPort		      1
+	      DstBlock		      "Abs"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "endstop"
+	  SID			  "35"
+	  Position		  [585, 163, 615, 177]
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "obstacle"
+	  SID			  "34"
+	  Position		  [585, 47, 615, 63]
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "reset"
+	  SID			  "33"
+	  Position		  [625, 103, 655, 117]
+	  FontSize		  12
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Name			  "processed_current"
+	  Labels		  [0, 0]
+	  SrcBlock		  "process_current"
+	  SrcPort		  1
+	  Points		  [0, 0; 15, 0]
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "detect_endstop"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -50]
+	    DstBlock		    "detect_obstacle"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "move_up"
+	  SrcPort		  1
+	  DstBlock		  "detect_obstacle"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "eather"
+	  SrcPort		  1
+	  DstBlock		  "reset"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "detect_endstop"
+	  SrcPort		  1
+	  Points		  [0, 0; 15, 0]
+	  Branch {
+	    Labels		    [0, 0]
+	    DstBlock		    "eather"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "endstop"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "detect_obstacle"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "obstacle"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "eather"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "armature_current"
+	  SrcPort		  1
+	  DstBlock		  "process_current"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "validate_driver"
+      SID		      "130"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_74' 'true' 'PW01-1' "
+      "'' ; 'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_11' 'true' 'PW01-2' '' ; 'other' 'power"
+      "windowspecification.xlsx' '@Simulink_requirement_item_12' 'true' 'PW01-3' '' } %GIDa_50d6339c_d923_4cb4_be9a_59d"
+      "fda00bcf8"
+      Ports		      [4, 1]
+      Position		      [470, 240, 590, 370]
+      FontSize		      12
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"validate_driver"
+	Location		[215, 93, 1027, 737]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "reset"
+	  SID			  "131"
+	  Position		  [20, 158, 50, 172]
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "neutral"
+	  SID			  "132"
+	  Position		  [145, 58, 175, 72]
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "neutral"
+	    PropagatedSignals	    "driver_neutral"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "up"
+	  SID			  "133"
+	  Position		  [140, 128, 170, 142]
+	  FontSize		  12
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "up"
+	    PropagatedSignals	    "driver_up"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "down"
+	  SID			  "134"
+	  Position		  [140, 213, 170, 227]
+	  FontSize		  12
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "down"
+	    PropagatedSignals	    "driver_down"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  SID			  "135"
+	  Ports			  [3, 1]
+	  Position		  [670, 83, 675, 217]
+	  ShowName		  off
+	  FontSize		  12
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "neutral_up_down"
+	    PropagatedSignals	    "validated_neutral, validated_up, validated_down"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "check_down"
+	  SID			  "136"
+	  RequirementInfo	  "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_55' 'true' 'PW02-4' '' ; 'o"
+	  "ther' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_48' 'true' 'PW03-3' '' } %GIDa_8600958e_cd26_4390"
+	  "_bd74_0e0e2b2911b6"
+	  Ports			  [2, 1]
+	  Position		  [210, 204, 320, 266]
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "checked_action"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "check_down"
+	    Location		    [195, 316, 666, 577]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "action"
+	      SID		      "137"
+	      Position		      [75, 33, 105, 47]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "reset"
+	      SID		      "138"
+	      Position		      [75, 88, 105, 102]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "allow_action"
+	      SID		      "139"
+	      Ports		      [2, 1]
+	      Position		      [230, 51, 260, 84]
+	      Port {
+		PortNumber		1
+		Name			"checked_action"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "overrule"
+	      SID		      "140"
+	      Ports		      [1, 1]
+	      Position		      [130, 78, 155, 112]
+	      Operator		      "NOT"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "checked_action"
+	      SID		      "141"
+	      Position		      [410, 63, 440, 77]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "reset"
+	      SrcPort		      1
+	      DstBlock		      "overrule"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "checked_action"
+	      Labels		      [0, 0]
+	      SrcBlock		      "allow_action"
+	      SrcPort		      1
+	      DstBlock		      "checked_action"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "action"
+	      SrcPort		      1
+	      Points		      [75, 0; 0, 20]
+	      DstBlock		      "allow_action"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "overrule"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -20]
+	      DstBlock		      "allow_action"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "check_up"
+	  SID			  "142"
+	  RequirementInfo	  "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_54' 'true' 'PW02-4' '' ; 'o"
+	  "ther' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_47' 'true' 'PW03-3' '' } %GIDa_854a0f09_eb00_4639"
+	  "_b606_a3908bff6a10"
+	  Ports			  [2, 1]
+	  Position		  [210, 119, 320, 181]
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "checked_action"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "check_up"
+	    Location		    [195, 316, 654, 618]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "action"
+	      SID		      "143"
+	      Position		      [75, 33, 105, 47]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "reset"
+	      SID		      "144"
+	      Position		      [75, 88, 105, 102]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "System Requirements"
+	      SID		      "236"
+	      Ports		      []
+	      Position		      [95, 176, 357, 304]
+	      ShowName		      off
+	      LibraryVersion	      "1.19"
+	      CopyFcn		      "rmidispblock('create',gcbh)"
+	      DeleteFcn		      "rmidispblock('delete',gcbh)"
+	      LoadFcn		      "rmidispblock('load',gcbh)"
+	      ModelCloseFcn	      "rmidispblock('close',gcbh)"
+	      PreSaveFcn	      "rmidispblock('close',gcbh)"
+	      PostSaveFcn	      "rmidispblock('open',gcbh)"
+	      OpenFcn		      "rmidispblock('open',gcbh)"
+	      MoveFcn		      "rmidispblock('move',gcbh)"
+	      FontSize		      12
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "System Requirements"
+	      MaskDescription	      "Lists the requirements for the current model."
+	      MaskHelp		      "web(slvnvhelp)"
+	      MaskPromptString	      "ID|Block Title"
+	      MaskStyleString	      "edit,edit"
+	      MaskVariables	      "id=&1;title=&2;"
+	      MaskTunableValueString  "on,off"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "off,on"
+	      MaskToolTipString	      "on,on"
+	      MaskInitialization      "id = 'SystemReq';\n[w,h] = rmidispblock('display',gcbh);"
+	      MaskDisplay	      "text(w/2,h-4,rmidispblock('title',gcbh),'horizontalAlignment','center','verticalAlignment','"
+	      "top')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "pixels"
+	      MaskValueString	      "SystemReq|System Requirements"
+	      System {
+		Name			"System Requirements"
+		Location		[478, 485, 881, 774]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Subsystem"
+		  SID			  "237"
+		  Ports			  []
+		  Position		  [73, 95, 284, 115]
+		  ForegroundColor	  "blue"
+		  ShowName		  off
+		  OpenFcn		  "rmidispblock('openReq',gcbh);"
+		  FontSize		  12
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskPromptString	  "Label|Index"
+		  MaskStyleString	  "edit,edit"
+		  MaskVariables		  "label=&1;index=@2;"
+		  MaskTunableValueString  "off,off"
+		  MaskCallbackString	  "|"
+		  MaskEnableString	  "on,on"
+		  MaskVisibilityString	  "off,off"
+		  MaskToolTipString	  "on,on"
+		  MaskInitialization	  "label = rmidispblock('label',index);"
+		  MaskDisplay		  "text(0,0,label,'horizontalAlignment','left','verticalAlignment','bottom')\n"
+		  MaskIconFrame		  off
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  MaskValueString	  "0|1"
+		  System {
+		    Name		    "Subsystem"
+		    Location		    [640, 172, 806, 262]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "allow_action"
+	      SID		      "145"
+	      Ports		      [2, 1]
+	      Position		      [230, 51, 260, 84]
+	      Port {
+		PortNumber		1
+		Name			"checked_action"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "overrule"
+	      SID		      "146"
+	      Ports		      [1, 1]
+	      Position		      [130, 78, 155, 112]
+	      Operator		      "NOT"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "checked_action"
+	      SID		      "147"
+	      Position		      [405, 63, 435, 77]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "overrule"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -20]
+	      DstBlock		      "allow_action"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "action"
+	      SrcPort		      1
+	      Points		      [75, 0; 0, 20]
+	      DstBlock		      "allow_action"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "checked_action"
+	      Labels		      [0, 0]
+	      SrcBlock		      "allow_action"
+	      SrcPort		      1
+	      DstBlock		      "checked_action"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "reset"
+	      SrcPort		      1
+	      DstBlock		      "overrule"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "mutually_exclusive"
+	  SID			  "148"
+	  RequirementInfo	  "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_26' 'true' 'PW01-2-3' '' ; "
+	  "'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_29' 'true' 'PW01-1-3' '' } %GIDa_ad342d9f_5cab_"
+	  "43fb_a439_1578864a89a4"
+	  Ports			  [3, 3]
+	  Position		  [440, 23, 560, 277]
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "validated_neutral"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    PropagatedSignals	    "validated_up"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    PropagatedSignals	    "validated_down"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "mutually_exclusive"
+	    Location		    [382, 147, 914, 456]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "neutral"
+	      SID		      "149"
+	      Position		      [30, 28, 60, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "up"
+	      SID		      "150"
+	      Position		      [30, 128, 60, 142]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "down"
+	      SID		      "151"
+	      Position		      [25, 198, 55, 212]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      Port {
+		PortNumber		1
+		Name			"validated_down"
+		PropagatedSignals	"checked_action"
+		ShowPropagatedSignals	"on"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "default_neutral"
+	      SID		      "152"
+	      Ports		      [2, 1]
+	      Position		      [370, 36, 400, 69]
+	      ShowName		      off
+	      Operator		      "OR"
+	      Port {
+		PortNumber		1
+		Name			"validated_neutral"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "neutral_after_up"
+	      SID		      "153"
+	      Ports		      [2, 1]
+	      Position		      [285, 26, 315, 59]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "not_down"
+	      SID		      "154"
+	      Ports		      [1, 1]
+	      Position		      [90, 188, 120, 222]
+	      ShowName		      off
+	      Operator		      "NOT"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "not_up"
+	      SID		      "155"
+	      Ports		      [1, 1]
+	      Position		      [225, 73, 255, 107]
+	      ShowName		      off
+	      Operator		      "NOT"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "not_up1"
+	      SID		      "156"
+	      Ports		      [1, 1]
+	      Position		      [285, 193, 315, 227]
+	      ShowName		      off
+	      Operator		      "NOT"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "up_after_down"
+	      SID		      "157"
+	      Ports		      [2, 1]
+	      Position		      [170, 126, 200, 159]
+	      ShowName		      off
+	      Port {
+		PortNumber		1
+		Name			"validated_up"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "up_after_down1"
+	      SID		      "158"
+	      Ports		      [2, 1]
+	      Position		      [215, 191, 245, 224]
+	      ShowName		      off
+	      Operator		      "OR"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "validated_neutral"
+	      SID		      "159"
+	      Position		      [465, 48, 495, 62]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "validated_up"
+	      SID		      "160"
+	      Position		      [420, 138, 450, 152]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "validated_down"
+	      SID		      "161"
+	      Position		      [420, 238, 450, 252]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "not_down"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -55]
+	      DstBlock		      "up_after_down"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "validated_up"
+	      SrcBlock		      "up_after_down"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		Points			[0, -55]
+		DstBlock		"not_up"
+		DstPort			1
+	      }
+	      Branch {
+		Labels			[1, 0]
+		DstBlock		"validated_up"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "not_up"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, -40]
+	      DstBlock		      "neutral_after_up"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "validated_down"
+	      SrcBlock		      "down"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"not_down"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 35]
+		Branch {
+		  Points		  [105, 0; 0, -25]
+		  DstBlock		  "up_after_down1"
+		  DstPort		  2
+		}
+		Branch {
+		  Labels		  [2, 0]
+		  Points		  [0, 5]
+		  DstBlock		  "validated_down"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "neutral"
+	      SrcPort		      1
+	      DstBlock		      "neutral_after_up"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "up"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      Branch {
+		DstBlock		"up_after_down"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[-5, 0; 0, 50; 90, 0]
+		DstBlock		"up_after_down1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "up_after_down1"
+	      SrcPort		      1
+	      DstBlock		      "not_up1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "neutral_after_up"
+	      SrcPort		      1
+	      DstBlock		      "default_neutral"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "validated_neutral"
+	      Labels		      [0, 0]
+	      SrcBlock		      "default_neutral"
+	      SrcPort		      1
+	      DstBlock		      "validated_neutral"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "not_up1"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -150]
+	      DstBlock		      "default_neutral"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "neutral_up_down"
+	  SID			  "162"
+	  Position		  [770, 143, 800, 157]
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Name			  "neutral_up_down"
+	  FontSize		  12
+	  Labels		  [0, 1]
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "neutral_up_down"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "reset"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, 85]
+	    DstBlock		    "check_down"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "check_up"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "check_up"
+	  SrcPort		  1
+	  DstBlock		  "mutually_exclusive"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "neutral"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "neutral"
+	  SrcPort		  1
+	  DstBlock		  "mutually_exclusive"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "up"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "up"
+	  SrcPort		  1
+	  DstBlock		  "check_up"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "down"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "down"
+	  SrcPort		  1
+	  DstBlock		  "check_down"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "mutually_exclusive"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 40]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "mutually_exclusive"
+	  SrcPort		  2
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "mutually_exclusive"
+	  SrcPort		  3
+	  Points		  [20, 0; 0, -40]
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "check_down"
+	  SrcPort		  1
+	  DstBlock		  "mutually_exclusive"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "validate_passenger"
+      SID		      "163"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_13' 'true' 'PW01-4' "
+      "'' ; 'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_14' 'true' 'PW01-5' '' ; 'other' 'power"
+      "windowspecification.xlsx' '@Simulink_requirement_item_15' 'true' 'PW01-6' '' } %GIDa_266d8f5a_6cdb_435d_b6a4_e11"
+      "a48d16765"
+      Ports		      [4, 1]
+      Position		      [470, 395, 590, 525]
+      FontSize		      12
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"validate_passenger"
+	Location		[588, 119, 1710, 829]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "reset"
+	  SID			  "164"
+	  Position		  [40, 158, 70, 172]
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "neutral"
+	  SID			  "165"
+	  Position		  [155, 58, 185, 72]
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "neutral"
+	    PropagatedSignals	    "passenger_neutral"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "up"
+	  SID			  "166"
+	  Position		  [150, 128, 180, 142]
+	  FontSize		  12
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "up"
+	    PropagatedSignals	    "passenger_up"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "down"
+	  SID			  "167"
+	  Position		  [150, 213, 180, 227]
+	  FontSize		  12
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "down"
+	    PropagatedSignals	    "passenger_down"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  SID			  "168"
+	  Ports			  [3, 1]
+	  Position		  [680, 83, 685, 217]
+	  ShowName		  off
+	  FontSize		  12
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "neutral_up_down"
+	    PropagatedSignals	    "validated_neutral, validated_up, validated_down"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "check_down"
+	  SID			  "169"
+	  RequirementInfo	  "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_53' 'true' 'PW02-4' '' ; 'o"
+	  "ther' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_50' 'true' 'PW03-3' '' } %GIDa_be4e89e9_75a8_4fb1"
+	  "_9b06_a19403e0c6cf"
+	  Ports			  [2, 1]
+	  Position		  [220, 204, 330, 266]
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "checked_action"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "check_down"
+	    Location		    [195, 316, 666, 577]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "action"
+	      SID		      "170"
+	      Position		      [75, 33, 105, 47]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "reset"
+	      SID		      "171"
+	      Position		      [75, 88, 105, 102]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "allow_action"
+	      SID		      "172"
+	      Ports		      [2, 1]
+	      Position		      [230, 51, 260, 84]
+	      Port {
+		PortNumber		1
+		Name			"checked_action"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "overrule"
+	      SID		      "173"
+	      Ports		      [1, 1]
+	      Position		      [130, 78, 155, 112]
+	      Operator		      "NOT"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "checked_action"
+	      SID		      "174"
+	      Position		      [410, 63, 440, 77]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "overrule"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -20]
+	      DstBlock		      "allow_action"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "action"
+	      SrcPort		      1
+	      Points		      [75, 0; 0, 20]
+	      DstBlock		      "allow_action"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "checked_action"
+	      Labels		      [0, 0]
+	      SrcBlock		      "allow_action"
+	      SrcPort		      1
+	      DstBlock		      "checked_action"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "reset"
+	      SrcPort		      1
+	      DstBlock		      "overrule"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "check_up"
+	  SID			  "175"
+	  RequirementInfo	  "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_52' 'true' 'PW02-4' '' ; 'o"
+	  "ther' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_49' 'true' 'PW03-3' '' } %GIDa_c1637765_e427_4142"
+	  "_80f6_8167853f7876"
+	  Ports			  [2, 1]
+	  Position		  [220, 119, 330, 181]
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "checked_action"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "check_up"
+	    Location		    [195, 316, 666, 577]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "action"
+	      SID		      "176"
+	      Position		      [75, 33, 105, 47]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "reset"
+	      SID		      "177"
+	      Position		      [75, 88, 105, 102]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "allow_action"
+	      SID		      "178"
+	      Ports		      [2, 1]
+	      Position		      [230, 51, 260, 84]
+	      Port {
+		PortNumber		1
+		Name			"checked_action"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "overrule"
+	      SID		      "179"
+	      Ports		      [1, 1]
+	      Position		      [130, 78, 155, 112]
+	      Operator		      "NOT"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "checked_action"
+	      SID		      "180"
+	      Position		      [405, 63, 435, 77]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "reset"
+	      SrcPort		      1
+	      DstBlock		      "overrule"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "checked_action"
+	      Labels		      [0, 0]
+	      SrcBlock		      "allow_action"
+	      SrcPort		      1
+	      DstBlock		      "checked_action"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "action"
+	      SrcPort		      1
+	      Points		      [75, 0; 0, 20]
+	      DstBlock		      "allow_action"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "overrule"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -20]
+	      DstBlock		      "allow_action"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "mutually_exclusive"
+	  SID			  "181"
+	  RequirementInfo	  "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_28' 'true' 'PW01-5-3' '' ; "
+	  "'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_31' 'true' 'PW01-4-3' '' } %GIDa_ef85c54d_3e64_"
+	  "41b7_8079_161e00ee5cdb"
+	  Ports			  [3, 3]
+	  Position		  [450, 23, 570, 277]
+	  FontSize		  12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "validated_neutral"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    PropagatedSignals	    "validated_up"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    PropagatedSignals	    "validated_down"
+	    ShowPropagatedSignals   "on"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "mutually_exclusive"
+	    Location		    [330, 93, 1452, 803]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "neutral"
+	      SID		      "182"
+	      Position		      [30, 28, 60, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "up"
+	      SID		      "183"
+	      Position		      [30, 128, 60, 142]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "down"
+	      SID		      "184"
+	      Position		      [25, 198, 55, 212]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      Port {
+		PortNumber		1
+		Name			"validated_down"
+		PropagatedSignals	"checked_action"
+		ShowPropagatedSignals	"on"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "default_neutral"
+	      SID		      "185"
+	      Ports		      [2, 1]
+	      Position		      [370, 36, 400, 69]
+	      ShowName		      off
+	      Operator		      "OR"
+	      Port {
+		PortNumber		1
+		Name			"validated_neutral"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "neutral_after_up"
+	      SID		      "186"
+	      Ports		      [2, 1]
+	      Position		      [285, 26, 315, 59]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "not_down"
+	      SID		      "187"
+	      Ports		      [1, 1]
+	      Position		      [90, 188, 120, 222]
+	      ShowName		      off
+	      Operator		      "NOT"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "not_up"
+	      SID		      "188"
+	      Ports		      [1, 1]
+	      Position		      [225, 73, 255, 107]
+	      ShowName		      off
+	      Operator		      "NOT"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "not_up1"
+	      SID		      "189"
+	      Ports		      [1, 1]
+	      Position		      [285, 193, 315, 227]
+	      ShowName		      off
+	      Operator		      "NOT"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "up_after_down"
+	      SID		      "190"
+	      Ports		      [2, 1]
+	      Position		      [170, 126, 200, 159]
+	      ShowName		      off
+	      Port {
+		PortNumber		1
+		Name			"validated_up"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "up_after_down1"
+	      SID		      "191"
+	      Ports		      [2, 1]
+	      Position		      [215, 191, 245, 224]
+	      ShowName		      off
+	      Operator		      "OR"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "validated_neutral"
+	      SID		      "192"
+	      Position		      [465, 48, 495, 62]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "validated_up"
+	      SID		      "193"
+	      Position		      [420, 138, 450, 152]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "validated_down"
+	      SID		      "194"
+	      Position		      [420, 238, 450, 252]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "not_up1"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, -150]
+	      DstBlock		      "default_neutral"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "validated_neutral"
+	      Labels		      [0, 0]
+	      SrcBlock		      "default_neutral"
+	      SrcPort		      1
+	      DstBlock		      "validated_neutral"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "neutral_after_up"
+	      SrcPort		      1
+	      DstBlock		      "default_neutral"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "up_after_down1"
+	      SrcPort		      1
+	      DstBlock		      "not_up1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "up"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      Branch {
+		Points			[-5, 0; 0, 50; 90, 0]
+		DstBlock		"up_after_down1"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"up_after_down"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "neutral"
+	      SrcPort		      1
+	      DstBlock		      "neutral_after_up"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "validated_down"
+	      SrcBlock		      "down"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		Points			[0, 35]
+		Branch {
+		  Labels		  [2, 0]
+		  Points		  [0, 5]
+		  DstBlock		  "validated_down"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [105, 0; 0, -25]
+		  DstBlock		  "up_after_down1"
+		  DstPort		  2
+		}
+	      }
+	      Branch {
+		DstBlock		"not_down"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "not_up"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, -40]
+	      DstBlock		      "neutral_after_up"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "validated_up"
+	      SrcBlock		      "up_after_down"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		Labels			[1, 0]
+		DstBlock		"validated_up"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -55]
+		DstBlock		"not_up"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "not_down"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -55]
+	      DstBlock		      "up_after_down"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "neutral_up_down"
+	  SID			  "195"
+	  Position		  [765, 143, 795, 157]
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "check_down"
+	  SrcPort		  1
+	  DstBlock		  "mutually_exclusive"
+	  DstPort		  3
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "mutually_exclusive"
+	  SrcPort		  3
+	  Points		  [20, 0; 0, -40]
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "mutually_exclusive"
+	  SrcPort		  2
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "mutually_exclusive"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 40]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "down"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "down"
+	  SrcPort		  1
+	  DstBlock		  "check_down"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "up"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "up"
+	  SrcPort		  1
+	  DstBlock		  "check_up"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "neutral"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "neutral"
+	  SrcPort		  1
+	  DstBlock		  "mutually_exclusive"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "check_up"
+	  SrcPort		  1
+	  DstBlock		  "mutually_exclusive"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "reset"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    DstBlock		    "check_up"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 85]
+	    DstBlock		    "check_down"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "neutral_up_down"
+	  FontSize		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "neutral_up_down"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "move_up"
+      SID		      "111"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_8' 'true' 'アップ指示"
+      "' '' } %GIDa_af57c1a9_bee2_4bf2_aa23_d9548663e543"
+      Position		      [895, 163, 925, 177]
+      FontSize		      12
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "move_down"
+      SID		      "112"
+      RequirementInfo	      "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_9' 'true' 'ダウン指示"
+      "' '' } %GIDa_5b47727d_3f56_4ff6_a9b6_2b328d3a62d1"
+      Position		      [895, 348, 925, 362]
+      FontSize		      12
+      Port		      "2"
+      IconDisplay	      "Port number"
+      OutDataTypeStr	      "boolean"
+      SignalType	      "real"
+      SamplingMode	      "Sample based"
+    }
+    Line {
+      Labels		      [0, 0]
+      SrcBlock		      "validate_passenger"
+      SrcPort		      1
+      Points		      [15, 0; 0, -65]
+      DstBlock		      "act_control"
+      DstPort		      4
+    }
+    Line {
+      Labels		      [1, 1]
+      SrcBlock		      "validate_driver"
+      SrcPort		      1
+      DstBlock		      "act_control"
+      DstPort		      3
+    }
+    Line {
+      Name		      "passenger_down"
+      FontSize		      12
+      Labels		      [0, 0]
+      SrcBlock		      "passenger_down"
+      SrcPort		      1
+      DstBlock		      "validate_passenger"
+      DstPort		      4
+    }
+    Line {
+      Name		      "passenger_up"
+      FontSize		      12
+      Labels		      [0, 0]
+      SrcBlock		      "passenger_up"
+      SrcPort		      1
+      DstBlock		      "validate_passenger"
+      DstPort		      3
+    }
+    Line {
+      Name		      "passenger_neutral"
+      FontSize		      12
+      Labels		      [0, 0]
+      SrcBlock		      "passenger_neutral"
+      SrcPort		      1
+      DstBlock		      "validate_passenger"
+      DstPort		      2
+    }
+    Line {
+      Name		      "driver_down"
+      FontSize		      12
+      Labels		      [0, 0]
+      SrcBlock		      "driver_down"
+      SrcPort		      1
+      DstBlock		      "validate_driver"
+      DstPort		      4
+    }
+    Line {
+      Name		      "driver_up"
+      FontSize		      12
+      Labels		      [0, 0]
+      SrcBlock		      "driver_up"
+      SrcPort		      1
+      DstBlock		      "validate_driver"
+      DstPort		      3
+    }
+    Line {
+      Name		      "driver_neutral"
+      FontSize		      12
+      Labels		      [0, 0]
+      SrcBlock		      "driver_neutral"
+      SrcPort		      1
+      DstBlock		      "validate_driver"
+      DstPort		      2
+    }
+    Line {
+      Name		      "move_down"
+      FontSize		      12
+      Labels		      [0, 1]
+      SrcBlock		      "act_control"
+      SrcPort		      2
+      DstBlock		      "move_down"
+      DstPort		      1
+    }
+    Line {
+      Name		      "move_up"
+      FontSize		      12
+      Labels		      [0, 1]
+      SrcBlock		      "act_control"
+      SrcPort		      1
+      Points		      [55, 0]
+      Branch {
+	DstBlock		"move_up"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -105; -725, 0; 0, 85]
+	DstBlock		"detect_obstacle_endstop"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "armature_current"
+      FontSize		      12
+      Labels		      [0, 1]
+      SrcBlock		      "armature_current"
+      SrcPort		      1
+      DstBlock		      "detect_obstacle_endstop"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "detect_obstacle_endstop"
+      SrcPort		      3
+      Points		      [15, 0; 0, -5]
+      Branch {
+	Labels			[2, 0]
+	Points			[0, -40]
+	DstBlock		"validate_driver"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 115]
+	DstBlock		"validate_passenger"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "endstop"
+      FontSize		      12
+      Labels		      [0, 0]
+      SrcBlock		      "detect_obstacle_endstop"
+      SrcPort		      1
+      DstBlock		      "act_control"
+      DstPort		      1
+    }
+    Line {
+      Name		      "obstacle"
+      FontSize		      12
+      Labels		      [0, 0]
+      SrcBlock		      "detect_obstacle_endstop"
+      SrcPort		      2
+      DstBlock		      "act_control"
+      DstPort		      2
+    }
+    Annotation {
+      Name		      "パワーウィンドウ制御モデル"
+      Position		      [458, 24]
+      FontSize		      24
+      FontWeight	      "bold"
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.6 (R2011b) dated Aug  6 2011, 13:17:15
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "pwctrl"
+    created		    "07-Oct-2009 16:46:31"
+    isLibrary		    0
+    firstTarget		    81
+    debug {
+      runTimeCheck	      [0 0 1 1]
+    }
+    sfVersion		    76014001.0002
+  }
+  chart {
+    id			    2
+    name		    "act_control"
+    windowPosition	    [54.75 105 537.75 438]
+    viewLimits		    [0 1005.799 0 818.07]
+    zoomFactor		    2.035
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 22 0 0]
+    firstTransition	    59
+    viewObj		    2
+    visible		    1
+    machine		    1
+    subviewS {
+      zoomFactor	      2.035
+    }
+    ssIdHighWaterMark	    81
+    decomposition	    CLUSTER_CHART
+    firstData		    60
+    sampleTime		    "-1"
+    chartFileNumber	    2
+    executeAtInitialization 1
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+    supportVariableSizing   0
+  }
+  state {
+    id			    3
+    labelString		    "passengerneutral\nentry:\nmove_up = 0;\nmove_down = 0;"
+    position		    [167.7298 115.1258 526.3048 78.1633]
+    fontSize		    12
+    chart		    2
+    treeNode		    [15 0 0 5]
+    subviewer		    2
+    ssIdNumber		    1
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    4
+    labelString		    "emergencyDown\nentry:\nmove_up = 0;\nmove_down = 1;"
+    position		    [859.9695 143.4972 103.6363 143.0787]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 22 0]
+    subviewer		    2
+    ssIdNumber		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    5
+    labelString		    "passengerUp\nentry:\n move_up = 1;\nexit:\n move_up = 0;"
+    position		    [439.8778 249.1723 310.231 154.3985]
+    fontSize		    12
+    chart		    2
+    treeNode		    [15 7 3 6]
+    firstTransition	    43
+    firstJunction	    24
+    subviewer		    2
+    ssIdNumber		    3
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    6
+    labelString		    "passengerDown\nentry:\n move_down = 1;\nexit:\n move_down = 0;"
+    position		    [55.503 251.6815 291.8028 149.2013]
+    fontSize		    12
+    chart		    2
+    treeNode		    [15 8 5 0]
+    firstTransition	    36
+    firstJunction	    23
+    subviewer		    2
+    ssIdNumber		    4
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    7
+    labelString		    "iniPassengerUp"
+    position		    [586.7603 264.2658 128.7648 30.2883]
+    fontSize		    12
+    chart		    2
+    treeNode		    [5 0 0 9]
+    subviewer		    2
+    ssIdNumber		    5
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    8
+    labelString		    "iniPassengerDown"
+    position		    [186.994 266.2255 104.3068 43.7493]
+    fontSize		    12
+    chart		    2
+    treeNode		    [6 0 0 11]
+    subviewer		    2
+    ssIdNumber		    6
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    9
+    labelString		    "PassengerUp"
+    position		    [445.9038 356.1508 114.3783 25]
+    fontSize		    12
+    chart		    2
+    treeNode		    [5 0 7 10]
+    subviewer		    2
+    ssIdNumber		    7
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    10
+    labelString		    "autoPassengerUp"
+    position		    [636.3308 357.0808 103.125 25]
+    fontSize		    12
+    chart		    2
+    treeNode		    [5 0 9 0]
+    subviewer		    2
+    ssIdNumber		    8
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_68' 'true' 'PW01-5-4' ''"
+    " } %GIDa_980170f8_e9e5_4c98_aa19_fba932b28c43"
+  }
+  state {
+    id			    11
+    labelString		    "passengerDown"
+    position		    [247.0593 350.9028 83.819 41.3455]
+    fontSize		    12
+    chart		    2
+    treeNode		    [6 0 8 12]
+    subviewer		    2
+    ssIdNumber		    9
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    12
+    labelString		    "autoPassengerDown"
+    position		    [60.754 354.8075 110.0763 34.1343]
+    fontSize		    12
+    chart		    2
+    treeNode		    [6 0 11 0]
+    subviewer		    2
+    ssIdNumber		    10
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_65' 'true' 'PW01-4-4' ''"
+    " } %GIDa_c1baf094_2edc_4d71_b754_4666700d4031"
+  }
+  state {
+    id			    13
+    labelString		    "driverUp\nentry:\n move_up = 1;\nexit:\n move_up = 0;"
+    position		    [456.2443 472.6685 301.3123 159.0132]
+    fontSize		    12
+    chart		    2
+    treeNode		    [22 19 14 0]
+    firstTransition	    48
+    firstJunction	    26
+    subviewer		    2
+    ssIdNumber		    11
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    14
+    labelString		    "driverDown\nentry:\n move_down = 1;\nexit:\n move_down = 0;"
+    position		    [50.5483 470.5063 293.723 163.243]
+    fontSize		    12
+    chart		    2
+    treeNode		    [22 16 15 13]
+    firstTransition	    45
+    firstJunction	    25
+    subviewer		    2
+    ssIdNumber		    12
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    15
+    labelString		    "driverNeutral\nentry:\nmove_up = 0;\nmove_down = 0;"
+    position		    [41.1453 72.3645 718.0078 348.9788]
+    fontSize		    12
+    chart		    2
+    treeNode		    [22 3 0 14]
+    firstTransition	    40
+    subviewer		    2
+    ssIdNumber		    13
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    16
+    labelString		    "iniDriverDown"
+    position		    [177.5573 484.6223 113.012 37.4995]
+    fontSize		    12
+    chart		    2
+    treeNode		    [14 0 0 18]
+    subviewer		    2
+    ssIdNumber		    14
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    17
+    labelString		    "DriverDown"
+    position		    [234.5083 571.955 86.1217 49.5182]
+    fontSize		    12
+    chart		    2
+    treeNode		    [14 0 18 0]
+    subviewer		    2
+    ssIdNumber		    15
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    18
+    labelString		    "autoDriverDown"
+    position		    [61.3523 570.2103 84.5473 48.5568]
+    fontSize		    12
+    chart		    2
+    treeNode		    [14 0 16 17]
+    subviewer		    2
+    ssIdNumber		    16
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_58' 'true' 'PW01-1-4' ''"
+    " } %GIDa_b5fdd7c7_bda0_478f_8646_e5ecdfa80b07"
+  }
+  state {
+    id			    19
+    labelString		    "iniDriverUp"
+    position		    [568.115 492.102 143.2713 28.3653]
+    fontSize		    12
+    chart		    2
+    treeNode		    [13 0 0 20]
+    subviewer		    2
+    ssIdNumber		    17
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    20
+    labelString		    "DriverUp"
+    position		    [468.1133 574.2508 98.193 47.1145]
+    fontSize		    12
+    chart		    2
+    treeNode		    [13 0 19 21]
+    subviewer		    2
+    ssIdNumber		    18
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    21
+    labelString		    "autoDriverUp"
+    position		    [664.162 593.931 86.406 25]
+    fontSize		    12
+    chart		    2
+    treeNode		    [13 0 20 0]
+    subviewer		    2
+    ssIdNumber		    19
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_62' 'true' 'PW01-2-4' ''"
+    " } %GIDa_8098c138_b7f2_427c_a978_0330551ac331"
+  }
+  state {
+    id			    22
+    labelString		    "safe"
+    position		    [21.9153 33.9453 762.2703 656.4978]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 15 0 4]
+    firstTransition	    58
+    subviewer		    2
+    ssIdNumber		    20
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  junction {
+    id			    23
+    position		    [222.7036 375.0735 7]
+    chart		    2
+    linkNode		    [6 0 0]
+    subviewer		    2
+    quantum		    [36 39 0 27]
+    ssIdNumber		    54
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    24
+    position		    [596.3503 371.5134 7]
+    chart		    2
+    linkNode		    [5 0 0]
+    subviewer		    2
+    quantum		    [43 42 0 41]
+    ssIdNumber		    55
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    25
+    position		    [190.4402 596.4898 7]
+    chart		    2
+    linkNode		    [14 0 0]
+    subviewer		    2
+    quantum		    [45 47 0 46]
+    ssIdNumber		    56
+    type		    CONNECTIVE_JUNCTION
+  }
+  junction {
+    id			    26
+    position		    [597.6556 607.1858 7]
+    chart		    2
+    linkNode		    [13 0 0]
+    subviewer		    2
+    quantum		    [48 50 0 49]
+    ssIdNumber		    57
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    27
+    labelString		    "[passenger[1]]"
+    labelPosition	    [144.178 336.52 94.582 18.279]
+    fontSize		    12
+    src {
+      id		      23
+      intersection	      [0 -1 0 -1 215.7036 375.0735 0 38.3768]
+    }
+    dst {
+      id		      12
+      intersection	      [2 1 0 0.5937 170.8303 375.073 0 -51.625]
+    }
+    midPoint		    [196.5521 375.0735]
+    chart		    2
+    linkNode		    [6 36 39]
+    dataLimits		    [170.83 215.704 372.673 377.473]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      SRC_STICK
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    1
+    ssIdNumber		    21
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_64' 'true' 'PW01-4-4' ''"
+    " } %GIDa_3031da1a_6eba_4cd5_b125_2c94e6686e1e"
+  }
+  transition {
+    id			    28
+    labelString		    "[endstop | after(CountStep,tick)]"
+    labelPosition	    [810.735 118.833 213.572 18.279]
+    fontSize		    12
+    src {
+      id		      4
+      intersection	      [4 -1 -0 0.8898 859.9695 159.2645 0 1.8805]
+    }
+    dst {
+      id		      3
+      intersection	      [2 1 0 0.5647 694.0346 159.2645 0 -0.9625]
+    }
+    midPoint		    [777.6555 159.2645]
+    chart		    2
+    linkNode		    [2 59 29]
+    dataLimits		    [694.035 859.969 156.864 161.665]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    22
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_35' 'true' 'PW02-3' '' }"
+    " %GIDa_1c82cc59_c61d_451e_99b4_5386f06832da"
+  }
+  transition {
+    id			    29
+    labelString		    "[obstacle]"
+    labelPosition	    [793.09 204.134 67.123 18.279]
+    fontSize		    12
+    src {
+      id		      22
+      intersection	      [2 1 0 0.244 784.1856 194.1614 0 -20.5861]
+    }
+    dst {
+      id		      4
+      intersection	      [4 -1 0 0.6459 859.9695 194.1614 0 20.5861]
+    }
+    midPoint		    [819.4643 194.1614]
+    chart		    2
+    linkNode		    [2 28 0]
+    dataLimits		    [784.186 859.97 191.761 196.561]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    23
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_18' 'true' 'PW01-1-1' ''"
+    " ; 'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_19' 'true' 'PW01-2-1' '' ; 'other' 'powerwi"
+    "ndowspecification.xlsx' '@Simulink_requirement_item_20' 'true' 'PW01-4-1' '' ; 'other' 'powerwindowspecification.x"
+    "lsx' '@Simulink_requirement_item_21' 'true' 'PW01-5-1' '' ; 'other' 'powerwindowspecification.xlsx' '@Simulink_req"
+    "uirement_item_34' 'true' 'PW02-2' '' } %GIDa_a952300b_ee81_4c13_bf87_5eb3c8dd20e1"
+  }
+  transition {
+    id			    30
+    labelString		    "[passenger[1]]"
+    labelPosition	    [330.391 224.13 94.582 18.279]
+    fontSize		    12
+    src {
+      id		      11
+      intersection	      [1 -0 -1 0.8704 320.0154 350.9028 0 31.0462]
+    }
+    dst {
+      id		      3
+      intersection	      [3 0 1 0.7107 320.0154 193.2891 0 -30.1292]
+    }
+    midPoint		    [320.015 272.9302]
+    chart		    2
+    linkNode		    [15 31 33]
+    dataLimits		    [317.615 322.415 193.289 350.903]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    24
+  }
+  transition {
+    id			    31
+    labelString		    "[endstop]"
+    labelPosition	    [267.017 216.632 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      6
+      intersection	      [1 0 -1 0.6946 258.2016 251.6815 0 56.8106]
+    }
+    dst {
+      id		      3
+      intersection	      [3 -0 1 0.8281 258.2016 193.2891 0 -56.8106]
+    }
+    midPoint		    [258.215 225.4766]
+    chart		    2
+    linkNode		    [15 40 30]
+    dataLimits		    [255.802 260.602 193.289 251.681]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    25
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_24' 'true' 'PW01-4-2' ''"
+    " ; 'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_43' 'true' 'PW03-2' '' } %GIDa_55d96b8e_0b9"
+    "7_4cdc_8571_da02fc326ccb"
+  }
+  transition {
+    id			    32
+    labelString		    "[passenger[1]]"
+    labelPosition	    [555.903 222.069 94.582 18.279]
+    fontSize		    12
+    src {
+      id		      9
+      intersection	      [1 -0 -1 0.8819 546.774 356.1508 0 43.6759]
+    }
+    dst {
+      id		      3
+      intersection	      [3 0 1 0.2798 546.774 193.2891 0 -43.6759]
+    }
+    midPoint		    [546.774 275.4402]
+    chart		    2
+    linkNode		    [15 33 34]
+    dataLimits		    [544.374 549.174 193.289 356.151]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    26
+  }
+  transition {
+    id			    33
+    labelString		    "[endstop]"
+    labelPosition	    [476.791 219.159 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      5
+      intersection	      [1 0 -1 0.0965 469.8288 249.1723 0 -119.2153]
+    }
+    dst {
+      id		      3
+      intersection	      [3 -0 1 0.426 469.8288 193.2891 0 119.2153]
+    }
+    midPoint		    [469.8488 224.2765]
+    chart		    2
+    linkNode		    [15 30 32]
+    dataLimits		    [467.429 472.229 193.289 249.172]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    27
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_25' 'true' 'PW01-5-2' ''"
+    " ; 'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_44' 'true' 'PW03-2' '' } %GIDa_d27ca418_18a"
+    "8_4339_a7c3_3674226f0514"
+  }
+  transition {
+    id			    34
+    labelString		    "[passenger[3]]"
+    labelPosition	    [113.668 218.766 94.582 18.279]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [3 0 1 0.9466 195.8184 193.2891 0 43.3261]
+    }
+    dst {
+      id		      8
+      intersection	      [1 -0 -1 0.0846 195.8184 266.2255 0 -43.7401]
+    }
+    midPoint		    [195.8213 227.0821]
+    chart		    2
+    linkNode		    [15 32 35]
+    dataLimits		    [193.418 198.218 193.289 266.226]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    28
+  }
+  transition {
+    id			    35
+    labelString		    "[passenger[2]]"
+    labelPosition	    [666.883 218.758 94.582 18.279]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [3 0 1 0.0642 660.2206 193.2891 0 -9.0831]
+    }
+    dst {
+      id		      7
+      intersection	      [1 -0 -1 0.5705 660.2206 264.2658 0 9.0831]
+    }
+    midPoint		    [660.2258 226.0596]
+    chart		    2
+    linkNode		    [15 34 37]
+    dataLimits		    [657.821 662.621 193.289 264.266]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    29
+  }
+  transition {
+    id			    36
+    labelString		    "[after(CountStep,tick)]"
+    labelPosition	    [223.13 325.179 149.5 18.279]
+    fontSize		    12
+    src {
+      id		      8
+      intersection	      [3 0 1 0.6576 222.7086 309.9748 0 0]
+    }
+    dst {
+      id		      23
+      intersection	      [0 0 -1 -1 222.7036 368.0735 0 0]
+    }
+    midPoint		    [222.7036 336.0264]
+    chart		    2
+    linkNode		    [6 0 27]
+    dataLimits		    [220.304 225.104 309.975 368.074]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      DST_STICK
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    1
+    ssIdNumber		    30
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_63' 'true' 'PW01-4-4' ''"
+    " } %GIDa_ec36bf98_d606_4e27_80d6_ee4a38508ff6"
+  }
+  transition {
+    id			    37
+    labelString		    "[passenger[2]]"
+    labelPosition	    [367.034 350.756 94.582 18.279]
+    fontSize		    12
+    src {
+      id		      6
+      intersection	      [2 1 0 0.7826 347.3058 368.4433 0 -0.2073]
+    }
+    dst {
+      id		      9
+      intersection	      [4 -1 -0 0.5083 445.9038 368.4433 0 0.2073]
+    }
+    midPoint		    [394.4875 368.4433]
+    chart		    2
+    linkNode		    [15 35 38]
+    dataLimits		    [347.306 445.904 366.043 370.843]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    31
+  }
+  transition {
+    id			    38
+    labelString		    "[passenger[3]]"
+    labelPosition	    [356.067 386.365 94.582 18.279]
+    fontSize		    12
+    src {
+      id		      5
+      intersection	      [4 -1 0 0.1618 439.8778 378.5877 0 -7.0132]
+    }
+    dst {
+      id		      11
+      intersection	      [2 1 -0 0.6696 330.8783 378.5877 0 7.0132]
+    }
+    midPoint		    [387.2692 378.5888]
+    chart		    2
+    linkNode		    [15 37 0]
+    dataLimits		    [330.878 439.878 376.188 380.988]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    32
+  }
+  transition {
+    id			    39
+    labelPosition	    [234.984 375.075 10.679 18.279]
+    fontSize		    12
+    src {
+      id		      23
+      intersection	      [0 1 0 -1 229.7036 375.0735 0 0]
+    }
+    dst {
+      id		      11
+      intersection	      [4 -1 0 0.4154 247.0593 375.0734 0 0]
+    }
+    midPoint		    [234.498 375.0735]
+    chart		    2
+    linkNode		    [6 27 0]
+    dataLimits		    [229.704 247.059 372.673 377.473]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      SRC_STICK
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    2
+    ssIdNumber		    33
+  }
+  transition {
+    id			    40
+    labelPosition	    [226.373 72.168 10.679 18.279]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 226.3664 88.6965 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [1 0 -1 0.1114 226.3602 115.1258 0 0]
+    }
+    midPoint		    [226.3664 98.225]
+    chart		    2
+    linkNode		    [15 0 31]
+    dataLimits		    [223.96 228.76 88.697 115.126]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    34
+  }
+  transition {
+    id			    41
+    labelPosition	    [529.942 341.394 10.679 18.279]
+    fontSize		    12
+    src {
+      id		      24
+      intersection	      [0 -1 0 -1 589.3503 371.5134 0 38.3768]
+    }
+    dst {
+      id		      9
+      intersection	      [2 1 0 0.6145 560.2821 371.5133 0 -51.625]
+    }
+    midPoint		    [578.4449 371.5134]
+    chart		    2
+    linkNode		    [5 43 42]
+    dataLimits		    [560.282 589.35 369.113 373.913]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      SRC_STICK
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    2
+    ssIdNumber		    35
+  }
+  transition {
+    id			    42
+    labelString		    "[passenger[1]]"
+    labelPosition	    [606.899 343.344 94.582 18.279]
+    fontSize		    12
+    src {
+      id		      24
+      intersection	      [0 1 0 -1 603.3503 371.5134 0 0]
+    }
+    dst {
+      id		      10
+      intersection	      [4 -1 0 0.4227 636.3308 371.5133 0 0]
+    }
+    midPoint		    [616.2968 371.5134]
+    chart		    2
+    linkNode		    [5 41 0]
+    dataLimits		    [603.35 636.331 369.113 373.913]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      SRC_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    36
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_67' 'true' 'PW01-5-4' ''"
+    " } %GIDa_54b273b0_03b7_413f_9a65_113a4ebad43b"
+  }
+  transition {
+    id			    43
+    labelString		    "[after(CountStep,tick)]"
+    labelPosition	    [602.558 308.054 149.5 18.279]
+    fontSize		    12
+    src {
+      id		      7
+      intersection	      [3 0 1 0.9255 596.3503 294.5541 0 0]
+    }
+    dst {
+      id		      24
+      intersection	      [0 0 -1 -1 596.3503 364.5134 0 0]
+    }
+    midPoint		    [596.3503 326.7939]
+    chart		    2
+    linkNode		    [5 0 41]
+    dataLimits		    [593.95 598.75 294.554 364.513]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    37
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_66' 'true' 'PW01-5-4' ''"
+    " } %GIDa_ca2a5b7e_9837_4719_9b13_e92e4d2a1c7a"
+  }
+  transition {
+    id			    44
+    labelString		    "[driver[3]]"
+    labelPosition	    [155.924 431.506 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      15
+      intersection	      [3 0 1 0.7659 209.212 421.3433 0 16.6358]
+    }
+    dst {
+      id		      16
+      intersection	      [1 -0 -1 0.2801 209.212 484.6223 0 -16.6358]
+    }
+    midPoint		    [209.2108 450.0977]
+    chart		    2
+    linkNode		    [22 58 54]
+    dataLimits		    [206.812 211.612 421.343 484.622]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    38
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_16' 'true' 'PW01-7' '' }"
+    " %GIDa_83b8362f_c511_4cb5_a6ae_eb24263412c6"
+  }
+  transition {
+    id			    45
+    labelString		    "[after(CountStep,tick)]"
+    labelPosition	    [204.399 549.569 149.5 18.279]
+    fontSize		    12
+    src {
+      id		      16
+      intersection	      [3 0 1 0.886 190.4407 522.1218 0 0]
+    }
+    dst {
+      id		      25
+      intersection	      [0 0 -1 -1 190.4402 589.4898 0 0]
+    }
+    midPoint		    [190.4402 553.0096]
+    chart		    2
+    linkNode		    [14 0 46]
+    dataLimits		    [188.04 192.84 522.122 589.49]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      DST_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    39
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_57' 'true' 'PW01-1-4' ''"
+    " } %GIDa_e455701f_c458_4572_a8a8_c4808ad74757"
+  }
+  transition {
+    id			    46
+    labelString		    "[driver[1]]"
+    labelPosition	    [153.465 612.102 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      25
+      intersection	      [0 -1 0 -1 183.4402 596.4898 0 38.3768]
+    }
+    dst {
+      id		      18
+      intersection	      [2 1 0 0.5412 145.8996 596.4892 0 -51.625]
+    }
+    midPoint		    [168.1144 596.4898]
+    chart		    2
+    linkNode		    [14 45 47]
+    dataLimits		    [145.9 183.44 594.089 598.889]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      SRC_STICK
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    1
+    ssIdNumber		    40
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_59' 'true' 'PW01-1-4' ''"
+    " } %GIDa_d2cd5099_10ee_4739_ac85_dcb48303a007"
+  }
+  transition {
+    id			    47
+    labelPosition	    [207.375 582.152 10.679 18.279]
+    fontSize		    12
+    src {
+      id		      25
+      intersection	      [0 1 0 -1 197.4402 596.4898 0 0]
+    }
+    dst {
+      id		      17
+      intersection	      [4 -1 0 0.5045 234.5083 596.4913 0 0]
+    }
+    midPoint		    [212.5193 596.4898]
+    chart		    2
+    linkNode		    [14 46 0]
+    dataLimits		    [197.44 234.508 594.091 598.891]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      SRC_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    41
+  }
+  transition {
+    id			    48
+    labelString		    "[after(CountStep,tick)]"
+    labelPosition	    [611.587 538.833 149.5 18.279]
+    fontSize		    12
+    src {
+      id		      19
+      intersection	      [3 0 1 0.7938 597.6575 520.4673 0 0]
+    }
+    dst {
+      id		      26
+      intersection	      [0 0 -1 -1 597.6556 600.1858 0 0]
+    }
+    midPoint		    [597.6556 557.7988]
+    chart		    2
+    linkNode		    [13 0 49]
+    dataLimits		    [595.256 600.056 520.467 600.186]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      DST_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    42
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_60' 'true' 'PW01-2-4' ''"
+    " } %GIDa_0f67eb49_8ea3_410c_a598_a2e2e6342f8c"
+  }
+  transition {
+    id			    49
+    labelPosition	    [535.967 577.066 10.679 18.279]
+    fontSize		    12
+    src {
+      id		      26
+      intersection	      [0 -1 0 -1 590.6556 607.1858 0 38.3768]
+    }
+    dst {
+      id		      20
+      intersection	      [2 1 0 0.699 566.3063 607.1838 0 -51.625]
+    }
+    midPoint		    [582.2123 607.1858]
+    chart		    2
+    linkNode		    [13 48 50]
+    dataLimits		    [566.306 590.656 604.784 609.584]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      SRC_STICK
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    2
+    ssIdNumber		    43
+  }
+  transition {
+    id			    50
+    labelString		    "[driver[1]]"
+    labelPosition	    [603.554 613.52 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      26
+      intersection	      [0 1 0 -1 604.6556 607.1858 0 0]
+    }
+    dst {
+      id		      21
+      intersection	      [4 -1 0 0.4698 664.162 607.186 0 0]
+    }
+    midPoint		    [631.4417 607.1858]
+    chart		    2
+    linkNode		    [13 49 0]
+    dataLimits		    [604.656 664.162 604.786 609.586]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      SRC_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    44
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_61' 'true' 'PW01-2-4' ''"
+    " } %GIDa_974d0a60_152b_47af_8ba8_970aa36bc317"
+  }
+  transition {
+    id			    51
+    labelString		    "[driver[3]]"
+    labelPosition	    [371.005 572.475 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      13
+      intersection	      [4 -1 0 0.2795 456.2443 587.2363 0 9.4799]
+    }
+    dst {
+      id		      17
+      intersection	      [2 1 -0 0.3086 320.63 587.2363 0 -9.4799]
+    }
+    midPoint		    [389.7497 587.2342]
+    chart		    2
+    linkNode		    [22 53 52]
+    dataLimits		    [320.63 456.244 584.836 589.636]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    45
+  }
+  transition {
+    id			    52
+    labelString		    "[driver[2]]"
+    labelPosition	    [371.926 591.747 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      14
+      intersection	      [2 1 0 0.8463 344.2713 608.6585 0 -0.2073]
+    }
+    dst {
+      id		      20
+      intersection	      [4 -1 -0 0.2697 468.1133 608.6585 0 0.2073]
+    }
+    midPoint		    [404.6238 608.6578]
+    chart		    2
+    linkNode		    [22 51 0]
+    dataLimits		    [344.271 468.113 606.259 611.058]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    46
+  }
+  transition {
+    id			    53
+    labelString		    "[driver[2]]"
+    labelPosition	    [621.337 442.994 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      15
+      intersection	      [3 0 1 0.2026 613.6753 421.3433 0 -0.7193]
+    }
+    dst {
+      id		      19
+      intersection	      [1 -0 -1 0.318 613.6753 492.102 0 0.7193]
+    }
+    midPoint		    [613.6824 454.0002]
+    chart		    2
+    linkNode		    [22 55 51]
+    dataLimits		    [611.275 616.075 421.343 492.102]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    47
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_17' 'true' 'PW01-7' '' }"
+    " %GIDa_f08af04d_f3a6_47eb_8dc4_87c44657f076"
+  }
+  transition {
+    id			    54
+    labelString		    "[driver[1]]"
+    labelPosition	    [257.187 493.89 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      17
+      intersection	      [1 -0 -1 0.8905 311.1997 571.955 0 33.2315]
+    }
+    dst {
+      id		      15
+      intersection	      [3 0 1 0.6239 311.1997 421.3433 0 -33.6321]
+    }
+    midPoint		    [311.2013 497.6357]
+    chart		    2
+    linkNode		    [22 44 56]
+    dataLimits		    [308.8 313.6 421.343 571.955]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    48
+  }
+  transition {
+    id			    55
+    labelString		    "[driver[1]]"
+    labelPosition	    [502.56 550.428 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      20
+      intersection	      [1 -0 -1 0.9169 558.1465 574.2508 0 40.9367]
+    }
+    dst {
+      id		      15
+      intersection	      [3 0 1 0.28 558.1465 421.3433 0 -40.9367]
+    }
+    midPoint		    [558.1465 498.7336]
+    chart		    2
+    linkNode		    [22 57 53]
+    dataLimits		    [555.746 560.546 421.343 574.251]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    49
+  }
+  transition {
+    id			    56
+    labelString		    "[endstop]"
+    labelPosition	    [330.632 458.159 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      14
+      intersection	      [1 -0 -1 0.9332 324.6506 470.5063 0 127.3289]
+    }
+    dst {
+      id		      15
+      intersection	      [3 0 1 0.6052 324.6506 421.3433 0 -127.2525]
+    }
+    midPoint		    [324.6623 449.1167]
+    chart		    2
+    linkNode		    [22 54 57]
+    dataLimits		    [322.251 327.051 421.343 470.506]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    50
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_22' 'true' 'PW01-1-2' ''"
+    " ; 'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_45' 'true' 'PW03-2' '' } %GIDa_840903c3_6fb"
+    "5_4415_a76b_5d9c2803970a"
+  }
+  transition {
+    id			    57
+    labelString		    "[endstop]"
+    labelPosition	    [497.038 434.065 64.071 18.279]
+    fontSize		    12
+    src {
+      id		      13
+      intersection	      [1 -0 -1 0.1217 492.914 472.6685 0 -113.9756]
+    }
+    dst {
+      id		      15
+      intersection	      [3 0 1 0.3708 492.914 421.3433 0 150.4681]
+    }
+    midPoint		    [492.9248 450.1508]
+    chart		    2
+    linkNode		    [22 56 55]
+    dataLimits		    [490.514 495.314 421.343 472.668]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    51
+    requirementInfo	    "{'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_23' 'true' 'PW01-2-2' ''"
+    " ; 'other' 'powerwindowspecification.xlsx' '@Simulink_requirement_item_46' 'true' 'PW03-2' '' } %GIDa_0db540a2_01e"
+    "d_44dc_af1c_4b1aca661988"
+  }
+  transition {
+    id			    58
+    labelPosition	    [121.626 41.583 10.679 18.279]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0.1346 122.587 46.3905 0 0]
+    }
+    dst {
+      id		      15
+      intersection	      [1 0 -1 0.1134 122.5674 72.3645 0 0]
+    }
+    midPoint		    [122.587 55.6814]
+    chart		    2
+    linkNode		    [22 0 44]
+    dataLimits		    [120.167 124.967 46.391 72.365]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    52
+  }
+  transition {
+    id			    59
+    labelPosition	    [95.661 17.635 10.679 18.279]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 95.665 9.8535 0 0]
+    }
+    dst {
+      id		      22
+      intersection	      [1 0 -1 0.0968 95.7031 33.9453 0 0]
+    }
+    midPoint		    [95.665 18.1624]
+    chart		    2
+    linkNode		    [2 0 28]
+    dataLimits		    [93.303 98.103 9.854 33.945]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    53
+  }
+  data {
+    id			    60
+    ssIdNumber		    58
+    name		    "move_up"
+    linkNode		    [2 0 61]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    61
+    ssIdNumber		    59
+    name		    "move_down"
+    linkNode		    [2 60 62]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    62
+    ssIdNumber		    60
+    name		    "endstop"
+    linkNode		    [2 61 63]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+      }
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    63
+    ssIdNumber		    61
+    name		    "obstacle"
+    linkNode		    [2 62 64]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+      }
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    64
+    ssIdNumber		    62
+    name		    "driver"
+    linkNode		    [2 63 65]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"3"
+	firstIndex		"1"
+      }
+      type {
+	primitive		SF_BOOLEAN_TYPE
+      }
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    65
+    ssIdNumber		    63
+    name		    "passenger"
+    linkNode		    [2 64 66]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"3"
+	firstIndex		"1"
+      }
+      type {
+	primitive		SF_BOOLEAN_TYPE
+      }
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    66
+    ssIdNumber		    67
+    name		    "CountStep"
+    linkNode		    [2 65 0]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    machine		    1
+    props {
+      initialValue	      "5"
+      type {
+	primitive		SF_INT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "int16"
+  }
+  instance {
+    id			    67
+    name		    "act_control"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    68
+    name		    "detect_obstacle_endstop/detect_obstacle/delay_detection"
+    windowPosition	    [307.5 128.25 477.75 246.75]
+    viewLimits		    [40.812 375.619 12.105 174.594]
+    zoomFactor		    0.771
+    screen		    [1 1 1680 1050 1.333333333333333]
+    treeNode		    [0 71 0 0]
+    firstTransition	    72
+    viewObj		    68
+    machine		    1
+    subviewS {
+      x1		      40.812
+      y1		      12.105
+      zoomFactor	      0.771
+    }
+    ssIdHighWaterMark	    14
+    decomposition	    CLUSTER_CHART
+    firstData		    77
+    sampleTime		    "Fs"
+    chartFileNumber	    3
+    executeAtInitialization 1
+    userSpecifiedStateTransitionExecutionOrder 1
+    disableImplicitCasting  1
+    supportVariableSizing   0
+  }
+  state {
+    id			    69
+    labelString		    "detect/\nen:\ndetected = 1;"
+    position		    [52.9995 126.6779 278.0152 43.852]
+    fontSize		    12
+    chart		    68
+    treeNode		    [68 0 70 0]
+    subviewer		    68
+    ssIdNumber		    1
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    70
+    labelString		    "Off\nen:\n detected = 0;"
+    position		    [71.9677 32.4326 76.1649 48.1158]
+    fontSize		    12
+    chart		    68
+    treeNode		    [68 0 71 69]
+    subviewer		    68
+    ssIdNumber		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    71
+    labelString		    "hold"
+    position		    [244.6085 32.2627 81.4568 44.607]
+    fontSize		    12
+    chart		    68
+    treeNode		    [68 0 0 70]
+    subviewer		    68
+    ssIdNumber		    3
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    72
+    labelPosition	    [80.202 1.565 6.936 13.274]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 87.3385 16.169 0 0]
+    }
+    dst {
+      id		      70
+      intersection	      [1 0 -1 0.2018 87.3385 32.4326 0 0]
+    }
+    midPoint		    [87.3385 20.3937]
+    chart		    68
+    linkNode		    [68 0 73]
+    dataLimits		    [84.938 89.739 16.169 32.433]
+    subviewer		    68
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    4
+  }
+  transition {
+    id			    73
+    labelString		    "[move_up]"
+    labelPosition	    [173.134 20.665 52.017 13.274]
+    fontSize		    12
+    src {
+      id		      70
+      intersection	      [2 1 -0 0.2049 148.1326 42.2937 0 -16.7054]
+    }
+    dst {
+      id		      71
+      intersection	      [4 -1 0 0.7751 244.6085 42.2937 0 10.9662]
+    }
+    midPoint		    [194.2071 42.2937]
+    chart		    68
+    linkNode		    [68 72 76]
+    dataLimits		    [148.133 244.608 39.894 44.694]
+    subviewer		    68
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    5
+  }
+  transition {
+    id			    74
+    labelString		    "[~move_up]"
+    labelPosition	    [119.005 100.29 57.219 13.274]
+    fontSize		    12
+    src {
+      id		      69
+      intersection	      [1 0 -1 0.2287 116.575 126.6779 0 6.9058]
+    }
+    dst {
+      id		      70
+      intersection	      [3 -0 1 0.4143 116.575 80.5485 0 -6.9058]
+    }
+    midPoint		    [116.575 106.8711]
+    chart		    68
+    linkNode		    [68 75 0]
+    dataLimits		    [114.175 118.975 80.549 126.678]
+    subviewer		    68
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    6
+  }
+  transition {
+    id			    75
+    labelString		    "[after(CountStep,tick)]"
+    labelPosition	    [266.91 83.901 115.594 13.274]
+    fontSize		    12
+    src {
+      id		      71
+      intersection	      [3 -0 1 0.8159 259.6077 76.8697 0 18.4904]
+    }
+    dst {
+      id		      69
+      intersection	      [1 0 -1 0.7432 259.6077 126.6779 0 -17.8373]
+    }
+    midPoint		    [259.6077 98.5959]
+    chart		    68
+    linkNode		    [68 76 74]
+    dataLimits		    [257.208 262.008 76.87 126.678]
+    subviewer		    68
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    7
+  }
+  transition {
+    id			    76
+    labelString		    "[~move_up]"
+    labelPosition	    [169.21 66.069 57.219 13.274]
+    fontSize		    12
+    src {
+      id		      71
+      intersection	      [4 -1 0 0.3139 244.6085 62.8669 0 -20.0938]
+    }
+    dst {
+      id		      70
+      intersection	      [2 1 -0 0.6325 148.1326 62.8669 0 7.1928]
+    }
+    midPoint		    [198.5339 62.8669]
+    chart		    68
+    linkNode		    [68 73 75]
+    dataLimits		    [148.133 244.608 60.467 65.267]
+    subviewer		    68
+    drawStyle		    SMART
+    executionOrder	    2
+    ssIdNumber		    8
+  }
+  data {
+    id			    77
+    ssIdNumber		    10
+    name		    "move_up"
+    linkNode		    [68 0 78]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+      }
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    78
+    ssIdNumber		    12
+    name		    "CountStep"
+    linkNode		    [68 77 79]
+    scope		    PARAMETER_DATA
+    initFromWorkspace	    1
+    machine		    1
+    props {
+      initialValue	      "5"
+      type {
+	primitive		SF_INT16_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "int16"
+  }
+  data {
+    id			    79
+    ssIdNumber		    14
+    name		    "detected"
+    linkNode		    [68 78 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "boolean"
+  }
+  instance {
+    id			    80
+    name		    "detect_obstacle_endstop/detect_obstacle/delay_detection"
+    machine		    1
+    chart		    68
+  }
+  target {
+    id			    81
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 82]
+  }
+  target {
+    id			    82
+    name		    "rtw"
+    machine		    1
+    linkNode		    [1 81 0]
+  }
+}

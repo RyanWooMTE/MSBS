@@ -1,0 +1,1899 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>Introduction to Stateflow® Hands-On Workshop</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Arial Black";
+	panose-1:2 11 10 4 2 1 2 2 2 4;}
+@font-face
+	{font-family:"\@Batang";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:18.0pt;
+	font-family:"Arial","sans-serif";
+	color:maroon;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	color:maroon;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	color:maroon;
+	text-decoration:underline;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.InstructionHeading, li.InstructionHeading, div.InstructionHeading
+	{mso-style-name:"Instruction Heading";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Arial Black","sans-serif";
+	text-transform:uppercase;}
+p.Stateflow, li.Stateflow, div.Stateflow
+	{mso-style-name:Stateflow;
+	mso-style-link:"Stateflow Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Courier New";}
+span.StateflowChar
+	{mso-style-name:"Stateflow Char";
+	mso-style-link:Stateflow;
+	font-family:"Courier New";}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+p.Code, li.Code, div.Code
+	{mso-style-name:Code;
+	mso-style-link:"Code Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:12.0pt;
+	font-family:"Courier New";}
+span.CodeChar
+	{mso-style-name:"Code Char";
+	mso-style-link:Code;
+	font-family:"Courier New";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<h1><a name="_Toc219093448"></a><a name="_Toc194372241"></a><a name="_top"></a>Introduction
+to Stateflow<sup>®</sup> Hands-On Workshop</h1>
+
+<p class=MsoNormal>Welcome to The MathWorks Introduction to Stateflow
+Workshop!  Stateflow extends the capabilities of the Simulink<sup>®</sup>
+environment for development of</p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal>State Machines</li>
+ <li class=MsoNormal>Flow Charts</li>
+ <li class=MsoNormal>Truth Tables</li>
+ <li class=MsoNormal>Control Logic</li>
+ <li class=MsoNormal>Fault Tolerance Logic</li>
+ <li class=MsoNormal>Mode Transition Logic</li>
+</ul>
+
+<p class=MsoNormal>This half-day session is intended for individuals with no
+Stateflow experience, though experienced users should learn a few new tricks. 
+Users looking to maximize their Stateflow proficiency should consider formal <a
+href="http://www.mathworks.com/services/training/index.html">Training from The
+MathWorks</a>.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In the mean time, this document will provide detailed
+instructions on how to construct our Stateflow chart.  Refer to it during the
+workshop and afterwards when you return to your office.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i><span style='font-size:16.0pt;font-family:"Arial","sans-serif";
+color:maroon'>Models</span></i></p>
+
+<p class=MsoNormal><a href="matlab:Step_1">Step 1 Model</a></p>
+
+<p class=MsoNormal><a href="matlab:Step_2">Step 2 Model</a></p>
+
+<p class=MsoNormal><a href="matlab:Step_3">Step 3 Model</a></p>
+
+<p class=MsoNormal><a href="matlab:Step_4">Step 4 Model</a></p>
+
+<p class=MsoNormal><a href="matlab:Step_5">Step 5 Model</a></p>
+
+<p class=MsoNormal><a href="matlab:Step_6">Step 6 Model</a></p>
+
+<p class=MsoNormal><a href="matlab:Step_7">Step 7 Model</a></p>
+
+<p class=MsoNormal><a href="matlab:Step_8">Step 8 Model</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i><span style='font-size:16.0pt;font-family:"Arial","sans-serif";
+color:maroon'>Contents</span></i></p>
+
+<p class=MsoToc1><a
+href="#_Toc219093448">Introduction to Stateflow<sup>®</sup> Hands-On Workshop<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc219093449">1.0<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>        </span>Problem
+Overview<span style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093450">1.1<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Test
+out the Model<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc219093451">2.0<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>        </span>Add
+a Basic Stateflow Chart<span style='color:windowtext;display:none;text-decoration:
+none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093452">2.1<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Add
+a Stateflow Chart to the Model<span style='color:windowtext;display:none;
+text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093453">2.2<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Add
+Device States<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093454">2.3<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Create
+Stateflow Transitions<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093455">2.4<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Create
+Transition Conditions<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093456">2.5<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Add
+State Entry Actions<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093457">2.6<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Define
+Stateflow Variables<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093458">2.7<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Connect
+Stateflow to the Simulink Model<span style='color:windowtext;display:none;
+text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc219093459">3.0<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>        </span>
+Protect Against Overheating<span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093460">3.1<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Expand
+on the Transition Conditions<span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093461">3.2<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Create
+a Stateflow Subchart<span style='color:windowtext;display:none;text-decoration:
+none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093462">3.3<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Create
+a Graphical Function<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>18</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093463">3.3<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Test
+the Model<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>19</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc219093464">4.0<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>        </span>Add
+On/Off Fan Logic<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>20</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093465">4.1<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Add
+a Parallel State<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>20</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093466">4.2<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Define
+Fan States<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>21</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093467">4.3<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Specify
+Variable Properties in the Model Explorer<span style='color:windowtext;
+display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>23</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093468">4.4<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Add
+a State During Action<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>23</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc219093469">5.0<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>        </span>Add
+a Second Fan Speed<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>24</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093470">5.1<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Create
+a Third Fan State<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>25</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093471">5.2<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Create
+a Truth Table<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093472">5.3<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Define
+Truth Table Logic<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>27</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093473">5.4<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Integrate
+Truth Table into Chart<span style='color:windowtext;display:none;text-decoration:
+none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093474">5.5<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Add
+Time-dependent Logic<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc219093475">6.0<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>        </span>Add
+a Backup Fan<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093476">6.1<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Create
+a Second Fan Subchart<span style='color:windowtext;display:none;text-decoration:
+none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093477">6.2<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Define
+Fan Transitions<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>32</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093478">6.3<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Create
+an Embedded MATLAB Function<span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>33</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc219093479">7.0<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>        </span>Add
+a Warning Event<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>34</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093480">7.1<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Create
+an Event<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>34</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093481">7.2<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Add
+a Warning Subchart<span style='color:windowtext;display:none;text-decoration:
+none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>35</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093482">7.3<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Broadcast
+an Event<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093483">7.4<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Add
+a State Activity Output<span style='color:windowtext;display:none;text-decoration:
+none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc219093484">8.0<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>        </span>Quiz
+Time!<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>39</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc219093485">9.0<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>        </span>Further
+Information<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>40</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093486">9.1<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Product
+Information<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>40</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc219093487">9.2<span style='font-size:11.0pt;
+font-family:"Calibri","sans-serif";color:windowtext;text-decoration:none'>       </span>Documentation<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>40</span></a></p>
+
+<p class=MsoNormal><b><span style='color:maroon'>&nbsp;</span></b></p>
+
+<h2><a name="_Toc219093449"></a><a name="_Toc194372242">1.0   Problem Overview</a></h2>
+
+<p class=MsoNormal>We are building the control logic for a fan-cooled device. 
+This device is a piece of electronics equipment that generates internal heat
+when activated.  It could be an avionics R&amp;D package, a CD player in
+automobile, a PC projector, etc.  The system is being modeled in Simulink at
+present with no control logic.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The ultimate objective of the model is to simulate the
+temperature of the device as a function of its activity and local atmospheric
+conditions.  A Thermometer block from the Gauges Blockset has been connected to
+the temperature signal for ease of viewing.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img width=575 height=300
+src="Introduction%20to%20Stateflow_files/image001.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>There are five tunable parameters in the model: </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=388
+ style='width:290.75pt;margin-left:4.65pt;border-collapse:collapse'>
+ <tr style='height:15.75pt'>
+  <td width=169 nowrap valign=bottom style='width:126.75pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal><u>Parameter</u></p>
+  </td>
+  <td width=127 nowrap valign=bottom style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><u>Default Setting</u></p>
+  </td>
+  <td width=92 nowrap valign=bottom style='width:69.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><u>Range</u></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=169 nowrap valign=bottom style='width:126.75pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal>Device On/Off Switch</p>
+  </td>
+  <td width=127 nowrap valign=bottom style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>off</p>
+  </td>
+  <td width=92 nowrap valign=bottom style='width:69.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>[off on]</p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=169 nowrap valign=bottom style='width:126.75pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal>Fan Failure Switch</p>
+  </td>
+  <td width=127 nowrap valign=bottom style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>off</p>
+  </td>
+  <td width=92 nowrap valign=bottom style='width:69.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>[off on]</p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=169 nowrap valign=bottom style='width:126.75pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal>Device Power Usage</p>
+  </td>
+  <td width=127 nowrap valign=bottom style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0% off, 20% on</p>
+  </td>
+  <td width=92 nowrap valign=bottom style='width:69.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>[0 100]</p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=169 nowrap valign=bottom style='width:126.75pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal>Ambient Temperature</p>
+  </td>
+  <td width=127 nowrap valign=bottom style='width:95.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>72° F</p>
+  </td>
+  <td width=92 nowrap valign=bottom style='width:69.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>[0 125]</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>A graphical user interface is provided to control the values
+of all these parameters.  Initially, some of these parameters won't affect the
+model.  As we refine our Stateflow chart, all elements of this GUI will come
+into play.  To open the GUI, click the &quot;Open GUI&quot; button in the upper
+right corner of the Simulink model.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img border=0 width=266 height=285 id="Picture 2"
+src="Introduction%20to%20Stateflow_files/image002.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><a name="_Toc219093450"></a><a name="_Toc194372243">1.1    Test out the
+Model</a></h3>
+
+<p class=InstructionHeading>Do the following: </p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><a href="matlab:Step_1">Open the initial Simulink model</a></li>
+ <li class=MsoNormal><a href="matlab:sfWorkshopGUI">Open the graphical
+     interface</a> by clicking Open GUI</li>
+ <li class=MsoNormal>Start the simulation by pressing the Start Sim button in
+     the GUI</li>
+ <li class=MsoNormal>Observe the effect of changes in the GUI to the
+     Thermometer</li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Turn the device on and off</li>
+  <li class=MsoNormal>Change the device power usage</li>
+  <li class=MsoNormal>Change the ambient temperature</li>
+ </ol>
+ <li class=MsoNormal>Stop the simulation by pressing the Stop Sim button in the
+     GUI</li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In addition to the Thermometer, there is a scope attached to
+the temperature signal.  You may also observe the last 5000 temperature values
+by double-clicking on the Scope block.  Note that the model is running faster
+than real time unless specified in the GUI.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h2><a name="_Toc219093451"></a><a name="_Toc194372244">2.0   Add a Basic
+Stateflow Chart</a></h2>
+
+<p class=MsoNormal>Initially, the Simulink model lacks functionality to
+activate a fan or automatically deactivate the device when it gets too hot.  We
+will use a Stateflow chart to manage these activities.  Our initial step in
+this process will be to delineate between the switch being turned on and the
+device itself being on (i.e. generating heat).  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><a name="_Toc219093452">2.1    Add a Stateflow Chart to the Model</a></h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><a href="matlab:Step_1">Open the initial Simulink model</a></li>
+ <li class=MsoNormal><a href="matlab:sfWorkshopGUI">Open the graphical
+     interface</a> by clicking Open GUI</li>
+ <li class=MsoNormal><a href="matlab:simulink">Open the Simulink Library
+     Browser</a></li>
+ <li class=MsoNormal>Scroll down and click Stateflow in the library list</li>
+ <li class=MsoNormal>Click and drag the Chart block into the Step_1 Simulink
+     model</li>
+ <li class=MsoNormal>Double-click on the Chart block to open the Stateflow
+     editor</li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img border=0 width=576 height=517 id="Picture 3"
+src="Introduction%20to%20Stateflow_files/image003.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>At this point, you can close the Library Browser if you
+wish; it won't be used for the bulk of the workshop.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>While the Stateflow Chart exists inside the Simulink
+diagram, the specifics of the chart are not displayed on the top-level
+diagram.  Much like a subsystem, double-clicking enables you to examine
+Stateflow details.  Given that Stateflow manages different kinds of problems, a
+specialized Stateflow design environment is employed.  All objects used to
+build a Stateflow chart are displayed on the left side of the window.  This
+sidebar is similar to the Simulink Library Browser except that it is integrated
+into the Stateflow chart rather than a separate window.  Hovering your mouse
+over an icon will result in the description of that object displayed in the
+status bar at the bottom.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img border=0 width=432 height=421
+src="Introduction%20to%20Stateflow_files/image004.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093453">2.2    Add Device States</a></h3>
+
+<p class=InstructionHeading>Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Click the State icon in the Stateflow editor and place a
+     state in the chart</li>
+ <li class=MsoNormal>Give the state a name by typing <span style='font-family:
+     "Courier New"'>DeviceOff</span></li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Click the question mark if you missed the prompt</li>
+ </ol>
+ <li class=MsoNormal>Create a second state and name it <span class=CodeChar>DeviceOn</span>
+     </li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=408
+height=396 id="Picture 5" src="Introduction%20to%20Stateflow_files/image005.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Now we have two independent states in our chart: DeviceOff
+and Device On.  The device will be in one of these two states, but never both. 
+As such, DeviceOn and DeviceOff are considered <u>exclusive</u> states.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Based on certain conditions in the system, the device will
+need to switch between the two states DeviceOff and DeviceOn.  The two states
+are currently unconnected, so let's specify pathways for transition.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093454">2.3    Create Stateflow Transitions</a></h3>
+
+<p class=InstructionHeading>Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Hover the mouse near the edge of DeviceOff until you see a
+     crosshair</li>
+ <li class=MsoNormal>Hold down left-click and drag the mouse to the edge of
+     DeviceOn</li>
+ <li class=MsoNormal>Create a second transition from DeviceOn to DeviceOff</li>
+ <li class=MsoNormal>Grab a Default Transition from the left sidebar and
+     connect it to DeviceOff </li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=432 height=418 id="Picture 6"
+src="Introduction%20to%20Stateflow_files/image006.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>By adding these transitions, we are specifying that the
+state of the system can change from DeviceOff to DeviceOn and vice-versa.  The
+final action of adding a default transition is critical in that it defines the
+initial state of the system.  Without a default transition, a warning will
+occur.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Each transition may have a label associated with it.  A
+variety of information can be prescribed with these labels.  There is a
+specialized Stateflow language used to define pieces of information on labels
+and elsewhere.  We will touch on a few but not all of the items that can be
+prescribed on labels.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093455">2.4    Create Transition Conditions</a></h3>
+
+<p class=InstructionHeading> Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Left-click on the transition from DeviceOff to DeviceOn</li>
+ <li class=MsoNormal>Click the question mark to begin editing the label text</li>
+ <li class=MsoNormal>Type <span class=StateflowChar>[switch_on]</span> </li>
+ <li class=MsoNormal>Repeat the process for the DeviceOn to DeviceOff
+     transition, typing <span class=StateflowChar>[!switch_on]</span> this time
+     </li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img border=0 width=432 height=416
+src="Introduction%20to%20Stateflow_files/image007.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In the Stateflow language, <u>brackets signify a transition
+condition</u>.  Thus by adding the preceding text to the transition labels, we
+have stated &quot;switch to DeviceOn when the switch is on and back to
+DeviceOff when it is (!) not on.&quot;</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093456">2.5    Add State Entry Actions</a></h3>
+
+<p class=InstructionHeading> Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Click the text of DeviceOff and press enter</li>
+ <li class=MsoNormal>Type <span class=StateflowChar>entry: device_on = 0;</span></li>
+ <li class=MsoNormal>Repeat the process for the DeviceOn state, typing <span
+     class=CodeChar>entry: device_on = 1;</span><span style='font-family:"Arial","sans-serif"'>
+     </span>instead </li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img border=0 width=432 height=419 id="Picture 8"
+src="Introduction%20to%20Stateflow_files/image008.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In addition to names for states, we can add text that
+specifies additional information similar to that of transition labels.  The
+syntax <span class=CodeChar>entry:</span> will cause all subsequent text on the
+line to be executed once at entry to that state.  In our case, we have
+established a variable that is set to 0 or 1 depending on which of the two
+states we are in.  Note that without the semicolon, our statements would echo to
+the MATLAB workspace.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>You may notice that we've established two variables in our
+chart: switch_on and device_on.  These are going to correspond to the input and
+output respectively for our chart.  If however we examine our chart in the
+Simulink model, we still lack input and output ports.  No correlation has been
+made between our two variables and chart I/O.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093457">2.6    Define Stateflow Variables</a></h3>
+
+<p class=InstructionHeading> Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Open the Model Explorer through the View Menu, Model
+     Explorer Icon, or Ctrl+H</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.5in'><img border=0 width=576 height=301
+id="Picture 1" src="Introduction%20to%20Stateflow_files/image009.jpg"></p>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal>With the Chart selected in the Model Hierarchy, select
+     Data from the Add Menu or type Ctrl+D to create 2 data objects</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.5in'><img border=0 width=576 height=507
+id="Picture 4" src="Introduction%20to%20Stateflow_files/image010.jpg"></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal>Using either the middle or right pane, name one of the
+     data objects switch_on and set its scope to <b>Input</b></li>
+ <li class=MsoNormal>Using either the middle or right pane, name one of the
+     data objects device_on and set its scope to <b>Output</b></li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=576 height=396 id="Picture 7"
+src="Introduction%20to%20Stateflow_files/image011.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Unlike MATLAB, Stateflow requires all variables in the
+workspace be explicitly defined.  With the Stateflow Symbol Wizard, we have
+defined switch_on and device_on as input and output.  There are other Scopes
+for variables in Stateflow, some of which will be touched on in this Workshop. 
+If you ever need to make changes to these data objects, you can return to the
+Model Explorer and make the proper adjustments. </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093458">2.7    Connect Stateflow to the Simulink Model</a></h3>
+
+<p class=InstructionHeading> Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Insert your Stateflow chart in between the Device Switch
+     and Power Slider in the Simulink Model</li>
+ <li class=MsoNormal>Start the simulation</li>
+ <li class=MsoNormal>Observe the Stateflow chart changing from DeviceOff to
+     DeviceOn as you toggle the switch</li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img border=0 width=576 height=282 id="Picture 11"
+src="Introduction%20to%20Stateflow_files/image012.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>You may have noticed a small delay when you pushed play. 
+Stateflow charts are converted to C code and compiled upon simulation
+execution.  If no changes are made to the chart, then subsequent executions
+will not incur the build time penalty since the code is already compiled.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>If the Stateflow chart was open, you would have noticed that
+the present state of the chart was highlighted in blue as the simulation ran.  The
+visual cues provided by Stateflow are handy for analyzing your chart
+performance, especially as charts become more elaborate. </p>
+
+<p class=MsoNormal><img border=0 width=432 height=423 id="Picture 12"
+src="Introduction%20to%20Stateflow_files/image013.jpg"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h2><a name="_Toc219093459"></a><a name="_Toc194372245">3.0    Protect Against
+Overheating</a></h2>
+
+<p class=MsoNormal>At the moment, we have a functioning Stateflow chart that
+turns our device on and off depending on the setting of the switch. 
+Considering that this is the same functionality that we started with before the
+chart, nothing really has been gained yet.  We will now expand on our existing
+Stateflow chart and protect our device from overheating.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Our requirements specify that device operation is not
+critical for overall system performance (i.e. our CD player can be inactive yet
+we can still drive).  It is more important that if the device begins
+overheating, the system is shut down before damage to the hardware occurs.  In
+this particular problem, we don't want the device operating above 160° F.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093460">3.1    Expand on the Transition Conditions</a></h3>
+
+<p class=InstructionHeading> Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><a href="matlab:Step_2">Open the Step 2 model</a> or
+     continue working off your existing file</li>
+ <li class=MsoNormal>Expand the transition conditions between DeviceOn and
+     DeviceOff by typing <span class=StateflowChar>&amp;&amp; isCool(T_device)</span>
+     and <span class=StateflowChar>|| !isCool(T_device)</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=456
+height=384 id="Picture 13"
+src="Introduction%20to%20Stateflow_files/image014.jpg"></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal>Add a new data object, T_Device</li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Use the Model Explorer to add T_Device and set its scope
+      to be <b>Input</b></li>
+  <li class=MsoNormal>Alternatively, accomplish this from the Add Menu</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal><img border=0 width=446 height=396 id="Picture 10"
+src="Introduction%20to%20Stateflow_files/image015.jpg"></p>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal>Connect the Stateflow chart inport in Simulink</li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Go the Simulink model</li>
+  <li class=MsoNormal>Find the T_device signal coming out of the temperature
+      model</li>
+  <li class=MsoNormal>Hold down Ctrl and left-click the signal wire</li>
+  <li class=MsoNormal>Drag the mouse to the chart inport</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal><span style='font-family:"Arial","sans-serif"'><img
+border=0 width=576 height=235 id="Picture 14"
+src="Introduction%20to%20Stateflow_files/image016.jpg"></span></p>
+
+<p class=MsoNormal>These steps establish a temperature dependence on our
+transition conditions.  We will not transition from off to on anymore unless
+the device is sufficiently cool (even if the switch is turned on).  Similarly,
+the device will automatically turn off when it gets too hot.  The function that
+makes the distinction between cool and hot, isCool, now needs to be defined. 
+First, we'll need to free up space in our chart to make room.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093461">3.2    Create a Stateflow Subchart</a></h3>
+
+<p class=InstructionHeading>DO the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Add a new state to the chart and name it DeviceLogic</li>
+ <li class=MsoNormal>Grab the edge of the state and resize it to contain all
+     other chart contents</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=576
+height=441 id="Picture 15"
+src="Introduction%20to%20Stateflow_files/image017.jpg"></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal>Right-click the white space inside DeviceLogic and select
+     Make Contents -&gt;  Subcharted </li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=575
+height=453 id="Picture 16"
+src="Introduction%20to%20Stateflow_files/image018.jpg"></p>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal>Double-click the state to check the contents</li>
+ <li class=MsoNormal>Click the &quot;Up To Chart&quot; button to return to the
+     top level of the Stateflow chart</li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=432 height=392 id="Picture 17"
+src="Introduction%20to%20Stateflow_files/image019.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Like Simulink subsystems, creating subcharts is useful to organize
+our Stateflow logic.  As we continue adding features to our chart, the
+DeviceLogic is neatly partitioned.  Note that Stateflow doesn't open a new
+window when you explore a subchart.  Instead, it recycles a single editing
+window.  The &quot;Up To Chart&quot; button is used to return to a higher level
+of the chart.  The <span class=CodeChar>Esc</span> key is a shortcut for this button.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093462">3.3    Create a Graphical Function</a></h3>
+
+<p class=InstructionHeading>Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>From the left sidebar, add a function to the Stateflow
+     chart below DeviceLogic</li>
+ <li class=MsoNormal>Define the function as <span class=StateflowChar>status =
+     isCool(T)</span></li>
+ <li class=MsoNormal>Make the function Subcharted</li>
+ <li class=MsoNormal>Create a Stateflow chart like the figure below </li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Add two Connective Junctions</li>
+  <li class=MsoNormal>Attach a Default Transition to one of the Junctions</li>
+  <li class=MsoNormal>Define two transitions from the default junction to the
+      other</li>
+  <li class=MsoNormal>Label transition 1 <span class=StateflowChar>[T&lt;=160]{status
+      = 1;}</span></li>
+  <li class=MsoNormal>Label transition 2 <span class=StateflowChar>{status =
+      0;}</span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><img border=0
+width=575 height=307 id="Picture 18"
+src="Introduction%20to%20Stateflow_files/image020.jpg"></span></p>
+
+<p class=MsoNormal>You have just created a Stateflow graphical function!  Such
+functions are useful for creating and visualizing decision logic.  In the
+process, we have touched on a number of new concepts.  First is the Connective
+Junction.  This object is useful for defining decision logic.  In our case, we
+enter the first junction based on the default transition and have two paths to
+follow.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>We take the path denoted by the 1 when our transition
+condition of T &lt;= 160 is met.  This transition is tested first (hence the
+1).  If the condition isn't met, Stateflow will see if transition 2 is valid. 
+In our problem, we haven't specified a condition to follow the second path,
+which means that Stateflow will follow it.  It is similar to the else statement
+in if/then/else constructs.  As a rule of thumb, defining the last transition
+from a junction without a transition condition is a good idea.  Otherwise,
+Stateflow might get stuck at the condition junction.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In the Stateflow language, <u>text within curly brackets is
+known as a condition action</u>.  We have defined condition actions on both
+pathways.  Our function output, status, is set to 0 or 1 depending on the
+pathway taken.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Note that if we parse the chart, Stateflow doesn't complain
+about the new variables we have introduced, T and status.  If we check the
+Model Explorer, we will find that the variables have already been defined. 
+They are local to the function isCool and cannot be used elsewhere in the
+chart.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093463"></a><a name="_3.3_Test_the"></a>3.3    Test the
+Model</h3>
+
+<p class=InstructionHeading>Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Start the simulation</li>
+ <li class=MsoNormal>Turn the device on</li>
+ <li class=MsoNormal>Increase the Usage Level and/or Ambient Temperature until
+     the device reaches 160 degrees</li>
+ <li class=MsoNormal>Observe the DeviceLogic switching to DeviceOff and the
+     temperature oscillating around 160 degrees</li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The device now shuts off when the temperature reaches 160. 
+So long as the switch stays on though, the device turns back on a few seconds
+later when the device cools.  This design could certainly be improved upon, but
+we'll leave it as a problem to solve later.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h2><a name="_Toc219093464"></a><a name="_Toc194372246">4.0   Add On/Off Fan
+Logic</a></h2>
+
+<p class=MsoNormal>The Simulink model developers have incorporated a fan model,
+but without control logic, it cannot be activated.  In this step, we will add
+to our Stateflow chart so that we can make use of a fan.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093465">4.1    Add a </a>Parallel State</h3>
+
+<p class=InstructionHeading>Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><a href="matlab:Step_3">Open the Step 3 model</a>, or
+     continue working off your existing file</li>
+ <li class=MsoNormal>Double-click the Stateflow chart</li>
+ <li class=MsoNormal>Add a new state next to DeviceLogic</li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Name the state FanLogic</li>
+  <li class=MsoNormal>Make the state Subcharted (right-click Make Contents)</li>
+ </ol>
+ <li class=MsoNormal>Right-click on the chart background and select
+     Decomposition -&gt; Parallel</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=504
+height=358 id="Picture 19"
+src="Introduction%20to%20Stateflow_files/image021.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Note that when we changed the chart to have parallel
+decomposition, the border of DeviceLogic and FanLogic changed style to a dash. 
+It is possible (necessary in fact) to have both of these subcharts running
+simultaneously.  If you explore the contents of device logic, you will see that
+the on/off states remain exclusive.  In a similar capacity, we are going to
+establish our initial fan control logic.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093466">4.2    Define Fan States</a> </h3>
+
+<p class=InstructionHeading>Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Double-click on FanLogic</li>
+ <li class=MsoNormal>Create a chart like the figure below</li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Add two states: FanOff and FanOn</li>
+  <li class=MsoNormal>Create transitions from off to on and on to off</li>
+  <li class=MsoNormal>Define transition conditions <span class=StateflowChar>[fan_mode
+      == 1]</span> and <span class=StateflowChar>[fan_mode == 0]</span> for the
+      transitions</li>
+  <li class=MsoNormal>Define entry actions <span class=StateflowChar>V_fan[idx]
+      = 0.0;</span> and <span class=StateflowChar>V_fan[idx] = 0.75;</span> for
+      the states</li>
+  <li class=MsoNormal>Connect a Default Transition to FanOff and give it a
+      transition condition <span style='font-family:"Courier New"'>{idx = 0;}</span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=575
+height=190 id="Picture 20"
+src="Introduction%20to%20Stateflow_files/image022.jpg"></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal>Define Data Objects V_fan with scope <b>Output</b>,
+     fan_mode with scope <b>Local</b>, and idx with scope <b>Local</b></li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Try this with the Model Explorer</li>
+  <li class=MsoNormal>Alternatively, try this from the Add Menu</li>
+  <li class=MsoNormal>Alternatively, try to start your simulation, observe an
+      error, and use the Stateflow Symbol Wizard to define the data </li>
+ </ol>
+</ol>
+
+<p class=MsoNormal><img border=0 width=480 height=417
+src="Introduction%20to%20Stateflow_files/image023.jpg"></p>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal>In the Simulink model, delete the Placeholder block, and
+     connect the Chart outport to the Voltage Scale Slider </li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=575 height=240 id="Picture 22"
+src="Introduction%20to%20Stateflow_files/image024.jpg"></p>
+
+<p class=MsoNormal>Our fan model in Simulink relies on voltage as an input to
+determine the fan speed in rotations per minute.  When the fan is turned on,
+the Stateflow chart will now supply 0.75 volts to that model.  The variable
+fan_mode isn't necessary as output of the system, hence we leave it as internal
+to the chart.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Do you notice the [idx] following our V_fan settings?  We
+are anticipating V_fan to be a multi-element array, and are assigning voltage
+to the first index.  Unlike MATLAB and Simulink, <u>Stateflow uses square
+brackets to define array elements.  Indexing begins at 0 instead of 1</u> by
+default, hence we set our variable idx to zero.  This can be changed through
+the Model Explorer.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093467"></a><a name="_4.3_Specify_Variable"></a>4.3    Specify
+Variable Properties in the Model Explorer</h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Open the Model Explorer with Ctrl+H</li>
+ <li class=MsoNormal>Click Chart in the Model Hierarchy</li>
+ <li class=MsoNormal>Click V_fan in Contents</li>
+ <li class=MsoNormal>In the General Tab, set the Size of V_fan to 2 </li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=575 height=236 id="Picture 23"
+src="Introduction%20to%20Stateflow_files/image025.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The fan model is expecting an input of size 2, and so we
+need to specify it here.  Now to define the value of fan_mode.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093468">4.4    Add a State During Action</a></h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Go to the DeviceLogic subchart</li>
+ <li class=MsoNormal>Add a new line to DeviceOn that says <span
+     style='font-family:"Courier New"'>during:</span> <span
+     class=StateflowChar>fan_mode = 1;</span></li>
+ <li class=MsoNormal>Add a condition action statement to the on-to-off
+     transition: <span class=StateflowChar>{fan_mode = 0;}</span> </li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=418 height=353
+src="Introduction%20to%20Stateflow_files/image026.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The during statement will set the fan_mode variable to 1
+every time the Stateflow chart is called and the DeviceLogic chart is in the
+DeviceOn state.  Strictly speaking, we could maintain this as an entry
+command.  The reason for doing it this way will become apparent in Step 4.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The condition action statements ensure that the fan is
+turned off when the device is off.  The fan_mode is set to 0 (causing the
+FanLogic state to change) as is the fan voltage.  Setting fan_mode to 0 should
+be sufficient given that the FanOff entry condition zeros the voltage, but we
+set it in DeviceLogic for extra assurance.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Run the simulation to observe that the device is cooler than
+before when activated.  The device is at 107 degrees instead of 152 when the
+Usage Level is at 20%.  If we increase the Usage Level to 50% though, the
+device reached the 160 degree limit.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h2><a name="_Toc219093469"></a><a name="_Toc194372247">5.0   Add a Second Fan
+Speed</a></h2>
+
+<p class=MsoNormal>The temperature of our device is improving as we add more
+sophistication to our Stateflow chart.  In this next step, we'll add a second
+fan setting.  By increasing the voltage, the RPM will increase and our device
+will be able to operate at higher usage levels.  </p>
+
+<p class=MsoNormal><br>
+The following design specifications have been supplied to us.</p>
+
+<p class=MsoNormal><img border=0 width=432 height=370 id="Picture 25"
+src="Introduction%20to%20Stateflow_files/image027.jpg"></p>
+
+<p class=MsoNormal>When the equipment is between 50 and 120 degrees, we are to
+use the low speed fan setting of 0.75 volts that we have already developed.  When
+the temperature exceeds 120 degrees, the fan voltage needs to be increased to
+1.00 volts.  In situations where the ambient temperature is exceptionally cold,
+there is no need for the fan to be on.  If the device is below 50 degrees,
+requirements specify that the fan is to be turned off.  In order to accommodate
+this design, we will need to add a new state to our FanLogic.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093470">5.1    Create a Third Fan State</a></h3>
+
+<p class=InstructionHeading>Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><a href="matlab:Step_4">Open the Step 4 model</a>, or
+     continue working off your existing file</li>
+ <li class=MsoNormal>Open the FanLogic subchart</li>
+ <li class=MsoNormal>Rename FanOn to FanLo</li>
+ <li class=MsoNormal>Add a third state</li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Name it FanHi</li>
+  <li class=MsoNormal>Specify the entry action to <span class=StateflowChar>V_fan[idx]
+      = 1.0;</span></li>
+ </ol>
+ <li class=MsoNormal>Add transitions to and from FanLo to FanHi</li>
+ <li class=MsoNormal>Add transitions to and from FanOff to FanHi</li>
+ <li class=MsoNormal>Define conditions for the new transitions as specified in
+     the figure </li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=576 height=327 id="Picture 58"
+src="Introduction%20to%20Stateflow_files/image028.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Along with our third fan state, we have defined a new possibility
+to the value of fan_mode set to 2.  Our during statement in DeviceLogic simply
+sets the fan_mode to 1; this will need to modified to incorporate the more
+sophisticated, temperature-dependent logic.  We could solve this problem by
+calling a second graphical function similar to isCool.  Instead, let's try
+something new and make use of a truth table.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093471">5.2    Create a Truth Table</a></h3>
+
+<p class=InstructionHeading>Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Go to the top level of the Stateflow chart</li>
+ <li class=MsoNormal>Find Truth Table on the left sidebar and add it to the
+     chart below FanLogic</li>
+ <li class=MsoNormal>Name the table FanTable(T)</li>
+ <li class=MsoNormal>Double-click on the table to open a the truth table editor</li>
+ <li class=MsoNormal>Use the Append Row and Append Column buttons to create a
+     3x4 Condition Table and 3x1 Action Table (not counting Description and
+     Condition columns)</li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=576 height=594 id="Picture 27"
+src="Introduction%20to%20Stateflow_files/image029.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Truth tables are another method for specifying decision
+logic.  Conditions on the system are specified in the second column of the
+Condition Table.  In the decision columns to the left we can specify the
+condition one of three ways: true, false, or doesn't matter.  The syntax for truth
+table condition states are <u>T, F, and -</u>.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093472">5.3    Define Truth Table Logic</a></h3>
+
+<p class=InstructionHeading>Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Define the three conditions as shown in the figure: T &lt;
+     50, T &lt; 120, and T &lt; 160</li>
+ <li class=MsoNormal>Define the decisions</li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Specify T &lt; 50 True (T) in D1; set the action to A1</li>
+  <li class=MsoNormal>Specify T &lt; 120 True (T) in D2; set the action to A2</li>
+  <li class=MsoNormal>Specify T &lt; 160 True (T) in D3; set the action to A3</li>
+  <li class=MsoNormal>Specify all remaining decision entries to Unspecified (-)</li>
+  <li class=MsoNormal>Set the action to A1</li>
+ </ol>
+ <li class=MsoNormal>Define the first row, second column of Action Table as <span
+     class=StateflowChar>A1: fan_mode = 0;</span></li>
+ <li class=MsoNormal>Define the first row, second column of Action Table as <span
+     class=StateflowChar>A2: fan_mode = 1;</span></li>
+ <li class=MsoNormal>Define the first row, second column of Action Table as <span
+     class=StateflowChar>A3: fan_mode = 2;</span></li>
+ <li class=MsoNormal>Add condition and action descriptions as desired</li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=497 height=590 id="Picture 28"
+src="Introduction%20to%20Stateflow_files/image030.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Truth Tables evaluate decisions sequentially.  In our case,
+our first check is whether or not the temperature is less than 50 degrees.  If
+it is, we don't care about our other temperature conditions.  If we check
+Decision 2, then we already know the device is not less than 50 degrees and
+don't care about that condition.  When assembled together, FanTable will now
+assign the proper value to fan_mode based on the device temperature.  In order
+for all this to come together, we'll need to do a couple more things.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093473">5.4    Integrate Truth Table into Chart</a></h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>In DeviceLogic subchart, change the during statement to <span
+     class=StateflowChar>FanTable(T_device)</span> </li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=492 height=346
+src="Introduction%20to%20Stateflow_files/image031.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>By amending the <span class=StateflowChar>during</span>
+statement, we have declared that FanTable will be executed during every call to
+Stateflow when the device is on.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Go ahead and run the simulation, alter the parameters
+through the GUI, and observe the effect.  You should find that all the fan
+state changes occur at the proper temperature transitions, but you may notice
+an unexpected problem.  When the device exceeds 120 degrees, the high speed
+activates and can drive the temperature back below 120.  At this point, our
+controller switches to the low speed setting, the device heats up again, and we
+return to the high speed state.  Under certain operating conditions, we can
+rapidly toggle between high and low (and similarly low and off) indefinitely.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This problem is similar to the device on/off switching
+occurring when the device reaches 160 degrees, though not quite as
+detrimental.  The switching between fan modes may be acceptable, but we need to
+limit the frequency in which it occurs.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093474">5.5    Add Time-dependent Logic</a></h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Open the FanLogic subchart</li>
+ <li class=MsoNormal>Add a delay term to the High-to-Low and Low-to-Off
+     transition conditions</li>
+ <li class=MsoNormal>Insert <span class=StateflowChar>&amp;&amp; after(60,sec) </span></li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=576 height=327 id="Picture 52"
+src="Introduction%20to%20Stateflow_files/image032.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>After is another feature of the Stateflow language.  It
+enables you make declarations relative to occurrences in the chart.  In our
+problem, we are telling Stateflow to &quot;change from the higher to lower fan
+speed one minute after the temperature threshold is reached.&quot;  This
+ensures that the cycling takes as least one minute to complete.  Try running
+the model at slower settings in the GUI to observe the new behavior.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>In older versions of Stateflow, the &quot;sec&quot; phrase
+is not recognized.  In our case, we have set up a local variable ts to record
+when the previous transition took place.  Another approach might be to use the &quot;after(n,tick)&quot;
+construct.  Tick is a special phrase in Stateflow that relates to the number of
+times the chart has been accessed.  If Stateflow was sampled at 5 Hz for
+instance, then we could use &quot;after(300,tick)&quot; in our chart.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h2><a name="_Toc219093475"></a><a name="_Toc194372248">6.0   Add a Backup Fan</a></h2>
+
+<p class=MsoNormal>Now that we have our fan and device logic more or less in
+place, it's time to add some system redundancy.  In our case, the device is
+installed with a backup cooling fan.  It lies dormant under most
+circumstances.  When the primary fan breaks however, the backup fan needs to
+activate and take over the job of cooling the device.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093476">6.1    Create a Second Fan Subchart</a></h3>
+
+<p class=InstructionHeading>Do the following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><a href="matlab:Step_5">Open the Step 5 model</a> or
+     continue working off your existing file</li>
+ <li class=MsoNormal>Go to the FanLogic subchart</li>
+ <li class=MsoNormal>Place all existing contents of FanLogic in a new subchart
+     titled FanSystem </li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Add a new state and name it FanSystem</li>
+  <li class=MsoNormal>Resize the state to fit all other chart contents within FanSystem</li>
+  <li class=MsoNormal>Right-click and make FanSystem contents subcharted</li>
+  <li class=MsoNormal>Shrink the size of FanSystem</li>
+ </ol>
+ <li class=MsoNormal>Add a History Junction to FanSystem</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=576
+height=305 id="Picture 61"
+src="Introduction%20to%20Stateflow_files/image033.jpg"></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal>Go back up to the FanLogic level and create a transition
+     that goes from FanSystem back to itself</li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=412 height=310 id="Picture 64"
+src="Introduction%20to%20Stateflow_files/image034.jpg"></p>
+
+<p class=MsoNormal>We will make use of our idx variable to activate the backup
+fan when a failure occurs.  The History Junction enables Stateflow to remember
+which of the three states FanSystem was in (FanOff, FanLo, or FanHi) prior to
+the transition.  This way, the Backup Fan will start in the same state that the
+Primary Fan was in before the failure.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Note that we could have copied our FanSystem into a separate
+chart, resulting in a Primary and Backup system inside FanLogic.  Instead, we
+choose to take advantage of the ability for transitions to loop back on their
+departing state.  This will make management of the design easier (only place to
+have to make changes) and result in more efficient C code (no duplicate
+instruction sets).  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093477">6.2    Define Fan Transitions</a></h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<p class=MsoNormal style='margin-left:39.0pt;text-indent:-.25in'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Define
+the transition condition (square brackets) as <span class=StateflowChar>isFanBroken(fan_mode,fan_rpm[0],t)
+&amp;&amp; idx == 0</span></p>
+
+<p class=MsoNormal style='margin-left:39.0pt;text-indent:-.25in'><span
+class=StateflowChar><span style='font-family:"Times New Roman","serif"'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>Define
+the condition action (curly brackets) as <span class=StateflowChar>V_fan[0] =
+0.0; idx = 1;</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><span style='font-family:"Courier New"'><img
+border=0 width=301 height=246 id="Picture 67"
+src="Introduction%20to%20Stateflow_files/image035.jpg"></span></p>
+
+<p class=MsoNormal style='margin-left:39.0pt;text-indent:-.25in'><span
+class=StateflowChar><span style='font-family:"Times New Roman","serif"'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span
+class=StateflowChar><span style='font-family:"Times New Roman","serif"'>Define
+the new variable fan_rpm with scope <b>Input</b> via the Model Explorer, Add
+Menu, or Symbol Wizard</span></span></p>
+
+<p class=MsoNormal style='margin-left:39.0pt;text-indent:-.25in'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=StateflowChar><span style='font-family:"Times New Roman","serif"'>Go to
+the Simulink model and connect the RPM_fan to the chart inport </span></span></p>
+
+<p class=MsoNormal><img border=0 width=576 height=244 id="Picture 36"
+src="Introduction%20to%20Stateflow_files/image036.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>By default, we use the primary fan.  If the fan breaks, then
+we will use the Backup Fan, setting the voltage of that fan to the current
+primary fan value. Note that we have not added any logic to handle failure of
+the Backup Fan.  We could expand this chart to include additional logic to
+check if the Primary Fan has been fixed.  Feel free to try this on your own
+after the class.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>We have defined a new function isFanBroken in our transition
+condition.  This could be a graphical function or truth table like the ones we
+constructed in Steps 2 and 3.  Instead, we are going to rely on Embedded
+MATLAB.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093478">6.3    Create an Embedded MATLAB Function</a></h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Go to the top level of the Stateflow chart</li>
+ <li class=MsoNormal>Add an Embedded MATLAB block from the left sidebar (don't
+     worry with naming it)</li>
+ <li class=MsoNormal>Double-click on the Embedded MATLAB block</li>
+ <li class=MsoNormal>Make your Embedded MATLAB code look like the following:</li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:"Courier New";color:blue'>function</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:black'> busted =
+isFanBroken(setting,speed,curTime)</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:"Courier New";color:black'> </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:"Courier New";color:black'>busted =
+checkFailure(setting,speed,curTime);</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>When you complete entering the function details and close
+the Embedded MATLAB editor, your chart should look something like this:</p>
+
+<p class=MsoNormal><img border=0 width=432 height=424 id="Picture 37"
+src="Introduction%20to%20Stateflow_files/image037.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='text-autospace:none'>Embedded MATLAB provides a
+different approach for defining logic inside Stateflow (and also Simulink).  In
+certain cases, you may not prefer graphical representations of the logic.  eML
+is a method of describing your logic with traditional MATLAB coding
+approaches.  This is especially useful in situations where existing MATLAB code
+is available.  In our project, a generic hardware failure algorithm has been
+adapted for the fan failure logic.  </p>
+
+<p class=MsoNormal style='text-autospace:none'>&nbsp;</p>
+
+<p class=MsoNormal style='text-autospace:none'>If you open up your eML
+function, right click on <span style='font-size:10.0pt;font-family:"Courier New";
+color:black'>checkFailure</span>, and open the selection, you notice the <span
+style='font-size:10.0pt;font-family:"Courier New";color:forestgreen'>%#eml</span>
+pragma on the function line.  This specifies <span style='font-size:10.0pt;
+font-family:"Courier New";color:black'>checkFailure</span> as an Embedded
+MATLAB function.  In many cases, this will be the only change you will need to
+make to existing MATLAB code, though be careful.  The Embedded MATLAB language
+is a subset of MATLAB; not all functions or coding constructs are available. 
+For a list of available functions and best coding practices, refer to the <a
+href="http://www.mathworks.com/access/helpdesk/help/toolbox/eml/index.html?/access/helpdesk/help/toolbox/eml/ug/bq37agh.html">Embedded
+MATLAB Documentation</a>.  </p>
+
+<p class=MsoNormal style='text-autospace:none'>&nbsp;</p>
+
+<p class=MsoNormal style='text-autospace:none'>If you desire full MATLAB
+language functionality, you can make <a
+href="http://www.mathworks.com/access/helpdesk/help/toolbox/eml/ug/eml.extrinsic.html">extrinsic
+MATLAB function declarations</a>.   eML is ordinarily compiled into C code
+during Simulink execution.  Extrinsic functions are not compiled and instead
+call MATLAB directly.  While handy for preliminary Stateflow design, extrinsic
+functions cannot be used when you desire deployment of your charts on embedded
+hardware (since you will be unable to call MATLAB).  </p>
+
+<p class=MsoNormal style='text-autospace:none'>&nbsp;</p>
+
+<p class=MsoNormal>Run the simulation now and switch on the Primary Fan Failure
+radio button in the GUI.  Inside Stateflow, you can observe the FanSystem
+transition highlight blue when you activate a fan failure for the first time.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h2><a name="_Toc219093479"></a><a name="_Toc194372249">7.0   Add a Warning
+Event</a></h2>
+
+<p class=MsoNormal>Now we have redundancy built into our system, but shouldn't
+we alert the operator that something has gone wrong?  In this step, we introduce
+the concept of Stateflow events.  Events signify when things happen.  They can
+be external input from Simulink or generated internally.  Events can in turn be
+output to the Simulink model as needed.  In our case, we will create an
+internal event.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><a name="_Toc219093480">7.1    Create an Event</a></h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><a href="matlab:Step_6">Open the Step 6 model</a> or
+     continue working off your existing file</li>
+ <li class=MsoNormal>Go to the Add -&gt; Event -&gt; Local in the pulldown menu</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=572
+height=257 id="Picture 38"
+src="Introduction%20to%20Stateflow_files/image038.jpg"></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal>Name the event &quot;Fevent&quot; </li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=441 height=308 id="Picture 39"
+src="Introduction%20to%20Stateflow_files/image039.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>We could have set up our Fevent logic in Stateflow first and
+defined it later similar to the way we've done things in previous steps.  In
+this approach, we define it in advance.  It enables us to define additional
+settings on events and data (such as the Description) that we wouldn't have
+access to in the Symbol Wizard.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093481">7.2    Add a Warning Subchart</a></h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Add a new state and name it Warnings</li>
+ <li class=MsoNormal>Right-click and make the contents subcharted</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=432
+height=284 id="Picture 40"
+src="Introduction%20to%20Stateflow_files/image040.jpg"></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal>Go into Warnings and create a chart as shown in the figure</li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>Create 2 states: OK and fWARN</li>
+  <li class=MsoNormal>Add a default transition to OK</li>
+  <li class=MsoNormal>Add a transition from OK to fWARN</li>
+  <li class=MsoNormal>Label the transition <span class=StateflowChar>Fevent</span>
+      </li>
+ </ol>
+</ol>
+
+<p class=MsoNormal><img border=0 width=384 height=356 id="Picture 41"
+src="Introduction%20to%20Stateflow_files/image041.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Note that Fevent is yellow on the transition and that we did
+not put Fevent in brackets.  This is because <u>events are different than
+conditions</u>.  A complete description of the differences cannot be covered in
+the workshop, but we will make use of one particular event capability in our
+model.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093482">7.3    Broadcast an Event</a></h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Go to the FanLogic subchart</li>
+ <li class=MsoNormal>Add <span class=StateflowChar>send(Fevent,Warnings)</span>
+     to FanSystem’s transition condition action</li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=437 height=364 id="Picture 70"
+src="Introduction%20to%20Stateflow_files/image042.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Fevent now occurs when the transition from to the Backup Fan
+takes place.  The send statement broadcasts Fevent to the Warnings subchart,
+which in turn will cause the transition from OK to fWARN.  Our internal event
+design is complete, but how do we information back to Simulink?</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093483">7.4    Add a State Activity Output</a></h3>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Right-click on fWARN and select <span class=StateflowChar>Properties</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=267
+height=468 id="Picture 43"
+src="Introduction%20to%20Stateflow_files/image043.jpg"></p>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal>Check the <span class=StateflowChar>Output State Activity</span>
+     box</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><img border=0 width=360
+height=344 id="Picture 44"
+src="Introduction%20to%20Stateflow_files/image044.jpg"></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal>Go to Simulink and open the Library Browser</li>
+ <li class=MsoNormal>Under Sinks, drag a Display block into the model</li>
+ <li class=MsoNormal>Connect the Chart outport fWARN to the Display</li>
+</ol>
+
+<p class=MsoNormal><img border=0 width=576 height=209 id="Picture 45"
+src="Introduction%20to%20Stateflow_files/image045.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Stateflow has the ability to output the status of states
+directly through the Properties dialogue.  Note that we have created an output
+to the chart without defining a new Stateflow variable.  When the state of the
+chart is in fWARN, the output will be a boolean true (and a false otherwise). 
+Run your model and verify that causing a primary fan failure causes the display
+block to show a 1.  The <a href="matlab:step_7">Step 7 model</a> has replaced
+the Display block with an LED from the Gauges Blockset.  Feel free to try this
+out.  </p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h2><a name="_Toc219093484"></a><a name="_Toc194372250">8.0   Quiz Time!</a></h2>
+
+<p class=MsoNormal>It's time to take of the training wheels and apply all that
+you've learned about Stateflow up to this point.  Remember in <a
+href="#_3.3_Test_the">Section 3</a> when we noted that the device cycles on and
+off indefinitely when it reaches 160 degrees?  If this was a DVD player, we'd
+get to watch a few seconds of our movie followed by a few seconds of blank
+screen.  The problem can't be ignored anymore; we need to improve our control
+logic.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>There is no single right answer to this problem.  Ask
+yourself how you would want the device to perform if you were the user, and see
+if you can develop the logic in Stateflow to handle it.  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=InstructionHeading>Do the Following:</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><a href="matlab:Step_7">Open the Step 7 model</a> or
+     continue working off your existing file</li>
+ <li class=MsoNormal>Amend the chart to prevent on/off cycling when reaching
+     160 degrees</li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>One possible solution to the problem is available in the <a
+href="matlab:Step_8">Step 8</a> model (or the <a href="matlab:Step_8_alt">alternate
+Step 8</a> for earlier MATLAB releases).  DeviceLogic has been altered somewhat
+from Step 7.  Check it out to compare to your design or use it as a last resort
+if you're stuck.  No cheating!</p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h2 style='margin-left:.5in;text-indent:-.5in'><a name="_Toc219093485">9.0<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Further
+Information</a></h2>
+
+<p class=MsoNormal>If you would like to learn more about Stateflow, here are
+some helpful links.  Thank you for your time and best of luck as you begin to
+develop your own event-driven systems.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3><a name="_Toc219093486">9.1    Product Information</a></h3>
+
+<p class=MsoNormal><a href="http://www.mathworks.com/products/stateflow/">Stateflow
+Product Page</a></p>
+
+<p class=MsoNormal><a
+href="http://www.mathworks.com/products/demos/stateflow/introduction/index.html">Introduction
+to Stateflow Webinar</a></p>
+
+<p class=MsoNormal><a
+href="http://www.mathworks.com/products/stateflow/demos.html">Stateflow
+Demonstrations</a></p>
+
+<p class=MsoNormal><a
+href="http://www.mathworks.com/services/training/courses/index.html?sec=stateflow&amp;by=product&amp;format_type=1">Stateflow
+Training</a></p>
+
+<p class=MsoNormal><a
+href="http://www.mathworks.com/products/stateflow/userstories.html">Stateflow
+User Stories</a></p>
+
+<p class=MsoNormal><a
+href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=16304&amp;objectType=File">Stateflow
+Pattern Wizard Add On</a></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<h3><a name="_Toc219093487">9.2    Documentation</a></h3>
+
+<p class=MsoNormal><a
+href="http://www.mathworks.com/access/helpdesk/help/toolbox/stateflow/ug/f0-76034.html#f0-123134">Stateflow
+Transition Action Types</a></p>
+
+<p class=MsoNormal><a
+href="http://www.mathworks.com/access/helpdesk/help/toolbox/stateflow/index.html?/access/helpdesk/help/toolbox/stateflow/ug/f0-34084.html#brh91yy-9_2">Stateflow
+Temporal Logic</a></p>
+
+<p class=MsoNormal><a
+href="http://www.mathworks.com/access/helpdesk/help/toolbox/stateflow/index.html?/access/helpdesk/help/toolbox/stateflow/ug/f7-7373.html#brdsb6f">Stateflow
+Events</a></p>
+
+<p class=MsoNormal><a
+href="http://www.mathworks.com/access/helpdesk/help/toolbox/stateflow/index.html?/access/helpdesk/help/toolbox/stateflow/ug/bqtktf3.html">Building
+Mealy and Moore Charts</a></p>
+
+<p class=MsoNormal><a
+href="http://www.mathworks.com/access/helpdesk/help/toolbox/stateflow/index.html?/access/helpdesk/help/toolbox/stateflow/ug/brcw032.html">Continuous
+Time Stateflow Charts</a></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a href="#_top">Back
+to Top</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+The models in this solution directory are identical to the models in the workshop directory.  This directory exists to maintain the original models... just in case you modify the models in the workshop directory and want to revert back to the originals.

@@ -1,0 +1,865 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Step 4: Testing By Simulation</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-11-05"><meta name="DC.source" content="Step_04.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:2.0em; color:#000077; line-height:150%; font-weight:bold; text-align:center }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.6em; color:#444444; font-weight:bold; font-style:italic; text-align:left; vertical-align:bottom; line-height:200%; border-top:2px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#555555; font-style:italic; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px;} 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Step 4: Testing By Simulation</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Introduction</a></li><li><a href="#2">Verification and Validation Tools Used</a></li><li><a href="#3">Simulink Test Overview</a></li><li><a href="#4">Generating a Test Harness Model</a></li><li><a href="#5">Importing Test Vectors</a></li><li><a href="#6">Completing the Test Harness Model</a></li><li><a href="#7">Executing the Functional Tests and Analyzing the Results</a></li><li><a href="#8">Using SDI for Results Verification</a></li><li><a href="#9">Online Assessment with Model Verification Blocks</a></li><li><a href="#10">Test Sequence Blocks for Inputs and Online Assessment</a></li><li><a href="#11">Simulink Test Manager Overview</a></li><li><a href="#12">Importing a Test Harness into the Test Manager</a></li><li><a href="#13">Using a Baseline for Test Case Asssessment</a></li><li><a href="#14">Introduction to the Model Coverage Concept</a></li><li><a href="#15">Collecting Model Coverage From Functional Test Cases</a></li><li><a href="#16">Using the Model Coverage Results</a></li><li><a href="#17">Summary</a></li></ul></div><h2>Introduction<a name="1"></a></h2><p><img vspace="5" hspace="5" src="Step_04_CruiseControl_WhatNow.png" alt=""> </p><p>The most common verification method is to actually execute the algorithm or program, i.e. so called dynamic testing. In Simulink this is done using simulation by simply pressning <b>PLAY</b>, or what we covered in the first step of the workshop, <b>Ad-hoc Testing</b>.  This step takes a more formalized, structured approach to dynamic testing, goes beyond ad-hoc testing to answer the next questions:</p><div><ul><li>Does the implementation pass all functional requirements?</li><li>Do the tests completely exercise the implementation?</li></ul></div><p>Dynamic testing involves creating a set of test vectors based on the functional requirements, and ensuring that the algorithm output meets the expected output. However, determining that the algorithm behaves as expected is only part of the overall test objectives. Another vital part is to get information about how much of the algorithm has been covered by the test cases. In Simulink, you can do this by enabling model coverage measurements during simulation. Model coverage is able to tell us whether or not we have achieved a "minimal" amount of testing. For example, if we have not reached 100% decision coverage, we have not exercised or tested 100% of our model.</p><p>In this section, we will see how we can quickly build up a test environment by creating a test harness model, capturing model coverage information and verify that our test results meet our expected outputs. We will use the test harness to debug the model when we fail the functional testing.  Model coverage results will also help the debugging effort but more fundamentally it will provide an additional check that the implementation matches the requirements beyond the previous traceability discussion.</p><p><img vspace="5" hspace="5" src="Step_04_SimTestWorklow.png" alt=""> </p><h2>Verification and Validation Tools Used<a name="2"></a></h2><div><ul><li>Simulation Data Inspector (part of Simulink)</li><li>Simulink Verification and Validation</li><li>Simulink Test</li></ul></div><h2>Simulink Test Overview<a name="3"></a></h2><p>In this step we will use the features of <b>Simulink Test</b> to perform the dynamic testing of our cruise controller.  <b>Simulink Test</b> supports interactive testing of the model with creation and management of <b>test harnesses</b>.  To create input vectors for use in the harness we will mostly use Signal Builder and a brief example of using a <b>test sequence</b> block from <b>Simulink Test</b>.  For evaluation we will introduce the use of a another instance of a <b>test sequence</b> block.  And lastly we will use the <b>test manager</b> of <b>Simulink Test</b> to automate the execution, evaluation and reporting of our results.</p><p><img vspace="5" hspace="5" src="Step_04_SLTestOverview.png" alt=""> </p><h2>Generating a Test Harness Model<a name="4"></a></h2><p>Simulink Verification and Validation contains several functions that help the user create test harness models to facilitate the dynamic functional testing.  The test harness provides an environment to:</p><div><ul><li>Import test cases</li><li>Link to requirements</li><li>Execute the tests</li><li>Evaluate the results</li><li>Debug the failed tests</li><li>Measure test completeness</li></ul></div><p>In the past, to create the test harness we would have used the <b>slvnvmakeharness</b> function provided in the <b>Simulink Verification and Validation</b> toolbox.  An identical function <b>sldvmakeharness</b> is provided with the <b>Simulink Design Verifier</b> toolbox.  But we will use the new <b>test harness</b> creation feature provided by <b>Simulink Test</b>.</p><p><img vspace="5" hspace="5" src="Step_04_SLTestHarnessOverview.png" alt=""> </p><p>To generate the test harness model, do the following:</p><p>1.  Open <b>CruiseControl.slx</b> - <b><a href="matlab:loadFuncTestMdl;">click here</a></b>.</p><p>Examine the state chart to see the Cruise Control logic includes the bug fixes from our previous work:</p><div><ul><li>Exit condition fix based on work done in <b>Step 0: Ad-hoc Testing</b></li><li>Calculation order and calibration lower limit fix based on work done in <b>Step 3:  Detecting Design Errors</b></li></ul></div><p>2.  To begin the creation of the test harness, select <b>Analysis</b>, <b>Test Harness</b>, <b>Create Test Harness (Cruise Control) ...</b>.  If the menu selection for <b>Create Test Harness (ComputeTargetSpeed)...</b> appears, you need to de-select the <b>ComputeTargetSpeed</b> subsystem, otherwise you will be creating a harness for the subsystem instead of the model.</p><p><img vspace="5" hspace="5" src="Step_04_SLTestHarnessMenu.png" alt=""> </p><p>3.  In the "Create Test Harness" user interface, enter the name "CruiseControl_Harness_Short".</p><p>4.  Select "Signal Builder" as the source block. Select "OK" when completed.</p><p><img vspace="5" hspace="5" src="Step_04_SLTestHarnessUI.png" alt=""> </p><p>The harness model consists of 4 components:</p><div><ul><li>Signal Builder block</li><li>Input Conversion Subsystem which contains datatype and rate transition blocks. Buses and Vectors are also handled within this subsystem</li><li>Cruise Control (unit under test as a model reference)</li><li>Output Conversion Subsystem which contains datatype and rate transition blocks. Buses and Vectors are also handled within this subsystem</li></ul></div><p><img vspace="5" hspace="5" src="Step_04_SLTestHarness.png" alt=""> </p><p>The harness model is automatically configured to measure and report model coverage. Since this will be handled in detail in an upcoming section, we will disable model coverage for now.</p><p>To disable model coverage temporarily, run the following command - <b>disableModelCoverage('CruiseControl_Harness_Short')</b> or <b><a href="matlab:disableModelCoverage('CruiseControl_Harness_Short');">click here</a></b>.</p><h2>Importing Test Vectors<a name="5"></a></h2><p>Based on our algorithm requirements, we have created a test plan document from which we have derived test vectors in an Excel file. This is a common way to define test cases in the industry. Next, we are going to populate the Signal Builder block with test vectors, including expected outputs, from the Excel file.</p><p>Do the following:</p><p>1.  Open the test plan document &#8211; <b><a href="matlab:winopen('cruise_control_testplan_short.docx')">click here</a></b>.</p><p>2.  Review the 6 test case descriptions.  This is only addressing a subset of the requirements for now.</p><p>3.  Open the Excel file that contains the test vectors - <b><a href="matlab:winopen('CruiseControlTests_short.xlsx')">click here</a></b>. For each of the 6 test cases described in the test plan document, there is a corresponding Excel sheet.  In a later section of this step will use a larger set of test cases but for this introduction the smaller set will be more efficient.</p><p>4.  Open the <b>Signal Builder</b> block in the test harness and select <b>File</b>, and <b>Import from File</b>.</p><p><img vspace="5" hspace="5" src="Step_04_SB_ImportMenu.png" alt=""> </p><p>5. Under <b>Select file to import</b>, click <b>Browse</b>, navigate to the <b>Test</b> directory, select the <b>CruiseControlTests_short.xlsx</b> file.  <b>Import File</b> dialog will now have the <b>Files to Import</b> textbox populated.</p><p><img vspace="5" hspace="5" src="Step_04_SB_Import_FileSelect.png" alt=""> </p><p>6. After the data has been imported, check the <b>Select All</b>, <b>Replace existing dataset</b>, and <b>Confirm Selection options</b>, and then <b>Apply</b>.</p><p><img vspace="5" hspace="5" src="Step_04_SB_ImportUI.png" alt=""> </p><p>7. Select the <b>No, import without saving</b> option. The Signal Builder block should now have all the Excel data.</p><p><img vspace="5" hspace="5" src="Step_04_SB_ImportPopup.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_04_SB_TestCasesUI.png" alt=""> </p><h2>Completing the Test Harness Model<a name="6"></a></h2><p>Please note that during the import, the signal lines between the Signal Builder block and the Test Unit have been disconnected. We now need to setup the harness model for easily logging and inspecting of the simulation results. Please do the following:</p><p>1. Reconnect lines from "Signal Builder" to the "Input Conversion Subsystem" block.</p><p>2. Add and connect conversion blocks, "boolean" to the <b>engaged</b> and "uint8" to the <b>tspeed</b> Signal Builder outputs.</p><p>3. Add terminators and connect to the signal conversion blocks.</p><p>4. Label the signals to be <b>Exp_engaged</b> and <b>Exp_tspeed</b>.</p><p>You should now have a harness model that looks like the picture below:</p><p><img vspace="5" hspace="5" src="Step_04_HarnessConnected.png" alt=""> </p><p>To log the signals for easy inspection, please do the following:</p><p>5. Select the 4 named signals: <b>engaged</b>, <b>tspeed</b>, <b>Exp_engaged</b>, and <b>Exp_tspeed</b>.</p><p>6. With the 4 signals selected, click on the arrow next to the Siimulation Data Inspector button and select <b>Log Selected Signals to Workspace</b> (see picture below).</p><p>This will make small antennas appear on the signal lines, indicating that these signals will be logged during simulation.</p><p><img vspace="5" hspace="5" src="Step_04_SelectSignals.png" alt=""> </p><p>To analyze the logged output signals, we will send the logged signals to the Simulation Data Inspector tool.  Do the following:</p><p>7. Click on the arrow next to the Simulation Data Inspector button and select <b>Send Logged Workspace Data to Data Inspector</b> (see picture below).</p><p><img vspace="5" hspace="5" src="Step_04_SendLogged2SDI.png" alt=""> </p><p>The last item needed is set or check the data logging has been configured</p><p>8. Open the "Model Configuration".  Navigate to "Data Import/Export" and check "Signal logging".</p><p><img vspace="5" hspace="5" src="Step_04_MdlCfg4Logging.png" alt=""> </p><p>You should now have a model that looks like this:</p><p><img vspace="5" hspace="5" src="Step_04_HarnessReady4Logging.png" alt=""> </p><p>We can now run the simulation and inspect the results.</p><p><i>Note 1:</i> The steps above can be scripted.</p><p><i>Note 2:</i> If you haven't been able to complete the setup above you can open a pre-configured model by <a href="matlab:loadFinalShortHarness_SLT;">clicking here</a>.</p><h2>Executing the Functional Tests and Analyzing the Results<a name="7"></a></h2><p>Simulation Data Inspector (SDI) allows the user to:</p><div><ul><li>View logged data</li><li>Visually compare different signals within the same simulation</li><li>Compare the same signals between different simulations</li><li>Compare different simulation runs, perfect for Software-In-the-Loop (SIL) and Processor-In-the-Loop (PIL) comparisons Generate HTML reports of comparison results</li></ul></div><p>To run all (6) test cases and view the results in the Simulation Data Inspector, do the following:</p><p>1. Clear any runs in the Simulation Data Inspector - <b><a href="matlab:Simulink.sdi.clear;">click here</a></b>.</p><p>2. Open the <b>Signal Builder</b> block.</p><p>3. Click on the <b>Run All</b> button. This will run all (6) simulations in sequence.</p><p><img vspace="5" hspace="5" src="Step_04_SB_RunAll.png" alt=""> </p><p>Once the first simulation is complete, the Simulation Data Inspector (SDI) will open, containing the logged data from the simulation. After each run has completed, its simulation data will be added to SDI. When all (6) runs have completed, try to do the following actions in SDI:</p><p>4. Plot individual signals.</p><p>5. Verify that the outputs match the expected outputs for a few of the 6 different runs (see picture below).</p><p><img vspace="5" hspace="5" src="Step_04_SDI_SignalCompare1.png" alt=""> </p><p>Now let's use the <b>Simulation Data Inspector</b> (SDI) built-in "Comparison" feature for signals.</p><p>6. Select the "Compare" tab in SDI and select the "Signals" option.</p><p>7. Right-click on the "Exp_tspeed" signal, select <b>Compare Signals</b>, <b>Set as Baseline</b></p><p>8. Right-click on the "tspeed" signal, select <b>Compare Signals</b>, <b>Set as Compare To</b></p><p><img vspace="5" hspace="5" src="Step_04_SDI_SignalCompare2a.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_04_SDI_SignalCompare2b.png" alt=""> </p><p>This way we can compare the Test Unit outputs to the expected outputs manually by plotting or use the "Comparison" feature. But isn't there a way to % automate this verification process. <b>Yes, there is!</b> In the next section look at a way to do this.  In a later section we will use the more full featured test setup, execution, evaluation and reporting features provided by <b>Simulink Test</b>.</p><p>For more information on Simulation Data Inspector, please refer to the <a href="matlab:web([docroot%20'/simulink/ug/visual-inspection-of-signal-data.html'])">Help</a> documentation.</p><h2>Using SDI for Results Verification<a name="8"></a></h2><p>We can use Compare Run and the report generation capability together with the Simulation Data Inspector (SDI) API commands to automatically perform and generate reports of the comparison between the model outputs and expected outputs. Please note that this method is not limited to model outputs. You can use it for any signal inside the Test Unit you want to compare to expected values.</p><p>Do the following:</p><p>1. Make sure you have data from the (6) test cases in Simulation Data Inspector.</p><p>2. Manually delete any comparisons in from the previous section in Simulation Data Inspector.</p><p>3. If you finished creating the harness, run the following command  - or <b><a href="matlab:createFuncTestReport('CruiseControl_Harness_Short','CruiseControl');">click here</a></b>.</p><pre class="language-matlab">&gt;&gt; createFuncTestReport(<span class="string">'CruiseControl_Harness_Short'</span>,<span class="string">'CruiseControl'</span>);
+</pre><p>4. If you loaded the pre-made harness, run the following command - or <b><a href="matlab:createFuncTestReport('CruiseControl_Harness_ShortFinal','CruiseControl');">click here</a></b>.</p><pre class="language-matlab">&gt;&gt; createFuncTestReport(<span class="string">'CruiseControl_Harness_ShortFinal'</span>,<span class="string">'CruiseControl'</span>);
+</pre><p>This will generate comparison reports for the (6) test cases in Simulation Data Inspector (outputs vs. expected outputs).</p><h2>Online Assessment with Model Verification Blocks<a name="9"></a></h2><p>Another way to automatically verify the outputs to the expected outputs is to use the Model Verification blocks in Simulink (see picture below).</p><p><img vspace="5" hspace="5" src="Step_04_VerificationBlocks.png" alt=""> </p><p>To show how the model verification blocks can be used, do the following:</p><p>1. Open a harness model where these blocks have already been incorporated - <b><a href="matlab:loadAssertShortHarness_SLT;">click here</a>.</b></p><p>In the harness model you find a Verification subsystem where the comparison between the outputs and expected outputs are done during simulation using Assert blocks. If a mismatch is detected, the simulation will stop and tell you which block has asserted and when.</p><p><img vspace="5" hspace="5" src="Step_04_VerificationSystem.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_04_VerificationBlocks_Compare.png" alt=""> </p><p>In the Signal Builder block the asserts in the model are visible on the right side of the dialog. Here you can enable and disable specific asserts (or other model verfication blocks) for the appropriate test cases.</p><p><img vspace="5" hspace="5" src="Step_04_SB_asserts.png" alt=""> </p><p>Let's execute a test using this verification approach.</p><p>2.  Open <b>Signal Builder</b> and click the button <b>Run All</b>.</p><p>3.  Verify that all test cases pass and no assert was triggered.</p><p>Let's now change the <b>EXP_tspeed</b> signal for the last test case, <b>Disengage with Brake</b> in <b>Signal Builder</b> such that it no longer matches the output <b>tspeed</b>.</p><p>4.  Select the <b>EXP_tspeed</b> signal in <b>Disengage with Brake</b> so it becomes highlighted (a number of green circles will appear on the signal, indicating the data points making up the signal).</p><p>5.  Select the data point shown in the picture below for a value of (T=1) and (Y=50).  A red circle will appear around the data point when selected.</p><p>6.  Enter a value of (40) for Y as shown in the picture below.</p><p><img vspace="5" hspace="5" src="Step_04_SB_ModifySignal.png" alt=""> </p><p>7.  Click <b>Run</b> in <b>Signal Builder</b>.</p><p>The dialog window below will now appear indicating that an assert was detected for <b>tspeed</b> at <b>time = 1 second</b> and the simulation has stopped.</p><p><img vspace="5" hspace="5" src="Step_04_AssertDetected.png" alt=""> </p><p>Assertions can be enabled and disabled for individual test cases. Let's disable the assert for the <b>tspeed</b> signal for <b>Disengage with Brake</b> in order to make the test run to completion. Disabling assertions could be used for test cases where a specific signal is not of interest in order to not have to create an expected output for that signal.</p><p>Make sure you have <b>Disengage with Brake</b> open in <b>Signal Builder</b>. On the right side of Signal Builder dialog you should see all the assertions in the model listed - <b>assert_engaged</b> and <b>assert_tspeed</b> - and whether they are <b>active (= checked)</b>.</p><p>8.  Uncheck the checkbox for the <b>assert_tspeed</b>. This will disable the assert which may require you to set "Block enable by group". (see picture below).</p><p><img vspace="5" hspace="5" src="Step_04_DisableAssert.png" alt=""> </p><p>9.  Click <b>Run</b> in <b>Signal Builder</b>.</p><p>The simulation for <b>Disengage with Brake</b> will now finish without triggering an assertion.</p><p>Enabling assertions on a per test case basis is one way make your test case creation and evaluation more efficient.  It is typical for a unit test case to only be concerned with some (not all) of the outputs need to follow an expected output.  This reduces the time to create a test case where you only need to excite a subset of the inputs and evaluate a subset of the outputs to verify the functional behavior as specified in the requirement.</p><h2>Test Sequence Blocks for Inputs and Online Assessment<a name="10"></a></h2><p>In this section we will use a test harness based on test sequence blocks for creating test inputs and determining assessments.</p><p><img vspace="5" hspace="5" src="Step_04_SLTestSequenceOverview.png" alt=""> </p><p>Using <b>Test Sequence</b> blocksk will result in a a more "natural language" approach to test case creation.  To show this approach we create a test based on the "Disengage with Brake" test case. From the test plan below it is easy to interpret the intention of the "Disengage with Brake" test case:</p><p><img vspace="5" hspace="5" src="Step_04_DisengageWithBrake.png" alt=""> </p><p>To show how the test sequence blocks can be used, do the following:</p><p>1. Open a harness model where these blocks have already been incorporated - <b><a href="matlab:loadTestSeqShortHarness_SLT;">click here</a>.</b></p><p><img vspace="5" hspace="5" src="Step_04_TestSeqHarness.png" alt=""> </p><p>2. Open the "Test Sequence" input blocks to see how the test case inputs have been interpreted.</p><p><img vspace="5" hspace="5" src="Step_04_TestSeqInputs.png" alt=""> </p><p>3. Open the "Test Assessment" blocks to see how the test case assessments have been interpreted.</p><p><img vspace="5" hspace="5" src="Step_04_TestSeqAssessment.png" alt=""> </p><p>4. Open the <b>Model Explorer</b> to see how the "Active_Step" is signal is configured as an output from the "Test Sequence" inputs block to be used by the "Test Assessment" block.</p><p>The "Active_Step" is an enumeration signal that enumeration values for all the steps in input block.  The "Active_Step" signal is then used by the "Test Assessment" to control the flow through the corresponding evaluation states.</p><p>5. Run the test to show the test passes.</p><p>6. Modify the "Test Assessment" block to demonstrate a failure similar to the previous example.</p><p><img vspace="5" hspace="5" src="Step_04_TestSeqAssessmentFail.png" alt=""> </p><p>The failure is displayed in the <b>Diagnositic Viewer</b> and in the "Test Assessment" block.</p><p><img vspace="5" hspace="5" src="Step_04_TestSeqFailMsg.png" alt=""> </p><h2>Simulink Test Manager Overview<a name="11"></a></h2><p><img vspace="5" hspace="5" src="Step_04_SLTestManagerOverview1.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_04_SLTestManagerOverview2.png" alt=""> </p><h2>Importing a Test Harness into the Test Manager<a name="12"></a></h2><p>We will now show how to automatically create test cases by importing an existing <b>Simulink Test Harness</b>.  To show how the test harness import feature can be used, do the following:</p><p>1. Open a version of the <b>CruiseControl.slx</b> model with only one test harness - <b><a href="matlab:loadSingleHarnessMdl;">click here</a></b>.</p><p>2. Open the <b>Test Manager</b> by selecting <b>Analysis</b>,*Test Manager...* from the harness model menu.</p><p>3. Create a "Test File from Model" by <b>New</b>, <b>Test File</b>, <b>Test File from Model</b>.</p><p><img vspace="5" hspace="5" src="Step_04_TestFileFromMdl.png" alt=""> </p><p>4. Select "Use Current Model".  Enter "testSim" for the file in "Location". And select "Test type" as "Simulation".</p><p><img vspace="5" hspace="5" src="Step_04_NewTestFileUI.png" alt=""> </p><p>The test cases are automatically created for each Signal Builder test case in the "CruiseControl_Harness_ShortAssert" harness.</p><p>5. To run all the test cases, select the "CruiseControl_Harness_ShortAssert" test suite and press "Run".</p><p><img vspace="5" hspace="5" src="Step_04_RunSimTestFile.png" alt=""> </p><p>The test results show all test cases passing.  The data may be analyzed with embedded <b>Simulation Data Inspector</b>.</p><p><img vspace="5" hspace="5" src="Step_04_SimTestPass.png" alt=""> </p><p>6.In the Signal Builder block of the harness, change the expected tspeed for the "DisengageWithBrake" to (40) at time (1) to fail the test as we did in the previous examples.</p><p>7. Re-run the "DisengageWithBrake" to see the failure displayed in the results.</p><p><img vspace="5" hspace="5" src="Step_04_SimTestFail.png" alt=""> </p><p>Notice the failure indicated in the results.  Also the "assert" block is terminating the simulation.  When this happens there are no simulation results to analyze.</p><h2>Using a Baseline for Test Case Asssessment<a name="13"></a></h2><p>In this step we will use a "baseline" type test case to indicate a failure and produce complete simulation results for analysis. To show how a "baseline" test case suite can be created and used, do the following:</p><p>For a baseline test, the baseline data is used to determine the assessment.  So for this test we will use the assert signal but we will no longer need the assert "stop simulation" behavior to determine the assessment.</p><p>1. For each "assert" block in the harness, uncheck "Stop simulation when assertion fails".</p><p><img vspace="5" hspace="5" src="Step_04_UncheckAssertStopSim.png" alt=""> </p><p>2. Create a "Test File from Model" by <b>New</b>, <b>Test File</b>, <b>Test File from Model</b>.</p><p>3. Select "Use Current Model".  Enter "testBaseline" for the file in "Location". And select "Test type" as "Baseline".</p><p>The test cases are automatically created for each Signal Builder test case in the "CruiseControl_Harness_ShortAssert" harness.</p><p><img vspace="5" hspace="5" src="Step_04_BaselineTestFile.png" alt=""> </p><p>4. For a "baseline" test, the "Baseline Criteria" needs to be entered. Select "Add", and select "assertBaseline.mat" for the criteria.</p><p>In the baseline criteria data, "tspeed_Assertion" and "engaged_Assertion" signals are always (1) or true for all the time points.</p><p>5. Select the "DisengageWithBrake" test case to show the test failure but it produces results for analysis.</p><p><img vspace="5" hspace="5" src="Step_04_BaselineTestFail.png" alt=""> </p><h2>Introduction to the Model Coverage Concept<a name="14"></a></h2><p>In this section we will focus on measuring structural model coverage, a measurement of how much of the model has been exercised by your test cases.  Coverage is an important aspect of Verification and Validation. It can help you in several different ways:</p><div><ul><li>Determine dead logic "branches".</li><li>Determine if sufficient test vectors have been created</li><li>Determine if the existing requirements are sufficient</li></ul></div><p>The types of structural model coverage that are supported are:</p><div><ul><li>Decision</li><li>Condition</li><li>Modified Condition/Decision Coverage (MC/DC)</li></ul></div><p>An explaination of the above coverage metrics is shown for a simple model in the picture below:</p><p><img vspace="5" hspace="5" src="Step_04_ModelCoverageIntro.png" alt=""> </p><p>Please note that Simulink Verification and Validation tool offers more model coverage analysis capability than the ones listed above.  It can also collect coverage on:</p><div><ul><li>Signal Range</li><li>Lookup Table</li><li>Signal Size</li><li>Custom objectives using Simulink Design Verifier blocks</li></ul></div><h2>Collecting Model Coverage From Functional Test Cases<a name="15"></a></h2><p>Besides verifying that the unit under test behaves as expected w.r.t. functional requirements, it's also important to make sure that the test vectors have exercised the model to a high degree, i.e. that we have a high model coverage. For this example we will use the same model but with a more complete set of input test vectors based on the requirements.</p><p>To enable Simulink to measure the model coverage for a simulation, do the following:</p><p>1. Open the <b>CruiseControl.slx</b> model with the coverage test harness - <b><a href="matlab:loadCoverageHarnessMdl_SLT;">click here</a></b>.</p><p>2.  Next we will configure the harness to collect model coverage during the test execution.  Go to <b>Analysis</b>, <b>Coverage</b>, and select <b>Settings</b>.</p><p><img vspace="5" hspace="5" src="Step_04_CoverageMenuSLT.png" alt=""> </p><p>3. Check the checkboxes as shown in the picture below for the tabs: <b>Coverage</b>, <b>Results</b> and <b>Reporting</b>.</p><p><img vspace="5" hspace="5" src="Step_04_CovDialog1.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_04_CovDialog2.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_04_CovDialog3.png" alt=""> </p><p>4. Click <b>OK</b>.</p><p>We will now measure coverage for all referenced models (in our case the Test Unit - <b>CruiseControl</b>). We will also display the model coverage results using model coloring as well as generating an HTML report with detailed results.</p><p>But first we will manually create a test case in the <b>Test Manager</b> and use a new feature call "Iterations".</p><p>5. To enable the "Iterations" feature, run the following command  - or <b><a href="matlab:stm.internal.util.enableFeature('iterationsFeature',1)">click here</a></b>.</p><pre class="language-matlab">&gt;&gt; stm.internal.util.enableFeature(<span class="string">'iterationsFeature'</span>, 1)
+</pre><p>You may have to run it twice, until the return value is (1).</p><p>6. Open the <b>Test Manager</b>, navigate to the "TESTS" tab and select <b>New</b>, <b>Test File</b>, <b>Blank Test File</b>.  Enter "testCoverage" for the test file name.</p><p>7. Navigate to the "New Test Case 1", for the "Model", select the "Use Current Model Icon".</p><p>8. For the "Harness", select "CruiseControl_Harness_SB" from the dropdown.</p><p>9. In the "INPUTS" section, check "Signal Builder Group" and select "Refresh signal builder group list, performs update diagram".</p><p>10. In the "BASELINE CRITERIA" section, select "+Add...", and select the "assertBaseline.mat" for the criteria.</p><p><img vspace="5" hspace="5" src="Step_04_CovTestCaseSetup.png" alt=""> </p><p>11. In the "ITERATIONS" section, select "Auto Generate" in "TABLE ITERATIONS" subsection.</p><p>12. In the "Iterations Templates" dialog, select "Signal Builder Group".</p><p><img vspace="5" hspace="5" src="Step_04_IterTemplateSetup.png" alt=""> </p><p>13. Highlight "New Test Case 1", and select the "Run" icon on the toolstrip as before.</p><p>After all (14) runs have been completed, the model coverage report will show up:</p><p><img vspace="5" hspace="5" src="Step_04_CovReportSummarySLT.png" alt=""> </p><p>The summary section contains all the coverage metrics, as well as how each subsystem contributes to the overall coverage calculation.</p><h2>Using the Model Coverage Results<a name="16"></a></h2><p>The Model Coverage report contains detailed information about what parts of the model are uncovered by the functional test cases.  The user can use this information to either:</p><div><ul><li><b>Develop more test vectors for the missing coverage.</b></li><li><b>Check to see if there are missing requirements.</b></li><li><b>Identify implementation design issues.</b></li></ul></div><p>The coverage report provides a summary and detailed analysis of the coverage collected for the <b>Cruise Control</b> model.  The 92% overall decision coverage as shown in the previous section is relatively high for a first attempt.  The coverage goal may be as low 80% for a non-safety related applications but often we will attempt to get 100%, particularly if it is safety related.  The coverage report detail shown below provides insight into the completeness of our test cases.  Specifically the exit transition is never occurring for the vehicle speed limit check.  Likely this is due to either a missing requirement or test case.  When we check the requirements we realize that we need to add a few test cases to more completely cover this functional requirement.</p><p><img vspace="5" hspace="5" src="Step_04_CovReportDetail.png" alt=""> </p><p>Alternatively, the model has been color coded such that the user can get a quick over view of what and how much is missing.  The same missing information is shown from the context window by selecting the same transition.  The model coloring shows that we are never exiting from a "hold" button input for the <b>AccelResSw</b> or increase speed button.  Based on this we found that we did not have complete requirements with regard to the "hold" function.</p><p><img vspace="5" hspace="5" src="Step_04_CovColors.png" alt=""> </p><p>We created (5) new test cases based on examining the model coverage report and the model coloring of the coverage results.</p><p>1.  Add these test cases to the Signal Builder harness.  Use the "Import from File..." feature to add the test cases from "CruiseControlTestsTopItOff.xlsx".</p><p>2. For "Placement of Selected Data:", select "Append groups".</p><p><img vspace="5" hspace="5" src="Step_04_SBtopItOff.png" alt=""> </p><p>3. Return to the <b>Test Manager</b>.  Refresh the "Signal Builder Group" to bring in the additional test cases.</p><p>4. Delete all iterations and "Auto Generate" new iterations from the "Signal Builder Group".  There should be (19) iterations.</p><p>5. Highlight "New Test Case 1", and select the "Run" icon on the toolstrip as before.</p><p>In the <b>Test Manager</b>, the last test case did not pass.</p><p><img vspace="5" hspace="5" src="Step_04_CovAssertErrorSLT.png" alt=""> </p><p>The assertion blocks are checking that the implementation outputs <b>engage</b> and <b>tspeed</b> match the expected results.  Now that we have a greater number of test cases to cover more of the implementation, we find a design issue.  We can also look at the coverage results on the model that may help us locate the source of the design issue.</p><p><img vspace="5" hspace="5" src="Step_04_CovDesignIssue.png" alt=""> </p><p>We need to change the comparison operator for the (2) exit conditions from "&gt;" to "&gt;=" and "&lt;" to "&lt;=".</p><p>6.  Fix the issue for both exit conditions, or load the fixed version of the <b>CruiseControl</b> - <b><a href="matlab:loadFullCoverageFixTestHarness;">click here</a></b></p><p>7. Highlight "New Test Case 1", and select the "Run" icon on the toolstrip as before.</p><p><img vspace="5" hspace="5" src="Step_04_FullCovReport.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_04_FullCovColors.png" alt=""> </p><p>With the design fix and the additional test cases we now have 100% coverage and no assertion fail messages to the command window.</p><p>This shows a typical workflow where we iterated by analyzing the coverage results, add new functional est cases and eventually get to 100% coverage. Also realize that we know 100% coverage is possible because we fixed the error based on the order of integer calculations using Design Error Detection from previous section.</p><p>But, what if our logic is very complicated, and even after several iterations, we were only able to get to, say, 95% coverage? Is there anything we can do to speed up this iterative process? Yes, with Simulink Design Verifier, the user can also ask the tool to ignore the coverage already achieved by the functional test vectors and generate the missing test cases to achieve 100% coverage. The user can then e.g. use these test cases as "hints" to reverse engineer functional tests from them. This will be covered in the step <b>Test Generation</b>.</p><h2>Summary<a name="17"></a></h2><p>In this method we have shown a function verfication workflow:</p><div><ol><li>Creating an "internal" <b>test harness</b> within the implementation model</li><li>Importing test cases from a spreadsheet into the model</li><li>Adding a subsystem to do automatically check the outputs</li><li>Analyzing the results with the built-in Simulation Data Inspector (SDI)</li><li>Using <b>test sequence</b> blocks for creating a "natural language" test case</li><li>Automating the execution of test case with the <b>test Manager</b></li><li>Measuring the completeness of the test cases with model coverage</li><li>Using coverage and output comparisons to isolate and debug issues</li></ol></div><p>We were again able to find and fix these issues early in our development process, increasing confidence in our design.  We will continue to answer more of the questions in the next steps with our structured and formal testing framework for securing the quality, robustness and safety of our cruise controller.</p><p><img vspace="5" hspace="5" src="Step_04_CruiseControl_Summary.png" alt=""> </p><p>When you are finished, close all models and files - <b><a href="matlab:bdclose('all');">click here</a></b>.</p><p>Go to <b>Step 5: Test Case Generation</b> - <b><a href="Step_05.html">click here</a></b>.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Step 4: Testing By Simulation
+%
+%% Introduction
+%
+% <<Step_04_CruiseControl_WhatNow.png>>
+%
+% The most common verification method is to actually execute the algorithm
+% or program, i.e. so called dynamic testing. In Simulink this is done using
+% simulation by simply pressning *PLAY*, or what we covered in the
+% first step of the workshop, *Ad-hoc Testing*.  This step takes a more 
+% formalized, structured approach to dynamic testing, goes beyond ad-hoc
+% testing to answer the next questions:
+% 
+% * Does the implementation pass all functional requirements?
+% * Do the tests completely exercise the implementation?
+%
+% Dynamic testing involves creating a set of test vectors based on the
+% functional requirements, and ensuring that the algorithm output meets the 
+% expected output. However, determining that the algorithm behaves as
+% expected is only part of the overall test objectives. Another vital part
+% is to get information about how much of the algorithm has been covered by
+% the test cases. In Simulink, you can do this by enabling model coverage
+% measurements during simulation. Model coverage is able to tell us whether
+% or not we have achieved a "minimal" amount of testing. For example, if we
+% have not reached 100% decision coverage, we have not exercised or tested
+% 100% of our model. 
+%
+% In this section, we will see how we can quickly build up a test
+% environment by creating a test harness model, capturing model coverage
+% information and verify that our test results meet our expected outputs.
+% We will use the test harness to debug the model when we fail the
+% functional testing.  Model coverage results will also help the debugging 
+% effort but more fundamentally it will provide an additional check that 
+% the implementation matches the requirements beyond the previous 
+% traceability discussion.
+%  
+% <<Step_04_SimTestWorklow.png>>
+%
+%% Verification and Validation Tools Used
+% * Simulation Data Inspector (part of Simulink)
+% * Simulink Verification and Validation
+% * Simulink Test
+%
+%% Simulink Test Overview
+% In this step we will use the features of *Simulink Test* to perform the
+% dynamic testing of our cruise controller.  *Simulink Test* supports 
+% interactive testing of the model with creation and management of *test
+% harnesses*.  To create input vectors for use in the harness we will mostly
+% use Signal Builder and a brief example of using a *test sequence* block 
+% from *Simulink Test*.  For evaluation we will introduce the use of a 
+% another instance of a *test sequence* block.  And lastly we will use the 
+% *test manager* of *Simulink Test* to automate the execution, evaluation 
+% and reporting of our results.
+%
+% <<Step_04_SLTestOverview.png>>
+%
+%% Generating a Test Harness Model
+%
+% Simulink Verification and Validation contains several functions that help
+% the user create test harness models to facilitate the dynamic functional
+% testing.  The test harness provides an environment to:
+%
+% * Import test cases
+% * Link to requirements
+% * Execute the tests
+% * Evaluate the results
+% * Debug the failed tests
+% * Measure test completeness
+%
+% In the past, to create the test harness we would have used the 
+% *slvnvmakeharness* function provided in the *Simulink Verification and 
+% Validation* toolbox.  An identical function *sldvmakeharness* is provided
+% with the *Simulink Design Verifier* toolbox.  But we will use the new 
+% *test harness* creation feature provided by *Simulink Test*.
+%
+% <<Step_04_SLTestHarnessOverview.png>>
+%
+% To generate the test harness model, do the following:
+% 
+% 1.  Open *CruiseControl.slx* - *<matlab:loadFuncTestMdl; click here>*. 
+%
+% Examine the state chart to see the Cruise Control logic includes the bug
+% fixes from our previous work:
+%
+% * Exit condition fix based on work done in *Step 0: 
+% Ad-hoc Testing*
+% * Calculation order and calibration lower limit fix based on work done in
+% *Step 3:  Detecting Design Errors*
+%
+% 2.  To begin the creation of the test harness, select *Analysis*, *Test 
+% Harness*, *Create Test Harness (Cruise Control) ...*.  If the menu  
+% selection for *Create Test Harness (ComputeTargetSpeed)...* appears, you
+% need to de-select the *ComputeTargetSpeed* subsystem, otherwise you will 
+% be creating a harness for the subsystem instead of the model.
+% 
+% <<Step_04_SLTestHarnessMenu.png>>
+%
+% 3.  In the "Create Test Harness" user interface, enter the name
+% "CruiseControl_Harness_Short".  
+%
+% 4.  Select "Signal Builder" as the source block. Select "OK" when
+% completed.
+%
+% <<Step_04_SLTestHarnessUI.png>>
+%
+% The harness model consists of 4 components:
+%
+% * Signal Builder block
+% * Input Conversion Subsystem which contains datatype and rate transition blocks.
+% Buses and Vectors are also handled within this subsystem 
+% * Cruise Control (unit under test as a model reference)
+% * Output Conversion Subsystem which contains datatype and rate transition blocks.
+% Buses and Vectors are also handled within this subsystem 
+% 
+% <<Step_04_SLTestHarness.png>>
+%
+% The harness model is automatically configured to measure and report model
+% coverage. Since this will be handled in detail in an upcoming section,
+% we will disable model coverage for now.
+%
+% To disable model coverage temporarily, run the following command - 
+% *disableModelCoverage('CruiseControl_Harness_Short')* or
+% *<matlab:disableModelCoverage('CruiseControl_Harness_Short'); click here>*.
+%
+%% Importing Test Vectors 
+%
+% Based on our algorithm requirements, we have created a test plan
+% document from which we have derived test vectors in an Excel file. This
+% is a common way to define test cases in the industry. Next, we are going
+% to populate the Signal Builder block with test vectors, including
+% expected outputs, from the Excel file.  
+%
+% Do the following:
+%
+% 1.  Open the test plan document –
+% *<matlab:winopen('cruise_control_testplan_short.docx') click here>*.
+%
+% 2.  Review the 6 test case descriptions.  This is only addressing a
+% subset of the requirements for now.
+%
+% 3.  Open the Excel file that contains the test vectors - 
+% *<matlab:winopen('CruiseControlTests_short.xlsx') click here>*. For each 
+% of the 6 test cases described in the test plan document, there is a
+% corresponding Excel sheet.  In a later section of this step will use a 
+% larger set of test cases but for this introduction the smaller set will 
+% be more efficient.
+%
+% 4.  Open the *Signal Builder* block in the test harness and select 
+% *File*, and *Import from File*.
+%
+% <<Step_04_SB_ImportMenu.png>>
+%
+% 5. Under *Select file to import*, click *Browse*, navigate to the *Test*
+% directory, select the *CruiseControlTests_short.xlsx* file.  *Import 
+% File* dialog will now have the *Files to Import* textbox populated.
+%
+% <<Step_04_SB_Import_FileSelect.png>>
+%
+% 6. After the data has been imported, check the *Select All*, *Replace
+% existing dataset*, and *Confirm Selection options*, and then *Apply*.
+%
+% <<Step_04_SB_ImportUI.png>>
+%
+% 7. Select the *No, import without saving* option. The Signal Builder
+% block should now have all the Excel data.
+%
+% <<Step_04_SB_ImportPopup.png>>
+%
+% <<Step_04_SB_TestCasesUI.png>>
+%
+%% Completing the Test Harness Model
+%
+% Please note that during the import, the signal lines between the Signal
+% Builder block and the Test Unit have been disconnected. We now need to
+% setup the harness model for easily logging and inspecting of the
+% simulation results. Please do the following:
+%
+% 1. Reconnect lines from "Signal Builder" to the "Input Conversion
+% Subsystem" block.
+%
+% 2. Add and connect conversion blocks, "boolean" to the *engaged* and "uint8" to the
+% *tspeed* Signal Builder outputs.
+%
+% 3. Add terminators and connect to the signal conversion blocks.
+%
+% 4. Label the signals to be *Exp_engaged* and *Exp_tspeed*.
+%
+% You should now have a harness model that looks like the picture below:
+%
+% <<Step_04_HarnessConnected.png>>
+%
+% To log the signals for easy inspection, please do the following:
+%
+% 5. Select the 4 named signals: *engaged*, *tspeed*,
+% *Exp_engaged*, and *Exp_tspeed*. 
+%
+% 6. With the 4 signals selected, click on the arrow next to the 
+% Siimulation Data Inspector button and select *Log Selected Signals to 
+% Workspace* (see picture below).
+%
+% This will make small antennas appear on the signal lines, indicating that
+% these signals will be logged during simulation.
+%
+% <<Step_04_SelectSignals.png>>
+%
+% To analyze the logged output signals, we will send the logged signals to 
+% the Simulation Data Inspector tool.  Do the following: 
+%
+% 7. Click on the arrow next to the Simulation Data Inspector button and 
+% select *Send Logged Workspace Data to Data Inspector* (see picture below).
+%
+% <<Step_04_SendLogged2SDI.png>>
+%
+% The last item needed is set or check the data logging has been configured
+%
+% 8. Open the "Model Configuration".  Navigate to "Data Import/Export" and
+% check "Signal logging".
+%
+% <<Step_04_MdlCfg4Logging.png>>
+%
+% You should now have a model that looks like this:
+%
+% <<Step_04_HarnessReady4Logging.png>>
+%
+% We can now run the simulation and inspect the results.
+%
+% _Note 1:_ The steps above can be scripted.
+%
+% _Note 2:_ If you haven't been able to complete the setup above you can open
+% a pre-configured model by
+% <matlab:loadFinalShortHarness_SLT; clicking here>.
+%
+%% Executing the Functional Tests and Analyzing the Results  
+%
+% Simulation Data Inspector (SDI) allows the user to:
+% 
+% * View logged data
+% * Visually compare different signals within the same simulation
+% * Compare the same signals between different simulations
+% * Compare different simulation runs, perfect for Software-In-the-Loop
+% (SIL) and Processor-In-the-Loop (PIL) comparisons
+% Generate HTML reports of comparison results
+%
+% To run all (6) test cases and view the results in the Simulation Data
+% Inspector, do the following: 
+%
+% 1. Clear any runs in the Simulation Data Inspector - *<matlab:Simulink.sdi.clear; click here>*.
+%
+% 2. Open the *Signal Builder* block.
+%
+% 3. Click on the *Run All* button. This will run all (6) simulations in
+% sequence.
+% 
+% <<Step_04_SB_RunAll.png>>
+%
+% Once the first simulation is complete, the Simulation Data Inspector
+% (SDI) will open, containing the logged data from the simulation. After
+% each run has completed, its simulation data will be added to SDI. When
+% all (6) runs have completed, try to do the following actions in SDI:
+%
+% 4. Plot individual signals.
+%
+% 5. Verify that the outputs match the expected outputs for a few of the
+% 6 different runs (see picture below).
+%
+% <<Step_04_SDI_SignalCompare1.png>>
+%
+% Now let's use the *Simulation Data Inspector* (SDI) built-in "Comparison"
+% feature for signals.
+%
+% 6. Select the "Compare" tab in SDI and select the "Signals" option.
+%
+% 7. Right-click on the "Exp_tspeed" signal, select *Compare Signals*, 
+% *Set as Baseline*
+%
+% 8. Right-click on the "tspeed" signal, select *Compare Signals*, *Set as
+% Compare To*
+%
+% <<Step_04_SDI_SignalCompare2a.png>>
+%
+% <<Step_04_SDI_SignalCompare2b.png>>
+%
+% This way we can compare the Test Unit outputs to the expected outputs
+% manually by plotting or use the "Comparison" feature. But isn't there a 
+% way to % automate this verification process. *Yes, there is!* In the next
+% section look at a way to do this.  In a later section we will use the 
+% more full featured test setup, execution, evaluation and reporting 
+% features provided by *Simulink Test*.
+% 
+% For more information on Simulation Data Inspector, please refer to the
+% <matlab:web([docroot%20'/simulink/ug/visual-inspection-of-signal-data.html'])
+% Help> documentation.
+%
+%% Using SDI for Results Verification
+%
+% We can use Compare Run and the report generation capability together with
+% the Simulation Data Inspector (SDI) API commands to automatically perform and
+% generate reports of the comparison between the model outputs and expected
+% outputs. Please note that this method is not limited to model outputs.
+% You can use it for any signal inside the Test Unit you want to compare to
+% expected values.
+%
+% Do the following:
+%
+% 1. Make sure you have data from the (6) test cases in Simulation
+% Data Inspector.
+%
+% 2. Manually delete any comparisons in from the previous section in 
+% Simulation Data Inspector.
+%
+% 3. If you finished creating the harness, run the following command  - or
+% *<matlab:createFuncTestReport('CruiseControl_Harness_Short','CruiseControl'); click
+% here>*.
+%
+%   >> createFuncTestReport('CruiseControl_Harness_Short','CruiseControl');
+%
+% 4. If you loaded the pre-made harness, run the following command - or
+% *<matlab:createFuncTestReport('CruiseControl_Harness_ShortFinal','CruiseControl'); click
+% here>*.
+%
+%   >> createFuncTestReport('CruiseControl_Harness_ShortFinal','CruiseControl');
+%
+% This will generate comparison reports for the (6) test cases in Simulation
+% Data Inspector (outputs vs. expected outputs). 
+%
+%% Online Assessment with Model Verification Blocks
+%
+% Another way to automatically verify the outputs to the expected outputs
+% is to use the Model Verification blocks in Simulink (see picture below).
+%
+% <<Step_04_VerificationBlocks.png>>
+%
+% To show how the model verification blocks can be used, do the following:
+%
+% 1. Open a harness model where these blocks have already been incorporated 
+% - *<matlab:loadAssertShortHarness_SLT; click here>.*
+% 
+% In the harness model you find a Verification subsystem where the
+% comparison between the outputs and expected outputs are done during
+% simulation using Assert blocks. If a mismatch is detected, the simulation
+% will stop and tell you which block has asserted and when.
+%
+% <<Step_04_VerificationSystem.png>>
+%
+% <<Step_04_VerificationBlocks_Compare.png>>
+%
+% In the Signal Builder block the asserts in the model are visible on the
+% right side of the dialog. Here you can enable and disable specific asserts
+% (or other model verfication blocks) for the appropriate test cases.
+%
+% <<Step_04_SB_asserts.png>>
+% 
+% Let's execute a test using this verification approach.
+%
+% 2.  Open *Signal Builder* and click the button *Run All*.
+%
+% 3.  Verify that all test cases pass and no assert was triggered.
+%
+% Let's now change the *EXP_tspeed* signal for the last test case, 
+% *Disengage with Brake* in *Signal Builder* such that it no longer matches
+% the output *tspeed*.
+%
+% 4.  Select the *EXP_tspeed* signal in *Disengage with Brake* so it becomes
+% highlighted (a number of green circles will appear on the signal,
+% indicating the data points making up the signal).
+%
+% 5.  Select the data point shown in the picture below for a value of (T=1) 
+% and (Y=50).  A red circle will appear around the data point when selected.
+%
+% 6.  Enter a value of (40) for Y as shown in the picture below.
+%
+% <<Step_04_SB_ModifySignal.png>>
+%
+% 7.  Click *Run* in *Signal Builder*.
+%
+% The dialog window below will now appear indicating that an assert was
+% detected for *tspeed* at *time = 1 second* and the simulation has
+% stopped.
+%
+% <<Step_04_AssertDetected.png>>
+%
+% Assertions can be enabled and disabled for individual test cases. Let's
+% disable the assert for the *tspeed* signal for *Disengage with Brake* in
+% order to make the test run to completion. Disabling assertions could be
+% used for test cases where a specific signal is not of interest in order 
+% to not have to create an expected output for that signal.
+%
+% Make sure you have *Disengage with Brake* open in *Signal Builder*. On
+% the right side of Signal Builder dialog you should see all the assertions
+% in the model listed - *assert_engaged* and *assert_tspeed* - and whether
+% they are *active (= checked)*.
+%
+% 8.  Uncheck the checkbox for the *assert_tspeed*. This will disable
+% the assert which may require you to set "Block enable by group".  
+% (see picture below).
+%
+% <<Step_04_DisableAssert.png>>
+%
+% 9.  Click *Run* in *Signal Builder*.
+%
+% The simulation for *Disengage with Brake* will now finish without 
+% triggering an assertion.  
+%
+% Enabling assertions on a per test case basis is one way make your test
+% case creation and evaluation more efficient.  It is typical for a unit
+% test case to only be concerned with some (not all) of the outputs need to
+% follow an expected output.  This reduces the time to create a test case
+% where you only need to excite a subset of the inputs and evaluate a
+% subset of the outputs to verify the functional behavior as specified in
+% the requirement.
+%
+%% Test Sequence Blocks for Inputs and Online Assessment
+%
+% In this section we will use a test harness based on test sequence blocks
+% for creating test inputs and determining assessments.  
+%
+% <<Step_04_SLTestSequenceOverview.png>>
+%
+% Using *Test Sequence* blocksk will result in a 
+% a more "natural language" approach to test case creation.  To show this 
+% approach we create a test based on the "Disengage with Brake" test case.
+% From the test plan below it is easy to interpret the intention of the 
+% "Disengage with Brake" test case:
+%
+% <<Step_04_DisengageWithBrake.png>>
+%
+% To show how the test sequence blocks can be used, do the following:
+%
+% 1. Open a harness model where these blocks have already been incorporated 
+% - *<matlab:loadTestSeqShortHarness_SLT; click here>.*
+% 
+% <<Step_04_TestSeqHarness.png>>
+%
+% 2. Open the "Test Sequence" input blocks to see how the test case inputs 
+% have been interpreted.
+%
+% <<Step_04_TestSeqInputs.png>>
+%
+% 3. Open the "Test Assessment" blocks to see how the test case assessments 
+% have been interpreted.
+%
+% <<Step_04_TestSeqAssessment.png>>
+%
+% 4. Open the *Model Explorer* to see how the "Active_Step" is signal is
+% configured as an output from the "Test Sequence" inputs block to be used
+% by the "Test Assessment" block.  
+%
+% The "Active_Step" is an enumeration signal that enumeration values for 
+% all the steps in input block.  The "Active_Step" signal is then used by
+% the "Test Assessment" to control the flow through the corresponding
+% evaluation states.
+%
+% 5. Run the test to show the test passes.
+%
+% 6. Modify the "Test Assessment" block to demonstrate a failure similar to
+% the previous example.
+%
+% <<Step_04_TestSeqAssessmentFail.png>>
+%
+% The failure is displayed in the *Diagnositic Viewer* and in the "Test
+% Assessment" block.
+%
+% <<Step_04_TestSeqFailMsg.png>>
+%
+%% Simulink Test Manager Overview
+%
+% <<Step_04_SLTestManagerOverview1.png>>
+%
+% <<Step_04_SLTestManagerOverview2.png>>
+%
+%% Importing a Test Harness into the Test Manager
+%
+% We will now show how to automatically create test cases by importing an
+% existing *Simulink Test Harness*.  To show how the test harness import 
+% feature can be used, do the following:
+%
+% 1. Open a version of the *CruiseControl.slx* model with only one test 
+% harness - *<matlab:loadSingleHarnessMdl; click here>*. 
+%
+% 2. Open the *Test Manager* by selecting *Analysis*,*Test Manager...* from
+% the harness model menu.
+%
+% 3. Create a "Test File from Model" by *New*, *Test File*, *Test File from Model*. 
+%
+% <<Step_04_TestFileFromMdl.png>>
+%
+% 4. Select "Use Current Model".  Enter "testSim" for the file in
+% "Location". And select "Test type" as "Simulation".
+%
+% <<Step_04_NewTestFileUI.png>>
+%
+% The test cases are automatically created for each Signal Builder test
+% case in the "CruiseControl_Harness_ShortAssert" harness.
+%
+% 5. To run all the test cases, select the
+% "CruiseControl_Harness_ShortAssert" test suite and press "Run".
+%
+% <<Step_04_RunSimTestFile.png>>
+%
+% The test results show all test cases passing.  The data may be analyzed
+% with embedded *Simulation Data Inspector*.
+%
+% <<Step_04_SimTestPass.png>>
+%
+% 6.In the Signal Builder block of the harness, change the expected tspeed 
+% for the "DisengageWithBrake" to (40) at time (1) to fail the test as we 
+% did in the previous examples.
+%
+% 7. Re-run the "DisengageWithBrake" to see the failure displayed in the
+% results.
+%
+% <<Step_04_SimTestFail.png>>
+%
+% Notice the failure indicated in the results.  Also the "assert" block is
+% terminating the simulation.  When this happens there are no simulation
+% results to analyze.  
+%
+%% Using a Baseline for Test Case Asssessment
+%
+% In this step we will use a "baseline" type test case to indicate a 
+% failure and produce complete simulation results for analysis. To show how a 
+% "baseline" test case suite can be created and used, do the following:
+%
+% For a baseline test, the baseline data is used to determine the
+% assessment.  So for this test we will use the assert signal but we will 
+% no longer need the assert "stop simulation" behavior to determine the
+% assessment.
+%
+% 1. For each "assert" block in the harness, uncheck "Stop simulation when
+% assertion fails".
+%
+% <<Step_04_UncheckAssertStopSim.png>> 
+%
+% 2. Create a "Test File from Model" by *New*, *Test File*, *Test File from Model*. 
+%
+% 3. Select "Use Current Model".  Enter "testBaseline" for the file in
+% "Location". And select "Test type" as "Baseline".
+%
+% The test cases are automatically created for each Signal Builder test
+% case in the "CruiseControl_Harness_ShortAssert" harness.
+%
+% <<Step_04_BaselineTestFile.png>>
+%
+% 4. For a "baseline" test, the "Baseline Criteria" needs to be entered.
+% Select "Add", and select "assertBaseline.mat" for the criteria.
+%
+% In the baseline criteria data, "tspeed_Assertion" and "engaged_Assertion"
+% signals are always (1) or true for all the time points.
+%
+% 5. Select the "DisengageWithBrake" test case to show the test failure but
+% it produces results for analysis.
+%
+% <<Step_04_BaselineTestFail.png>>
+%
+%% Introduction to the Model Coverage Concept
+%
+% In this section we will focus on measuring structural model coverage, a 
+% measurement of how much of the model has been exercised by your test 
+% cases.  Coverage is an important aspect of Verification and Validation.
+% It can help you in several different ways:
+%
+% * Determine dead logic "branches".
+% * Determine if sufficient test vectors have been created
+% * Determine if the existing requirements are sufficient
+% 
+% The types of structural model coverage that are supported are:
+%
+% * Decision
+% * Condition
+% * Modified Condition/Decision Coverage (MC/DC)
+% 
+% An explaination of the above coverage metrics is shown for a simple model
+% in the picture below:
+%
+% <<Step_04_ModelCoverageIntro.png>>
+%
+% Please note that Simulink Verification and Validation tool offers more
+% model coverage analysis capability than the ones listed above.  It can
+% also collect coverage on:  
+%
+% * Signal Range
+% * Lookup Table
+% * Signal Size
+% * Custom objectives using Simulink Design Verifier blocks
+%
+%% Collecting Model Coverage From Functional Test Cases
+%
+% Besides verifying that the unit under test behaves as expected w.r.t.
+% functional requirements, it's also important to make sure that the test
+% vectors have exercised the model to a high degree, i.e. that we have a
+% high model coverage. For this example we will use the same model but with
+% a more complete set of input test vectors based on the requirements.
+%
+% To enable Simulink to measure the model coverage for
+% a simulation, do the following:
+%
+% 1. Open the *CruiseControl.slx* model with the coverage test 
+% harness - *<matlab:loadCoverageHarnessMdl_SLT; click here>*. 
+%
+% 2.  Next we will configure the harness to collect model coverage during the
+% test execution.  Go to *Analysis*, *Coverage*, and select *Settings*.
+%
+% <<Step_04_CoverageMenuSLT.png>>
+%
+% 3. Check the checkboxes as shown in the picture below for the tabs:
+% *Coverage*, *Results* and *Reporting*.
+%
+% <<Step_04_CovDialog1.png>>
+%
+% <<Step_04_CovDialog2.png>>
+%
+% <<Step_04_CovDialog3.png>>
+%
+% 4. Click *OK*.
+% 
+% We will now measure coverage for all referenced models (in our case the
+% Test Unit - *CruiseControl*). We will also display the model
+% coverage results using model coloring as well as generating an 
+% HTML report with detailed results.
+%
+% But first we will manually create a test case in the *Test Manager* and
+% use a new feature call "Iterations".
+%
+% 5. To enable the "Iterations" feature, run the following command  - or
+% *<matlab:stm.internal.util.enableFeature('iterationsFeature',1) click
+% here>*.
+%
+%   >> stm.internal.util.enableFeature('iterationsFeature', 1)
+%
+% You may have to run it twice, until the return value is (1).
+% 
+% 6. Open the *Test Manager*, navigate to the "TESTS" tab and select *New*,
+% *Test File*, *Blank Test File*.  Enter "testCoverage" for the test file
+% name.
+%
+% 7. Navigate to the "New Test Case 1", for the "Model", select the "Use
+% Current Model Icon". 
+%
+% 8. For the "Harness", select "CruiseControl_Harness_SB" from the
+% dropdown.
+%
+% 9. In the "INPUTS" section, check "Signal Builder Group" and select "Refresh
+% signal builder group list, performs update diagram".
+% 
+% 10. In the "BASELINE CRITERIA" section, select "+Add...", and select the
+% "assertBaseline.mat" for the criteria.
+%
+% <<Step_04_CovTestCaseSetup.png>>
+%
+% 11. In the "ITERATIONS" section, select "Auto Generate" in "TABLE
+% ITERATIONS" subsection.
+%
+% 12. In the "Iterations Templates" dialog, select "Signal Builder Group".
+%
+% <<Step_04_IterTemplateSetup.png>>
+%
+% 13. Highlight "New Test Case 1", and select the "Run" icon on the
+% toolstrip as before.
+%
+% After all (14) runs have been completed, the model coverage report will
+% show up:
+%
+% <<Step_04_CovReportSummarySLT.png>>
+%
+% The summary section contains all the coverage metrics, as well as how
+% each subsystem contributes to the overall coverage calculation. 
+%
+%% Using the Model Coverage Results
+%
+% The Model Coverage report contains detailed information about what parts 
+% of the model are uncovered by the functional test cases.  The user can 
+% use this information to either: 
+%
+% * *Develop more test vectors for the missing coverage.*
+% * *Check to see if there are missing requirements.* 
+% * *Identify implementation design issues.*
+% 
+% The coverage report provides a summary and detailed analysis of the 
+% coverage collected for the *Cruise Control* model.  The 92% overall
+% decision coverage as shown in the previous section is relatively high 
+% for a first attempt.  The coverage goal may be as low 80% for a non-safety 
+% related applications but often we will attempt to get 100%, particularly 
+% if it is safety related.  The coverage report detail shown below provides
+% insight into the completeness of our test cases.  Specifically the exit 
+% transition is never occurring for the vehicle speed limit check.  Likely 
+% this is due to either a missing requirement or test case.  When we check 
+% the requirements we realize that we need to add a few test cases to more 
+% completely cover this functional requirement.
+%
+% <<Step_04_CovReportDetail.png>>
+%
+% Alternatively, the model has been color coded such that the user can get
+% a quick over view of what and how much is missing.  The same missing
+% information is shown from the context window by selecting the same
+% transition.  The model coloring shows that we are never exiting from a
+% "hold" button input for the *AccelResSw* or increase speed button.  Based
+% on this we found that we did not have complete requirements with regard
+% to the "hold" function.
+% 
+% <<Step_04_CovColors.png>>
+%
+% We created (5) new test cases based on examining the model coverage report
+% and the model coloring of the coverage results.
+%
+% 1.  Add these test cases to the Signal Builder harness.  Use the "Import 
+% from File..." feature to add the test cases from "CruiseControlTestsTopItOff.xlsx".
+%
+% 2. For "Placement of Selected Data:", select "Append groups".
+%
+% <<Step_04_SBtopItOff.png>>
+%
+% 3. Return to the *Test Manager*.  Refresh the "Signal Builder Group" to
+% bring in the additional test cases.
+%
+% 4. Delete all iterations and "Auto Generate" new iterations from the 
+% "Signal Builder Group".  There should be (19) iterations. 
+%
+% 5. Highlight "New Test Case 1", and select the "Run" icon on the
+% toolstrip as before.
+%
+% In the *Test Manager*, the last test case did not pass.
+%
+% <<Step_04_CovAssertErrorSLT.png>>
+%
+% The assertion blocks are checking that the implementation
+% outputs *engage* and *tspeed* match the expected results.  Now that we 
+% have a greater number of test cases to cover more of the implementation, 
+% we find a design issue.  We can also look at the coverage results on the 
+% model that may help us locate the source of the design issue.
+%
+% <<Step_04_CovDesignIssue.png>>
+%
+% We need to change the comparison operator for the (2) exit conditions from 
+% ">" to ">=" and "<" to "<=".
+%
+% 6.  Fix the issue for both exit conditions, or load the fixed version of
+% the *CruiseControl*
+% - *<matlab:loadFullCoverageFixTestHarness; click here>*
+%
+% 7. Highlight "New Test Case 1", and select the "Run" icon on the
+% toolstrip as before.
+%
+% <<Step_04_FullCovReport.png>>
+%
+% <<Step_04_FullCovColors.png>>
+%
+% With the design fix and the additional test cases we now have 100%
+% coverage and no assertion fail messages to the command window.
+%
+% This shows a typical workflow where we iterated by analyzing the
+% coverage results, add new functional est cases and eventually get to 100% coverage.  
+% Also realize that we know 100% coverage is possible because we fixed the error
+% based on the order of integer calculations using Design Error Detection from
+% previous section.
+%
+% But, what if our logic is very complicated, and even after several 
+% iterations, we were only able to get to, say, 95% coverage?
+% Is there anything we can do to speed up this iterative process?     
+% Yes, with Simulink Design Verifier, the user can also ask the tool to
+% ignore the coverage already achieved by the functional test vectors and 
+% generate the missing test cases to achieve 100% coverage. The user can
+% then e.g. use these test cases as "hints" to reverse engineer functional
+% tests from them. This will be covered in the step *Test Generation*.
+%
+%% Summary
+%
+% In this method we have shown a function verfication workflow:
+%
+% # Creating an "internal" *test harness* within the implementation model
+% # Importing test cases from a spreadsheet into the model
+% # Adding a subsystem to do automatically check the outputs
+% # Analyzing the results with the built-in Simulation Data Inspector (SDI)
+% # Using *test sequence* blocks for creating a "natural language" test case
+% # Automating the execution of test case with the *test Manager*
+% # Measuring the completeness of the test cases with model coverage
+% # Using coverage and output comparisons to isolate and debug issues
+%
+% We were again able to find and fix these issues early in our 
+% development process, increasing confidence in our design.  We will 
+% continue to answer more of the questions in the next steps with our 
+% structured and formal testing framework for securing the quality, 
+% robustness and safety of our cruise controller.    
+%
+% <<Step_04_CruiseControl_Summary.png>>
+%
+% When you are finished, close all models and files - 
+% *<matlab:bdclose('all'); click here>*.
+%
+% Go to *Step 5: Test Case Generation* - *<Step_05.html click here>*.
+%
+##### SOURCE END #####
+--></body></html>

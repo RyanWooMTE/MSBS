@@ -1,0 +1,402 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Step 5: Test Case Generation</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-11-05"><meta name="DC.source" content="Step_05.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:2.0em; color:#000077; line-height:150%; font-weight:bold; text-align:center }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.6em; color:#444444; font-weight:bold; font-style:italic; text-align:left; vertical-align:bottom; line-height:200%; border-top:2px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#555555; font-style:italic; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px;} 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Step 5: Test Case Generation</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Introduction</a></li><li><a href="#2">Verification and Validation Tools Used</a></li><li><a href="#3">Run Functional Test Cases and Collect Existing Model Coverage</a></li><li><a href="#4">Generate Test Cases for Missing Model Coverage</a></li><li><a href="#5">Merge Generated Test Cases with Functional Test Cases</a></li><li><a href="#6">Adding Expected Outputs to the Generated Test Cases</a></li><li><a href="#7">Summary</a></li></ul></div><h2>Introduction<a name="1"></a></h2><p>In this section, we are going to collect coverage on our partial coverage test harness model with near 100% MCDC coverage. We are going to save the coverage information, and ask Simulink Design Verifier to ignore the already satisfied objectives and generate test cases that cover the missing coverage objectives.</p><p>This step is a prerequisite to the next step <b>Code Verification</b> where we will see the need for input test vectors with 100% coverage to support equivalence testing. In our previous step we were able to iteratively add more test cases to achieve 100% coverage.  On a more complex model or with limited time, test generation is often used to "top-off" the manually create test vectors with generated test vectors to get to 100% coverage.</p><h2>Verification and Validation Tools Used<a name="2"></a></h2><div><ul><li>Simulink Verification and Validation</li><li>Simulink Design Verifier</li></ul></div><h2>Run Functional Test Cases and Collect Existing Model Coverage<a name="3"></a></h2><p>As we said in the introduction we will be using our partial coverage test harness model with (14) test cases.  The coverage settings for this model have been configured to be the same as before, except we need to check that the cumulative coverage information is being saved to the workspace. This will be used by <b>Simulink Design Verifier</b> to only create test vectors that add to the existing model coverage.</p><p>Do the following:</p><p>1.  Open the <b>CruiseControl_Coverage_Harness</b> model - <b><a href="matlab:loadCoverageGenTestHarness;">click here</a></b>.</p><p>The <b>Cruise Control</b> model has all the bug fixes including the logic issue. So the test generation will be run on a production ready model. Review the model to confirm the model has been configured as described above.</p><p><img vspace="5" hspace="5" src="Step_05_NoDesignIssue.png" alt=""> </p><p>The cumulative coverage will be saved into a data object in the workspace called <b>"covCumulativeData</b>".</p><p>2. Go to <b>Analysis</b>, <b>Coverage</b> and <b>Settings</b>.  Verify the name of the data object in the <b>Results</b> tab of <b>Coverage Settings</b> options (see picture below).</p><p><img vspace="5" hspace="5" src="Step_05_CovDataVariable.png" alt=""> </p><p>3.  To get the cumulative coverage for the (14) test cases, run all test cases using <b>Run All</b> in the <b>Signal Builder</b> block.</p><p><img vspace="5" hspace="5" src="Step_05_OriginalHarness.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_05_SB_FunctionalVectors.png" alt=""> </p><p>Before we look at the coverage results.  We need to look at a few changes to the test harness from the previous step. A new signal has been added to the test cases in Signal Builder:  <b>valid</b>.  Also if we examine the contents of the "Evaluation" subsystem you will see how we are using this new signal in the evaluation.  This has been added so we only check the outputs when the <b>valid</b> signal is true, otherwise we skip the output comparison check.  This was included to handle the generated test cases we will create later.  The generated test cases will have a time range that may be less than the manually created time vectors.</p><p><img vspace="5" hspace="5" src="Step_05_SB_EvalWithValid.png" alt=""> </p><p>Now let's look at the coverage results. You should see the following results displayed in the generated coverage report as well as in the model using the color information:</p><div><ul><li>92% Decision Coverage</li><li>81% Condition Coverage</li><li>63% MCDC Coverage</li></ul></div><p><img vspace="5" hspace="5" src="Step_05_ExistingCoverageColor.png" alt=""> </p><p>The coverage data is stored in an object in the base workspace called <b>"covCumulativeData"</b>. To verify that the object exists and contain the coverage information, you can type the object name in at the command prompt. You should then see the following information displayed:</p><pre>&gt;&gt; covCumulativeData</pre><pre>covCumulativeData = ... cvdata
+           id: 801
+         type: DERIVED_DATA
+         test: cvtest object
+       rootID: 190
+     checksum: [1x1 struct]
+    modelinfo: [1x1 struct]
+    startTime: 18-Aug-2015 12:10:57
+     stopTime: 18-Aug-2015 12:12:56
+intervalStart: 0
+ intervalStop: 0
+      metrics: [1x1 struct]
+       filter:</pre><p>4. Save the coverage data object into a <tt>.cvt</tt> extension file by using the following command - or <b><a href="matlab:cvsave('cumcov_PartCvg','CruiseControl_Coverage');">click here</a></b>:</p><pre class="language-matlab">&gt;&gt; cvsave(<span class="string">'cumcov_PartCvg'</span>,<span class="string">'CruiseControl_Coverage'</span>);
+</pre><p><b>cumcov_PartCvg</b> is the name of the <tt>.cvt</tt> file, and <b>CruiseControl_Coverage</b> is the model name. There several other forms for this command. For information on <tt>cvsave</tt>, please consult the <a href="matlab:doc%20cvsave">Help</a> documentation.</p><h2>Generate Test Cases for Missing Model Coverage<a name="4"></a></h2><p>Now let&#8217;s feed the coverage information into Simulink Design Verifier and have it generate the missing test cases for 100% coverage.</p><p>1.  Open the Test Unit <b>CruiseControl_Coverage.slx</b> &#8211; <b><a href="matlab:open_system('CruiseControl_Coverage');">click here</a></b>.</p><p>2.  Go to <b>Analysis</b>, <b>Design Verifier</b>, and <b>Options</b>.</p><p><img vspace="5" hspace="5" src="Step_05_DV_Options.png" alt=""> </p><p>3. In the dialog that opens, go to <b>Design Verifier</b> and <b>Test Generation</b>.</p><p>4. Check <b>"Ignore objectives satisfied in existing coverage data"</b>.</p><p>5. Set <b>"Coverage data file"</b> to <b>"cumcov_PartCvg.cvt"</b> (see picture below).</p><p><img vspace="5" hspace="5" src="Step_05_StartCovDialog.png" alt=""> </p><p><b>Simulink Design Verifier</b> will generate the missing test cases but we will also configure it to generate the "expected" output values.  These values are outputs that are measured with the generated test case inputs. So these expected output test vectors may not be useful for checking the current model but it will be useful for checking the generated code in the next step and for checking later versions of the model.</p><p>6. Go to the <b>Results</b> tab under <b>Design Verifier</b>.</p><p>7. Check <b>"Save test data to file"</b> and check <b>"Include expected output values"</b>.</p><p>8. Click <b>OK</b>.</p><p><img vspace="5" hspace="5" src="Step_05_ExpOutputsCovDialog.png" alt=""> </p><p>9. Go to <b>Analysis</b>, <b>Design Verifier</b>, <b>Generate Tests</b>, and <b>Model</b>. (see picture below). This will start the test case generation process.</p><p><img vspace="5" hspace="5" src="Step_05_TCG_Menu.png" alt=""> </p><p>The dialog window shown below will appear. When the analysis is done, another test harness model is generated (<b>"CruiseControl_Coverage_harness_SLDV"</b>) containing the generated test cases (see pictures below).</p><p><img vspace="5" hspace="5" src="Step_05_TCG_Results.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_05_TCG_Harness.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_05_TCG_HarnessSigBldr.png" alt=""> </p><p>As you can see in the Signal Builder dialog, <b>Simulink Design Verifier</b> has generated (8) additional test cases to achieve the 100% model coverage.  In the previous step we manually created (5) additional test cases but these were longer in length (2 sec) than the generated test cases.</p><p>In addition, an HTML report is generated with detailed information about the coverage objectives and the test cases satisfying them. You can access from the Simulink Design Verifier Results Inspector (see picture below).</p><p><img vspace="5" hspace="5" src="Step_05_TCG_ResultsSummary.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_05_TCG_Report.png" alt=""> </p><h2>Merge Generated Test Cases with Functional Test Cases<a name="5"></a></h2><p>In a typical workflow, we would use these generated test cases as hints and try to reverse engineer functional test cases from them, associate them with a requirement and create expected outputs. For now, we will see how to merge the (8) generated test cases with the existing (14) functional test cases in the original test harness.  To do so, we will use the Simulink Validation and Verification function <b>"slvnvmergeharness"</b>.</p><p>1.  To merge the test harnesses, type the following command in MATLAB - or <b><a href="matlab:slvnvmergeharness('CruiseControl_Coverage_merged_harness',{'CruiseControl_Coverage_harness','CruiseControl_Coverage_harness_SLDV'});">click here</a></b>.</p><pre class="language-matlab">&gt;&gt; slvnvmergeharness(<span class="string">'CruiseControl_Coverage_merged_harness'</span>,{<span class="string">'CruiseControl_Coverage_harness'</span>,<span class="string">'CruiseControl_Coverage_harness_SLDV'</span>});
+</pre><p><i>Note: If you do this step more than once, you may need to change the name of the "sldvharness" model when you run the command above.</i></p><p>Now, 100% of the MCDC functional tests are all in one Signal Builder block in the model <b>CruiseControl_Coverage_harness</b>, see Signal Builder snapshot below. You should now be able to re-run all test cases and see 100% MCDC coverage.  We will need to turn off the expected output checking because the expected outputs for the generated test cases are all zeros.  In the next section we will show how to export the generated test cases with the expected outputs to a spreadsheet and then import the test cased into the original harness. But for now we can check that we have full coverage with merged harness.</p><p>Do the following:</p><p>1.  Open <b>Signal Builder</b> block in <b>CruiseControl_Coverage_merged_harness</b>. If the above merge was successful you should now see all test cases here.</p><p>2.  Unselect <b>"Stop simulation when assertion fails"</b> for both "assertion" blocks.</p><p><img vspace="5" hspace="5" src="Step_05_SB_DisableStopSim.png" alt=""> </p><p>3. Click <b>Run All</b>. This will run all test cases and collect coverage (see picture below).</p><p><img vspace="5" hspace="5" src="Step_05_SB_MergedHarness.png" alt=""> </p><p>You should now see that the test cases have coverged 100% of the Test Unit - <b>CruiseControl_Coverage</b>. This is seen from the green color of the model and from the generated coverage report (see pictures below).</p><p><img vspace="5" hspace="5" src="Step_05_FullCoverageColor.png" alt=""> </p><p><img vspace="5" hspace="5" src="Step_05_FullCoverageReport.png" alt=""> </p><h2>Adding Expected Outputs to the Generated Test Cases<a name="6"></a></h2><p>When the test cases were generated the results were saved to a data file, <b>CruiseControl_TestGen_sldvdata.mat</b>.  The data file contains the <b>sldvData</b> object.  Let's a look at the object contents:</p><p><img vspace="5" hspace="5" src="Step_05_SLDVdataView.png" alt=""> </p><p>A script has been created to extract the contents from the <b>sldvData</b> object including the signal names, input vectors and expected output vectors. In addition the <b>valid</b> signal described earlier has been added to turn off the comparison of the outputs to the expected outputs at non-critical times during the test execution.  Each test case is represented in the spreadsheet as a separate worksheet, ready for importing into Signal Builder block in the test harness.</p><p>Do the following:</p><p>1.  To export the generated test cases to the spreadsheet, type the following command in MATLAB - or <b><a href="matlab:saveSLDVdataToXLS('./sldv_output/CruiseControl_Coverage/CruiseControl_Coverage_sldvdata.mat');">click here</a></b>.</p><pre class="language-matlab">&gt;&gt; saveSLDVdataToXLS(<span class="string">'./sldv_output/CruiseControl_Coverage/CruiseControl_Coverage_sldvdata.mat'</span>)
+</pre><p><img vspace="5" hspace="5" src="Step_05_SLDVdataXLS.png" alt=""> </p><p>2.  Close all models and re-open the <b>CruiseControl_Coverage_Harness</b> model - <b><a href="matlab:loadCoverageGenTestHarness;">click here</a></b>.</p><p>3.  Open the Excel file externally that contains the SLDV test vectors - <b><a href="matlab:winopen('CruiseControl_Coverage_sldvdata.xlsx')">click here</a></b>.</p><p>4.  Manually remove the default worksheets: "Sheet 1", "Sheet 2" and "Sheet 3".</p><p>5.  Open the Signal Builder block and import the generated test cases. Select <b>File</b>, then <b>Import from File...</b> to open the <b>Import File</b> dialog.</p><p>6.  In the <b>Import File</b> dialog, under <b>Select file import</b>, click <b>Browse</b>, select <b>CruiseControl_Coverage_sldvdata.xlsx</b> file. The spreadsheet will be located in the current directory with the name, <b>CruiseControl_Coverage_sldvdata.xlsx</b>.</p><p>7.  Follow the order of buttons/selections as shown below to finish importing the SLDV data into Signal Builder:</p><p><img vspace="5" hspace="5" src="Step_05_SLDVdataImport.png" alt=""> </p><p>8. Click <b>Run All</b>. This will run all test cases, compare outputs to the expected outputs, and collect coverage (see picture below).</p><p><img vspace="5" hspace="5" src="Step_05_SB_MergedTestCases.png" alt=""> </p><p>The 100% coverage tests have run successfully without an assertion stopping the simulation, so all tests are passing.  The <b>Simulation Data Inspector</b> may be used to inspect the results as shown below:</p><p><img vspace="5" hspace="5" src="Step_05_FullCovMatchSDI.png" alt=""> </p><h2>Summary<a name="7"></a></h2><p>We demonstrated the "top-it-off" workflow where coverage information from the partial coverage, requirements based tests are merged with generated test cases to achieve 100% coverage.  <b>Simuink Design Verifier</b> was configured to use the partial coverage data file to only create test cases necessary to achieve the 100% coverage goal.  The flexibility of the test evaluation was improved with the  ntroduction of the <b>valid</b> signal that enabled the test output to only be evaluated during critical stages and ignored for the remainder. The <b>valid</b> strategy could be used for to reduce test creation effort, where the outputs only need to match for a portion of the test execution time.</p><p>We now have a test harness with 100% coverage, test vectors that can be used to evaluate newer versions of the implementation.  This harness will also be re-used in the next step <b>Code Verification</b> to compare outputs of the model to the generated code.</p><div><ul><li>When you are finished, close all models and files - or <b><a href="matlab:bdclose('all');">click here</a></b>.</li><li>Go to <b>Step 6: Code Verification</b> - <b><a href="Step_06.html">click here</a></b>.</li></ul></div><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Step 5: Test Case Generation 
+% 
+%% Introduction
+%
+% In this section, we are going to collect coverage on our partial coverage
+% test harness model with near 100% MCDC coverage. We are going to save the
+% coverage information, and ask Simulink Design Verifier to ignore the
+% already satisfied objectives and generate test cases that cover the
+% missing coverage objectives.
+%
+% This step is a prerequisite to the next step *Code Verification* where we
+% will see the need for input test vectors with 100% coverage to support 
+% equivalence testing. In our previous step we were able to iteratively
+% add more test cases to achieve 100% coverage.  On a more complex model or
+% with limited time, test generation is often used to "top-off" the
+% manually create test vectors with generated test vectors to get to 100%
+% coverage.
+%
+%% Verification and Validation Tools Used
+% * Simulink Verification and Validation
+% * Simulink Design Verifier
+%
+%% Run Functional Test Cases and Collect Existing Model Coverage
+%
+% As we said in the introduction we will be using our partial coverage test
+% harness model with (14) test cases.  The coverage settings for this model
+% have been configured to be the same as before, except we need to check 
+% that the cumulative coverage information is being saved to the workspace.
+% This will be used by *Simulink Design Verifier* to only create test
+% vectors that add to the existing model coverage. 
+%
+% Do the following:
+%
+% 1.  Open the *CruiseControl_Coverage_Harness* model
+% - *<matlab:loadCoverageGenTestHarness; click here>*.
+%
+% The *Cruise Control* model has all the bug fixes including the logic
+% issue. So the test generation will be run on a production ready model.
+% Review the model to confirm the model has been configured as described above.
+%
+% <<Step_05_NoDesignIssue.png>>
+%
+% The cumulative coverage will be saved into a data object in the workspace 
+% called *"covCumulativeData*".  
+%
+% 2. Go to *Analysis*, *Coverage* and *Settings*.  Verify the name of the 
+% data object in the *Results* tab of *Coverage Settings* options (see
+% picture below). 
+%
+% <<Step_05_CovDataVariable.png>>
+%
+% 3.  To get the cumulative coverage for the (14) test cases, run all test 
+% cases using *Run All* in the *Signal Builder* block.
+%
+% <<Step_05_OriginalHarness.png>>
+%
+% <<Step_05_SB_FunctionalVectors.png>>
+%
+% Before we look at the coverage results.  We need to look at a few changes
+% to the test harness from the previous step. A new signal has been added
+% to the test cases in Signal Builder:  *valid*.  Also if we examine the
+% contents of the "Evaluation" subsystem you will see how we are using
+% this new signal in the evaluation.  This has been added so we only check 
+% the outputs when the *valid* signal is true, otherwise we skip the output
+% comparison check.  This was included to handle the generated test cases
+% we will create later.  The generated test cases will have a time range
+% that may be less than the manually created time vectors.
+%
+% <<Step_05_SB_EvalWithValid.png>>
+%
+% Now let's look at the coverage results. You should see the following 
+% results displayed in the generated coverage report as well as in the 
+% model using the color information:
+%
+% * 92% Decision Coverage
+% * 81% Condition Coverage
+% * 63% MCDC Coverage
+% 
+% <<Step_05_ExistingCoverageColor.png>>
+%
+% The coverage data is stored in an object in the base workspace called
+% *"covCumulativeData"*. To verify that the object exists and contain
+% the coverage information, you can type the object name in at the command
+% prompt. You should then see the following information displayed:
+%
+%  >> covCumulativeData
+%
+%  covCumulativeData = ... cvdata
+%             id: 801
+%           type: DERIVED_DATA
+%           test: cvtest object
+%         rootID: 190
+%       checksum: [1x1 struct]
+%      modelinfo: [1x1 struct]
+%      startTime: 18-Aug-2015 12:10:57
+%       stopTime: 18-Aug-2015 12:12:56
+%  intervalStart: 0
+%   intervalStop: 0
+%        metrics: [1x1 struct]
+%         filter: 
+%
+% 4. Save the coverage data object into a |.cvt| extension file by using
+% the following command - or
+% *<matlab:cvsave('cumcov_PartCvg','CruiseControl_Coverage'); click here>*: 
+%
+%   >> cvsave('cumcov_PartCvg','CruiseControl_Coverage');
+%
+% *cumcov_PartCvg* is the name of the |.cvt| file, and
+% *CruiseControl_Coverage* is the model name. There several other forms for this
+% command. For information on |cvsave|, please consult the
+% <matlab:doc%20cvsave Help> documentation.
+% 
+%% Generate Test Cases for Missing Model Coverage
+%
+% Now let’s feed the coverage information into Simulink Design Verifier and
+% have it generate the missing test cases for 100% coverage.
+% 
+% 1.  Open the Test Unit *CruiseControl_Coverage.slx* –
+% *<matlab:open_system('CruiseControl_Coverage'); click here>*. 
+%
+% 2.  Go to *Analysis*, *Design Verifier*, and *Options*.
+%
+% <<Step_05_DV_Options.png>>
+%
+% 3. In the dialog that opens, go to *Design Verifier* and *Test
+% Generation*.
+%
+% 4. Check *"Ignore objectives satisfied in existing coverage data"*.
+%
+% 5. Set *"Coverage data file"* to *"cumcov_PartCvg.cvt"* (see
+% picture below).
+%
+% <<Step_05_StartCovDialog.png>>
+%
+% *Simulink Design Verifier* will generate the missing test cases but we
+% will also configure it to generate the "expected" output values.  These
+% values are outputs that are measured with the generated test case inputs.
+% So these expected output test vectors may not be useful for 
+% checking the current model but it will be useful for checking the 
+% generated code in the next step and for checking later versions of the model.
+%
+% 6. Go to the *Results* tab under *Design Verifier*.
+%
+% 7. Check *"Save test data to file"* and check *"Include expected output
+% values"*.
+%
+% 8. Click *OK*.
+%
+% <<Step_05_ExpOutputsCovDialog.png>>
+%
+% 9. Go to *Analysis*, *Design Verifier*, *Generate Tests*, and *Model*.
+% (see picture below). This will start the test case generation process.
+%
+% <<Step_05_TCG_Menu.png>>
+%
+% The dialog window shown below will appear. When the analysis is done,
+% another test harness model is generated (*"CruiseControl_Coverage_harness_SLDV"*)
+% containing the generated test cases (see pictures below).
+%
+% <<Step_05_TCG_Results.png>>
+%
+% <<Step_05_TCG_Harness.png>>
+%
+% <<Step_05_TCG_HarnessSigBldr.png>>
+%
+% As you can see in the Signal Builder dialog, *Simulink Design Verifier*
+% has generated (8) additional test cases to achieve the 100% model
+% coverage.  In the previous step we manually created (5) additional test
+% cases but these were longer in length (2 sec) than the generated test
+% cases.  
+%
+% In addition, an HTML report is generated with detailed information about
+% the coverage objectives and the test cases satisfying them. You can
+% access from the Simulink Design Verifier Results Inspector (see picture
+% below).
+%
+% <<Step_05_TCG_ResultsSummary.png>>
+%
+% <<Step_05_TCG_Report.png>>
+%
+%% Merge Generated Test Cases with Functional Test Cases
+%
+% In a typical workflow, we would use these generated test cases as hints
+% and try to reverse engineer functional test cases from them, associate
+% them with a requirement and create expected outputs. For now, we will
+% see how to merge the (8) generated test cases with the existing (14)
+% functional test cases in the original test harness.  To do so, we
+% will use the Simulink Validation and Verification function 
+% *"slvnvmergeharness"*.
+%
+% 1.  To merge the test harnesses, type the following command in MATLAB - or
+% *<matlab:slvnvmergeharness('CruiseControl_Coverage_merged_harness',{'CruiseControl_Coverage_harness','CruiseControl_Coverage_harness_SLDV'});
+% click here>*.
+%
+%   >> slvnvmergeharness('CruiseControl_Coverage_merged_harness',{'CruiseControl_Coverage_harness','CruiseControl_Coverage_harness_SLDV'});
+%
+% _Note: If you do this step more than once, you may need to change
+% the name of the "sldvharness" model when you run the command above._
+%
+% Now, 100% of the MCDC functional tests are all in one Signal Builder
+% block in the model *CruiseControl_Coverage_harness*, see Signal Builder snapshot
+% below. You should now be able to re-run all test cases and see 100% MCDC
+% coverage.  We will need to turn off the expected output checking because
+% the expected outputs for the generated test cases are all zeros.  In the
+% next section we will show how to export the generated test cases with the 
+% expected outputs to a spreadsheet and then import the test cased into the
+% original harness. But for now we can check that we have full coverage with 
+% merged harness.
+%
+% Do the following:
+%
+% 1.  Open *Signal Builder* block in *CruiseControl_Coverage_merged_harness*.  
+% If the above merge was successful you should now see all test cases here.
+%
+% 2.  Unselect *"Stop simulation when assertion fails"* for both
+% "assertion" blocks.
+%
+% <<Step_05_SB_DisableStopSim.png>>
+%
+% 3. Click *Run All*. This will run all test cases and collect coverage (see
+% picture below).
+%
+% <<Step_05_SB_MergedHarness.png>>
+%
+% You should now see that the test cases have coverged 100% of the Test
+% Unit - *CruiseControl_Coverage*. This is seen from the green color of the model
+% and from the generated coverage report (see pictures below).
+%
+% <<Step_05_FullCoverageColor.png>>
+%
+% <<Step_05_FullCoverageReport.png>>
+%
+%% Adding Expected Outputs to the Generated Test Cases
+%
+% When the test cases were generated the results were saved to a data file,
+% *CruiseControl_TestGen_sldvdata.mat*.  The data file contains the 
+% *sldvData* object.  Let's a look at the object contents:
+%
+% <<Step_05_SLDVdataView.png>>
+%
+% A script has been created to extract the contents from the *sldvData* object
+% including the signal names, input vectors and expected output vectors.  
+% In addition the *valid* signal described earlier has been added to turn
+% off the comparison of the outputs to the expected outputs at non-critical
+% times during the test execution.  Each test case is represented in the 
+% spreadsheet as a separate worksheet, ready for importing into Signal 
+% Builder block in the test harness. 
+%
+% Do the following:
+%
+% 1.  To export the generated test cases to the spreadsheet, type the 
+% following command in MATLAB - or
+% *<matlab:saveSLDVdataToXLS('./sldv_output/CruiseControl_Coverage/CruiseControl_Coverage_sldvdata.mat');
+% click here>*.
+%
+%   >> saveSLDVdataToXLS('./sldv_output/CruiseControl_Coverage/CruiseControl_Coverage_sldvdata.mat')
+%
+% <<Step_05_SLDVdataXLS.png>>
+%
+% 2.  Close all models and re-open the *CruiseControl_Coverage_Harness* model
+% - *<matlab:loadCoverageGenTestHarness; click here>*.
+%
+% 3.  Open the Excel file externally that contains the SLDV test vectors - 
+% *<matlab:winopen('CruiseControl_Coverage_sldvdata.xlsx') click here>*.
+%
+% 4.  Manually remove the default worksheets: "Sheet 1", "Sheet 2" and
+% "Sheet 3".
+%
+% 5.  Open the Signal Builder block and import the generated test cases.
+% Select *File*, then *Import from File...* to open the *Import File* dialog.
+%
+% 6.  In the *Import File* dialog, under *Select file import*, click
+% *Browse*, select *CruiseControl_Coverage_sldvdata.xlsx* file. The 
+% spreadsheet will be located in the current directory with the name, 
+% *CruiseControl_Coverage_sldvdata.xlsx*. 
+%
+% 7.  Follow the order of buttons/selections as shown below to finish
+% importing the SLDV data into Signal Builder:
+%
+% <<Step_05_SLDVdataImport.png>>
+%
+% 8. Click *Run All*. This will run all test cases, compare outputs to the 
+% expected outputs, and collect coverage (see picture below).
+%
+% <<Step_05_SB_MergedTestCases.png>>
+%
+% The 100% coverage tests have run successfully without an assertion 
+% stopping the simulation, so all tests are passing.  The *Simulation Data
+% Inspector* may be used to inspect the results as shown below:
+% 
+% <<Step_05_FullCovMatchSDI.png>>
+%
+%% Summary
+%
+% We demonstrated the "top-it-off" workflow where coverage information from
+% the partial coverage, requirements based tests are merged with generated test
+% cases to achieve 100% coverage.  *Simuink Design Verifier* was configured
+% to use the partial coverage data file to only create test cases necessary 
+% to achieve the 100% coverage goal.  The flexibility of the test 
+% evaluation was improved with the  ntroduction of the *valid* signal that 
+% enabled the test output to only be evaluated during critical stages and 
+% ignored for the remainder. The *valid* strategy could be used for to 
+% reduce test creation effort, where the outputs only need to match for a 
+% portion of the test execution time. 
+%
+% We now have a test harness with 100% coverage, test vectors that can be 
+% used to evaluate newer versions of the implementation.  This harness will
+% also be re-used in the next step *Code Verification* to compare outputs 
+% of the model to the generated code.
+%
+% * When you are finished, close all models and files - or
+% *<matlab:bdclose('all'); click here>*.
+% * Go to *Step 6: Code Verification* - *<Step_06.html click here>*.
+%
+
+##### SOURCE END #####
+--></body></html>

@@ -1,0 +1,11 @@
+<productinfo
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://www.mathworks.com/namespace/info/v1/info.xsd">
+<?xml-stylesheet type="text/xsl" href="http://www.mathworks.com/namespace/info/v1/info.xsl"?>
+
+<matlabrelease>2006b</matlabrelease>
+<name>cmtdtool</name>
+<type>matlab</type>
+<icon>$toolbox/matlab/icons/book_mat.gif</icon>
+<help_location>../doc_ja</help_location>
+</productinfo>

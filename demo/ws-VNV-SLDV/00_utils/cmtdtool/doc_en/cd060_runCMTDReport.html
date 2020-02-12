@@ -1,0 +1,177 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Automatic test report generation</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-04"><meta name="DC.source" content="cd060_runCMTDReport.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Automatic test report generation</h1><!--introduction--><div><ul><li>Supported by MATLAB R2008a or later</li><li>Requires Simulink&reg; Report Generator&#8482; and MATLAB&reg; Report Generator&#8482;.</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Details</a></li><li><a href="#2">Customizing Report</a></li><li><a href="#4">How to run</a></li></ul></div><h2>Details<a name="1"></a></h2><p><b>(1) Prerequisite Conditions</b></p><p>This automatic test report generation capability is available if the following conditions are satisfied:</p><div><ul><li>There is a SignalBuilder block where test vectors and expected outputs are given.</li><li>There is a Subsystem (or Model Reference block) to be tested and all inputs and outputs of the block are scalar signals.</li><li>The model contains signal(s) which evaluates model's behavior such as connecting the signal to Assertion block and if the signal becomes 0 (false) at least one simulation step during a simulation, the result of the evaluation means false.</li></ul></div><p><b>(2) Specify signal name(s) for the following signals</b></p><div><ul><li>All signals of inputs and outputs of a Subsystem (or Model Reference block) to be tested.</li><li>Signal names for expected output(s) whose names begin with <tt>Exp_</tt>.</li><li>Signal names for assertion signal(s) which you want to compare expected output(s) with simulation result(s) whose names begin with <tt>Assertion_</tt>.</li></ul></div><p><b>(3) Select a Subsystem (or Model Reference block) to be tested</b></p><p><img vspace="5" hspace="5" src="d04_ReportGeneration/cd060_runCMTDReport_pic01.png" alt=""> </p><p><b>(4) Click "Select a block for testing"</b></p><p><img vspace="5" hspace="5" src="d04_ReportGeneration/cd060_runCMTDReport_pic02.png" alt=""> </p><p>By doing it, Signal logging are set for all three above mentioned signals at (1).</p><p><img vspace="5" hspace="5" src="d04_ReportGeneration/cd060_runCMTDReport_pic03.png" alt=""> </p><p><img vspace="5" hspace="5" src="d04_ReportGeneration/cd060_runCMTDReport_pic04.png" alt=""> </p><p><b>(5) Click "Run all simulations"</b></p><p><img vspace="5" hspace="5" src="d04_ReportGeneration/cd060_runCMTDReport_pic05.png" alt=""> </p><p>Simulations for all group tabs in the SignalBuilder block are run and time series figures for logged signals are drawn. Created figure files are stored <tt>figs</tt> folder in your current folder.</p><p><img vspace="5" hspace="5" src="d04_ReportGeneration/cd060_runCMTDReport_pic06.png" alt=""> </p><p><b>(6) Click "Generate report"</b></p><p><img vspace="5" hspace="5" src="d04_ReportGeneration/cd060_runCMTDReport_pic07.png" alt=""> </p><p>This tool will create following information in a Microsoft Word file <tt>"ModelName"_report.doc</tt> obeying Report Generator setting file: <tt>runCMTDreport_en.rpt</tt> stored in cmtdtool installation folder.</p><div><ul><li>Snapshot of the model.</li><li>Input signals for each group tabs in the SignalBuilder block.</li><li>Expected outputs for each group tabs in the SignalBuilder block.</li><li>Output signals from the test target Subsystem for each group tabs in the SignalBuilder block.</li><li>Assertion signals for each group tabs in the SignalBuilder block.</li><li>Pass or Fail judgments for each group tabs in the SignalBuilder block where Pass means all Assertion signals were non-zero values during the simulation and Fail means at least one zero value was included in each of Assertion signals.</li></ul></div><p><img vspace="5" hspace="5" src="d04_ReportGeneration/cd060_runCMTDReport_pic08.png" alt=""> </p><h2>Customizing Report<a name="2"></a></h2><p>You can customize generated report by editing report generator template file. The template file is the following file</p><p><tt>runCMTDreport_en.rpt</tt></p><p>This file is stored in cmtdtool installation folder. To edit the above file, type</p><pre class="codeinput">report
+</pre><p>in MATLAB Command Window then double click <tt>runCMTDreport_en.rpt</tt> from the list located in the center.</p><p><img vspace="5" hspace="5" src="d04_ReportGeneration/cd060_runCMTDReport_pic09.png" alt=""> </p><h2>How to run<a name="4"></a></h2><div><ol><li>Open cmtdtool_sampleharness.mdl in cmtdtool installation folder.</li><li>Click TestModel to set the subsystem as a current block in cmtdtool_sampleharness.mdl</li><li>Click "Select a block for testing" in cmtdtool.</li><li>Click "Run all simulations" in cmtdtool.</li><li>Click "Generate report" in cmtdtool.</li><li>Run the following commands and you will see that the same operation can be done by API call .</li></ol></div><pre class="codeinput">open_system(<span class="string">'cmtdtool_sampleharness'</span>)
+obj = runCMTDReport(<span class="string">'cmtdtool_sampleharness/TestModel'</span>);
+obj.runSimAll;
+obj.runReport;
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Automatic test report generation
+%
+% * Supported by MATLAB R2008a or later
+% * Requires Simulink(R) Report Generator(TM) and MATLAB(R) Report Generator(TM).
+ 
+%% Details
+%
+% *(1) Prerequisite Conditions*
+% 
+% This automatic test report generation capability is available if the following conditions are satisfied:
+%
+% * There is a SignalBuilder block where test vectors and expected outputs are given.
+% * There is a Subsystem (or Model Reference block) to be tested and all inputs and outputs of the block are scalar signals.
+% * The model contains signal(s) which evaluates model's behavior such as
+% connecting the signal to Assertion block and if the signal becomes 0 (false) at least one
+% simulation step during a simulation, the result of the evaluation means
+% false.
+%
+% *(2) Specify signal name(s) for the following signals*
+%
+% * All signals of inputs and outputs of a Subsystem (or Model Reference block) to be tested.
+% * Signal names for expected output(s) whose names begin with |Exp_|.
+% * Signal names for assertion signal(s) which you want to compare expected
+% output(s) with simulation result(s) whose names begin with |Assertion_|.
+%
+% *(3) Select a Subsystem (or Model Reference block) to be tested*
+%
+% <<d04_ReportGeneration/cd060_runCMTDReport_pic01.png>>
+%
+% *(4) Click "Select a block for testing"*
+%
+% <<d04_ReportGeneration/cd060_runCMTDReport_pic02.png>>
+%
+% By doing it, Signal logging are set for all three above mentioned signals
+% at (1).
+%
+% <<d04_ReportGeneration/cd060_runCMTDReport_pic03.png>>
+%
+% <<d04_ReportGeneration/cd060_runCMTDReport_pic04.png>>
+%
+% *(5) Click "Run all simulations"*
+%
+% <<d04_ReportGeneration/cd060_runCMTDReport_pic05.png>>
+%
+% Simulations for all group tabs in the SignalBuilder block are
+% run and time series figures for logged signals are drawn.
+% Created figure files are stored |figs| folder in your current folder.
+%
+% <<d04_ReportGeneration/cd060_runCMTDReport_pic06.png>>
+%
+% *(6) Click "Generate report"*
+%
+% <<d04_ReportGeneration/cd060_runCMTDReport_pic07.png>>
+%
+% This tool will create following information in a Microsoft Word
+% file |"ModelName"_report.doc| 
+% obeying Report Generator setting file: |runCMTDreport_en.rpt| stored 
+% in cmtdtool installation folder. 
+%
+% * Snapshot of the model.
+% * Input signals for each group tabs in the SignalBuilder block.
+% * Expected outputs for each group tabs in the SignalBuilder block.
+% * Output signals from the test target Subsystem for each group tabs in the SignalBuilder block.
+% * Assertion signals for each group tabs in the SignalBuilder block.
+% * Pass or Fail judgments for each group tabs in the SignalBuilder block
+% where Pass means all Assertion signals were non-zero values during the
+% simulation and Fail means at least one zero value was included in each of Assertion signals. 
+%
+% <<d04_ReportGeneration/cd060_runCMTDReport_pic08.png>>
+%
+ 
+%% Customizing Report
+% You can customize generated report by editing report generator template file.
+% The template file is the following file
+%
+% |runCMTDreport_en.rpt| 
+%
+% This file is stored in cmtdtool installation folder. 
+% To edit the above file, type
+report 
+%%
+% in MATLAB Command Window then double click |runCMTDreport_en.rpt| from the list located in the
+% center.
+%
+% <<d04_ReportGeneration/cd060_runCMTDReport_pic09.png>>
+%
+ 
+ 
+%% How to run
+% # Open cmtdtool_sampleharness.mdl in cmtdtool installation folder.
+% # Click TestModel to set the subsystem as a current block
+% in cmtdtool_sampleharness.mdl
+% # Click "Select a block for testing" in cmtdtool.
+% # Click "Run all simulations" in cmtdtool.
+% # Click "Generate report" in cmtdtool.
+% # Run the following commands and you will see that the same operation can
+% be done by API call .
+open_system('cmtdtool_sampleharness')
+obj = runCMTDReport('cmtdtool_sampleharness/TestModel');
+obj.runSimAll;
+obj.runReport;
+
+
+##### SOURCE END #####
+--></body></html>

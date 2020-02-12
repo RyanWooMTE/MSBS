@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html;charset=Shift_JIS"><title>Simulink Design Verifierによる未達カバレッジ解析ツール</title></head><body>
+<h1>Simulink Design Verifierによる未達カバレッジ解析ツール</h1>
+<h2>■ 対応バージョン</h2>
+<p><br>・MATLAB R2007a+ 以降<br>
+ </p>
+<h2>■ 使用製品</h2>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>MATLAB</p>
+  <p>Simulink</p>
+  <p>Stateflow (対象モデルにStateflowが含まれる場合)</p>
+  <p><a href="http://www.mathworks.com/products/simverification/">Simulink 
+  Verification and Validation</a></p>
+  <p><a href="http://www.mathworks.com/products/sldesignverifier/">Simulink 
+  Design Verifier </a>(未達成のカバレッジを補うテストベクタを自動生成する場合)</p></blockquote>
+<h2>■ インストール方法<a name="install"></a></h2>
+<p><br>(1) <font face="Courier">sldvmisscovtool.zip</font> を適当なフォルダに展開します。</p>
+<p>(2) <font face="Courier">MATLAB</font> デスクトップ環境より<br>&nbsp;&nbsp; 
+「ファイル」→「パス設定」<br>&nbsp;&nbsp; を開き、(1)で展開したフォルダを<font face="Courier">MATLAB</font>パスに追加します。</p>
+<p><img alt="SLDVMISSCOVTOOL_02.PNG - 35,029BYTES" src="sldvmisscovtool_02.png" height="400" width="726"></p>
+<hr align="left" size="3" width="100%">
+
+<h2>■ 起動方法</h2>
+<p><br>(2-1) MATLAB Command Windowより</p>
+<p><font face="Courier">&gt;&gt;&nbsp;sldvmisscovtool</font></p>
+<p>&nbsp;&nbsp; を実行します。</p>
+<hr align="left" size="3" width="100%">
+
+<p></p>
+<h2>■ 実行例</h2>
+<p><br>(1) sldvmisscovtoolを実行します。<br></p>
+<p><font face="Courier">&gt;&gt;&nbsp;sldvmisscovtool</font></p>
+<p>&nbsp;</p>
+<p>(2) 「データ管理」パネル &gt; 「インポート」よりデータ読み込み手法を選択し、<img alt="SLDVMISSCOVTOOL_03.PNG - 850BYTES" src="sldvmisscovtool_03.png" height="26" width="35">&nbsp;をクリックします。</p>
+<p>※読み込み手法はプラグイン形式になっており、選択した手法により読み込み方法が異なります。</p>
+<p>ここでは、サンプルとして提供している「CSV-file(時間共通)から」が選択され、フォルダ「cruise_control_data」内のサンプルcsvファイルが読み込まれたものと仮定します。</p>
+<p><img alt="SLDVMISSCOVTOOL_06.PNG - 9,949BYTES" src="sldvmisscovtool_06.png" height="263" width="302"></p>
+<p>(3) 「Signl Viewer」ボタンをクリックすることにより、「テストケース」リストボックス上で選択されたデータをグラフに表示します。<br></p>
+<p>(4) 「対象モデル」ペインにて、<img alt="SLDVMISSCOVTOOL_04.PNG - 939BYTES" src="sldvmisscovtool_04.png" height="31" width="28">をクリックし、対象となるモデルを選択します。<img alt="SLDVMISSCOVTOOL_05.PNG - 1,104BYTES" src="sldvmisscovtool_05.png" height="24" width="123">を選択した場合には、bdrootで与えられるモデルが対象となります。ここでは、本デモに付属のサンプルモデル「sldvmiscovtool_sample.mdl」が選択されたものと仮定します。</p>
+<p><img alt="SLDVMISSCOVTOOL_07.PNG - 7,135BYTES" src="sldvmisscovtool_07.png" height="269" width="212"></p>
+<p>(5) 
+「カバレッジ」パネルにて「カバレッジの計測」ボタンをクリックすることにより、「テストケース」リストボックスで選択されているデータに対するシミュレーションが順次行われ、累積カバレッジデータがベースワークスペース上に「covData」として保存されます。<br>※ 
+「ブロックを色分け」にチェックを入れてカバレッジの計測を行いますと、ブロック色によりカバレッジの到達状況を確認できます。</p>
+<p><br><img alt="SLDVMISSCOVTOOL_08.PNG - 2,652BYTES" src="sldvmisscovtool_08.png" height="53" width="351"></p>
+<p>(6) 
+「レポートの表示」ボタンをクリックすると、上述「covData」よりカバレッジレポートが生成され、表示されます。CSVファイルには未達カバレッジが存在することが確認できます。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<br></p>
+<p>(7) 
+「SLDV」パネルにて「未達カバレッジの解析」ボタンをクリックすることにより、、「テストケース」リストボックスで選択されているデータに対するシミュレーションで未達成であったカバレッジ対象に到達するテストベクタを自動生成します。</p>
+<p><br><img alt="SLDVMISSCOVTOOL_09.PNG - 5,274BYTES" src="sldvmisscovtool_09.png" height="106" width="523"></p>
+<p>(8) 
+「結果のマージ」パネルにて「統合レポート」をクリックすると、「データ管理」で与えられたテストケースと「未達カバレッジの解析」によって自動生成されたテストケースを統合したカバレッジレポートが生成されます。</p>
+<p><img alt="SLDVMISSCOVTOOL_10.PNG - 1,919BYTES" src="sldvmisscovtool_10.PNG" height="58" width="268"></p>
+<p><img alt="SLDVMISSCOVTOOL_11.PNG - 7,526BYTES" src="sldvmisscovtool_11.png" height="178" width="1073"><br></p>
+<p>(9) 
+「テストケースをマージ」をクリックしますと、「データ管理」で与えられたテストケースと、「未達カバレッジの解析」によって自動生成されたテストケースをマージし、新たなハーネスモデル上のSignal 
+Builderブロックにテストケースを統合します。</p>
+<hr align="left" size="3" width="100%">
+
+<h2>■ 機能詳細</h2>
+<h3>(1) GUIの全体機能構成</h3>
+<p>本ツールは、次の6つのペインから構成されています。</p>
+<h4>データ管理</h4>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>データファイルなどで与えられるデータをMATLAB 
+  WorkSpace上に読み込み、Simulinkの入力として与えられる形式に変換する機能を提供するペインです。読み込まれたデータは任意の形式に出力することも可能です。</p></blockquote>
+<h4>対象モデル</h4>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>「データ管理」ペインにて読み込まれたデータを入力として与える対象モデルを選択します。また、モデルの入力ポートの情報も読み込まれます。</p></blockquote>
+<h4>カバレッジ</h4>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>「対象モデル」で選択されたモデルに対し、「データ管理」で読み込まれたデータを与え、モデルカバレッジを測定します。</p></blockquote>
+<h4>SLDV</h4>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>「カバレッジ」ペインで測定したモデルカバレッジで、100%カバレッジが達成されない場合、Simulink Design 
+  Verifierの機能を用いて、未達成のカバレッジに到達するテストベクタをこのペインで解析することができます。</p></blockquote>
+<h4>結果のマージ</h4>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>「データ管理」で与えられたデータと、「SLDV」ペインで与えられたテストベクタをマージする機能を提供します。</p></blockquote>
+<h4>情報</h4>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>操作のヒントをこのペインで表示します。</p></blockquote>
+<p><img alt="SLDVMISSCOVTOOL_01.PNG - 40,738BYTES" src="sldvmisscovtool_01.png" height="670" width="539"></p>
+<h3>(2) データ管理ペイン</h3>
+<h4>(2-1) インポート</h4>
+<p>任意のデータ形式をMATLAB 
+WorkSpace上に、Simulinkの入力として与えることができる形式にインポートします。インポートされたデータはMATLABワークスペース上の変数 
+simdata 
+として定義されます。インポート可能なファイルの書式は、ユーザが任意に作成することができます。作成方法は「プラグインの詳細」を参照してください。本ツールにはサンプルとして、次の入力形式があらかじめ用意されています。</p>
+<p><strong>CSV-ファイル(時間共通)</strong></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>すべての信号に共通の時間列を第一列に持ち、その時間軸に対して、信号の値が与えられるCSVファイルからデータを読み込みます。</p>
+  <p>例：</p>
+  <blockquote dir="ltr" style="margin-right: 0px;">
+    <table style="border: 1px solid ; padding: 2px; width: 60px;">
+      
+      <tbody><tr>
+        <td><pre><font face="Courier">Test Case 01<br>time, SigA, SigB<br>0.00,&nbsp;&nbsp;&nbsp; 0,&nbsp;&nbsp;&nbsp; 0<br>0.10,&nbsp;&nbsp; 10,&nbsp;&nbsp;&nbsp; 0<br>0.15,&nbsp;&nbsp;&nbsp; 5,&nbsp;&nbsp;&nbsp; 0<br>0.25,&nbsp;&nbsp;&nbsp; 5,&nbsp;&nbsp;&nbsp; 1<br>0.30,&nbsp;&nbsp;&nbsp; 7,&nbsp;&nbsp;&nbsp; 0<br>0.40,    7,    0</font></pre></td></tr></tbody></table></blockquote>
+  <p dir="ltr">説明:</p>
+  <blockquote>
+    <p dir="ltr">1行目には、テストケース名を記述します。このテストケース名は、「テストケース」リストボックスに表示される名前になります。</p>
+    <p dir="ltr">2行目には、信号名を記述します。第1列は時間に対応し、第2列はインポートブロックの1番ポートに、第3列はインポートブロックの第2ポートに対応しま
+す。モデル上のインポートブロックと同名にする必要はありませんが、エクスポート関数を記述する際には、この信号名情報を利用することができます(例:
+Signal Builderブロックへエクスポートする際には、Signal Builderブロック内の信号名として与えられます)。</p>
+    <p dir="ltr">3行目以降には、信号値を記述します。</p>
+    <p dir="ltr"><strong>制約事項</strong>： この形式でCSVファイルを記述する場合には、次の制約があります。</p>
+    <li>n行目に与えられた時間データをt(n) としたとき、t(n+1) - t(n) &gt; 
+  0&nbsp;が常に成立すること。&nbsp;</li></blockquote></blockquote>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <blockquote dir="ltr" style="margin-right: 0px;">
+    <p><strong>&nbsp;</strong></p></blockquote></blockquote>
+<p><strong>CSV-ファイル(時間各組)</strong></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>各信号値に対して、個別の時間軸データを持つCSVファイルからデータを読み込みます。</p>
+  <p>例：</p>
+  <blockquote>
+    <table style="border: 1px solid ; padding: 2px; width: 60px;">
+      
+      <tbody><tr>
+        <td>
+          <p dir="ltr"></p><pre><font face="Courier">Test Case 02<br>time, SigA, time, SigB<br>   0,    0,    0,    0<br> 0.1,   10, 0.25,    1<br>0.15,    5,  0.3,    0<br> 0.3,    7,  0.4,    0<br> 0.4,    7,</font></pre></td></tr></tbody></table></blockquote>
+  <p>説明:</p>
+  <blockquote>
+    <p dir="ltr">1行目には、テストケース名を記述します。このテストケース名は、「テストケース」リストボックスに表示される名前になります。</p>
+    <p dir="ltr">2行目には、信号名を記述します。第1列は時間に対応し、第2列はインポートブロックの1番ポートに対応する信号名、第3列は時間、第4列はインポートブロックの第2ポートに対応します。つまり、2n-1列 
+    (n=1,2,...) は時間に対応し、 
+    2n列は、n番目のインポートブロックに対応します。モデル上のインポートブロックと同名にする必要はありませんが、エクスポート関数を記述する際には、信号名情報を利用することができます。</p>
+    <p dir="ltr">3行目以降には、時間と信号値の組を記述します。それぞれの信号に独立の時間情報を与えることができます。</p>
+    <p dir="ltr"><strong>制約事項</strong>： この形式でCSVファイルを記述する場合には、次の3点の制約があります。</p>
+    <li>n行目に与えられた時間データをt(n) としたとき、t(n+1) - t(n) &gt; 0&nbsp;が常に成立すること。&nbsp; 
+    </li><li>すべての信号の最終の時間(上記例では0.4秒)を共通にしてください。&nbsp; 
+    </li><li>すべての信号は、最終信号値が前回値と同一の値を持つように指定してください(上記の例では、 
+    SigAは信号値0.7が0.3秒、0.4秒で同一。SigBは信号値0が0.3秒、0.4秒で同一)。</li></blockquote></blockquote>
+<p><strong>MAT-ファイル</strong></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>指定したMATファイルから入力
+データを読み込みます。MAT-ファイルには、変数simdataが含まれていなければなりません。さらにsimdataは時間付き構造体フォーマットで
+なければなりません。ここで、時間付き構造体に関する詳細なドキュメントは、次をご参照下さい。</p>
+  <blockquote dir="ltr" style="margin-right: 0px;">
+    <p>ヘルプ &gt; Simulink &gt; User Guide &gt; シミュレーションの実行 &gt; 
+    シミュレーションデータのインポートとエクスポート &gt; 出力データをMATLABワークスペースにエクスポート &gt; フォーマットオプション 
+    &gt;&nbsp;時間付き構造体</p>
+    <p>Help &gt; Simulink &gt; Importing and Exporting Data &gt; Exporting Data 
+    to the MATLAB Workspace &gt; Format Options&nbsp; &gt; Structure with 
+    time</p></blockquote></blockquote>
+<p><strong>Signal Builder</strong></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>&nbsp;選択されている(gcbコマンドの結果が指す)ブロックがSignal 
+  Builderブロックの場合、全てのグループの信号データをインポートします。</p></blockquote>
+<p><strong>WorkSpace</strong></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>ワークスペース上に時間付き構造体フォーマットで定義された変数 simdata を読み込みます。</p></blockquote>
+<p><strong>sldvData</strong></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>Simulink Design Verifierによって解析された結果として作成される sldvData 
+  フォーマット形式のMATファイルを読み込みます。</p></blockquote>
+<p><img alt="SLDVMISSCOVTOOL_12.PNG - 10,688BYTES" src="sldvmisscovtool_12.png" height="260" width="299"></p>
+<h4>(2-2) エクスポート</h4>
+<p>インポート機能によって作成されたワークスペース変数 simdata 
+を任意の形式に出力します。出力ファイルの書式は、ユーザが任意に作成することができます。作成方法は「プラグインの詳細」を参照してください。本ツールにはサンプルとして、次の入力形式があらかじめ用意されています。</p>
+<p><img alt="SLDVMISSCOVTOOL_14.PNG - 4,016BYTES" src="sldvmisscovtool_14.png" height="106" width="233"></p>
+<p><strong>CSV-ファイル(時間共通)</strong></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>選択されているテストケースを、すべての信号に共通の時間列を第一列に持ち、その時間軸に対して、信号の値が与えられるCSVファイルとして書き出します。</p></blockquote>
+<p><strong>CSV-ファイル(時間各組)</strong></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>選択されているテストケースを、各信号値に対して、個別の時間軸データを持つCSVファイルとして書き出します。</p></blockquote>
+<p><strong>MAT-ファイル</strong></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>選択されているテストケースを、MATファイルとして書き出します。MATファイル内には simdata 
+変数が保存されます。</p></blockquote>
+<p><strong>Signal Builder</strong></p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>新規モデルを作成し、&nbsp;選択されているテストケースを、新たに作成されたSignal Builder 
+ブロックに書き出します。</p></blockquote>
+<h4>(2-3) プラグインの詳細</h4>
+
+<blockquote dir="ltr" style="margin-right: 0px;">
+  <p>本ツールでは、プラグインという仕組みにより、任意のデータ形式を読み込んだり、任意のデータ形式に書き出したりすることが可能です。</p>
+  <p>(2-3-1) プラグインとして認識される条件</p>
+  <blockquote dir="ltr" style="margin-right: 0px;">
+    <p>・ sldvmisscovtool.m と同じフォルダに存在する</p>
+    <p>・ インポート関数の場合 import から始まる関数M-ファイル、エクスポート関数の場合 export から始まるM-ファイルである</p>
+    <blockquote dir="ltr" style="margin-right: 0px;">
+      <p>例：インポート関数</p>
+      <p>importCSVfile.m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      importMATfile.m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      importWorkSpace.m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <br>importCSVfile2.m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      importSignalBuilder.m&nbsp; importsldvDatafile.m</p>
+      <p>例：エクスポート関数</p>
+      <p dir="ltr">exportCSVfile.m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      exportMATfile.m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <br>exportCSVfile2.m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      exportSignalBuilder.m&nbsp; <br></p></blockquote></blockquote>
+  <p dir="ltr">(2-3-2) プラグイン関数フォーマット : インポート関数</p>
+  <blockquote dir="ltr" style="margin-right: 0px;">
+    <p dir="ltr">本ツールインストールフォルダ内に含まれる&nbsp; _importTemplate.m 
+  に詳細が記述されています。</p></blockquote>
+  <p dir="ltr">(2-3-3) プラグイン関数フォーマット : エクスポート関数</p>
+  <blockquote dir="ltr" style="margin-right: 0px;">
+    <p dir="ltr">本ツールインストールフォルダ内に含まれる&nbsp; _exportTemplate.m 
+  に詳細が記述されています。</p></blockquote></blockquote>
+<h4>（2-4) Signal Viewerボタン</h4>
+<img style="width: 76px; height: 41px;" alt="" src="sldvmisscovtool_22.png">をクリックすると、Signal Viewer GUI (sldvmisscovtool_signalviewer)が別画面で表示されます。このウィンドウは、入力テストケース（WorkSpace上のsimdata変数）を可視化する機能を提供します。<br>
+<br>
+<h4>(2-5) Signal Viewer GUI (sldvmisscovtool_signalviewer)</h4>
+<img style="width: 675px; height: 417px;" alt="" src="sldvmisscovtool_23.png"><br>
+<br><span style="font-weight: bold;">リストボックスおよびボタン説明</span><br>
+<ul>
+  <li>simdata リストボックス</li>
+</ul>
+<div style="margin-left: 40px;">この描画ツールに読み込まれたWorkSpace変数に含まれるテストケースを表します。上図の場合4つのテストケースが読み込まれています。<br>
+</div>
+<ul>
+  <li>
+signals リストボックス</li>
+</ul>
+<div style="margin-left: 40px;">simdataリストボックスで選択された各テストケースに含まれる信号をすべて表示
+しています。x-yの表記は、x番目のテストケースに含まれるy番目の信号であり、simdata(x).signals(y)
+に対応します。１つまたは複数の行を選択すると、選択された信号をAxes上に描画します。ツールメニュー「設定」-「別々に描画」が有効な場合には、異
+なるAxesに描画を行います。同設定が無効な場合には、1つのAxesに重ねて描画します。<br>
+</div>
+<ul>
+  <li>"Close"ボタン</li>
+</ul>
+<div style="margin-left: 40px;">このウィンドウを閉じます。<br>
+</div>
+<ul>
+  <li>
+"simdataをロード"ボタン</li>
+</ul>
+<div style="margin-left: 40px;">WorkSpace上のsimdata変数を再読み込みします。<br>
+</div>
+<ul>
+  <li>
+"figureを作成"ボタン</li>
+</ul>
+<div style="margin-left: 40px;">現在描画されているAxesを新しいfigureにコピーし、再描画します。Plot Toolなどを用いて加工・修正する場合に用います。<br>
+</div>
+<br>
+<span style="font-weight: bold;">設定ツールメニュー<br>
+<br>
+</span><img style="width: 119px; height: 113px;" alt="" src="sldvmisscovtool_24.png"><br>
+<ul>
+  <li>凡例を表示</li>
+</ul>
+<div style="margin-left: 40px;"><span style="font-weight: bold;">有効</span>: グラフ上に凡例を表示します。「別々に描画」が無効である場合にのみ有効なオプションです。<br>
+<span style="font-weight: bold;">無効</span>: グラフ上に凡例を表示しません。<br>
+</div>
+<ul>
+  <li>別々に描画</li>
+</ul>
+<div style="margin-left: 40px;"><span style="font-weight: bold;">有効</span>: 1つのAxesに1つの描画を行います。signalsリストボックスで10以上の信号が選択されている場合には自動的に無効になります。<br>
+<span style="font-weight: bold;">無効</span>: 選択された信号を1つのAxesに重ねて描画します。<br>
+</div>
+<br>
+<ul>
+  <li>言語 - 日本語</li>
+</ul>
+<div style="margin-left: 40px;">GUIの表記を日本語にします。<br>
+</div>
+<ul>
+  <li>言語 - English</li>
+</ul>
+<div style="margin-left: 40px;">GUIの表記を英語にします。<br>
+</div>
+<br>
+
+<h3>(3) 対象モデルペイン</h3>
+<p>このペインでは、「データ管理」ペインにて読み込まれたデータを入力として与える対象モデルを選択します。</p>
+<p><img alt="SLDVMISSCOVTOOL_04.PNG - 939BYTES" src="sldvmisscovtool_04.png" height="31" width="28">をクリックすると、ファイル選択画面より、対象とするモデルファイルを選択します。一方で、<img alt="SLDVMISSCOVTOOL_05.PNG - 1,104BYTES" src="sldvmisscovtool_05.png" height="24" width="123">を選択した場合には、bdrootで与えられるモデルが対象となります。選択後には、モデルが開かれ、内部的にモデルのコンパイルコマンドが発行されます。</p>
+<p><font face="Courier">&nbsp;modelname([],[],[],'compile')</font></p>
+<p>コンパイルが実行されることにより、モデルの最上位階層に存在するInportブロックのデータタイプが判明し、「入力ポート名・データタイプ」リ
+ストに表示されます。解析されたデータタイプは、「モデルの入力データタイプに適用」ボタンをクリックした場合や、「カバレッジ」ペインにおいてカバレッ
+ジ測定が実行される前に使用されます。</p>
+<p><img alt="SLDVMISSCOVTOOL_16.PNG - 1,206BYTES" src="sldvmisscovtool_16.png" height="23" width="170">「モ
+デルの入力データタイプに適用」をクリックすると、「データ管理」ペインで読み込まれ、ベースワークスペースに定義されている時間付き構造体変数
+simdata
+のデータタイプを、モデルの入力ポートのデータタイプと一致するようにキャストします。なお、このキャストは必ずしも必要ではなく、「カバレッジ」ペイン
+における「カバレッジ測定」ボタンをクリックした際にも、モデルの入力ポートのデータタイプと異なる場合には、キャストを実施するかの確認がなされます。</p>
+<h3>(4) カバレッジペイン</h3>
+<p>「カバレッジの計測」ボタンをクリックすると、「テストケース」リストボックスで選択されているすべてのデータが、モデルの入力ポートのデータタイ
+プと一致しているかどうかの確認がおこなわれます。データタイプが一致しない場合には、キャストを実施するかどうかの確認画面が表示されます。</p>
+<p><img alt="SLDVMISSCOVTOOL_17.PNG - 14,005BYTES" src="sldvmisscovtool_17.png" height="142" width="626"></p>
+<p>ここで、「いいえ」を選択した場合には、操作が中止され、何も行われません。「はい」を選択した場合には、「テストケース」リストボックスで選択さ
+れているすべてのデータに対するシミュレーションが順次行われ、カバレッジ測定が行われます。選択したテストケースをモデルの入力として与えた場合に、シ
+ミュレーションでエラーが発生する場合には、「テストケース」リストボックスの選択が外されます。また、累積カバレッジデータはベースワークスペース上に
+「covData」として保存されます。<br>※ 
+「ブロックを色分け」にチェックを入れてカバレッジの計測を行いますと、ブロック色によりカバレッジの到達状況を確認できます。</p>
+<p><img alt="SLDVMISSCOVTOOL_18.PNG - 1,012BYTES" src="sldvmisscovtool_18.png" height="32" width="103">「レポートの表示」ボタンをクリックした場合には、累積カバレッジデータ 
+covData に対して、カバレッジ測定レポートが表示されます。</p>
+<h3>(5) SLDVペイン</h3>
+<p><img alt="SLDVMISSCOVTOOL_19.PNG - 1,204BYTES" src="sldvmisscovtool_19.png" height="39" width="159">「未達カバレッジの解析」ボタンをクリックすると、「カバレッジ」ペインで測定したモデルカバレッジで100%カバレッジが達成されない場合、Simulink 
+Design Verifierの機能を用いて、未達成のカバレッジに到達するテストベクタを解析することができます。</p>
+<p>このペインは、Simulink Design Verifierのライセンスを持っていない場合には表示されません。</p>
+<p>テストケースの自動生成機能に関するオプション設定がチェックボックスで用意されています。</p>
+<h3>(6) 結果のマージペイン</h3>
+<p><img alt="SLDVMISSCOVTOOL_20.PNG - 1,035BYTES" src="sldvmisscovtool_20.png" height="30" width="113">「統
+合レポート」ボタンをクリックすると、「カバレッジ計測」ボタンをクリックした際にカバレッジ測定が行われた、「テストケース」で選択されているテスト
+ケースで満たされたカバレッジ対象と、「未達カバレッジの解析」で求められた自動生成されたテストケースで達成されたカバレッジ対象に対し、合算がおこな
+われたカバレッジレポートを生成します。</p>
+<p><img alt="SLDVMISSCOVTOOL_21.PNG - 949BYTES" src="sldvmisscovtool_21.png" height="26" width="108">「テストケースをマージ」をクリックすると、</p>
+<p>「テストケース」リストボックスで選択されているテストケース + 「未達カバレッジの解析」によって自動生成されたテストケース</p>
+<p>がSignal Builderに含まれるテストハーネスモデルが作成されます。</p>
+<p>このボタンによって作成されたSignal Builderブロックから、再び「データ管理」ペインにおける「Signal 
+Builderブロックから」インポートを行うことにより、テストケースを再び入力として扱うことができるようになります。</p> 
+<br>
+<h2>■ その他</h2>
+<ul>
+  <li>固定小数点対応</li>
+</ul>
+<div style="margin-left: 40px;">このツールは、MATLAB R2009a以降でご利用の場合、固定小数点モデルに対する利用が対応しています。<br>
+</div>
+<h2>■ 更新履歴</h2>
+2008/02/13 : 初版リリース<br>
+
+2008/06/23 : ルートレベルInportのデータタイプが「継承」の場合に対応<br>
+2008/10/31 : MATLAB Centralで公開<br>
+2009/01/07 : エラー回避などの小修正の実施<br>
+2009/06/28 : 第2版をMATLAB Centralでリリース。プラグインインポート・エクスポートに対応<br>
+2010/05/06 : 第3版をMATLAB Centralでリリース。Signal Viewer機能を追加。固定小数点(R2009a以降)に対応。<br>
+
+<br>
+</body></html>

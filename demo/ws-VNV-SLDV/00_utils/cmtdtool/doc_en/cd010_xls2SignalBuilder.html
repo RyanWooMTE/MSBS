@@ -1,0 +1,137 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Create SignalBuilder block from Excel selection</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-04"><meta name="DC.source" content="cd010_xls2SignalBuilder.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Create SignalBuilder block from Excel selection</h1><!--introduction--><div><ul><li>Supported by MATLAB R2007a or later</li><li>Requires Simulink&reg;.</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Overview</a></li><li><a href="#2">(1) Select cells to export SignalBuilder</a></li><li><a href="#3">(2) Click <b>Excel selection to SignalBuilder</b> button</a></li><li><a href="#4">(3) SignalBuilder block is generated (or add / replace)</a></li><li><a href="#5">Rule for writing tests</a></li><li><a href="#6">Traceability link from SignalBuilder to Excel sheet</a></li><li><a href="#7">How to run</a></li></ul></div><h2>Overview<a name="1"></a></h2><h2>(1) Select cells to export SignalBuilder<a name="2"></a></h2><p><img vspace="5" hspace="5" src="d01_Excel2SignalBuilder/cd010_xls2SignalBuilder_pic01.png" alt=""> </p><h2>(2) Click <b>Excel selection to SignalBuilder</b> button<a name="3"></a></h2><p><img vspace="5" hspace="5" src="d01_Excel2SignalBuilder/cd010_xls2SignalBuilder_pic02.png" alt=""> </p><h2>(3) SignalBuilder block is generated (or add / replace)<a name="4"></a></h2><p><img vspace="5" hspace="5" src="d01_Excel2SignalBuilder/cd010_xls2SignalBuilder_pic03.png" alt=""> </p><p><img vspace="5" hspace="5" src="d01_Excel2SignalBuilder/cd010_xls2SignalBuilder_pic04.png" alt=""> </p><h2>Rule for writing tests<a name="5"></a></h2><div><ul><li>Row 1: Write test case name at the left most cell</li><li>Row2: Fill time, signal name 1, signal name 2, ...</li><li>Row3: Fill datatype name  for each signals (double, single, int8, uint8, int16, uint16, int32, uint32, boolean)</li><li>Row 4: Fill time and signals at each time.</li></ul></div><p><b>Note</b></p><div><ul><li>If you select "New" at cmtdtool's GUI, the number of outport of SignalBuilder block will be the number of selected column- 1.</li><li>If you select "Add" or "Replace" at cmtdtool's GUI, it cause an error if the number of outport of SignalBuilder block is not equal to the number of selected column -1.</li><li>Currently, Data-type setting s are not reflected to SignalBuilder block. simdata variable which will be created in MATLAB Base workspace after importing data has datatype settings.</li></ul></div><h2>Traceability link from SignalBuilder to Excel sheet<a name="6"></a></h2><p>If Simulink Verification and Validation license is available on your MATLAB environment, a link from the group in SignalBuilder to originated Excel cell will be created automatically.</p><p>To navigate the originated range of the Excel, click "Show verification setting" button (indicated by a red square in the below figure), then right-click on the label name shown in "Requirements" pain and select "View" (indicated by green square in the below figure).</p><p><img vspace="5" hspace="5" src="d01_Excel2SignalBuilder/cd010_xls2SignalBuilder_pic05.png" alt=""> </p><div><ul><li><a href="http://www.mathworks.com/help/toolbox/slvnv/ug/bsc_3xe.html">Link to a product document of the requirement link</a></li></ul></div><h2>How to run<a name="7"></a></h2><div><ol><li>Open cmtdtool_sampledata_en.xls in cmtdtool's install directory.</li><li>Select "C2:E15" in "TestVectors" tab.</li><li>Select "New" radio button in cmtdtool GUI, then click "Generate SignalBuilder" button.</li><li>Check that a new Simulink model has been created and the selected time-base signals are exported into SignalBuilder.</li><li>Select "C17:E21" cells in TestVectors tab in the Excel file.</li><li>Click the SignalBuilder block generated by above step 4 to make the block gcb.</li><li>Select "Add" radio button in cmtdtool GUI, then click "Generate SignalBuilder" button again.</li><li>Check that a new signals are added to a new Tab in the SignalBuilder generated by the above step 4.</li><li>Run the following commands and you will see that the same operation can be done by API call.</li></ol></div><pre class="codeinput">xls2SignalBuilder(<span class="string">'cmtdtool_sampledata_en.xls'</span>,<span class="string">'TestVectors'</span>,<span class="string">'C2:E15'</span>,<span class="string">''</span>,<span class="string">'new'</span>);
+xls2SignalBuilder(<span class="string">'cmtdtool_sampledata_en.xls'</span>,<span class="string">'TestVectors'</span>,<span class="string">'C17:E21'</span>,[bdroot <span class="string">'/TestCases'</span>],<span class="string">'append'</span>);
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Create SignalBuilder block from Excel selection
+%
+% * Supported by MATLAB R2007a or later
+% * Requires Simulink(R).
+ 
+%% Overview
+%
+%% (1) Select cells to export SignalBuilder
+% 
+% <<d01_Excel2SignalBuilder/cd010_xls2SignalBuilder_pic01.png>>
+%
+%% (2) Click *Excel selection to SignalBuilder* button
+%
+% <<d01_Excel2SignalBuilder/cd010_xls2SignalBuilder_pic02.png>>
+%
+%% (3) SignalBuilder block is generated (or add / replace)
+%
+% <<d01_Excel2SignalBuilder/cd010_xls2SignalBuilder_pic03.png>>
+%
+% <<d01_Excel2SignalBuilder/cd010_xls2SignalBuilder_pic04.png>>
+%
+ 
+%% Rule for writing tests
+% * Row 1: Write test case name at the left most cell
+% * Row2: Fill time, signal name 1, signal name 2, ...
+% * Row3: Fill datatype name  for each signals (double, single, int8, uint8, int16, uint16, int32, uint32, boolean) 
+% * Row 4: Fill time and signals at each time.
+% 
+% *Note*
+%
+% * If you select "New" at cmtdtool's GUI, the number of outport of SignalBuilder block will be the number of selected column- 1.
+% * If you select "Add" or "Replace" at cmtdtool's GUI, it cause an error if the number of outport of SignalBuilder block is not equal to the number of selected column -1.
+% * Currently, Data-type setting s are not reflected to SignalBuilder block. simdata variable which will be created in MATLAB Base workspace after importing data has datatype settings.
+ 
+%% Traceability link from SignalBuilder to Excel sheet
+%
+% If Simulink Verification and Validation license is available on your MATLAB environment,
+% a link from the group in SignalBuilder to originated Excel cell will be
+% created automatically.
+%
+% To navigate the originated range of the Excel, click "Show verification
+% setting" button (indicated by a red square in the below figure), then
+% right-click on the label name shown in "Requirements" pain and select "View"
+% (indicated by green square in the below figure).
+%
+% <<d01_Excel2SignalBuilder/cd010_xls2SignalBuilder_pic05.png>>
+%
+% * <http://www.mathworks.com/help/toolbox/slvnv/ug/bsc_3xe.html Link to a product document of the requirement link>
+% 
+ 
+ 
+%% How to run
+% # Open cmtdtool_sampledata_en.xls in cmtdtool's install directory. 
+% # Select "C2:E15" in "TestVectors" tab.
+% # Select "New" radio button in cmtdtool GUI, then click "Generate SignalBuilder" button.
+% # Check that a new Simulink model has been created and the selected time-base signals are exported into SignalBuilder.
+% # Select "C17:E21" cells in TestVectors tab in the Excel file.
+% # Click the SignalBuilder block generated by above step 4 to make the block gcb. 
+% # Select "Add" radio button in cmtdtool GUI, then click "Generate SignalBuilder" button again.
+% # Check that a new signals are added to a new Tab in the SignalBuilder generated by the above step 4.
+% # Run the following commands and you will see that the same operation can be done by API call.
+ 
+xls2SignalBuilder('cmtdtool_sampledata_en.xls','TestVectors','C2:E15','','new');
+xls2SignalBuilder('cmtdtool_sampledata_en.xls','TestVectors','C17:E21',[bdroot '/TestCases'],'append');
+
+
+##### SOURCE END #####
+--></body></html>

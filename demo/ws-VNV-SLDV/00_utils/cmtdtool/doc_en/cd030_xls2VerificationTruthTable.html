@@ -1,0 +1,129 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Generate TruthTable for assertion verification</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-04"><meta name="DC.source" content="cd030_xls2VerificationTruthTable.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Generate TruthTable for assertion verification</h1><!--introduction--><div><ul><li>Supported by MATLAB R2007a or later</li><li>Requires Simulink&reg; and Stateflow&reg;.</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Overview</a></li><li><a href="#2">Rules for writing TruthTable for assertion verification</a></li><li><a href="#3">Violation oriented pattern description</a></li><li><a href="#4">Normal oriented pattern description</a></li><li><a href="#5">Expected model structure</a></li><li><a href="#6">How to run</a></li></ul></div><h2>Overview<a name="1"></a></h2><p>(1) Select a region of Excel sheet which describes a list of assertion equations in a textual format.</p><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic01.png" alt=""> </p><p>(2) Click <b>TruthTable for Verification</b> to import that equations into Simulink.</p><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic02.png" alt=""> </p><p>(3) A TruthTable block will be created.</p><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic03.png" alt=""> </p><p>(4) The assertion equations are represented by Stateflow's TruthTable block's format. An operator -&gt; is automatically converted to the same logic, e.g. <tt>A-&gt;B</tt> becomes ~(A)||(B).</p><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic04.png" alt=""> </p><h2>Rules for writing TruthTable for assertion verification<a name="2"></a></h2><div><ul><li>1st column "Description": Used as comments in the model. Do not affect for simulation.</li><li>2nd column "Verification conditions": Specify conditions corresponding to the 1st column. You can write MATLAB equation including arithmetic operator, logical operator, relational operator, and so on. You can use "implies" operator with "-&gt;". The  A -&gt; B is simply replaced by ~A || B.</li></ul></div><p><b>Note</b></p><div><ul><li>There are no operators enable you to use temporal logics. If you want to deal with temporal logics, please define the logics outside of TruthTable block by using such as Unit Delay or Stateflow</li></ul></div><h2>Violation oriented pattern description<a name="3"></a></h2><p>List conditions that should not cause a violation (No violation means normal.)</p><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic05.png" alt=""> </p><h2>Normal oriented pattern description<a name="4"></a></h2><p>List all conditions of normal behavior. (A condition not listed means a violation.)</p><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic06.png" alt=""> </p><h2>Expected model structure<a name="5"></a></h2><p><img vspace="5" hspace="5" src="d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic07.png" alt=""> </p><h2>How to run<a name="6"></a></h2><div><ol><li>Open cmtdtool_sampledata_en.xls</li><li>Select "E7:F10" cell in "VerificationTruthTable" tab.</li><li>Click "TruthTable for Verification" button in cmtdtool GUI.</li><li>Check that there is Truth Table in a new model.</li><li>Run the following commands and you will see that the same operation can be done by API call .</li></ol></div><pre class="codeinput">xls2VerificationTruthTable(<span class="string">'cmtdtool_sampledata_en.xls'</span>,<span class="string">'VerificationTruthTable'</span>,<span class="string">'E7:F10'</span>);
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Generate TruthTable for assertion verification
+%
+% * Supported by MATLAB R2007a or later
+% * Requires Simulink(R) and Stateflow(R).
+ 
+%% Overview
+% (1) Select a region of Excel sheet which describes a list of 
+% assertion equations in a textual format.
+%
+% <<d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic01.png>>
+%
+% (2) Click *TruthTable for Verification* to import that equations into
+% Simulink.
+%
+% <<d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic02.png>>
+%
+% (3) A TruthTable block will be created.
+%
+% <<d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic03.png>>
+%
+% (4) The assertion equations are represented by Stateflow's TruthTable
+% block's format. An operator -> is automatically converted to the same logic, 
+% e.g. |A->B| becomes ~(A)||(B). 
+%
+% <<d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic04.png>>
+ 
+%% Rules for writing TruthTable for assertion verification
+% * 1st column "Description": Used as comments in the model. Do not affect for simulation.
+% * 2nd column "Verification conditions": Specify conditions corresponding to the 1st column. You can write MATLAB equation including arithmetic operator, logical operator, relational operator, and so on. You can use "implies" operator with "->". The  A -> B is simply replaced by ~A || B.
+% 
+% *Note*
+%
+% * There are no operators enable you to use temporal logics. If you want to deal with temporal logics, please define the logics outside of TruthTable block by using such as Unit Delay or Stateflow
+ 
+ 
+%% Violation oriented pattern description
+% List conditions that should not cause a violation 
+% (No violation means normal.)
+%  
+% <<d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic05.png>>
+ 
+%% Normal oriented pattern description
+% List all conditions of normal behavior.
+% (A condition not listed means a violation.)
+%
+% <<d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic06.png>>
+ 
+%% Expected model structure
+%
+% <<d02_Excel2TruthTable/cd030_xls2VerificationTruthTable_pic07.png>>
+ 
+%% How to run
+% # Open cmtdtool_sampledata_en.xls 
+% # Select "E7:F10" cell in "VerificationTruthTable" tab.
+% # Click "TruthTable for Verification" button in cmtdtool GUI.
+% # Check that there is Truth Table in a new model.
+% # Run the following commands and you will see that the same operation can be done by API call .
+xls2VerificationTruthTable('cmtdtool_sampledata_en.xls','VerificationTruthTable','E7:F10');
+
+##### SOURCE END #####
+--></body></html>

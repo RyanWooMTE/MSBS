@@ -1,0 +1,250 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Demonstration for Model Verification and Validation</title><meta name="generator" content="MATLAB 7.11.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-08"><meta name="DC.source" content="ModelVerificationDemo_en.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Demonstration for Model Verification and Validation</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Contents of flies</a></li><li><a href="#3">External utilities</a></li><li><a href="#4">Preparation</a></li><li><a href="#6">View Top-level model</a></li><li><a href="#7">View top model of the controller</a></li><li><a href="#8">View a child model of the controller</a></li><li><a href="#9">Running simulation and record model coverage for the top-level model</a></li><li><a href="#10">Test generation for missing coverage objectives by simulations for the cruise controller model</a></li><li><a href="#12">Test generation for the cruise controller model as a unit-level test generation</a></li><li><a href="#15">Test generation for the cruise controller model as a unit-level test generation (Fixed-point model)</a></li><li><a href="#16">Display requirement specification</a></li><li><a href="#17">Reporting requirement traceability report</a></li><li><a href="#18">Opening Model Advisor GUI</a></li><li><a href="#19">Automatic execution of MAAB rules in the Model Advisor</a></li><li><a href="#20">Open examples of Model Advisor Customization</a></li><li><a href="#21">Property Proving</a></li><li><a href="#23">Automatic code generation for the cruise controller model (Floating-point model)</a></li><li><a href="#24">Automatic code generation for the cruise controller model (Fixed-point model)</a></li><li><a href="#25">Automatic Back-to-back testing execution and reporting</a></li><li><a href="#26">Open Report Explorer</a></li></ul></div><h2>Contents of flies<a name="1"></a></h2><p>This demo consists from the following files:</p><p><b>Utility for running demos</b></p><div><ul><li><tt>ModelVerificationDemo_en.html</tt> A HTML file for running demos</li><li><tt>startup_demo.m</tt>: A start up file for setting up an environment.</li></ul></div><p><b>Models</b></p><div><ul><li><tt>cruise_control_top.mdl</tt> : Top-level model.</li><li><tt>cruise_control_top_fixpt.mdl</tt> : Top-level model where the cruise controller is fixed-point.)</li><li><tt>controller.mdl</tt> : Top controller model.</li><li><tt>cruise_control.mdl</tt> : Cruise controller model</li><li><tt>cruise_control_sdo.mdl</tt> : Implementation model for the cruise controller both for floating- and fixed-point model.</li><li><tt>cruise_control_prop.mdl</tt> : An example model for property proving without errors.</li><li><tt>cruise_control_prop_error.mdl</tt> : An example model for property proving with errors.</li><li><tt>cruise_control_MILSIL.mdl</tt> : Back-to-back testing model between Model-In-the-Loop Simulation and Software-In-the-Loop Simulation (C-code)</li></ul></div><p><b>Data files</b></p><div><ul><li><tt>cruise_control_data.m</tt> : A data file for the cruise controller.</li><li><tt>transmission_data.m</tt> : A data file for the transmission controller.</li><li><tt>cruise_control_flp.xls</tt> : A data dictionary for floating-point (single) cruise controller implementation model.</li><li><tt>cruise_control_fxp.xls</tt> : A data dictionary for fixed-point cruise controller implementation model.</li><li><tt>load_float_data.m</tt> : To load floating-point data dictionary.</li><li><tt>load_fxpt_data.m</tt> : To load fixed-point data dictionary.</li></ul></div><p><b>Test inputs</b></p><div><ul><li><tt>TestSenario.xls</tt> : An Excel spread sheet with test inputs that can be imported from the Signal Builder block in the top model.</li></ul></div><p><b>Requirement specification and Verification specification</b></p><div><ul><li><tt>CruiseControl_spec.xls</tt>: Requirement specification and Verification specification for the cruise controller model.</li><li><tt>CruiseControl_spec_q02.xls</tt> : Requirement specification and Verification specification for the cruise controller model for exercise.</li><li><tt>CruiseControl_spec_ref.xls</tt> : Requirement specification and Verification specification for the cruise controller</li></ul></div><h2>External utilities<a name="3"></a></h2><p>This demonstration uses the following external tools that can be downloaded from File Exchange in MATLAB Central.</p><div><ul><li><a href="http://www.mathworks.com/matlabcentral/fileexchange/31609-cmtdtool/content/cmtdtool/doc_ja/description.html">cmtdtool</a> An utility for model-based verification derived from JMAAB.</li><li><a href="http://www.mathworks.com/matlabcentral/fileexchange/20316-sdoxlsif-excel-interface-api-for-simulink-data-object">SDOxlsIF</a> An utility for importing Data Dictionarydefined in an Excel as Simulink Data Objects</li></ul></div><h2>Preparation<a name="4"></a></h2><p>Before running this demo, run a script to set up the environment by clicking the following link.</p><p><a href="matlab:startup_demo">Run starting up script</a></p><p>Click below to clean up unnecessary files.</p><p><a href="matlab:clear_demo">Delete unnecessary files</a></p><h2>View Top-level model<a name="6"></a></h2><p><a href="matlab:rundemo_helper('openTopModel')">Click to run</a></p><h2>View top model of the controller<a name="7"></a></h2><p>This displays the top layer of the controller model consists from multiple modules. This corresponds to a simple structure layer.</p><p><a href="matlab:rundemo_helper('openCtrlModel')">Click to run</a></p><h2>View a child model of the controller<a name="8"></a></h2><p>This displays "Cruise Controller model" as a child model of the controller model. This is an objective of this demo for implementation and verification. This model also corresponds to a dataflow layer.</p><p><a href="matlab:rundemo_helper('openCtrlChildMdl')">Click to run</a></p><h2>Running simulation and record model coverage for the top-level model<a name="9"></a></h2><p>Running simulation for system-level model which is Controller + Plant and record model coverage for the whole controller model including the cruise controller model satisfied by test scenario defined in the Signal Builder block on the top.</p><p><a href="matlab:rundemo_helper('runSimMesureCov')">Click to run</a></p><h2>Test generation for missing coverage objectives by simulations for the cruise controller model<a name="10"></a></h2><p>100% coverage could not be satisfied by top-level model simulations for given test scenarios. By this demo, SLDV generates test cases reaching only for uncovered coverage objectives. This example corresponds to use experimental data or manually created test cases as the first step of model coverage measurement and use SLDV for complementing given test cases.</p><p>For running this demo, you need to record model coverage by running simulation for the top-level model.</p><p><a href="matlab:rundemo_helper('getGenCovChild')">Click to run</a></p><p>The coverage report created by this demo includes three parts: 1) the coverage report for the top-level simulation, 2) the coverage report for test cases for the missing objectives, and 3) total coverage report accumulating 1) and 2) that ideally be 100%.</p><h2>Test generation for the cruise controller model as a unit-level test generation<a name="12"></a></h2><p>This example simply generates test cases to achieve 100% model coverage without any given test cases.</p><p><a href="matlab:rundemo_helper('runTestGenerationChild')">Click to run</a></p><p>There are two usages for automatic test generation as follows:</p><div><ul><li><b>White-box-testing</b>: To achieve that your test cases obtained by system-level simulations or manual creation satisfy given coverage criteria. If there are missing test cases, you can use automatic test generation to assist creating hitting to corner cases.</li></ul></div><div><ul><li><b>Black-box-testing</b>: To verify that two different model parts outputs the same results for the same input time series signals which is called back-to-back testing. The "two different model parts" means, for example, comparing between float- and fixed-point models, MILS and SILS, MILS and PILS.</li></ul></div><h2>Test generation for the cruise controller model as a unit-level test generation (Fixed-point model)<a name="15"></a></h2><pre>SLDV supports both floating- and fixed-point models.</pre><p><a href="matlab:rundemo_helper('runTestGenerationChildFixpt')">Click to run</a></p><h2>Display requirement specification<a name="16"></a></h2><p>In this example, the requirement specification is written in Excel.</p><p><a href="matlab:rundemo_helper('openReqSpec')">Click to run</a></p><h2>Reporting requirement traceability report<a name="17"></a></h2><p>Traceability setting has been configured between the requirement document and the model. This demo generates requirement traceability report</p><p><a href="matlab:rundemo_helper('makeTraceabilityReport')">Click to run</a></p><h2>Opening Model Advisor GUI<a name="18"></a></h2><p>Opening model advisor GUI to check complying with modeling guideline standards.</p><p><a href="matlab:rundemo_helper('openModelAdvisor')">Click to run</a></p><h2>Automatic execution of MAAB rules in the Model Advisor<a name="19"></a></h2><p><a href="matlab:rundemo_helper('runMAABCheck')">Click to run</a></p><h2>Open examples of Model Advisor Customization<a name="20"></a></h2><p>Using Model Advisor Customization API, you can create your own Model Advisor Checks. You can refer the following examples as a baseline of the customization.</p><div><ul><li><a href="matlab:edit('../00_utils/CustomModelAdvisorChecks/sl_customization.m')">sl_customization.m</a>: Model Advisor registration</li><li><a href="matlab:edit('../00_utils/CustomModelAdvisorChecks/define_ModelAdvisorChecks.m')">define_ModelAdvisorChecks.m</a> : Registration of the contents and callback functions</li><li><a href="matlab:edit('../00_utils/CustomModelAdvisorChecks/mycheck1_callback.m')">mycheck1_callback.m</a>: The callback for check 1.</li><li><a href="matlab:edit('../00_utils/CustomModelAdvisorChecks/mycheck1_body.m')">mycheck1_body.m</a>: Detection of deviations for check 1.</li><li><a href="matlab:edit('../00_utils/CustomModelAdvisorChecks/mycheck2_callback.m')">mycheck2_callback.m</a>: The callback for check 2.</li><li><a href="matlab:edit('../00_utils/CustomModelAdvisorChecks/mycheck2_body.m')">mycheck2_body.m</a>: Detection of deviations for check 2.</li><li><a href="matlab:edit('../00_utils/CustomModelAdvisorChecks/mycheck2_action.m')">mycheck2_action.m</a>: Automatic correction for check 2.</li></ul></div><h2>Property Proving<a name="21"></a></h2><p>The verification formula written in E column in the requirement and verification specification can be verified by property proving of Simulink Design Verifier.</p><div><ul><li><a href="matlab:rundemo_helper('openPropModelError')">Open Property proving model with errors</a></li><li><a href="matlab:rundemo_helper('runPropProveError')">Run Property proving with errors</a></li><li><a href="matlab:rundemo_helper('openPropModel')">Open Property proving model without errors</a></li><li><a href="matlab:rundemo_helper('runPropProve')">Run Property proving without errors</a></li></ul></div><p>These demos are for single data type but fixed-point data type is also supported for property proving.</p><h2>Automatic code generation for the cruise controller model (Floating-point model)<a name="23"></a></h2><p><a href="matlab:rundemo_helper('genCodeGenFloatModel')">Click to run</a></p><h2>Automatic code generation for the cruise controller model (Fixed-point model)<a name="24"></a></h2><p><a href="matlab:rundemo_helper('genCodeGenFixedModel')">Click to run</a></p><h2>Automatic Back-to-back testing execution and reporting<a name="25"></a></h2><p><a href="matlab:rundemo_helper('runTestGen_MILSIL_Back2BackReport_Fixed')">Click to run</a></p><h2>Open Report Explorer<a name="26"></a></h2><p>The contents of automatic report generation can be configured by Report Explorer</p><p><a href="matlab:report">Click to run</a></p><p class="footer"><br>
+      Published with MATLAB&reg; 7.11.2<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Demonstration for Model Verification and Validation
+%
+
+%% Contents of flies
+% This demo consists from the following files:
+%
+% *Utility for running demos*
+%
+% * |ModelVerificationDemo_en.html| A HTML file for running demos
+% * |startup_demo.m|: A start up file for setting up an environment.
+%
+%
+% *Models*
+%
+% * |cruise_control_top.mdl| : Top-level model.
+% * |cruise_control_top_fixpt.mdl| : Top-level model where the cruise controller is fixed-point.)
+% * |controller.mdl| : Top controller model.
+% * |cruise_control.mdl| : Cruise controller model
+% * |cruise_control_sdo.mdl| : Implementation model for the cruise controller both for floating- and fixed-point model.
+% * |cruise_control_prop.mdl| : An example model for property proving without errors.
+% * |cruise_control_prop_error.mdl| : An example model for property proving with errors.
+% * |cruise_control_MILSIL.mdl| : Back-to-back testing model between Model-In-the-Loop Simulation and Software-In-the-Loop Simulation (C-code)
+
+%%
+% *Data files*
+%
+% * |cruise_control_data.m| : A data file for the cruise controller.
+% * |transmission_data.m| : A data file for the transmission controller.
+% * |cruise_control_flp.xls| : A data dictionary for floating-point (single) cruise controller implementation model.
+% * |cruise_control_fxp.xls| : A data dictionary for fixed-point cruise controller implementation model.
+% * |load_float_data.m| : To load floating-point data dictionary.
+% * |load_fxpt_data.m| : To load fixed-point data dictionary.
+%
+% *Test inputs*
+%
+% * |TestSenario.xls| : An Excel spread sheet with test inputs that can be imported from the Signal Builder block in the top model.
+%
+% *Requirement specification and Verification specification*
+%
+% * |CruiseControl_spec.xls|: Requirement specification and Verification specification for the cruise controller model.
+% * |CruiseControl_spec_q02.xls| : Requirement specification and Verification specification for the cruise controller model for exercise.
+% * |CruiseControl_spec_ref.xls| : Requirement specification and Verification specification for the cruise controller
+
+%% External utilities
+% This demonstration uses the following external tools that can be downloaded from File Exchange in MATLAB Central.
+%
+% * <http://www.mathworks.com/matlabcentral/fileexchange/31609-cmtdtool/content/cmtdtool/doc_ja/description.html cmtdtool> An utility for model-based verification derived from JMAAB.
+% * <http://www.mathworks.com/matlabcentral/fileexchange/20316-sdoxlsif-excel-interface-api-for-simulink-data-object SDOxlsIF> An utility for importing Data Dictionarydefined in an Excel as Simulink Data Objects
+%
+
+%% Preparation
+% Before running this demo, run a script to set up the environment by clicking the following link.
+%
+% <matlab:startup_demo Run starting up script>
+
+%%
+% Click below to clean up unnecessary files.
+%
+% <matlab:clear_demo Delete unnecessary files>
+
+%% View Top-level model
+% 
+% <matlab:rundemo_helper('openTopModel') Click to run>
+
+%% View top model of the controller
+% This displays the top layer of the controller model consists from multiple modules.
+% This corresponds to a simple structure layer. 
+%
+% <matlab:rundemo_helper('openCtrlModel') Click to run>
+
+%% View a child model of the controller
+% This displays "Cruise Controller model" as a child model of the controller model.
+% This is an objective of this demo for implementation and verification. This model also corresponds to a dataflow layer.
+%
+% <matlab:rundemo_helper('openCtrlChildMdl') Click to run>
+
+%% Running simulation and record model coverage for the top-level model
+% Running simulation for system-level model which is Controller + Plant and record model coverage for the whole controller model including the cruise controller model satisfied by test scenario defined in the Signal Builder block on the top.
+%
+% <matlab:rundemo_helper('runSimMesureCov') Click to run>
+
+%% Test generation for missing coverage objectives by simulations for the cruise controller model
+% 100% coverage could not be satisfied by top-level model simulations for given test scenarios. 
+% By this demo, SLDV generates test cases reaching only for uncovered coverage objectives.
+% This example corresponds to use experimental data or manually created test cases 
+% as the first step of model coverage measurement and use SLDV for complementing given test cases.
+%
+% For running this demo, you need to record model coverage by running simulation for the top-level model.
+%
+% <matlab:rundemo_helper('getGenCovChild') Click to run>
+
+%%
+% The coverage report created by this demo includes three parts: 1) the coverage report for the top-level simulation,
+% 2) the coverage report for test cases for the missing objectives, 
+% and 3) total coverage report accumulating 1) and 2) that ideally be 100%.
+
+%% Test generation for the cruise controller model as a unit-level test generation
+% This example simply generates test cases to achieve 100% model coverage without any given test cases.
+%
+% <matlab:rundemo_helper('runTestGenerationChild') Click to run>
+
+%%
+% There are two usages for automatic test generation as follows:
+%
+% * *White-box-testing*: To achieve that your test cases obtained by system-level simulations 
+% or manual creation satisfy given coverage criteria. 
+% If there are missing test cases, you can use automatic test generation to assist creating hitting to corner cases.
+%
+% * *Black-box-testing*: To verify that two different model parts outputs the same results for the same input time series signals which is called back-to-back testing. 
+% The "two different model parts" means, for example, comparing between float- and fixed-point models, MILS and SILS, MILS and PILS.
+%
+%% 
+%% Test generation for the cruise controller model as a unit-level test generation (Fixed-point model)
+%  SLDV supports both floating- and fixed-point models.
+%
+% <matlab:rundemo_helper('runTestGenerationChildFixpt') Click to run>
+
+%% Display requirement specification
+% In this example, the requirement specification is written in Excel.
+%
+% <matlab:rundemo_helper('openReqSpec') Click to run>
+
+%% Reporting requirement traceability report
+% Traceability setting has been configured between the requirement document and the model.
+% This demo generates requirement traceability report
+%
+% <matlab:rundemo_helper('makeTraceabilityReport') Click to run>
+
+
+%% Opening Model Advisor GUI
+% Opening model advisor GUI to check complying with modeling guideline standards. 
+%
+% <matlab:rundemo_helper('openModelAdvisor') Click to run>
+
+%% Automatic execution of MAAB rules in the Model Advisor
+%
+% <matlab:rundemo_helper('runMAABCheck') Click to run>
+
+%% Open examples of Model Advisor Customization
+% Using Model Advisor Customization API, you can create your own Model Advisor Checks.
+% You can refer the following examples as a baseline of the customization.
+%
+% * <matlab:edit('../00_utils/CustomModelAdvisorChecks/sl_customization.m') sl_customization.m>: Model Advisor registration 
+% * <matlab:edit('../00_utils/CustomModelAdvisorChecks/define_ModelAdvisorChecks.m') define_ModelAdvisorChecks.m> : Registration of the contents and callback functions
+% * <matlab:edit('../00_utils/CustomModelAdvisorChecks/mycheck1_callback.m') mycheck1_callback.m>: The callback for check 1.
+% * <matlab:edit('../00_utils/CustomModelAdvisorChecks/mycheck1_body.m') mycheck1_body.m>: Detection of deviations for check 1.
+% * <matlab:edit('../00_utils/CustomModelAdvisorChecks/mycheck2_callback.m') mycheck2_callback.m>: The callback for check 2.
+% * <matlab:edit('../00_utils/CustomModelAdvisorChecks/mycheck2_body.m') mycheck2_body.m>: Detection of deviations for check 2.
+% * <matlab:edit('../00_utils/CustomModelAdvisorChecks/mycheck2_action.m') mycheck2_action.m>: Automatic correction for check 2.
+
+%% Property Proving
+% The verification formula written in E column in the requirement and verification specification
+% can be verified by property proving of Simulink Design Verifier.
+% 
+%
+% * <matlab:rundemo_helper('openPropModelError') Open Property proving model with errors>
+% * <matlab:rundemo_helper('runPropProveError') Run Property proving with errors>
+% * <matlab:rundemo_helper('openPropModel') Open Property proving model without errors>
+% * <matlab:rundemo_helper('runPropProve') Run Property proving without errors>
+
+%%
+% These demos are for single data type but fixed-point data type is also supported for property proving.
+
+
+%% Automatic code generation for the cruise controller model (Floating-point model)
+%
+% <matlab:rundemo_helper('genCodeGenFloatModel') Click to run>
+
+%% Automatic code generation for the cruise controller model (Fixed-point model)
+%
+% <matlab:rundemo_helper('genCodeGenFixedModel') Click to run>
+
+%% Automatic Back-to-back testing execution and reporting
+%
+% <matlab:rundemo_helper('runTestGen_MILSIL_Back2BackReport_Fixed') Click to run>
+
+%% Open Report Explorer
+% The contents of automatic report generation can be configured by Report Explorer
+%
+% <matlab:report Click to run>
+
+##### SOURCE END #####
+--></body></html>

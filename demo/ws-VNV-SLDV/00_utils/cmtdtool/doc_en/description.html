@@ -1,0 +1,137 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>cmtdtool</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-04"><meta name="DC.source" content="description.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>cmtdtool</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Overview</a></li><li><a href="#2">(1) Excel to SignalBuilder conversion</a></li><li><a href="#3">(2) Excel to Truth Table block conversion</a></li><li><a href="#4">(3) Test Harness</a></li><li><a href="#5">(4) Reporting</a></li><li><a href="#6">Change Log</a></li></ul></div><h2>Overview<a name="1"></a></h2><p>cmtdtool is an assistant tool for model-based testing in MBD processes. Initially, this tool is developed for JMAAB-CMTD-WG (JMAAB: Japan MBD Automotive Advisory Board, CMTD-WG: Control Model Test Design Working Group). After several improvements upon feedback from the JMAAB-CMTD-WG members, it is published to MATLAB Central.</p><p>Test design, composing test model, test execution, and reporting are performed when you run tests for a controller model. This tool helps you to reduce and automate manual operations required to perform them.</p><h2>(1) Excel to SignalBuilder conversion<a name="2"></a></h2><div><ul><li><a href="cd010_xls2SignalBuilder.html">Create SignalBuilder block from Excel selection</a> Import, add, and replace time-dependent signals selected region in a Excel sheet into SignalBuilder block.</li><li><a href="cd015_xls2SignalBuilder_multiple.html">Import test vectors in Excel sheet to SignalBuilder block at once</a> Import multiple time-dependent signals into a Excel sheet to a SignalBuilder block at once.</li></ul></div><h2>(2) Excel to Truth Table block conversion<a name="3"></a></h2><div><ul><li><a href="cd020_xls2TruthTable.html">Generate Truth Table block from Excel</a> Import a truth table represented in an Excel sheet to a Truth Table block.</li><li><a href="cd030_xls2VerificationTruthTable.html">Generate TruthTable for assertion verification</a> Import verification equations represented in a Excel sheet to a Truth Table block.</li><li><a href="cd035_xls2TestObjective.html">User defined test</a> Generate a block which enables to check relations between inputs and expected outputs represented in an Excel sheet.</li><li><a href="cd040_xls2RequirementBaseTestTruthTable.html">Requirement-based Testing</a> Generate a Truth Table block which can be used to requirement-based testing. If you specify P implies Q in the Excel with given format, this feature generates a TruthTable block to generate test cases to achive P condition and generate another TruthTable block to throw assersion when P implies Q is falsified.</li></ul></div><h2>(3) Test Harness<a name="4"></a></h2><div><ul><li><a href="cd040_makeharness.html">Generate test harness</a> Generate a test harness model which is composed by SignalBuilder + Data Conversions + Controller model from a controller model.</li><li><a href="cd050_makeharness_compareresults.html">Generate harness to compare with expected output</a> Generate a test harness model to compare outputs from a model with expected outputs for given test signals.</li></ul></div><h2>(4) Reporting<a name="5"></a></h2><div><ul><li><a href="cd060_runCMTDReport.html">Automatic test report generation</a> Run each set of signals in a SignalBuilder block in a test harness model and generate test report automatically.</li></ul></div><p><img vspace="5" hspace="5" src="description_pic00.PNG" alt=""> </p><h2>Change Log<a name="6"></a></h2><div><ul><li>2010/06/29 Delivered to JMAAB-CMTD-WS (JMAAB Control Model Test Design Workshop).</li><li>2010/08/04 Bug fixed version had sent to JMAAB-CMTD-WS.</li><li>2010/11/02 Ver0.8 had sent to JMAAB-CMTD-WS.</li><li>2011/02/14 Ver0.9 had sent to JMAAB-CMTD-WS.</li><li>2011/05/27 Ver1.0 has been uploaded to MATLAB Central.</li><li>2011/12/28 Ver1.1 has been uploaded to MATLAB Central.</li></ul></div><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+%% cmtdtool
+ 
+%% Overview
+%
+% cmtdtool is an assistant tool for model-based testing in MBD processes.
+% Initially, this tool is developed for JMAAB-CMTD-WG 
+% (JMAAB: Japan MBD Automotive Advisory Board, CMTD-WG: Control Model Test
+% Design Working Group). After several improvements upon feedback from the
+% JMAAB-CMTD-WG members, it is published to MATLAB Central.
+%
+% Test design, composing test model, test execution, and reporting are
+% performed when you run tests for a controller model. This tool helps you 
+% to reduce and automate manual operations required to perform them.
+%
+%% (1) Excel to SignalBuilder conversion
+%
+% * <cd010_xls2SignalBuilder.html Create SignalBuilder block from Excel selection>
+% Import, add, and replace time-dependent signals selected region in a
+% Excel sheet into SignalBuilder block.
+% * <cd015_xls2SignalBuilder_multiple.html Import test vectors in Excel sheet to SignalBuilder block at once> 
+% Import multiple time-dependent signals into a Excel sheet to a
+% SignalBuilder block at once.
+%
+%% (2) Excel to Truth Table block conversion
+%
+% * <cd020_xls2TruthTable.html Generate Truth Table block from Excel>
+% Import a truth table represented in an Excel sheet to a Truth Table block. 
+% * <cd030_xls2VerificationTruthTable.html Generate TruthTable for assertion verification>
+% Import verification equations represented in a Excel sheet to a
+% Truth Table block. 
+% * <cd035_xls2TestObjective.html User defined test> 
+% Generate a block which enables to check relations between inputs and
+% expected outputs represented in an Excel sheet.
+% * <cd040_xls2RequirementBaseTestTruthTable.html Requirement-based Testing> 
+% Generate a Truth Table block which can be used to requirement-based testing.
+% If you specify P implies Q in the Excel with given format, this feature
+% generates a TruthTable block to generate test cases to achive P condition
+% and generate another TruthTable block to throw assersion when P implies Q
+% is falsified.
+ 
+%% (3) Test Harness
+%
+% * <cd040_makeharness.html Generate test harness> Generate a test harness
+% model which is composed by SignalBuilder + Data Conversions + Controller
+% model from a controller model.
+% * <cd050_makeharness_compareresults.html Generate harness to compare with expected output>
+% Generate a test harness model to compare outputs from a model with expected
+% outputs for given test signals.
+ 
+%% (4) Reporting
+%
+% * <cd060_runCMTDReport.html Automatic test report generation>
+% Run each set of signals in a SignalBuilder block in a test harness model
+% and generate test report automatically.
+%
+% <<description_pic00.PNG>> 
+%
+ 
+%% Change Log
+%
+% * 2010/06/29 Delivered to JMAAB-CMTD-WS (JMAAB Control Model Test Design
+% Workshop).
+% * 2010/08/04 Bug fixed version had sent to JMAAB-CMTD-WS.
+% * 2010/11/02 Ver0.8 had sent to JMAAB-CMTD-WS.
+% * 2011/02/14 Ver0.9 had sent to JMAAB-CMTD-WS.
+% * 2011/05/27 Ver1.0 has been uploaded to MATLAB Central.
+% * 2011/12/28 Ver1.1 has been uploaded to MATLAB Central.
+
+##### SOURCE END #####
+--></body></html>

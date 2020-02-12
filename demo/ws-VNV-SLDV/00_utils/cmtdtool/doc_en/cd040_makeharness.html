@@ -1,0 +1,102 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Generate test harness</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-04"><meta name="DC.source" content="cd040_makeharness.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Generate test harness</h1><!--introduction--><div><ul><li>Supported MATLAB R2009b or later.</li><li>Requires Simulink Veirification and Validation and Simulink Design Verifier for R2009b and R2010a.</li><li>Requires Simulink Veirification and Validation for R2010b or later.</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Overview</a></li><li><a href="#2">How to run</a></li></ul></div><h2>Overview<a name="1"></a></h2><p>(1) Open a model to be tested (set the model as <tt>bdroot</tt>).</p><p><img vspace="5" hspace="5" src="d03_TestHarness/cd040_makeharness_pic00.png" alt=""> </p><p>(2) Click <b>Generate Harness</b> button.</p><p><img vspace="5" hspace="5" src="d03_TestHarness/cd040_makeharness_pic01.png" alt=""> </p><p>(3) A harness model will be created.</p><p><img vspace="5" hspace="5" src="d03_TestHarness/cd040_makeharness_pic02.png" alt=""> </p><p>(4) A signal builder block inside the harness model has a dummy inputs.</p><p><img vspace="5" hspace="5" src="d03_TestHarness/cd040_makeharness_pic03.png" alt=""> </p><h2>How to run<a name="2"></a></h2><div><ol><li>Open cmtdtool_samplemode.mdl  in cmtdtool's install directory.</li><li>Click "Generate harness" button in cmtdtool GUI.</li><li>Check that a new harness model is created.</li><li>Run the following commands and you will see that the same operation can be done by API call .</li></ol></div><pre class="codeinput">open_system(<span class="string">'cmtdtool_samplemode'</span>)
+sldvmakeharness(<span class="string">'cmtdtool_samplemode'</span>);
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Generate test harness
+%
+% * Supported MATLAB R2009b or later.
+% * Requires Simulink Veirification and Validation and Simulink Design Verifier for R2009b and R2010a. 
+% * Requires Simulink Veirification and Validation for R2010b or later.
+
+%% Overview
+% (1) Open a model to be tested (set the model as |bdroot|).
+%
+% <<d03_TestHarness/cd040_makeharness_pic00.png>>
+%
+% (2) Click *Generate Harness* button.
+%
+% <<d03_TestHarness/cd040_makeharness_pic01.png>>
+%
+% (3) A harness model will be created.
+%
+% <<d03_TestHarness/cd040_makeharness_pic02.png>>
+%
+% (4) A signal builder block inside the harness model has a dummy inputs.
+%
+% <<d03_TestHarness/cd040_makeharness_pic03.png>>
+%
+%% How to run
+% # Open cmtdtool_samplemode.mdl  in cmtdtool's install directory.
+% # Click "Generate harness" button in cmtdtool GUI.
+% # Check that a new harness model is created.
+% # Run the following commands and you will see that the same operation can be done by API call .
+open_system('cmtdtool_samplemode')
+sldvmakeharness('cmtdtool_samplemode');
+
+##### SOURCE END #####
+--></body></html>

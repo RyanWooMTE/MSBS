@@ -1,0 +1,2037 @@
+Library {
+  Name			  "sldvdemolib_boundarytest"
+  Version		  7.6
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "Shift_JIS"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Sat Dec 15 21:22:39 2007"
+  Creator		  "yito"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "itoy"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Jul 17 15:54:42 2012"
+  RTWModifiedTimeStamp	  264441260
+  ModelVersionFormat	  "1.%<AutoIncrement:63>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  on
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  off
+	  BooleanDataType	  off
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  on
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 400, 210, 1280, 840 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "MS UI Gothic"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "MS UI Gothic"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "MS UI Gothic"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+  }
+  System {
+    Name		    "sldvdemolib_boundarytest"
+    Location		    [1534, 198, 1793, 962]
+    Open		    on
+    ModelBrowserVisibility  on
+    ModelBrowserWidth	    212
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "36"
+    Block {
+      BlockType		      SubSystem
+      Name		      "CTC"
+      SID		      "35"
+      Ports		      [1, 1]
+      Position		      [90, 115, 120, 145]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskType		      "Compare To Constant"
+      MaskDescription	      "Simulink:masks:CompareToConstant_MD"
+      MaskPromptString	      "Simulink:masks:Operator_MP|Simulink:masks:ConstantValue_MP|Simulink:masks:OutputDataType"
+      "_MP|Simulink:masks:EnableZerocrossingDetection_MP"
+      MaskStyleString	      "popup(==|~=|<|<=|>=|>),edit,popup(uint8|boolean),checkbox"
+      MaskVariables	      "relop=&1;const=@2;OutDataTypeStr=&3;ZeroCross=&4;"
+      MaskTunableValueString  "off,on,off,off"
+      MaskCallbackString      "|||sl('zeroCrossEnable', gcbh);"
+      MaskEnableString	      "on,on,on,on"
+      MaskVisibilityString    "on,on,on,on"
+      MaskToolTipString	      "on,on,on,on"
+      MaskVarAliasString      ",,LogicOutDataTypeMode,"
+      MaskInitialization      "blkName = gcb;\n\nif strcmp(get_param(gcbh,'OutDataTypeStr'),'boolean')\n	setValue = 'b"
+      "oolean';\nelse\n	setValue = 'fixdt(0, 8)';\nend\n\nset_param([blkName,'/Compare'],'relop',relop, ...\n	'OutDataT"
+      "ypeStr', setValue, 'ZeroCross', ZeroCross);\n\nstr = [relop,' C']; %default\n\nconst_str = get_param(blkName, 'c"
+      "onst');\n\nif isempty(strfind(const_str, ' ')) && isempty(strfind(const_str, ','))\n    % scalar or single expre"
+      "ssion\n    if isempty(str2num(const_str))\n        %expression\n        str = [relop, ' ', const_str];\n    else"
+      "if length(const) == 1\n        str = [relop,' ',num2str(double(const))];\n    end\nend"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp(str)"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      MaskValueString	      "<=|3.0|uint8|on"
+      MaskCapabilities	      "slmaskedcaps(gcbh)"
+      System {
+	Name			"CTC"
+	Location		[1056, 456, 1565, 838]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"10"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "35:1"
+	  Position		  [50, 48, 80, 62]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "35:6"
+	  Ports			  [2, 1]
+	  Position		  [290, 172, 320, 203]
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  AccumDataTypeStr	  "Inherit: Same as first input"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Compare"
+	  SID			  "35:2"
+	  Ports			  [2, 1]
+	  Position		  [180, 36, 220, 109]
+	  Operator		  "<="
+	  OutDataTypeStr	  "fixdt(0, 8)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "35:3"
+	  Position		  [75, 70, 115, 110]
+	  DisableCoverage	  on
+	  Value			  "const"
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  SID			  "35:7"
+	  Position		  [180, 165, 245, 195]
+	  ShowName		  off
+	  OutDataTypeStr	  "int32"
+	  ConvertRealWorld	  "Stored Integer (SI)"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion2"
+	  SID			  "35:8"
+	  Position		  [180, 210, 245, 240]
+	  ShowName		  off
+	  OutDataTypeStr	  "int32"
+	  ConvertRealWorld	  "Stored Integer (SI)"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "TestObjective"
+	  SID			  "35:10"
+	  Ports			  [1]
+	  Position		  [365, 177, 390, 203]
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.59"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Design Verifier Test Objective"
+	  MaskDescription	  "Obtains signal values in Simulink Design Verifier test cases.  The 'Values' parameter specifies "
+	  "the desired input signal values.  Two element vectors specify intervals.  Cell arrays specify lists.  Each list ent"
+	  "ry might result in a separate test case.\nExample Values:\ntrue\n{[0 1], 2, [4 5], 6}\n{Sldv.Interval(-2, -1), Sldv"
+	  ".Point(0), Sldv.Interval(0, 1, '()'), 1}"
+	  MaskHelp		  "helpview(fullfile(docroot,'toolbox','sldv','sldv.map'),'testobjective')"
+	  MaskPromptString	  "Enable|Type|Values|Display values|Pass through style (show Outport)"
+	  MaskStyleString	  "checkbox,popup(Test Objective|Proof Objective),edit,checkbox,checkbox"
+	  MaskVariables		  "enabled=&1;customAVTBlockType=@2;intervals=@3;dispValues=@4;outEnabled=@5;"
+	  MaskTunableValueString  "on,on,on,off,off"
+	  MaskCallbackString	  "|||customAVTBlock(gcb,'updateDisp');|"
+	  MaskEnableString	  "on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "customAVTParams = customAVTBlock(gcb, 'update_from_mask', intervals);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "image(imread('sldvicon_o_normal.png','BackGroundColor',[1 1 1]),[3 3 19 20]); hide_arrows(true);"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "pixels"
+	  MaskValueString	  "on|Test Objective|{-1,0,1}|on|off"
+	  System {
+	    Name		    "TestObjective"
+	    Location		    [399, 380, 768, 575]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "4"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "35:10:1"
+	      Position		      [25, 28, 55, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "viewdvc"
+	      SID		      "35:10:2"
+	      Ports		      [1]
+	      Position		      [130, 97, 200, 143]
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      SimViewingDevice	      on
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "VerificationSubsystem"
+	      MaskInitialization      "sldvsubsys('maskInit');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"viewdvc"
+		Location		[411, 791, 641, 905]
+		Open			off
+		ModelBrowserVisibility	on
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "35:10:3"
+		  Position		  [25, 53, 55, 67]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "customAVTBlockSFcn"
+		  SID			  "35:10:4"
+		  Ports			  [1]
+		  Position		  [90, 29, 205, 91]
+		  FunctionName		  "customAVTBlockSFcn"
+		  EnableBusSupport	  off
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "customAVTBlockSFcn"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [0, 85]
+	      DstBlock		      "viewdvc"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "35:4"
+	  Position		  [305, 68, 335, 82]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  Points		  [70, 0]
+	  Branch {
+	    DstBlock		    "Compare"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 125]
+	    DstBlock		    "Data Type Conversion1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Compare"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 135]
+	    DstBlock		    "Data Type Conversion2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion2"
+	  SrcPort		  1
+	  Points		  [0, -30]
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "TestObjective"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "CTZ"
+      SID		      "36"
+      Ports		      [1, 1]
+      Position		      [90, 190, 120, 220]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskType		      "Compare To Zero"
+      MaskDescription	      "Simulink:masks:CompareToZero_MD"
+      MaskPromptString	      "Simulink:masks:Operator_MP|Simulink:masks:OutputDataType_MP|Simulink:masks:EnableZerocro"
+      "ssingDetection_MP"
+      MaskStyleString	      "popup(==|~=|<|<=|>=|>),popup(uint8|boolean),checkbox"
+      MaskVariables	      "relop=&1;OutDataTypeStr=&2;ZeroCross=&3;"
+      MaskTunableValueString  "off,off,off"
+      MaskCallbackString      "||sl('zeroCrossEnable', gcbh);"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskToolTipString	      "on,on,on"
+      MaskVarAliasString      ",LogicOutDataTypeMode,"
+      MaskInitialization      "blkName = gcb;\n\nif strcmp(get_param(gcbh,'OutDataTypeStr'),'boolean')\n	setValue = 'b"
+      "oolean';\nelse\n    setValue = 'fixdt(0, 8)';\nend\n\nset_param([blkName,'/Compare'],'relop',relop, ...\n	'OutDa"
+      "taTypeStr', setValue, 'ZeroCross', ZeroCross);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp([relop,' 0'])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      MaskValueString	      "<=|uint8|on"
+      MaskCapabilities	      "slmaskedcaps(gcbh)"
+      System {
+	Name			"CTZ"
+	Location		[606, 434, 1058, 804]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"9"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "36:1"
+	  Position		  [15, 28, 45, 42]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "36:6"
+	  Ports			  [2, 1]
+	  Position		  [260, 157, 290, 188]
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  AccumDataTypeStr	  "Inherit: Same as first input"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "Compare"
+	  SID			  "36:2"
+	  Ports			  [2, 1]
+	  Position		  [145, 16, 185, 89]
+	  Operator		  "<="
+	  OutDataTypeStr	  "fixdt(0, 8)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "36:3"
+	  Position		  [55, 56, 85, 84]
+	  ShowName		  off
+	  DisableCoverage	  on
+	  Value			  "0"
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  PreserveConstantTs	  on
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  SID			  "36:7"
+	  Position		  [150, 150, 215, 180]
+	  ShowName		  off
+	  OutDataTypeStr	  "int32"
+	  ConvertRealWorld	  "Stored Integer (SI)"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion2"
+	  SID			  "36:8"
+	  Position		  [150, 195, 215, 225]
+	  ShowName		  off
+	  OutDataTypeStr	  "int32"
+	  ConvertRealWorld	  "Stored Integer (SI)"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Test Objective"
+	  SID			  "36:9"
+	  Ports			  [1]
+	  Position		  [340, 162, 365, 188]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Design Verifier Test Objective"
+	  MaskDescription	  "Obtains signal values in Simulink Design Verifier test cases.  The 'Values' parameter specifies "
+	  "the desired input signal values.  Two element vectors specify intervals.  Cell arrays specify lists.  Each list ent"
+	  "ry might result in a separate test case.\nExample Values:\ntrue\n{[0 1], 2, [4 5], 6}\n{Sldv.Interval(-2, -1), Sldv"
+	  ".Point(0), Sldv.Interval(0, 1, '()'), 1}"
+	  MaskHelp		  "helpview(fullfile(docroot,'toolbox','sldv','sldv.map'),'testobjective')"
+	  MaskPromptString	  "Enable|Type|Values|Display values|Pass through style (show Outport)"
+	  MaskStyleString	  "checkbox,popup(Test Objective|Proof Objective),edit,checkbox,checkbox"
+	  MaskVariables		  "enabled=&1;customAVTBlockType=@2;intervals=@3;dispValues=@4;outEnabled=@5;"
+	  MaskTunableValueString  "on,off,on,off,off"
+	  MaskCallbackString	  "|||customAVTBlock(gcb,'updateDisp');|"
+	  MaskEnableString	  "on,off,on,on,on"
+	  MaskVisibilityString	  "on,off,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "customAVTParams = customAVTBlock(gcb, 'update_from_mask', intervals);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "image(imread('sldvicon_o_normal.png','BackGroundColor',[1 1 1]),[3 3 19 20]); hide_arrows(true);"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "pixels"
+	  MaskValueString	  "on|Test Objective|{-1,0,1}|on|off"
+	  System {
+	    Name		    "Test Objective"
+	    Location		    [399, 380, 768, 575]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "5"
+	    SIDPrevWatermark	    "5"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "36:9:1"
+	      Position		      [25, 28, 55, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "viewdvc"
+	      SID		      "36:9:2"
+	      Ports		      [1]
+	      Position		      [130, 97, 200, 143]
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      SimViewingDevice	      on
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "VerificationSubsystem"
+	      MaskInitialization      "sldvsubsys('maskInit');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"viewdvc"
+		Location		[411, 791, 641, 905]
+		Open			off
+		ModelBrowserVisibility	on
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "36:9:3"
+		  Position		  [25, 53, 55, 67]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "customAVTBlockSFcn"
+		  SID			  "36:9:4"
+		  Ports			  [1]
+		  Position		  [90, 29, 205, 91]
+		  FunctionName		  "customAVTBlockSFcn"
+		  EnableBusSupport	  off
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "customAVTBlockSFcn"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [0, 85]
+	      DstBlock		      "viewdvc"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "36:5"
+	  Position		  [270, 48, 300, 62]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Compare"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 140]
+	    DstBlock		    "Data Type Conversion2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  Points		  [75, 0]
+	  Branch {
+	    DstBlock		    "Compare"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 130]
+	    DstBlock		    "Data Type Conversion1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compare"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion2"
+	  SrcPort		  1
+	  Points		  [0, -30]
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Test Objective"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "RelationalOperator"
+      SID		      "7"
+      Ports		      [2, 1]
+      Position		      [85, 267, 120, 298]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskPromptString	      "Relational Operator"
+      MaskStyleString	      "edit"
+      MaskVariables	      "relop=&1;"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskInitialization      "set_param([gcb '/relop'],'relop',relop);\n"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp(relop)"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "<"
+      System {
+	Name			"RelationalOperator"
+	Location		[857, 484, 1501, 753]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"32"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "7:8"
+	  Position		  [45, 68, 75, 82]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  SID			  "7:10"
+	  Position		  [45, 128, 75, 142]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "7:14"
+	  Ports			  [2, 1]
+	  Position		  [460, 50, 495, 150]
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  AccumDataTypeStr	  "Inherit: Same as first input"
+	  OutDataTypeStr	  "int32"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "DTC"
+	  SID			  "7:16"
+	  Position		  [360, 61, 425, 89]
+	  OutDataTypeStr	  "int32"
+	  ConvertRealWorld	  "Stored Integer (SI)"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "DTC3"
+	  SID			  "7:17"
+	  Position		  [360, 111, 425, 139]
+	  OutDataTypeStr	  "int32"
+	  ConvertRealWorld	  "Stored Integer (SI)"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Test Objective"
+	  SID			  "7:32"
+	  Ports			  [1]
+	  Position		  [570, 87, 595, 113]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.62"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Design Verifier Test Objective"
+	  MaskDescription	  "Obtains signal values in Simulink Design Verifier test cases.  The 'Values' parameter specifies "
+	  "the desired input signal values.  Two element vectors specify intervals.  Cell arrays specify lists.  Each list ent"
+	  "ry might result in a separate test case.\nExample Values:\ntrue\n{[0 1], 2, [4 5], 6}\n{Sldv.Interval(-2, -1), Sldv"
+	  ".Point(0), Sldv.Interval(0, 1, '()'), 1}"
+	  MaskHelp		  "helpview(fullfile(docroot,'toolbox','sldv','sldv.map'),'testobjective')"
+	  MaskPromptString	  "Enable|Type|Values|Display values|Pass through style (show Outport)"
+	  MaskStyleString	  "checkbox,popup(Test Objective|Proof Objective),edit,checkbox,checkbox"
+	  MaskVariables		  "enabled=&1;customAVTBlockType=@2;intervals=@3;dispValues=@4;outEnabled=@5;"
+	  MaskTunableValueString  "on,off,on,off,off"
+	  MaskCallbackString	  "|||customAVTBlock(gcb,'updateDisp');|"
+	  MaskEnableString	  "on,off,on,on,on"
+	  MaskVisibilityString	  "on,off,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "customAVTParams = customAVTBlock(gcb, 'update_from_mask', intervals);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "image(imread('sldvicon_o_normal.png','BackGroundColor',[1 1 1]),[3 3 19 20]); hide_arrows(true);"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "pixels"
+	  MaskValueString	  "on|Test Objective|{-1,0,1}|on|off"
+	  System {
+	    Name		    "Test Objective"
+	    Location		    [399, 380, 768, 575]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "5"
+	    SIDPrevWatermark	    "5"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "7:32:1"
+	      Position		      [25, 28, 55, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "viewdvc"
+	      SID		      "7:32:2"
+	      Ports		      [1]
+	      Position		      [130, 97, 200, 143]
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      SimViewingDevice	      on
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "VerificationSubsystem"
+	      MaskInitialization      "sldvsubsys('maskInit');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"viewdvc"
+		Location		[411, 791, 641, 905]
+		Open			off
+		ModelBrowserVisibility	on
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "7:32:3"
+		  Position		  [25, 53, 55, 67]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "customAVTBlockSFcn"
+		  SID			  "7:32:4"
+		  Ports			  [1]
+		  Position		  [90, 29, 205, 91]
+		  FunctionName		  "customAVTBlockSFcn"
+		  EnableBusSupport	  off
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "customAVTBlockSFcn"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [0, 85]
+	      DstBlock		      "viewdvc"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  RelationalOperator
+	  Name			  "relop"
+	  SID			  "7:6"
+	  Ports			  [2, 1]
+	  Position		  [165, 112, 195, 143]
+	  Operator		  "<"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "7:9"
+	  Position		  [220, 123, 250, 137]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  Branch {
+	    Points		    [0, 45]
+	    DstBlock		    "relop"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "DTC"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "relop"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In2"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  Branch {
+	    DstBlock		    "relop"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 90; 165, 0; 0, -100]
+	    DstBlock		    "DTC3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "DTC"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "DTC3"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Test Objective"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "boundarytest_saturation"
+      SID		      "3"
+      Ports		      [1, 1]
+      Position		      [90, 34, 120, 66]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskDescription	      "Block replacement rule for Saturation block.\nThis block enables you a boundary check.\n"
+      MaskPromptString	      "UpperLimit|LowerLimit"
+      MaskStyleString	      "edit,edit"
+      MaskVariables	      "UpperLimit=@1;LowerLimit=@2;"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskToolTipString	      "on,on"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Saturation\\nBoundary Test')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "100|1"
+      System {
+	Name			"boundarytest_saturation"
+	Location		[417, 256, 991, 682]
+	Open			off
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"15"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  "3:1"
+	  Position		  [45, 58, 75, 72]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "3:2"
+	  Ports			  [2, 1]
+	  Position		  [365, 125, 400, 225]
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  AccumDataTypeStr	  "Inherit: Same as first input"
+	  OutDataTypeStr	  "int32"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  SID			  "3:3"
+	  Ports			  [2, 1]
+	  Position		  [365, 260, 400, 360]
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  AccumDataTypeStr	  "Inherit: Same as first input"
+	  OutDataTypeStr	  "int32"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "3:4"
+	  Position		  [180, 185, 235, 215]
+	  Value			  "UpperLimit"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "3:5"
+	  Position		  [180, 320, 235, 350]
+	  Value			  "LowerLimit"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "DTC"
+	  SID			  "3:6"
+	  Position		  [265, 136, 330, 164]
+	  OutDataTypeStr	  "int32"
+	  ConvertRealWorld	  "Stored Integer (SI)"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "DTC1"
+	  SID			  "3:7"
+	  Position		  [265, 271, 330, 299]
+	  OutDataTypeStr	  "int32"
+	  ConvertRealWorld	  "Stored Integer (SI)"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "DTC2"
+	  SID			  "3:12"
+	  Position		  [265, 321, 330, 349]
+	  OutDataTypeStr	  "int32"
+	  ConvertRealWorld	  "Stored Integer (SI)"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "DTC3"
+	  SID			  "3:13"
+	  Position		  [265, 186, 330, 214]
+	  OutDataTypeStr	  "int32"
+	  ConvertRealWorld	  "Stored Integer (SI)"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "LowerLimit"
+	  SID			  "3:8"
+	  Ports			  [1]
+	  Position		  [475, 297, 500, 323]
+	  AttributesFormatString  "%<intervals>"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Design Verifier Test Objective"
+	  MaskDescription	  "Obtains signal values in Simulink Design Verifier test cases.  The 'Values' parameter specifies "
+	  "the desired input signal values.  Two element vectors specify intervals.  Cell arrays specify lists.  Each list ent"
+	  "ry might result in a separate test case.\nExample Values:\ntrue\n{[0 1], 2, [4 5], 6}\n{Sldv.Interval(-2, -1), Sldv"
+	  ".Point(0), Sldv.Interval(0, 1, '()'), 1}"
+	  MaskHelp		  "helpview(fullfile(docroot,'toolbox','sldv','sldv.map'),'testobjective')"
+	  MaskPromptString	  "Enable|Type|Values|Display values|Pass through style (show Outport)"
+	  MaskStyleString	  "checkbox,popup(Test Objective|Proof Objective),edit,checkbox,checkbox"
+	  MaskVariables		  "enabled=&1;customAVTBlockType=@2;intervals=@3;dispValues=@4;outEnabled=@5;"
+	  MaskTunableValueString  "on,on,on,off,off"
+	  MaskCallbackString	  "|||customAVTBlock(gcb,'updateDisp');|"
+	  MaskEnableString	  "on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "customAVTParams = customAVTBlock(gcb, 'update_from_mask', intervals);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "image(imread('sldvicon_o_normal.png','BackGroundColor',[1 1 1]),[3 3 19 20]); hide_arrows(true);"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "pixels"
+	  MaskValueString	  "on|Test Objective|{-1,0,1}|on|off"
+	  System {
+	    Name		    "LowerLimit"
+	    Location		    [399, 380, 768, 575]
+	    Open		    off
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "4"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "3:8:1"
+	      Position		      [25, 28, 55, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "viewdvc"
+	      SID		      "3:8:2"
+	      Ports		      [1]
+	      Position		      [130, 97, 200, 143]
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      SimViewingDevice	      on
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "VerificationSubsystem"
+	      MaskInitialization      "sldvsubsys('maskInit');"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"viewdvc"
+		Location		[411, 791, 641, 905]
+		Open			off
+		ModelBrowserVisibility	on
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  "3:8:3"
+		  Position		  [25, 53, 55, 67]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "customAVTBlockSFcn"
+		  SID			  "3:8:4"
+		  Ports			  [1]
+		  Position		  [90, 29, 205, 91]
+		  FunctionName		  "customAVTBlockSFcn"
+		  EnableBusSupport	  off
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "customAVTBlockSFcn"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [0, 85]
+	      DstBlock		      "viewdvc"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  SID			  "3:9"
+	  Ports			  [1, 1]
+	  Position		  [195, 50, 225, 80]
+	  InputPortMap		  "u0"
+	  UpperLimit		  "UpperLimit"
+	  LowerLimit		  "LowerLimit"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "UpperLimit"
+	  SID			  "3:15"
+	  Ports			  [1]
+	  Position		  [470, 162, 495, 188]
+	  AttributesFormatString  "%<intervals>"
+	  LibraryVersion	  "1.62"
+	  SourceBlock		  "sldvdemolib_boundarytest/boundarytest_saturation/LowerLimit"
+	  SourceType		  "Design Verifier Test Objective"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  GeneratePreprocessorConditionals off
+	  enabled		  on
+	  customAVTBlockType	  "Test Objective"
+	  intervals		  "{-1,0,1}"
+	  dispValues		  on
+	  outEnabled		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "3:11"
+	  Position		  [345, 58, 375, 72]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [80, 0]
+	  Branch {
+	    DstBlock		    "Saturation"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 85]
+	    Branch {
+	      DstBlock		      "DTC"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 135]
+	      DstBlock		      "DTC1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "UpperLimit"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "DTC3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "DTC"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "LowerLimit"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "DTC2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "DTC1"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "DTC2"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "DTC3"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+      }
+    }
+  }
+}

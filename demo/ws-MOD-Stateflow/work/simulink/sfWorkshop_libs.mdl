@@ -1,0 +1,3027 @@
+Library {
+  Name			  "sfWorkshop_libs"
+  Version		  7.3
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  Created		  "Tue Mar 18 14:29:31 2008"
+  Creator		  "wcampbel"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "johnl"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Jul 31 17:55:03 2009"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "1.%<AutoIncrement:47>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SignalSizeVariationType "Allow only fixed size"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    4
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  off
+	  BooleanDataType	  off
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  on
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 520, 285, 1400, 915 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "fixdt(1,16,0)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+      DimensionsMode	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Lookup
+      Table		      " rand(1,10)-0.5"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      Memory
+      X0		      "0"
+      InheritSampleTime	      off
+      LinearizeMemory	      off
+      LinearizeAsDelay	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+      DimensionsMode	      "auto"
+    }
+    Block {
+      BlockType		      PMIOPort
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "sfWorkshop_libs"
+    Location		    [794, 133, 2009, 948]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "(No Pace Control)"
+      Ports		      [3, 1]
+      Position		      [180, 28, 275, 262]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"(No Pace Control)"
+	Location		[99, 196, 820, 676]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "P_device"
+	  Position		  [65, 268, 95, 282]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "RPM_fan"
+	  Position		  [640, 103, 670, 117]
+	  BlockMirror		  on
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_amb"
+	  Position		  [65, 363, 95, 377]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [2, 1]
+	  Position		  [450, 19, 470, 141]
+	  BlockMirror		  on
+	  BackgroundColor	  "yellow"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-10"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [2, 1]
+	  Position		  [325, 230, 345, 350]
+	  InitialConditionSource  "external"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [365, 34, 385, 221]
+	  BlockMirror		  on
+	  BackgroundColor	  "yellow"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "RPM Conversion"
+	  Position		  [500, 93, 540, 127]
+	  BlockMirror		  on
+	  Gain			  "r2h"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Subtract"
+	  Ports			  [2, 1]
+	  Position		  [485, 252, 505, 408]
+	  BackgroundColor	  "yellow"
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-10"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Subtract1"
+	  Ports			  [2, 1]
+	  Position		  [175, 221, 195, 294]
+	  BackgroundColor	  "yellow"
+	  Inputs		  "-+"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-10"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum of\nElements"
+	  Ports			  [1, 1]
+	  Position		  [575, 95, 605, 125]
+	  BlockMirror		  on
+	  Inputs		  "+"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-10"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "conductivity term"
+	  Position		  [245, 245, 275, 275]
+	  Gain			  "k"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "h_off"
+	  Position		  [640, 35, 670, 65]
+	  BlockMirror		  on
+	  BackgroundColor	  "lightBlue"
+	  Value			  "h0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "T_device"
+	  Position		  [480, 203, 510, 217]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "Sum of\nElements"
+	  SrcPort		  1
+	  DstBlock		  "RPM Conversion"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "h_off"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "RPM Conversion"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "RPM_fan"
+	  SrcPort		  1
+	  DstBlock		  "Sum of\nElements"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [-210, 0; 0, 110]
+	  DstBlock		  "Subtract1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Subtract"
+	  SrcPort		  1
+	  Points		  [75, 0; 0, -155]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "conductivity term"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P_device"
+	  SrcPort		  1
+	  DstBlock		  "Subtract1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "T_amb"
+	  SrcPort		  1
+	  Points		  [145, 0]
+	  Branch {
+	    Points		    [0, -50]
+	    DstBlock		    "Integrator"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Subtract"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Subtract1"
+	  SrcPort		  1
+	  DstBlock		  "conductivity term"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  Branch {
+	    Points		    [0, -80]
+	    DstBlock		    "T_device"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Subtract"
+	    DstPort		    1
+	  }
+	}
+	Annotation {
+	  Name			  "Thermal conductivity\ndepends on fan setting"
+	  Position		  [653, 183]
+	}
+	Annotation {
+	  Name			  "CONDUCTION MODEL"
+	  Position		  [170, 47]
+	  FontName		  "Impact"
+	  FontSize		  20
+	}
+	Annotation {
+	  Name			  "dq/dt = k*dT/dt = -h*(T-T_{amb})+P_{device}"
+	  Position		  [181, 71]
+	  TeXMode		  "on"
+	  FontName		  "Arial"
+	  FontSize		  16
+	}
+	Annotation {
+	  Name			  "Initial device temperature\nis same as ambient"
+	  Position		  [340, 393]
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "(Pace Control)"
+      Ports		      [3, 1]
+      Position		      [50, 28, 145, 262]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"(Pace Control)"
+	Location		[99, 196, 820, 676]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "P_device"
+	  Position		  [65, 268, 95, 282]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "RPM_fan"
+	  Position		  [640, 103, 670, 117]
+	  BlockMirror		  on
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_amb"
+	  Position		  [65, 363, 95, 377]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [2, 1]
+	  Position		  [450, 19, 470, 141]
+	  BlockMirror		  on
+	  BackgroundColor	  "yellow"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-10"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [2, 1]
+	  Position		  [325, 230, 345, 350]
+	  InitialConditionSource  "external"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [365, 34, 385, 221]
+	  BlockMirror		  on
+	  BackgroundColor	  "yellow"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "RPM Conversion"
+	  Position		  [500, 93, 540, 127]
+	  BlockMirror		  on
+	  Gain			  "r2h"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Simulation Pace"
+	  Ports			  []
+	  Position		  [630, 380, 691, 425]
+	  AttributesFormatString  "%<SimulationPace> sec/sec"
+	  SourceBlock		  "aerolibanimutils/Simulation Pace"
+	  SourceType		  "Simulation Pace"
+	  SimulationPace	  "100"
+	  SleepMode		  "MATLAB Thread"
+	  OutputPaceError	  "off"
+	  SampleTime		  "1/30"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Subtract"
+	  Ports			  [2, 1]
+	  Position		  [485, 252, 505, 408]
+	  BackgroundColor	  "yellow"
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-10"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Subtract1"
+	  Ports			  [2, 1]
+	  Position		  [175, 221, 195, 294]
+	  BackgroundColor	  "yellow"
+	  Inputs		  "-+"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-10"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum of\nElements"
+	  Ports			  [1, 1]
+	  Position		  [575, 95, 605, 125]
+	  BlockMirror		  on
+	  Inputs		  "+"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-10"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "conductivity term"
+	  Position		  [245, 245, 275, 275]
+	  Gain			  "k"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  ParameterDataType	  "sfix(16)"
+	  ParameterScaling	  "2^0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "h_off"
+	  Position		  [640, 35, 670, 65]
+	  BlockMirror		  on
+	  BackgroundColor	  "lightBlue"
+	  Value			  "h0"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "T_device"
+	  Position		  [480, 203, 510, 217]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  Branch {
+	    DstBlock		    "Subtract"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -80]
+	    DstBlock		    "T_device"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Subtract1"
+	  SrcPort		  1
+	  DstBlock		  "conductivity term"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "T_amb"
+	  SrcPort		  1
+	  Points		  [145, 0]
+	  Branch {
+	    DstBlock		    "Subtract"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -50]
+	    DstBlock		    "Integrator"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "P_device"
+	  SrcPort		  1
+	  DstBlock		  "Subtract1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "conductivity term"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Subtract"
+	  SrcPort		  1
+	  Points		  [75, 0; 0, -155]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [-210, 0; 0, 110]
+	  DstBlock		  "Subtract1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "RPM_fan"
+	  SrcPort		  1
+	  DstBlock		  "Sum of\nElements"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "RPM Conversion"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "h_off"
+	  SrcPort		  1
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum of\nElements"
+	  SrcPort		  1
+	  DstBlock		  "RPM Conversion"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Initial device temperature\nis same as ambient"
+	  Position		  [340, 393]
+	}
+	Annotation {
+	  Name			  "dq/dt = k*dT/dt = -h*(T-T_{amb})+P_{device}"
+	  Position		  [181, 71]
+	  TeXMode		  "on"
+	  FontName		  "Arial"
+	  FontSize		  16
+	}
+	Annotation {
+	  Name			  "CONDUCTION MODEL"
+	  Position		  [170, 47]
+	  FontName		  "Impact"
+	  FontSize		  20
+	}
+	Annotation {
+	  Name			  "Thermal conductivity\ndepends on fan setting"
+	  Position		  [653, 183]
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Advanced"
+      Ports		      [2, 1]
+      Position		      [80, 331, 150, 409]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Advanced"
+	Location		[780, 172, 1413, 472]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "V_fan"
+	  Position		  [35, 163, 65, 177]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Override"
+	  Position		  [35, 68, 65, 82]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BackupFan"
+	  Ports			  [1, 1]
+	  Position		  [185, 182, 280, 238]
+	  SourceBlock		  "sfWorkshop_libs/Advanced/PrimaryFan"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [120, 91, 125, 249]
+	  ShowName		  off
+	  Outputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "Memory"
+	  Position		  [500, 145, 530, 175]
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1]
+	  Position		  [430, 52, 435, 263]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "PrimaryFan"
+	  Ports			  [1, 1]
+	  Position		  [185, 102, 280, 158]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "PrimaryFan"
+	    Location		    [29, 109, 813, 956]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v"
+	      Position		      [25, 163, 55, 177]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant2"
+	      Position		      [640, 30, 670, 60]
+	      BlockMirror	      on
+	      ShowName		      off
+	      Value		      "0"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Controlled Voltage\nSource"
+	      Ports		      [0, 0, 0, 0, 0, 1, 2]
+	      Position		      [140, 100, 180, 140]
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      NamePlacement	      "alternate"
+	      DialogController	      "NetworkEngine.DynNeDlgSource"
+	      SourceBlock	      "fl_lib/Electrical/Electrical Sources/Controlled Voltage\nSource"
+	      SourceType	      "Controlled Voltage\nSource"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      ClassName		      "controlled_voltage"
+	      SchemaVersion	      "1"
+	      i_Log		      "off"
+	      v_Log		      "off"
+	      LocalVarNames	      "|i|v"
+	      LocalVarDescs	      "|i|v"
+	      LocalVarLogging	      "[0 0]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Current Sensor1"
+	      Ports		      [0, 0, 0, 0, 0, 1, 2]
+	      Position		      [230, 32, 260, 108]
+	      DialogController	      "NetworkEngine.DynNeDlgSource"
+	      SourceBlock	      "fl_lib/Electrical/Electrical Sensors/Current Sensor"
+	      SourceType	      "Current Sensor"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      ClassName		      "current"
+	      SchemaVersion	      "1"
+	      i1_Log		      "off"
+	      v1_Log		      "off"
+	      LocalVarNames	      "|i1|v1"
+	      LocalVarDescs	      "|i1|v1"
+	      LocalVarLogging	      "[0 0]"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "DC Motor"
+	      Ports		      [0, 0, 0, 0, 0, 2, 2]
+	      Position		      [325, 74, 390, 136]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"DC Motor"
+		Location		[4, 467, 640, 733]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Reference
+		  Name			  "Inductor"
+		  Ports			  [0, 0, 0, 0, 0, 1, 1]
+		  Position		  [165, 71, 205, 99]
+		  DialogController	  "NetworkEngine.DynNeDlgSource"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Elements/Inductor"
+		  SourceType		  "Inductor"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  ClassName		  "inductor"
+		  SchemaVersion		  "1"
+		  l			  "12e-6"
+		  l_unit		  "H"
+		  i0			  "0"
+		  i0_unit		  "A"
+		  r			  "0"
+		  r_unit		  "Ohm"
+		  g			  "1e-09"
+		  g_unit		  "1/Ohm"
+		  i_Log			  "off"
+		  v_Log			  "off"
+		  i_L_Log		  "off"
+		  LocalVarNames		  "|i|v|i_L"
+		  LocalVarDescs		  "|i|v|Internal variable for current through inductor term"
+		  LocalVarLogging	  "[0 0 0]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Inertia"
+		  Ports			  [0, 0, 0, 0, 0, 1]
+		  Position		  [380, 15, 420, 55]
+		  DialogController	  "NetworkEngine.DynNeDlgSource"
+		  SourceBlock		  "fl_lib/Mechanical/Rotational Elements/Inertia"
+		  SourceType		  "Inertia"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  ClassName		  "inertia"
+		  SchemaVersion		  "1"
+		  inertia		  "0.01"
+		  inertia_unit		  "g*cm^2"
+		  initial_velocity	  "0"
+		  initial_velocity_unit	  "rad/s"
+		  t_Log			  "off"
+		  LocalVarNames		  "|t"
+		  LocalVarDescs		  "|t"
+		  LocalVarLogging	  "0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Resistor"
+		  Ports			  [0, 0, 0, 0, 0, 1, 1]
+		  Position		  [90, 71, 130, 99]
+		  DialogController	  "NetworkEngine.DynNeDlgSource"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Elements/Resistor"
+		  SourceType		  "Resistor"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  ClassName		  "resistor"
+		  SchemaVersion		  "1"
+		  R			  "3.9*5"
+		  R_unit		  "Ohm"
+		  i_Log			  "off"
+		  v_Log			  "off"
+		  LocalVarNames		  "|i|v"
+		  LocalVarDescs		  "|i|v"
+		  LocalVarLogging	  "[0 0]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Rotational\nElectromechanical\nConverter1"
+		  Ports			  [0, 0, 0, 0, 0, 2, 2]
+		  Position		  [210, 105, 290, 160]
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  DialogController	  "NetworkEngine.DynNeDlgSource"
+		  SourceBlock		  "fl_lib/Electrical/Electrical Elements/Rotational\nElectromechanical\nConverter"
+		  SourceType		  "Rotational\nElectromechanical\nConverter"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  ClassName		  "rotational_converter"
+		  SchemaVersion		  "1"
+		  K			  "0.072e-3*60/(2*pi)"
+		  K_unit		  "V/(rad/s)"
+		  i_Log			  "off"
+		  v_Log			  "off"
+		  t_Log			  "off"
+		  w_Log			  "off"
+		  LocalVarNames		  "|i|v|t|w"
+		  LocalVarDescs		  "|i|v|t|w"
+		  LocalVarLogging	  "[0 0 0 0]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Rotational Friction"
+		  Ports			  [0, 0, 0, 0, 0, 1, 1]
+		  Position		  [405, 120, 445, 160]
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  DialogController	  "NetworkEngine.DynNeDlgSource"
+		  SourceBlock		  "fl_lib/Mechanical/Rotational Elements/Rotational Friction"
+		  SourceType		  "Rotational Friction"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData off
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  ClassName		  "friction"
+		  SchemaVersion		  "1"
+		  brkwy_trq		  "0.02e-3"
+		  brkwy_trq_unit	  "N*m"
+		  Col_trq		  "0.02e-3"
+		  Col_trq_unit		  "N*m"
+		  visc_coef		  "0"
+		  visc_coef_unit	  "N*m/(rad/s)"
+		  trans_coef		  "10"
+		  trans_coef_unit	  "s/rad"
+		  vel_thr		  "0.1"
+		  vel_thr_unit		  "rad/s"
+		  t_Log			  "off"
+		  w_Log			  "off"
+		  LocalVarNames		  "|t|w"
+		  LocalVarDescs		  "|t|w"
+		  LocalVarLogging	  "[0 0]"
+		}
+		Block {
+		  BlockType		  PMIOPort
+		  Name			  "V+"
+		  Position		  [20, 78, 50, 92]
+		  FontName		  "Arial"
+		  Port			  "1"
+		  Side			  "Left"
+		}
+		Block {
+		  BlockType		  PMIOPort
+		  Name			  "R"
+		  Position		  [475, 78, 505, 92]
+		  BlockMirror		  on
+		  FontName		  "Arial"
+		  Port			  "2"
+		  Side			  "Right"
+		}
+		Block {
+		  BlockType		  PMIOPort
+		  Name			  "C"
+		  Position		  [475, 183, 505, 197]
+		  BlockMirror		  on
+		  FontName		  "Arial"
+		  Port			  "3"
+		  Side			  "Right"
+		}
+		Block {
+		  BlockType		  PMIOPort
+		  Name			  "V-"
+		  Position		  [20, 183, 50, 197]
+		  FontName		  "Arial"
+		  Port			  "4"
+		  Side			  "Left"
+		}
+		Line {
+		  LineType		  "Connection"
+		  SrcBlock		  "Rotational Friction"
+		  SrcPort		  RConn1
+		  Points		  [0, 15]
+		  Branch {
+		    ConnectType		    "DEST_SRC"
+		    DstBlock		    "C"
+		    DstPort		    RConn1
+		  }
+		  Branch {
+		    ConnectType		    "DEST_DEST"
+		    SrcBlock		    "Rotational\nElectromechanical\nConverter1"
+		    SrcPort		    RConn2
+		    Points		    [0, 15; 155, 0]
+		  }
+		}
+		Line {
+		  LineType		  "Connection"
+		  Points		  [325, 85; 0, -50; 40, 0]
+		  DstBlock		  "Inertia"
+		  DstPort		  LConn1
+		  Branch {
+		    ConnectType		    "SRC_SRC"
+		    Points		    [100, 0]
+		    Branch {
+		    ConnectType		    "DEST_DEST"
+		    SrcBlock		    "R"
+		    SrcPort		    RConn1
+		    Points		    [-35, 0]
+		    }
+		    Branch {
+		    ConnectType		    "DEST_SRC"
+		    DstBlock		    "Rotational Friction"
+		    DstPort		    LConn1
+		    }
+		  }
+		  Branch {
+		    ConnectType		    "SRC_DEST"
+		    SrcBlock		    "Rotational\nElectromechanical\nConverter1"
+		    SrcPort		    LConn2
+		    Points		    [0, -5; 55, 0]
+		  }
+		}
+		Line {
+		  LineType		  "Connection"
+		  SrcBlock		  "Inductor"
+		  SrcPort		  LConn1
+		  DstBlock		  "Resistor"
+		  DstPort		  RConn1
+		}
+		Line {
+		  LineType		  "Connection"
+		  SrcBlock		  "Resistor"
+		  SrcPort		  LConn1
+		  DstBlock		  "V+"
+		  DstPort		  RConn1
+		}
+		Line {
+		  LineType		  "Connection"
+		  SrcBlock		  "V-"
+		  SrcPort		  RConn1
+		  Points		  [165, 0]
+		  DstBlock		  "Rotational\nElectromechanical\nConverter1"
+		  DstPort		  RConn1
+		}
+		Line {
+		  LineType		  "Connection"
+		  SrcBlock		  "Rotational\nElectromechanical\nConverter1"
+		  SrcPort		  LConn1
+		  Points		  [0, -5]
+		  DstBlock		  "Inductor"
+		  DstPort		  RConn1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Electrical Reference2"
+	      Ports		      [0, 0, 0, 0, 0, 1]
+	      Position		      [287, 195, 313, 220]
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      ShowName		      off
+	      DialogController	      "NetworkEngine.DynNeDlgSource"
+	      FontName		      "Arial"
+	      SourceBlock	      "fl_lib/Electrical/Electrical Elements/Electrical Reference"
+	      SourceType	      "Electrical Reference"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      ClassName		      "reference_electrical"
+	      SchemaVersion	      "1"
+	      i_Log		      "off"
+	      LocalVarNames	      "|i"
+	      LocalVarDescs	      "|i"
+	      LocalVarLogging	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Ideal Rotational\nMotion Sensor"
+	      Ports		      [0, 0, 0, 0, 0, 1, 3]
+	      Position		      [450, 110, 490, 150]
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      DialogController	      "NetworkEngine.DynNeDlgSource"
+	      FontName		      "Arial"
+	      SourceBlock	      "fl_lib/Mechanical/Mechanical Sensors/Ideal Rotational\nMotion Sensor"
+	      SourceType	      "Ideal Rotational\nMotion Sensor"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      ClassName		      "sensor_rot_motion"
+	      SchemaVersion	      "1"
+	      offset		      "0"
+	      offset_unit	      "rad"
+	      w_Log		      "off"
+	      t_Log		      "off"
+	      phi_Log		      "off"
+	      LocalVarNames	      "|w|t|phi"
+	      LocalVarDescs	      "|w|t|phi"
+	      LocalVarLogging	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Ideal Torque Source"
+	      Ports		      [0, 0, 0, 0, 0, 1, 2]
+	      Position		      [500, 35, 540, 75]
+	      NamePlacement	      "alternate"
+	      DialogController	      "NetworkEngine.DynNeDlgSource"
+	      SourceBlock	      "fl_lib/Mechanical/Mechanical Sources/Ideal Torque Source"
+	      SourceType	      "Ideal Torque Source"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      ClassName		      "torque"
+	      SchemaVersion	      "1"
+	      w_Log		      "off"
+	      t_Log		      "off"
+	      LocalVarNames	      "|w|t"
+	      LocalVarDescs	      "|w|t"
+	      LocalVarLogging	      "[0 0]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Mechanical\nRotational Reference"
+	      Ports		      [0, 0, 0, 0, 0, 1]
+	      Position		      [400, 195, 420, 215]
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      DialogController	      "NetworkEngine.DynNeDlgSource"
+	      FontName		      "Arial"
+	      SourceBlock	      "fl_lib/Mechanical/Rotational Elements/Mechanical\nRotational Reference"
+	      SourceType	      "Mechanical\nRotational Reference"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      ClassName		      "reference_rot"
+	      SchemaVersion	      "1"
+	      t_Log		      "off"
+	      LocalVarNames	      "|t"
+	      LocalVarDescs	      "|t"
+	      LocalVarLogging	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Mechanical\nRotational Reference1"
+	      Ports		      [0, 0, 0, 0, 0, 1]
+	      Position		      [585, 90, 605, 110]
+	      BlockRotation	      270
+	      BlockMirror	      on
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      DialogController	      "NetworkEngine.DynNeDlgSource"
+	      FontName		      "Arial"
+	      SourceBlock	      "fl_lib/Mechanical/Rotational Elements/Mechanical\nRotational Reference"
+	      SourceType	      "Mechanical\nRotational Reference"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      ClassName		      "reference_rot"
+	      SchemaVersion	      "1"
+	      t_Log		      "off"
+	      LocalVarNames	      "|t"
+	      LocalVarDescs	      "|t"
+	      LocalVarLogging	      "[]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "PS-Simulink\nConverter 1"
+	      Ports		      [0, 1, 0, 0, 0, 1]
+	      Position		      [535, 220, 565, 250]
+	      ShowName		      off
+	      DialogController	      "NetworkEngine.DynNeUtilDlgSource"
+	      FontName		      "Arial"
+	      SourceBlock	      "nesl_utility/PS-Simulink\nConverter"
+	      SourceType	      "PS-Simulink\nConverter"
+	      ShowPortLabels	      "none"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      PhysicalDomain	      "network_engine_domain"
+	      LeftPortType	      "input"
+	      RightPortType	      "output"
+	      SubClassName	      "ps_output"
+	      Unit		      "rpm"
+	      AffineConversion	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "PS-Simulink\nConverter 2"
+	      Ports		      [0, 1, 0, 0, 0, 1]
+	      Position		      [290, 35, 320, 65]
+	      ShowName		      off
+	      DialogController	      "NetworkEngine.DynNeUtilDlgSource"
+	      FontName		      "Arial"
+	      SourceBlock	      "nesl_utility/PS-Simulink\nConverter"
+	      SourceType	      "PS-Simulink\nConverter"
+	      ShowPortLabels	      "none"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      PhysicalDomain	      "network_engine_domain"
+	      LeftPortType	      "input"
+	      RightPortType	      "output"
+	      SubClassName	      "ps_output"
+	      Unit		      "1"
+	      AffineConversion	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "PS-Simulink\nConverter 3"
+	      Ports		      [0, 1, 0, 0, 0, 1]
+	      Position		      [535, 165, 565, 195]
+	      ShowName		      off
+	      DialogController	      "NetworkEngine.DynNeUtilDlgSource"
+	      FontName		      "Arial"
+	      SourceBlock	      "nesl_utility/PS-Simulink\nConverter"
+	      SourceType	      "PS-Simulink\nConverter"
+	      ShowPortLabels	      "none"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      PhysicalDomain	      "network_engine_domain"
+	      LeftPortType	      "input"
+	      RightPortType	      "output"
+	      SubClassName	      "ps_output"
+	      Unit		      "deg"
+	      AffineConversion	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Simulink-PS\nConverter"
+	      Ports		      [1, 0, 0, 0, 0, 0, 1]
+	      Position		      [585, 30, 615, 60]
+	      BlockMirror	      on
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      DialogController	      "NetworkEngine.DynNeUtilDlgSource"
+	      FontName		      "Arial"
+	      SourceBlock	      "nesl_utility/Simulink-PS\nConverter"
+	      SourceType	      "Simulink-PS\nConverter"
+	      ShowPortLabels	      "none"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      PhysicalDomain	      "network_engine_domain"
+	      LeftPortType	      "input"
+	      RightPortType	      "output"
+	      SubClassName	      "ps_input"
+	      Unit		      "1"
+	      AffineConversion	      off
+	      InputFilterTimeConstant ".001"
+	      UdotUserProvided	      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Simulink-PS\nConverter1"
+	      Ports		      [1, 0, 0, 0, 0, 0, 1]
+	      Position		      [80, 155, 110, 185]
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      DialogController	      "NetworkEngine.DynNeUtilDlgSource"
+	      FontName		      "Arial"
+	      SourceBlock	      "nesl_utility/Simulink-PS\nConverter"
+	      SourceType	      "Simulink-PS\nConverter"
+	      ShowPortLabels	      "none"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      PhysicalDomain	      "network_engine_domain"
+	      LeftPortType	      "input"
+	      RightPortType	      "output"
+	      SubClassName	      "ps_input"
+	      Unit		      "1"
+	      AffineConversion	      off
+	      InputFilterTimeConstant ".001"
+	      UdotUserProvided	      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Solver\nConfiguration"
+	      Ports		      [0, 0, 0, 0, 0, 0, 1]
+	      Position		      [175, 175, 220, 195]
+	      DialogController	      "NetworkEngine.DynNeUtilDlgSource"
+	      FontName		      "Arial"
+	      SourceBlock	      "nesl_utility/Solver\nConfiguration"
+	      SourceType	      "Solver\nConfiguration"
+	      ShowPortLabels	      "none"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      PhysicalDomain	      "network_engine_domain"
+	      LeftPortType	      "input"
+	      RightPortType	      "generic"
+	      SubClassName	      "solver"
+	      Accelerate	      off
+	      Profile		      off
+	      ResidualTolerance	      "1e-9"
+	      MaxNonlinIter	      "12"
+	      MaxModeIter	      "2"
+	      DoFixedCost	      off
+	      DoDC		      off
+	      LinearAlgebra	      "Sparse"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator1"
+	      Position		      [345, 40, 365, 60]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator2"
+	      Position		      [595, 170, 615, 190]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "rpm"
+	      Position		      [590, 228, 620, 242]
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "PS-Simulink\nConverter 3"
+	      SrcPort		      1
+	      DstBlock		      "Terminator2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "PS-Simulink\nConverter 1"
+	      SrcPort		      1
+	      DstBlock		      "rpm"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "v"
+	      SrcPort		      1
+	      DstBlock		      "Simulink-PS\nConverter1"
+	      DstPort		      1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      SrcBlock		      "PS-Simulink\nConverter 3"
+	      SrcPort		      LConn1
+	      Points		      [-35, 0]
+	      DstBlock		      "Ideal Rotational\nMotion Sensor"
+	      DstPort		      RConn3
+	    }
+	    Line {
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      DstBlock		      "Simulink-PS\nConverter"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "PS-Simulink\nConverter 2"
+	      SrcPort		      1
+	      DstBlock		      "Terminator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      SrcBlock		      "Ideal Torque Source"
+	      SrcPort		      RConn2
+	      Points		      [40, 0]
+	      DstBlock		      "Mechanical\nRotational Reference1"
+	      DstPort		      LConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      SrcBlock		      "Simulink-PS\nConverter"
+	      SrcPort		      RConn1
+	      DstBlock		      "Ideal Torque Source"
+	      DstPort		      RConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      SrcBlock		      "Ideal Rotational\nMotion Sensor"
+	      SrcPort		      RConn2
+	      Points		      [0, 70]
+	      DstBlock		      "PS-Simulink\nConverter 1"
+	      DstPort		      LConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      Points		      [410, 175; 45, 0; 0, -10]
+	      DstBlock		      "Ideal Rotational\nMotion Sensor"
+	      DstPort		      RConn1
+	      Branch {
+		ConnectType		"SRC_SRC"
+		DstBlock		"Mechanical\nRotational Reference"
+		DstPort			LConn1
+	      }
+	      Branch {
+		ConnectType		"SRC_DEST"
+		SrcBlock		"DC Motor"
+		SrcPort			RConn2
+		Points			[5, 0; 0, 55]
+	      }
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      SrcBlock		      "Ideal Torque Source"
+	      SrcPort		      LConn1
+	      Points		      [-15, 0; 0, 35]
+	      Branch {
+		ConnectType		"DEST_SRC"
+		DstBlock		"Ideal Rotational\nMotion Sensor"
+		DstPort			LConn1
+	      }
+	      Branch {
+		ConnectType		"DEST_SRC"
+		DstBlock		"DC Motor"
+		DstPort			RConn1
+	      }
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      SrcBlock		      "Current Sensor1"
+	      SrcPort		      RConn2
+	      DstBlock		      "DC Motor"
+	      DstPort		      LConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      SrcBlock		      "Current Sensor1"
+	      SrcPort		      RConn1
+	      DstBlock		      "PS-Simulink\nConverter 2"
+	      DstPort		      LConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      Points		      [240, 160; -70, 0; 0, -5]
+	      DstBlock		      "Controlled Voltage\nSource"
+	      DstPort		      RConn2
+	      Branch {
+		ConnectType		"SRC_DEST"
+		Points			[300, 160; -60, 0]
+		Branch {
+		  ConnectType		  "SRC_DEST"
+		  SrcBlock		  "Electrical Reference2"
+		  SrcPort		  LConn1
+		  Points		  [0, -20]
+		}
+		Branch {
+		  ConnectType		  "SRC_SRC"
+		  Points		  [0, -40]
+		  DstBlock		  "DC Motor"
+		  DstPort		  LConn2
+		}
+	      }
+	      Branch {
+		ConnectType		"SRC_SRC"
+		Points			[0, 25]
+		DstBlock		"Solver\nConfiguration"
+		DstPort			RConn1
+	      }
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      SrcBlock		      "Simulink-PS\nConverter1"
+	      SrcPort		      RConn1
+	      Points		      [25, 0]
+	      DstBlock		      "Controlled Voltage\nSource"
+	      DstPort		      RConn1
+	    }
+	    Line {
+	      LineType		      "Connection"
+	      SrcBlock		      "Controlled Voltage\nSource"
+	      SrcPort		      LConn1
+	      Points		      [0, -15]
+	      DstBlock		      "Current Sensor1"
+	      DstPort		      LConn1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [325, 46, 355, 159]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RPM_fan"
+	  Position		  [575, 153, 605, 167]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Memory"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "V_fan"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "BackupFan"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "PrimaryFan"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BackupFan"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "PrimaryFan"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Override"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Memory"
+	  SrcPort		  1
+	  DstBlock		  "RPM_fan"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Sets Primary RPM to\nzero if override switched"
+	  Position		  [87, 47]
+	}
+	Annotation {
+	  Name			  "Calculates the fan speeds \nbased on input voltage"
+	  Position		  [230, 272]
+	}
+	Annotation {
+	  Name			  "Delays 1 time step to\nelimate algegraic loops"
+	  Position		  [520, 122]
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Fan Model"
+      Ports		      [2, 1]
+      Position		      [295, 331, 365, 409]
+      BlockChoice	      "Advanced"
+      TemplateBlock	      "self"
+      MemberBlocks	      "Advanced,Simple"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Fan Model"
+	Location		[148, 182, 646, 482]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "V_fan"
+	  Position		  [20, 40, 40, 60]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Override"
+	  Position		  [20, 80, 40, 100]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Advanced"
+	  Ports			  [2, 1]
+	  Position		  [100, 40, 140, 80]
+	  SourceBlock		  "sfWorkshop_libs/Advanced"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RPM_fan"
+	  Position		  [200, 40, 220, 60]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "V_fan"
+	  SrcPort		  1
+	  DstBlock		  "Advanced"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Override"
+	  SrcPort		  1
+	  DstBlock		  "Advanced"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Advanced"
+	  SrcPort		  1
+	  DstBlock		  "RPM_fan"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Simple"
+      Ports		      [2, 1]
+      Position		      [185, 331, 255, 409]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Simple"
+	Location		[372, 328, 1080, 628]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "V_fan"
+	  Position		  [35, 163, 65, 177]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Override"
+	  Position		  [35, 68, 65, 82]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "BackupFan"
+	  Ports			  [1, 1]
+	  Position		  [180, 185, 280, 235]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "BackupFan"
+	    Location		    [868, 345, 1341, 564]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v"
+	      Position		      [105, 148, 135, 162]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [100, 70, 130, 100]
+	      Gain		      "25"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "Integrator"
+	      Ports		      [1, 1]
+	      Position		      [190, 70, 220, 100]
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation"
+	      Position		      [305, 140, 335, 170]
+	      UpperLimit	      "6000"
+	      LowerLimit	      "0"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1]
+	      Position		      [345, 75, 365, 95]
+	      BackgroundColor	      "yellow"
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|-+"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Lookup
+	      Name		      "v2rpm"
+	      Position		      [200, 140, 260, 170]
+	      InputValues	      "[.75 1]"
+	      Table		      "[2538 6000]"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "rpm"
+	      Position		      [305, 43, 335, 57]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "Integrator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Integrator"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      Branch {
+		DstBlock		"Sum"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -35]
+		DstBlock		"rpm"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "v"
+	      SrcPort		      1
+	      DstBlock		      "v2rpm"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      Points		      [0, -55; -300, 0; 0, 55]
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "v2rpm"
+	      SrcPort		      1
+	      DstBlock		      "Saturation"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Saturation"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [120, 91, 125, 249]
+	  ShowName		  off
+	  Outputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "Memory"
+	  Position		  [495, 145, 525, 175]
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1]
+	  Position		  [430, 52, 435, 263]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "PrimaryFan"
+	  Ports			  [1, 1]
+	  Position		  [180, 105, 280, 155]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "PrimaryFan"
+	    Location		    [779, 263, 1252, 482]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v"
+	      Position		      [105, 148, 135, 162]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      Position		      [100, 70, 130, 100]
+	      Gain		      "25"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "Integrator"
+	      Ports		      [1, 1]
+	      Position		      [190, 70, 220, 100]
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation"
+	      Position		      [310, 140, 340, 170]
+	      UpperLimit	      "6000"
+	      LowerLimit	      "0"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1]
+	      Position		      [345, 75, 365, 95]
+	      BackgroundColor	      "yellow"
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|-+"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Lookup
+	      Name		      "v2rpm"
+	      Position		      [205, 140, 265, 170]
+	      InputValues	      "[.75 1]"
+	      Table		      "[2538 6000]"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "rpm"
+	      Position		      [305, 43, 335, 57]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "v2rpm"
+	      SrcPort		      1
+	      DstBlock		      "Saturation"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      Points		      [0, -55; -300, 0; 0, 55]
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "v"
+	      SrcPort		      1
+	      DstBlock		      "v2rpm"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Integrator"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      Branch {
+		Points			[0, -35]
+		DstBlock		"rpm"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Sum"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "Integrator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Saturation"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [325, 46, 355, 159]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RPM_fan"
+	  Position		  [570, 153, 600, 167]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Override"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "PrimaryFan"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BackupFan"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "PrimaryFan"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "BackupFan"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "V_fan"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Memory"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Memory"
+	  SrcPort		  1
+	  DstBlock		  "RPM_fan"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Calculates the fan speeds \nbased on input voltage"
+	  Position		  [515, 67]
+	}
+	Annotation {
+	  Name			  "Sets Primary RPM to\nzero if override switched"
+	  Position		  [522, 112]
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Temperature Model"
+      Ports		      [3, 1]
+      Position		      [305, 27, 395, 263]
+      BlockChoice	      "(No Pace Control)"
+      TemplateBlock	      "self"
+      MemberBlocks	      "(No Pace Control),(Pace Control)"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Temperature Model"
+	Location		[148, 182, 646, 482]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "P_device"
+	  Position		  [20, 40, 40, 60]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "RPM_fan"
+	  Position		  [20, 80, 40, 100]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_amb"
+	  Position		  [20, 120, 40, 140]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "(No Pace Control)"
+	  Ports			  [3, 1]
+	  Position		  [100, 40, 140, 80]
+	  SourceBlock		  "sfWorkshop_libs/(No Pace Control)"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "T_device"
+	  Position		  [200, 40, 220, 60]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "P_device"
+	  SrcPort		  1
+	  DstBlock		  "(No Pace Control)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "RPM_fan"
+	  SrcPort		  1
+	  DstBlock		  "(No Pace Control)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "T_amb"
+	  SrcPort		  1
+	  DstBlock		  "(No Pace Control)"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "(No Pace Control)"
+	  SrcPort		  1
+	  DstBlock		  "T_device"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}
